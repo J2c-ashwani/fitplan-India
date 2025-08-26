@@ -37,36 +37,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold text-primary">FitPlan India</span>
-          </div>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="/plans" className="text-sm font-medium hover:text-primary transition-colors">
-              Weight Loss Plans
-            </Link>
-            <Link href="/tools" className="text-sm font-medium hover:text-primary transition-colors">
-              Calculators
-            </Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <Button asChild>
-            <Link href="/contact">Book Consultation</Link>
-          </Button>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-muted/50 to-background">
         <div className="container mx-auto text-center max-w-4xl">
@@ -231,94 +201,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-muted/30 py-12 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <Heart className="h-6 w-6 text-primary" />
-                <span className="text-xl font-bold text-primary">FitPlan India</span>
-              </div>
-              <p className="text-muted-foreground">Personalized weight loss plans for every Indian, every condition.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>
-                  <Link href="/plans" className="hover:text-primary transition-colors">
-                    Weight Loss Plans
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/tools" className="hover:text-primary transition-colors">
-                    Calculators
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/blog" className="hover:text-primary transition-colors">
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-primary transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Health Conditions</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>
-                  <Link href="/pcos" className="hover:text-primary transition-colors">
-                    PCOS
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/thyroid" className="hover:text-primary transition-colors">
-                    Thyroid
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/diabetes" className="hover:text-primary transition-colors">
-                    Diabetes
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/obesity" className="hover:text-primary transition-colors">
-                    Obesity
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>
-                  <Link href="/privacy" className="hover:text-primary transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="hover:text-primary transition-colors">
-                    Terms & Conditions
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/disclaimer" className="hover:text-primary transition-colors">
-                    Disclaimer
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 FitPlan India. All rights reserved. This is not medical advice. Please consult a doctor.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

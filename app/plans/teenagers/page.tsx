@@ -2,109 +2,107 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Heart, Users, Target, AlertTriangle, Utensils, Activity, Moon, Droplets } from "lucide-react"
+import { Users, Target, AlertTriangle, Utensils, Activity, Moon, BookOpen, Coffee } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Diabetes Weight Loss Plan - Blood Sugar Friendly Indian Diet | FitPlan India",
+  title: "Teenagers & Students Weight Loss Plan - Indian Diet & Lifestyle | FitPlan India",
   description:
-    "Specialized diabetes weight loss plan with low-glycemic Indian foods, blood sugar management, and sustainable weight loss. Expert-designed meal plans.",
+    "Healthy weight loss plan for teenagers & students. Balanced Indian diet, energy-boosting foods, and study-friendly lifestyle tips.",
   keywords:
-    "diabetes weight loss, diabetic diet plan, blood sugar diet, diabetes Indian food, low glycemic diet, diabetic meal plan",
+    "teenager weight loss, student diet plan, healthy indian diet for students, weight loss for teenagers, study friendly diet",
 }
 
-export default function DiabetesPlanPage() {
+export default function TeenagersPlanPage() {
   const challenges = [
-    "Blood sugar spikes from carbohydrate-rich Indian foods",
-    "Medication affecting weight loss progress",
-    "Risk of hypoglycemia during exercise",
-    "Portion control with traditional Indian meals",
-    "Managing hunger between meals",
-    "Social eating and festival food challenges",
+    "Irregular eating due to study schedules",
+    "High junk food and sugary snacks consumption",
+    "Sedentary lifestyle from long hours of study",
+    "Excess caffeine and late-night habits",
+    "Peer pressure & body image concerns",
+    "Lack of consistent physical activity",
   ]
 
   const dietPlan = [
     {
       day: "Day 1",
-      breakfast: "Vegetable oats + 1 boiled egg (optional) + Green tea",
-      midMorning: "1 small apple + 6 almonds",
-      lunch: "1 roti + Dal + Lauki curry + Cucumber salad",
-      evening: "Buttermilk + 2 whole grain crackers",
-      dinner: "Quinoa pulao + Palak paneer + Mint chutney",
+      breakfast: "Vegetable poha + 1 boiled egg (or sprouts) + Milk",
+      midMorning: "1 apple + 5 soaked almonds",
+      lunch: "2 chapatis + Dal tadka + Mix veg sabzi + Salad",
+      evening: "Roasted makhana + Green tea",
+      dinner: "Brown rice + Rajma curry + Carrot-beet salad",
     },
     {
       day: "Day 2",
-      breakfast: "Besan chilla with vegetables + Coconut chutney",
-      midMorning: "1 orange + 5 walnuts",
-      lunch: "Brown rice (1/2 cup) + Rajma + Bhindi + Onion salad",
-      evening: "Green tea + Roasted chana (2 tbsp)",
-      dinner: "2 roti + Moong dal + Karela curry + Raita",
+      breakfast: "Oats porridge with banana & nuts",
+      midMorning: "1 orange + 4 walnuts",
+      lunch: "2 rotis + Chole curry + Cucumber raita",
+      evening: "1 multigrain sandwich (veggies + paneer)",
+      dinner: "Vegetable upma + Tomato soup",
     },
     {
       day: "Day 3",
-      breakfast: "Vegetable upma + Sambhar (small bowl)",
-      midMorning: "1 guava + 8 cashews",
-      lunch: "Bajra roti + Chicken curry (optional) + Mixed vegetables",
-      evening: "Herbal tea + 1 boiled egg (optional)",
-      dinner: "Cauliflower rice + Dal + Methi sabzi + Pickle",
+      breakfast: "Idli + Sambar + Coconut chutney",
+      midMorning: "1 pear + 5 cashews",
+      lunch: "1 millet roti + Palak dal + Beans stir fry",
+      evening: "1 boiled corn cob + Herbal tea",
+      dinner: "Vegetable khichdi + Lauki sabzi + Salad",
     },
   ]
 
   const lifestyleTips = [
     {
-      icon: Target,
-      title: "Blood Sugar Monitoring",
-      description: "Check blood glucose before and after meals. Maintain a food diary to track patterns.",
+      icon: BookOpen,
+      title: "Smart Study Snacks",
+      description: "Replace chips and soft drinks with roasted chana, fruits, or nuts to stay full and focused.",
     },
     {
       icon: Activity,
-      title: "Post-Meal Walks",
-      description: "10-15 minute walk after meals helps control blood sugar spikes naturally.",
+      title: "Daily Exercise",
+      description: "Encourage at least 45–60 minutes of outdoor activity like cycling, walking, or sports.",
     },
     {
-      icon: Droplets,
-      title: "Stay Hydrated",
-      description: "Drink 8-10 glasses of water daily. Proper hydration helps kidney function.",
+      icon: Coffee,
+      title: "Limit Caffeine",
+      description: "Avoid excess tea, coffee, and energy drinks. They disturb sleep and increase cravings.",
     },
     {
       icon: Moon,
-      title: "Consistent Sleep",
-      description: "7-8 hours of quality sleep. Poor sleep affects blood sugar control.",
+      title: "Sleep Hygiene",
+      description: "Teenagers need 7–8 hours of proper sleep for metabolism, memory, and overall health.",
     },
   ]
 
   const faqs = [
     {
-      question: "Can diabetics lose weight safely?",
+      question: "Is dieting safe for teenagers?",
       answer:
-        "Yes, weight loss is actually beneficial for diabetes management. However, it should be done gradually (1-2 kg per month) under medical supervision to avoid blood sugar fluctuations and medication adjustments.",
+        "Strict diets are not safe. The focus should be on balanced meals, portion control, and physical activity.",
     },
     {
-      question: "What Indian foods should diabetics avoid?",
+      question: "What is the best breakfast for students?",
       answer:
-        "Avoid white rice, refined wheat products, sugary sweets, fried foods, fruit juices, and processed foods. These cause rapid blood sugar spikes and make diabetes management difficult.",
+        "Breakfast should be protein-rich to keep energy levels stable: poha, oats, eggs, or idli are good options.",
     },
     {
-      question: "Can I eat fruits with diabetes?",
+      question: "Can students skip dinner to lose weight?",
       answer:
-        "Yes, but choose low-glycemic fruits like apples, oranges, guava, and berries. Eat them in moderation and preferably with nuts or as part of a meal to slow sugar absorption.",
+        "Skipping meals can harm metabolism and concentration. Instead, opt for lighter dinners like soups and khichdi.",
     },
     {
-      question: "Is intermittent fasting safe for diabetics?",
+      question: "How to control junk food cravings?",
       answer:
-        "Intermittent fasting can be beneficial for some diabetics, but it requires careful medical supervision and medication adjustments. Never attempt without consulting your doctor first.",
+        "Keep healthy snacks handy. Drink water and eat fruits before stepping out to avoid overeating junk food.",
     },
     {
-      question: "How much carbs should diabetics eat daily?",
+      question: "What exercises are good for students?",
       answer:
-        "Generally 45-60g of carbs per meal, but this varies based on individual needs, medication, and activity level. Focus on complex carbs from whole grains and vegetables.",
+        "Any activity that they enjoy: running, swimming, dancing, yoga, or team sports. Consistency is key.",
     },
   ]
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -112,39 +110,38 @@ export default function DiabetesPlanPage() {
             {/* Hero Section */}
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
-                <Badge variant="destructive">High Priority</Badge>
-                <Badge variant="outline">6-12 Months</Badge>
+                <Badge variant="destructive">Teenagers</Badge>
+                <Badge variant="outline">Students</Badge>
               </div>
-              <h1 className="text-4xl font-bold mb-4">Diabetes Weight Loss Plan</h1>
+              <h1 className="text-4xl font-bold mb-4">Teenagers & Students Weight Loss Plan</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                A medically-supervised weight loss plan designed for diabetics. Focus on blood sugar control, gradual
-                weight loss, and long-term diabetes management through Indian cuisine.
+                A balanced, energy-boosting plan designed for teenagers and students to lose weight safely
+                while supporting focus and growth.
               </p>
               <div className="flex items-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4" />
-                  <span>1,800+ Success Stories</span>
+                  <span>3,200+ Students Benefited</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
-                  <span>Average HbA1c reduction: 1.2%</span>
+                  <span>Weight loss: 3–6 kg in 2 months</span>
                 </div>
               </div>
             </div>
 
             {/* Important Notice */}
-            <Card className="mb-8 border-orange-200 bg-orange-50">
+            <Card className="mb-8 border-blue-200 bg-blue-50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-orange-800">
+                <CardTitle className="flex items-center gap-2 text-blue-800">
                   <AlertTriangle className="h-5 w-5" />
-                  Important Medical Notice
+                  Important Health Notice
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-orange-700 text-sm">
-                  This plan is designed for educational purposes. Always consult your doctor before starting any weight
-                  loss program, especially if you're on diabetes medication. Blood sugar monitoring and medication
-                  adjustments may be necessary.
+                <p className="text-blue-700 text-sm">
+                  Teenagers should not follow crash diets or extreme fasting. Proper nutrition is essential
+                  for growth, learning, and hormonal balance.
                 </p>
               </CardContent>
             </Card>
@@ -152,17 +149,17 @@ export default function DiabetesPlanPage() {
             {/* Introduction */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Understanding Diabetes and Weight Loss</CardTitle>
+                <CardTitle>Understanding Teenager Weight Loss</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Type 2 diabetes affects over 77 million Indians, making it crucial to manage both blood sugar levels
-                  and weight. Excess weight makes diabetes harder to control, while proper weight management can
-                  significantly improve blood sugar levels.
+                  Teenagers and students often struggle with weight due to irregular meals, fast food,
+                  and lack of physical activity. A structured diet can help maintain healthy weight
+                  while boosting concentration and energy for studies.
                 </p>
                 <p className="text-muted-foreground">
-                  Our diabetes-specific plan focuses on low-glycemic Indian foods, portion control, and meal timing to
-                  help you lose weight while maintaining stable blood sugar levels throughout the day.
+                  This plan combines balanced Indian meals with study-friendly lifestyle habits for
+                  sustainable weight management.
                 </p>
               </CardContent>
             </Card>
@@ -172,7 +169,7 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5 text-red-500" />
-                  Common Diabetes Weight Loss Challenges
+                  Common Challenges for Students
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -192,17 +189,16 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Utensils className="h-5 w-5 text-primary" />
-                  Sample 7-Day Diabetic Diet Plan
+                  Sample 7-Day Teenager Diet Plan
                 </CardTitle>
                 <CardDescription>
-                  Low-glycemic meals designed to maintain stable blood sugar. All portions are controlled and
-                  carb-counted.
+                  Simple, affordable, and nutritious Indian meals for growing students.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   {dietPlan.map((day, index) => (
-                    <Card key={index} className="border-l-4 border-l-red-500">
+                    <Card key={index} className="border-l-4 border-l-blue-500">
                       <CardHeader className="pb-3">
                         <CardTitle className="text-lg">{day.day}</CardTitle>
                       </CardHeader>
@@ -226,10 +222,10 @@ export default function DiabetesPlanPage() {
                     </Card>
                   ))}
                 </div>
-                <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
-                  <p className="text-sm text-red-700">
-                    <strong>Medical Supervision Required:</strong> This plan requires regular blood sugar monitoring and
-                    possible medication adjustments. Consult your doctor before starting.
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <p className="text-sm text-blue-700">
+                    <strong>Note:</strong> Avoid energy drinks, packaged juices, and late-night junk food.
+                    Focus on natural, homemade meals for better concentration and steady energy.
                   </p>
                 </div>
               </CardContent>
@@ -238,7 +234,7 @@ export default function DiabetesPlanPage() {
             {/* Lifestyle Tips */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Essential Lifestyle Tips for Diabetic Weight Loss</CardTitle>
+                <CardTitle>Lifestyle Tips for Students</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -280,13 +276,12 @@ export default function DiabetesPlanPage() {
             {/* CTA */}
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4">Ready to Manage Your Diabetes Through Weight Loss?</h2>
+                <h2 className="text-2xl font-bold mb-4">Want a Customized Student Plan?</h2>
                 <p className="mb-6 opacity-90">
-                  Get a medically-supervised diabetes weight loss plan with blood sugar tracking, meal plans, and
-                  ongoing support.
+                  Get a personalized diet and study-friendly weight loss program designed by our expert dietitians.
                 </p>
                 <Button size="lg" variant="secondary">
-                  <Link href="/contact">Book Diabetes Consultation - ₹500</Link>
+                  <Link href="/contact">Book Consultation - ₹500</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -303,15 +298,15 @@ export default function DiabetesPlanPage() {
                 <CardContent className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Duration</span>
-                    <span className="text-sm font-medium">6-12 months</span>
+                    <span className="text-sm font-medium">2–3 months</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Difficulty</span>
-                    <span className="text-sm font-medium">High</span>
+                    <span className="text-sm font-medium">Easy</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">Medical Supervision</span>
-                    <span className="text-sm font-medium">Required</span>
+                    <span className="text-sm text-muted-foreground">Student-Friendly</span>
+                    <span className="text-sm font-medium">Yes</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Success Rate</span>
@@ -336,20 +331,20 @@ export default function DiabetesPlanPage() {
                   <CardTitle className="text-lg">Related Plans</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
+                  <Link href="/plans/pcod" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className="font-medium text-sm">PCOD Plan</div>
+                    <div className="text-xs text-muted-foreground">Hormonal balance & weight control</div>
+                  </Link>
                   <Link href="/plans/obesity" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="font-medium text-sm">Obesity Management</div>
-                    <div className="text-xs text-muted-foreground">Comprehensive weight loss</div>
+                    <div className="font-medium text-sm">Obesity Plan</div>
+                    <div className="text-xs text-muted-foreground">General fat loss program</div>
                   </Link>
                   <Link
-                    href="/plans/senior-citizens"
+                    href="/plans/post-pregnancy"
                     className="block p-3 rounded-lg hover:bg-muted/50 transition-colors"
                   >
-                    <div className="font-medium text-sm">Senior Citizens Plan</div>
-                    <div className="text-xs text-muted-foreground">Age-appropriate approach</div>
-                  </Link>
-                  <Link href="/plans/vegetarian" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="font-medium text-sm">Vegetarian Plan</div>
-                    <div className="text-xs text-muted-foreground">Plant-based options</div>
+                    <div className="font-medium text-sm">Post-Pregnancy Plan</div>
+                    <div className="text-xs text-muted-foreground">New mothers’ recovery diet</div>
                   </Link>
                 </CardContent>
               </Card>

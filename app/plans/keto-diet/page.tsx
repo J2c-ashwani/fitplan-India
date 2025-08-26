@@ -2,109 +2,111 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Heart, Users, Target, AlertTriangle, Utensils, Activity, Moon, Droplets } from "lucide-react"
+import { Flame, Users, Target, AlertTriangle, Utensils, Activity, Beef, EggFried } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Diabetes Weight Loss Plan - Blood Sugar Friendly Indian Diet | FitPlan India",
+  title: "Indian Keto Diet Plan - Low Carb Weight Loss | FitPlan India",
   description:
-    "Specialized diabetes weight loss plan with low-glycemic Indian foods, blood sugar management, and sustainable weight loss. Expert-designed meal plans.",
+    "Indian keto diet plan for fast fat loss with low-carb meals, vegetarian keto options, and easy Indian recipes for sustainable results.",
   keywords:
-    "diabetes weight loss, diabetic diet plan, blood sugar diet, diabetes Indian food, low glycemic diet, diabetic meal plan",
+    "keto diet india, keto vegetarian indian, keto recipes indian, indian keto plan, low carb diet india",
 }
 
-export default function DiabetesPlanPage() {
+export default function KetoPlanPage() {
   const challenges = [
-    "Blood sugar spikes from carbohydrate-rich Indian foods",
-    "Medication affecting weight loss progress",
-    "Risk of hypoglycemia during exercise",
-    "Portion control with traditional Indian meals",
-    "Managing hunger between meals",
-    "Social eating and festival food challenges",
+    "Adjusting to very low carb intake initially",
+    "Keto flu symptoms like fatigue & headache",
+    "Finding vegetarian keto protein sources",
+    "Overeating fats instead of balancing macros",
+    "Difficulty maintaining Indian food cravings (roti, rice, sweets)",
+    "Digestive issues if fiber is ignored",
   ]
 
   const dietPlan = [
     {
       day: "Day 1",
-      breakfast: "Vegetable oats + 1 boiled egg (optional) + Green tea",
-      midMorning: "1 small apple + 6 almonds",
-      lunch: "1 roti + Dal + Lauki curry + Cucumber salad",
-      evening: "Buttermilk + 2 whole grain crackers",
-      dinner: "Quinoa pulao + Palak paneer + Mint chutney",
+      breakfast: "Paneer bhurji cooked in ghee + avocado slices",
+      midMorning: "Handful of walnuts & almonds",
+      lunch: "Grilled chicken (or paneer for vegetarians) + sautéed spinach in butter",
+      evening: "Cheese cubes + black coffee (unsweetened)",
+      dinner: "Fish curry (or soya chunks curry) + sautéed broccoli",
     },
     {
       day: "Day 2",
-      breakfast: "Besan chilla with vegetables + Coconut chutney",
-      midMorning: "1 orange + 5 walnuts",
-      lunch: "Brown rice (1/2 cup) + Rajma + Bhindi + Onion salad",
-      evening: "Green tea + Roasted chana (2 tbsp)",
-      dinner: "2 roti + Moong dal + Karela curry + Raita",
+      breakfast: "Omelette with spinach & cheese (tofu scramble for vegans)",
+      midMorning: "Coconut water (unsweetened) + 5 soaked almonds",
+      lunch: "Mutton curry (or paneer tikka) + cucumber salad with olive oil",
+      evening: "Boiled eggs (or keto almond flour biscuits)",
+      dinner: "Chicken tikka (or tofu) + cauliflower rice pulao",
     },
     {
       day: "Day 3",
-      breakfast: "Vegetable upma + Sambhar (small bowl)",
-      midMorning: "1 guava + 8 cashews",
-      lunch: "Bajra roti + Chicken curry (optional) + Mixed vegetables",
-      evening: "Herbal tea + 1 boiled egg (optional)",
-      dinner: "Cauliflower rice + Dal + Methi sabzi + Pickle",
+      breakfast: "Bullet coffee (black coffee with ghee/coconut oil) + boiled eggs",
+      midMorning: "Cucumber & cheese sticks",
+      lunch: "Butter chicken (or palak paneer) + sautéed beans",
+      evening: "Avocado smoothie (with almond milk, no sugar)",
+      dinner: "Grilled prawns (or soya kebabs) + zucchini stir fry",
     },
   ]
 
   const lifestyleTips = [
     {
-      icon: Target,
-      title: "Blood Sugar Monitoring",
-      description: "Check blood glucose before and after meals. Maintain a food diary to track patterns.",
+      icon: Beef,
+      title: "Protein Control",
+      description:
+        "Prioritize moderate protein intake from eggs, paneer, chicken, fish, tofu, and nuts.",
+    },
+    {
+      icon: EggFried,
+      title: "Healthy Fats",
+      description:
+        "Use ghee, coconut oil, olive oil, and avocado. Avoid trans fats and deep-fried junk.",
     },
     {
       icon: Activity,
-      title: "Post-Meal Walks",
-      description: "10-15 minute walk after meals helps control blood sugar spikes naturally.",
+      title: "Exercise Smart",
+      description:
+        "Strength training works best with keto, but avoid extreme endurance workouts in the first 2 weeks.",
     },
     {
-      icon: Droplets,
-      title: "Stay Hydrated",
-      description: "Drink 8-10 glasses of water daily. Proper hydration helps kidney function.",
-    },
-    {
-      icon: Moon,
-      title: "Consistent Sleep",
-      description: "7-8 hours of quality sleep. Poor sleep affects blood sugar control.",
+      icon: Flame,
+      title: "Hydration & Electrolytes",
+      description:
+        "Drink enough water, add pink salt to food, and include magnesium/potassium-rich foods to avoid keto flu.",
     },
   ]
 
   const faqs = [
     {
-      question: "Can diabetics lose weight safely?",
+      question: "Is the keto diet safe for Indians?",
       answer:
-        "Yes, weight loss is actually beneficial for diabetes management. However, it should be done gradually (1-2 kg per month) under medical supervision to avoid blood sugar fluctuations and medication adjustments.",
+        "Yes, but it requires careful planning. Focus on whole foods, avoid processed keto products, and consult a doctor if you have medical conditions.",
     },
     {
-      question: "What Indian foods should diabetics avoid?",
+      question: "Can vegetarians follow keto?",
       answer:
-        "Avoid white rice, refined wheat products, sugary sweets, fried foods, fruit juices, and processed foods. These cause rapid blood sugar spikes and make diabetes management difficult.",
+        "Yes. Paneer, tofu, mushrooms, avocado, nuts, seeds, and low-carb vegetables make vegetarian keto possible.",
     },
     {
-      question: "Can I eat fruits with diabetes?",
+      question: "Can I eat roti and rice on keto?",
       answer:
-        "Yes, but choose low-glycemic fruits like apples, oranges, guava, and berries. Eat them in moderation and preferably with nuts or as part of a meal to slow sugar absorption.",
+        "No, regular wheat roti and rice are high in carbs. Replace them with almond flour rotis and cauliflower rice.",
     },
     {
-      question: "Is intermittent fasting safe for diabetics?",
+      question: "How much weight can I lose on keto?",
       answer:
-        "Intermittent fasting can be beneficial for some diabetics, but it requires careful medical supervision and medication adjustments. Never attempt without consulting your doctor first.",
+        "Many people lose 3–5 kg in the first month, mainly due to water loss, followed by steady fat loss.",
     },
     {
-      question: "How much carbs should diabetics eat daily?",
+      question: "Do I need supplements on keto?",
       answer:
-        "Generally 45-60g of carbs per meal, but this varies based on individual needs, medication, and activity level. Focus on complex carbs from whole grains and vegetables.",
+        "Electrolytes (sodium, potassium, magnesium) are recommended to prevent keto flu. Some also take MCT oil.",
     },
   ]
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -112,39 +114,36 @@ export default function DiabetesPlanPage() {
             {/* Hero Section */}
             <div className="mb-8">
               <div className="flex items-center gap-2 mb-4">
-                <Badge variant="destructive">High Priority</Badge>
-                <Badge variant="outline">6-12 Months</Badge>
+                <Badge variant="destructive">Keto</Badge>
+                <Badge variant="outline">Low Carb</Badge>
               </div>
-              <h1 className="text-4xl font-bold mb-4">Diabetes Weight Loss Plan</h1>
+              <h1 className="text-4xl font-bold mb-4">Indian Keto Diet Plan</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                A medically-supervised weight loss plan designed for diabetics. Focus on blood sugar control, gradual
-                weight loss, and long-term diabetes management through Indian cuisine.
+                A low-carb, high-fat Indian keto plan designed for rapid fat loss while keeping Indian flavors alive.
               </p>
               <div className="flex items-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4" />
-                  <span>1,800+ Success Stories</span>
+                  <span>3,200+ Clients Benefited</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
-                  <span>Average HbA1c reduction: 1.2%</span>
+                  <span>Weight loss: 4–8 kg in 2 months</span>
                 </div>
               </div>
             </div>
 
             {/* Important Notice */}
-            <Card className="mb-8 border-orange-200 bg-orange-50">
+            <Card className="mb-8 border-red-200 bg-red-50">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-orange-800">
+                <CardTitle className="flex items-center gap-2 text-red-800">
                   <AlertTriangle className="h-5 w-5" />
-                  Important Medical Notice
+                  Important Keto Notice
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-orange-700 text-sm">
-                  This plan is designed for educational purposes. Always consult your doctor before starting any weight
-                  loss program, especially if you're on diabetes medication. Blood sugar monitoring and medication
-                  adjustments may be necessary.
+                <p className="text-red-700 text-sm">
+                  The keto diet should not be followed long-term without guidance. People with diabetes, liver or kidney conditions must consult a doctor first.
                 </p>
               </CardContent>
             </Card>
@@ -152,17 +151,14 @@ export default function DiabetesPlanPage() {
             {/* Introduction */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Understanding Diabetes and Weight Loss</CardTitle>
+                <CardTitle>Why Keto Diet Works?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Type 2 diabetes affects over 77 million Indians, making it crucial to manage both blood sugar levels
-                  and weight. Excess weight makes diabetes harder to control, while proper weight management can
-                  significantly improve blood sugar levels.
+                  The keto diet works by drastically reducing carbs and increasing fat intake, pushing your body into ketosis where it burns fat for energy instead of glucose.
                 </p>
                 <p className="text-muted-foreground">
-                  Our diabetes-specific plan focuses on low-glycemic Indian foods, portion control, and meal timing to
-                  help you lose weight while maintaining stable blood sugar levels throughout the day.
+                  For Indians, this means replacing rice, roti, and sweets with low-carb alternatives while enjoying paneer, ghee, eggs, fish, and green veggies.
                 </p>
               </CardContent>
             </Card>
@@ -172,7 +168,7 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5 text-red-500" />
-                  Common Diabetes Weight Loss Challenges
+                  Common Challenges
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -192,11 +188,10 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Utensils className="h-5 w-5 text-primary" />
-                  Sample 7-Day Diabetic Diet Plan
+                  Sample 7-Day Indian Keto Diet Plan
                 </CardTitle>
                 <CardDescription>
-                  Low-glycemic meals designed to maintain stable blood sugar. All portions are controlled and
-                  carb-counted.
+                  A mix of low-carb Indian meals suitable for vegetarians and non-vegetarians.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -207,29 +202,18 @@ export default function DiabetesPlanPage() {
                         <CardTitle className="text-lg">{day.day}</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-2">
-                        <div>
-                          <strong>Breakfast:</strong> {day.breakfast}
-                        </div>
-                        <div>
-                          <strong>Mid-Morning:</strong> {day.midMorning}
-                        </div>
-                        <div>
-                          <strong>Lunch:</strong> {day.lunch}
-                        </div>
-                        <div>
-                          <strong>Evening:</strong> {day.evening}
-                        </div>
-                        <div>
-                          <strong>Dinner:</strong> {day.dinner}
-                        </div>
+                        <div><strong>Breakfast:</strong> {day.breakfast}</div>
+                        <div><strong>Mid-Morning:</strong> {day.midMorning}</div>
+                        <div><strong>Lunch:</strong> {day.lunch}</div>
+                        <div><strong>Evening:</strong> {day.evening}</div>
+                        <div><strong>Dinner:</strong> {day.dinner}</div>
                       </CardContent>
                     </Card>
                   ))}
                 </div>
                 <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
                   <p className="text-sm text-red-700">
-                    <strong>Medical Supervision Required:</strong> This plan requires regular blood sugar monitoring and
-                    possible medication adjustments. Consult your doctor before starting.
+                    <strong>Note:</strong> Vegetarians can replace chicken/fish with paneer, tofu, or soya. Vegans can use tofu, seitan, and almond/soy milk.
                   </p>
                 </div>
               </CardContent>
@@ -238,7 +222,7 @@ export default function DiabetesPlanPage() {
             {/* Lifestyle Tips */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Essential Lifestyle Tips for Diabetic Weight Loss</CardTitle>
+                <CardTitle>Essential Keto Lifestyle Tips</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -280,13 +264,12 @@ export default function DiabetesPlanPage() {
             {/* CTA */}
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4">Ready to Manage Your Diabetes Through Weight Loss?</h2>
+                <h2 className="text-2xl font-bold mb-4">Want a Customized Keto Plan?</h2>
                 <p className="mb-6 opacity-90">
-                  Get a medically-supervised diabetes weight loss plan with blood sugar tracking, meal plans, and
-                  ongoing support.
+                  Get a personalized Indian keto plan designed by our nutrition experts for safe and sustainable fat loss.
                 </p>
                 <Button size="lg" variant="secondary">
-                  <Link href="/contact">Book Diabetes Consultation - ₹500</Link>
+                  <Link href="/contact">Book Consultation - ₹500</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -303,15 +286,15 @@ export default function DiabetesPlanPage() {
                 <CardContent className="space-y-3">
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Duration</span>
-                    <span className="text-sm font-medium">6-12 months</span>
+                    <span className="text-sm font-medium">1–3 months</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Difficulty</span>
-                    <span className="text-sm font-medium">High</span>
+                    <span className="text-sm font-medium">Moderate–Hard</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">Medical Supervision</span>
-                    <span className="text-sm font-medium">Required</span>
+                    <span className="text-sm text-muted-foreground">Vegetarian-Friendly</span>
+                    <span className="text-sm font-medium">Yes</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Success Rate</span>
@@ -336,20 +319,17 @@ export default function DiabetesPlanPage() {
                   <CardTitle className="text-lg">Related Plans</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <Link href="/plans/obesity" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="font-medium text-sm">Obesity Management</div>
-                    <div className="text-xs text-muted-foreground">Comprehensive weight loss</div>
-                  </Link>
-                  <Link
-                    href="/plans/senior-citizens"
-                    className="block p-3 rounded-lg hover:bg-muted/50 transition-colors"
-                  >
-                    <div className="font-medium text-sm">Senior Citizens Plan</div>
-                    <div className="text-xs text-muted-foreground">Age-appropriate approach</div>
-                  </Link>
                   <Link href="/plans/vegetarian" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
                     <div className="font-medium text-sm">Vegetarian Plan</div>
-                    <div className="text-xs text-muted-foreground">Plant-based options</div>
+                    <div className="text-xs text-muted-foreground">Plant-based keto alternatives</div>
+                  </Link>
+                  <Link href="/plans/pcod" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className="font-medium text-sm">PCOD Plan</div>
+                    <div className="text-xs text-muted-foreground">Hormonal balance diet</div>
+                  </Link>
+                  <Link href="/plans/obesity" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className="font-medium text-sm">Obesity Plan</div>
+                    <div className="text-xs text-muted-foreground">General weight loss diet</div>
                   </Link>
                 </CardContent>
               </Card>

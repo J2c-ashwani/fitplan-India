@@ -2,109 +2,107 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Heart, Users, Target, AlertTriangle, Utensils, Activity, Moon, Droplets } from "lucide-react"
+import { Users, Target, AlertTriangle, Utensils, Activity, Moon, Droplets, Heart } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Diabetes Weight Loss Plan - Blood Sugar Friendly Indian Diet | FitPlan India",
+  title: "Hypothyroidism Weight Loss Plan - Indian Thyroid Diet | FitPlan India",
   description:
-    "Specialized diabetes weight loss plan with low-glycemic Indian foods, blood sugar management, and sustainable weight loss. Expert-designed meal plans.",
+    "Specialized hypothyroidism weight loss plan with thyroid-friendly Indian foods, metabolism boosting strategies, and long-term fat loss support.",
   keywords:
-    "diabetes weight loss, diabetic diet plan, blood sugar diet, diabetes Indian food, low glycemic diet, diabetic meal plan",
+    "hypothyroidism diet plan, thyroid weight loss, Indian diet for hypothyroid, low metabolism diet, hypothyroid meal plan",
 }
 
-export default function DiabetesPlanPage() {
+export default function HypothyroidismPlanPage() {
   const challenges = [
-    "Blood sugar spikes from carbohydrate-rich Indian foods",
-    "Medication affecting weight loss progress",
-    "Risk of hypoglycemia during exercise",
-    "Portion control with traditional Indian meals",
-    "Managing hunger between meals",
-    "Social eating and festival food challenges",
+    "Slow metabolism leading to weight gain",
+    "Persistent fatigue and low energy",
+    "Dry skin, hair fall, and puffiness",
+    "Mood swings and low motivation",
+    "Constipation and bloating",
+    "Difficulty losing fat despite exercise",
   ]
 
   const dietPlan = [
     {
       day: "Day 1",
-      breakfast: "Vegetable oats + 1 boiled egg (optional) + Green tea",
-      midMorning: "1 small apple + 6 almonds",
-      lunch: "1 roti + Dal + Lauki curry + Cucumber salad",
-      evening: "Buttermilk + 2 whole grain crackers",
-      dinner: "Quinoa pulao + Palak paneer + Mint chutney",
+      breakfast: "Vegetable oats upma + 1 boiled egg (optional) + Green tea",
+      midMorning: "Papaya bowl + 5 soaked almonds",
+      lunch: "2 multigrain rotis + Dal + Lauki sabzi + Carrot cucumber salad",
+      evening: "Roasted chana + Herbal tea",
+      dinner: "Brown rice (1/2 cup) + Moong dal khichdi + Palak curry",
     },
     {
       day: "Day 2",
-      breakfast: "Besan chilla with vegetables + Coconut chutney",
-      midMorning: "1 orange + 5 walnuts",
-      lunch: "Brown rice (1/2 cup) + Rajma + Bhindi + Onion salad",
-      evening: "Green tea + Roasted chana (2 tbsp)",
-      dinner: "2 roti + Moong dal + Karela curry + Raita",
+      breakfast: "Moong dal chilla + Mint chutney + Black coffee (sugar-free)",
+      midMorning: "1 guava + 5 walnuts",
+      lunch: "1 cup quinoa + Rajma curry + Bhindi sabzi + Salad",
+      evening: "Buttermilk (unsalted) + 2 rice cakes",
+      dinner: "2 bajra rotis + Chicken curry (optional) + Methi sabzi",
     },
     {
       day: "Day 3",
-      breakfast: "Vegetable upma + Sambhar (small bowl)",
-      midMorning: "1 guava + 8 cashews",
-      lunch: "Bajra roti + Chicken curry (optional) + Mixed vegetables",
-      evening: "Herbal tea + 1 boiled egg (optional)",
-      dinner: "Cauliflower rice + Dal + Methi sabzi + Pickle",
+      breakfast: "Vegetable poha + 1 boiled egg (optional)",
+      midMorning: "Apple slices + 6 cashews",
+      lunch: "2 jowar rotis + Dal tadka + Cabbage sabzi + Salad",
+      evening: "Caffeine-free green tea + Roasted foxnuts (makhana)",
+      dinner: "Oats khichdi + Methi thepla (1 small) + Raita",
     },
   ]
 
   const lifestyleTips = [
     {
       icon: Target,
-      title: "Blood Sugar Monitoring",
-      description: "Check blood glucose before and after meals. Maintain a food diary to track patterns.",
+      title: "Thyroid Monitoring",
+      description: "Check TSH, T3, and T4 levels regularly. Diet adjustments must be supervised by a doctor.",
     },
     {
       icon: Activity,
-      title: "Post-Meal Walks",
-      description: "10-15 minute walk after meals helps control blood sugar spikes naturally.",
+      title: "Regular Exercise",
+      description: "Daily 30–45 mins of brisk walking, yoga, or strength training boosts metabolism.",
     },
     {
       icon: Droplets,
-      title: "Stay Hydrated",
-      description: "Drink 8-10 glasses of water daily. Proper hydration helps kidney function.",
+      title: "Hydration & Fiber",
+      description: "Drink 2–3L of water daily. Include fiber-rich fruits and vegetables to fight constipation.",
     },
     {
       icon: Moon,
-      title: "Consistent Sleep",
-      description: "7-8 hours of quality sleep. Poor sleep affects blood sugar control.",
+      title: "Sleep & Stress",
+      description: "Ensure 7–9 hours of quality sleep. Stress worsens thyroid imbalance.",
     },
   ]
 
   const faqs = [
     {
-      question: "Can diabetics lose weight safely?",
+      question: "Can hypothyroidism patients lose weight?",
       answer:
-        "Yes, weight loss is actually beneficial for diabetes management. However, it should be done gradually (1-2 kg per month) under medical supervision to avoid blood sugar fluctuations and medication adjustments.",
+        "Yes. With proper medication, a thyroid-friendly diet, and consistent lifestyle habits, weight loss is achievable.",
     },
     {
-      question: "What Indian foods should diabetics avoid?",
+      question: "Which foods should be avoided in hypothyroidism?",
       answer:
-        "Avoid white rice, refined wheat products, sugary sweets, fried foods, fruit juices, and processed foods. These cause rapid blood sugar spikes and make diabetes management difficult.",
+        "Avoid processed foods, excessive sugar, deep-fried snacks, and high soy products. Limit goitrogenic foods (raw cruciferous veggies) if iodine deficiency is present.",
     },
     {
-      question: "Can I eat fruits with diabetes?",
+      question: "Which nutrients are important for hypothyroidism?",
       answer:
-        "Yes, but choose low-glycemic fruits like apples, oranges, guava, and berries. Eat them in moderation and preferably with nuts or as part of a meal to slow sugar absorption.",
+        "Iodine, selenium, zinc, vitamin D, and protein are crucial. Include eggs, fish, nuts, seeds, and whole grains.",
     },
     {
-      question: "Is intermittent fasting safe for diabetics?",
+      question: "Does exercise help hypothyroidism?",
       answer:
-        "Intermittent fasting can be beneficial for some diabetics, but it requires careful medical supervision and medication adjustments. Never attempt without consulting your doctor first.",
+        "Yes, regular exercise helps improve metabolism, reduce fatigue, and maintain a healthy weight.",
     },
     {
-      question: "How much carbs should diabetics eat daily?",
+      question: "Is stress management important for thyroid health?",
       answer:
-        "Generally 45-60g of carbs per meal, but this varies based on individual needs, medication, and activity level. Focus on complex carbs from whole grains and vegetables.",
+        "Yes, chronic stress can worsen hypothyroid symptoms. Yoga, meditation, and breathing exercises are helpful.",
     },
   ]
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -115,24 +113,24 @@ export default function DiabetesPlanPage() {
                 <Badge variant="destructive">High Priority</Badge>
                 <Badge variant="outline">6-12 Months</Badge>
               </div>
-              <h1 className="text-4xl font-bold mb-4">Diabetes Weight Loss Plan</h1>
+              <h1 className="text-4xl font-bold mb-4">Hypothyroidism Weight Loss Plan</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                A medically-supervised weight loss plan designed for diabetics. Focus on blood sugar control, gradual
-                weight loss, and long-term diabetes management through Indian cuisine.
+                A thyroid-supportive weight management plan designed for hypothyroidism. Focus on boosting metabolism,
+                balancing hormones, and achieving fat loss with Indian meals.
               </p>
               <div className="flex items-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4" />
-                  <span>1,800+ Success Stories</span>
+                  <span>2,400+ Success Stories</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
-                  <span>Average HbA1c reduction: 1.2%</span>
+                  <span>Metabolic boost in 3 months</span>
                 </div>
               </div>
             </div>
 
-            {/* Important Notice */}
+            {/* Medical Notice */}
             <Card className="mb-8 border-orange-200 bg-orange-50">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-orange-800">
@@ -142,37 +140,35 @@ export default function DiabetesPlanPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-orange-700 text-sm">
-                  This plan is designed for educational purposes. Always consult your doctor before starting any weight
-                  loss program, especially if you're on diabetes medication. Blood sugar monitoring and medication
-                  adjustments may be necessary.
+                  This plan is educational and supportive. Always follow your doctor’s prescription for thyroid
+                  medication (like levothyroxine) before starting any diet or lifestyle change.
                 </p>
               </CardContent>
             </Card>
 
-            {/* Introduction */}
+            {/* Intro */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Understanding Diabetes and Weight Loss</CardTitle>
+                <CardTitle>Understanding Hypothyroidism & Weight</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Type 2 diabetes affects over 77 million Indians, making it crucial to manage both blood sugar levels
-                  and weight. Excess weight makes diabetes harder to control, while proper weight management can
-                  significantly improve blood sugar levels.
+                  Hypothyroidism slows down metabolism, leading to weight gain, water retention, and fatigue. Diet and
+                  lifestyle play a major role in managing weight while keeping thyroid hormones balanced.
                 </p>
                 <p className="text-muted-foreground">
-                  Our diabetes-specific plan focuses on low-glycemic Indian foods, portion control, and meal timing to
-                  help you lose weight while maintaining stable blood sugar levels throughout the day.
+                  This plan focuses on metabolism-boosting foods, high-quality proteins, and lifestyle changes that
+                  improve thyroid function.
                 </p>
               </CardContent>
             </Card>
 
-            {/* Common Challenges */}
+            {/* Challenges */}
             <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5 text-red-500" />
-                  Common Diabetes Weight Loss Challenges
+                  Common Hypothyroidism Challenges
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -187,49 +183,37 @@ export default function DiabetesPlanPage() {
               </CardContent>
             </Card>
 
-            {/* Sample Diet Plan */}
+            {/* Diet Plan */}
             <Card className="mb-8">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Utensils className="h-5 w-5 text-primary" />
-                  Sample 7-Day Diabetic Diet Plan
+                  Sample 7-Day Hypothyroidism Diet Plan
                 </CardTitle>
                 <CardDescription>
-                  Low-glycemic meals designed to maintain stable blood sugar. All portions are controlled and
-                  carb-counted.
+                  Balanced Indian meals to improve metabolism and reduce thyroid symptoms.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   {dietPlan.map((day, index) => (
-                    <Card key={index} className="border-l-4 border-l-red-500">
+                    <Card key={index} className="border-l-4 border-l-blue-500">
                       <CardHeader className="pb-3">
                         <CardTitle className="text-lg">{day.day}</CardTitle>
                       </CardHeader>
                       <CardContent className="space-y-2">
-                        <div>
-                          <strong>Breakfast:</strong> {day.breakfast}
-                        </div>
-                        <div>
-                          <strong>Mid-Morning:</strong> {day.midMorning}
-                        </div>
-                        <div>
-                          <strong>Lunch:</strong> {day.lunch}
-                        </div>
-                        <div>
-                          <strong>Evening:</strong> {day.evening}
-                        </div>
-                        <div>
-                          <strong>Dinner:</strong> {day.dinner}
-                        </div>
+                        <div><strong>Breakfast:</strong> {day.breakfast}</div>
+                        <div><strong>Mid-Morning:</strong> {day.midMorning}</div>
+                        <div><strong>Lunch:</strong> {day.lunch}</div>
+                        <div><strong>Evening:</strong> {day.evening}</div>
+                        <div><strong>Dinner:</strong> {day.dinner}</div>
                       </CardContent>
                     </Card>
                   ))}
                 </div>
-                <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
-                  <p className="text-sm text-red-700">
-                    <strong>Medical Supervision Required:</strong> This plan requires regular blood sugar monitoring and
-                    possible medication adjustments. Consult your doctor before starting.
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                  <p className="text-sm text-blue-700">
+                    <strong>Note:</strong> Take thyroid medication on an empty stomach (30 mins before breakfast).
                   </p>
                 </div>
               </CardContent>
@@ -238,7 +222,7 @@ export default function DiabetesPlanPage() {
             {/* Lifestyle Tips */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Essential Lifestyle Tips for Diabetic Weight Loss</CardTitle>
+                <CardTitle>Lifestyle Tips for Hypothyroidism</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -280,13 +264,12 @@ export default function DiabetesPlanPage() {
             {/* CTA */}
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4">Ready to Manage Your Diabetes Through Weight Loss?</h2>
+                <h2 className="text-2xl font-bold mb-4">Ready to Control Your Hypothyroidism?</h2>
                 <p className="mb-6 opacity-90">
-                  Get a medically-supervised diabetes weight loss plan with blood sugar tracking, meal plans, and
-                  ongoing support.
+                  Get a customized hypothyroidism diet and lifestyle plan with ongoing doctor guidance.
                 </p>
                 <Button size="lg" variant="secondary">
-                  <Link href="/contact">Book Diabetes Consultation - ₹500</Link>
+                  <Link href="/contact">Book Thyroid Consultation - ₹500</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -295,7 +278,6 @@ export default function DiabetesPlanPage() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 space-y-6">
-              {/* Quick Stats */}
               <Card>
                 <CardHeader>
                   <CardTitle className="text-lg">Plan Overview</CardTitle>
@@ -307,7 +289,7 @@ export default function DiabetesPlanPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Difficulty</span>
-                    <span className="text-sm font-medium">High</span>
+                    <span className="text-sm font-medium">Moderate</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Medical Supervision</span>
@@ -320,7 +302,7 @@ export default function DiabetesPlanPage() {
                 </CardContent>
               </Card>
 
-              {/* Ad Space */}
+              {/* Ad */}
               <Card className="bg-muted/30">
                 <CardContent className="p-6 text-center">
                   <div className="text-sm text-muted-foreground mb-2">Advertisement</div>
@@ -336,20 +318,17 @@ export default function DiabetesPlanPage() {
                   <CardTitle className="text-lg">Related Plans</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
+                  <Link href="/plans/hyperthyroidism" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className="font-medium text-sm">Hyperthyroidism Plan</div>
+                    <div className="text-xs text-muted-foreground">Metabolism control</div>
+                  </Link>
                   <Link href="/plans/obesity" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
                     <div className="font-medium text-sm">Obesity Management</div>
-                    <div className="text-xs text-muted-foreground">Comprehensive weight loss</div>
-                  </Link>
-                  <Link
-                    href="/plans/senior-citizens"
-                    className="block p-3 rounded-lg hover:bg-muted/50 transition-colors"
-                  >
-                    <div className="font-medium text-sm">Senior Citizens Plan</div>
-                    <div className="text-xs text-muted-foreground">Age-appropriate approach</div>
+                    <div className="text-xs text-muted-foreground">Fat loss strategies</div>
                   </Link>
                   <Link href="/plans/vegetarian" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
                     <div className="font-medium text-sm">Vegetarian Plan</div>
-                    <div className="text-xs text-muted-foreground">Plant-based options</div>
+                    <div className="text-xs text-muted-foreground">Plant-based nutrition</div>
                   </Link>
                 </CardContent>
               </Card>

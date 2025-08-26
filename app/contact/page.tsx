@@ -170,36 +170,6 @@ export default function ContactPage() {
     return (
       <div className="min-h-screen bg-background">
         {/* Header */}
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-          <div className="container flex h-16 items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Heart className="h-8 w-8 text-primary" />
-              <Link href="/" className="text-2xl font-bold text-primary">
-                FitPlan India
-              </Link>
-            </div>
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link href="/plans" className="text-sm font-medium hover:text-primary transition-colors">
-                Weight Loss Plans
-              </Link>
-              <Link href="/tools" className="text-sm font-medium hover:text-primary transition-colors">
-                Calculators
-              </Link>
-              <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">
-                Blog
-              </Link>
-              <Link href="/contact" className="text-sm font-medium text-primary">
-                Contact
-              </Link>
-            </nav>
-            <Button asChild>
-              <Link href="/contact">Book Consultation</Link>
-            </Button>
-          </div>
-        </header>
 
         {/* Success Message */}
         <section className="py-20 px-4">
@@ -271,36 +241,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-primary" />
-            <Link href="/" className="text-2xl font-bold text-primary">
-              FitPlan India
-            </Link>
-          </div>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="/plans" className="text-sm font-medium hover:text-primary transition-colors">
-              Weight Loss Plans
-            </Link>
-            <Link href="/tools" className="text-sm font-medium hover:text-primary transition-colors">
-              Calculators
-            </Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-sm font-medium text-primary">
-              Contact
-            </Link>
-          </nav>
-          <Button asChild>
-            <Link href="/contact">Book Consultation</Link>
-          </Button>
-        </div>
-      </header>
 
       {/* Hero Section */}
       <section className="py-16 px-4 bg-gradient-to-br from-muted/50 to-background">

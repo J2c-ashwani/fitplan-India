@@ -1,7 +1,20 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Users, Clock, Target, Zap, Baby, GraduationCap, Leaf, Activity, Calendar } from "lucide-react"
+import {
+  Heart,
+  Users,
+  Clock,
+  Target,
+  Zap,
+  Baby,
+  GraduationCap,
+  Leaf,
+  Activity,
+  Calendar,
+  Scale,
+  Flame,
+} from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
@@ -24,7 +37,7 @@ export default function PlansPage() {
       color: "bg-blue-50 text-blue-700 border-blue-200",
     },
     {
-      title: "Hyperthyroidism Weight Loss Plan",
+      title: "Hyperthyroidism Weight Gain Plan",
       description: "Balanced approach for overactive thyroid with calorie-dense nutrition",
       href: "/plans/hyperthyroidism",
       icon: Zap,
@@ -98,8 +111,8 @@ export default function PlansPage() {
     {
       title: "Keto Diet for Indians",
       description: "Low-carb, high-fat approach adapted for Indian cuisine and lifestyle",
-      href: "/plans/keto",
-      icon: Zap,
+      href: "/plans/keto-diet",
+      icon: Flame,
       difficulty: "High",
       duration: "2-6 months",
       color: "bg-gray-50 text-gray-700 border-gray-200",
@@ -117,7 +130,7 @@ export default function PlansPage() {
       title: "Senior Citizens Plan",
       description: "Age-appropriate nutrition for healthy aging and weight management",
       href: "/plans/senior-citizens",
-      icon: Heart,
+      icon: Scale,
       difficulty: "Easy",
       duration: "6-12 months",
       color: "bg-blue-50 text-blue-700 border-blue-200",
@@ -131,46 +144,42 @@ export default function PlansPage() {
       duration: "3-12 months",
       color: "bg-orange-50 text-orange-700 border-orange-200",
     },
+    {
+      title: "Metabolic Weight Loss Plan",
+      description: "Plan designed to boost metabolic rate and manage stubborn fat",
+      href: "/plans/metabolic",
+      icon: Zap,
+      difficulty: "Moderate",
+      duration: "4-10 months",
+      color: "bg-cyan-50 text-cyan-700 border-cyan-200",
+    },
+    {
+      title: "Hormonal Imbalance Plan",
+      description: "Balanced diet to correct hormonal imbalances and regulate metabolism",
+      href: "/plans/hormonal-imbalance",
+      icon: Heart,
+      difficulty: "Moderate",
+      duration: "4-8 months",
+      color: "bg-rose-50 text-rose-700 border-rose-200",
+    },
+    {
+      title: "Thyroid Weight Loss Plan",
+      description:
+        "Comprehensive plan for managing both underactive and overactive thyroid with balanced nutrition.",
+      href: "/plans/thyroid",
+      icon: Activity, // ✅ use a lucide-react icon instead of emoji
+      difficulty: "Moderate",
+      duration: "3-6 months",
+      color: "bg-green-100 text-green-800 border-green-200",
+    },
   ]
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <Heart className="h-8 w-8 text-primary" />
-            <Link href="/" className="text-2xl font-bold text-primary">
-              FitPlan India
-            </Link>
-          </div>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link href="/plans" className="text-sm font-medium text-primary">
-              Weight Loss Plans
-            </Link>
-            <Link href="/tools" className="text-sm font-medium hover:text-primary transition-colors">
-              Calculators
-            </Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Contact
-            </Link>
-          </nav>
-          <Button asChild>
-            <Link href="/contact">Book Consultation</Link>
-          </Button>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="py-16 px-4 bg-gradient-to-br from-muted/50 to-background">
         <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Specialized Weight Loss Plans</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Specialized Weight Gain Plans</h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Choose from our expertly crafted plans designed for specific health conditions, age groups, and dietary
             preferences. Each plan is tailored for Indian lifestyle and cuisine.

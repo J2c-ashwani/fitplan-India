@@ -2,109 +2,107 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Heart, Users, Target, AlertTriangle, Utensils, Activity, Moon, Droplets } from "lucide-react"
+import { Users, Target, AlertTriangle, Utensils, Activity, Moon, Droplets } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Diabetes Weight Loss Plan - Blood Sugar Friendly Indian Diet | FitPlan India",
+  title: "Obesity & General Weight Loss Plan - Indian Diet & Lifestyle | FitPlan India",
   description:
-    "Specialized diabetes weight loss plan with low-glycemic Indian foods, blood sugar management, and sustainable weight loss. Expert-designed meal plans.",
+    "Obesity and general weight loss plan with sustainable Indian diet, portion control, and lifestyle modifications. Effective for long-term fat loss and health improvement.",
   keywords:
-    "diabetes weight loss, diabetic diet plan, blood sugar diet, diabetes Indian food, low glycemic diet, diabetic meal plan",
+    "obesity weight loss, indian diet for weight loss, general weight loss plan, fat loss diet, obesity management india",
 }
 
-export default function DiabetesPlanPage() {
+export default function ObesityPlanPage() {
   const challenges = [
-    "Blood sugar spikes from carbohydrate-rich Indian foods",
-    "Medication affecting weight loss progress",
-    "Risk of hypoglycemia during exercise",
-    "Portion control with traditional Indian meals",
-    "Managing hunger between meals",
-    "Social eating and festival food challenges",
+    "Slow metabolism making fat loss difficult",
+    "Emotional eating and food cravings",
+    "Sedentary lifestyle and lack of physical activity",
+    "Joint pain making exercise challenging",
+    "Dependence on packaged and fast foods",
+    "Difficulty staying consistent with healthy habits",
   ]
 
   const dietPlan = [
     {
       day: "Day 1",
-      breakfast: "Vegetable oats + 1 boiled egg (optional) + Green tea",
-      midMorning: "1 small apple + 6 almonds",
-      lunch: "1 roti + Dal + Lauki curry + Cucumber salad",
-      evening: "Buttermilk + 2 whole grain crackers",
-      dinner: "Quinoa pulao + Palak paneer + Mint chutney",
+      breakfast: "Vegetable poha + Green tea",
+      midMorning: "1 apple + 5 soaked almonds",
+      lunch: "2 chapatis (multigrain) + Lauki chana dal + Cucumber salad",
+      evening: "Buttermilk + 2 roasted khakra",
+      dinner: "Brown rice khichdi + Mix veg sabzi + Raita",
     },
     {
       day: "Day 2",
-      breakfast: "Besan chilla with vegetables + Coconut chutney",
-      midMorning: "1 orange + 5 walnuts",
-      lunch: "Brown rice (1/2 cup) + Rajma + Bhindi + Onion salad",
-      evening: "Green tea + Roasted chana (2 tbsp)",
-      dinner: "2 roti + Moong dal + Karela curry + Raita",
+      breakfast: "Oats porridge with flax seeds + Herbal tea",
+      midMorning: "1 guava + 4 walnuts",
+      lunch: "1 roti + Palak dal + Bhindi sabzi + Salad",
+      evening: "Green tea + Roasted chana",
+      dinner: "2 bajra rotis + Mix veg curry + Moong dal soup",
     },
     {
       day: "Day 3",
-      breakfast: "Vegetable upma + Sambhar (small bowl)",
-      midMorning: "1 guava + 8 cashews",
-      lunch: "Bajra roti + Chicken curry (optional) + Mixed vegetables",
+      breakfast: "Moong dal cheela + Mint chutney",
+      midMorning: "1 orange + 6 cashews",
+      lunch: "Millet roti + Chicken curry (optional) + Beans sabzi",
       evening: "Herbal tea + 1 boiled egg (optional)",
-      dinner: "Cauliflower rice + Dal + Methi sabzi + Pickle",
+      dinner: "Vegetable oats upma + Tomato soup",
     },
   ]
 
   const lifestyleTips = [
     {
-      icon: Target,
-      title: "Blood Sugar Monitoring",
-      description: "Check blood glucose before and after meals. Maintain a food diary to track patterns.",
-    },
-    {
       icon: Activity,
-      title: "Post-Meal Walks",
-      description: "10-15 minute walk after meals helps control blood sugar spikes naturally.",
+      title: "Increase Daily Movement",
+      description: "30-40 minutes of brisk walking, swimming, or cycling daily helps boost metabolism.",
     },
     {
-      icon: Droplets,
-      title: "Stay Hydrated",
-      description: "Drink 8-10 glasses of water daily. Proper hydration helps kidney function.",
+      icon: Target,
+      title: "Portion Control",
+      description: "Use smaller plates and mindful eating to prevent overeating.",
     },
     {
       icon: Moon,
-      title: "Consistent Sleep",
-      description: "7-8 hours of quality sleep. Poor sleep affects blood sugar control.",
+      title: "Sleep Management",
+      description: "7-8 hours of quality sleep regulates hunger hormones and supports fat loss.",
+    },
+    {
+      icon: Droplets,
+      title: "Hydration",
+      description: "Drink 10-12 glasses of water daily to curb cravings and improve metabolism.",
     },
   ]
 
   const faqs = [
     {
-      question: "Can diabetics lose weight safely?",
+      question: "Can obesity be reversed with diet and exercise?",
       answer:
-        "Yes, weight loss is actually beneficial for diabetes management. However, it should be done gradually (1-2 kg per month) under medical supervision to avoid blood sugar fluctuations and medication adjustments.",
+        "Yes, sustainable changes in eating habits, increased physical activity, and medical guidance can help reduce obesity and its health risks.",
     },
     {
-      question: "What Indian foods should diabetics avoid?",
+      question: "Which foods should be avoided for obesity?",
       answer:
-        "Avoid white rice, refined wheat products, sugary sweets, fried foods, fruit juices, and processed foods. These cause rapid blood sugar spikes and make diabetes management difficult.",
+        "Avoid fried snacks, sugary drinks, refined carbs, processed foods, and late-night binge eating.",
     },
     {
-      question: "Can I eat fruits with diabetes?",
+      question: "Is intermittent fasting good for obesity?",
       answer:
-        "Yes, but choose low-glycemic fruits like apples, oranges, guava, and berries. Eat them in moderation and preferably with nuts or as part of a meal to slow sugar absorption.",
+        "Intermittent fasting can help in weight loss, but it should be started gradually. A balanced calorie-controlled diet works equally well.",
     },
     {
-      question: "Is intermittent fasting safe for diabetics?",
+      question: "How fast can I lose weight safely?",
       answer:
-        "Intermittent fasting can be beneficial for some diabetics, but it requires careful medical supervision and medication adjustments. Never attempt without consulting your doctor first.",
+        "Safe weight loss is about 0.5 to 1 kg per week. Crash diets may cause nutrient deficiencies and rebound weight gain.",
     },
     {
-      question: "How much carbs should diabetics eat daily?",
+      question: "What type of exercise is best for obese individuals?",
       answer:
-        "Generally 45-60g of carbs per meal, but this varies based on individual needs, medication, and activity level. Focus on complex carbs from whole grains and vegetables.",
+        "Low-impact workouts like brisk walking, yoga, swimming, and cycling are recommended to avoid joint strain.",
     },
   ]
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -115,19 +113,19 @@ export default function DiabetesPlanPage() {
                 <Badge variant="destructive">High Priority</Badge>
                 <Badge variant="outline">6-12 Months</Badge>
               </div>
-              <h1 className="text-4xl font-bold mb-4">Diabetes Weight Loss Plan</h1>
+              <h1 className="text-4xl font-bold mb-4">Obesity & General Weight Loss Plan</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                A medically-supervised weight loss plan designed for diabetics. Focus on blood sugar control, gradual
-                weight loss, and long-term diabetes management through Indian cuisine.
+                A structured plan to manage obesity and general weight loss with balanced Indian meals,
+                lifestyle improvements, and long-term health benefits.
               </p>
               <div className="flex items-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4" />
-                  <span>1,800+ Success Stories</span>
+                  <span>5,000+ Success Stories</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
-                  <span>Average HbA1c reduction: 1.2%</span>
+                  <span>Average weight loss: 5-10 kg in 3 months</span>
                 </div>
               </div>
             </div>
@@ -137,14 +135,13 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-orange-800">
                   <AlertTriangle className="h-5 w-5" />
-                  Important Medical Notice
+                  Important Health Notice
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-orange-700 text-sm">
-                  This plan is designed for educational purposes. Always consult your doctor before starting any weight
-                  loss program, especially if you're on diabetes medication. Blood sugar monitoring and medication
-                  adjustments may be necessary.
+                  This plan is for educational purposes only. Consult a healthcare professional before beginning,
+                  especially if you have diabetes, hypertension, or joint problems.
                 </p>
               </CardContent>
             </Card>
@@ -152,17 +149,17 @@ export default function DiabetesPlanPage() {
             {/* Introduction */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Understanding Diabetes and Weight Loss</CardTitle>
+                <CardTitle>Understanding Obesity & General Weight Loss</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Type 2 diabetes affects over 77 million Indians, making it crucial to manage both blood sugar levels
-                  and weight. Excess weight makes diabetes harder to control, while proper weight management can
-                  significantly improve blood sugar levels.
+                  Obesity is one of the leading health concerns in India, increasing the risk of diabetes, hypertension,
+                  and heart disease. General weight loss is not just about aesthetics but also about improving overall
+                  health.
                 </p>
                 <p className="text-muted-foreground">
-                  Our diabetes-specific plan focuses on low-glycemic Indian foods, portion control, and meal timing to
-                  help you lose weight while maintaining stable blood sugar levels throughout the day.
+                  Our plan combines portion-controlled Indian meals, consistent activity, and behavior modification
+                  techniques to help you lose weight safely and sustainably.
                 </p>
               </CardContent>
             </Card>
@@ -172,7 +169,7 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5 text-red-500" />
-                  Common Diabetes Weight Loss Challenges
+                  Common Challenges in Obesity
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -192,17 +189,16 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Utensils className="h-5 w-5 text-primary" />
-                  Sample 7-Day Diabetic Diet Plan
+                  Sample 7-Day Weight Loss Diet Plan
                 </CardTitle>
                 <CardDescription>
-                  Low-glycemic meals designed to maintain stable blood sugar. All portions are controlled and
-                  carb-counted.
+                  Balanced meals designed to promote fat loss while providing complete nutrition.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   {dietPlan.map((day, index) => (
-                    <Card key={index} className="border-l-4 border-l-red-500">
+                    <Card key={index} className="border-l-4 border-l-green-500">
                       <CardHeader className="pb-3">
                         <CardTitle className="text-lg">{day.day}</CardTitle>
                       </CardHeader>
@@ -226,10 +222,10 @@ export default function DiabetesPlanPage() {
                     </Card>
                   ))}
                 </div>
-                <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
-                  <p className="text-sm text-red-700">
-                    <strong>Medical Supervision Required:</strong> This plan requires regular blood sugar monitoring and
-                    possible medication adjustments. Consult your doctor before starting.
+                <div className="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
+                  <p className="text-sm text-green-700">
+                    <strong>Note:</strong> Sustainable weight loss comes from consistent eating habits,
+                    portion control, and lifestyle changes — not crash diets.
                   </p>
                 </div>
               </CardContent>
@@ -238,7 +234,7 @@ export default function DiabetesPlanPage() {
             {/* Lifestyle Tips */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Essential Lifestyle Tips for Diabetic Weight Loss</CardTitle>
+                <CardTitle>Lifestyle Tips for Obesity & Weight Loss</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -280,13 +276,12 @@ export default function DiabetesPlanPage() {
             {/* CTA */}
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4">Ready to Manage Your Diabetes Through Weight Loss?</h2>
+                <h2 className="text-2xl font-bold mb-4">Ready to Begin Your Weight Loss Journey?</h2>
                 <p className="mb-6 opacity-90">
-                  Get a medically-supervised diabetes weight loss plan with blood sugar tracking, meal plans, and
-                  ongoing support.
+                  Get a personalized obesity management and weight loss plan with expert guidance and constant support.
                 </p>
                 <Button size="lg" variant="secondary">
-                  <Link href="/contact">Book Diabetes Consultation - ₹500</Link>
+                  <Link href="/contact">Book Consultation - ₹500</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -307,11 +302,11 @@ export default function DiabetesPlanPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Difficulty</span>
-                    <span className="text-sm font-medium">High</span>
+                    <span className="text-sm font-medium">Moderate</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Medical Supervision</span>
-                    <span className="text-sm font-medium">Required</span>
+                    <span className="text-sm font-medium">Advised</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Success Rate</span>
@@ -336,20 +331,17 @@ export default function DiabetesPlanPage() {
                   <CardTitle className="text-lg">Related Plans</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <Link href="/plans/obesity" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="font-medium text-sm">Obesity Management</div>
-                    <div className="text-xs text-muted-foreground">Comprehensive weight loss</div>
+                  <Link href="/plans/diabetes" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className="font-medium text-sm">Diabetes Plan</div>
+                    <div className="text-xs text-muted-foreground">Blood sugar management</div>
                   </Link>
-                  <Link
-                    href="/plans/senior-citizens"
-                    className="block p-3 rounded-lg hover:bg-muted/50 transition-colors"
-                  >
-                    <div className="font-medium text-sm">Senior Citizens Plan</div>
-                    <div className="text-xs text-muted-foreground">Age-appropriate approach</div>
+                  <Link href="/plans/hypothyroidism" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className="font-medium text-sm">Hypothyroidism Plan</div>
+                    <div className="text-xs text-muted-foreground">Thyroid-specific nutrition</div>
                   </Link>
-                  <Link href="/plans/vegetarian" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="font-medium text-sm">Vegetarian Plan</div>
-                    <div className="text-xs text-muted-foreground">Plant-based options</div>
+                  <Link href="/plans/pcod" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className="font-medium text-sm">PCOD Plan</div>
+                    <div className="text-xs text-muted-foreground">Hormone balancing diet</div>
                   </Link>
                 </CardContent>
               </Card>

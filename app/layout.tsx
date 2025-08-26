@@ -1,9 +1,11 @@
+
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import "./globals.css"
 import ClientLayout from "./client-layout"
-import { SchemaMarkup } from "@/components/schema-markup" // Fixed import path and changed to named import
+import { SchemaMarkup } from "@/components/schema-markup"
+import Link from "next/link"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,75 +27,16 @@ export const metadata: Metadata = {
   },
   description:
     "Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, and more. Trusted by 10,000+ Indians for successful weight loss. Book consultation for ₹500.",
-  keywords: [
-    "weight loss",
-    "diet plans",
-    "PCOS",
-    "thyroid",
-    "diabetes",
-    "Indian diet",
-    "nutrition consultation",
-    "health",
-    "fitness",
-    "weight management",
-    "personalized diet",
-    "nutrition expert",
-    "healthy eating",
-    "meal plans",
-  ],
   authors: [{ name: "FitPlan India", url: "https://fitplanindia.com" }],
   creator: "FitPlan India",
   publisher: "FitPlan India",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_IN",
-    url: "https://fitplanindia.com",
-    siteName: "FitPlan India",
-    title: "FitPlan India - Personalized Weight Loss Plans for Every Condition",
-    description:
-      "Specialized weight loss plans for Indians with health conditions like PCOS, thyroid, diabetes. Expert nutrition consultation for ₹500.",
-    images: [
-      {
-        url: "https://fitplanindia.com/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "FitPlan India - Personalized Weight Loss Plans",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "FitPlan India - Personalized Weight Loss Plans",
-    description: "Specialized weight loss plans for Indians with health conditions. Expert consultation for ₹500.",
-    images: ["https://fitplanindia.com/og-image.jpg"],
-    creator: "@fitplanindia",
-  },
-  verification: {
-    google: "your-google-verification-code", // Replace with actual verification code
-  },
-  alternates: {
-    canonical: "https://fitplanindia.com",
-  },
-  category: "Health & Fitness",
-    generator: 'v0.app'
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
@@ -109,7 +52,38 @@ export default function RootLayout({
         <SchemaMarkup type="service" />
       </head>
       <body className="font-sans antialiased">
-        <ClientLayout>{children}</ClientLayout>
+        <ClientLayout>
+          {/* ✅ Header */}
+          <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
+            <div className="container flex h-16 items-center justify-between px-6 mx-auto">
+              {/* Logo */}
+              <Link href="/" className="flex items-center space-x-2 ml-4">
+                <span className="text-2xl font-bold text-primary">
+                  FitPlan India
+                </span>
+              </Link>
+
+              {/* Navigation */}
+              <nav className="hidden md:flex items-center space-x-8 mr-6">
+                <Link href="/" className="hover:text-primary">Home</Link>
+                <Link href="/plans" className="hover:text-primary">Plans</Link>
+                <Link href="/tools" className="hover:text-primary">Tools</Link>
+                <Link href="/blog" className="hover:text-primary">Blog</Link>
+                <Link href="/contact" className="hover:text-primary">Contact</Link>
+                <Link
+                  href="/consultation"
+                  className="px-4 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition"
+                >
+                  Book Consultation
+                </Link>
+              </nav>
+            </div>
+          </header>
+
+          {/* ✅ Page Content */}
+          <main>{children}</main>
+
+        </ClientLayout>
       </body>
     </html>
   )

@@ -2,109 +2,107 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Heart, Users, Target, AlertTriangle, Utensils, Activity, Moon, Droplets } from "lucide-react"
+import { Users, Target, AlertTriangle, Utensils, Activity, Moon, Droplets } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Diabetes Weight Loss Plan - Blood Sugar Friendly Indian Diet | FitPlan India",
+  title: "Hyperthyroidism Weight Gain Plan - Metabolism Balancing Indian Diet | FitPlan India",
   description:
-    "Specialized diabetes weight loss plan with low-glycemic Indian foods, blood sugar management, and sustainable weight loss. Expert-designed meal plans.",
+    "Specialized hyperthyroidism weight gain plan with thyroid-friendly Indian foods, metabolism balancing strategies, and healthy weight restoration support.",
   keywords:
-    "diabetes weight loss, diabetic diet plan, blood sugar diet, diabetes Indian food, low glycemic diet, diabetic meal plan",
+    "hyperthyroidism diet plan, thyroid weight gain, Indian diet for thyroid, high metabolism diet, hyperthyroid meal plan",
 }
 
-export default function DiabetesPlanPage() {
+export default function HyperthyroidismPlanPage() {
   const challenges = [
-    "Blood sugar spikes from carbohydrate-rich Indian foods",
-    "Medication affecting weight loss progress",
-    "Risk of hypoglycemia during exercise",
-    "Portion control with traditional Indian meals",
-    "Managing hunger between meals",
-    "Social eating and festival food challenges",
+    "Unintentional weight loss despite eating enough",
+    "High metabolism causing fatigue and muscle loss",
+    "Anxiety, restlessness, and sleep disturbances",
+    "Difficulty maintaining balanced energy levels",
+    "Nutrient deficiencies (calcium, vitamin D, protein)",
+    "Managing social eating while avoiding triggers like caffeine",
   ]
 
   const dietPlan = [
     {
       day: "Day 1",
-      breakfast: "Vegetable oats + 1 boiled egg (optional) + Green tea",
-      midMorning: "1 small apple + 6 almonds",
-      lunch: "1 roti + Dal + Lauki curry + Cucumber salad",
-      evening: "Buttermilk + 2 whole grain crackers",
-      dinner: "Quinoa pulao + Palak paneer + Mint chutney",
+      breakfast: "Moong dal chilla + Mint chutney + Herbal tea (caffeine-free)",
+      midMorning: "1 banana + 5 soaked almonds",
+      lunch: "2 rotis (multigrain) + Dal + Lauki sabzi + Carrot cucumber salad",
+      evening: "Buttermilk (unsalted) + 2 rice cakes",
+      dinner: "Vegetable khichdi (brown rice + moong dal) + Palak curry",
     },
     {
       day: "Day 2",
-      breakfast: "Besan chilla with vegetables + Coconut chutney",
-      midMorning: "1 orange + 5 walnuts",
-      lunch: "Brown rice (1/2 cup) + Rajma + Bhindi + Onion salad",
-      evening: "Green tea + Roasted chana (2 tbsp)",
-      dinner: "2 roti + Moong dal + Karela curry + Raita",
+      breakfast: "Vegetable poha + 1 boiled egg (optional)",
+      midMorning: "1 guava + 5 walnuts",
+      lunch: "Brown rice (1/2 cup) + Rajma + Bhindi curry + Cabbage salad",
+      evening: "Caffeine-free green tea + Roasted chana",
+      dinner: "2 rotis + Moong dal + Tinda curry + Raita",
     },
     {
       day: "Day 3",
-      breakfast: "Vegetable upma + Sambhar (small bowl)",
-      midMorning: "1 guava + 8 cashews",
-      lunch: "Bajra roti + Chicken curry (optional) + Mixed vegetables",
+      breakfast: "Vegetable upma + Coconut chutney",
+      midMorning: "1 apple + 6 cashews",
+      lunch: "Bajra roti + Chicken curry (optional) + Mixed sabzi",
       evening: "Herbal tea + 1 boiled egg (optional)",
-      dinner: "Cauliflower rice + Dal + Methi sabzi + Pickle",
+      dinner: "Oats khichdi + Methi sabzi + Pickle (small)",
     },
   ]
 
   const lifestyleTips = [
     {
       icon: Target,
-      title: "Blood Sugar Monitoring",
-      description: "Check blood glucose before and after meals. Maintain a food diary to track patterns.",
+      title: "Thyroid Monitoring",
+      description: "Check TSH, T3, and T4 levels regularly. Adjust diet with medical advice.",
     },
     {
       icon: Activity,
-      title: "Post-Meal Walks",
-      description: "10-15 minute walk after meals helps control blood sugar spikes naturally.",
+      title: "Light to Moderate Exercise",
+      description: "Gentle yoga, walking, and stretching help manage anxiety and maintain muscle mass.",
     },
     {
       icon: Droplets,
-      title: "Stay Hydrated",
-      description: "Drink 8-10 glasses of water daily. Proper hydration helps kidney function.",
+      title: "Hydration & Electrolytes",
+      description: "Drink enough water and include natural electrolyte sources like coconut water.",
     },
     {
       icon: Moon,
-      title: "Consistent Sleep",
-      description: "7-8 hours of quality sleep. Poor sleep affects blood sugar control.",
+      title: "Stress & Sleep Care",
+      description: "Aim for 7-8 hours of sleep. Avoid late-night screen time and caffeine.",
     },
   ]
 
   const faqs = [
     {
-      question: "Can diabetics lose weight safely?",
+      question: "Can hyperthyroid patients gain weight back?",
       answer:
-        "Yes, weight loss is actually beneficial for diabetes management. However, it should be done gradually (1-2 kg per month) under medical supervision to avoid blood sugar fluctuations and medication adjustments.",
+        "Yes, with proper diet and treatment, patients can regain healthy weight. Focus on nutrient-rich foods and avoid relying on empty calories.",
     },
     {
-      question: "What Indian foods should diabetics avoid?",
+      question: "What foods should be avoided with hyperthyroidism?",
       answer:
-        "Avoid white rice, refined wheat products, sugary sweets, fried foods, fruit juices, and processed foods. These cause rapid blood sugar spikes and make diabetes management difficult.",
+        "Avoid caffeine, refined sugar, processed foods, and excess iodine (like seaweed, iodized salt). These may worsen symptoms.",
     },
     {
-      question: "Can I eat fruits with diabetes?",
+      question: "Which foods help in hyperthyroidism?",
       answer:
-        "Yes, but choose low-glycemic fruits like apples, oranges, guava, and berries. Eat them in moderation and preferably with nuts or as part of a meal to slow sugar absorption.",
+        "Include whole grains, fresh vegetables, fruits, dairy, legumes, and lean protein. Cruciferous vegetables (cabbage, broccoli) in moderation may help reduce thyroid hormone activity.",
     },
     {
-      question: "Is intermittent fasting safe for diabetics?",
+      question: "Can exercise help hyperthyroidism?",
       answer:
-        "Intermittent fasting can be beneficial for some diabetics, but it requires careful medical supervision and medication adjustments. Never attempt without consulting your doctor first.",
+        "Yes, but stick to light-to-moderate activity. Over-exercising can worsen fatigue, muscle loss, and heart symptoms.",
     },
     {
-      question: "How much carbs should diabetics eat daily?",
+      question: "Is stress linked to hyperthyroidism?",
       answer:
-        "Generally 45-60g of carbs per meal, but this varies based on individual needs, medication, and activity level. Focus on complex carbs from whole grains and vegetables.",
+        "Stress can worsen symptoms and affect sleep. Meditation, yoga, and relaxation techniques are recommended for thyroid patients.",
     },
   ]
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -115,19 +113,19 @@ export default function DiabetesPlanPage() {
                 <Badge variant="destructive">High Priority</Badge>
                 <Badge variant="outline">6-12 Months</Badge>
               </div>
-              <h1 className="text-4xl font-bold mb-4">Diabetes Weight Loss Plan</h1>
+              <h1 className="text-4xl font-bold mb-4">Hyperthyroidism Weight Gain Plan</h1>
               <p className="text-xl text-muted-foreground mb-6">
-                A medically-supervised weight loss plan designed for diabetics. Focus on blood sugar control, gradual
-                weight loss, and long-term diabetes management through Indian cuisine.
+                A medically-supervised nutrition and lifestyle plan designed for hyperthyroidism. Focus on metabolism
+                control, muscle preservation, and restoring healthy weight through balanced Indian meals.
               </p>
               <div className="flex items-center gap-6 text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Users className="h-4 w-4" />
-                  <span>1,800+ Success Stories</span>
+                  <span>1,200+ Success Stories</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Target className="h-4 w-4" />
-                  <span>Average HbA1c reduction: 1.2%</span>
+                  <span>Improved TSH levels in 3 months</span>
                 </div>
               </div>
             </div>
@@ -142,9 +140,8 @@ export default function DiabetesPlanPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-orange-700 text-sm">
-                  This plan is designed for educational purposes. Always consult your doctor before starting any weight
-                  loss program, especially if you're on diabetes medication. Blood sugar monitoring and medication
-                  adjustments may be necessary.
+                  This plan is for educational purposes. Always consult your endocrinologist before starting any diet or
+                  lifestyle changes. Hyperthyroidism requires regular monitoring and medication adjustments.
                 </p>
               </CardContent>
             </Card>
@@ -152,17 +149,17 @@ export default function DiabetesPlanPage() {
             {/* Introduction */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Understanding Diabetes and Weight Loss</CardTitle>
+                <CardTitle>Understanding Hyperthyroidism and Weight</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground mb-4">
-                  Type 2 diabetes affects over 77 million Indians, making it crucial to manage both blood sugar levels
-                  and weight. Excess weight makes diabetes harder to control, while proper weight management can
-                  significantly improve blood sugar levels.
+                  Hyperthyroidism speeds up metabolism, often leading to unintentional weight loss, muscle weakness, and
+                  nutrient imbalances. Managing diet and lifestyle is crucial to restore balance and support thyroid
+                  health.
                 </p>
                 <p className="text-muted-foreground">
-                  Our diabetes-specific plan focuses on low-glycemic Indian foods, portion control, and meal timing to
-                  help you lose weight while maintaining stable blood sugar levels throughout the day.
+                  Our thyroid-specific plan includes high-quality protein, balanced carbs, and essential micronutrients
+                  to support weight gain, energy, and long-term wellness.
                 </p>
               </CardContent>
             </Card>
@@ -172,7 +169,7 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <AlertTriangle className="h-5 w-5 text-red-500" />
-                  Common Diabetes Weight Loss Challenges
+                  Common Hyperthyroidism Challenges
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -192,11 +189,10 @@ export default function DiabetesPlanPage() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Utensils className="h-5 w-5 text-primary" />
-                  Sample 7-Day Diabetic Diet Plan
+                  Sample 7-Day Hyperthyroidism Diet Plan
                 </CardTitle>
                 <CardDescription>
-                  Low-glycemic meals designed to maintain stable blood sugar. All portions are controlled and
-                  carb-counted.
+                  Thyroid-friendly meals designed to stabilize energy and promote healthy weight gain.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -228,8 +224,8 @@ export default function DiabetesPlanPage() {
                 </div>
                 <div className="mt-6 p-4 bg-red-50 rounded-lg border border-red-200">
                   <p className="text-sm text-red-700">
-                    <strong>Medical Supervision Required:</strong> This plan requires regular blood sugar monitoring and
-                    possible medication adjustments. Consult your doctor before starting.
+                    <strong>Medical Supervision Required:</strong> This plan should only be followed with regular
+                    thyroid testing and doctor guidance.
                   </p>
                 </div>
               </CardContent>
@@ -238,7 +234,7 @@ export default function DiabetesPlanPage() {
             {/* Lifestyle Tips */}
             <Card className="mb-8">
               <CardHeader>
-                <CardTitle>Essential Lifestyle Tips for Diabetic Weight Loss</CardTitle>
+                <CardTitle>Essential Lifestyle Tips for Hyperthyroidism</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -280,13 +276,13 @@ export default function DiabetesPlanPage() {
             {/* CTA */}
             <Card className="bg-primary text-primary-foreground">
               <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4">Ready to Manage Your Diabetes Through Weight Loss?</h2>
+                <h2 className="text-2xl font-bold mb-4">Ready to Manage Your Hyperthyroidism?</h2>
                 <p className="mb-6 opacity-90">
-                  Get a medically-supervised diabetes weight loss plan with blood sugar tracking, meal plans, and
-                  ongoing support.
+                  Get a customized hyperthyroidism diet and lifestyle plan with medical supervision, regular checkups,
+                  and ongoing support.
                 </p>
                 <Button size="lg" variant="secondary">
-                  <Link href="/contact">Book Diabetes Consultation - ₹500</Link>
+                  <Link href="/contact">Book Thyroid Consultation - ₹500</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -315,7 +311,7 @@ export default function DiabetesPlanPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-sm text-muted-foreground">Success Rate</span>
-                    <span className="text-sm font-medium">78%</span>
+                    <span className="text-sm font-medium">74%</span>
                   </div>
                 </CardContent>
               </Card>
@@ -336,16 +332,13 @@ export default function DiabetesPlanPage() {
                   <CardTitle className="text-lg">Related Plans</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
+                  <Link href="/plans/diabetes" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                    <div className="font-medium text-sm">Diabetes Plan</div>
+                    <div className="text-xs text-muted-foreground">Blood sugar friendly diet</div>
+                  </Link>
                   <Link href="/plans/obesity" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
                     <div className="font-medium text-sm">Obesity Management</div>
-                    <div className="text-xs text-muted-foreground">Comprehensive weight loss</div>
-                  </Link>
-                  <Link
-                    href="/plans/senior-citizens"
-                    className="block p-3 rounded-lg hover:bg-muted/50 transition-colors"
-                  >
-                    <div className="font-medium text-sm">Senior Citizens Plan</div>
-                    <div className="text-xs text-muted-foreground">Age-appropriate approach</div>
+                    <div className="text-xs text-muted-foreground">Sustainable fat loss</div>
                   </Link>
                   <Link href="/plans/vegetarian" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
                     <div className="font-medium text-sm">Vegetarian Plan</div>

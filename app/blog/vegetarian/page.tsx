@@ -157,34 +157,6 @@ export default function VegetarianBlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Link href="/" className="text-2xl font-bold text-green-600">
-                FitPlan India
-              </Link>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-green-600 transition-colors">
-                Home
-              </Link>
-              <Link href="/plans" className="text-gray-700 hover:text-green-600 transition-colors">
-                Weight Loss Plans
-              </Link>
-              <Link href="/tools" className="text-gray-700 hover:text-green-600 transition-colors">
-                Calculators
-              </Link>
-              <Link href="/blog" className="text-green-600 font-medium">
-                Blog
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-green-600 transition-colors">
-                Contact
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
