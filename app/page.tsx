@@ -6,12 +6,12 @@ import Link from "next/link"
 
 export default function HomePage() {
   const categories = [
-    { title: "Hypothyroidism Weight Loss", href: "/hypothyroidism", icon: Heart },
-    { title: "PCOS Weight Loss Plan", href: "/pcos", icon: Heart },
-    { title: "Diabetes Weight Loss", href: "/diabetes", icon: Heart },
-    { title: "Post-Pregnancy Plans", href: "/post-pregnancy", icon: Heart },
-    { title: "Vegetarian Plans", href: "/vegetarian", icon: Heart },
-    { title: "Keto Diet for Indians", href: "/keto", icon: Zap },
+    { title: "Hypothyroidism Weight Loss", href: "/plans/hypothyroidism", icon: Heart },
+    { title: "PCOS Weight Loss Plan", href: "/plans/pcos", icon: Heart },
+    { title: "Diabetes Weight Loss", href: "/plans/diabetes", icon: Heart },
+    { title: "Post-Pregnancy Plans", href: "/plans/post-pregnancy", icon: Heart },
+    { title: "Vegetarian Plans", href: "/plans/vegetarian", icon: Heart },
+    { title: "Keto Diet for Indians", href: "/plans/keto-diet", icon: Zap },
   ]
 
   const testimonials = [
@@ -41,7 +41,7 @@ export default function HomePage() {
       <section className="relative py-20 px-4 bg-gradient-to-br from-muted/50 to-background">
         <div className="container mx-auto text-center max-w-4xl">
           <Badge variant="secondary" className="mb-4">
-            Trusted by 10,000+ Indians
+            Trusted by People
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-foreground">
             Personalized Weight Loss Plans for Every Condition
@@ -61,11 +61,11 @@ export default function HomePage() {
           <div className="flex items-center justify-center gap-8 mt-12 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Users className="h-4 w-4" />
-              <span>10,000+ Success Stories</span>
+              <span>Personalised Care</span>
             </div>
             <div className="flex items-center gap-2">
               <Award className="h-4 w-4" />
-              <span>Certified Nutritionists</span>
+              <span>Certified Professionals</span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="h-4 w-4" />
@@ -118,7 +118,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose FitPlan India?</h2>
           <p className="text-lg text-muted-foreground mb-12">
             We understand the unique challenges faced by Indians in their weight loss journey. Our plans are designed by
-            certified nutritionists who specialize in Indian cuisine and lifestyle patterns.
+            certified professionals who specialize in Indian cuisine and lifestyle patterns.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -135,7 +135,7 @@ export default function HomePage() {
                 <Users className="h-8 w-8 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Expert Guidance</h3>
-              <p className="text-muted-foreground">Certified nutritionists and dietitians with years of experience.</p>
+              <p className="text-muted-foreground">Certified professionals and trainers with years of experience.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
