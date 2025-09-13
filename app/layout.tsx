@@ -3,10 +3,8 @@ import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import "@/app/globals.css"
 import { SchemaMarkup } from "@/components/schema-markup"
-import Link from "next/link"
-import Image from "next/image"
+import Header from "@/components/Header" // ✅ Client component
 import Footer from "@/app/components/Footer"
-import { Suspense } from "react"
 import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
@@ -48,7 +46,7 @@ export const metadata: Metadata = {
       { url: "/favicon.ico", sizes: "any" },
     ],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
-    other: [{ rel: "mask-icon", url: "/favicon.png", color: "#166534" }],
+    other: [{ rel: "mask-icon", url: "/favicon.svg", color: "#166534" }],
   },
   openGraph: {
     title: "FitPlan India - Personalized Weight Loss Plans for Every Condition",
@@ -78,17 +76,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://fitplanindia.com"),
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <meta name="theme-color" content="#166534" />
+
+        {/* Favicons */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="mask-icon" href="/favicon.svg" color="#166534" />
+
         <style>{`
           html {
             font-family: ${inter.style.fontFamily};
@@ -102,13 +104,10 @@ export default function RootLayout({
         <SchemaMarkup type="organization" />
         <SchemaMarkup type="service" />
 
-        {/* ✅ Google Analytics (Dynamic) */}
+        {/* ✅ Google Analytics */}
         {gaMeasurementId && (
           <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
-            />
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} />
             <script
               dangerouslySetInnerHTML={{
                 __html: `
@@ -123,48 +122,9 @@ export default function RootLayout({
         )}
       </head>
       <body className="font-sans antialiased">
-        {/* ✅ Header */}
-        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
-          <div className="container flex h-16 items-center justify-between px-6 mx-auto">
-            {/* Logo + Brand */}
-            <Link href="/" className="flex items-center ml-4">
-              <Image
-                src="/logo.png"
-                alt="FitPlan India Logo"
-                width={56}
-                height={56}
-                className="h-14 w-auto"
-                priority
-              />
-              <span className="ml-0.5 text-2xl font-bold text-green-700">
-                FitPlan India
-              </span>
-            </Link>
-
-            {/* Navigation */}
-            <nav className="hidden md:flex items-center space-x-8 mr-6">
-              <Link href="/" className="hover:text-primary">Home</Link>
-              <Link href="/plans" className="hover:text-primary">Plans</Link>
-              <Link href="/tools" className="hover:text-primary">Tools</Link>
-              <Link href="/blog" className="hover:text-primary">Blog</Link>
-              <Link href="/contact" className="hover:text-primary">Contact</Link>
-              <Link
-                href="/contact"
-                className="px-4 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition"
-              >
-                Book Consultation
-              </Link>
-            </nav>
-          </div>
-        </header>
-
-        {/* ✅ Page Content */}
+        <Header />
         <main>{children}</main>
-
-        {/* ✅ Footer */}
         <Footer />
-
-        {/* ✅ Vercel Analytics */}
         <Analytics />
       </body>
     </html>

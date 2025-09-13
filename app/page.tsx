@@ -36,7 +36,7 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-muted/50 to-background">
         <div className="container mx-auto text-center max-w-4xl">
@@ -201,6 +201,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   )
 }
