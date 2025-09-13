@@ -7,8 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Footer from "@/app/components/Footer"
 import { Suspense } from "react"
-import { GoogleAnalytics } from "@/components/analytics" // ✅ FIX: named import
-import { Analytics } from "@vercel/analytics/next" // ✅ Added Vercel Analytics
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -84,6 +83,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
@@ -95,9 +96,31 @@ export default function RootLayout({
             --font-heading: ${poppins.variable};
           }
         `}</style>
+
+        {/* ✅ Schema Markup */}
         <SchemaMarkup type="website" />
         <SchemaMarkup type="organization" />
         <SchemaMarkup type="service" />
+
+        {/* ✅ Google Analytics (Dynamic) */}
+        {gaMeasurementId && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaMeasurementId}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body className="font-sans antialiased">
         {/* ✅ Header */}
@@ -140,11 +163,6 @@ export default function RootLayout({
 
         {/* ✅ Footer */}
         <Footer />
-
-        {/* ✅ Google Analytics - wrapped in Suspense */}
-        <Suspense fallback={null}>
-          <GoogleAnalytics />
-        </Suspense>
 
         {/* ✅ Vercel Analytics */}
         <Analytics />
