@@ -8,6 +8,7 @@ import Image from "next/image"
 import Footer from "@/app/components/Footer"
 import { Suspense } from "react"
 import { GoogleAnalytics } from "@/components/analytics" // ✅ FIX: named import
+import { Analytics } from "@vercel/analytics/next" // ✅ Added Vercel Analytics
 
 const inter = Inter({
   subsets: ["latin"],
@@ -107,7 +108,7 @@ export default function RootLayout({
               <Image
                 src="/logo.png"
                 alt="FitPlan India Logo"
-                width={56} // slightly bigger logo
+                width={56}
                 height={56}
                 className="h-14 w-auto"
                 priority
@@ -144,6 +145,9 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <GoogleAnalytics />
         </Suspense>
+
+        {/* ✅ Vercel Analytics */}
+        <Analytics />
       </body>
     </html>
   )
