@@ -35,7 +35,7 @@ export async function POST(req: Request) {
     } catch (err) {
       console.error("❌ Google Auth failed:", err);
       return NextResponse.json(
-        { error: "Google authentication failed" },
+        { error: "Google authentication failed", details: err },
         { status: 401 }
       );
     }
@@ -93,9 +93,12 @@ export async function POST(req: Request) {
           return NextResponse.json({ success: true, updatedRow });
         }
       } catch (err) {
-        console.error("❌ Failed to read existing leads:", err);
+        console.error(
+          "❌ Failed to read existing leads:",
+          JSON.stringify(err, Object.getOwnPropertyNames(err))
+        );
         return NextResponse.json(
-          { error: "Failed to read leads from Google Sheet" },
+          { error: "Failed to read leads from Google Sheet", details: err },
           { status: 500 }
         );
       }
@@ -124,18 +127,25 @@ export async function POST(req: Request) {
 
       return NextResponse.json({ success: true, appendedRow: newRow });
     } catch (err) {
-      console.error("❌ Failed to append new lead:", err);
+      console.error(
+        "❌ Failed to append new lead:",
+        JSON.stringify(err, Object.getOwnPropertyNames(err))
+      );
       return NextResponse.json(
-        { error: "Failed to save lead to Google Sheet" },
+        { error: "Failed to save lead to Google Sheet", details: err },
         { status: 500 }
       );
     }
   } catch (error) {
-    console.error("❌ Error in POST /api/save-lead:", error);
+    console.error(
+      "❌ Error in POST /api/save-lead:",
+      JSON.stringify(error, Object.getOwnPropertyNames(error))
+    );
     return NextResponse.json(
       {
         error:
           "Unexpected server error. Please check server logs for more details.",
+        details: error,
       },
       { status: 500 }
     );
