@@ -1,6 +1,6 @@
 "use client";
 
-import ChatUI from "@/components/ChatUI";
+import ChatUi from "@/components/ChatUi";
 import { useState } from "react";
 
 export default function AICoachPage() {
@@ -163,7 +163,7 @@ Here’s what I understood:
   return (
     <div className="p-2 md:p-4 flex justify-center">
       <div className="w-full max-w-lg">
-        <ChatUI
+        <ChatUi
           messages={messages}
           input={input}
           setInput={setInput}
