@@ -3,9 +3,10 @@ import type { Metadata } from "next"
 import { Inter, Poppins } from "next/font/google"
 import "@/app/globals.css"
 import { SchemaMarkup } from "@/components/schema-markup"
-import Header from "@/components/Header" // ✅ Client component
+import Header from "@/components/Header"
 import Footer from "@/app/components/Footer"
 import { Analytics } from "@vercel/analytics/next"
+import FloatingAIButton from "@/components/FloatingAIButton" // ✅ NEW IMPORT
 
 const inter = Inter({
   subsets: ["latin"],
@@ -125,6 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingAIButton /> {/* ✅ Always visible floating chat button */}
         <Analytics />
       </body>
     </html>

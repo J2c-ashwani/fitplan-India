@@ -1,4 +1,4 @@
-"use client" // ✅ Required for useState
+"use client"
 
 import { useState } from "react"
 import Link from "next/link"
@@ -28,7 +28,9 @@ export default function Header() {
             className="h-14 w-auto"
             priority
           />
-          <span className="ml-0.5 text-2xl font-bold text-green-700">FitPlan India</span>
+          <span className="ml-0.5 text-2xl font-bold text-green-700">
+            FitPlan India
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -38,6 +40,15 @@ export default function Header() {
               {link.title}
             </Link>
           ))}
+
+          {/* AI Coach highlighted as CTA button */}
+          <Link
+            href="/ai-coach"
+            className="px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition"
+          >
+            🧠 AI Coach
+          </Link>
+
           <Link
             href="/contact"
             className="px-4 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition"
@@ -83,9 +94,19 @@ export default function Header() {
                 {link.title}
               </Link>
             ))}
+
+            {/* AI Coach button for mobile menu */}
+            <Link
+              href="/ai-coach"
+              className="px-4 py-2 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition text-center"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              🧠 AI Coach
+            </Link>
+
             <Link
               href="/contact"
-              className="px-4 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition"
+              className="px-4 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition text-center"
               onClick={() => setMobileMenuOpen(false)}
             >
               Book Consultation
