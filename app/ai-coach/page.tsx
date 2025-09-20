@@ -49,7 +49,6 @@ export default function AICoachPage() {
   const [showSummary, setShowSummary] = useState(false);
   const [loadingPlan, setLoadingPlan] = useState(false);
 
-  // Dynamic quick replies based on current step
   const quickReplies =
     currentStep !== -1 && steps[currentStep]?.type === "buttons"
       ? steps[currentStep].options
@@ -109,6 +108,7 @@ Here’s what I understood:
     setMessages((prev) => [
       ...prev,
       { sender: "ai", text: `Awesome! 🎉 Preparing your personalized plan...` },
+      { sender: "ai", text: "typing...", type: "loader" }, // ✅ Loader message
     ]);
 
     try {
@@ -119,21 +119,26 @@ Here’s what I understood:
       });
 
       const data = await res.json();
+      console.log("AI Response:", data); // ✅ Debugging line
 
-      setMessages((prev) => [
-        ...prev,
-        {
-          sender: "ai",
-          text: data.plan || "Sorry, I couldn’t generate a plan right now. Please try again later.",
-          type: "plan",
-        },
-      ]);
+      setMessages((prev) =>
+        prev
+          .filter((msg) => msg.type !== "loader") // remove loader message
+          .concat({
+            sender: "ai",
+            text:
+              data.plan ||
+              "Sorry, I couldn’t generate a plan right now. Please try again later.",
+            type: "plan",
+          })
+      );
     } catch (err) {
       console.error("Error generating plan:", err);
-      setMessages((prev) => [
-        ...prev,
-        { sender: "ai", text: "⚠️ There was an error generating your plan. Please try again." },
-      ]);
+      setMessages((prev) =>
+        prev
+          .filter((msg) => msg.type !== "loader")
+          .concat({ sender: "ai", text: "⚠️ There was an error generating your plan. Please try again." })
+      );
     } finally {
       setLoadingPlan(false);
     }

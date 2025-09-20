@@ -2,33 +2,47 @@ import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY, // Make sure this is set in your .env
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 export async function POST(req: NextRequest) {
   try {
-    const { messages } = await req.json();
+    const profile = await req.json();
 
-    if (!messages || !Array.isArray(messages)) {
-      return NextResponse.json({ error: "Invalid messages array" }, { status: 400 });
-    }
+    // Build a prompt from profile data
+    const prompt = `
+Generate a personalized health and fitness plan based on this profile:
+- Name: ${profile.name}
+- Age: ${profile.age}
+- Weight: ${profile.weight} kg
+- Height: ${profile.height} cm
+- Goal: ${profile.goal}
+- Lifestyle: ${profile.lifestyle}
+- Diet: ${profile.dietPreference} (${profile.dietType})
+- Health Condition: ${profile.healthCondition}
 
-    // Map your messages to OpenAI format
-    const formattedMessages = messages.map((msg: any) => ({
-      role: msg.sender === "user" ? "user" : "assistant",
-      content: msg.text,
-    }));
+Provide:
+1. Daily calorie recommendation
+2. Sample meals/snacks (Indian if selected)
+3. Workout routine
+4. Lifestyle tips
+
+Respond clearly, with line breaks for readability.
+    `;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini", // You can change to gpt-4 or other
-      messages: formattedMessages,
+      model: "gpt-4o-mini",
+      messages: [
+        { role: "system", content: "You are a fitness coach." },
+        { role: "user", content: prompt },
+      ],
     });
 
-    const aiMessage = completion.choices[0].message?.content || "";
+    const aiPlan = completion.choices[0].message?.content || "";
 
-    return NextResponse.json({ text: aiMessage });
+    return NextResponse.json({ plan: aiPlan });
   } catch (err) {
     console.error("OpenAI API Error:", err);
-    return NextResponse.json({ error: "Failed to fetch AI response" }, { status: 500 });
+    return NextResponse.json({ error: "Failed to generate plan" }, { status: 500 });
   }
 }
