@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 interface ChatUIProps {
-  messages: { sender: string; text: string; type?: "text" | "plan" }[];
+  messages: { sender: string; text: string; type?: "text" | "plan" | "loader" }[];
   input: string;
   setInput: (value: string) => void;
   onSend: () => void;
@@ -31,6 +31,14 @@ export default function ChatUI({
   disableConfirm = false,
 }: ChatUIProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to bottom whenever messages change
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop =
+        scrollContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   return (
     <div className="flex flex-col h-[90vh] bg-white rounded-xl shadow-lg overflow-hidden">
@@ -88,15 +96,17 @@ export default function ChatUI({
                   );
                 })}
               </div>
+            ) : msg.type === "loader" ? (
+              <div className="flex items-center gap-2">
+                <span className="inline-block w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.3s]" />
+                <span className="inline-block w-2 h-2 bg-gray-500 rounded-full animate-bounce [animation-delay:-0.15s]" />
+                <span className="inline-block w-2 h-2 bg-gray-500 rounded-full animate-bounce" />
+              </div>
             ) : (
               msg.text
             )}
           </motion.div>
         ))}
-
-        {loadingPlan && (
-          <div className="mr-auto text-gray-500 italic">⏳ Generating your plan...</div>
-        )}
       </div>
 
       {/* Summary Confirmation */}
