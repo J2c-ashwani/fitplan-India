@@ -14,27 +14,6 @@ export default function HomePage() {
     { title: "Keto Diet for Indians", href: "/plans/keto-diet", icon: Zap },
   ]
 
-  const testimonials = [
-    {
-      name: "Priya Sharma",
-      condition: "PCOS",
-      result: "Lost 15kg in 6 months",
-      text: "The personalized plan helped me manage my PCOS symptoms while losing weight naturally.",
-    },
-    {
-      name: "Rajesh Kumar",
-      condition: "Diabetes",
-      result: "Lost 12kg, improved HbA1c",
-      text: "My blood sugar levels are now under control, and I feel more energetic than ever.",
-    },
-    {
-      name: "Anita Patel",
-      condition: "Hypothyroidism",
-      result: "Lost 10kg in 4 months",
-      text: "Finally found a plan that works with my thyroid condition. Highly recommended!",
-    },
-  ]
-
   return (
     <main className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -47,8 +26,7 @@ export default function HomePage() {
             Personalized Weight Loss Plans for Every Condition
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, and more. Start your
-            transformation journey with India's most trusted fitness platform.
+            Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, and more. Start your transformation journey with India's most trusted fitness platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button size="lg" asChild className="text-lg px-8 py-6">
@@ -117,8 +95,7 @@ export default function HomePage() {
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose FitPlan India?</h2>
           <p className="text-lg text-muted-foreground mb-12">
-            We understand the unique challenges faced by Indians in their weight loss journey. Our plans are designed by
-            certified professionals who specialize in Indian cuisine and lifestyle patterns.
+            We understand the unique challenges faced by Indians in their weight loss journey. Our plans are designed by certified professionals who specialize in Indian cuisine and lifestyle patterns.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -148,43 +125,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
-            <p className="text-xl text-muted-foreground">Real people, real results</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="text-center">
-                <CardHeader>
-                  <div className="flex justify-center mb-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                    ))}
-                  </div>
-                  <CardTitle className="text-lg">{testimonial.name}</CardTitle>
-                  <CardDescription>
-                    {testimonial.condition} • {testimonial.result}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground italic">"{testimonial.text}"</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 bg-primary text-primary-foreground">
         <div className="container mx-auto text-center max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Transformation?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of Indians who have successfully achieved their weight loss goals with our personalized
-            plans.
+            Join thousands of Indians who have successfully achieved their weight loss goals with our personalized plans.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild className="text-lg px-8 py-6">
