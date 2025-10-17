@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Heart, Calculator, Droplets, Zap, Target, Users, Activity } from "lucide-react"
+import { Calculator, Droplets, Zap, Target, Users, Activity, CheckCircle, TrendingUp } from "lucide-react"
 import Link from "next/link"
 
 export default function ToolsPage() {
@@ -15,7 +15,7 @@ export default function ToolsPage() {
   const [bmiData, setBmiData] = useState({
     height: "",
     weight: "",
-    unit: "metric", // metric or imperial
+    unit: "imperial", // imperial for USA/UK/Australia
   })
   const [bmiResult, setBmiResult] = useState<{
     bmi: number
@@ -67,8 +67,8 @@ export default function ToolsPage() {
 
   // BMI Calculator Functions
   const calculateBMI = () => {
-    const height = Number.parseFloat(bmiData.height)
-    const weight = Number.parseFloat(bmiData.weight)
+    const height = parseFloat(bmiData.height)
+    const weight = parseFloat(bmiData.weight)
 
     if (!height || !weight) return
 
@@ -89,7 +89,7 @@ export default function ToolsPage() {
       advice = "Consider gaining weight through a balanced diet and strength training."
     } else if (bmi < 25) {
       category = "Normal Weight"
-      color = "text-green-600"
+      color = "text-emerald-600"
       advice = "Great! Maintain your current weight with a balanced diet and regular exercise."
     } else if (bmi < 30) {
       category = "Overweight"
@@ -111,9 +111,9 @@ export default function ToolsPage() {
 
   // Calorie Calculator Functions
   const calculateCalories = () => {
-    const age = Number.parseInt(calorieData.age)
-    const height = Number.parseFloat(calorieData.height)
-    const weight = Number.parseFloat(calorieData.weight)
+    const age = parseInt(calorieData.age)
+    const height = parseFloat(calorieData.height)
+    const weight = parseFloat(calorieData.weight)
 
     if (!age || !height || !weight || !calorieData.gender || !calorieData.activity || !calorieData.goal) return
 
@@ -142,15 +142,15 @@ export default function ToolsPage() {
     switch (calorieData.goal) {
       case "lose_fast":
         goalCalories = maintenance - 750
-        goalType = "Fast Weight Loss (0.75kg/week)"
+        goalType = "Fast Weight Loss (1.5 lbs/week)"
         break
       case "lose_moderate":
         goalCalories = maintenance - 500
-        goalType = "Moderate Weight Loss (0.5kg/week)"
+        goalType = "Moderate Weight Loss (1 lb/week)"
         break
       case "lose_slow":
         goalCalories = maintenance - 250
-        goalType = "Slow Weight Loss (0.25kg/week)"
+        goalType = "Slow Weight Loss (0.5 lbs/week)"
         break
       case "maintain":
         goalCalories = maintenance
@@ -158,7 +158,7 @@ export default function ToolsPage() {
         break
       case "gain":
         goalCalories = maintenance + 300
-        goalType = "Weight Gain (0.25kg/week)"
+        goalType = "Weight Gain (0.5 lbs/week)"
         break
       default:
         goalCalories = maintenance
@@ -175,7 +175,7 @@ export default function ToolsPage() {
 
   // Water Calculator Functions
   const calculateWater = () => {
-    const weight = Number.parseFloat(waterData.weight)
+    const weight = parseFloat(waterData.weight)
     if (!weight || !waterData.activity || !waterData.climate) return
 
     // Base water requirement: 35ml per kg body weight
@@ -218,8 +218,8 @@ export default function ToolsPage() {
 
   // Protein Calculator Functions
   const calculateProtein = () => {
-    const weight = Number.parseFloat(proteinData.weight)
-    const age = Number.parseInt(proteinData.age)
+    const weight = parseFloat(proteinData.weight)
+    const age = parseInt(proteinData.age)
 
     if (!weight || !age || !proteinData.activity || !proteinData.goal) return
 
@@ -262,12 +262,14 @@ export default function ToolsPage() {
     const totalProtein = weight * proteinPerKg
 
     const sources = [
-      "Dal and legumes (20-25g per cup)",
-      "Paneer (14g per 100g)",
-      "Greek yogurt (15g per cup)",
+      "Chicken breast (31g per 100g)",
+      "Greek yogurt (10g per 100g)",
       "Eggs (6g per egg)",
-      "Quinoa (8g per cup cooked)",
-      "Nuts and seeds (6g per ounce)",
+      "Salmon (25g per 100g)",
+      "Lentils (9g per 100g cooked)",
+      "Cottage cheese (11g per 100g)",
+      "Almonds (21g per 100g)",
+      "Quinoa (4g per 100g cooked)",
     ]
 
     let advice: string
@@ -287,128 +289,141 @@ export default function ToolsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-muted/50 to-background">
-        <div className="container mx-auto text-center max-w-4xl">
-          <Badge variant="secondary" className="mb-4">
-            Free Health Tools
-          </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Health & Fitness Calculators</h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Use our free calculators to determine your BMI, daily calorie needs, water intake, and protein requirements.
-            Get personalized recommendations for your health journey.
-          </p>
-          <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <Calculator className="h-4 w-4" />
-              <span>Scientifically Accurate</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Users className="h-4 w-4" />
-              <span>Used by 50,000+ Indians</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Target className="h-4 w-4" />
-              <span>Personalized Results</span>
+      <section className="bg-gradient-to-br from-emerald-600 to-green-700 text-white py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
+              🧮 Free Health Tools
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              Health & Fitness Calculators
+            </h1>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Use our scientifically accurate calculators to determine your BMI, daily calorie needs, water intake, 
+              and protein requirements. Get personalized recommendations for your health journey.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
+              <div className="flex items-center gap-2">
+                <Calculator className="h-5 w-5" />
+                <span>Scientifically Accurate</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="h-5 w-5" />
+                <span>Used by 50,000+ Worldwide</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Target className="h-5 w-5" />
+                <span>Personalized Results</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5" />
+                <span>100% Free</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Calculators Grid */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* BMI Calculator */}
-            <Card className="h-fit">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Target className="h-5 w-5 text-primary" />
+            <Card className="border-2 hover:border-emerald-200 hover:shadow-xl transition-all">
+              <CardHeader className="bg-gradient-to-r from-emerald-50 to-green-50">
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <div className="p-2 bg-emerald-100 rounded-lg">
+                    <Target className="h-6 w-6 text-emerald-600" />
+                  </div>
                   BMI Calculator
                 </CardTitle>
-                <CardDescription>Calculate your Body Mass Index and get health recommendations</CardDescription>
+                <CardDescription className="text-base">Calculate your Body Mass Index and get health recommendations</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 pt-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="bmi-height">Height</Label>
+                    <Label htmlFor="bmi-height" className="text-sm font-semibold">Height</Label>
                     <Input
                       id="bmi-height"
                       type="number"
                       placeholder={bmiData.unit === "metric" ? "170 cm" : "5.7 ft"}
                       value={bmiData.height}
                       onChange={(e) => setBmiData({ ...bmiData, height: e.target.value })}
+                      className="mt-1"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="bmi-weight">Weight</Label>
+                    <Label htmlFor="bmi-weight" className="text-sm font-semibold">Weight</Label>
                     <Input
                       id="bmi-weight"
                       type="number"
                       placeholder={bmiData.unit === "metric" ? "70 kg" : "154 lbs"}
                       value={bmiData.weight}
                       onChange={(e) => setBmiData({ ...bmiData, weight: e.target.value })}
+                      className="mt-1"
                     />
                   </div>
                 </div>
                 <div>
-                  <Label>Unit System</Label>
+                  <Label className="text-sm font-semibold">Unit System</Label>
                   <Select value={bmiData.unit} onValueChange={(value) => setBmiData({ ...bmiData, unit: value })}>
-                    <SelectTrigger>
+                    <SelectTrigger className="mt-1">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="metric">Metric (cm, kg)</SelectItem>
                       <SelectItem value="imperial">Imperial (ft, lbs)</SelectItem>
+                      <SelectItem value="metric">Metric (cm, kg)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-                <Button onClick={calculateBMI} className="w-full">
+                <Button onClick={calculateBMI} className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg py-6">
                   Calculate BMI
                 </Button>
                 {bmiResult && (
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <div className="text-center mb-3">
-                      <div className="text-3xl font-bold text-primary">{bmiResult.bmi}</div>
-                      <div className={`text-lg font-semibold ${bmiResult.color}`}>{bmiResult.category}</div>
+                  <div className="p-6 bg-gradient-to-br from-emerald-50 to-green-50 rounded-lg border-2 border-emerald-200">
+                    <div className="text-center mb-4">
+                      <div className="text-5xl font-bold text-emerald-600">{bmiResult.bmi}</div>
+                      <div className={`text-xl font-semibold mt-2 ${bmiResult.color}`}>{bmiResult.category}</div>
                     </div>
-                    <p className="text-sm text-muted-foreground text-center">{bmiResult.advice}</p>
+                    <p className="text-sm text-gray-700 text-center leading-relaxed">{bmiResult.advice}</p>
                   </div>
                 )}
               </CardContent>
             </Card>
 
             {/* Calorie Calculator */}
-            <Card className="h-fit">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Zap className="h-5 w-5 text-primary" />
+            <Card className="border-2 hover:border-emerald-200 hover:shadow-xl transition-all">
+              <CardHeader className="bg-gradient-to-r from-blue-50 to-cyan-50">
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <div className="p-2 bg-blue-100 rounded-lg">
+                    <Zap className="h-6 w-6 text-blue-600" />
+                  </div>
                   Calorie Calculator
                 </CardTitle>
-                <CardDescription>Calculate your daily calorie needs based on your goals</CardDescription>
+                <CardDescription className="text-base">Calculate your daily calorie needs based on your goals</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 pt-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="cal-age">Age</Label>
+                    <Label htmlFor="cal-age" className="text-sm font-semibold">Age</Label>
                     <Input
                       id="cal-age"
                       type="number"
                       placeholder="25"
                       value={calorieData.age}
                       onChange={(e) => setCalorieData({ ...calorieData, age: e.target.value })}
+                      className="mt-1"
                     />
                   </div>
                   <div>
-                    <Label>Gender</Label>
+                    <Label className="text-sm font-semibold">Gender</Label>
                     <Select
                       value={calorieData.gender}
                       onValueChange={(value) => setCalorieData({ ...calorieData, gender: value })}
                     >
-                      <SelectTrigger>
+                      <SelectTrigger className="mt-1">
                         <SelectValue placeholder="Select" />
                       </SelectTrigger>
                       <SelectContent>
@@ -420,33 +435,35 @@ export default function ToolsPage() {
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="cal-height">Height (cm)</Label>
+                    <Label htmlFor="cal-height" className="text-sm font-semibold">Height (cm)</Label>
                     <Input
                       id="cal-height"
                       type="number"
                       placeholder="170"
                       value={calorieData.height}
                       onChange={(e) => setCalorieData({ ...calorieData, height: e.target.value })}
+                      className="mt-1"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="cal-weight">Weight (kg)</Label>
+                    <Label htmlFor="cal-weight" className="text-sm font-semibold">Weight (kg)</Label>
                     <Input
                       id="cal-weight"
                       type="number"
                       placeholder="70"
                       value={calorieData.weight}
                       onChange={(e) => setCalorieData({ ...calorieData, weight: e.target.value })}
+                      className="mt-1"
                     />
                   </div>
                 </div>
                 <div>
-                  <Label>Activity Level</Label>
+                  <Label className="text-sm font-semibold">Activity Level</Label>
                   <Select
                     value={calorieData.activity}
                     onValueChange={(value) => setCalorieData({ ...calorieData, activity: value })}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Select activity level" />
                     </SelectTrigger>
                     <SelectContent>
@@ -459,40 +476,40 @@ export default function ToolsPage() {
                   </Select>
                 </div>
                 <div>
-                  <Label>Goal</Label>
+                  <Label className="text-sm font-semibold">Goal</Label>
                   <Select
                     value={calorieData.goal}
                     onValueChange={(value) => setCalorieData({ ...calorieData, goal: value })}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Select your goal" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="lose_fast">Lose Weight Fast (0.75kg/week)</SelectItem>
-                      <SelectItem value="lose_moderate">Lose Weight Moderate (0.5kg/week)</SelectItem>
-                      <SelectItem value="lose_slow">Lose Weight Slow (0.25kg/week)</SelectItem>
+                      <SelectItem value="lose_fast">Lose Weight Fast (1.5 lbs/week)</SelectItem>
+                      <SelectItem value="lose_moderate">Lose Weight Moderate (1 lb/week)</SelectItem>
+                      <SelectItem value="lose_slow">Lose Weight Slow (0.5 lbs/week)</SelectItem>
                       <SelectItem value="maintain">Maintain Weight</SelectItem>
-                      <SelectItem value="gain">Gain Weight (0.25kg/week)</SelectItem>
+                      <SelectItem value="gain">Gain Weight (0.5 lbs/week)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-                <Button onClick={calculateCalories} className="w-full">
+                <Button onClick={calculateCalories} className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6">
                   Calculate Calories
                 </Button>
                 {calorieResult && (
-                  <div className="p-4 bg-muted/50 rounded-lg space-y-2">
+                  <div className="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg border-2 border-blue-200 space-y-3">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-primary">{calorieResult.goal} calories/day</div>
-                      <div className="text-sm text-muted-foreground">{calorieResult.goalType}</div>
+                      <div className="text-4xl font-bold text-blue-600">{calorieResult.goal} cal/day</div>
+                      <div className="text-sm text-gray-600 mt-2">{calorieResult.goalType}</div>
                     </div>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div>
-                        <span className="text-muted-foreground">BMR: </span>
-                        <span className="font-medium">{calorieResult.bmr} cal</span>
+                    <div className="grid grid-cols-2 gap-4 pt-3 border-t border-blue-200">
+                      <div className="text-center">
+                        <div className="text-xs text-gray-500">BMR</div>
+                        <div className="font-semibold text-gray-900">{calorieResult.bmr} cal</div>
                       </div>
-                      <div>
-                        <span className="text-muted-foreground">Maintenance: </span>
-                        <span className="font-medium">{calorieResult.maintenance} cal</span>
+                      <div className="text-center">
+                        <div className="text-xs text-gray-500">Maintenance</div>
+                        <div className="font-semibold text-gray-900">{calorieResult.maintenance} cal</div>
                       </div>
                     </div>
                   </div>
@@ -501,32 +518,35 @@ export default function ToolsPage() {
             </Card>
 
             {/* Water Intake Calculator */}
-            <Card className="h-fit">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Droplets className="h-5 w-5 text-primary" />
+            <Card className="border-2 hover:border-emerald-200 hover:shadow-xl transition-all">
+              <CardHeader className="bg-gradient-to-r from-cyan-50 to-blue-50">
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <div className="p-2 bg-cyan-100 rounded-lg">
+                    <Droplets className="h-6 w-6 text-cyan-600" />
+                  </div>
                   Water Intake Calculator
                 </CardTitle>
-                <CardDescription>Calculate your daily water requirement based on activity and climate</CardDescription>
+                <CardDescription className="text-base">Calculate your daily water requirement based on activity and climate</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 pt-6">
                 <div>
-                  <Label htmlFor="water-weight">Weight (kg)</Label>
+                  <Label htmlFor="water-weight" className="text-sm font-semibold">Weight (kg)</Label>
                   <Input
                     id="water-weight"
                     type="number"
                     placeholder="70"
                     value={waterData.weight}
                     onChange={(e) => setWaterData({ ...waterData, weight: e.target.value })}
+                    className="mt-1"
                   />
                 </div>
                 <div>
-                  <Label>Activity Level</Label>
+                  <Label className="text-sm font-semibold">Activity Level</Label>
                   <Select
                     value={waterData.activity}
                     onValueChange={(value) => setWaterData({ ...waterData, activity: value })}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Select activity level" />
                     </SelectTrigger>
                     <SelectContent>
@@ -538,76 +558,81 @@ export default function ToolsPage() {
                   </Select>
                 </div>
                 <div>
-                  <Label>Climate</Label>
+                  <Label className="text-sm font-semibold">Climate</Label>
                   <Select
                     value={waterData.climate}
                     onValueChange={(value) => setWaterData({ ...waterData, climate: value })}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Select climate" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="cool">Cool (below 20°C)</SelectItem>
-                      <SelectItem value="moderate">Moderate (20-30°C)</SelectItem>
-                      <SelectItem value="hot">Hot (30-40°C)</SelectItem>
-                      <SelectItem value="very_hot">Very Hot (above 40°C)</SelectItem>
+                      <SelectItem value="cool">Cool (below 68°F)</SelectItem>
+                      <SelectItem value="moderate">Moderate (68-86°F)</SelectItem>
+                      <SelectItem value="hot">Hot (86-104°F)</SelectItem>
+                      <SelectItem value="very_hot">Very Hot (above 104°F)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
-                <Button onClick={calculateWater} className="w-full">
+                <Button onClick={calculateWater} className="w-full bg-cyan-600 hover:bg-cyan-700 text-lg py-6">
                   Calculate Water Intake
                 </Button>
                 {waterResult && (
-                  <div className="p-4 bg-muted/50 rounded-lg">
-                    <div className="text-center mb-3">
-                      <div className="text-3xl font-bold text-primary">{waterResult.liters}L</div>
-                      <div className="text-lg text-muted-foreground">{waterResult.glasses} glasses per day</div>
+                  <div className="p-6 bg-gradient-to-br from-cyan-50 to-blue-50 rounded-lg border-2 border-cyan-200">
+                    <div className="text-center mb-4">
+                      <div className="text-5xl font-bold text-cyan-600">{waterResult.liters}L</div>
+                      <div className="text-xl text-gray-600 mt-2">{waterResult.glasses} glasses per day</div>
+                      <div className="text-xs text-gray-500 mt-1">(8 oz glasses)</div>
                     </div>
-                    <p className="text-sm text-muted-foreground text-center">{waterResult.advice}</p>
+                    <p className="text-sm text-gray-700 text-center leading-relaxed">{waterResult.advice}</p>
                   </div>
                 )}
               </CardContent>
             </Card>
 
             {/* Protein Calculator */}
-            <Card className="h-fit">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Activity className="h-5 w-5 text-primary" />
+            <Card className="border-2 hover:border-emerald-200 hover:shadow-xl transition-all">
+              <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50">
+                <CardTitle className="flex items-center gap-3 text-xl">
+                  <div className="p-2 bg-purple-100 rounded-lg">
+                    <Activity className="h-6 w-6 text-purple-600" />
+                  </div>
                   Protein Calculator
                 </CardTitle>
-                <CardDescription>Calculate your daily protein needs based on activity and goals</CardDescription>
+                <CardDescription className="text-base">Calculate your daily protein needs based on activity and goals</CardDescription>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 pt-6">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="protein-weight">Weight (kg)</Label>
+                    <Label htmlFor="protein-weight" className="text-sm font-semibold">Weight (kg)</Label>
                     <Input
                       id="protein-weight"
                       type="number"
                       placeholder="70"
                       value={proteinData.weight}
                       onChange={(e) => setProteinData({ ...proteinData, weight: e.target.value })}
+                      className="mt-1"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="protein-age">Age</Label>
+                    <Label htmlFor="protein-age" className="text-sm font-semibold">Age</Label>
                     <Input
                       id="protein-age"
                       type="number"
                       placeholder="25"
                       value={proteinData.age}
                       onChange={(e) => setProteinData({ ...proteinData, age: e.target.value })}
+                      className="mt-1"
                     />
                   </div>
                 </div>
                 <div>
-                  <Label>Activity Level</Label>
+                  <Label className="text-sm font-semibold">Activity Level</Label>
                   <Select
                     value={proteinData.activity}
                     onValueChange={(value) => setProteinData({ ...proteinData, activity: value })}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Select activity level" />
                     </SelectTrigger>
                     <SelectContent>
@@ -620,12 +645,12 @@ export default function ToolsPage() {
                   </Select>
                 </div>
                 <div>
-                  <Label>Primary Goal</Label>
+                  <Label className="text-sm font-semibold">Primary Goal</Label>
                   <Select
                     value={proteinData.goal}
                     onValueChange={(value) => setProteinData({ ...proteinData, goal: value })}
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="mt-1">
                       <SelectValue placeholder="Select your goal" />
                     </SelectTrigger>
                     <SelectContent>
@@ -635,22 +660,23 @@ export default function ToolsPage() {
                     </SelectContent>
                   </Select>
                 </div>
-                <Button onClick={calculateProtein} className="w-full">
+                <Button onClick={calculateProtein} className="w-full bg-purple-600 hover:bg-purple-700 text-lg py-6">
                   Calculate Protein Intake
                 </Button>
                 {proteinResult && (
-                  <div className="p-4 bg-muted/50 rounded-lg space-y-3">
+                  <div className="p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border-2 border-purple-200 space-y-4">
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-primary">{proteinResult.grams}g</div>
-                      <div className="text-sm text-muted-foreground">per day</div>
+                      <div className="text-5xl font-bold text-purple-600">{proteinResult.grams}g</div>
+                      <div className="text-sm text-gray-600 mt-2">per day</div>
                     </div>
-                    <p className="text-sm text-muted-foreground text-center">{proteinResult.advice}</p>
-                    <div>
-                      <h4 className="font-medium text-sm mb-2">Good Indian Protein Sources:</h4>
-                      <div className="space-y-1">
+                    <p className="text-sm text-gray-700 text-center leading-relaxed">{proteinResult.advice}</p>
+                    <div className="pt-3 border-t border-purple-200">
+                      <h4 className="font-semibold text-sm mb-3 text-gray-900">Good Protein Sources:</h4>
+                      <div className="grid grid-cols-2 gap-2">
                         {proteinResult.sources.map((source, index) => (
-                          <div key={index} className="text-xs text-muted-foreground">
-                            • {source}
+                          <div key={index} className="text-xs text-gray-600 flex items-start">
+                            <CheckCircle className="h-3 w-3 text-purple-500 mr-1 mt-0.5 flex-shrink-0" />
+                            <span>{source}</span>
                           </div>
                         ))}
                       </div>
@@ -664,25 +690,27 @@ export default function ToolsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-primary text-primary-foreground">
-        <div className="container mx-auto text-center max-w-3xl">
-          <h2 className="text-3xl font-bold mb-6">Need a Personalized Plan?</h2>
-          <p className="text-xl mb-8 opacity-90">
+      <section className="py-20 px-4 bg-gradient-to-br from-emerald-600 to-green-700 text-white">
+        <div className="container mx-auto text-center max-w-4xl">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Need a Personalized Plan?</h2>
+          <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             While these calculators provide great starting points, a personalized consultation can help you create a
             comprehensive plan tailored to your specific health conditions and goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary">
-              <Link href="/contact">Book Consultation - ₹500</Link>
+            <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
+              <Link href="/contact">Book Consultation - $100</Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
+              className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-emerald-600 bg-transparent font-semibold"
+              asChild
             >
               <Link href="/plans">View Weight Loss Plans</Link>
             </Button>
           </div>
+          <p className="text-sm text-white/70 mt-6">No hidden charges • 100% Personalized • Expert Support</p>
         </div>
       </section>
     </div>
