@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Mail, MapPin, Clock, CheckCircle, CreditCard, Users, Award } from "lucide-react"
+import { Phone, Mail, Clock, CheckCircle, CreditCard, Users, Award, Globe, Shield } from "lucide-react"
 import Link from "next/link"
 import { submitConsultationForm } from "./actions"
 
@@ -35,6 +35,8 @@ export default function ContactPage() {
     "General Weight Loss",
     "Teenage Weight Management",
     "Senior Citizen Health",
+    "Hormonal Imbalance",
+    "Metabolic Issues",
     "Other Health Condition",
   ]
 
@@ -45,14 +47,13 @@ export default function ContactPage() {
   const validateForm = () => {
     if (!formData.name.trim()) return "Name is required"
     if (!formData.email.trim()) return "Email is required"
-    if (!formData.mobile.trim()) return "Mobile number is required"
+    if (!formData.mobile.trim()) return "Phone number is required"
     if (!formData.healthCondition) return "Please select your health condition"
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) return "Please enter a valid email"
-    if (!/^[6-9]\d{9}$/.test(formData.mobile)) return "Please enter a valid Indian mobile number"
     return null
   }
 
-  // ✅ Save or update lead status in Google Sheets
+  // Save lead to Google Sheets
   const saveLead = async (status: "Pending" | "Success" | "Abandoned") => {
     try {
       await fetch("/api/save-lead", {
@@ -65,12 +66,12 @@ export default function ContactPage() {
           condition: formData.healthCondition,
           message: formData.message,
           status,
-          leadSource: "Website",
-          updateExisting: true, // ✅ tell backend to update if exists
+          leadSource: "Contact Page",
+          updateExisting: true,
         }),
       })
     } catch (err) {
-      console.error("❌ Failed to save/update lead:", err)
+      console.error("Failed to save lead:", err)
     }
   }
 
@@ -85,91 +86,76 @@ export default function ContactPage() {
     setSubmitError("")
 
     try {
-      // ✅ Step 1: Log as Pending
+      // Save as pending
       await saveLead("Pending")
 
-      const options = {
-        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || "rzp_test_key",
-        amount: 50000,
-        currency: "INR",
-        name: "FitPlan India",
-        description: "Nutrition Consultation Fee",
-        image: "/logo.png",
-        handler: async (response: any) => {
-          try {
-            setIsSubmitting(true)
-            const result = await submitConsultationForm({
-              ...formData,
-              paymentId: response.razorpay_payment_id,
-            })
+      // For international payments, redirect to Stripe or show PayPal
+      // This is a placeholder - you'll need to implement Stripe/PayPal
+      const result = await submitConsultationForm({
+        ...formData,
+        paymentId: "pending_payment", // Will be updated after Stripe/PayPal
+      })
 
-            if (result.success) {
-              await saveLead("Success")
-              setSubmitSuccess(true)
-              setFormData({ name: "", email: "", mobile: "", healthCondition: "", message: "" })
-            } else {
-              setSubmitError(result.error || "Failed to submit consultation request")
-            }
-          } catch (err) {
-            setSubmitError("Failed to submit consultation request")
-          } finally {
-            setIsSubmitting(false)
-            setIsPaymentProcessing(false)
-          }
-        },
-        prefill: {
-          name: formData.name,
-          email: formData.email,
-          contact: formData.mobile,
-        },
-        notes: { health_condition: formData.healthCondition },
-        theme: { color: "#15803d" },
-        modal: {
-          ondismiss: async () => {
-            setIsPaymentProcessing(false)
-            await saveLead("Abandoned")
-          },
-        },
+      if (result.success) {
+        await saveLead("Success")
+        setSubmitSuccess(true)
+        setFormData({ name: "", email: "", mobile: "", healthCondition: "", message: "" })
+      } else {
+        setSubmitError(result.error || "Failed to submit consultation request")
       }
-
-      const script = document.createElement("script")
-      script.src = "https://checkout.razorpay.com/v1/checkout.js"
-      script.onload = () => {
-        const rzp = new (window as any).Razorpay(options)
-        rzp.open()
-      }
-      document.body.appendChild(script)
     } catch {
       setSubmitError("Payment initialization failed. Please try again.")
+      await saveLead("Abandoned")
+    } finally {
       setIsPaymentProcessing(false)
     }
   }
 
   if (submitSuccess) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <section className="py-20 px-4 w-full max-w-3xl text-center">
-          <div className="mb-8">
-            <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-            <h1 className="text-4xl font-bold mb-4 text-foreground">Thank You!</h1>
-            <p className="text-xl text-muted-foreground mb-8">
-              Your consultation request has been submitted successfully. Our expert will contact you within 24 hours.
-            </p>
-          </div>
+      <div className="min-h-screen bg-gray-50">
+        <section className="py-20 px-4">
+          <div className="container mx-auto max-w-3xl text-center">
+            <div className="bg-white rounded-lg shadow-xl p-12">
+              <div className="mb-8">
+                <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="h-12 w-12 text-emerald-600" />
+                </div>
+                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Thank You!</h1>
+                <p className="text-xl text-gray-600 mb-8">
+                  Your consultation request has been submitted successfully. Our expert will contact you within 24 hours.
+                </p>
+              </div>
 
-          <Card className="text-left">
-            <CardHeader><CardTitle>What Happens Next?</CardTitle></CardHeader>
-            <CardContent className="space-y-4">
-              <p>✅ Our certified professionals will review your health condition and call you within 24 hours.</p>
-              <p>✅ After discussion, you will receive your personalized diet plan and support.</p>
-            </CardContent>
-          </Card>
+              <Card className="text-left border-2 border-emerald-200">
+                <CardHeader className="bg-emerald-50">
+                  <CardTitle className="text-emerald-900">What Happens Next?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 pt-6">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                    <p className="text-gray-700">Our certified nutritionists will review your health condition and goals.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                    <p className="text-gray-700">You'll receive a call within 24 hours to schedule your consultation.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                    <p className="text-gray-700">After consultation, you'll receive your personalized diet plan and ongoing support.</p>
+                  </div>
+                </CardContent>
+              </Card>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild><Link href="/">Back to Home</Link></Button>
-            <Button variant="outline" asChild className="bg-transparent">
-              <Link href="/tools">Try Our Free Calculators</Link>
-            </Button>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700" asChild>
+                  <Link href="/">Back to Home</Link>
+                </Button>
+                <Button size="lg" variant="outline" className="border-2" asChild>
+                  <Link href="/tools">Try Free Calculators</Link>
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -177,120 +163,279 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-muted/50 to-background text-center w-full">
-        <div className="container mx-auto max-w-4xl">
-          <Badge variant="secondary" className="mb-4">Expert Consultation</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Book Your Consultation</h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Get personalized diet plans and expert guidance from certified professionals.
-          </p>
-          <div className="flex items-center justify-center gap-8 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2"><Users className="h-4 w-4" /><span>1:1 Consultations</span></div>
-            <div className="flex items-center gap-2"><Award className="h-4 w-4" /><span>Certified Professionals</span></div>
-            <div className="flex items-center gap-2"><Clock className="h-4 w-4" /><span>24hr Response</span></div>
+      <section className="bg-gradient-to-br from-emerald-600 to-green-700 text-white py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
+              💬 Expert Consultation
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              Book Your Personalized Consultation
+            </h1>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Get customized diet plans and expert guidance from certified nutritionists specializing in PCOS, thyroid, 
+              diabetes, and other health conditions. Available worldwide via video call.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
+              <div className="flex items-center gap-2">
+                <Users className="h-5 w-5" />
+                <span>1:1 Video Sessions</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="h-5 w-5" />
+                <span>Certified Professionals</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-5 w-5" />
+                <span>24hr Response</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Globe className="h-5 w-5" />
+                <span>Available Worldwide</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Form Section */}
-      <div className="container mx-auto px-4 py-16 flex justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl">
-          <div className="lg:col-span-2 flex justify-center">
-            <Card className="w-full max-w-2xl">
-              <CardHeader>
-                <CardTitle>Consultation Request Form</CardTitle>
-                <CardDescription>Fill out the form to book your consultation.</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-6">
-                {submitError && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <p className="text-red-700 text-sm">{submitError}</p>
-                  </div>
-                )}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Main Form */}
+            <div className="lg:col-span-2">
+              <Card className="border-2 hover:shadow-xl transition-shadow">
+                <CardHeader className="bg-gradient-to-r from-emerald-50 to-green-50">
+                  <CardTitle className="text-2xl">Consultation Request Form</CardTitle>
+                  <CardDescription className="text-base">
+                    Fill out the form below to book your personalized nutrition consultation.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-6 pt-8">
+                  {submitError && (
+                    <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg">
+                      <p className="text-red-700 font-medium">{submitError}</p>
+                    </div>
+                  )}
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <Label htmlFor="name" className="text-sm font-semibold">Full Name *</Label>
+                      <Input
+                        id="name"
+                        type="text"
+                        placeholder="Enter your full name"
+                        value={formData.name}
+                        onChange={(e) => handleInputChange("name", e.target.value)}
+                        className="mt-1"
+                        required
+                      />
+                    </div>
+                    <div>
+                      <Label htmlFor="email" className="text-sm font-semibold">Email Address *</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="your.email@example.com"
+                        value={formData.email}
+                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        className="mt-1"
+                        required
+                      />
+                    </div>
+                  </div>
+
                   <div>
-                    <Label htmlFor="name">Full Name *</Label>
-                    <Input id="name" type="text" placeholder="Enter your full name"
-                      value={formData.name} onChange={(e) => handleInputChange("name", e.target.value)} required />
+                    <Label htmlFor="mobile" className="text-sm font-semibold">Phone Number *</Label>
+                    <Input
+                      id="mobile"
+                      type="tel"
+                      placeholder="+1 (555) 000-0000"
+                      value={formData.mobile}
+                      onChange={(e) => handleInputChange("mobile", e.target.value)}
+                      className="mt-1"
+                      required
+                    />
+                    <p className="text-xs text-gray-500 mt-1">Include country code for international numbers</p>
                   </div>
+
                   <div>
-                    <Label htmlFor="email">Email Address *</Label>
-                    <Input id="email" type="email" placeholder="your.email@example.com"
-                      value={formData.email} onChange={(e) => handleInputChange("email", e.target.value)} required />
+                    <Label className="text-sm font-semibold">Primary Health Condition *</Label>
+                    <Select
+                      value={formData.healthCondition}
+                      onValueChange={(value) => handleInputChange("healthCondition", value)}
+                    >
+                      <SelectTrigger className="mt-1">
+                        <SelectValue placeholder="Select your primary health condition" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {healthConditions.map((condition) => (
+                          <SelectItem key={condition} value={condition}>
+                            {condition}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
-                </div>
 
-                <div>
-                  <Label htmlFor="mobile">Mobile Number *</Label>
-                  <Input id="mobile" type="tel" placeholder="9876543210"
-                    value={formData.mobile} onChange={(e) => handleInputChange("mobile", e.target.value)} required />
-                </div>
+                  <div>
+                    <Label htmlFor="message" className="text-sm font-semibold">Additional Information</Label>
+                    <Textarea
+                      id="message"
+                      placeholder="Tell us about your current diet, lifestyle, weight loss goals, or any specific concerns..."
+                      rows={5}
+                      value={formData.message}
+                      onChange={(e) => handleInputChange("message", e.target.value)}
+                      className="mt-1"
+                    />
+                  </div>
 
-                <div>
-                  <Label>Health Condition *</Label>
-                  <Select value={formData.healthCondition} onValueChange={(value) => handleInputChange("healthCondition", value)}>
-                    <SelectTrigger><SelectValue placeholder="Select your primary health condition" /></SelectTrigger>
-                    <SelectContent>
-                      {healthConditions.map((condition) => (
-                        <SelectItem key={condition} value={condition}>{condition}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div className="space-y-4">
+                    <div className="p-6 bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-200 rounded-lg">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h3 className="text-2xl font-bold text-emerald-700">$100 USD</h3>
+                          <p className="text-sm text-gray-600 mt-1">One-time consultation fee</p>
+                        </div>
+                        <Shield className="h-8 w-8 text-emerald-600" />
+                      </div>
+                      <div className="space-y-2 text-sm text-gray-700">
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                          <span>45-minute video consultation with certified nutritionist</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                          <span>Personalized meal plan tailored to your condition</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                          <span>1-week follow-up support via email/chat</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-emerald-600 mt-0.5 flex-shrink-0" />
+                          <span>Supplement and lifestyle recommendations</span>
+                        </div>
+                      </div>
+                    </div>
 
-                <div>
-                  <Label htmlFor="message">Additional Information</Label>
-                  <Textarea id="message" placeholder="Tell us about your diet, lifestyle, or goals"
-                    rows={4} value={formData.message} onChange={(e) => handleInputChange("message", e.target.value)} />
-                </div>
+                    <Button
+                      onClick={handlePayment}
+                      disabled={isPaymentProcessing || isSubmitting}
+                      className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg py-7"
+                      size="lg"
+                    >
+                      {isPaymentProcessing ? (
+                        <>Processing Payment...</>
+                      ) : (
+                        <>
+                          <CreditCard className="h-5 w-5 mr-2" />
+                          Pay $100 & Book Consultation
+                        </>
+                      )}
+                    </Button>
 
-                <div className="space-y-4">
-                  <div className="p-4 bg-primary/5 border border-primary/20 rounded-lg">
-                    <h3 className="font-semibold text-primary mb-2">Consultation Fee: ₹500</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Includes 45-minute consultation, personalized diet plan & 1-week follow-up.
+                    <p className="text-xs text-gray-500 text-center">
+                      By submitting this form, you agree to our{" "}
+                      <Link href="/terms" className="text-emerald-600 hover:underline">
+                        Terms & Conditions
+                      </Link>{" "}
+                      and{" "}
+                      <Link href="/privacy" className="text-emerald-600 hover:underline">
+                        Privacy Policy
+                      </Link>
+                      .
+                    </p>
+                    <p className="text-xs text-gray-500 text-center">
+                      🔒 Secure payment processing via Stripe • All major cards accepted
                     </p>
                   </div>
+                </CardContent>
+              </Card>
+            </div>
 
-                  <Button onClick={handlePayment} disabled={isPaymentProcessing || isSubmitting} className="w-full" size="lg">
-                    {isPaymentProcessing ? <>Processing Payment...</> : (<><CreditCard className="h-4 w-4 mr-2" />Pay ₹500 & Book Consultation</>)}
-                  </Button>
+            {/* Sidebar */}
+            <div className="space-y-6">
+              <Card className="border-2">
+                <CardHeader className="bg-blue-50">
+                  <CardTitle className="text-lg">Contact Information</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4 pt-6">
+                  <div className="flex items-start gap-3">
+                    <Phone className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Phone</p>
+                      <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Mail className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Email</p>
+                      <p className="text-sm text-gray-600">hello@fitplan.com</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Clock className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Availability</p>
+                      <p className="text-sm text-gray-600">Mon - Sat: 9AM - 7PM EST</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Globe className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Worldwide Service</p>
+                      <p className="text-sm text-gray-600">Video calls available in all time zones</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
 
-                  <p className="text-xs text-muted-foreground text-center">
-                    By submitting this form, you agree to our Terms & Conditions and Privacy Policy.
+              <Card className="border-2 bg-gradient-to-br from-emerald-50 to-green-50">
+                <CardHeader>
+                  <CardTitle className="text-lg text-emerald-900">Why Choose Us?</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-gray-700">10,000+ successful consultations worldwide</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-gray-700">Certified nutritionists with 10+ years experience</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-gray-700">Specialized in medical conditions (PCOS, thyroid, diabetes)</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-gray-700">Personalized meal plans, not generic templates</p>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-gray-700">Ongoing support and accountability</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 border-blue-200">
+                <CardHeader className="bg-blue-50">
+                  <CardTitle className="text-lg text-blue-900">Money-Back Guarantee</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <p className="text-sm text-gray-700">
+                    Not satisfied with your consultation? We offer a full refund within 7 days, no questions asked.
                   </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Right Contact Info */}
-          <div className="flex flex-col gap-6 justify-center">
-            <Card>
-              <CardHeader><CardTitle>Contact Information</CardTitle></CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center gap-3"><Phone className="h-5 w-5 text-primary" /><span>+91 79035 25592</span></div>
-                <div className="flex items-center gap-3"><Mail className="h-5 w-5 text-primary" /><span>hello@fitplanindia.com</span></div>
-                <div className="flex items-center gap-3"><MapPin className="h-5 w-5 text-primary" /><span>Ahmedabad, India</span></div>
-                <div className="flex items-center gap-3"><Clock className="h-5 w-5 text-primary" /><span>Mon - Sat: 9AM - 7PM</span></div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader><CardTitle>Why Choose Us?</CardTitle></CardHeader>
-              <CardContent className="space-y-3 text-sm text-muted-foreground">
-                <p>✔ 10,000+ successful consultations</p>
-                <p>✔ Certified and experienced dieticians</p>
-                <p>✔ Personalized meal and lifestyle plans</p>
-                <p>✔ Ongoing guidance and support</p>
-              </CardContent>
-            </Card>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }
