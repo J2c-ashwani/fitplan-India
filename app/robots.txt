@@ -1,21 +1,14 @@
-User-agent: *
-Allow: /
+import { MetadataRoute } from 'next'
 
-# Sitemap
-Sitemap: https://fitplanindia.com/sitemap.xml
-
-# Disallow admin or sensitive areas (if any)
-Disallow: /admin/
-Disallow: /api/
-Disallow: /_next/
-Disallow: /private/
-
-# Allow important pages
-Allow: /
-Allow: /plans/
-Allow: /tools/
-Allow: /contact/
-Allow: /blog/
-
-# Crawl delay (optional)
-Crawl-delay: 1
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: ['/api/', '/_next/', '/admin/', '/private/'],
+      },
+    ],
+    sitemap: 'https://fitplanindia.com/sitemap.xml',
+  }
+}
