@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
   Heart,
@@ -11,249 +11,368 @@ import {
   GraduationCap,
   Leaf,
   Activity,
-  Calendar,
   Scale,
   Flame,
+  TrendingUp,
+  ArrowRight,
+  Sparkles,
+  Calendar,
 } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from "next"
 
-export const metadata = {
-  title: "Weight Loss Plans for Every Health Condition | FitPlan India",
+export const metadata: Metadata = {
+  title: "Specialized Diet Plans for Every Health Condition | FitPlan India",
   description:
-    "Specialized weight loss plans for PCOS, thyroid, diabetes, post-pregnancy, and more. Expert-designed Indian diet plans with proven results.",
+    "Expert-designed diet plans for PCOS, thyroid, diabetes, post-pregnancy, weight loss, and more. Tailored Indian meal plans with proven results.",
   keywords:
-    "weight loss plans, PCOS diet, thyroid diet, diabetes diet, Indian weight loss, health condition diet plans",
+    "diet plans India, PCOS diet, thyroid diet, diabetes diet, weight loss plans, specialized meal plans, health condition diets",
+  openGraph: {
+    title: "Specialized Diet Plans - FitPlan India",
+    description: "Expert-designed plans for every health condition and goal.",
+    url: "https://fitplanindia.com/plans",
+  },
+}
+
+const dietPlans = [
+  {
+    title: "PCOS Weight Loss Plan",
+    description: "Insulin-resistant friendly diet with anti-inflammatory foods and hormone balance",
+    href: "/plans/pcos",
+    icon: Heart,
+    duration: "4-8 months",
+    difficulty: "Moderate",
+    color: "pink",
+  },
+  {
+    title: "PCOD Weight Loss Plan",
+    description: "Hormone-balancing nutrition plan for polycystic ovary disorder management",
+    href: "/plans/pcod",
+    icon: Heart,
+    duration: "4-6 months",
+    difficulty: "Moderate",
+    color: "purple",
+  },
+  {
+    title: "Hypothyroidism Weight Loss",
+    description: "Metabolism-boosting foods for underactive thyroid and weight management",
+    href: "/plans/hypothyroidism",
+    icon: Activity,
+    duration: "3-6 months",
+    difficulty: "Moderate",
+    color: "blue",
+  },
+  {
+    title: "Hyperthyroidism Weight Gain",
+    description: "Calorie-dense nutrition for overactive thyroid and healthy weight gain",
+    href: "/plans/hyperthyroidism",
+    icon: Zap,
+    duration: "2-4 months",
+    difficulty: "Moderate",
+    color: "orange",
+  },
+  {
+    title: "Thyroid Management Plan",
+    description: "Comprehensive plan for both hypo and hyperthyroid with balanced nutrition",
+    href: "/plans/thyroid",
+    icon: Target,
+    duration: "3-6 months",
+    difficulty: "Moderate",
+    color: "green",
+  },
+  {
+    title: "Diabetes Diet Plan",
+    description: "Blood sugar friendly meals with controlled carbs and glycemic index focus",
+    href: "/plans/diabetes",
+    icon: Target,
+    duration: "6-12 months",
+    difficulty: "High",
+    color: "red",
+  },
+  {
+    title: "Obesity Weight Loss Plan",
+    description: "Comprehensive plan for significant weight reduction and lifestyle transformation",
+    href: "/plans/obesity",
+    icon: Scale,
+    duration: "6-18 months",
+    difficulty: "High",
+    color: "orange",
+  },
+  {
+    title: "Post-Pregnancy Weight Loss",
+    description: "Safe and nutritious plan for new mothers and breastfeeding women",
+    href: "/plans/post-pregnancy",
+    icon: Baby,
+    duration: "6-12 months",
+    difficulty: "Easy",
+    color: "yellow",
+  },
+  {
+    title: "Teenagers & Students Plan",
+    description: "Age-appropriate nutrition for growing teens with balanced macro and micronutrients",
+    href: "/plans/teenagers",
+    icon: GraduationCap,
+    duration: "3-6 months",
+    difficulty: "Easy",
+    color: "indigo",
+  },
+  {
+    title: "Senior Citizens Plan",
+    description: "Age-appropriate nutrition for healthy aging, bone health, and weight management",
+    href: "/plans/senior-citizens",
+    icon: Users,
+    duration: "6-12 months",
+    difficulty: "Easy",
+    color: "blue",
+  },
+  {
+    title: "Vegetarian Diet Plan",
+    description: "Plant-based nutrition with complete protein and nutrient balance for vegetarians",
+    href: "/plans/vegetarian",
+    icon: Leaf,
+    duration: "3-8 months",
+    difficulty: "Easy",
+    color: "green",
+  },
+  {
+    title: "Keto Diet for Indians",
+    description: "Low-carb, high-fat approach adapted for Indian cuisine and lifestyle preferences",
+    href: "/plans/keto-diet",
+    icon: Flame,
+    duration: "2-6 months",
+    difficulty: "High",
+    color: "gray",
+  },
+  {
+    title: "Intermittent Fasting Plan",
+    description: "Time-restricted eating patterns suitable for Indian meal timings and culture",
+    href: "/plans/intermittent-fasting",
+    icon: Clock,
+    duration: "2-12 months",
+    difficulty: "Moderate",
+    color: "teal",
+  },
+  {
+    title: "Gym + Diet Combo",
+    description: "Integrated workout and nutrition plan for muscle gain and maximum fitness results",
+    href: "/plans/gym-diet-combo",
+    icon: Activity,
+    duration: "3-12 months",
+    difficulty: "High",
+    color: "orange",
+  },
+  {
+    title: "Metabolic Weight Loss Plan",
+    description: "Plan designed to boost metabolic rate, fat burning, and manage stubborn weight",
+    href: "/plans/metabolic",
+    icon: Zap,
+    duration: "4-10 months",
+    difficulty: "Moderate",
+    color: "cyan",
+  },
+  {
+    title: "Hormonal Imbalance Plan",
+    description: "Balanced diet to correct hormonal imbalances and regulate metabolism naturally",
+    href: "/plans/hormonal-imbalance",
+    icon: Heart,
+    duration: "4-8 months",
+    difficulty: "Moderate",
+    color: "rose",
+  },
+]
+
+const colorGradients: Record<string, string> = {
+  pink: "from-pink-600 to-rose-700",
+  purple: "from-purple-600 to-indigo-700",
+  blue: "from-blue-600 to-indigo-700",
+  orange: "from-orange-600 to-amber-700",
+  green: "from-green-600 to-emerald-700",
+  red: "from-red-600 to-rose-700",
+  yellow: "from-yellow-600 to-orange-600",
+  indigo: "from-indigo-600 to-purple-700",
+  teal: "from-teal-600 to-cyan-700",
+  gray: "from-gray-600 to-slate-700",
+  cyan: "from-cyan-600 to-blue-700",
+  rose: "from-rose-600 to-pink-700",
+}
+
+const colorButtons: Record<string, string> = {
+  pink: "bg-pink-600 hover:bg-pink-700 text-white",
+  purple: "bg-purple-600 hover:bg-purple-700 text-white",
+  blue: "bg-blue-600 hover:bg-blue-700 text-white",
+  orange: "bg-orange-600 hover:bg-orange-700 text-white",
+  green: "bg-green-600 hover:bg-green-700 text-white",
+  red: "bg-red-600 hover:bg-red-700 text-white",
+  yellow: "bg-yellow-600 hover:bg-yellow-700 text-white",
+  indigo: "bg-indigo-600 hover:bg-indigo-700 text-white",
+  teal: "bg-teal-600 hover:bg-teal-700 text-white",
+  gray: "bg-gray-600 hover:bg-gray-700 text-white",
+  cyan: "bg-cyan-600 hover:bg-cyan-700 text-white",
+  rose: "bg-rose-600 hover:bg-rose-700 text-white",
+}
+
+const difficultyColors: Record<string, string> = {
+  Easy: "bg-green-100 text-green-700",
+  Moderate: "bg-yellow-100 text-yellow-700",
+  High: "bg-red-100 text-red-700",
 }
 
 export default function PlansPage() {
-  const categories = [
-    {
-      title: "Hypothyroidism Weight Loss Plan",
-      description: "Specialized plan for underactive thyroid with metabolism-boosting foods",
-      href: "/plans/hypothyroidism",
-      icon: Heart,
-      difficulty: "Moderate",
-      duration: "3-6 months",
-      color: "bg-blue-50 text-blue-700 border-blue-200",
-    },
-    {
-      title: "Hyperthyroidism Weight Gain Plan",
-      description: "Balanced approach for overactive thyroid with calorie-dense nutrition",
-      href: "/plans/hyperthyroidism",
-      icon: Zap,
-      difficulty: "Moderate",
-      duration: "2-4 months",
-      color: "bg-orange-50 text-orange-700 border-orange-200",
-    },
-    {
-      title: "PCOS Weight Loss Plan",
-      description: "Insulin-resistant friendly diet with anti-inflammatory foods",
-      href: "/plans/pcos",
-      icon: Heart,
-      difficulty: "Moderate",
-      duration: "4-8 months",
-      color: "bg-pink-50 text-pink-700 border-pink-200",
-    },
-    {
-      title: "PCOD Weight Loss Plan",
-      description: "Hormone-balancing nutrition plan for polycystic ovary disorder",
-      href: "/plans/pcod",
-      icon: Heart,
-      difficulty: "Moderate",
-      duration: "4-6 months",
-      color: "bg-purple-50 text-purple-700 border-purple-200",
-    },
-    {
-      title: "Diabetes Weight Loss Plan",
-      description: "Blood sugar friendly meals with controlled carbohydrates",
-      href: "/plans/diabetes",
-      icon: Target,
-      difficulty: "High",
-      duration: "6-12 months",
-      color: "bg-red-50 text-red-700 border-red-200",
-    },
-    {
-      title: "Obesity & General Weight Loss",
-      description: "Comprehensive plan for significant weight reduction and lifestyle change",
-      href: "/plans/obesity",
-      icon: Users,
-      difficulty: "High",
-      duration: "6-18 months",
-      color: "bg-green-50 text-green-700 border-green-200",
-    },
-    {
-      title: "Post-Pregnancy Weight Loss",
-      description: "Safe and nutritious plan for new mothers and breastfeeding",
-      href: "/plans/post-pregnancy",
-      icon: Baby,
-      difficulty: "Easy",
-      duration: "6-12 months",
-      color: "bg-yellow-50 text-yellow-700 border-yellow-200",
-    },
-    {
-      title: "Teenagers & Students Plan",
-      description: "Age-appropriate nutrition for growing teens and busy students",
-      href: "/plans/teenagers",
-      icon: GraduationCap,
-      difficulty: "Easy",
-      duration: "3-6 months",
-      color: "bg-indigo-50 text-indigo-700 border-indigo-200",
-    },
-    {
-      title: "Vegetarian & Vegan Plans",
-      description: "Plant-based nutrition with complete protein and nutrient balance",
-      href: "/plans/vegetarian",
-      icon: Leaf,
-      difficulty: "Easy",
-      duration: "3-8 months",
-      color: "bg-green-50 text-green-700 border-green-200",
-    },
-    {
-      title: "Keto Diet for Indians",
-      description: "Low-carb, high-fat approach adapted for Indian cuisine and lifestyle",
-      href: "/plans/keto-diet",
-      icon: Flame,
-      difficulty: "High",
-      duration: "2-6 months",
-      color: "bg-gray-50 text-gray-700 border-gray-200",
-    },
-    {
-      title: "Intermittent Fasting Plan",
-      description: "Time-restricted eating patterns suitable for Indian meal timings",
-      href: "/plans/intermittent-fasting",
-      icon: Clock,
-      difficulty: "Moderate",
-      duration: "2-12 months",
-      color: "bg-teal-50 text-teal-700 border-teal-200",
-    },
-    {
-      title: "Senior Citizens Plan",
-      description: "Age-appropriate nutrition for healthy aging and weight management",
-      href: "/plans/senior-citizens",
-      icon: Scale,
-      difficulty: "Easy",
-      duration: "6-12 months",
-      color: "bg-blue-50 text-blue-700 border-blue-200",
-    },
-    {
-      title: "Gym + Diet Combo",
-      description: "Integrated workout and nutrition plan for maximum results",
-      href: "/plans/gym-diet-combo",
-      icon: Activity,
-      difficulty: "High",
-      duration: "3-12 months",
-      color: "bg-orange-50 text-orange-700 border-orange-200",
-    },
-    {
-      title: "Metabolic Weight Loss Plan",
-      description: "Plan designed to boost metabolic rate and manage stubborn fat",
-      href: "/plans/metabolic",
-      icon: Zap,
-      difficulty: "Moderate",
-      duration: "4-10 months",
-      color: "bg-cyan-50 text-cyan-700 border-cyan-200",
-    },
-    {
-      title: "Hormonal Imbalance Plan",
-      description: "Balanced diet to correct hormonal imbalances and regulate metabolism",
-      href: "/plans/hormonal-imbalance",
-      icon: Heart,
-      difficulty: "Moderate",
-      duration: "4-8 months",
-      color: "bg-rose-50 text-rose-700 border-rose-200",
-    },
-    {
-      title: "Thyroid Weight Loss Plan",
-      description:
-        "Comprehensive plan for managing both underactive and overactive thyroid with balanced nutrition.",
-      href: "/plans/thyroid",
-      icon: Activity, // ✅ use a lucide-react icon instead of emoji
-      difficulty: "Moderate",
-      duration: "3-6 months",
-      color: "bg-green-100 text-green-800 border-green-200",
-    },
-  ]
-
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-muted/50 to-background">
-        <div className="container mx-auto text-center max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">Specialized Weight Gain Plans</h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Choose from our expertly crafted plans designed for specific health conditions, age groups, and dietary
-            preferences. Each plan is tailored for Indian lifestyle and cuisine.
-          </p>
-          <Button size="lg" asChild>
-            <Link href="/contact">Get Personalized Plan - ₹500</Link>
-          </Button>
+      <section className="bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 text-white py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-4 bg-white text-teal-700 font-semibold text-base">
+              🎯 Specialized Diet Plans
+            </Badge>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              Expert Diet Plans for Every Health Condition
+            </h1>
+            <p className="text-xl text-white mb-8 leading-relaxed">
+              16 specialized, expert-designed diet plans tailored for specific health conditions, age groups, and 
+              dietary preferences. Indian cuisine-based with proven results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-teal-700 hover:bg-gray-100 font-semibold" asChild>
+                <Link href="#plans">
+                  Explore All Plans
+                </Link>
+              </Button>
+              <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white border-2 border-white font-semibold" asChild>
+                <Link href="/contact">
+                  Get Personalized Plan - $100
+                </Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Plans Grid */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categories.map((category, index) => {
-              const Icon = category.icon
-              return (
-                <Card
-                  key={index}
-                  className="hover:shadow-lg transition-all duration-300 cursor-pointer group border-2 hover:border-primary/20"
-                >
-                  <CardHeader>
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                          <Icon className="h-6 w-6 text-primary" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-lg leading-tight">{category.title}</CardTitle>
-                        </div>
+      {/* Stats Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
+              <div>
+                <div className="text-4xl font-bold text-teal-700 mb-2">16+</div>
+                <div className="text-gray-600">Specialized Plans</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-cyan-700 mb-2">15K+</div>
+                <div className="text-gray-600">Success Stories</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-blue-700 mb-2">100%</div>
+                <div className="text-gray-600">Indian Cuisine</div>
+              </div>
+              <div>
+                <div className="text-4xl font-bold text-indigo-700 mb-2">Expert</div>
+                <div className="text-gray-600">Nutritionist Designed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* All Plans Section */}
+      <section id="plans" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Browse All Diet Plans</h2>
+              <p className="text-gray-600">
+                Choose the perfect plan designed for your health condition and lifestyle
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {dietPlans.map((plan, idx) => {
+                const Icon = plan.icon
+                return (
+                  <Card key={idx} className="h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-2">
+                    <CardHeader>
+                      <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${colorGradients[plan.color]} flex items-center justify-center mb-4`}>
+                        <Icon className="w-7 h-7 text-white" />
                       </div>
-                    </div>
-                    <div className="flex gap-2 mt-3">
-                      <Badge variant="outline" className={category.color}>
-                        {category.difficulty}
-                      </Badge>
-                      <Badge variant="outline">
-                        <Calendar className="h-3 w-3 mr-1" />
-                        {category.duration}
-                      </Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="mb-4 text-sm leading-relaxed">{category.description}</CardDescription>
-                    <Button
-                      variant="outline"
-                      asChild
-                      className="w-full bg-transparent group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                    >
-                      <Link href={category.href}>View Plan Details</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              )
-            })}
+                      <CardTitle className="text-xl mb-2">{plan.title}</CardTitle>
+                      <div className="flex gap-2 flex-wrap">
+                        <Badge className={difficultyColors[plan.difficulty]}>
+                          {plan.difficulty}
+                        </Badge>
+                        <Badge className="bg-gray-100 text-gray-700">
+                          <Calendar className="w-3 h-3 mr-1" />
+                          {plan.duration}
+                        </Badge>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-gray-600 mb-6">{plan.description}</p>
+                      <Button 
+                        className={`w-full font-bold shadow-md ${colorButtons[plan.color]}`}
+                        size="lg"
+                        asChild
+                      >
+                        <Link href={plan.href}>
+                          View {plan.title}
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                )
+              })}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-muted/30">
-        <div className="container mx-auto text-center max-w-3xl">
-          <h2 className="text-3xl font-bold mb-6">Not Sure Which Plan is Right for You?</h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Book a consultation with our certified nutritionists to get a personalized recommendation based on your
-            health condition, lifestyle, and goals.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link href="/contact">Book Consultation - ₹500</Link>
-            </Button>
-            <Button size="lg" variant="outline" asChild className="bg-transparent">
-              <Link href="/tools">Try Free Health Calculators</Link>
-            </Button>
+      <section className="py-16 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-3xl font-bold mb-6">
+              Not Sure Which Plan is Right for You?
+            </h2>
+            <p className="text-xl text-white mb-8 leading-relaxed">
+              Book a consultation with our certified nutritionists to get a personalized recommendation based on 
+              your health condition, lifestyle, medical history, and fitness goals.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              {/* Personalized Consultation */}
+              <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
+                <TrendingUp className="w-12 h-12 text-white mx-auto mb-4" />
+                <h4 className="font-semibold text-white mb-2 text-xl">Personalized Consultation</h4>
+                <p className="text-white text-sm mb-4 leading-relaxed">
+                  Get expert advice from certified nutritionists with customized diet plan - $100.
+                </p>
+                <Button size="lg" className="w-full bg-white text-teal-700 hover:bg-gray-100 font-semibold" asChild>
+                  <Link href="/contact">
+                    Book Consultation - $100
+                  </Link>
+                </Button>
+              </div>
+
+              {/* AI Coach CTA */}
+              <div className="bg-yellow-500/20 border-2 border-yellow-400 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
+                <Sparkles className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
+                <h4 className="font-semibold text-white mb-2 text-xl">Free AI Coach</h4>
+                <p className="text-yellow-100 text-sm mb-4 leading-relaxed">
+                  Get instant AI-powered diet and workout recommendations completely free!
+                </p>
+                <Button size="lg" className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold" asChild>
+                  <Link href="/ai-coach">
+                    Try AI Coach Free
+                  </Link>
+                </Button>
+              </div>
+            </div>
+            
+            <p className="text-white text-sm mt-6">
+              ✨ Join 15,000+ Indians who transformed their health with FitPlan India
+            </p>
           </div>
         </div>
       </section>

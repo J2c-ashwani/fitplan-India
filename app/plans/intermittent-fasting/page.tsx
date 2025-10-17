@@ -1,328 +1,507 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Clock, Users, Target, AlertTriangle, Utensils, Activity, Coffee, Moon } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { CheckCircle, Heart, AlertCircle, Clock, Target, Zap, Droplets, Activity, Moon } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from "next"
 
-export const metadata = {
-  title: "Indian Intermittent Fasting Plan - Time Restricted Eating | FitPlan India",
-  description:
-    "Indian intermittent fasting plan (16:8, 18:6) with balanced meal options for fat loss, improved metabolism, and sustainable health.",
-  keywords:
-    "intermittent fasting india, 16:8 fasting indian, fasting weight loss, indian intermittent fasting meal plan",
+export const metadata: Metadata = {
+  title: "Intermittent Fasting Plan 2025 | 16:8 Fasting Guide for Weight Loss USA, UK, India",
+  description: "Complete intermittent fasting plan with 16:8, 18:6 fasting schedules, meal timing, and proven weight loss strategies. Expert-designed for USA, UK, Canada, Australia, India.",
+  keywords: "intermittent fasting plan, 16:8 fasting, intermittent fasting for weight loss, IF diet plan, fasting schedule, time restricted eating, intermittent fasting India",
+  openGraph: {
+    title: "Intermittent Fasting Plan 2025 | Complete Guide",
+    description: "Expert-designed intermittent fasting plan with proven strategies for fat loss, autophagy, and metabolic health.",
+    url: "https://fitplanindia.com/plans/intermittent-fasting",
+  },
 }
 
 export default function IntermittentFastingPage() {
-  const challenges = [
-    "Hunger pangs in the initial days",
-    "Difficulty avoiding late-night snacking",
-    "Confusion about what breaks a fast",
-    "Low energy if meals are not balanced",
-    "Overeating during eating window",
-    "Social & cultural meal timings",
-  ]
-
-  const dietPlan = [
-    {
-      window: "16:8 Fasting (Eat between 12 PM – 8 PM)",
-      meal1: "12:00 PM – Lunch: Paneer curry + 2 multigrain rotis + salad",
-      snack: "3:30 PM – Black coffee/green tea + handful of almonds",
-      meal2: "7:30 PM – Dinner: Grilled chicken/fish (or tofu) + sautéed vegetables",
-    },
-    {
-      window: "18:6 Fasting (Eat between 1 PM – 7 PM)",
-      meal1: "1:00 PM – Lunch: Rajma curry + 1 small bowl brown rice + cucumber salad",
-      snack: "4:00 PM – Black coffee + cheese cubes",
-      meal2: "6:30 PM – Dinner: Palak paneer + stir-fried broccoli",
-    },
-    {
-      window: "20:4 Fasting (Eat between 2 PM – 6 PM, advanced)",
-      meal1: "2:00 PM – Large meal: Chicken tikka + cauliflower rice pulao + leafy greens",
-      snack: "5:00 PM – Greek yogurt (unsweetened) with flax seeds",
-    },
-  ]
-
-  const lifestyleTips = [
-    {
-      icon: Coffee,
-      title: "Fasting Drinks",
-      description:
-        "During fasting, only water, black coffee, and green tea are allowed. Avoid milk and sugar.",
-    },
-    {
-      icon: Utensils,
-      title: "Balanced Meals",
-      description:
-        "Each meal should include protein, fiber, and healthy fats to prevent overeating.",
-    },
-    {
-      icon: Activity,
-      title: "Exercise Timing",
-      description:
-        "Light workouts can be done in fasting state; strength training is best during eating window.",
-    },
-    {
-      icon: Moon,
-      title: "Sleep & Recovery",
-      description:
-        "Adequate sleep helps control hunger hormones and improves fasting benefits.",
-    },
-  ]
-
-  const faqs = [
-    {
-      question: "Does intermittent fasting work for Indians?",
-      answer:
-        "Yes, IF works well with Indian meals by adjusting timings. Focus on dal, paneer, sabzi, and salads during eating windows.",
-    },
-    {
-      question: "Can I drink tea during fasting?",
-      answer:
-        "Yes, but only black tea or green tea without sugar/milk. Adding milk breaks the fast.",
-    },
-    {
-      question: "What’s the best intermittent fasting window?",
-      answer:
-        "16:8 is the most popular and sustainable. Advanced levels like 18:6 or 20:4 should be done gradually.",
-    },
-    {
-      question: "Can women do intermittent fasting?",
-      answer:
-        "Yes, but they should avoid prolonged fasting (>18 hrs) without guidance, especially during periods or pregnancy.",
-    },
-    {
-      question: "How much weight can I lose with intermittent fasting?",
-      answer:
-        "On average, 3–6 kg in 2 months with proper diet and exercise.",
-    },
-  ]
-
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-          {/* Main Content */}
-          <div className="lg:col-span-3">
-            {/* Hero Section */}
-            <div className="mb-8">
-              <div className="flex items-center gap-2 mb-4">
-                <Badge variant="secondary">Fasting</Badge>
-                <Badge variant="outline">Time Restricted</Badge>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-indigo-600 to-violet-700 text-white py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="mb-4 bg-white text-indigo-600 font-semibold">
+              ⏰ Time-Restricted Eating
+            </Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Intermittent Fasting Plan 2025
+            </h1>
+            <p className="text-xl text-white mb-8 leading-relaxed">
+              Complete intermittent fasting (IF) guide with 16:8, 18:6, and 20:4 fasting schedules, meal timing strategies, and proven 
+              methods for weight loss, fat burning, autophagy, and metabolic health. Designed for beginners and experienced fasters in 
+              USA, UK, Canada, Australia, and India.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-indigo-600 hover:bg-gray-100 font-semibold" asChild>
+                <Link href="#fasting-schedules">View Fasting Schedules</Link>
+              </Button>
+              <Button size="lg" className="bg-indigo-500 hover:bg-indigo-600 text-white border-2 border-white font-semibold" asChild>
+                <Link href="/workouts/intermittent-fasting">Fasting Exercise Guide</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Stats */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
+              <div>
+                <div className="text-3xl font-bold text-indigo-600 mb-2">16:8</div>
+                <div className="text-gray-600">Most Popular</div>
               </div>
-              <h1 className="text-4xl font-bold mb-4">Indian Intermittent Fasting Plan</h1>
-              <p className="text-xl text-muted-foreground mb-6">
-                A time-restricted eating plan (16:8, 18:6) designed for Indian lifestyles, helping you lose fat and improve metabolism without strict dieting.
-              </p>
-              <div className="flex items-center gap-6 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Users className="h-4 w-4" />
-                  <span>4,500+ Clients Benefited</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Target className="h-4 w-4" />
-                  <span>Weight loss: 3–6 kg in 2 months</span>
-                </div>
+              <div>
+                <div className="text-3xl font-bold text-violet-600 mb-2">0.5-1 kg/week</div>
+                <div className="text-gray-600">Fat Loss Rate</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-purple-600 mb-2">12-16 hours</div>
+                <div className="text-gray-600">Fat Burning Starts</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-indigo-600 mb-2">Flexible</div>
+                <div className="text-gray-600">Lifestyle Friendly</div>
               </div>
             </div>
 
-            {/* Important Notice */}
-            <Card className="mb-8 border-yellow-200 bg-yellow-50">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-yellow-800">
-                  <AlertTriangle className="h-5 w-5" />
-                  Important Fasting Notice
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-yellow-700 text-sm">
-                  Intermittent fasting is not suitable for pregnant women, people with eating disorders, or those with medical conditions like diabetes without supervision.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Intermittent Fasting: Complete Guide 2025</h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Intermittent fasting (IF) is an eating pattern that cycles between periods of fasting (not eating) and eating windows, 
+                focusing on WHEN you eat rather than WHAT you eat. Unlike traditional diets that restrict certain foods or calories, 
+                intermittent fasting simply restricts the TIME during which you consume food. During fasting periods (typically 12-20 hours), 
+                you consume zero calories - only water, black coffee, tea, and other non-caloric beverages are allowed. During eating windows 
+                (4-12 hours), you eat normally without specific restrictions, though healthy whole foods are recommended for best results. 
+                The most popular IF method is 16:8 (fast 16 hours, eat within 8-hour window), followed by 18:6 (fast 18 hours, eat within 
+                6 hours), 20:4 or OMAD "One Meal A Day" (fast 20 hours, eat within 4 hours), 5:2 diet (eat normally 5 days, restrict to 
+                500-600 calories 2 non-consecutive days), and alternate day fasting (fast every other day). Approximately 15-20% of adults 
+                in USA, UK, and worldwide practice some form of intermittent fasting for weight loss, health benefits, or religious reasons.
+              </p>
 
-            {/* Introduction */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle>Why Intermittent Fasting Works?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Intermittent fasting works by giving your body longer breaks from food, which lowers insulin levels and boosts fat burning.  
-                </p>
-                <p className="text-muted-foreground">
-                  For Indians, IF is effective because it only changes meal timings, not food choices—making it easier to follow than restrictive diets.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Common Challenges */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <AlertTriangle className="h-5 w-5 text-yellow-500" />
-                  Common Challenges
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {challenges.map((challenge, index) => (
-                    <div key={index} className="flex items-start gap-2">
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{challenge}</span>
-                    </div>
-                  ))}
+              <p className="text-lg text-gray-700 mb-6">
+                The power of intermittent fasting lies in its metabolic effects on the body. After 12-16 hours without food, your body 
+                depletes glycogen (stored carbohydrates) and switches from burning glucose to burning stored body fat for energy through a 
+                process called "metabolic switching" or entering "fat-burning mode." This metabolic shift triggers numerous beneficial processes: 
+                <strong> enhanced fat oxidation</strong> (burning 0.5-1 kg fat weekly without calorie counting), increased human growth hormone 
+                (HGH) secretion by 300-1,200% which preserves muscle while burning fat, improved insulin sensitivity and lower insulin levels 
+                (reducing diabetes risk), activation of autophagy (cellular "cleanup" process removing damaged proteins and organelles - anti-aging 
+                effect), increased production of brain-derived neurotrophic factor (BDNF) improving cognitive function and mood, reduction in 
+                inflammation markers and oxidative stress, and improved cardiovascular health markers (blood pressure, cholesterol, triglycerides). 
+                This comprehensive intermittent fasting plan provides step-by-step guidance for choosing the right fasting schedule, optimizing 
+                meal timing, maximizing fat loss, managing hunger during fasting, and combining IF with exercise for best results.
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-indigo-50 p-6 rounded-lg">
+                  <h3 className="font-bold text-lg mb-3 text-indigo-800">Benefits of Intermittent Fasting</h3>
+                  <ul className="text-gray-700 space-y-2">
+                    <li>• <strong>Effortless weight loss:</strong> 0.5-1 kg weekly without counting calories</li>
+                    <li>• <strong>Fat burning mode:</strong> Body burns stored fat after 12-16 hours fasting</li>
+                    <li>• <strong>Preserved muscle mass:</strong> High HGH prevents muscle loss during fat loss</li>
+                    <li>• <strong>Better insulin sensitivity:</strong> Reduces diabetes risk by 20-30%</li>
+                    <li>• <strong>Autophagy activation:</strong> Cellular cleanup and anti-aging benefits</li>
+                    <li>• <strong>Mental clarity:</strong> Stable energy, no blood sugar crashes, improved focus</li>
+                    <li>• <strong>Simplified eating:</strong> Fewer meals to plan, prep, and think about</li>
+                    <li>• <strong>Longevity benefits:</strong> May increase lifespan through cellular repair</li>
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Sample Fasting Plans */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-primary" />
-                  Sample Indian Intermittent Fasting Plans
-                </CardTitle>
-                <CardDescription>
-                  Choose your fasting window and follow with balanced Indian meals.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  {dietPlan.map((plan, index) => (
-                    <Card key={index} className="border-l-4 border-l-yellow-500">
-                      <CardHeader className="pb-3">
-                        <CardTitle className="text-lg">{plan.window}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-2">
-                        <div><strong>Meal 1:</strong> {plan.meal1}</div>
-                        <div><strong>Snack:</strong> {plan.snack}</div>
-                        <div><strong>Meal 2:</strong> {plan.meal2 || "—"}</div>
-                      </CardContent>
-                    </Card>
-                  ))}
+                
+                <div className="bg-violet-50 p-6 rounded-lg">
+                  <h3 className="font-bold text-lg mb-3 text-violet-800">Intermittent Fasting Principles</h3>
+                  <ul className="text-gray-700 space-y-2">
+                    <li>• <strong>Zero calories during fast:</strong> Only water, black coffee, tea allowed</li>
+                    <li>• <strong>Consistent timing:</strong> Same fasting/eating windows daily for routine</li>
+                    <li>• <strong>Quality matters:</strong> Eat whole, nutrient-dense foods during eating window</li>
+                    <li>• <strong>Don't overeat:</strong> Eat normally, not "make up" for fasting hours</li>
+                    <li>• <strong>Stay hydrated:</strong> 2-3L water daily, especially during fasting</li>
+                    <li>• <strong>Electrolytes important:</strong> Salt, magnesium, potassium during longer fasts</li>
+                    <li>• <strong>Start gradually:</strong> Begin with 12:12 or 14:10, progress to 16:8</li>
+                    <li>• <strong>Listen to body:</strong> Adjust schedule if experiencing negative effects</li>
+                  </ul>
                 </div>
-              </CardContent>
-            </Card>
-
-            {/* Lifestyle Tips */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle>Essential Fasting Lifestyle Tips</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {lifestyleTips.map((tip, index) => {
-                    const Icon = tip.icon
-                    return (
-                      <div key={index} className="flex items-start gap-3">
-                        <div className="p-2 rounded-lg bg-primary/10">
-                          <Icon className="h-5 w-5 text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold mb-1">{tip.title}</h3>
-                          <p className="text-sm text-muted-foreground">{tip.description}</p>
-                        </div>
-                      </div>
-                    )
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* FAQs */}
-            <Card className="mb-8">
-              <CardHeader>
-                <CardTitle>Frequently Asked Questions</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <Accordion type="single" collapsible className="w-full">
-                  {faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                      <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">{faq.answer}</AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </CardContent>
-            </Card>
-
-            {/* CTA */}
-            <Card className="bg-primary text-primary-foreground">
-              <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4">Want a Customized IF Plan?</h2>
-                <p className="mb-6 opacity-90">
-                  Get a personalized intermittent fasting plan based on your health, lifestyle, and goals from our expert nutritionists.
-                </p>
-                <Button size="lg" variant="secondary">
-                  <Link href="/contact">Book Consultation - ₹500</Link>
-                </Button>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          {/* Sidebar */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-24 space-y-6">
-              {/* Quick Stats */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Plan Overview</CardTitle>
+      {/* Fasting Schedules */}
+      <section id="fasting-schedules" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Popular Intermittent Fasting Schedules: Choose Your Method</h2>
+            
+            <div className="space-y-6">
+              <Card className="border-indigo-200">
+                <CardHeader className="bg-indigo-50">
+                  <CardTitle className="text-indigo-800 flex items-center">
+                    <Clock className="w-6 h-6 mr-3" />
+                    16:8 Method - Most Popular & Beginner-Friendly
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">Duration</span>
-                    <span className="text-sm font-medium">Flexible</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">Difficulty</span>
-                    <span className="text-sm font-medium">Easy–Moderate</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">Best Window</span>
-                    <span className="text-sm font-medium">16:8</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-muted-foreground">Success Rate</span>
-                    <span className="text-sm font-medium">82%</span>
+                <CardContent className="pt-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-2">How It Works:</h4>
+                      <p className="text-gray-700">Fast for 16 consecutive hours, eat within 8-hour window daily. Most people skip breakfast 
+                      and eat from 12 PM - 8 PM (lunch and dinner) or 1 PM - 9 PM.</p>
+                    </div>
+                    
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-blue-800 mb-2">Sample Schedule:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• <strong>8 PM (previous day):</strong> Finish dinner, fasting begins</li>
+                        <li>• <strong>8 PM - 12 PM (next day):</strong> FASTING (16 hours) - water, black coffee, tea only</li>
+                        <li>• <strong>12 PM - 1 PM:</strong> First meal (lunch) - break fast with balanced meal</li>
+                        <li>• <strong>3-4 PM:</strong> Optional snack if hungry</li>
+                        <li>• <strong>7-8 PM:</strong> Final meal (dinner) - eating window closes at 8 PM</li>
+                        <li>• <strong>Repeat daily:</strong> Consistent timing helps body adapt</li>
+                      </ul>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-semibold text-green-800 mb-2">Best For:</h4>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• Beginners to intermittent fasting</li>
+                          <li>• People who don't like breakfast</li>
+                          <li>• Office workers (skip breakfast, eat lunch onwards)</li>
+                          <li>• Social eaters (can have dinner with family)</li>
+                          <li>• Sustainable long-term lifestyle</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-800 mb-2">Expected Results:</h4>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• Weight loss: 0.5-1 kg per week</li>
+                          <li>• Fat burning after 12-14 hours fasting</li>
+                          <li>• Improved insulin sensitivity within 2-3 weeks</li>
+                          <li>• Increased energy and mental clarity</li>
+                          <li>• Easy to maintain long-term</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Ad Space */}
-              <Card className="bg-muted/30">
-                <CardContent className="p-6 text-center">
-                  <div className="text-sm text-muted-foreground mb-2">Advertisement</div>
-                  <div className="h-32 bg-muted rounded flex items-center justify-center">
-                    <span className="text-xs text-muted-foreground">Google AdSense</span>
+              <Card className="border-violet-200">
+                <CardHeader className="bg-violet-50">
+                  <CardTitle className="text-violet-800 flex items-center">
+                    <Target className="w-6 h-6 mr-3" />
+                    18:6 Method - Advanced Fat Burning
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-2">How It Works:</h4>
+                      <p className="text-gray-700">Fast for 18 hours, eat within 6-hour window. Typically 1 PM - 7 PM or 2 PM - 8 PM. 
+                      More aggressive than 16:8, deeper fat burning and autophagy.</p>
+                    </div>
+
+                    <div className="bg-purple-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-purple-800 mb-2">Sample Schedule:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• <strong>7 PM (previous day) - 1 PM (next day):</strong> FASTING (18 hours)</li>
+                        <li>• <strong>1 PM:</strong> First meal (lunch) - larger meal with protein, healthy fats</li>
+                        <li>• <strong>4-5 PM:</strong> Optional small snack if needed</li>
+                        <li>• <strong>6-7 PM:</strong> Final meal (dinner) - eating window closes at 7 PM</li>
+                        <li>• <strong>Only 2 meals daily:</strong> Makes calorie control easier</li>
+                      </ul>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-semibold text-green-800 mb-2">Best For:</h4>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• Experienced fasters (after mastering 16:8)</li>
+                          <li>• Those with significant weight to lose (20+ kg)</li>
+                          <li>• People seeking deeper autophagy benefits</li>
+                          <li>• Those comfortable with 2 meals daily</li>
+                          <li>• Maximum fat burning goals</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-800 mb-2">Expected Results:</h4>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• Weight loss: 0.7-1.2 kg per week</li>
+                          <li>• Enhanced fat oxidation (18+ hours fasted)</li>
+                          <li>• Stronger autophagy activation</li>
+                          <li>• Greater insulin sensitivity improvement</li>
+                          <li>• Significant mental clarity boost</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
 
-              {/* Related Plans */}
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">Related Plans</CardTitle>
+              <Card className="border-purple-200">
+                <CardHeader className="bg-purple-50">
+                  <CardTitle className="text-purple-800 flex items-center">
+                    <Moon className="w-6 h-6 mr-3" />
+                    20:4 / OMAD (One Meal A Day) - Maximum Fasting
+                  </CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-3">
-                  <Link href="/plans/keto" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="font-medium text-sm">Keto Plan</div>
-                    <div className="text-xs text-muted-foreground">Low-carb diet for fat loss</div>
-                  </Link>
-                  <Link href="/plans/vegetarian" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="font-medium text-sm">Vegetarian Plan</div>
-                    <div className="text-xs text-muted-foreground">Plant-based fat loss diet</div>
-                  </Link>
-                  <Link href="/plans/obesity" className="block p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                    <div className="font-medium text-sm">Obesity Plan</div>
-                    <div className="text-xs text-muted-foreground">General weight loss strategy</div>
-                  </Link>
+                <CardContent className="pt-6">
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-gray-800 mb-2">How It Works:</h4>
+                      <p className="text-gray-700">Fast for 20-23 hours, eat within 1-4 hour window (typically one large meal). 
+                      Most extreme IF method, requires significant adaptation, not for beginners.</p>
+                    </div>
+
+                    <div className="bg-pink-50 p-4 rounded-lg">
+                      <h4 className="font-semibold text-pink-800 mb-2">Sample Schedule:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• <strong>6 PM (previous day) - 5 PM (next day):</strong> FASTING (23 hours)</li>
+                        <li>• <strong>5 PM - 7 PM:</strong> One large meal (2-hour eating window)</li>
+                        <li>• <strong>Meal must be large:</strong> 1,500-2,000 calories in one sitting</li>
+                        <li>• <strong>Nutrient-dense focus:</strong> Protein, vegetables, healthy fats essential</li>
+                        <li>• <strong>Not daily for most:</strong> 2-3x weekly mixed with 16:8 or 18:6</li>
+                      </ul>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <h4 className="font-semibold text-green-800 mb-2">Best For:</h4>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• Very experienced fasters only</li>
+                          <li>• Stubborn fat loss plateaus</li>
+                          <li>• Those who prefer one large meal</li>
+                          <li>• Maximum simplicity (no meal planning)</li>
+                          <li>• Periodic deep fasting benefits</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-red-800 mb-2">⚠️ Cautions:</h4>
+                        <ul className="text-sm text-gray-700 space-y-1">
+                          <li>• NOT for beginners - start with 16:8</li>
+                          <li>• Risk of undereating (hard to eat enough in 1 meal)</li>
+                          <li>• May cause digestive discomfort</li>
+                          <li>• Social challenges (one meal timing)</li>
+                          <li>• Not sustainable long-term for most</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-blue-200">
+                <CardHeader className="bg-blue-50">
+                  <CardTitle className="text-blue-800">5:2 Diet - Flexible Weekly Approach</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <div className="space-y-3">
+                    <p className="text-gray-700"><strong>How It Works:</strong> Eat normally 5 days weekly, restrict to 500-600 calories 
+                    on 2 non-consecutive days (e.g., Monday and Thursday).</p>
+                    <p className="text-sm text-gray-600"><strong>Best For:</strong> People who prefer weekly pattern over daily fasting. 
+                    Good for those who struggle with daily restriction. <strong>Results:</strong> 0.5-0.8 kg weekly weight loss.</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* What to Eat */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">What to Eat During Eating Windows</h2>
+            
+            <div className="space-y-8">
+              <Card className="border-green-200">
+                <CardHeader>
+                  <CardTitle className="text-green-700">✅ Best Foods for Intermittent Fasting</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 mb-4">While IF focuses on WHEN to eat, WHAT you eat matters for results. Prioritize 
+                  nutrient-dense whole foods that keep you satisfied.</p>
+
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2 text-green-800">High-Protein Foods:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• Lean meats: Chicken, turkey, fish</li>
+                        <li>• Eggs (great to break fast)</li>
+                        <li>• Greek yogurt, cottage cheese</li>
+                        <li>• Legumes: Lentils, chickpeas, beans</li>
+                        <li>• Tofu, tempeh (vegetarian)</li>
+                        <li>• Protein powder (convenient)</li>
+                        <li>• Aim: 25-30g protein per meal</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2 text-green-800">Healthy Fats (Satiety!):</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• Avocado (half per meal)</li>
+                        <li>• Nuts: Almonds, walnuts (1 oz)</li>
+                        <li>• Seeds: Chia, flax, pumpkin</li>
+                        <li>• Olive oil, coconut oil</li>
+                        <li>• Fatty fish: Salmon, sardines</li>
+                        <li>• Nut butters (natural, 2 tbsp)</li>
+                        <li>• Keeps you full longer!</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-green-50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2 text-green-800">Complex Carbs & Fiber:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• Vegetables: Unlimited! (non-starchy)</li>
+                        <li>• Whole grains: Brown rice, quinoa, oats</li>
+                        <li>• Sweet potato (moderate portions)</li>
+                        <li>• Legumes (protein + carbs)</li>
+                        <li>• Fruits: Berries, apples, oranges</li>
+                        <li>• Whole wheat bread/pasta (moderate)</li>
+                        <li>• Fiber keeps digestive system healthy</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-6 bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold mb-2 text-blue-800">Sample First Meal (Breaking Fast):</h4>
+                    <p className="text-sm text-gray-700">Start with easy-to-digest foods: scrambled eggs + avocado + whole wheat toast, 
+                    OR Greek yogurt bowl + berries + nuts + honey, OR grilled chicken salad with olive oil dressing. Avoid heavy, 
+                    greasy foods that may cause discomfort after fasting.</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-yellow-200">
+                <CardHeader>
+                  <CardTitle className="text-yellow-700">⚠️ What to Avoid During Eating Windows</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-yellow-50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2 text-yellow-800">Limit These:</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• Processed junk food (empty calories)</li>
+                        <li>• Sugary drinks, soda (insulin spike)</li>
+                        <li>• Excessive sweets, desserts</li>
+                        <li>• Fried foods (hard to digest)</li>
+                        <li>• Alcohol (empty calories, dehydration)</li>
+                        <li>• Ultra-processed snacks</li>
+                      </ul>
+                    </div>
+                    <div className="bg-yellow-50 p-4 rounded-lg">
+                      <h4 className="font-semibold mb-2 text-yellow-800">During Fasting (ZERO Calories!):</h4>
+                      <ul className="text-sm text-gray-700 space-y-1">
+                        <li>• ✅ Water (unlimited)</li>
+                        <li>• ✅ Black coffee (no cream/sugar)</li>
+                        <li>• ✅ Plain tea (green, black, herbal)</li>
+                        <li>• ✅ Sparkling water, club soda</li>
+                        <li>• ❌ NO milk, cream, sugar</li>
+                        <li>• ❌ NO juice, smoothies, protein shakes</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tips & FAQs */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Common Challenges & Solutions</h2>
+            
+            <div className="space-y-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-gray-800">😫 "I'm SO hungry during fasting!"</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700"><strong>Solutions:</strong> Drink black coffee or green tea (appetite suppressants), drink 
+                  2-3L water daily (hunger often = thirst), add pinch of salt to water (electrolytes reduce cravings), start gradually 
+                  with 12:12 or 14:10, stay busy during fasting hours (boredom = hunger), and hunger comes in waves - wait 20-30 minutes 
+                  and it passes! After 1-2 weeks, hunger dramatically reduces as body adapts.</p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-gray-800">☕ "Can I have coffee with cream/milk during fasting?"</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700"><strong>Answer:</strong> NO - any calories break the fast and stop fat burning. Cream/milk 
+                  contains calories and triggers insulin response. Black coffee only, or wait until eating window. Some people do "dirty 
+                  fasting" with small amounts (1 tbsp cream), but results are diminished. For maximum benefits, strict ZERO calorie fasting.</p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-gray-800">💪 "Can I exercise while fasting?"</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700"><strong>Answer:</strong> YES! Fasted cardio (light-moderate) is excellent for fat burning. 
+                  Many people work out before breaking fast. For intense workouts or heavy lifting, eating shortly after is beneficial. 
+                  Listen to your body - if dizzy or weak, eat before exercising. BCAA supplements during fasted training can help preserve 
+                  muscle (though technically breaks fast minimally).</p>
+                </CardContent>
+              </Card>
+
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-gray-800">🚫 "Who should NOT do intermittent fasting?"</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700"><strong>Avoid IF if you:</strong> Are pregnant or breastfeeding (need consistent nutrition), 
+                  have history of eating disorders (fasting can trigger), are underweight or malnourished, have diabetes on insulin (risk of 
+                  hypoglycemia - consult doctor), are under 18 years old (still growing), have chronic stress/cortisol issues (fasting adds 
+                  stress), or have certain medical conditions. Always consult doctor before starting IF if you have health concerns.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-gradient-to-r from-indigo-600 to-violet-700">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-3xl font-bold mb-6">Need a Personalized Intermittent Fasting Plan?</h2>
+            <p className="text-xl mb-8">
+              Get customized fasting schedules, meal plans, and strategies tailored to your lifestyle and goals.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
+                <Heart className="w-12 h-12 text-white mx-auto mb-4" />
+                <h4 className="font-semibold text-white mb-2">IF Consultation</h4>
+                <p className="text-white text-sm mb-4">Personalized plan - $100</p>
+                <Button size="lg" className="w-full bg-white text-indigo-600" asChild>
+                  <Link href="/contact">Book Now - $100</Link>
+                </Button>
+              </div>
+
+              <div className="bg-yellow-500/20 border-2 border-yellow-400 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
+                <Clock className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
+                <h4 className="font-semibold text-white mb-2">Fasting Workouts</h4>
+                <p className="text-yellow-100 text-sm mb-4">Exercise guide for IF</p>
+                <Button size="lg" className="w-full bg-yellow-500 text-gray-900" asChild>
+                  <Link href="/workouts/intermittent-fasting">View Workouts</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
