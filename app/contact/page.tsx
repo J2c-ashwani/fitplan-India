@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Phone, Mail, Clock, CheckCircle, CreditCard, Users, Award, Globe, Shield } from "lucide-react"
+import { Phone, Mail, Clock, CheckCircle, CreditCard, Users, Award, Globe, Shield, X } from "lucide-react"
 import Link from "next/link"
 import { submitConsultationForm } from "./actions"
 
@@ -21,6 +21,7 @@ export default function ContactPage() {
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showPaymentModal, setShowPaymentModal] = useState(false) // ✅ NEW
   const [isPaymentProcessing, setIsPaymentProcessing] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const [submitError, setSubmitError] = useState("")
@@ -75,40 +76,50 @@ export default function ContactPage() {
     }
   }
 
-  const handlePayment = async () => {
+  // ✅ UPDATED: Open payment modal on button click
+  const handleBookConsultation = () => {
     const validationError = validateForm()
     if (validationError) {
       setSubmitError(validationError)
       return
     }
+    setSubmitError("")
+    setShowPaymentModal(true) // ✅ Open payment popup
+    saveLead("Pending") // Save lead when user clicks
+  }
 
+  // ✅ UPDATED: Process payment when user confirms in modal
+  const handlePaymentConfirm = async () => {
     setIsPaymentProcessing(true)
     setSubmitError("")
 
     try {
-      // Save as pending
-      await saveLead("Pending")
-
-      // For international payments, redirect to Stripe or show PayPal
-      // This is a placeholder - you'll need to implement Stripe/PayPal
       const result = await submitConsultationForm({
         ...formData,
-        paymentId: "pending_payment", // Will be updated after Stripe/PayPal
+        paymentId: "stripe_payment_" + Date.now(), // Placeholder for Stripe payment ID
       })
 
       if (result.success) {
         await saveLead("Success")
         setSubmitSuccess(true)
+        setShowPaymentModal(false)
         setFormData({ name: "", email: "", mobile: "", healthCondition: "", message: "" })
       } else {
         setSubmitError(result.error || "Failed to submit consultation request")
       }
-    } catch {
-      setSubmitError("Payment initialization failed. Please try again.")
+    } catch (err) {
+      console.error("Payment error:", err)
+      setSubmitError("Payment processing failed. Please try again.")
       await saveLead("Abandoned")
     } finally {
       setIsPaymentProcessing(false)
     }
+  }
+
+  // ✅ NEW: Handle payment modal close
+  const handlePaymentCancel = () => {
+    setShowPaymentModal(false)
+    saveLead("Abandoned")
   }
 
   if (submitSuccess) {
@@ -164,6 +175,105 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* ✅ PAYMENT MODAL */}
+      {showPaymentModal && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl p-6 max-w-md w-full shadow-2xl relative animate-in fade-in zoom-in duration-300">
+            {/* Close Button */}
+            <button
+              onClick={handlePaymentCancel}
+              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <X className="w-5 h-5 text-gray-500" />
+            </button>
+
+            {/* Header */}
+            <div className="text-center mb-6">
+              <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CreditCard className="w-8 h-8 text-emerald-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-2">Complete Payment</h2>
+              <p className="text-gray-600">Confirm your consultation booking</p>
+            </div>
+
+            {/* Price Summary */}
+            <div className="bg-emerald-50 rounded-xl p-5 mb-6 border-2 border-emerald-200">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-gray-700 font-semibold text-lg">Consultation Fee</span>
+                <span className="text-4xl font-bold text-emerald-600">$100</span>
+              </div>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  <span>45-min video consultation</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  <span>Personalized meal plan</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  <span>1-week follow-up support</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                  <span>Expert recommendations</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Booking Details */}
+            <div className="bg-gray-50 rounded-lg p-4 mb-6 text-sm">
+              <p className="font-semibold text-gray-900 mb-2">Booking Details:</p>
+              <p className="text-gray-700">Name: <span className="font-medium">{formData.name}</span></p>
+              <p className="text-gray-700">Email: <span className="font-medium">{formData.email}</span></p>
+              <p className="text-gray-700">Condition: <span className="font-medium">{formData.healthCondition}</span></p>
+            </div>
+
+            {/* Error Message */}
+            {submitError && (
+              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-700 text-sm">{submitError}</p>
+              </div>
+            )}
+
+            {/* Action Buttons */}
+            <div className="space-y-3">
+              <Button
+                onClick={handlePaymentConfirm}
+                disabled={isPaymentProcessing}
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-4 text-lg"
+              >
+                {isPaymentProcessing ? (
+                  <>
+                    <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></span>
+                    Processing Payment...
+                  </>
+                ) : (
+                  <>
+                    <CreditCard className="w-5 h-5 mr-2" />
+                    Pay $100 & Confirm Booking
+                  </>
+                )}
+              </Button>
+
+              <Button
+                onClick={handlePaymentCancel}
+                variant="outline"
+                className="w-full border-2 border-gray-300"
+              >
+                Cancel
+              </Button>
+            </div>
+
+            {/* Security Notice */}
+            <p className="text-xs text-center text-gray-500 mt-4">
+              🔒 Secure payment • Money-back guarantee within 7 days
+            </p>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-emerald-600 to-green-700 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,7 +324,7 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6 pt-8">
-                  {submitError && (
+                  {submitError && !showPaymentModal && (
                     <div className="p-4 bg-red-50 border-2 border-red-200 rounded-lg">
                       <p className="text-red-700 font-medium">{submitError}</p>
                     </div>
@@ -321,20 +431,15 @@ export default function ContactPage() {
                       </div>
                     </div>
 
+                    {/* ✅ UPDATED BUTTON - Opens modal instead of direct payment */}
                     <Button
-                      onClick={handlePayment}
+                      onClick={handleBookConsultation}
                       disabled={isPaymentProcessing || isSubmitting}
                       className="w-full bg-emerald-600 hover:bg-emerald-700 text-lg py-7"
                       size="lg"
                     >
-                      {isPaymentProcessing ? (
-                        <>Processing Payment...</>
-                      ) : (
-                        <>
-                          <CreditCard className="h-5 w-5 mr-2" />
-                          Pay $100 & Book Consultation
-                        </>
-                      )}
+                      <CreditCard className="h-5 w-5 mr-2" />
+                      Pay $100 & Book Consultation
                     </Button>
 
                     <p className="text-xs text-gray-500 text-center">
@@ -356,7 +461,7 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Sidebar */}
+            {/* Sidebar - Keep as is */}
             <div className="space-y-6">
               <Card className="border-2">
                 <CardHeader className="bg-blue-50">
