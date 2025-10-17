@@ -1,12 +1,12 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Poppins } from "next/font/google"
 import "@/app/globals.css"
 import { SchemaMarkup } from "@/components/schema-markup"
 import Header from "@/components/Header"
 import Footer from "@/app/components/Footer"
 import { Analytics } from "@vercel/analytics/next"
-import FloatingAIButton from "@/components/FloatingAIButton" // ✅ NEW IMPORT
+import FloatingAIButton from "@/components/FloatingAIButton"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,13 +21,22 @@ const poppins = Poppins({
   variable: "--font-poppins",
 })
 
+// ✅ ADD THIS - Critical for mobile responsiveness
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#166534',
+}
+
 export const metadata: Metadata = {
   title: {
     default: "FitPlan India - Personalized Weight Loss Plans for Every Condition",
     template: "%s | FitPlan India",
   },
   description:
-    "Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, and more. Trusted by 10,000+ Indians for successful weight loss. Book consultation for ₹500.",
+    "Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted by 10,000+ clients worldwide in USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.",
   keywords: [
     "weight loss India",
     "PCOS diet plan",
@@ -36,10 +45,22 @@ export const metadata: Metadata = {
     "Indian weight loss program",
     "post pregnancy diet",
     "healthy lifestyle India",
+    "personalized diet plan India",
   ],
   authors: [{ name: "FitPlan India", url: "https://fitplanindia.com" }],
   creator: "FitPlan India",
   publisher: "FitPlan India",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -52,7 +73,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FitPlan India - Personalized Weight Loss Plans for Every Condition",
     description:
-      "Custom Indian diet plans for PCOS, thyroid, diabetes, and more. Start your health journey with FitPlan India today.",
+      "Custom Indian diet plans for PCOS, thyroid, diabetes, post-pregnancy, and more. Start your health journey with FitPlan India today.",
     url: "https://fitplanindia.com",
     siteName: "FitPlan India",
     locale: "en_IN",
@@ -70,11 +91,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FitPlan India - Personalized Weight Loss Plans for Every Condition",
     description:
-      "Custom Indian diet & lifestyle plans for PCOS, thyroid, diabetes, and more.",
+      "Custom Indian diet & lifestyle plans for PCOS, thyroid, diabetes, post-pregnancy, and more.",
     images: ["/og-image.jpg"],
     creator: "@fitplanindia",
   },
   metadataBase: new URL("https://fitplanindia.com"),
+  alternates: {
+    canonical: "https://fitplanindia.com",
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -83,7 +107,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
-        <meta name="theme-color" content="#166534" />
+        {/* ✅ Theme color for mobile browsers */}
+        <meta name="theme-color" content="#166534" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#166534" media="(prefers-color-scheme: dark)" />
+        
+        {/* ✅ Mobile web app capable */}
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="FitPlan India" />
 
         {/* Favicons */}
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -91,12 +123,35 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="mask-icon" href="/favicon.svg" color="#166534" />
+        
+        {/* ✅ Preconnect for better performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         <style>{`
           html {
             font-family: ${inter.style.fontFamily};
             --font-sans: ${inter.variable};
             --font-heading: ${poppins.variable};
+          }
+          
+          /* ✅ Prevent horizontal scroll on mobile */
+          html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+          }
+          
+          /* ✅ Better touch targets for mobile */
+          button, a {
+            min-height: 44px;
+            min-width: 44px;
+          }
+          
+          /* ✅ Smooth scrolling */
+          html {
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
           }
         `}</style>
 
@@ -115,7 +170,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${gaMeasurementId}');
+                  gtag('config', '${gaMeasurementId}', {
+                    page_path: window.location.pathname,
+                  });
                 `,
               }}
             />
@@ -124,9 +181,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="font-sans antialiased">
         <Header />
-        <main>{children}</main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
-        <FloatingAIButton /> {/* ✅ Always visible floating chat button */}
+        <FloatingAIButton />
         <Analytics />
       </body>
     </html>
