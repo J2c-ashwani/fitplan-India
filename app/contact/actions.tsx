@@ -142,7 +142,8 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
       })
       
       console.log("✅ Admin email sent successfully!")
-      console.log("Admin email ID:", adminResult.data?.id)
+      console.log("Admin email full response:", JSON.stringify(adminResult, null, 2))
+      console.log("Admin email ID:", adminResult?.id || adminResult?.data?.id || "NOT FOUND")
 
       // STEP 5: Send Customer Email
       console.log("\n📨 Sending customer confirmation email...")
@@ -193,12 +194,13 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
                 ` : ''}
 
                 <div style="background: #fef3c7; padding: 15px; border-radius: 8px; margin-top: 20px;">
-                  <p style="color: #92400e; margin: 0; font-size: 14px;">
-                    <strong>Need help?</strong><br>
-                    Email: support@fitplan.com<br>
-                    Phone: +1 (555) 123-4567
-                  </p>
-                </div>
+               <p style="color: #92400e; margin: 0; font-size: 14px;">
+                <strong>📞 Need help?</strong><br>
+                  Email: hello@fitplanindia.com<br>
+                  Phone: +91 95705 13778
+                   </p>
+                   </div>
+
               </div>
 
               <div style="background: #f9fafb; padding: 20px; text-align: center;">
@@ -213,7 +215,8 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
       })
       
       console.log("✅ Customer email sent successfully!")
-      console.log("Customer email ID:", clientResult.data?.id)
+      console.log("Customer email full response:", JSON.stringify(clientResult, null, 2))
+      console.log("Customer email ID:", clientResult?.id || clientResult?.data?.id || "NOT FOUND")
       
       console.log("\n🎉 ALL EMAILS SENT SUCCESSFULLY!")
       console.log("========================================\n")
@@ -225,9 +228,10 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
       
     } catch (emailError: any) {
       console.error("\n❌ EMAIL SENDING ERROR:")
-      console.error("Error type:", emailError.constructor.name)
-      console.error("Error message:", emailError.message)
-      console.error("Error details:", JSON.stringify(emailError, null, 2))
+      console.error("Error type:", emailError?.constructor?.name)
+      console.error("Error message:", emailError?.message)
+      console.error("Error stack:", emailError?.stack)
+      console.error("Full error object:", JSON.stringify(emailError, null, 2))
       console.error("========================================\n")
       
       // Still return success since data was saved
@@ -239,12 +243,14 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
     
   } catch (error: any) {
     console.error("\n❌ FATAL ERROR:")
-    console.error("Error:", error)
+    console.error("Error type:", error?.constructor?.name)
+    console.error("Error message:", error?.message)
+    console.error("Error stack:", error?.stack)
     console.error("========================================\n")
     
     return {
       success: false,
-      error: "Failed to process request. Please try again or contact support@fitplan.com",
+      error: "Failed to process request. Please try again or contact hello@fitplan.com",
     }
   }
 }
