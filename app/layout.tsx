@@ -7,6 +7,7 @@ import Header from "@/components/Header"
 import Footer from "@/app/components/Footer"
 import { Analytics } from "@vercel/analytics/next"
 import FloatingAIButton from "@/components/FloatingAIButton"
+import Script from "next/script"  // ✅ Added for AdSense
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,13 +22,13 @@ const poppins = Poppins({
   variable: "--font-poppins",
 })
 
-// ✅ ADD THIS - Critical for mobile responsiveness
+// ✅ Mobile viewport configuration
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: '#166534',
+  themeColor: "#166534",
 }
 
 export const metadata: Metadata = {
@@ -56,9 +57,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
   icons: {
@@ -107,10 +108,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
+        {/* ✅ Google AdSense */}
+        <Script
+          id="google-adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
         {/* ✅ Theme color for mobile browsers */}
         <meta name="theme-color" content="#166534" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#166534" media="(prefers-color-scheme: dark)" />
-        
+
         {/* ✅ Mobile web app capable */}
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,7 +133,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="mask-icon" href="/favicon.svg" color="#166534" />
-        
+
         {/* ✅ Preconnect for better performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -134,21 +144,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             --font-sans: ${inter.variable};
             --font-heading: ${poppins.variable};
           }
-          
-          /* ✅ Prevent horizontal scroll on mobile */
+
           html, body {
             overflow-x: hidden;
             width: 100%;
             max-width: 100vw;
           }
-          
-          /* ✅ Better touch targets for mobile */
+
           button, a {
             min-height: 44px;
             min-width: 44px;
           }
-          
-          /* ✅ Smooth scrolling */
+
           html {
             scroll-behavior: smooth;
             -webkit-text-size-adjust: 100%;
