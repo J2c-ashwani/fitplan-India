@@ -108,14 +108,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
-        {/* ✅ Google AdSense */}
-        <Script
-          id="google-adsense"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        {/* ✅ Google AdSense (Static tag for crawler verification) */}
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
+  crossOrigin="anonymous"
+></script>
+
 
         {/* ✅ Theme color for mobile browsers */}
         <meta name="theme-color" content="#166534" media="(prefers-color-scheme: light)" />
