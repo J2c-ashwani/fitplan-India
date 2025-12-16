@@ -13,49 +13,49 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const featuredPlans = [
-    { 
-      title: "PCOS Weight Loss Plan", 
-      href: "/plans/pcos", 
+    {
+      title: "PCOS Weight Loss Plan",
+      href: "/plans/pcos",
       icon: Heart,
       description: "Insulin-resistant diet, hormone-balancing foods, and proven strategies for PCOS weight loss.",
       badge: "Most Popular",
       color: "from-pink-600 to-rose-700"
     },
-    { 
-      title: "Thyroid Weight Loss", 
-      href: "/plans/hypothyroidism", 
+    {
+      title: "Thyroid Weight Loss",
+      href: "/plans/hypothyroidism",
       icon: Target,
       description: "Metabolism-boosting nutrition to overcome hypothyroidism and achieve sustainable weight loss.",
       badge: "High Demand",
       color: "from-blue-600 to-cyan-700"
     },
-    { 
-      title: "Diabetes Diet Plan", 
-      href: "/plans/diabetes", 
+    {
+      title: "Diabetes Diet Plan",
+      href: "/plans/diabetes",
       icon: Activity,
       description: "Blood sugar control, low-glycemic meals, and effective weight management for diabetics.",
       badge: "Expert Recommended",
       color: "from-green-600 to-emerald-700"
     },
-    { 
-      title: "Post-Pregnancy Plans", 
-      href: "/plans/post-pregnancy", 
+    {
+      title: "Post-Pregnancy Plans",
+      href: "/plans/post-pregnancy",
       icon: Heart,
       description: "Safe postpartum weight loss with breastfeeding-friendly nutrition and gentle exercise.",
       badge: "New Mothers",
       color: "from-purple-600 to-violet-700"
     },
-    { 
-      title: "Keto Diet Plans", 
-      href: "/plans/keto-diet", 
+    {
+      title: "Keto Diet Plans",
+      href: "/plans/keto-diet",
       icon: Zap,
       description: "Low-carb, high-fat keto meals with proven strategies for rapid fat loss and ketosis.",
       badge: "Trending",
       color: "from-fuchsia-600 to-purple-700"
     },
-    { 
-      title: "Intermittent Fasting", 
-      href: "/plans/intermittent-fasting", 
+    {
+      title: "Intermittent Fasting",
+      href: "/plans/intermittent-fasting",
       icon: TrendingUp,
       description: "16:8, 18:6 fasting schedules with meal timing strategies for maximum fat loss.",
       badge: "Time-Restricted",
@@ -85,16 +85,16 @@ export default function HomePage() {
               Personalized Weight Loss Plans for Every Condition
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted by 
+              Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted by
               10,000+ clients worldwide in USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
                 <Link href="/contact">Book Consultation - $100</Link>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-emerald-600 bg-transparent font-semibold"
                 asChild
               >
@@ -123,17 +123,66 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Free Tools Section - HIGH ENGAGEMENT */}
+      <section className="py-16 -mt-10 relative z-10 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <Link href="/tools/bmi-calculator" className="group">
+              <Card className="h-full border-2 border-emerald-100 hover:border-emerald-500 hover:shadow-xl transition-all hover:-translate-y-1">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-emerald-600 transition-colors">
+                    <Target className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 group-hover:text-emerald-700">BMI Calculator</h3>
+                  <p className="text-sm text-gray-500 mt-2">Check health status</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/tools/calorie-calculator" className="group">
+              <Card className="h-full border-2 border-blue-100 hover:border-blue-500 hover:shadow-xl transition-all hover:-translate-y-1">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-600 transition-colors">
+                    <Zap className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 group-hover:text-blue-700">Calorie Calculator</h3>
+                  <p className="text-sm text-gray-500 mt-2">Calculate daily needs</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/tools/protein-calculator" className="group">
+              <Card className="h-full border-2 border-purple-100 hover:border-purple-500 hover:shadow-xl transition-all hover:-translate-y-1">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-600 transition-colors">
+                    <Activity className="w-6 h-6 text-purple-600 group-hover:text-white transition-colors" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 group-hover:text-purple-700">Protein Calculator</h3>
+                  <p className="text-sm text-gray-500 mt-2">Optimize intake</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/plans" className="group">
+              <Card className="h-full bg-emerald-600 text-white border-2 border-emerald-600 hover:bg-emerald-700 hover:shadow-xl transition-all hover:-translate-y-1">
+                <CardContent className="p-6 text-center h-full flex flex-col justify-center items-center">
+                  <h3 className="font-bold text-lg mb-1">View All Plans</h3>
+                  <p className="text-emerald-100 text-sm">Start your journey →</p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Plans */}
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Popular Weight Loss Plans</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expertly crafted plans designed for specific health conditions and lifestyle needs. Each plan includes personalized 
+              Expertly crafted plans designed for specific health conditions and lifestyle needs. Each plan includes personalized
               diet guidance, meal timing, and proven strategies backed by nutritional science.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             {featuredPlans.map((plan, index) => {
               const Icon = plan.icon
@@ -170,7 +219,7 @@ export default function HomePage() {
               {allPlans.map((plan, index) => {
                 const Icon = plan.icon
                 return (
-                  <Link 
+                  <Link
                     key={index}
                     href={plan.href}
                     className="group p-4 border-2 rounded-lg hover:border-emerald-500 hover:shadow-lg transition-all bg-white"
@@ -193,7 +242,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Why Choose FitPlan?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We understand the unique challenges of weight loss with medical conditions. Our plans are designed by certified 
+              We understand the unique challenges of weight loss with medical conditions. Our plans are designed by certified
               professionals specializing in evidence-based nutrition and sustainable lifestyle changes.
             </p>
           </div>
@@ -331,7 +380,7 @@ export default function HomePage() {
         <div className="container mx-auto text-center max-w-4xl">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Start Your Transformation?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            Join thousands worldwide who have successfully achieved their weight loss goals with our personalized plans. 
+            Join thousands worldwide who have successfully achieved their weight loss goals with our personalized plans.
             Book your consultation today for just $100!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

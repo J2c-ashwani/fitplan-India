@@ -1,142 +1,61 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Heart, ArrowLeft } from "lucide-react"
-import Link from "next/link"
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: "Privacy Policy - FitPlan India",
-  description:
-    "Privacy policy for FitPlan India nutrition consultation services. Learn how we protect your personal information.",
+export const metadata: Metadata = {
+  title: 'Privacy Policy | FitPlan India',
+  description: 'Privacy Policy for FitPlan India. Learn how we collect, use, and protect your personal information.',
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
-export default function PrivacyPage() {
+export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
+    <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <h1 className="text-4xl font-bold mb-8 text-gray-900">Privacy Policy</h1>
+      <div className="prose max-w-none text-gray-700 space-y-6">
+        <p className="text-sm text-gray-500">Last Updated: December 2025</p>
 
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <div className="mb-6">
-          <Button variant="ghost" asChild className="mb-4">
-            <Link href="/" className="flex items-center gap-2">
-              <ArrowLeft className="h-4 w-4" />
-              Back to Home
-            </Link>
-          </Button>
-        </div>
+        <p>At FitPlan India, accessible from https://fitplanindia.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by FitPlan India and how we use it.</p>
 
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Privacy Policy</h1>
-          <p className="text-muted-foreground">Last updated: January 1, 2024</p>
-        </div>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">Consent</h2>
+        <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
 
-        <div className="space-y-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>Information We Collect</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div>
-                <h3 className="font-semibold mb-2">Personal Information</h3>
-                <p className="text-muted-foreground">
-                  We collect information you provide directly to us, such as when you create an account, book a
-                  consultation, or contact us. This may include:
-                </p>
-                <ul className="list-disc list-inside mt-2 text-muted-foreground space-y-1">
-                  <li>Name and contact information (email, phone number)</li>
-                  <li>Health condition information</li>
-                  <li>Dietary preferences and restrictions</li>
-                  <li>Payment information (processed securely through Razorpay)</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-2">Usage Information</h3>
-                <p className="text-muted-foreground">
-                  We automatically collect certain information about your use of our website, including IP address,
-                  browser type, pages visited, and time spent on our site.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">Information We Collect</h2>
+        <p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
+        <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>How We Use Your Information</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Provide personalized nutrition consultation services</li>
-                <li>Create customized diet plans based on your health conditions</li>
-                <li>Communicate with you about your consultation and follow-up</li>
-                <li>Process payments for our services</li>
-                <li>Improve our website and services</li>
-                <li>Send you relevant health and nutrition information (with your consent)</li>
-              </ul>
-            </CardContent>
-          </Card>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">How we use your information</h2>
+        <p>We use the information we collect in various ways, including to:</p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>Provide, operate, and maintain our website</li>
+          <li>Improve, personalize, and expand our website</li>
+          <li>Understand and analyze how you use our website</li>
+          <li>Develop new products, services, features, and functionality</li>
+          <li>Communicate with you to provide updates and other information relating to the website</li>
+          <li>Send you emails</li>
+          <li>Find and prevent fraud</li>
+        </ul>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Information Sharing</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">
-                We do not sell, trade, or otherwise transfer your personal information to third parties except in the
-                following circumstances:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>With your explicit consent</li>
-                <li>To our certified nutritionists for consultation purposes</li>
-                <li>To payment processors (Razorpay) for transaction processing</li>
-                <li>To comply with legal obligations or protect our rights</li>
-              </ul>
-            </CardContent>
-          </Card>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">Log Files</h2>
+        <p>FitPlan India follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks.</p>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Data Security</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                We implement appropriate security measures to protect your personal information against unauthorized
-                access, alteration, disclosure, or destruction. However, no method of transmission over the internet is
-                100% secure.
-              </p>
-            </CardContent>
-          </Card>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">Cookies and Web Beacons</h2>
+        <p>Like any other website, FitPlan India uses "cookies". These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Your Rights</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-4">You have the right to:</p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Access your personal information</li>
-                <li>Correct inaccurate information</li>
-                <li>Request deletion of your information</li>
-                <li>Opt-out of marketing communications</li>
-                <li>File a complaint with relevant authorities</li>
-              </ul>
-            </CardContent>
-          </Card>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">Google DoubleClick DART Cookie</h2>
+        <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads" className="text-blue-600 underline">https://policies.google.com/technologies/ads</a></p>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Contact Us</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                If you have any questions about this Privacy Policy, please contact us at:
-              </p>
-              <div className="mt-4 space-y-2 text-muted-foreground">
-                <p>Email: privacy@fitplanindia.com</p>
-                <p>Phone: +91 98765 43210</p>
-                <p>Address: Mumbai, India</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">GDPR Data Protection Rights</h2>
+        <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>The right to access – You have the right to request copies of your personal data.</li>
+          <li>The right to rectification – You have the right to request that we correct any information you believe is inaccurate.</li>
+          <li>The right to erasure – You have the right to request that we erase your personal data, under certain conditions.</li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">Contact Us</h2>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at support@fitplanindia.com.</p>
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Inter, Poppins } from "next/font/google"
 import "@/app/globals.css"
-import { SchemaMarkup } from "@/components/schema-markup"
+import { JsonLd } from "@/components/json-ld"
 import Header from "@/components/Header"
 import Footer from "@/app/components/Footer"
 import { Analytics } from "@vercel/analytics/next"
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     "healthy lifestyle India",
     "personalized diet plan India",
   ],
-  authors: [{ name: "FitPlan India", url: "https://fitplanindia.com" }],
+  authors: [{ name: "FitPlan India", url: "https://fitplanindia.com" }, { name: "Dr. Arti Kumari", url: "https://fitplanindia.com/about" }],
   creator: "FitPlan India",
   publisher: "FitPlan India",
   robots: {
@@ -109,11 +109,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         {/* ✅ Google AdSense (Static tag for crawler verification) */}
-<script
-  async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
-  crossOrigin="anonymous"
-></script>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
+          crossOrigin="anonymous"
+        ></script>
 
 
         {/* ✅ Theme color for mobile browsers */}
@@ -126,62 +126,59 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="FitPlan India" />
 
-        {/* Favicons */}
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="mask-icon" href="/favicon.svg" color="#166534" />
-
-        {/* ✅ Preconnect for better performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
-        <style>{`
-          html {
-            font-family: ${inter.style.fontFamily};
-            --font-sans: ${inter.variable};
-            --font-heading: ${poppins.variable};
-          }
-
-          html, body {
-            overflow-x: hidden;
-            width: 100%;
-            max-width: 100vw;
-          }
-
-          button, a {
-            min-height: 44px;
-            min-width: 44px;
-          }
-
-          html {
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-          }
-        `}</style>
-
-        {/* ✅ Schema Markup */}
-        <SchemaMarkup type="website" />
-        <SchemaMarkup type="organization" />
-        <SchemaMarkup type="service" />
+        {/* ✅ Schema Markup (Server-Side) */}
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "FitPlan India",
+            url: "https://fitplanindia.com",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://fitplanindia.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          }}
+        />
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "FitPlan India",
+            url: "https://fitplanindia.com",
+            logo: "https://fitplanindia.com/logo.png",
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+91-98765-43210",
+              contactType: "customer service",
+              areaServed: "IN",
+              availableLanguage: ["English", "Hindi"],
+            },
+            sameAs: [
+              "https://facebook.com/fitplanindia",
+              "https://instagram.com/fitplanindia",
+              "https://twitter.com/fitplanindia",
+            ],
+          }}
+        />
 
         {/* ✅ Google Analytics */}
         {gaMeasurementId && (
           <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${gaMeasurementId}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }}
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+              strategy="afterInteractive"
             />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${gaMeasurementId}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
           </>
         )}
       </head>

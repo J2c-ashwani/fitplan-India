@@ -1,146 +1,44 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Heart } from "lucide-react"
-import Link from "next/link"
+import type { Metadata } from 'next'
 
-export const metadata = {
-  title: "Terms & Conditions - FitPlan India",
-  description: "Terms and conditions for using FitPlan India nutrition consultation services.",
+export const metadata: Metadata = {
+  title: 'Terms & Conditions | FitPlan India',
+  description: 'Terms and Conditions for FitPlan India usage.',
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
+    <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <h1 className="text-4xl font-bold mb-8 text-gray-900">Terms and Conditions</h1>
+      <div className="prose max-w-none text-gray-700 space-y-6">
+        <p className="text-sm text-gray-500">Last Updated: December 2025</p>
 
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
-        <div className="mb-6">
-          <Button variant="outline" asChild>
-            <Link href="/" className="flex items-center gap-2">
-              ← Back to Home
-            </Link>
-          </Button>
-        </div>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">1. Introduction</h2>
+        <p>Welcome to FitPlan India! These terms and conditions outline the rules and regulations for the use of FitPlan India's Website, located at https://fitplanindia.com.</p>
+        <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use FitPlan India if you do not agree to take all of the terms and conditions stated on this page.</p>
 
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Terms & Conditions</h1>
-          <p className="text-muted-foreground">Last updated: January 1, 2024</p>
-        </div>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">2. Medical Disclaimer</h2>
+        <p className="bg-red-50 p-4 border-l-4 border-red-500 rounded font-medium">
+          FitPlan India provides general educational information and diet planning services. We are NOT medical doctors. The content on this site is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+        </p>
 
-        <div className="space-y-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>Acceptance of Terms</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                By accessing and using FitPlan India's website and services, you accept and agree to be bound by the
-                terms and provision of this agreement.
-              </p>
-            </CardContent>
-          </Card>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">3. License</h2>
+        <p>Unless otherwise stated, FitPlan India and/or its licensors own the intellectual property rights for all material on FitPlan India. All intellectual property rights are reserved. You may access this from FitPlan India for your own personal use subjected to restrictions set in these terms and conditions.</p>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Services Description</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground">FitPlan India provides:</p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Personalized nutrition consultation services</li>
-                <li>Customized diet plans for various health conditions</li>
-                <li>Health and fitness calculators</li>
-                <li>Educational content about nutrition and weight loss</li>
-              </ul>
-            </CardContent>
-          </Card>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">4. User Comments</h2>
+        <p>Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. FitPlan India does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of FitPlan India,its agents and/or affiliates.</p>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Medical Disclaimer</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground font-semibold">
-                IMPORTANT: Our services are NOT medical advice and should not replace professional medical consultation.
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>
-                  Always consult with a qualified healthcare provider before starting any diet or exercise program
-                </li>
-                <li>Our nutritionists provide dietary guidance, not medical treatment</li>
-                <li>Individual results may vary and are not guaranteed</li>
-                <li>We are not responsible for any adverse effects from following our recommendations</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Payment Terms</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Consultation fees are ₹500 and must be paid in advance</li>
-                <li>Payments are processed securely through Razorpay</li>
-                <li>Refunds are available within 24 hours of payment if consultation hasn't been conducted</li>
-                <li>No refunds after consultation has been provided</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>User Responsibilities</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Provide accurate and complete information about your health condition</li>
-                <li>Follow the diet plan as recommended by our nutritionists</li>
-                <li>Inform us of any adverse reactions or concerns</li>
-                <li>Use our website and services in accordance with applicable laws</li>
-                <li>Not share your personalized diet plans with others</li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Intellectual Property</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                All content on this website, including diet plans, articles, and calculators, is the intellectual
-                property of FitPlan India and is protected by copyright laws.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Limitation of Liability</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                FitPlan India shall not be liable for any direct, indirect, incidental, special, or consequential
-                damages resulting from the use or inability to use our services.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Contact Information</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">For questions about these Terms & Conditions, contact us at:</p>
-              <div className="mt-4 space-y-2 text-muted-foreground">
-                <p>Email: legal@fitplanindia.com</p>
-                <p>Phone: +91 98765 43210</p>
-                <p>Address: Mumbai, India</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">5. Disclaimer</h2>
+        <p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>limit or exclude our or your liability for death or personal injury;</li>
+          <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
+          <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+          <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
+        </ul>
       </div>
     </div>
   )
