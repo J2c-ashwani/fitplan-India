@@ -91,18 +91,54 @@ export default function AboutPage() {
       <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">Meet Our Experts</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Meet Our Medical Director</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our content and plans are reviewed by qualified healthcare professionals to ensure accuracy and safety.
+              Our programs are designed and supervised by qualified medical professionals.
             </p>
           </div>
 
-          <div className="flex justify-center">
-            <ExpertCard
-              name="Dr. Arti Kumari (MD)"
-              role="Medical Director"
-              qualification="BAMS Graduate, Ayurveda Specialist"
-            />
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-emerald-100">
+            <div className="grid md:grid-cols-12 gap-12 items-start">
+              {/* Left Column: Bio */}
+              <div className="md:col-span-7 space-y-6">
+                <div>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Dr. Arti</h3>
+                  <p className="text-emerald-600 font-semibold text-lg">BAMS, Pursuing MD (Post Graduation)</p>
+                  <p className="text-gray-500 text-sm uppercase tracking-wide mt-1">Leading Ayurvedic Specialist</p>
+                </div>
+
+                <div className="prose text-gray-600 leading-relaxed text-justify">
+                  <p>
+                    Dr. Arti is a dedicated <strong> Ayurvedic Medicine and Surgery (BAMS)</strong> practitioner and a trusted specialist in women's health. Currently pursuing her <strong>MD (Post Graduation)</strong>, she brings a unique blend of traditional Ayurvedic wisdom and modern medical knowledge to FitPlan India.
+                  </p>
+                  <p>
+                    With comprehensive clinical training at prestigious institutions including <strong>NMCH</strong>, specializes in treating hormonal disorders like <strong>PCOS, PCOD, menstrual irregularities, and fertility issues</strong>. Her evidence-based approach combines ancient healing principles with modern diagnostics to address the root causes of health issues, ensuring safe, natural, and lasting results.
+                  </p>
+                  <p>
+                    What sets Dr. Arti apart is her commitment to personalized care. She believes in treating each patient as an individual—understanding their unique constitution (<em>Prakriti</em>), lifestyle, and health goals to create customized treatment plans that deliver optimal health naturally.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap gap-3 pt-4">
+                  <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 px-3 py-1">Women's Health Specialist</Badge>
+                  <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 px-3 py-1">PCOS & Thyroid Expert</Badge>
+                  <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 px-3 py-1">Clinical Nutrition</Badge>
+                </div>
+              </div>
+
+              {/* Right Column: Photo */}
+              <div className="md:col-span-5 flex justify-center md:justify-end">
+                <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+                  <Image
+                    src="/dr-arti.jpg"
+                    alt="Dr. Arti - Medical Director"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -131,21 +167,7 @@ export default function AboutPage() {
   )
 }
 
-function ExpertCard({ name, role, qualification }: { name: string, role: string, qualification: string }) {
-  return (
-    <Card className="text-center border-none shadow-md hover:shadow-lg transition-shadow">
-      <CardContent className="pt-8 pb-8">
-        <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-gray-400">
-          {name.charAt(4)}
-        </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-1">{name}</h3>
-        <p className="text-emerald-600 font-medium text-sm mb-2">{role}</p>
-        <div className="w-8 h-1 bg-emerald-100 mx-auto mb-3"></div>
-        <p className="text-xs text-gray-500 uppercase tracking-wide">{qualification}</p>
-      </CardContent>
-    </Card>
-  )
-}
+
 
 function CheckIcon() {
   return (
