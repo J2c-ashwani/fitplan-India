@@ -100,7 +100,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-emerald-100">
             <div className="grid md:grid-cols-12 gap-12 items-start">
               {/* Left Column: Bio */}
-              <div className="md:col-span-7 space-y-6">
+              <div className="md:col-span-7 space-y-6 order-2 md:order-1">
                 <div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-2">Dr. Arti</h3>
                   <p className="text-emerald-600 font-semibold text-lg">BAMS, Pursuing MD (Post Graduation)</p>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               </div>
 
               {/* Right Column: Photo */}
-              <div className="md:col-span-5 flex justify-center md:justify-end">
+              <div className="md:col-span-5 flex justify-center md:justify-end order-1 md:order-2">
                 <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
                   <Image
                     src="/dr-arti.jpg"
