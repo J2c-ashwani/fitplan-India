@@ -30,7 +30,7 @@ export default function WeightLossWorkoutPage() {
               Weight Loss Workout Plan: Burn Fat & Build Lean Muscle
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover effective fat-burning workouts combining cardio, strength training, and HIIT to maximize 
+              Discover effective fat-burning workouts combining cardio, strength training, and HIIT to maximize
               calorie burn, preserve muscle mass, boost metabolism, and achieve sustainable weight loss results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,15 +75,15 @@ export default function WeightLossWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise for Weight Loss: What Actually Works</h2>
               <p className="text-lg text-gray-700 mb-6">
-                While diet creates the calorie deficit needed for weight loss (you cannot out-exercise a bad diet), 
-                exercise accelerates fat loss, preserves precious muscle mass, boosts metabolism, improves body composition, 
-                and makes maintenance easier long-term. The best approach combines strength training (builds muscle which 
-                burns calories 24/7, prevents metabolic slowdown) with cardio (immediate calorie burn, cardiovascular health). 
-                HIIT workouts provide maximum calorie burn in minimal time through afterburn effect (EPOC - elevated oxygen 
-                consumption post-exercise). A balanced program of 3-4 strength sessions plus 2-3 cardio sessions per week, 
+                While diet creates the calorie deficit needed for weight loss (you cannot out-exercise a bad diet),
+                exercise accelerates fat loss, preserves precious muscle mass, boosts metabolism, improves body composition,
+                and makes maintenance easier long-term. The best approach combines strength training (builds muscle which
+                burns calories 24/7, prevents metabolic slowdown) with cardio (immediate calorie burn, cardiovascular health).
+                HIIT workouts provide maximum calorie burn in minimal time through afterburn effect (EPOC - elevated oxygen
+                consumption post-exercise). A balanced program of 3-4 strength sessions plus 2-3 cardio sessions per week,
                 combined with proper nutrition, delivers optimal fat loss while maintaining lean muscle.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-red-800">Why Exercise for Weight Loss</h4>
@@ -96,7 +96,7 @@ export default function WeightLossWorkoutPage() {
                     <li>• Makes weight maintenance easier long-term</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-orange-800">Best Exercise Types for Fat Loss</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -128,7 +128,7 @@ export default function WeightLossWorkoutPage() {
                     <li>• <strong>More isn't always better:</strong> Overtraining can hinder fat loss (cortisol)</li>
                     <li>• <strong>Recovery matters:</strong> Muscle grows during rest, not during workout</li>
                     <li>• <strong>Progressive overload:</strong> Must challenge yourself more over time</li>
-                    <li>• <strong>Consistency over intensity:</strong> 4 moderate workouts > 1 intense session per week</li>
+                    <li>• <strong>Consistency over intensity:</strong> 4 moderate workouts &gt; 1 intense session per week</li>
                   </ul>
                 </div>
               </div>
@@ -160,7 +160,7 @@ export default function WeightLossWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-red-100 border border-red-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>🔥 HIIT = High-Intensity Interval Training:</strong> Short bursts of max effort followed by rest. 
+                    <strong>🔥 HIIT = High-Intensity Interval Training:</strong> Short bursts of max effort followed by rest.
                     Burns 25-30% more calories than steady cardio PLUS afterburn effect for 24-48 hours!
                   </p>
                 </div>
@@ -173,7 +173,7 @@ export default function WeightLossWorkoutPage() {
 
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">HIIT Circuit (4 Rounds, 30 sec on / 30 sec rest)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Burpees</h6>
@@ -181,7 +181,7 @@ export default function WeightLossWorkoutPage() {
                           <strong>Duration:</strong> 30 seconds max effort | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Full body exercise. Drop to plank, push-up, jump up. Modify by stepping instead of jumping 
+                          Full body exercise. Drop to plank, push-up, jump up. Modify by stepping instead of jumping
                           if needed. Burns maximum calories.
                         </p>
                       </div>
@@ -263,7 +263,7 @@ export default function WeightLossWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-orange-100 border border-orange-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>💪 Strength = Muscle Preservation:</strong> Critical during weight loss to maintain metabolism. 
+                    <strong>💪 Strength = Muscle Preservation:</strong> Critical during weight loss to maintain metabolism.
                     Muscle burns 3x more calories than fat at rest!
                   </p>
                 </div>
@@ -271,7 +271,7 @@ export default function WeightLossWorkoutPage() {
                 <div className="space-y-4">
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Circuit (4 Rounds, minimal rest)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Squats (Add Weight if Available)</h6>
@@ -323,7 +323,7 @@ export default function WeightLossWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Walking is the most underrated fat-loss tool. Burns 200-400 calories, doesn't interfere with recovery, 
+                  Walking is the most underrated fat-loss tool. Burns 200-400 calories, doesn't interfere with recovery,
                   can do daily, sustainable forever. Aim for 8,000-10,000 steps daily.
                 </p>
 
@@ -425,7 +425,7 @@ export default function WeightLossWorkoutPage() {
                 <div className="mt-6 bg-green-50 border border-green-300 rounded-lg p-4">
                   <h5 className="font-semibold mb-2 text-green-800">Weekly Total:</h5>
                   <p className="text-sm text-gray-700">
-                    4 strength sessions + 2 cardio = ~2,000-2,500 calories burned from exercise alone! 
+                    4 strength sessions + 2 cardio = ~2,000-2,500 calories burned from exercise alone!
                     Combined with diet = fast, sustainable fat loss.
                   </p>
                 </div>
@@ -440,7 +440,7 @@ export default function WeightLossWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Weight Loss Workout Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -467,7 +467,7 @@ export default function WeightLossWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -506,10 +506,10 @@ export default function WeightLossWorkoutPage() {
               Complete Your Weight Loss Journey
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise accelerates fat loss, but proper nutrition creates the calorie deficit. Get your complete 
+              Exercise accelerates fat loss, but proper nutrition creates the calorie deficit. Get your complete
               weight loss diet plan to maximize results and make this sustainable.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -539,7 +539,7 @@ export default function WeightLossWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands losing weight sustainably through smart exercise and nutrition
             </p>

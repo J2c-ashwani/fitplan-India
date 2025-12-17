@@ -30,8 +30,8 @@ export default function HormonalWorkoutsPage() {
               Hormone-Balancing Workouts 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete hormone-friendly workout program designed specifically for women with PCOS, thyroid disorders, menopause, and 
-              hormonal imbalances. Strategic exercises that improve insulin sensitivity, reduce cortisol, support thyroid function, 
+              Complete hormone-friendly workout program designed specifically for women with PCOS, thyroid disorders, menopause, and
+              hormonal imbalances. Strategic exercises that improve insulin sensitivity, reduce cortisol, support thyroid function,
               and balance hormones naturally WITHOUT excessive stress or overtraining. Gentle yet effective approach.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -51,15 +51,15 @@ export default function HormonalWorkoutsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Hormone-Friendly Exercise is Different</h2>
-            
+
             <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200 mb-8">
               <div className="flex items-start">
                 <AlertCircle className="w-6 h-6 text-red-600 mr-3 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-bold text-red-800 mb-2">⚠️ Why Excessive Exercise WORSENS Hormonal Imbalances</h3>
                   <p className="text-gray-700 mb-3">
-                    Traditional intense exercise advice (daily HIIT, excessive cardio, overtraining) is TERRIBLE for hormonal imbalances. 
-                    Excessive exercise increases cortisol (stress hormone), suppresses thyroid function, worsens insulin resistance, disrupts 
+                    Traditional intense exercise advice (daily HIIT, excessive cardio, overtraining) is TERRIBLE for hormonal imbalances.
+                    Excessive exercise increases cortisol (stress hormone), suppresses thyroid function, worsens insulin resistance, disrupts
                     menstrual cycles, and increases inflammation - exactly what you DON'T want when hormones are already imbalanced.
                   </p>
                   <ul className="text-sm text-gray-700 space-y-1">
@@ -374,7 +374,7 @@ export default function HormonalWorkoutsPage() {
                   <div className="bg-orange-50 p-4 rounded-lg border border-orange-200">
                     <h4 className="font-semibold text-orange-800 mb-2">⚠️ Important for Hormonal Imbalances:</h4>
                     <p className="text-sm text-gray-700 mb-2">
-                      HIIT is OPTIONAL and should NEVER be done more than 1-2x weekly maximum. If you're exhausted, stressed, or not 
+                      HIIT is OPTIONAL and should NEVER be done more than 1-2x weekly maximum. If you're exhausted, stressed, or not
                       sleeping well, SKIP HIIT and do gentle walk instead. Listen to your body!
                     </p>
                   </div>
@@ -406,7 +406,7 @@ export default function HormonalWorkoutsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Important Tips for Hormone-Friendly Exercise</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-green-200">
                 <CardHeader className="bg-green-50">
@@ -439,7 +439,7 @@ export default function HormonalWorkoutsPage() {
                     <li>• <strong>Don't push through exhaustion:</strong> Rest when body asks for it</li>
                     <li>• <strong>Don't do excessive cardio:</strong> Long cardio sessions increase cortisol</li>
                     <li>• <strong>Don't compare to others:</strong> Your hormones need YOUR pace</li>
-                    <li>• <strong>Don't sacrifice sleep for workouts:</strong> Sleep > exercise always</li>
+                    <li>• <strong>Don't sacrifice sleep for workouts:</strong> Sleep &gt; exercise always</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -456,7 +456,7 @@ export default function HormonalWorkoutsPage() {
             <p className="text-xl mb-8">
               Combine these hormone-friendly workouts with our hormone-balancing diet for optimal results!
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />

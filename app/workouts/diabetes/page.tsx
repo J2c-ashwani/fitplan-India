@@ -30,7 +30,7 @@ export default function DiabetesWorkoutPage() {
               Diabetes Workout Plan: Best Exercises for Blood Sugar Control
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe and effective workout routines specifically designed for diabetics to lower blood sugar, 
+              Discover safe and effective workout routines specifically designed for diabetics to lower blood sugar,
               improve insulin sensitivity, support weight loss, and reduce medication dependency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,12 +75,12 @@ export default function DiabetesWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Essential for Diabetes</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is one of the most powerful tools for managing diabetes. Physical activity helps your muscles 
-                use glucose without insulin, improves insulin sensitivity, lowers blood sugar levels, reduces cardiovascular 
-                risk, and supports healthy weight management. Research shows that combining aerobic exercise with 
+                Exercise is one of the most powerful tools for managing diabetes. Physical activity helps your muscles
+                use glucose without insulin, improves insulin sensitivity, lowers blood sugar levels, reduces cardiovascular
+                risk, and supports healthy weight management. Research shows that combining aerobic exercise with
                 resistance training produces the best results for blood sugar control and overall diabetes management.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Exercise Benefits for Diabetes</h4>
@@ -93,7 +93,7 @@ export default function DiabetesWorkoutPage() {
                     <li>• Improves mood and reduces stress</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-green-800">Best Exercise Types for Diabetes</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -155,7 +155,7 @@ export default function DiabetesWorkoutPage() {
                       <strong>Duration:</strong> 20-30 minutes | <strong>Pace:</strong> Comfortable, conversational
                     </p>
                     <p className="text-sm text-gray-600 mt-2">
-                      Start slow and gradually increase duration. Focus on consistency over intensity. Walk at a pace 
+                      Start slow and gradually increase duration. Focus on consistency over intensity. Walk at a pace
                       where you can still hold a conversation.
                     </p>
                   </div>
@@ -166,7 +166,7 @@ export default function DiabetesWorkoutPage() {
                       <strong>Duration:</strong> 30-40 minutes | <strong>Pace:</strong> Moderate, slightly breathless
                     </p>
                     <p className="text-sm text-gray-600 mt-2">
-                      Increase walking time by 5 minutes each week. Add gentle hills or stairs if available. 
+                      Increase walking time by 5 minutes each week. Add gentle hills or stairs if available.
                       You should feel slightly breathless but still able to speak.
                     </p>
                   </div>
@@ -177,7 +177,7 @@ export default function DiabetesWorkoutPage() {
                       <strong>Format:</strong> 3 min normal pace, 2 min brisk pace (repeat 6-8 times)
                     </p>
                     <p className="text-sm text-gray-600 mt-2">
-                      Alternate between normal and brisk walking. This interval approach is very effective for 
+                      Alternate between normal and brisk walking. This interval approach is very effective for
                       blood sugar control and calorie burning.
                     </p>
                   </div>
@@ -202,7 +202,7 @@ export default function DiabetesWorkoutPage() {
 
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Main Circuit (3 Rounds, 45 sec rest between rounds)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Chair Squats</h6>
@@ -210,7 +210,7 @@ export default function DiabetesWorkoutPage() {
                           <strong>Reps:</strong> 12-15 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Stand in front of chair, lower down until you lightly touch the seat, stand back up. 
+                          Stand in front of chair, lower down until you lightly touch the seat, stand back up.
                           Excellent for leg strength and blood sugar control.
                         </p>
                       </div>
@@ -390,7 +390,7 @@ export default function DiabetesWorkoutPage() {
                       <strong>Duration:</strong> 30-45 minutes | <strong>Intensity:</strong> Moderate (able to talk)
                     </p>
                     <p className="text-sm text-gray-600">
-                      Start at comfortable pace (2.5-3.5 mph). Gradually increase speed or add slight incline (1-3%). 
+                      Start at comfortable pace (2.5-3.5 mph). Gradually increase speed or add slight incline (1-3%).
                       Most effective for blood sugar control.
                     </p>
                   </div>
@@ -401,7 +401,7 @@ export default function DiabetesWorkoutPage() {
                       <strong>Duration:</strong> 30-40 minutes | <strong>Intensity:</strong> Moderate resistance
                     </p>
                     <p className="text-sm text-gray-600">
-                      Excellent low-impact option. Set comfortable resistance where you can maintain steady pace. 
+                      Excellent low-impact option. Set comfortable resistance where you can maintain steady pace.
                       Great for those with joint issues or neuropathy.
                     </p>
                   </div>
@@ -412,7 +412,7 @@ export default function DiabetesWorkoutPage() {
                       <strong>Duration:</strong> 25-35 minutes | <strong>Intensity:</strong> Moderate
                     </p>
                     <p className="text-sm text-gray-600">
-                      Low-impact full-body cardio. Use handles for upper body engagement. Good alternative to walking 
+                      Low-impact full-body cardio. Use handles for upper body engagement. Good alternative to walking
                       for those with foot problems.
                     </p>
                   </div>
@@ -423,7 +423,7 @@ export default function DiabetesWorkoutPage() {
                       <strong>Duration:</strong> 20-30 minutes | <strong>Intensity:</strong> Moderate pace
                     </p>
                     <p className="text-sm text-gray-600">
-                      Full-body low-impact cardio. Start slowly to learn proper form. Excellent for building endurance 
+                      Full-body low-impact cardio. Start slowly to learn proper form. Excellent for building endurance
                       and muscle simultaneously.
                     </p>
                   </div>
@@ -441,7 +441,7 @@ export default function DiabetesWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Swimming and water exercises are ideal for diabetics, especially those with joint problems, neuropathy, 
+                  Swimming and water exercises are ideal for diabetics, especially those with joint problems, neuropathy,
                   or excess weight. The water provides resistance while being gentle on joints.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -475,14 +475,14 @@ export default function DiabetesWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Diabetes Exercise Safety Guidelines</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Exercise Best Practices:</h4>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Monitor blood sugar:</strong> Check before, during (if >60 min), and after exercise</span>
+                    <span><strong>Monitor blood sugar:</strong> Check before, during (if &gt;60 min), and after exercise</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -502,13 +502,13 @@ export default function DiabetesWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes to Avoid:</h4>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
                     <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Exercising with low blood sugar:</strong> Always check first (should be >100 mg/dL)</span>
+                    <span><strong>Exercising with low blood sugar:</strong> Always check first (should be &gt;100 mg/dL)</span>
                   </li>
                   <li className="flex items-start">
                     <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -541,10 +541,10 @@ export default function DiabetesWorkoutPage() {
               Complete Your Diabetes Management Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise works best when combined with proper nutrition. Get your personalized diabetes diet plan 
+              Exercise works best when combined with proper nutrition. Get your personalized diabetes diet plan
               to maximize blood sugar control and achieve your health goals.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -574,7 +574,7 @@ export default function DiabetesWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands managing diabetes naturally through diet and exercise
             </p>
