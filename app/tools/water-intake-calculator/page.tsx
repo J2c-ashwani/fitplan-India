@@ -157,20 +157,42 @@ export default function WaterCalculatorPage() {
 
                             {/* Rich Content for SEO */}
                             <div className="mt-12 prose max-w-none text-gray-700">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Hydration is Critical for Weight Loss</h2>
+                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Complete Guide to Hydration for Indians</h2>
+
+                                <p>
+                                    In a tropical country like India, hydration isn't just about quenching thirst—it's about survival and optimal health. With temperatures soaring above 40°C in many parts of the country, the standard "8 glasses a day" rule might not be enough for everyone.
+                                </p>
+
+                                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Why Hydration is Critical for Weight Loss</h3>
                                 <p>
                                     Water is often the missing piece in the weight loss puzzle. Drinking enough water boosts metabolism by up to 30% for over an hour. It also helps the body flush out toxins released during fat burning.
                                 </p>
-                                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Signs of Dehydration</h3>
+                                <div className="bg-cyan-50 p-4 rounded-lg border-l-4 border-cyan-500 my-4">
+                                    <strong>Did you know?</strong> thirst is often mistaken for hunger. Next time you feel a snack craving, try drinking a glass of water first!
+                                </div>
+
+                                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Signs You Are Dehydrated</h3>
                                 <ul className="list-disc pl-5 space-y-2">
-                                    <li><strong>Fatigue:</strong> Even mild dehydration can drain your energy.</li>
-                                    <li><strong>False Hunger:</strong> Thirst is often mistaken for hunger, leading to overeating.</li>
+                                    <li><strong>Dark Urine:</strong> Your urine should be pale yellow. Dark yellow or amber indicates dehydration.</li>
+                                    <li><strong>Constant Fatigue:</strong> Even mild dehydration (1-2% loss of body fluid) can drain your energy and make you feel tired.</li>
                                     <li><strong>Headaches:</strong> Identify if that afternoon headache is just a water signal.</li>
-                                    <li><strong>Skin Issues:</strong> Hydration is key for glowing, clear skin.</li>
+                                    <li><strong>Dry Skin & Lips:</strong> Hydration is key for glowing, clear skin.</li>
                                 </ul>
+
+                                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">How to Drink More Water (Indian Way)</h3>
+                                <p>
+                                    Struggling to drink plain water? Try these healthy Indian alternatives that count towards your hydration goal:
+                                </p>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    <li><strong>Coconut Water (Nariyal Pani):</strong> Rich in electrolytes, perfect for Indian summers.</li>
+                                    <li><strong>Buttermilk (Chaas):</strong> Probiotic-rich and cooling for the gut.</li>
+                                    <li><strong>Lemon Water (Nimbu Pani):</strong> Vitamin C boost without the sugar.</li>
+                                    <li><strong>Infused Water:</strong> Add slices of cucumber, mint, or ginger to your water bottle.</li>
+                                </ul>
+
                                 <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Best Times to Drink Water</h3>
                                 <p>
-                                    Drink 2 glasses immediately upon waking to kickstart your organs. Drink 1 glass 30 minutes before meals to aid digestion and control appetite. Avoid heavy drinking during meals to prevent diluting digestive enzymes.
+                                    Drink 2 glasses immediately upon waking to kickstart your organs (Usha Paana in Ayurveda). Drink 1 glass 30 minutes before meals to aid digestion and control appetite. Avoid heavy drinking <em>during</em> meals to prevent diluting digestive enzymes.
                                 </p>
                             </div>
                         </div>

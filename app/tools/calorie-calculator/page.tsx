@@ -226,29 +226,46 @@ export default function CalorieCalculatorPage() {
 
                             {/* Rich Content for SEO/AdSense */}
                             <div className="mt-12 prose max-w-none text-gray-700">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Understanding BMR & TDEE</h2>
+                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Complete Guide to Caloric Balance</h2>
                                 <p>
-                                    To effectively manage your weight, you need to understand two key numbers: your Basal Metabolic Rate (BMR) and your Total Daily Energy Expenditure (TDEE).
+                                    Weight management often feels complicated, but at its core, it's a game of energy balance. This calculator uses the Mifflin-St Jeor equation (considered the gold standard in clinical settings) to estimate your needs.
                                 </p>
+
+                                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Understanding the Numbers</h3>
                                 <div className="grid md:grid-cols-2 gap-4 my-4">
                                     <div className="bg-gray-50 p-4 rounded-lg">
-                                        <h4 className="font-bold flex items-center gap-2 mb-2"><Flame className="w-4 h-4 text-orange-500" /> BMR</h4>
-                                        <p className="text-sm">Calories your body burns just to exist (breathing, circulation) at complete rest. It accounts for about 60-70% of daily burn.</p>
+                                        <h4 className="font-bold flex items-center gap-2 mb-2"><Flame className="w-4 h-4 text-orange-500" /> BMR (Basal Metabolic Rate)</h4>
+                                        <p className="text-sm">This is what your body burns in a coma. It's the energy needed for breathing, blood circulation, and cell production. Never eat below your BMR without medical supervision.</p>
                                     </div>
                                     <div className="bg-gray-50 p-4 rounded-lg">
-                                        <h4 className="font-bold flex items-center gap-2 mb-2"><Zap className="w-4 h-4 text-yellow-500" /> TDEE</h4>
-                                        <p className="text-sm">Total calories you burn in a day, including exercise and daily movement. This is your "maintenance" number.</p>
+                                        <h4 className="font-bold flex items-center gap-2 mb-2"><Zap className="w-4 h-4 text-yellow-500" /> TDEE (Total Daily Energy Expenditure)</h4>
+                                        <p className="text-sm">This is your BMR + Activity. This is your "maintenance" number. Eating this amount will keep your weight stable.</p>
                                     </div>
                                 </div>
-                                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">How to use this result?</h3>
+
+                                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Weight Loss Strategy for Indian Diets</h3>
                                 <p>
-                                    The calculator uses the Mifflin-St Jeor equation, considered one of the most accurate equations for estimating BMR. Once you have your goal calories:
+                                    Indian diets are typically high in carbs (Roti, Rice, Idli). You don't need to give them up, but portion control is key.
                                 </p>
                                 <ul className="list-disc pl-5 space-y-2">
-                                    <li><strong>Track your food:</strong> Use an app to log what you eat and aim to hit closer to your goal number.</li>
-                                    <li><strong>Monitor progress:</strong> Weigh yourself weekly. If weight isn't moving after 2 weeks, adjust calories by +/- 100-200.</li>
-                                    <li><strong>Prioritize Protein:</strong> Regardless of calorie goal, ensure you get enough protein to stay satiated and correct muscle mass.</li>
+                                    <li><strong>The Protein Problem:</strong> Most Indian vegetarian diets lack protein. Aim for Paneer, Dal, Soya, or Curd with every meal to stay full.</li>
+                                    <li><strong>Volume Eating:</strong> Fill half your plate with Sabzi (cooked vegetables) or Salad before adding Rice or Roti.</li>
+                                    <li><strong>Healthy Swaps:</strong> Replace white rice with Brown Rice or Quinoa, and regular Atta with Multigrain Atta for more fiber.</li>
                                 </ul>
+
+                                <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Why Your Weight Fluctuates</h3>
+                                <p>
+                                    Don't panic if the scale jumps up 1-2 kgs overnight. This is usually water retention caused by:
+                                </p>
+                                <ul className="list-disc pl-5 space-y-2">
+                                    <li>High salt intake (Sodium holds water)</li>
+                                    <li>Menstrual cycle changes</li>
+                                    <li>Heavy workout sessions (Muscles retain water for repair)</li>
+                                    <li>Carbohydrate heavy meals</li>
+                                </ul>
+                                <p className="text-sm text-gray-500 mt-4 italic">
+                                    <strong>Disclaimer:</strong> This calculator provides an estimate. Individual results vary based on metabolism, genetics, and health conditions like PCOS or Thyroid. Consult our nutritionists for a precise plan.
+                                </p>
                             </div>
                         </div>
 
