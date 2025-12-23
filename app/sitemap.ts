@@ -54,12 +54,45 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/ayurveda`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
   ]
+
+  // Ayurveda Pages (Verified)
+  const ayurveda = [
+    'pcos-herbs',
+    'thyroid-remedies',
+    'diabetes-control',
+    'joint-pain',
+    'weight-loss-routine',
+    'gut-health',
+    'sleep-hygiene',
+    'stress-anxiety',
+    'hair-health',
+    'skin-glow',
+    'anti-aging',
+    'eye-care',
+    'post-pregnancy',
+    'acidity-bloating',
+    'mens-vitality',
+    'home-detox',
+  ].map((page) => ({
+    url: `${baseUrl}/ayurveda/${page}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
 
   // Diet Plans (Verified directories)
   const plans = [
+    'anti-aging',
     'diabetes',
     'gym-diet-combo',
+    'hair-growth',
     'hormonal-imbalance',
     'hyperthyroidism',
     'hypothyroidism',
@@ -71,6 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'pcos',
     'post-pregnancy',
     'senior-citizens',
+    'skin-detox',
     'teenagers',
     'thyroid',
     'vegetarian',
@@ -152,6 +186,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...mainPages,
     ...plans,
+    ...ayurveda,
     ...workouts,
     ...tools,
     ...legalPages,
