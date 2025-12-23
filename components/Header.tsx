@@ -52,7 +52,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/contact#contact-form"
             className="px-4 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition"
           >
             Book Consultation
@@ -66,19 +66,16 @@ export default function Header() {
         >
           <span className="sr-only">Open main menu</span>
           <div
-            className={`w-6 h-0.5 bg-primary mb-1 transition-transform ${
-              mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
-            }`}
+            className={`w-6 h-0.5 bg-primary mb-1 transition-transform ${mobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+              }`}
           />
           <div
-            className={`w-6 h-0.5 bg-primary mb-1 transition-opacity ${
-              mobileMenuOpen ? "opacity-0" : "opacity-100"
-            }`}
+            className={`w-6 h-0.5 bg-primary mb-1 transition-opacity ${mobileMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
           />
           <div
-            className={`w-6 h-0.5 bg-primary transition-transform ${
-              mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
-            }`}
+            className={`w-6 h-0.5 bg-primary transition-transform ${mobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+              }`}
           />
         </button>
       </div>
@@ -107,7 +104,7 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/contact"
+              href="/contact#contact-form"
               className="px-4 py-2 bg-primary text-white rounded-lg shadow hover:bg-primary/90 transition text-center"
               onClick={() => setMobileMenuOpen(false)}
             >

@@ -768,7 +768,7 @@ export default function PCOSDietPage() {
                   Get personalized PCOS diet plan + supplement recommendations + lifestyle guidance + ongoing support - <PriceDisplay amountIn={500} amountUs={50} />
                 </p>
                 <Button size="lg" className="w-full bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
-                  <Link href="/contact">
+                  <Link href="/contact#contact-form">
                     Book PCOS Consultation - <PriceDisplay amountIn={500} amountUs={50} />
                   </Link>
                 </Button>

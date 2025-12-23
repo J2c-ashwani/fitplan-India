@@ -156,7 +156,7 @@ export default function AboutPage() {
             </div>
           </div>
           <a
-            href="/contact"
+            href="/contact#contact-form"
             className="inline-block bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors shadow-lg hover:shadow-xl"
           >
             Contact Our Team

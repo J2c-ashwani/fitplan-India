@@ -274,7 +274,7 @@ export default function PlansPage() {
                 </Link>
               </Button>
               <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white border-2 border-white font-semibold" asChild>
-                <Link href="/contact">
+                <Link href="/contact#contact-form">
                   Get Personalized Plan - <PriceDisplay amountIn={500} amountUs={50} />
                 </Link>
               </Button>
@@ -400,7 +400,7 @@ export default function PlansPage() {
                   Get expert advice from certified nutritionists with customized diet plan - <PriceDisplay amountIn={500} amountUs={50} />.
                 </p>
                 <Button size="lg" className="w-full bg-white text-teal-700 hover:bg-gray-100 font-semibold" asChild>
-                  <Link href="/contact">
+                  <Link href="/contact#contact-form">
                     Book Consultation - <PriceDisplay amountIn={500} amountUs={50} />
                   </Link>
                 </Button>

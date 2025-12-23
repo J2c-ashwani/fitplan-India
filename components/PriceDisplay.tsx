@@ -13,7 +13,7 @@ export default function PriceDisplay({ amountIn, amountUs, className = "" }: Pri
     const { currency, symbol, loading } = useCurrency()
 
     if (loading) {
-        return <Skeleton className="h-6 w-16 inline-block" />
+        return <span className="h-6 w-16 inline-block bg-muted animate-pulse rounded-md" />
     }
 
     const price = currency === "INR" ? amountIn : amountUs

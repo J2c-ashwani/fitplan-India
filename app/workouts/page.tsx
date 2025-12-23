@@ -244,7 +244,7 @@ export default function WorkoutsPage() {
                   Book one-on-one training with certified fitness professionals for <PriceDisplay amountIn={500} amountUs={50} />.
                 </p>
                 <Button size="lg" className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold" asChild>
-                  <Link href="/contact">
+                  <Link href="/contact#contact-form">
                     Book Training - <PriceDisplay amountIn={500} amountUs={50} />
                   </Link>
                 </Button>

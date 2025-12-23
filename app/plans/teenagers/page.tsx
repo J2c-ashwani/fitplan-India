@@ -493,7 +493,7 @@ export default function TeenagersWeightManagementPage() {
                 <h4 className="font-semibold text-white mb-2">Teen Nutrition Consultation</h4>
                 <p className="text-white text-sm mb-4">Personalized plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-cyan-600" asChild>
-                  <Link href="/contact">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
+                  <Link href="/contact#contact-form">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
                 </Button>
               </div>
 

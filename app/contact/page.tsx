@@ -317,7 +317,7 @@ export default function ContactPage() {
       </section>
 
       {/* Form Section */}
-      <section className="py-20 px-4">
+      <section id="contact-form" className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Main Form */}

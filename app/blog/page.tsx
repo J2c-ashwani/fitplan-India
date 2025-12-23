@@ -201,11 +201,11 @@ export default function BlogPage() {
               <div className="bg-yellow-500/20 border-2 border-yellow-400 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2 text-xl">Expert Consultation</h4>
-                <p className="text-yellow-100 text-sm mb-4 leading-relaxed">
+                <div className="text-yellow-100 text-sm mb-4 leading-relaxed">
                   Book one-on-one consultation with certified nutritionists for <PriceDisplay amountIn={500} amountUs={50} />.
-                </p>
+                </div>
                 <Button size="lg" className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold" asChild>
-                  <Link href="/contact">
+                  <Link href="/contact#contact-form">
                     Book Consultation - <PriceDisplay amountIn={500} amountUs={50} />
                   </Link>
                 </Button>

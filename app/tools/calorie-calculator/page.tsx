@@ -313,7 +313,7 @@ export default function CalorieCalculatorPage() {
                                         Calories are just the start. Get a meal plan with delicious recipes that fit your macros.
                                     </p>
                                     <Button variant="secondary" className="w-full font-semibold" asChild>
-                                        <Link href="/contact">Get Customized Plan</Link>
+                                        <Link href="/contact#contact-form">Get Customized Plan</Link>
                                     </Button>
                                 </CardContent>
                             </Card>

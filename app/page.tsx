@@ -91,7 +91,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
-                <Link href="/contact">Book Consultation - <PriceDisplay amountIn={500} amountUs={50} /></Link>
+                <Link href="/contact#contact-form">Book Consultation - <PriceDisplay amountIn={500} amountUs={50} /></Link>
               </Button>
               <Button
                 size="lg"
@@ -322,7 +322,7 @@ export default function HomePage() {
                 1
               </div>
               <h3 className="font-bold text-lg mb-2 text-gray-900">Book Consultation</h3>
-              <p className="text-sm text-gray-600"><PriceDisplay amountIn={500} amountUs={50} /> one-time consultation fee. Get personalized assessment of your health and goals.</p>
+              <div className="text-sm text-gray-600"><PriceDisplay amountIn={500} amountUs={50} /> one-time consultation fee. Get personalized assessment of your health and goals.</div>
             </div>
 
             <div className="text-center">
@@ -386,7 +386,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
-              <Link href="/contact">Book Consultation - <PriceDisplay amountIn={500} amountUs={50} /></Link>
+              <Link href="/contact#contact-form">Book Consultation - <PriceDisplay amountIn={500} amountUs={50} /></Link>
             </Button>
             <Button
               size="lg"

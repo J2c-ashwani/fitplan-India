@@ -241,7 +241,7 @@ export default function WaterCalculatorPage() {
                                         Get our free guide on detox waters to boost metabolism. Included in our diet plans.
                                     </p>
                                     <Button variant="secondary" className="w-full font-semibold" asChild>
-                                        <Link href="/contact">Get Plans</Link>
+                                        <Link href="/contact#contact-form">Get Plans</Link>
                                     </Button>
                                 </CardContent>
                             </Card>

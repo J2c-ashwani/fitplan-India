@@ -241,7 +241,7 @@ export default function ProteinCalculatorPage() {
                                         Get a customized high-protein meal plan (Veg or Non-Veg) for muscle gain or fat loss.
                                     </p>
                                     <Button variant="secondary" className="w-full font-semibold" asChild>
-                                        <Link href="/contact">Book Consultation</Link>
+                                        <Link href="/contact#contact-form">Book Consultation</Link>
                                     </Button>
                                 </CardContent>
                             </Card>

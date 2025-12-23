@@ -561,7 +561,7 @@ export default function DiabetesDietPage() {
                   Personalized plan - <PriceDisplay amountIn={500} amountUs={50} />
                 </p>
                 <Button size="lg" className="w-full bg-white text-red-600" asChild>
-                  <Link href="/contact">
+                  <Link href="/contact#contact-form">
                     Book Now - <PriceDisplay amountIn={500} amountUs={50} />
                   </Link>
                 </Button>

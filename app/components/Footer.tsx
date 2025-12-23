@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">FitPlan</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-4 max-w-sm">
-              Personalized weight loss plans for PCOS, thyroid, diabetes, and more. Trusted by 10,000+ clients worldwide 
+              Personalized weight loss plans for PCOS, thyroid, diabetes, and more. Trusted by 10,000+ clients worldwide
               in USA, UK, Canada, Australia.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
@@ -51,7 +51,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-2">
+                <Link href="/contact#contact-form" className="text-gray-400 hover:text-emerald-400 transition-colors flex items-center gap-2">
                   <span className="text-emerald-500">→</span> Book Consultation
                 </Link>
               </li>
@@ -137,7 +137,7 @@ export default function Footer() {
             </div>
           </div>
           <p className="text-xs text-gray-500 text-center md:text-left mt-4">
-            <strong>Medical Disclaimer:</strong> This website provides general information and is not medical advice. 
+            <strong>Medical Disclaimer:</strong> This website provides general information and is not medical advice.
             Always consult with a qualified healthcare provider before starting any diet or exercise program.
           </p>
         </div>

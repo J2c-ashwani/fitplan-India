@@ -553,7 +553,7 @@ export default function ThyroidDietPage() {
                   Personalized thyroid diet plan + supplement recommendations + lifestyle guidance - <PriceDisplay amountIn={500} amountUs={50} />
                 </p>
                 <Button size="lg" className="w-full bg-white text-teal-600 hover:bg-gray-100 font-semibold" asChild>
-                  <Link href="/contact">Book Consultation - <PriceDisplay amountIn={500} amountUs={50} /></Link>
+                  <Link href="/contact#contact-form">Book Consultation - <PriceDisplay amountIn={500} amountUs={50} /></Link>
                 </Button>
               </div>
 

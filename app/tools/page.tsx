@@ -1,7 +1,8 @@
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calculator, Droplets, Zap, Target, ArrowRight, Activity } from "lucide-react"
+import { Calculator, Scale, Heart, Apple, Activity, Flame, Ruler, TrendingUp, GlassWater, Baby, Leaf, Target, Zap, ArrowRight, Droplets } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -102,6 +103,26 @@ export default function ToolsPage() {
                   </p>
                   <div className="flex items-center text-purple-600 font-semibold group-hover:gap-2 transition-all">
                     Use Calculator <ArrowRight className="w-4 h-4 ml-1" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            {/* Prakriti Quiz Link */}
+            <Link href="/tools/prakriti-quiz" className="block group">
+              <Card className="h-full border-2 border-transparent hover:border-emerald-200 hover:shadow-xl transition-all duration-300">
+                <CardHeader className="bg-gradient-to-r from-emerald-50 to-green-50 group-hover:from-emerald-100 group-hover:to-green-100 transition-colors">
+                  <div className="p-3 bg-white rounded-lg shadow-sm w-fit">
+                    <Leaf className="h-8 w-8 text-emerald-600" />
+                  </div>
+                  <CardTitle className="text-2xl mt-4 text-emerald-950">Know Your Prakriti</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <p className="text-gray-600 mb-6">
+                    Take our Ayurvedic body type test by Dr. Arti to understand your unique constitution and dietary needs.
+                  </p>
+                  <div className="flex items-center text-emerald-600 font-semibold group-hover:gap-2 transition-all">
+                    Take Quiz <ArrowRight className="w-4 h-4 ml-1" />
                   </div>
                 </CardContent>
               </Card>

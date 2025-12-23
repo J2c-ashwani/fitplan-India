@@ -227,7 +227,7 @@ export default function BMICalculatorPage() {
                                         Get a personalized diet plan tailored to your BMI and health goals.
                                     </p>
                                     <Button variant="secondary" className="w-full font-semibold" asChild>
-                                        <Link href="/contact">Book Consultation</Link>
+                                        <Link href="/contact#contact-form">Book Consultation</Link>
                                     </Button>
                                 </CardContent>
                             </Card>
