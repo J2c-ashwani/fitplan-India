@@ -16,6 +16,8 @@ interface StickyTOCProps {
 export default function StickyTOC({ items }: StickyTOCProps) {
     const [activeId, setActiveId] = useState<string>("")
     const [isOpen, setIsOpen] = useState(false)
+    // ✅ NEW: State for desktop collapse
+    const [isDesktopOpen, setIsDesktopOpen] = useState(true)
 
     // Intersection Observer to highlight active section
     useEffect(() => {
@@ -53,9 +55,37 @@ export default function StickyTOC({ items }: StickyTOCProps) {
 
     return (
         <>
-            {/* Desktop Sidebar TOC - Stick to left or right */}
-            <div className="hidden xl:block fixed left-8 top-32 z-40 w-64 bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-gray-200 shadow-sm max-h-[70vh] overflow-y-auto">
-                <h4 className="font-bold text-gray-900 mb-3 text-sm uppercase tracking-wider">In This Guide</h4>
+            {/* Desktop Sidebar TOC - Collapsible */}
+            {/* 1. Closed State: Small Floating Button */}
+            <div className={cn(
+                "hidden xl:block fixed left-8 top-32 z-40 transition-all duration-300 ease-in-out",
+                isDesktopOpen ? "opacity-0 pointer-events-none translate-x-[-20px]" : "opacity-100 translate-x-0"
+            )}>
+                <button
+                    onClick={() => setIsDesktopOpen(true)}
+                    className="bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-md border border-gray-200 hover:bg-emerald-50 hover:text-emerald-600 transition-colors group"
+                    title="Open Table of Contents"
+                >
+                    <Menu className="w-5 h-5 text-gray-600 group-hover:text-emerald-600" />
+                </button>
+            </div>
+
+            {/* 2. Open State: Full Sidebar */}
+            <div className={cn(
+                "hidden xl:block fixed left-8 top-32 z-40 w-64 bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-gray-200 shadow-sm max-h-[70vh] overflow-y-auto transition-all duration-300 ease-in-out",
+                isDesktopOpen ? "opacity-100 translate-x-0" : "opacity-0 pointer-events-none translate-x-[-20px]"
+            )}>
+                <div className="flex items-center justify-between mb-3">
+                    <h4 className="font-bold text-gray-900 text-sm uppercase tracking-wider">In This Guide</h4>
+                    <button
+                        onClick={() => setIsDesktopOpen(false)}
+                        className="p-1 hover:bg-gray-100 rounded-md transition-colors text-gray-400 hover:text-gray-600"
+                        title="Close Table of Contents"
+                    >
+                        <X className="w-4 h-4" />
+                    </button>
+                </div>
+
                 <ul className="space-y-1">
                     {items.map((item) => (
                         <li key={item.id}>
