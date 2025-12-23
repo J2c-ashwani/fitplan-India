@@ -80,21 +80,12 @@ export const metadata: Metadata = {
     siteName: "FitPlan India",
     locale: "en_US",
     type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "FitPlan India - Global Indian Weight Loss Experts",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "FitPlan India - Authentic Indian Diet Plans for Global Weight Loss",
     description:
       "#1 Rated Indian Diet Plans for weight loss, PCOS, and Thyroid. Trusted by 20,000+ clients across USA, UK, Canada, Australia & India.",
-    images: ["/og-image.jpg"],
     creator: "@fitplanindia",
   },
   metadataBase: new URL("https://fitplanindia.com"),
