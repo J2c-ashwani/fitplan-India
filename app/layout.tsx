@@ -90,7 +90,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://fitplanindia.com"),
   alternates: {
-    canonical: "https://fitplanindia.com",
+    canonical: "./",
   },
 }
 

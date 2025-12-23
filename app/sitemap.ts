@@ -92,6 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'anti-aging',
     'diabetes',
     'gym-diet-combo',
+    'gym',
     'hair-growth',
     'hormonal-imbalance',
     'hyperthyroidism',

@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 
 const workoutPrograms = [
   { title: "Weight Loss Workouts", description: "Fat-burning cardio and HIIT routines for effective weight loss", href: "/workouts/weight-loss", icon: TrendingUp, duration: "30-45 min", color: "red" },
+  { title: "Gym Workout Plan", description: "4-Day Upper/Lower split for strength & muscle", href: "/workouts/gym", icon: Dumbbell, duration: "60 min", color: "indigo" },
   { title: "Muscle Gain Program", description: "Strength training and hypertrophy workouts to build muscle", href: "/workouts/muscle-gain", icon: Dumbbell, duration: "60-90 min", color: "blue" },
   { title: "PCOS Exercise Guide", description: "Hormone-balancing workouts for PCOS management", href: "/workouts/pcos", icon: Heart, duration: "30-45 min", color: "pink" },
   { title: "PCOD Fitness Plan", description: "Tailored exercises for PCOD symptom management", href: "/workouts/pcod", icon: Heart, duration: "30-40 min", color: "pink" },
