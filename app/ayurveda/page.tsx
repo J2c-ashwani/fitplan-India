@@ -40,6 +40,7 @@ export default function AyurvedaHub() {
                 { title: "Hair Health", href: "/ayurveda/hair-health", desc: "Secrets for Strong, Lustrous Hair" },
                 { title: "Skin Glow", href: "/ayurveda/skin-glow", desc: "Natural Solutions for Radiant Skin" },
                 { title: "Anti-Aging", href: "/ayurveda/anti-aging", desc: "Rasayana for Youthful Aging" },
+                { title: "Eye Care", href: "/ayurveda/eye-care", desc: "Relief for Digital Eye Strain & Dark Circles" },
             ],
         },
         {
