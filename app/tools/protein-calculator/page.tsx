@@ -271,8 +271,8 @@ export default function ProteinCalculatorPage() {
                         </div>
                     </section>
                 </div>
+            </section>
         </div>
-            </section >
-        </div >
+
     )
 }

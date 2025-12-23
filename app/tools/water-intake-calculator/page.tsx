@@ -271,8 +271,8 @@ export default function WaterCalculatorPage() {
                         </div>
                     </section>
                 </div>
+            </section>
         </div>
-            </section >
-        </div >
+
     )
 }

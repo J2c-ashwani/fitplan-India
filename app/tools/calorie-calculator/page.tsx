@@ -343,8 +343,8 @@ export default function CalorieCalculatorPage() {
                         </div>
                     </section>
                 </div>
+            </section>
         </div>
-            </section >
-        </div >
+
     )
 }
