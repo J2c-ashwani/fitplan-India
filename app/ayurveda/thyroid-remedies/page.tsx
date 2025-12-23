@@ -1,25 +1,25 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, ArrowRight, Leaf, AlertCircle, Droplet } from "lucide-react"
+import { CheckCircle, AlertCircle, Ban, Activity, Utensils } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
 
 export const metadata: Metadata = {
-    title: "Natural Remedies to Boost Thyroid Function | Ayurveda for Hypothyroidism",
-    description: "Manage thyroid levels naturally with Ayurveda. Learn about coriander water, brazil nuts, yoga poses, and diet tips for Hypothyroidism (Galaganda).",
-    keywords: ["Ayurvedic diet for thyroid", "coriander water for thyroid", "hypothyroidism home remedies", "ujjayi pranayama benefits", "selenium rich foods india"],
+    title: "Natural Remedies for Hypothyroidism & TSH Control | FitPlan India",
+    description: "Manage Hypothyroidism (Galaganda) with Ayurveda. Learn about Kanchanar Guggulu, Coriander water, Selenium rich diet, and Ujjayi Pranayama for thyroid health.",
+    keywords: ["Ayurvedic cure for hypothyroidism", "Kanchanar Guggulu benefits", "Coriander seeds for thyroid", "Indian diet for thyroid patients", "Ujjayi pranayama for thyroid"],
 }
 
 export default function ThyroidPage() {
     const tocItems = [
-        { id: "intro", label: "Thyroid & Ayurveda" },
-        { id: "coriander", label: "1. Coriander Water" },
-        { id: "guggul", label: "2. Kanchanar Guggulu" },
-        { id: "selenium", label: "3. Selenium Superfoods" },
-        { id: "yoga", label: "4. Yoga for Thyroid" },
-        { id: "avoid", label: "5. Foods to Avoid" },
-        { id: "conclusion", label: "Conclusion" },
+        { id: "ayurveda-view", label: "Thyroid in Ayurveda" },
+        { id: "remedies", label: "Top 4 Home Remedies" },
+        { id: "herbs", label: "Medical Herbs" },
+        { id: "diet", label: "Thyroid Diet Chart" },
+        { id: "contra", label: "Foods to Avoid" },
+        { id: "yoga", label: "Yoga for TSH" },
+        { id: "faqs", label: "FAQs" },
     ]
 
     return (
@@ -31,10 +31,10 @@ export default function ThyroidPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Natural Remedies to Boost Thyroid Function
+                        Natural Support for Hypothyroidism (Galaganda)
                     </h1>
                     <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Thyroid disorders are often linked to imbalances in <strong>Vata</strong> and <strong>Kapha</strong> doshas within the body's metabolic fire (Agni). Discover how to reignite your metabolism naturally.
+                        Thyroid issues are rapidly increasing due to stress and processed salts. In Ayurveda, this condition correlates with <strong>Galaganda</strong> (Enlargement of neck glands) caused by low <strong>Agar (Metabolic Fire)</strong>.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -43,116 +43,171 @@ export default function ThyroidPage() {
             <div className="container mx-auto px-4 py-12 max-w-4xl">
                 <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-8 md:p-12">
 
-                    {/* Introduction */}
-                    <section id="intro" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                            <Leaf className="w-6 h-6 text-emerald-600 mr-2" />
-                            Thyroid Health: The Ayurvedic Perspective
-                        </h2>
+                    {/* Detailed Introduction */}
+                    <section id="ayurveda-view" className="mb-12">
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">The Agni Connection</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                In Ayurveda, Hypothyroidism is correlated with <strong>Galaganda</strong>. It is primarily caused by a <i>Kapha-Vata</i> imbalance that slows down metabolic processes. The treatment focuses on <strong>Deepana</strong> (improving digestion) and <strong>Pachana</strong> (digesting toxins).
+                                The thyroid gland controls metabolism. When your metabolism slows down (Hypothyroidism), it means your <strong>Jatharagni</strong> (Digestive Fire) is weak. This leads to:
+                            </p>
+                            <ul className="grid sm:grid-cols-2 gap-4 mt-4">
+                                <li className="bg-stone-50 p-3 rounded border"><strong>Kapha increase:</strong> Weight gain and water retention.</li>
+                                <li className="bg-stone-50 p-3 rounded border"><strong>Vata blockage:</strong> Dry skin, hoarse voice, and constipation.</li>
+                            </ul>
+                            <p className="mt-4">
+                                The Ayurvedic protocol is not just to supply thyroxine externally, but to stimulate the gland to produce its own hormones by "igniting the fire" using warming spices and iodine-rich herbs.
                             </p>
                         </div>
                     </section>
 
-                    {/* Remedy 1: Coriander Water */}
-                    <section id="coriander" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">1. The Magic of Coriander Water (Dhania)</h2>
-                        <Card className="mb-6 bg-amber-50 border-none">
-                            <CardContent className="p-6">
-                                <p className="text-gray-700 leading-relaxed">
-                                    Coriander seeds are one of the most effective remedies for thyroid function. They help in cleaning the bodily channels (Srotas) and improving digestion without increasing acidity (Pitta).
-                                </p>
-                                <div className="bg-white p-4 rounded-lg mt-4 border border-amber-200">
-                                    <h4 className="font-bold text-amber-900 mb-2">How to prepare:</h4>
-                                    <ol className="list-decimal ml-5 space-y-1 text-sm text-gray-700">
-                                        <li>Soak 2 tsp of crushed coriander seeds in a glass of water overnight.</li>
-                                        <li>Boil it in the morning until it reduces to half.</li>
-                                        <li>Strain and drink empty stomach.</li>
-                                    </ol>
+                    {/* Remedies */}
+                    <section id="remedies" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Top 4 Kitchen Remedies</h2>
+
+                        <div className="space-y-6">
+                            <Card className="bg-emerald-50 border-emerald-100">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-emerald-900 mb-2">1. Coriander (Dhania) Water</h3>
+                                    <p className="text-gray-700 mb-3"><strong>Mechanism:</strong> Ayurveda considers Dhania as Tridoshic. It is specifically hailed for cleaning the thyroid gland and reducing swelling.</p>
+                                    <div className="bg-white p-3 rounded text-sm font-medium text-emerald-800 border border-emerald-200">
+                                        Recipe: Crush 2 tsp coriander seeds. Soak in 1 glass water overnight. Boil in morning until it reduces to half. Drink empty stomach.
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="bg-amber-50 border-amber-100">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-amber-900 mb-2">2. Brazil Nuts (Selenium Powerhouse)</h3>
+                                    <p className="text-gray-700 mb-3">While not traditional Indian, they fit the Ayurvedic principle of nutrient-dense food. The thyroid needs Selenium to convert T4 (inactive) to T3 (active) hormone.</p>
+                                    <div className="bg-white p-3 rounded text-sm font-medium text-amber-800 border border-amber-200">
+                                        Prescription: Eat just 2 Brazil nuts a day (contains 100% daily Selenium).
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            <div className="grid md:grid-cols-2 gap-4">
+                                <div className="border border-stone-200 p-5 rounded-xl">
+                                    <h4 className="font-bold text-gray-900 mb-2">3. Virgin Coconut Oil</h4>
+                                    <p className="text-sm text-gray-600">Contains Medium Chain Fatty Acids (MCFAs) which bypass digestion and jumpstart metabolism directly.</p>
+                                    <p className="mt-2 text-sm font-semibold">Usage: 1 tsp raw daily.</p>
                                 </div>
-                            </CardContent>
-                        </Card>
-                    </section>
-
-                    {/* Remedy 2: Kanchanar Guggulu */}
-                    <section id="guggul" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">2. Kanchanar Guggulu</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            This is a classical Ayurvedic formulation specifically used for treating glandular swellings and thyroid disorders. It helps in drying up the excess Kapha (mucus/fat) affecting the thyroid gland.
-                        </p>
-                        <div className="flex items-center gap-2 text-sm text-emerald-700 bg-emerald-50 p-3 rounded-lg">
-                            <AlertCircle className="w-4 h-4" />
-                            <span><strong>Note:</strong> Only take this under the guidance of an Ayurvedic doctor.</span>
+                                <div className="border border-stone-200 p-5 rounded-xl">
+                                    <h4 className="font-bold text-gray-900 mb-2">4. Onion Neck Pack</h4>
+                                    <p className="text-sm text-gray-600">A folk remedy. The phosphoric acid in onion juice is believed to stimulate the gland when massaged locally.</p>
+                                </div>
+                            </div>
                         </div>
                     </section>
 
-                    {/* Remedy 3: Selenium Foods */}
-                    <section id="selenium" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">3. Selenium & Iodine Superfoods</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Your thyroid needs Selenium to convert T4 hormone into active T3. Include these in your diet:
-                        </p>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <li className="flex items-center p-3 bg-stone-50 rounded"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2" /> Brazil Nuts (2 per day)</li>
-                            <li className="flex items-center p-3 bg-stone-50 rounded"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2" /> Sunflower Seeds</li>
-                            <li className="flex items-center p-3 bg-stone-50 rounded"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2" /> Mushrooms</li>
-                            <li className="flex items-center p-3 bg-stone-50 rounded"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2" /> Curry Leaves</li>
-                        </ul>
+                    {/* Herbs */}
+                    <section id="herbs" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Kanchanar Guggulu: The Thyroid Herb</h2>
+                        <div className="flex flex-col md:flex-row gap-6 items-start">
+                            <div className="prose prose-lg text-gray-700 flex-1">
+                                <p>
+                                    If you go to any Ayurvedic doctor for thyroid, this is the first prescription. <strong>Kanchanar</strong> is a tree bark used specifically for "Gandamala" (Neck Swellings/Goiter). <strong>Guggulu</strong> is a resin that scrapes away fat and toxins.
+                                </p>
+                                <p className="mt-4">
+                                    It effectively reduces the size of the thyroid gland (in goiter) and stimulates function.
+                                </p>
+                                <div className="mt-4 p-4 bg-orange-50 border-l-4 border-orange-500 text-orange-900 text-sm">
+                                    <strong>Note:</strong> Always consult a doctor before starting Guggulu if you are pregnant or on blood thinners.
+                                </div>
+                            </div>
+                        </div>
                     </section>
 
-                    {/* Remedy 4: Yoga */}
+                    {/* Diet Chart */}
+                    <section id="diet" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Thyroid-Friendly Diet</h2>
+                        <div className="overflow-x-auto">
+                            <table className="w-full text-left border-collapse rounded-lg bg-white shadow-sm overflow-hidden">
+                                <thead className="bg-[#064e3b] text-white">
+                                    <tr>
+                                        <th className="p-4">Category</th>
+                                        <th className="p-4">Eat These (Pathya)</th>
+                                        <th className="p-4">Avoid These (Apathya)</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y divide-gray-200">
+                                    <tr>
+                                        <td className="p-4 font-semibold text-gray-900">Grains</td>
+                                        <td className="p-4 text-gray-700">Old Rice, Barley, Quinoa</td>
+                                        <td className="p-4 text-red-600">Gluten (Wheat, Maida) often triggers autoimmune thyroid (Hashimoto's)</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-4 font-semibold text-gray-900">Vegetables</td>
+                                        <td className="p-4 text-gray-700">Gourd family (Lauki, Turai), Pumpkin, Drumstick</td>
+                                        <td className="p-4 text-red-600">Raw Cruciferous veggies (Cabbage, Broccoli, Cauliflower) contain Goitrogens. Always cook them.</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-4 font-semibold text-gray-900">Oils</td>
+                                        <td className="p-4 text-gray-700">Coconut Oil, Ghee</td>
+                                        <td className="p-4 text-red-600">Refined Soy Oil, Sunflower Oil (Pro-inflammatory)</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="p-4 font-semibold text-gray-900">Spices</td>
+                                        <td className="p-4 text-gray-700">Black Pepper, Ginger, Long Pepper (Trikatu)</td>
+                                        <td className="p-4 text-red-600">Excess Red Chilli</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    {/* Yoga */}
                     <section id="yoga" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">4. Yoga Asanas for Thyroid</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Certain yoga poses stimulate the throat region, improving blood circulation to the thyroid gland.
-                        </p>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <div className="bg-blue-50 p-6 rounded-xl">
-                                <h4 className="font-bold text-blue-900 mb-2">Sarvangasana (Shoulder Stand)</h4>
-                                <p className="text-sm text-blue-800">The most powerful pose for thyroid health. It reverses blood flow to the throat.</p>
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Yoga for Thyroid Stimulation</h2>
+                        <div className="grid md:grid-cols-3 gap-6">
+                            <div className="bg-stone-50 p-6 rounded-xl text-center">
+                                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🧘‍♀️</div>
+                                <h3 className="font-bold text-gray-900 mb-2">Sarvangasana</h3>
+                                <p className="text-sm text-gray-600">Shoulder Stand. Rushes blood to the neck region.</p>
                             </div>
-                            <div className="bg-blue-50 p-6 rounded-xl">
-                                <h4 className="font-bold text-blue-900 mb-2">Ujjayi Pranayama</h4>
-                                <p className="text-sm text-blue-800">"Victorious Breath" creates a vibration in the throat that stimulates the thyroid.</p>
+                            <div className="bg-stone-50 p-6 rounded-xl text-center">
+                                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🐟</div>
+                                <h3 className="font-bold text-gray-900 mb-2">Matsyasana</h3>
+                                <p className="text-sm text-gray-600">Fish Pose. Stretches the neck throat exposed to open flow.</p>
+                            </div>
+                            <div className="bg-stone-50 p-6 rounded-xl text-center">
+                                <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">🌬️</div>
+                                <h3 className="font-bold text-gray-900 mb-2">Ujjayi Pranayama</h3>
+                                <p className="text-sm text-gray-600">"Ocean Breath". Creates vibrations in the throat that physically massage the gland.</p>
                             </div>
                         </div>
                     </section>
 
-                    {/* Remedy 5: Foods to Avoid */}
-                    <section id="avoid" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">5. Foods to Avoid (Goitrogens)</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Some foods can interfere with thyroid function if eaten raw in large quantities.
-                        </p>
-                        <div className="bg-red-50 p-6 rounded-xl border border-red-100">
-                            <ul className="space-y-2 text-red-800">
-                                <li>❌ Raw Cabbage, Cauliflower, Broccoli (Cook them well to de-activate goitrogens)</li>
-                                <li>❌ Soy Products (Tofu, Soy Milk)</li>
-                                <li>❌ Excess Sugar and Processed Foods</li>
-                            </ul>
+                    {/* FAQs */}
+                    <section id="faqs" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
+                        <div className="space-y-6">
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Can I stop my thyroid medication if I follow this?</h4>
+                                <p className="text-gray-700 text-sm"><strong>Absolutely NOT.</strong> Thyroid hormones are vital for survival. You should start these remedies alongside your medication. Get tested every 6 weeks. Only your doctor can lower your dosage as your levels improve.</p>
+                            </div>
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Is Soy safe for thyroid patients?</h4>
+                                <p className="text-gray-700 text-sm">No. Soy contains phytoestrogens which can interfere with hormone absorption. It's best avoided.</p>
+                            </div>
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: What is the best time to do Ujjayi Pranayama?</h4>
+                                <p className="text-gray-700 text-sm">Early morning, empty stomach, for 10-15 minutes daily.</p>
+                            </div>
                         </div>
                     </section>
 
                     {/* Conclusion & CTA */}
                     <section id="conclusion" className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 text-center border border-emerald-200">
-                        <h3 className="text-2xl font-bold text-emerald-900 mb-4">Heal Your Thyroid Naturally</h3>
+                        <h3 className="text-2xl font-bold text-emerald-900 mb-4">Metabolism Reset Plan</h3>
                         <p className="text-emerald-800 mb-8 max-w-2xl mx-auto">
-                            A specific diet plan can help you manage TSH levels and reduce dependency on medication.
+                            Thyroid is a lifestyle disease. Fix your lifestyle, and the gland will heal.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/plans/thyroid"
+                                href="/plans"
                                 className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-emerald-600 rounded-lg hover:bg-emerald-700 shadow-md"
                             >
-                                Get Thyroid Diet Plan <ArrowRight className="ml-2 w-5 h-5" />
-                            </Link>
-                            <Link
-                                href="/contact#contact-form"
-                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-emerald-700 transition-all duration-200 bg-white border-2 border-emerald-600 rounded-lg hover:bg-emerald-50"
-                            >
-                                Consult Dr. Arti
+                                Get Thyroid Diet Plan
                             </Link>
                         </div>
                     </section>

@@ -1,24 +1,23 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, ArrowRight, Flame, AlertCircle } from "lucide-react"
+import { CheckCircle, ArrowRight, Flame, AlertOctagon, Utensils } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
 
 export const metadata: Metadata = {
-    title: "Home Remedies for Acidity (Amla-Pitta) & Bloating | Ayurveda",
-    description: "Cure acidity and heartburn permanently with Ayurveda. Learn about CCF Tea, Pomegranate, and cooling foods to balance Pitta dosha.",
-    keywords: ["Ayurvedda for acidity", "Amla pitta treatment", "home remedy for heartburn", "bloating cure ayurveda", "foods to avoid for acidity"],
+    title: "Natural Home Remedies for Acidity & Gas (Amla Pitta) | Ayurveda",
+    description: "Cure acid reflux and bloating permanently. Ayurvedic diet for Amla Pitta, cooling herbs like Fennel and Amla, and foods to avoid.",
+    keywords: ["Ayurvedic cure for acidity", "home remedies for gas and bloating", "Amla Pitta treatment", "stomach heat remedies", "pitta pacifying diet"],
 }
 
 export default function AcidityPage() {
     const tocItems = [
-        { id: "intro", label: "Understanding Amla-Pitta" },
-        { id: "coconut", label: "1. Coconut Water" },
-        { id: "fennel", label: "2. Fennel (Saunf)" },
-        { id: "raisins", label: "3. Soak Raisins" },
-        { id: "ghee", label: "4. Milk & Ghee" },
-        { id: "avoid", label: "Triggers" },
+        { id: "root", label: "Root Cause: Amla Pitta" },
+        { id: "remedies", label: "Instant Relief Remedies" },
+        { id: "diet", label: "Cooling Diet" },
+        { id: "lifestyle", label: "Vihara (Lifestyle)" },
+        { id: "faqs", label: "FAQs" },
         { id: "conclusion", label: "Conclusion" },
     ]
 
@@ -27,14 +26,14 @@ export default function AcidityPage() {
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
-            <div className="relative bg-[#064e3b] text-white py-20">
+            <div className="relative bg-[#c2410c] text-white py-20">
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Home Remedies for Acid Reflux (Amla-Pitta)
+                        Cooling the Fire: Ayurvedic Cure for Acidity (GERD)
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        The burning sensation in your chest is your body screaming "Too much Heat!". In Ayurveda, this is <strong>Amla-Pitta</strong>, an excess of hot and sour qualities in the stomach.
+                    <p className="text-lg md:text-xl text-orange-100 max-w-3xl mx-auto leading-relaxed">
+                        Acidity is not just about stomach acid; it is <strong>"Amla Pitta"</strong> (Sour Fire). When the body's fire turns sour due to fermentation of food, it burns upwards.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -43,78 +42,129 @@ export default function AcidityPage() {
             <div className="container mx-auto px-4 py-12 max-w-4xl">
                 <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-8 md:p-12">
 
-                    {/* Introduction */}
-                    <section id="intro" className="mb-12">
+                    {/* Root Cause */}
+                    <section id="root" className="mb-12">
                         <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                            <Flame className="w-6 h-6 text-red-600 mr-2" />
-                            Cooling the Fire
+                            <Flame className="w-6 h-6 text-orange-600 mr-2" />
+                            The Volcano Inside
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                Acidity is not just about acid; it's about <strong>Pitta</strong>. When you eat spicy, sour, or fermented foods (like idli/dosa batter left too long), the Pitta in the stomach becomes liquid and sour, causing reflux. The cure is <strong>Cooling (Sheeta)</strong> and <strong>Alkaline</strong> foods.
+                                Why does Pitta increase? Three 'S's: <strong>Spicy, Sour, Stress.</strong>
                             </p>
+                            <ul className="list-disc pl-5 mt-4 space-y-2">
+                                <li><strong>Fermented Food:</strong> Idli/Dosa batter that is too sour increases heat.</li>
+                                <li><strong>Skipping Meals:</strong> If you don't give the acid food to digest, it starts digesting the stomach lining (Ulcers).</li>
+                                <li><strong>Tea/Coffee:</strong> Highly acidic.</li>
+                            </ul>
                         </div>
                     </section>
 
-                    {/* Remedy 1: Coconut Water */}
-                    <section id="coconut" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">1. Tender Coconut Water</h2>
-                        <Card className="mb-6 bg-emerald-50 border-none">
-                            <CardContent className="p-6">
-                                <p className="text-gray-700 leading-relaxed">
-                                    Nature's best antacid. It instantly cools the stomach lining and balances pH levels. Drink it first thing in the morning.
-                                </p>
-                            </CardContent>
-                        </Card>
+                    {/* Remedies */}
+                    <section id="remedies" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#c2410c] mb-6 border-b pb-2">3 Emergency Fire Extinguishers</h2>
+
+                        <div className="space-y-6">
+                            <Card className="bg-emerald-50 border-emerald-100">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-emerald-900 mb-2">1. CCF Tea (Cumin, Coriander, Fennel)</h3>
+                                    <p className="text-sm text-gray-700">Coriander is the best herb to cool internal heat without putting out the digestive fire. Fennel relaxes the sphincter.</p>
+                                    <div className="font-semibold text-emerald-800 mt-2 text-sm">Drink warm after meals.</div>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="bg-stone-100 border-stone-200">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-stone-900 mb-2">2. Black Raisins (Munakka)</h3>
+                                    <p className="text-sm text-gray-700">Soak 10-15 raisins overnight. Drink the water and eat them in the morning. They reduce Pitta and relieve constipation (exhaust pipe for heat).</p>
+                                </CardContent>
+                            </Card>
+
+                            <Card className="bg-white border-l-4 border-green-500 shadow-sm">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-green-900 mb-2">3. Aloe Vera Juice</h3>
+                                    <p className="text-sm text-gray-700">The gel naturally coats the esophagus and heals burns/ulcers.</p>
+                                    <div className="font-semibold text-green-800 mt-2 text-sm">20ml on empty stomach.</div>
+                                </CardContent>
+                            </Card>
+                        </div>
                     </section>
 
-                    {/* Remedy 2: Fennel */}
-                    <section id="fennel" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">2. Fennel Seeds (Saunf)</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Chewing fennel seeds after meals is an Indian tradition for a reason. It aids digestion and its cooling oil neutralizes acid.
-                        </p>
+                    {/* Diet Section */}
+                    <section id="diet" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#c2410c] mb-6 border-b pb-2">The Cooling Diet</h2>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 className="font-bold text-gray-900 mb-2 bg-green-100 p-2 rounded">Enjoy (Sheeta)</h4>
+                                <ul className="text-gray-700 text-sm space-y-2 pl-2">
+                                    <li>• <strong>Sweet Fruits:</strong> Ripe Mango, Melon, Pomegranate.</li>
+                                    <li>• <strong>Vegetables:</strong> Cucumber, Pumpkin, Leafy Greens.</li>
+                                    <li>• <strong>Grains:</strong> Rice, Barley (Cooling).</li>
+                                    <li>• <strong>Dairy:</strong> Cold Milk (with rose syrup), Ghee.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 className="font-bold text-gray-900 mb-2 bg-red-100 p-2 rounded">Avoid (Ushna)</h4>
+                                <ul className="text-gray-700 text-sm space-y-2 pl-2">
+                                    <li>• <strong>Sour Fruits:</strong> Lemon, Orange, Grapefruit.</li>
+                                    <li>• <strong>Spices:</strong> Chilli, Garlic, Ginger (Dry ginger is okay).</li>
+                                    <li>• <strong>Grains:</strong> Corn, Bajra (Heating).</li>
+                                    <li>• <strong>Misc:</strong> Vinegar, Pickles, Alcohol.</li>
+                                </ul>
+                            </div>
+                        </div>
                     </section>
 
-                    {/* Remedy 3: Raisins */}
-                    <section id="raisins" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">3. Black Raisins (Munakka)</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Soak 10-15 black raisins water overnight. Drink the water and eat the raisins in the morning. This reduces Pitta and helps relieve constipation, which is often a root cause of acidity.
-                        </p>
-                    </section>
-
-                    {/* Remedy 4: Cold Milk */}
-                    <section id="ghee" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">4. Cold Milk & Ghee</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Sipping half a cup of cold milk provides instant relief. Adding 1 tsp of Ghee to warm milk at night coats the stomach lining and protects it from acid attack.
-                        </p>
-                    </section>
-
-                    {/* Triggers */}
-                    <section id="avoid" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Stop Adding Fuel to Fire</h2>
-                        <ul className="space-y-3 font-medium text-gray-700">
-                            <li className="flex items-center">❌ Sour foods: Yogurt (Curd), Tomatoes, Vinegar, Pickles.</li>
-                            <li className="flex items-center">❌ Fermented foods: Idli, Dosa (if sour), Alcohol.</li>
-                            <li className="flex items-center">❌ Caffeine: Coffee on an empty stomach.</li>
-                            <li className="flex items-center">❌ Skipping meals (Pitta eats the stomach lining if no food is present).</li>
+                    {/* Lifestyle */}
+                    <section id="lifestyle" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#c2410c] mb-6 border-b pb-2">Lifestyle Changes</h2>
+                        <ul className="space-y-4 text-gray-700">
+                            <li className="flex items-start">
+                                <CheckCircle className="w-5 h-5 text-orange-600 mr-2 mt-1" />
+                                <div>
+                                    <strong>Left Side Sleeping:</strong> Lying on your left side prevents acid from flowing up into the esophagus due to the shape of the stomach.
+                                </div>
+                            </li>
+                            <li className="flex items-start">
+                                <CheckCircle className="w-5 h-5 text-orange-600 mr-2 mt-1" />
+                                <div>
+                                    <strong>Sheetali Pranayama:</strong> Curling the tongue into a tube and breathing in. This cools the blood physically.
+                                </div>
+                            </li>
                         </ul>
                     </section>
 
+                    {/* FAQs */}
+                    <section id="faqs" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#c2410c] mb-6 border-b pb-2">Frequently Asked Questions</h2>
+                        <div className="space-y-6">
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Does milk cure acidity?</h4>
+                                <p className="text-gray-700 text-sm">Cold, sweetened milk is an instant antacid. However, hot milk might aggravate it for some. Avoid milk if you are bloating (milk is heavy).</p>
+                            </div>
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Is Lemon water good?</h4>
+                                <p className="text-gray-700 text-sm">Lemon is acidic but has an alkaline effect post-digestion. However, for active Amla Pitta, it is best avoided until symptoms subside.</p>
+                            </div>
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Why do I get acidity when fasting?</h4>
+                                <p className="text-gray-700 text-sm">If you have high metabolic fire (Tikshnagni), fasting leaves the acid with nothing to burn, so it burns the stomach lining. You should do juice fasting, not water fasting.</p>
+                            </div>
+                        </div>
+                    </section>
+
                     {/* Conclusion & CTA */}
-                    <section id="conclusion" className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 text-center border border-emerald-200">
-                        <h3 className="text-2xl font-bold text-emerald-900 mb-4">Eat Right, Feel Light</h3>
-                        <p className="text-emerald-800 mb-8 max-w-2xl mx-auto">
-                            Chronic acidity can lead to ulcers. Heal it with a Pitta-pacifying diet.
+                    <section id="conclusion" className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 text-center border border-orange-200">
+                        <h3 className="text-2xl font-bold text-orange-900 mb-4">Put Out the Fire</h3>
+                        <p className="text-orange-800 mb-8 max-w-2xl mx-auto">
+                            You don't need pills; you need cooling foods. Reset your pH balance naturally.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/plans"
-                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-emerald-600 rounded-lg hover:bg-emerald-700 shadow-md"
+                                href="/plans/gut-health"
+                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-orange-600 rounded-lg hover:bg-orange-700 shadow-md"
                             >
-                                Get Diet Plan
+                                Get Acid-Free Diet
                             </Link>
                         </div>
                     </section>

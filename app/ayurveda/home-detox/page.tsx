@@ -1,24 +1,24 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, ArrowRight, RefreshCw, Leaf } from "lucide-react"
+import { CheckCircle, ArrowRight, Trash2, Calendar, Coffee, AlertTriangle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
 
 export const metadata: Metadata = {
-    title: "Simple Weekend Home Detox Plan (Mini-Panchakarma) | Ayurveda",
-    description: "Reset your digestion with a 2-day Ayurvedic Home Detox. Learn how to do Kitchari Cleanse, Castor Oil purge, and self-massage to remove toxins.",
-    keywords: ["Ayurvedic home detox", "Kitchari cleanse recipe", "weekend detox plan", "castor oil cleanse", "remove toxins naturally"],
+    title: "Weekend Ayurvedic Detox Plan (Home Cleanse) | FitPlan India",
+    description: "Reset your digestion in 48 hours. A simple Kitchari Cleanse and Castor Oil detox (Virechana) to flush toxins and boost energy.",
+    keywords: ["Ayurvedic home detox", "Kitchari cleanse recipe", "weekend detox plan", "castor oil cleanse method", "how to remove ama", "gut reset diet"],
 }
 
-export default function DetoxPage() {
+export default function HomeDetoxPage() {
     const tocItems = [
-        { id: "intro", label: "Why Detox?" },
-        { id: "saturday", label: "Day 1: Prep & Ghee" },
-        { id: "kitchari", label: "The Kitchari Diet" },
-        { id: "sunday", label: "Day 2: Purgation" },
-        { id: "post", label: "Post-Detox" },
-        { id: "conclusion", label: "Conclusion" },
+        { id: "why", label: "Why Detox?" },
+        { id: "signs", label: "Signs of Ama" },
+        { id: "plan", label: "The 48-Hour Plan" },
+        { id: "kitchari", label: "Kitchari Recipe" },
+        { id: "purge", label: "The Purge (Virechana)" },
+        { id: "faqs", label: "FAQs" },
     ]
 
     return (
@@ -26,14 +26,14 @@ export default function DetoxPage() {
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
-            <div className="relative bg-[#064e3b] text-white py-20">
+            <div className="relative bg-[#0d9488] text-white py-20">
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Weekend Reset: Simple Home Detox Plan
+                        The 48-Hour Weekend Reset
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        You service your car every few months; why not your body? This gentle 2-day plan is a mini-version of the famous <strong>Panchakarma</strong> therapy to flush out accumulated Ama (toxins).
+                    <p className="text-lg md:text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
+                        You service your car every 6 months. When was the last time you serviced your body? Flush out accumulated <strong>Ama</strong> (Toxins) with this gentle Ayurvedic Home Cleanse.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -42,81 +42,133 @@ export default function DetoxPage() {
             <div className="container mx-auto px-4 py-12 max-w-4xl">
                 <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-8 md:p-12">
 
-                    {/* Introduction */}
-                    <section id="intro" className="mb-12">
+                    {/* Why Detox */}
+                    <section id="why" className="mb-12">
                         <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                            <RefreshCw className="w-6 h-6 text-emerald-600 mr-2" />
-                            Signs You Need a Detox
+                            <Trash2 className="w-6 h-6 text-teal-600 mr-2" />
+                            Understanding Ama
                         </h2>
                         <div className="prose prose-lg text-gray-700">
-                            <ul className="grid sm:grid-cols-2 gap-2">
-                                <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-2" /> Feeling heavy/lethargic constantly.</li>
-                                <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-2" /> Thick white coating on tongue.</li>
-                                <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-2" /> Bad breath or body odor.</li>
-                                <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-2" /> Brain fog or irritability.</li>
-                            </ul>
+                            <p>
+                                <strong>Ama</strong> is sticky, undigested toxic sludge that clogs your channels (Srotas). It prevents nutrients from reaching cells and prevents waste from leaving.
+                                <br />
+                                We need to:
+                            </p>
+                            <ol className="list-decimal pl-5 mt-2">
+                                <li><strong>Loosen</strong> the Ama (using Ghee).</li>
+                                <li><strong>Bring it</strong> to the stomach (using Heat).</li>
+                                <li><strong>Flush it</strong> out (using Castor Oil).</li>
+                            </ol>
                         </div>
                     </section>
 
-                    {/* Saturday: Snehana */}
-                    <section id="saturday" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Saturday (Day 1): Oiling & Loosening</h2>
-                        <Card className="mb-6 bg-yellow-50 border-none">
-                            <CardContent className="p-6">
-                                <p className="text-gray-700 leading-relaxed">
-                                    The goal today is to lubricate the channels so toxins stop sticking to the tissues.
-                                </p>
-                                <ul className="mt-4 space-y-2 text-sm text-gray-700">
-                                    <li className="flex items-start"><strong className="mr-2">7:00 AM:</strong> Drink 2 tbsps of warm melted Ghee on empty stomach. Drink warm water after.</li>
-                                    <li className="flex items-start"><strong className="mr-2">All Day:</strong> Eat ONLY liquid Kitchari (Rice + Moong Dal). No veggies, no salt (or very little).</li>
-                                    <li className="flex items-start"><strong className="mr-2">Night:</strong> Apply warm sesame oil all over body (Abhyanga) followed by a hot shower.</li>
-                                </ul>
-                            </CardContent>
-                        </Card>
+                    {/* Signs */}
+                    <section id="signs" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#0d9488] mb-6 border-b pb-2">Do you need a detox? Check list.</h2>
+                        <div className="bg-red-50 p-6 rounded-xl border border-red-100">
+                            <ul className="text-gray-700 space-y-3">
+                                <li className="flex items-center"><AlertTriangle className="w-5 h-5 text-red-500 mr-3" /> Thick white coating on tongue morning.</li>
+                                <li className="flex items-center"><AlertTriangle className="w-5 h-5 text-red-500 mr-3" /> Waking up tired even after 8 hours sleep.</li>
+                                <li className="flex items-center"><AlertTriangle className="w-5 h-5 text-red-500 mr-3" /> Body odour or bad breath.</li>
+                                <li className="flex items-center"><AlertTriangle className="w-5 h-5 text-red-500 mr-3" /> Constant bloating.</li>
+                            </ul>
+                            <p className="mt-4 text-sm font-bold text-red-800">If you have 3+ signs, proceed below.</p>
+                        </div>
                     </section>
 
-                    {/* Kitchari Recipe */}
+                    {/* Plan */}
+                    <section id="plan" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#0d9488] mb-6 border-b pb-2">The Weekend Plan</h2>
+
+                        <div className="space-y-8">
+                            <div className="border border-teal-200 rounded-lg overflow-hidden">
+                                <div className="bg-teal-50 p-4 font-bold text-teal-900 border-b border-teal-200">Saturday: Preparation (Oleation)</div>
+                                <div className="p-6 space-y-4">
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 text-sm uppercase">Morning</h4>
+                                        <p className="text-sm text-gray-700">Drink 2 tbsp melted <strong>Pure Ghee</strong> on empty stomach with hot water. This lubricates the channels ("Snehana").</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 text-sm uppercase">Meals</h4>
+                                        <p className="text-sm text-gray-700">Eat ONLY <strong>Kitchari</strong> (Rice + Moong Dal) for Breakfast, Lunch, and Dinner. No veggies, no snacking.</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 text-sm uppercase">Night</h4>
+                                        <p className="text-sm text-gray-700">Take 1 tsp Triphala with warm water.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="border border-teal-200 rounded-lg overflow-hidden">
+                                <div className="bg-teal-50 p-4 font-bold text-teal-900 border-b border-teal-200">Sunday: The Purge (Virechana)</div>
+                                <div className="p-6 space-y-4">
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 text-sm uppercase">6:00 AM</h4>
+                                        <p className="text-sm text-gray-700">Drink <strong>2 tbsp Castor Oil</strong> mixed in half cup warm ginger tea / orange juice. (Stay near a toilet!).</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 text-sm uppercase">Morning</h4>
+                                        <p className="text-sm text-gray-700">You will pass stool 3-5 times. The first will be solid, then liquid. Sip hot water only.</p>
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900 text-sm uppercase">Lunch</h4>
+                                        <p className="text-sm text-gray-700">Once appetite returns strongly, eat very thin Rice Gruel (Kanji).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Kitchari */}
                     <section id="kitchari" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Why Kitchari?</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Moong Dal and Basmati Rice cooked together is the easiest food to digest. It gives the digestive system a break, allowing energy to be used for detoxing. Add excessive water to make it soupy.
-                        </p>
+                        <h2 className="text-3xl font-serif font-bold text-[#0d9488] mb-6 border-b pb-2">Best Detox Recipe: Kitchari</h2>
+                        <div className="bg-stone-50 p-6 rounded-xl border border-stone-200">
+                            <p className="text-gray-700 mb-4">
+                                Why Kitchari? It is perfectly balanced protein + carb that is pre-digested by cooking, giving your gut a complete rest.
+                            </p>
+                            <div className="font-mono text-sm bg-white p-4 rounded border text-gray-600">
+                                Ingredients:<br />
+                                - 1/2 cup Basmati Rice<br />
+                                - 1/2 cup Yellow Moong Dal (Soaked)<br />
+                                - 1 tsp Ghee<br />
+                                - 1 tsp Cumin, Mustard, Turmeric<br />
+                                - 4 cups Water (Make it soupy)<br /><br />
+                                Method: Sauté spices in ghee. Add rice/dal. Add water. Pressure cook 3 whistles.
+                            </div>
+                        </div>
                     </section>
 
-                    {/* Sunday: Virechana */}
-                    <section id="sunday" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Sunday (Day 2): The Purge</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Today we flush the toxins out. Stay at home!
-                        </p>
-                        <ul className="space-y-3 bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
-                            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" /> <strong>7:00 AM:</strong> Mix 1-2 tbsp Castor Oil in a cup of warm ginger tea/water. Drink it quickly.</li>
-                            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" /> <strong>Wait:</strong> You will have multiple bowel movements. Drink warm water to stay hydrated.</li>
-                            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" /> <strong>Lunch:</strong> Once the purging stops and you feel hungry, eat Kitchari.</li>
-                        </ul>
-                    </section>
-
-                    {/* Post Detox */}
-                    <section id="post" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Post-Detox Care (Samsarjana)</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Your digestive fire (Agni) is weak after detox. Don't eat pizza on Monday!
-                            <br />Gradually reintroduce solid foods over the next 2 days. Start with soups, then cooked veggies, then grains.
-                        </p>
+                    {/* FAQs */}
+                    <section id="faqs" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#0d9488] mb-6 border-b pb-2">Frequently Asked Questions</h2>
+                        <div className="space-y-6">
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Will I feel weak?</h4>
+                                <p className="text-gray-700 text-sm">Sunday morning you might feel a bit light-headed as toxins leave. Rest is mandatory. By Sunday evening, you will feel lighter and clearer than ever.</p>
+                            </div>
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Who should NOT do this?</h4>
+                                <p className="text-gray-700 text-sm">Pregnant/Breastfeeding women, children, weak elderly people, or anyone with active diarrhea.</p>
+                            </div>
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Can I drink coffee?</h4>
+                                <p className="text-gray-700 text-sm">No caffeine during detox. It taxes the liver which we are trying to clean. Herbal teas only.</p>
+                            </div>
+                        </div>
                     </section>
 
                     {/* Conclusion & CTA */}
-                    <section id="conclusion" className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 text-center border border-emerald-200">
-                        <h3 className="text-2xl font-bold text-emerald-900 mb-4">A Fresh Start</h3>
-                        <p className="text-emerald-800 mb-8 max-w-2xl mx-auto">
-                            You will feel lighter, clearer, and more energetic.
+                    <section id="conclusion" className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-8 text-center border border-teal-200">
+                        <h3 className="text-2xl font-bold text-teal-900 mb-4">A Fresh Start</h3>
+                        <p className="text-teal-800 mb-8 max-w-2xl mx-auto">
+                            Your body heals itself; you just need to get out of the way.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/contact#contact-form"
-                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-emerald-700 transition-all duration-200 bg-white border-2 border-emerald-600 rounded-lg hover:bg-emerald-50"
+                                href="/tools/prakriti-quiz"
+                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-teal-600 rounded-lg hover:bg-teal-700 shadow-md"
                             >
-                                Get Full Panchakarma Guide
+                                Know Your Body Type Before Detox
                             </Link>
                         </div>
                     </section>

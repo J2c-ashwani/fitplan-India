@@ -1,25 +1,24 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, ArrowRight, Leaf, AlertCircle, Droplet } from "lucide-react"
+import { CheckCircle, AlertCircle, Bone, ThermometerSun, Activity } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
 
 export const metadata: Metadata = {
-    title: "Natural Relief for Joint Pain & Arthritis (Sandhivata) | Ayurveda Guide",
-    description: "Ayurvedic home remedies for arthritis and joint pain. Learn about Mahanarayan Oil, Turmeric Milk, Ginger, and dietary changes to reduce inflammation and Vata.",
-    keywords: ["Ayurvedic treatment for joint pain", "home remedy for arthritis", "Mahanarayan oil benefits", "turmeric milk for pain", "Sandhivata ayurveda"],
+    title: "Ayurvedic Treatment for Joint Pain & Arthritis (Sandhivata) | FitPlan India",
+    description: "Relieve knee pain, back pain, and arthritis naturally. Discover Mahanarayan Oil, Golden Milk, and dietary changes to lubricate dry joints.",
+    keywords: ["Ayurveda for arthritis", "Joint pain home remedies", "Mahanarayan oil benefits", "foods for strong joints", "natural cure for knee pain"],
 }
 
 export default function JointPainPage() {
     const tocItems = [
-        { id: "intro", label: "Ayurveda & Arthritis" },
-        { id: "oil", label: "1. Mahanarayan Oil" },
-        { id: "turmeric", label: "2. Golden Milk (Haldi Doodh)" },
-        { id: "ginger", label: "3. Ginger & Castor Oil" },
-        { id: "fenugreek", label: "4. Fenugreek Seeds" },
-        { id: "potli", label: "5. Potli Massage" },
-        { id: "conclusion", label: "Conclusion" },
+        { id: "intro", label: "Sandhivata vs Amavata" },
+        { id: "remedies", label: "Top 4 Pain Relief Remedies" },
+        { id: "massage", label: "The Oil Solution" },
+        { id: "diet", label: "Joint Health Diet" },
+        { id: "exercise", label: "Movement as Medicine" },
+        { id: "faqs", label: "FAQs" },
     ]
 
     return (
@@ -31,10 +30,10 @@ export default function JointPainPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Managing Arthritis & Joint Pain Naturally (Sandhivata)
+                        Banish Joint Pain: Ayurvedic Solutions for Arthritis
                     </h1>
                     <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Joint pain is often a sign of high <strong>Vata</strong> drying up the lubricating fluid (Shleshaka Kapha) in the joints. Ayurveda restores mobility through oiling (Snehana) and heating (Swedana).
+                        Pain is the cry of a starving nerve. In Ayurveda, joint pain is rarely just "old age"; it is either <strong>Vata</strong> (Dryness/Air) drying out the lubrication or <strong>Ama</strong> (Toxins) clogging the joint space.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -46,85 +45,137 @@ export default function JointPainPage() {
                     {/* Introduction */}
                     <section id="intro" className="mb-12">
                         <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                            <Leaf className="w-6 h-6 text-emerald-600 mr-2" />
-                            Why Do Joints Hurt?
+                            <Bone className="w-6 h-6 text-emerald-600 mr-2" />
+                            Know Your Pain Type
                         </h2>
-                        <div className="prose prose-lg text-gray-700">
-                            <p>
-                                According to Ayurveda, there are two main types of joint issues:
-                            </p>
-                            <ul className="list-disc ml-5 space-y-2 mt-4">
-                                <li><strong>Sandhivata (Osteoarthritis):</strong> Caused by Vata aggravation leading to dry, cracking joints.</li>
-                                <li><strong>Amavata (Rheumatoid Arthritis):</strong> Caused by Ama (toxins) accumulation leading to swollen, painful joints.</li>
-                            </ul>
-                            <p className="mt-4">The treatment approach differs slightly, but the goal is to reduce inflammation and pain.</p>
+                        <div className="grid md:grid-cols-2 gap-6">
+                            <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                                <h3 className="text-lg font-bold text-blue-900 mb-2">1. Sandhivata (Osteoarthritis)</h3>
+                                <p className="text-sm text-gray-700"><strong>Cause:</strong> High Vata (Air) dries up the Shleshaka Kapha (Synovial Fluid).</p>
+                                <p className="text-sm text-gray-700 mt-2"><strong>Symptoms:</strong> Cracking sound (Crepitus), Dry pain, worse in cold weather, improved by Oil/Heat.</p>
+                            </div>
+                            <div className="bg-red-50 p-6 rounded-xl border border-red-100">
+                                <h3 className="text-lg font-bold text-red-900 mb-2">2. Amavata (Rheumatoid Arthritis)</h3>
+                                <p className="text-sm text-gray-700"><strong>Cause:</strong> Ama (Toxins) accumulation in joints causing inflammation.</p>
+                                <p className="text-sm text-gray-700 mt-2"><strong>Symptoms:</strong> Swelling, Redness, Heavy pain, Morning stiffness, worse with Oil (needs Dry Heat).</p>
+                            </div>
+                        </div>
+                        <div className="mt-4 text-center text-sm font-semibold text-gray-500 italic">
+                            *Identifying this difference is crucial because putting oil on Amavata will make it WORSE.
                         </div>
                     </section>
 
-                    {/* Remedy 1: Oil Massage */}
-                    <section id="oil" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">1. Massage with Mahanarayan Oil</h2>
-                        <Card className="mb-6 bg-orange-50 border-none">
-                            <CardContent className="p-6">
-                                <p className="text-gray-700 leading-relaxed">
-                                    <strong>Mahanarayan Taila</strong> is a legendary Ayurvedic oil enriched with 50+ herbs. Regular massage specifically targets Vata, reduces stiffness, and strengthens muscles around the knee and back.
-                                </p>
-                                <div className="bg-white p-4 rounded-lg mt-4 border border-orange-200">
-                                    <h4 className="font-bold text-orange-900 mb-2">How to use:</h4>
-                                    <p className="text-sm text-gray-700">Warm the oil slightly. Massage gently on affected joints for 15 minutes before a bath. Avoid vigorous massage if joints are swollen and red (Amavata).</p>
+                    {/* Remedies */}
+                    <section id="remedies" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Top 4 Kitchen Remedies</h2>
+
+                        <div className="space-y-6">
+                            {/* Remedy 1 */}
+                            <Card className="bg-yellow-50 border-none">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-yellow-900 mb-2">1. Golden Milk (Haldi Doodh)</h3>
+                                    <p className="text-gray-700 mb-2">Turmeric contains Curcumin, a potent anti-inflammatory. Cow's milk provides Calcium.</p>
+                                    <div className="bg-white p-3 rounded text-sm text-yellow-800">
+                                        <strong>Note:</strong> Always add a pinch of <strong>Black Pepper</strong>. It increases Curcumin absorption by 2000%.
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            {/* Remedy 2 */}
+                            <Card className="bg-amber-50 border-none">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-amber-900 mb-2">2. Dry Ginger Powder (Sonth)</h3>
+                                    <p className="text-gray-700 mb-2">Better than fresh ginger for joint pain. It digests the Ama (toxins) causing the pain.</p>
+                                    <div className="bg-white p-3 rounded text-sm text-amber-800">
+                                        <strong>Usage:</strong> Mix 1 tsp Sonth with warm water or ghee and take before meals.
+                                    </div>
+                                </CardContent>
+                            </Card>
+
+                            {/* Remedy 3 */}
+                            <Card className="bg-emerald-50 border-none">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-emerald-900 mb-2">3. Fenugreek (Methi)</h3>
+                                    <p className="text-gray-700 mb-2">Methi is "Ushna" (Hot) in potency. It is excellent for Vata-Kapha pain, especially back pain and knee pain.</p>
+                                </CardContent>
+                            </Card>
+
+                            {/* Remedy 4 */}
+                            <Card className="bg-stone-100 border-none">
+                                <CardContent className="p-6">
+                                    <h3 className="text-xl font-bold text-stone-900 mb-2">4. Castor Oil (Eranda Taila)</h3>
+                                    <p className="text-gray-700 mb-2">The only oil that targets Vata at its root (the colon). It acts as a mild laxative to flush out Vata and toxins.</p>
+                                    <div className="bg-white p-3 rounded text-sm text-stone-800">
+                                        <strong>Detox:</strong> 1 tsp in warm milk at night (Consult doctor first).
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </div>
+                    </section>
+
+                    {/* External Therapy */}
+                    <section id="massage" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">External Therapies</h2>
+                        <div className="space-y-4">
+                            <div className="flex items-start">
+                                <div className="bg-emerald-100 p-2 rounded-full mr-4 mt-1">1</div>
+                                <div>
+                                    <h4 className="font-bold text-lg">Mahanarayan Oil Massage</h4>
+                                    <p className="text-gray-700">A classical formulation of 50+ herbs. For Osteoarthritis, warm this oil and massage knees/joints for 15 mins daily to restore lubrication. <br /><span className="text-xs text-red-500">(Not for Rheumatoid Arthritis)</span></p>
                                 </div>
-                            </CardContent>
-                        </Card>
+                            </div>
+                            <div className="flex items-start">
+                                <div className="bg-emerald-100 p-2 rounded-full mr-4 mt-1">2</div>
+                                <div>
+                                    <h4 className="font-bold text-lg">Potli Massage (Bolus)</h4>
+                                    <p className="text-gray-700">Make a cloth bag (potli) filled with hot sand or rock salt. Press it on painful areas. This "Dry Heat" is excellent for Rheumatoid Arthritis swelling.</p>
+                                </div>
+                            </div>
+                        </div>
                     </section>
 
-                    {/* Remedy 2: Golden Milk */}
-                    <section id="turmeric" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">2. Golden Milk (Haldi Doodh)</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Internal lubrication is as important as external. Turmeric milk is a potent anti-inflammatory drink. Add a pinch of black pepper to increase absorption of Curcumin.
-                        </p>
-                    </section>
-
-                    {/* Remedy 3: Ginger & Castor Oil */}
-                    <section id="ginger" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">3. Ginger Tea & Castor Oil</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            For <strong>Amavata</strong> (Rheumatoid Arthritis), cleansing the gut is crucial.
-                        </p>
-                        <ul className="space-y-3 bg-white border border-gray-200 p-6 rounded-lg shadow-sm">
-                            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" /> <strong>Ginger Tea:</strong> Sip throughout the day to burn Ama (toxins).</li>
-                            <li className="flex items-start"><CheckCircle className="w-5 h-5 text-emerald-600 mr-2 mt-0.5" /> <strong>Castor Oil (Erand Taila):</strong> Taking 1 tsp with warm water at night helps flush out toxins and reduce pain.</li>
+                    {/* Diet Section */}
+                    <section id="diet" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Diet for Strong Joints</h2>
+                        <ul className="grid sm:grid-cols-2 gap-4 text-gray-700">
+                            <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-2" /> <strong>Ghee:</strong> The ultimate lubricant for dry Vata joints.</li>
+                            <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-2" /> <strong>Sesame Seeds:</strong> Natural calcium. Eat 'Til-Laddu'.</li>
+                            <li className="flex items-center"><CheckCircle className="w-5 h-5 text-emerald-500 mr-2" /> <strong>Garlic:</strong> Anti-inflammatory sulfur compounds.</li>
+                            <li className="flex items-center"><Activity className="w-5 h-5 text-red-500 mr-2" /> <strong>AVOID:</strong> Kidney Beans (Rajma), Chickpeas (Chole) if you have gas/bloating. Avoid sour curd.</li>
                         </ul>
                     </section>
 
-                    {/* Remedy 4: Fenugreek */}
-                    <section id="fenugreek" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">4. Fenugreek (Methi) Seeds</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Methi is excellent for joint pain due to its warming anti-inflammatory properties. Swallow 1 tsp of methi seeds with warm water in the morning.
-                        </p>
-                    </section>
-
-                    {/* Remedy 5: Potli Massage */}
-                    <section id="potli" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">5. Potli Massage (Bolus Fomentation)</h2>
-                        <p className="text-gray-700 leading-relaxed mb-4">
-                            Make a small bundle (Potli) using a cotton cloth filled with hot salt or sand (for Ama) or herbal powders. Press it gently over painful areas to reduce swelling.
-                        </p>
+                    {/* FAQs */}
+                    <section id="faqs" className="mb-12 scroll-mt-24">
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
+                        <div className="space-y-6">
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Is walking good for knee pain?</h4>
+                                <p className="text-gray-700 text-sm">Excessive walking can aggravate Vata and wear out the joint further if there is no lubrication. Gentle walking is fine, but avoid running. Cycling or Swimming is better as it is low-impact.</p>
+                            </div>
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Does cracking knuckles cause arthritis?</h4>
+                                <p className="text-gray-700 text-sm">No, that sound is just gas bubbles popping. However, in Ayurveda, frequent cracking indicates high Vata (dryness) in the body, which is a pre-cursor to joint issues.</p>
+                            </div>
+                            <div className="border-b pb-4">
+                                <h4 className="font-bold text-gray-900 mb-2">Q: Why does my pain increase in winter?</h4>
+                                <p className="text-gray-700 text-sm">Cold increases Vata (which is cold by nature) and Kapha (stiffness). You must keep joints warm and eat warming foods (sesame, jaggery) in winter.</p>
+                            </div>
+                        </div>
                     </section>
 
                     {/* Conclusion & CTA */}
                     <section id="conclusion" className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 text-center border border-emerald-200">
-                        <h3 className="text-2xl font-bold text-emerald-900 mb-4">Pain-Free Living is Possible</h3>
+                        <h3 className="text-2xl font-bold text-emerald-900 mb-4">Keep Moving, Keep Living</h3>
                         <p className="text-emerald-800 mb-8 max-w-2xl mx-auto">
-                            Don't just manage pain with painkillers. Heal your joints with an anti-inflammatory diet and Ayurvedic therapies.
+                            Motion is lotion. Combined with the right oiling and diet, you can maintain flexibility well into your 80s.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/contact#contact-form"
-                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-emerald-700 transition-all duration-200 bg-white border-2 border-emerald-600 rounded-lg hover:bg-emerald-50"
+                                href="/plans"
+                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-emerald-600 rounded-lg hover:bg-emerald-700 shadow-md"
                             >
-                                Book Consultation
+                                Get Anti-Inflammatory Diet
                             </Link>
                         </div>
                     </section>
