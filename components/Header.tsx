@@ -13,6 +13,7 @@ export default function Header() {
     { title: "Diet", href: "/blog" },
     { title: "Workouts", href: "/workouts" },
     { title: "Plans", href: "/plans" },
+    { title: "Ayurveda", href: "/ayurveda" },
     { title: "Tools", href: "/tools" },
     { title: "Contact", href: "/contact" },
   ]
