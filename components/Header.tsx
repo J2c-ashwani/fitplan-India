@@ -37,7 +37,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 mr-6">
+        <nav className="hidden lg:flex items-center space-x-8 mr-6">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className="hover:text-primary">
               {link.title}
@@ -62,7 +62,7 @@ export default function Header() {
 
         {/* Hamburger Button */}
         <button
-          className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+          className="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <span className="sr-only">Open main menu</span>
@@ -83,7 +83,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-background border-t border-b shadow-md">
+        <nav className="lg:hidden bg-background border-t border-b shadow-md">
           <div className="flex flex-col px-6 py-4 space-y-4">
             {navLinks.map((link) => (
               <Link

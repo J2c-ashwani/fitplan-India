@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const gaMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
       <head>
         {/* ✅ Google AdSense (Static tag for crawler verification) */}
         <script
