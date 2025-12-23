@@ -154,7 +154,7 @@ export default function MensVitalityPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/plans/mens-vitality"
+                                href="/plans/gym-diet-combo"
                                 className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 shadow-md"
                             >
                                 Get Men's Diet Plan
