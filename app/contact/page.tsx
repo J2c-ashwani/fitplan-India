@@ -11,6 +11,8 @@ import { Badge } from "@/components/ui/badge"
 import { Phone, Mail, Clock, CheckCircle, CreditCard, Users, Award, Globe, Shield, X } from "lucide-react"
 import Link from "next/link"
 import { submitConsultationForm } from "./actions"
+import PriceDisplay from "@/components/PriceDisplay"
+import { useCurrency } from "@/components/CurrencyProvider"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -20,6 +22,8 @@ export default function ContactPage() {
     healthCondition: "",
     message: "",
   })
+  const { currency, symbol } = useCurrency()
+  const price = currency === "INR" ? 500 : 50
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showPaymentModal, setShowPaymentModal] = useState(false) // ✅ NEW
   const [isPaymentProcessing, setIsPaymentProcessing] = useState(false)
@@ -97,6 +101,8 @@ export default function ContactPage() {
       const result = await submitConsultationForm({
         ...formData,
         paymentId: "stripe_payment_" + Date.now(), // Placeholder for Stripe payment ID
+        paymentAmount: price,
+        paymentCurrency: currency,
       })
 
       if (result.success) {
@@ -200,7 +206,7 @@ export default function ContactPage() {
             <div className="bg-emerald-50 rounded-xl p-5 mb-6 border-2 border-emerald-200">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-gray-700 font-semibold text-lg">Consultation Fee</span>
-                <span className="text-4xl font-bold text-emerald-600">$100</span>
+                <span className="text-4xl font-bold text-emerald-600"><PriceDisplay amountIn={500} amountUs={50} /></span>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-center gap-2">
@@ -252,7 +258,7 @@ export default function ContactPage() {
                 ) : (
                   <>
                     <CreditCard className="w-5 h-5 mr-2" />
-                    Pay $100 & Confirm Booking
+                    Pay {symbol}{price} & Confirm Booking
                   </>
                 )}
               </Button>
@@ -285,7 +291,7 @@ export default function ContactPage() {
               Book Your Personalized Consultation
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get customized diet plans and expert guidance from certified nutritionists specializing in PCOS, thyroid, 
+              Get customized diet plans and expert guidance from certified nutritionists specializing in PCOS, thyroid,
               diabetes, and other health conditions. Available worldwide via video call.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
@@ -406,7 +412,7 @@ export default function ContactPage() {
                     <div className="p-6 bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-200 rounded-lg">
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 className="text-2xl font-bold text-emerald-700">$100 USD</h3>
+                          <h3 className="text-2xl font-bold text-emerald-700"><PriceDisplay amountIn={500} amountUs={50} /></h3>
                           <p className="text-sm text-gray-600 mt-1">One-time consultation fee</p>
                         </div>
                         <Shield className="h-8 w-8 text-emerald-600" />
@@ -439,7 +445,7 @@ export default function ContactPage() {
                       size="lg"
                     >
                       <CreditCard className="h-5 w-5 mr-2" />
-                      Pay $100 & Book Consultation
+                      Pay {symbol}{price} & Book Consultation
                     </Button>
 
                     <p className="text-xs text-gray-500 text-center">

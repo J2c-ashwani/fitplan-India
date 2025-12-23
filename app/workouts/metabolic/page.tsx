@@ -3,6 +3,12 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Flame, Zap, Target, Activity, TrendingUp, Clock, Dumbbell } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
+import PriceDisplay from "@/components/PriceDisplay"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +23,49 @@ export const metadata: Metadata = {
 }
 
 export default function MetabolicWorkoutsPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Metabolic HIIT Plan", href: "/workouts/metabolic" },
+  ]
+
+  const tocItems = [
+    { id: "benefits", label: "Benefits" },
+    { id: "workout-plan", label: "4-Week Plan" },
+    { id: "tips", label: "Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "What is the 'afterburn effect' (EPOC)?",
+      answer: "EPOC (Excess Post-Exercise Oxygen Consumption) means your metabolism stays ELEVATED for 24-48 hours after intense exercise, burning 100-400 extra calories while you rest, sleep, and work. Traditional steady cardio only burns calories DURING the workout. HIIT + strength training create massive EPOC."
+    },
+    {
+      question: "How often should I do metabolic/HIIT workouts?",
+      answer: "3-4x weekly maximum. HIIT is very taxing on the nervous system and requires 48-72 hours recovery between sessions. Doing HIIT daily will lead to overtraining, injury, and WORSE results. Alternate HIIT days with active recovery (walking, yoga, stretching) or complete rest."
+    },
+    {
+      question: "Can I do metabolic workouts if I'm a beginner?",
+      answer: "Yes, but START EASY. Week 1: do exercises at 60-70% intensity, take longer rest periods (2-3 minutes), reduce rounds. Listen to your body. Progressive overload over weeks is key - don't go all-out on day 1. Build conditioning first, intensity second."
+    },
+    {
+      question: "Why is metabolic training better than steady cardio for fat loss?",
+      answer: "1) Burns 2-3x MORE total calories (during + afterburn), 2) Builds muscle (boosts metabolism 24/7), 3) Time-efficient (30 min vs 60+ min), 4)Prevents muscle loss during fat loss, 5) Improves insulin sensitivity better. Steady cardio burns calories  ONLY during exercise, doesn't build muscle, and can cause muscle loss."
+    },
+    {
+      question: "How long until I see results from metabolic workouts?",
+      answer: "Energy boost: 1-2 weeks. Fat loss visible: 3-4 weeks (1-2 lbs weekly). Body composition change: 6-8 weeks (muscle gain + fat loss). Strength gains: 2-3 weeks. CRITICAL: Nutrition is 70% of results - you can't out-exercise a bad diet, even with HIIT."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-rose-600 to-pink-700 text-white py-16">
+      <section className="bg-gradient-to-br from-rose-600 to-pink-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-rose-600 font-semibold">
               🔥 Maximum Calorie Burn
@@ -30,8 +74,8 @@ export default function MetabolicWorkoutsPage() {
               Metabolic Workouts 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete metabolic workout program combining HIIT (High-Intensity Interval Training), strength training, and metabolic 
-              conditioning to boost metabolism, maximize calorie burn, and create the "afterburn effect" (EPOC) burning calories for 
+              Complete metabolic workout program combining HIIT (High-Intensity Interval Training), strength training, and metabolic
+              conditioning to boost metabolism, maximize calorie burn, and create the "afterburn effect" (EPOC) burning calories for
               24-48 hours post-workout. Designed for all fitness levels seeking maximum fat loss results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,11 +91,11 @@ export default function MetabolicWorkoutsPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white">
+      <section id="benefits" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Metabolic Workouts Are Superior for Fat Loss</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="border-rose-200">
                 <CardHeader className="bg-rose-50">
@@ -62,8 +106,8 @@ export default function MetabolicWorkoutsPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-3">
-                    EPOC (Excess Post-Exercise Oxygen Consumption) means your metabolism stays ELEVATED for 24-48 hours after intense 
-                    exercise, burning 100-400 EXTRA calories while you sleep, work, and rest. Traditional steady cardio only burns 
+                    EPOC (Excess Post-Exercise Oxygen Consumption) means your metabolism stays ELEVATED for 24-48 hours after intense
+                    exercise, burning 100-400 EXTRA calories while you sleep, work, and rest. Traditional steady cardio only burns
                     calories DURING exercise. Metabolic workouts (HIIT + strength training) create massive afterburn effect.
                   </p>
                   <ul className="text-sm text-gray-700 space-y-1">
@@ -83,8 +127,8 @@ export default function MetabolicWorkoutsPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-3">
-                    Strength training builds lean muscle mass - the most metabolically active tissue. Each pound of muscle burns 
-                    50-100 calories daily at rest. Building just 5 pounds of muscle increases metabolism by 250-500 calories daily 
+                    Strength training builds lean muscle mass - the most metabolically active tissue. Each pound of muscle burns
+                    50-100 calories daily at rest. Building just 5 pounds of muscle increases metabolism by 250-500 calories daily
                     (equivalent to running 3-5 miles) without any extra work!
                   </p>
                   <ul className="text-sm text-gray-700 space-y-1">
@@ -133,7 +177,7 @@ export default function MetabolicWorkoutsPage() {
       </section>
 
       {/* Workout Program */}
-      <section id="workout-plan" className="py-16 bg-gray-50">
+      <section id="workout-plan" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">4-Week Metabolic Workout Program</h2>
@@ -288,7 +332,7 @@ export default function MetabolicWorkoutsPage() {
                 <div className="bg-yellow-50 p-4 rounded-lg">
                   <h4 className="font-semibold text-yellow-800 mb-3">Complete Circuit Style - 5 Rounds Total</h4>
                   <p className="text-sm text-gray-700 mb-3">Do each exercise back-to-back with NO rest. Rest 2 minutes between rounds.</p>
-                  
+
                   <div className="space-y-2">
                     <p className="text-sm text-gray-700">• <strong>Kettlebell swings:</strong> 20 reps (or dumbbell)</p>
                     <p className="text-sm text-gray-700">• <strong>Push-ups:</strong> 15 reps</p>
@@ -310,11 +354,11 @@ export default function MetabolicWorkoutsPage() {
       </section>
 
       {/* Tips Section */}
-      <section className="py-16 bg-white">
+      <section id="tips" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Metabolic Workout Tips for Maximum Results</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <Card className="border-green-200">
                 <CardHeader className="bg-green-50">
@@ -356,6 +400,15 @@ export default function MetabolicWorkoutsPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-rose-600 to-pink-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -364,12 +417,14 @@ export default function MetabolicWorkoutsPage() {
             <p className="text-xl mb-8">
               Combine these workouts with our metabolic diet plan for maximum fat loss results!
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Target className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Personalized Program</h4>
-                <p className="text-white text-sm mb-4">Custom workout + diet - ₹500</p>
+                <p className="text-white text-sm mb-4">
+                  Custom workout + diet - <PriceDisplay amountIn={500} amountUs={50} />
+                </p>
                 <Button size="lg" className="w-full bg-white text-rose-600" asChild>
                   <Link href="/contact">Get Custom Plan</Link>
                 </Button>
@@ -384,6 +439,10 @@ export default function MetabolicWorkoutsPage() {
                 </Button>
               </div>
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

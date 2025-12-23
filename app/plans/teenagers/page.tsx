@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, AlertCircle, Users, Target, TrendingUp, Activity, Brain, Info } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,49 @@ export const metadata: Metadata = {
 }
 
 export default function TeenagersWeightManagementPage() {
+  const breadcrumbItems = [
+    { label: "Diet Plans", href: "/plans" },
+    { label: "Teenage Nutrition", href: "/plans/teenagers" },
+  ]
+
+  const tocItems = [
+    { id: "understanding", label: "Teen Nutrition" },
+    { id: "dangers", label: "Dangers of Dieting" },
+    { id: "foods", label: "What to Eat" },
+    { id: "meal-plan", label: "Meal Plan" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Will lifting weights stunt my growth?",
+      answer: "No, this is a myth. Scientific research shows that properly supervised resistance training actually INCREASES bone density and strengthens tendons/ligaments, which supports healthy growth. The key is using proper form and not lifting maximal heavy loads before mastering technique."
+    },
+    {
+      question: "I eat a lot but I'm still skinny. How do I gain muscle?",
+      answer: "Teenage metabolism can be very fast! To gain muscle, you need to eat in a 'surplus' - more calories than you burn. Focus on calorie-dense healthy foods like nuts, peanut butter, whole milk, avocados, oats, and lean meats. Eat a substantial meal every 3-4 hours and ensure you are getting enough protein (0.8g per pound of bodyweight) combined with strength training."
+    },
+    {
+      question: "How can I deal with acne through my diet?",
+      answer: "While hygiene and hormones are main factors, diet plays a role. High-glycemic foods (sugar, white bread, soda) can trigger insulin spikes that worsen acne. Dairy may also be a trigger for some people. Try reducing ultra-processed sugars and focusing on whole foods, lots of water, and zinc-rich foods (seeds, lean meats) to help."
+    },
+    {
+      question: "Is protein powder safe for teenagers?",
+      answer: "Generally, yes, but real food is always better as it provides other nutrients. Protein powder can be convenient for athletes. Look for brands tested for contaminants (like 'NSF Certified for Sport'). You don't need excessive amounts; 25-30g post-workout is plenty."
+    },
+    {
+      question: "Can I be a healthy vegetarian teen?",
+      answer: "Absolutely! But you just need to be mindful of Iron, Vitamin B12, Zinc, and Calcium. Teenage girls especially need iron. Include plenty of lentils, beans, tofu, eggs (if eating), and dark leafy greens. Consider a multivitamin with B12 if you are fully vegan."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-cyan-600 to-blue-700 text-white py-16">
+      <section className="bg-gradient-to-br from-cyan-600 to-blue-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-cyan-600 font-semibold">
               🌟 Healthy Growth & Development
@@ -30,8 +73,8 @@ export default function TeenagersWeightManagementPage() {
               Teenage Weight Management Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based nutrition and fitness plan for teenagers (ages 13-19) focusing on healthy growth, development, 
-              athletic performance, and sustainable weight management. Designed for teens in USA, UK, Canada, Australia with emphasis 
+              Complete evidence-based nutrition and fitness plan for teenagers (ages 13-19) focusing on healthy growth, development,
+              athletic performance, and sustainable weight management. Designed for teens in USA, UK, Canada, Australia with emphasis
               on balanced nutrition, NOT extreme dieting.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,7 +90,7 @@ export default function TeenagersWeightManagementPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="understanding" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,31 +115,31 @@ export default function TeenagersWeightManagementPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Teenage Nutrition and Weight Management</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The teenage years (ages 13-19, also called adolescence) are a critical period of rapid growth, development, and body 
-                changes second only to infancy. During puberty and adolescence, teenagers experience growth spurts adding 8-12 inches 
-                in height, significant muscle and bone mass development, dramatic hormonal changes affecting metabolism and body composition, 
-                brain development and maturation (continues until age 25), sexual maturation and development, and psychological/emotional 
-                changes affecting body image and eating behaviors. Approximately 20% of American teenagers are classified as overweight 
-                or obese (BMI at or above 85th percentile for age and gender), with similar rates in UK, Canada, and Australia, driven 
+                The teenage years (ages 13-19, also called adolescence) are a critical period of rapid growth, development, and body
+                changes second only to infancy. During puberty and adolescence, teenagers experience growth spurts adding 8-12 inches
+                in height, significant muscle and bone mass development, dramatic hormonal changes affecting metabolism and body composition,
+                brain development and maturation (continues until age 25), sexual maturation and development, and psychological/emotional
+                changes affecting body image and eating behaviors. Approximately 20% of American teenagers are classified as overweight
+                or obese (BMI at or above 85th percentile for age and gender), with similar rates in UK, Canada, and Australia, driven
                 by processed food consumption, sedentary screen time, lack of physical activity, stress eating, and poor sleep habits.
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
-                The critical truth about teenage weight management is that this is NOT the time for restrictive diets, calorie counting, 
-                or extreme weight loss approaches. Adolescents have HIGHER calorie and nutrient needs than adults due to rapid growth and 
-                development, and inadequate nutrition during this critical window can permanently impair growth (stunted height), delay 
-                puberty, reduce bone density (increasing osteoporosis risk later), cause hormonal imbalances (irregular periods in girls, 
-                delayed development in boys), impair brain development and academic performance, trigger or worsen eating disorders 
-                (anorexia, bulimia, binge eating disorder affecting 3-5% of teens), and create lifelong unhealthy relationships with food. 
-                The foundation of healthy teenage weight management lies in <strong>focusing on health behaviors, NOT weight loss</strong> - 
-                eating balanced, nutrient-dense meals with all food groups represented, staying active through sports, recreation, or 
-                structured exercise for 60 minutes daily, getting adequate sleep (8-10 hours nightly for teenagers), limiting processed 
-                junk food and sugary drinks (but not eliminating treats entirely), developing positive body image and self-esteem regardless 
-                of weight, and involving parents/family in creating healthy home environment with nutritious food availability and positive 
-                role modeling. This comprehensive teenage nutrition plan provides age-appropriate guidance for healthy eating, weight 
+                The critical truth about teenage weight management is that this is NOT the time for restrictive diets, calorie counting,
+                or extreme weight loss approaches. Adolescents have HIGHER calorie and nutrient needs than adults due to rapid growth and
+                development, and inadequate nutrition during this critical window can permanently impair growth (stunted height), delay
+                puberty, reduce bone density (increasing osteoporosis risk later), cause hormonal imbalances (irregular periods in girls,
+                delayed development in boys), impair brain development and academic performance, trigger or worsen eating disorders
+                (anorexia, bulimia, binge eating disorder affecting 3-5% of teens), and create lifelong unhealthy relationships with food.
+                The foundation of healthy teenage weight management lies in <strong>focusing on health behaviors, NOT weight loss</strong> -
+                eating balanced, nutrient-dense meals with all food groups represented, staying active through sports, recreation, or
+                structured exercise for 60 minutes daily, getting adequate sleep (8-10 hours nightly for teenagers), limiting processed
+                junk food and sugary drinks (but not eliminating treats entirely), developing positive body image and self-esteem regardless
+                of weight, and involving parents/family in creating healthy home environment with nutritious food availability and positive
+                role modeling. This comprehensive teenage nutrition plan provides age-appropriate guidance for healthy eating, weight
                 management, and athletic performance without dangerous restriction or diet culture messaging.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-cyan-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-cyan-800">Benefits of Healthy Teen Nutrition</h3>
@@ -111,7 +154,7 @@ export default function TeenagersWeightManagementPage() {
                     <li>• <strong>Disease prevention:</strong> Reduced risk of type 2 diabetes, heart disease</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-blue-800">Teenage Nutrition Principles</h3>
                   <ul className="text-gray-700 space-y-2">
@@ -132,15 +175,15 @@ export default function TeenagersWeightManagementPage() {
       </section>
 
       {/* Why Teen Dieting is Dangerous */}
-      <section className="py-16 bg-gray-50">
+      <section id="dangers" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Extreme Dieting is Dangerous for Teenagers</h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8 mb-6">
               <p className="text-gray-700 mb-6">
-                Restrictive diets, extreme calorie cutting, fad diets, and weight loss pills are NOT appropriate for teenagers and 
-                can cause serious, permanent damage during this critical growth period. Parents, teens, and educators must understand 
+                Restrictive diets, extreme calorie cutting, fad diets, and weight loss pills are NOT appropriate for teenagers and
+                can cause serious, permanent damage during this critical growth period. Parents, teens, and educators must understand
                 these risks to avoid lifelong consequences.
               </p>
 
@@ -151,16 +194,16 @@ export default function TeenagersWeightManagementPage() {
                     1. Stunted Growth and Development
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Severe calorie restriction (below 1,800-2,000 calories daily) during teenage years can permanently stunt height 
-                    growth by up to 2-4 inches, as growth plates in bones require adequate calories, protein, calcium, and vitamin D 
-                    to lengthen properly. Once growth plates close (girls: 14-16 years, boys: 16-18 years), height cannot be regained. 
-                    Inadequate nutrition also delays or halts puberty, prevents proper breast development in girls, impairs sexual 
+                    Severe calorie restriction (below 1,800-2,000 calories daily) during teenage years can permanently stunt height
+                    growth by up to 2-4 inches, as growth plates in bones require adequate calories, protein, calcium, and vitamin D
+                    to lengthen properly. Once growth plates close (girls: 14-16 years, boys: 16-18 years), height cannot be regained.
+                    Inadequate nutrition also delays or halts puberty, prevents proper breast development in girls, impairs sexual
                     development in boys (low testosterone), and causes amenorrhea (loss of periods) in girls.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Multiple studies show that teenage girls who diet frequently are 2-3 times more likely to be shorter in adulthood 
-                    compared to non-dieting peers. The most rapid growth occurs during early puberty (girls: 10-14, boys: 12-16), making 
-                    this the WORST time to restrict calories. Teen athletes who diet severely are at particular risk of growth impairment 
+                    Multiple studies show that teenage girls who diet frequently are 2-3 times more likely to be shorter in adulthood
+                    compared to non-dieting peers. The most rapid growth occurs during early puberty (girls: 10-14, boys: 12-16), making
+                    this the WORST time to restrict calories. Teen athletes who diet severely are at particular risk of growth impairment
                     despite high activity levels, as their calorie needs are even higher than sedentary teens.
                   </p>
                 </div>
@@ -171,16 +214,16 @@ export default function TeenagersWeightManagementPage() {
                     2. Eating Disorders and Mental Health Damage
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Teenage dieting is the #1 predictor of developing eating disorders including anorexia nervosa (affects 0.5-1% of teen 
-                    girls, 10% mortality rate - highest of any psychiatric disorder), bulimia nervosa (affects 1-2% of teen girls), and 
-                    binge eating disorder (affects 2-3% of all teens). Research shows teens who diet are 5-18 times MORE likely to develop 
+                    Teenage dieting is the #1 predictor of developing eating disorders including anorexia nervosa (affects 0.5-1% of teen
+                    girls, 10% mortality rate - highest of any psychiatric disorder), bulimia nervosa (affects 1-2% of teen girls), and
+                    binge eating disorder (affects 2-3% of all teens). Research shows teens who diet are 5-18 times MORE likely to develop
                     eating disorders than non-dieting peers, with risk increasing with diet severity.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Even without developing full eating disorders, dieting teens experience body image issues, low self-esteem, depression 
-                    (dieting teens are 2x more likely to be depressed), anxiety, social isolation, obsessive thoughts about food/weight, 
-                    and damaged relationships with food lasting into adulthood. The psychological damage from teenage dieting often persists 
-                    decades later as chronic dieting behaviors, yo-yo weight cycling, and unhealthy food relationships that are extremely 
+                    Even without developing full eating disorders, dieting teens experience body image issues, low self-esteem, depression
+                    (dieting teens are 2x more likely to be depressed), anxiety, social isolation, obsessive thoughts about food/weight,
+                    and damaged relationships with food lasting into adulthood. The psychological damage from teenage dieting often persists
+                    decades later as chronic dieting behaviors, yo-yo weight cycling, and unhealthy food relationships that are extremely
                     difficult to reverse.
                   </p>
                 </div>
@@ -191,17 +234,17 @@ export default function TeenagersWeightManagementPage() {
                     3. Bone Density Loss and Osteoporosis Risk
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    The teenage years are when 90% of peak bone mass is built (ages 10-18), and this window CANNOT be recovered later. 
-                    Inadequate calcium intake (need 1,300mg daily during teens), vitamin D deficiency, low calorie/protein intake, and 
-                    amenorrhea (loss of periods from under-eating) all drastically reduce bone density. Girls who lose their periods due 
-                    to under-eating/over-exercising can lose 2-6% bone density PER YEAR, increasing stress fracture risk immediately and 
+                    The teenage years are when 90% of peak bone mass is built (ages 10-18), and this window CANNOT be recovered later.
+                    Inadequate calcium intake (need 1,300mg daily during teens), vitamin D deficiency, low calorie/protein intake, and
+                    amenorrhea (loss of periods from under-eating) all drastically reduce bone density. Girls who lose their periods due
+                    to under-eating/over-exercising can lose 2-6% bone density PER YEAR, increasing stress fracture risk immediately and
                     osteoporosis risk by 50-300% in later life (ages 50+).
                   </p>
                   <p className="text-sm text-gray-600">
-                    Teen athletes who diet severely while training intensely are at particularly high risk of "Female Athlete Triad" 
-                    (low energy availability, menstrual dysfunction, low bone density) or "RED-S" (Relative Energy Deficiency in Sport) 
-                    affecting both genders. These conditions cause stress fractures, increased injury risk, impaired athletic performance, 
-                    and permanent bone damage. Peak bone mass achieved by age 18-20 determines osteoporosis risk 40-50 years later - 
+                    Teen athletes who diet severely while training intensely are at particularly high risk of "Female Athlete Triad"
+                    (low energy availability, menstrual dysfunction, low bone density) or "RED-S" (Relative Energy Deficiency in Sport)
+                    affecting both genders. These conditions cause stress fractures, increased injury risk, impaired athletic performance,
+                    and permanent bone damage. Peak bone mass achieved by age 18-20 determines osteoporosis risk 40-50 years later -
                     damage during teen years cannot be fully reversed with later calcium supplementation.
                   </p>
                 </div>
@@ -212,17 +255,17 @@ export default function TeenagersWeightManagementPage() {
                     4. Metabolic Damage and Weight Gain Rebound
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Ironically, teenage dieting typically INCREASES weight in the long-term through metabolic adaptation and rebound weight 
-                    gain. Severe calorie restriction slows metabolism by 15-30% (adaptive thermogenesis), decreases muscle mass (muscle 
-                    burns more calories than fat), and increases hunger hormones (ghrelin) while decreasing satiety hormones (leptin). When 
-                    diet inevitably ends (95% of diets fail within 1-2 years), rapid weight regain occurs, typically ending at HIGHER weight 
+                    Ironically, teenage dieting typically INCREASES weight in the long-term through metabolic adaptation and rebound weight
+                    gain. Severe calorie restriction slows metabolism by 15-30% (adaptive thermogenesis), decreases muscle mass (muscle
+                    burns more calories than fat), and increases hunger hormones (ghrelin) while decreasing satiety hormones (leptin). When
+                    diet inevitably ends (95% of diets fail within 1-2 years), rapid weight regain occurs, typically ending at HIGHER weight
                     than pre-diet.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Multiple longitudinal studies show teenage dieters weigh MORE 5-10 years later compared to non-dieting teens of similar 
-                    starting weights. Each diet cycle makes subsequent weight loss harder due to cumulative metabolic damage. Additionally, 
-                    severe dieting during puberty can permanently alter set point weight and metabolism, making weight management more difficult 
-                    throughout adulthood. The solution is NOT dieting but rather establishing sustainable healthy eating habits that support 
+                    Multiple longitudinal studies show teenage dieters weigh MORE 5-10 years later compared to non-dieting teens of similar
+                    starting weights. Each diet cycle makes subsequent weight loss harder due to cumulative metabolic damage. Additionally,
+                    severe dieting during puberty can permanently alter set point weight and metabolism, making weight management more difficult
+                    throughout adulthood. The solution is NOT dieting but rather establishing sustainable healthy eating habits that support
                     growth while naturally regulating weight.
                   </p>
                 </div>
@@ -233,11 +276,11 @@ export default function TeenagersWeightManagementPage() {
       </section>
 
       {/* Healthy Eating Guide */}
-      <section className="py-16 bg-white">
+      <section id="foods" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Healthy Eating Guide for Teenagers: What to Eat</h2>
-            
+
             <div className="space-y-8">
               <Card className="border-green-200">
                 <CardHeader>
@@ -248,7 +291,7 @@ export default function TeenagersWeightManagementPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Focus on nutrient-dense whole foods from all food groups that support rapid growth, brain development, athletic 
+                    Focus on nutrient-dense whole foods from all food groups that support rapid growth, brain development, athletic
                     performance, and natural weight regulation. NO food groups should be eliminated.
                   </p>
 
@@ -333,7 +376,7 @@ export default function TeenagersWeightManagementPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    These foods should be limited but NOT completely eliminated. Complete restriction leads to cravings, binge eating, 
+                    These foods should be limited but NOT completely eliminated. Complete restriction leads to cravings, binge eating,
                     and unhealthy relationships with food. Practice moderation, not deprivation.
                   </p>
 
@@ -370,12 +413,12 @@ export default function TeenagersWeightManagementPage() {
       </section>
 
       {/* Sample Meal Plan */}
-      <section id="meal-plan" className="py-16 bg-gray-50">
+      <section id="meal-plan" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sample Teenage Meal Plan (2,200-2,500 Calories)</h2>
             <p className="text-center text-gray-600 mb-12">
-              Balanced meal plan for active teenagers. Adjust portions based on activity level, growth stage, and individual needs. 
+              Balanced meal plan for active teenagers. Adjust portions based on activity level, growth stage, and individual needs.
               Very active teen athletes may need 2,800-3,500+ calories daily.
             </p>
 
@@ -426,6 +469,15 @@ export default function TeenagersWeightManagementPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -434,14 +486,14 @@ export default function TeenagersWeightManagementPage() {
             <p className="text-xl mb-8">
               Get personalized nutrition plans designed specifically for teenage growth, development, and athletic performance.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Teen Nutrition Consultation</h4>
-                <p className="text-white text-sm mb-4">Personalized plan - $100</p>
+                <p className="text-white text-sm mb-4">Personalized plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-cyan-600" asChild>
-                  <Link href="/contact">Book Now - $100</Link>
+                  <Link href="/contact">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
                 </Button>
               </div>
 
@@ -457,6 +509,12 @@ export default function TeenagersWeightManagementPage() {
           </div>
         </div>
       </section>
-    </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+          <RelatedContent />
+        </div>
+      </div>
+    </div >
   )
 }

@@ -1,6 +1,7 @@
 "use server"
 
 import { Resend } from "resend"
+import { paymentNumberFormat } from "@/lib/utils/currency"
 
 interface ConsultationFormData {
   name: string
@@ -9,11 +10,13 @@ interface ConsultationFormData {
   healthCondition: string
   message: string
   paymentId?: string
+  paymentAmount?: number
+  paymentCurrency?: string
 }
 
 export async function submitConsultationForm(formData: ConsultationFormData) {
   try {
-    const { name, email, mobile, healthCondition, message, paymentId } = formData
+    const { name, email, mobile, healthCondition, message, paymentId, paymentAmount, paymentCurrency } = formData
 
     console.log("========================================")
     console.log("📝 CONSULTATION FORM SUBMISSION STARTED")
@@ -34,7 +37,7 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
       console.log("💾 Saving to Google Sheets...")
       const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
       console.log("Base URL:", baseUrl)
-      
+
       const response = await fetch(`${baseUrl}/api/save-lead`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -47,10 +50,12 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
           status: "Success",
           leadSource: "Contact Page - Consultation",
           paymentId: paymentId || "",
+          paymentAmount: paymentAmount || 0,
+          paymentCurrency: paymentCurrency || "USD",
           timestamp: new Date().toISOString(),
         }),
       })
-      
+
       const result = await response.json()
       console.log("✅ Google Sheets response:", result)
     } catch (sheetsError) {
@@ -62,7 +67,7 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
     console.log("\n📧 EMAIL SENDING PROCESS:")
     console.log("API Key exists:", !!apiKey)
     console.log("API Key (first 10 chars):", apiKey ? apiKey.substring(0, 10) + "..." : "NOT FOUND")
-    
+
     if (!apiKey) {
       console.warn("⚠️ RESEND_API_KEY not configured - skipping email")
       return {
@@ -74,10 +79,10 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
     // STEP 3: Initialize Resend
     console.log("🔧 Initializing Resend...")
     const resend = new Resend(apiKey)
-    
+
     const adminEmail = process.env.ADMIN_EMAIL || "admin@fitplan.com"
     const fromEmail = process.env.FROM_EMAIL || "onboarding@resend.dev"
-    
+
     console.log("📤 From email:", fromEmail)
     console.log("📥 Admin email:", adminEmail)
     console.log("📥 Customer email:", email)
@@ -94,7 +99,7 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
             <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
               <div style="background: linear-gradient(135deg, #059669 0%, #047857 100%); padding: 30px; text-align: center;">
                 <h1 style="color: #ffffff; margin: 0; font-size: 24px;">New Consultation Request</h1>
-                <p style="color: #d1fae5; margin: 10px 0 0 0;">$100 USD Payment</p>
+                <p style="color: #d1fae5; margin: 10px 0 0 0;">${paymentAmount ? `${paymentCurrency} ${paymentAmount} Payment` : 'Consultation Request'}</p>
               </div>
               
               <div style="padding: 30px;">
@@ -140,10 +145,10 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
           </div>
         `,
       })
-      
+
       console.log("✅ Admin email sent successfully!")
       console.log("Admin email full response:", JSON.stringify(adminResult, null, 2))
-      console.log("Admin email ID:", adminResult?.id || adminResult?.data?.id || "NOT FOUND")
+      console.log("Admin email ID:", adminResult.data?.id || "NOT FOUND")
 
       // STEP 5: Send Customer Email
       console.log("\n📨 Sending customer confirmation email...")
@@ -188,7 +193,7 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
                 ${paymentId ? `
                 <div style="background: #f0fdf4; padding: 15px; border-radius: 8px; margin-top: 20px; text-align: center;">
                   <p style="color: #065f46; margin: 0;">
-                    <strong>Payment Confirmed:</strong> $100 USD
+                    <strong>Payment Confirmed:</strong> ${paymentNumberFormat(paymentAmount || 0, paymentCurrency || 'USD')}
                   </p>
                 </div>
                 ` : ''}
@@ -213,19 +218,19 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
           </div>
         `,
       })
-      
+
       console.log("✅ Customer email sent successfully!")
       console.log("Customer email full response:", JSON.stringify(clientResult, null, 2))
-      console.log("Customer email ID:", clientResult?.id || clientResult?.data?.id || "NOT FOUND")
-      
+      console.log("Customer email ID:", clientResult.data?.id || "NOT FOUND")
+
       console.log("\n🎉 ALL EMAILS SENT SUCCESSFULLY!")
       console.log("========================================\n")
-      
+
       return {
         success: true,
         message: "Thank you! Your consultation request has been submitted. Check your email for confirmation.",
       }
-      
+
     } catch (emailError: any) {
       console.error("\n❌ EMAIL SENDING ERROR:")
       console.error("Error type:", emailError?.constructor?.name)
@@ -233,21 +238,21 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
       console.error("Error stack:", emailError?.stack)
       console.error("Full error object:", JSON.stringify(emailError, null, 2))
       console.error("========================================\n")
-      
+
       // Still return success since data was saved
       return {
         success: true,
         message: "Request saved! (Email notification pending - we'll contact you directly)",
       }
     }
-    
+
   } catch (error: any) {
     console.error("\n❌ FATAL ERROR:")
     console.error("Error type:", error?.constructor?.name)
     console.error("Error message:", error?.message)
     console.error("Error stack:", error?.stack)
     console.error("========================================\n")
-    
+
     return {
       success: false,
       error: "Failed to process request. Please try again or contact hello@fitplan.com",

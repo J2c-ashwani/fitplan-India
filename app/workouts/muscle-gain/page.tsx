@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, TrendingUp, Sparkles } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function MuscleGainWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Muscle Gain Plan", href: "/workouts/muscle-gain" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "guidelines", label: "Guidelines" },
+    { id: "beginner", label: "Beginner Program" },
+    { id: "advanced", label: "Advanced Split" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "How much muscle can I gain per month realistically?",
+      answer: "Beginners: 1-2 lbs/month (12-24 lbs first year). Intermediate (1-2 years training): 0.5-1 lb/month. Advanced (3+ years): 0.25-0.5 lb/month. Women gain ~50% of male rates. Genetics, age, training, diet all factor in. Anything faster is mostly water/fat, not muscle. BE PATIENT - muscle building is slow!"
+    },
+    {
+      question: "Do I need to eat a lot to build muscle (bulk)?",
+      answer: "YES, calorie SURPLUS required (200-500 cal above maintenance). You CANNOT build significant muscle in calorie deficit. Protein: 0.8-1g per lb bodyweight. Carbs: fuel workouts. Fats: hormone production. Dirty bulk (eating anything) = unnecessary fat gain. Clean surplus (whole foods, controlled surplus) = lean muscle gain. Track calories with app!"
+    },
+    {
+      question: "What's the difference between strength training and hypertrophy training?",
+      answer: "STRENGTH = low reps (1-5), heavy weight (85-95% max), long rest (3-5 min), trains nervous system. HYPERTROPHY = moderate reps (8-12), moderate weight (65-85% max), short rest (60-90 sec), trains muscle fibers for SIZE. For muscle gain, prioritize hypertrophy training. Strength training builds strength, not necessarily size. You can do both: heavy compounds for strength, accessories for hypertrophy."
+    },
+    {
+      question: "Should I train to failure on every set?",
+      answer: "NO! Training to failure (can't do another rep) on EVERY set = overtraining, injury risk, excessive fatigue. Best approach: Leave 1-2 reps 'in the tank' (RIR = Reps In Reserve) on most sets. Go to failure occasionally on last set of isolation exercises (curls, extensions). NEVER to failure on heavy compounds (squats, deadlifts) - form breaks down. Muscle grows from progressive overload, not destroying yourself."
+    },
+    {
+      question: "How important is sleep for muscle growth?",
+      answer: "CRITICAL! Muscle grows during sleep, not in gym. Sleep 7-9 hours nightly. During sleep: Growth hormone peaks, muscle protein synthesis highest, recovery maximized, testosterone production optimal. Poor sleep (< 6 hours) = 60% LESS muscle gain, increased cortisol (muscle breakdown), terrible workout performance. Sleep is as important as training and nutrition. Prioritize it!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-700 to-indigo-900 text-white py-16">
+      <section className="bg-gradient-to-br from-blue-700 to-indigo-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-blue-700 font-semibold">
               💪 Complete Muscle Building Guide
@@ -30,7 +75,7 @@ export default function MuscleGainWorkoutPage() {
               Muscle Gain Workout Plan: Build Mass & Strength Fast
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover effective hypertrophy training programs with progressive overload, optimal volume, compound 
+              Discover effective hypertrophy training programs with progressive overload, optimal volume, compound
               exercises, split routines, and complete strategies to maximize muscle growth and strength gains.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function MuscleGainWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,16 +120,16 @@ export default function MuscleGainWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Muscle Building Training Principles</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Building muscle (hypertrophy) requires three key principles: progressive overload (gradually increasing 
-                weight, reps, or volume over time), adequate training volume (10-20 sets per muscle group per week), and 
-                proper recovery (48-72 hours between training same muscle). The 8-12 rep range with moderate weights triggers 
-                maximum muscle growth through metabolic stress and mechanical tension. Compound exercises (squats, deadlifts, 
-                bench press) are foundational - they work multiple muscle groups and allow heavy weights. Isolation exercises 
-                (bicep curls, leg extensions) target specific muscles for complete development. Training each muscle group 
-                2x per week provides optimal growth stimulus without overtraining. Rest is when muscles actually grow - 
+                Building muscle (hypertrophy) requires three key principles: progressive overload (gradually increasing
+                weight, reps, or volume over time), adequate training volume (10-20 sets per muscle group per week), and
+                proper recovery (48-72 hours between training same muscle). The 8-12 rep range with moderate weights triggers
+                maximum muscle growth through metabolic stress and mechanical tension. Compound exercises (squats, deadlifts,
+                bench press) are foundational - they work multiple muscle groups and allow heavy weights. Isolation exercises
+                (bicep curls, leg extensions) target specific muscles for complete development. Training each muscle group
+                2x per week provides optimal growth stimulus without overtraining. Rest is when muscles actually grow -
                 overtraining prevents progress.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Hypertrophy Training Fundamentals</h4>
@@ -97,7 +142,7 @@ export default function MuscleGainWorkoutPage() {
                     <li>• <strong>Frequency:</strong> Each muscle 2x per week optimal</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">Why These Principles Work</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -115,7 +160,7 @@ export default function MuscleGainWorkoutPage() {
       </section>
 
       {/* Important Guidelines */}
-      <section className="py-8 bg-yellow-50">
+      <section id="guidelines" className="py-8 bg-yellow-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-6">
@@ -157,7 +202,7 @@ export default function MuscleGainWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-blue-100 border border-blue-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>💪 Beginners respond to EVERYTHING:</strong> Full body 3x per week provides enough stimulus 
+                    <strong>💪 Beginners respond to EVERYTHING:</strong> Full body 3x per week provides enough stimulus
                     for growth while allowing recovery. Focus on learning exercises and progressive overload.
                   </p>
                 </div>
@@ -165,7 +210,7 @@ export default function MuscleGainWorkoutPage() {
                 <div className="space-y-4">
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Full Body Routine</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Barbell Squats</h6>
@@ -173,7 +218,7 @@ export default function MuscleGainWorkoutPage() {
                           <strong>Sets:</strong> 4 | <strong>Reps:</strong> 8-12 | <strong>Rest:</strong> 2 min
                         </p>
                         <p className="text-sm text-gray-600">
-                          King of exercises. Builds entire lower body and core. Start with just bar, add 5-10 lbs weekly. 
+                          King of exercises. Builds entire lower body and core. Start with just bar, add 5-10 lbs weekly.
                           Full depth if mobility allows.
                         </p>
                       </div>
@@ -397,9 +442,9 @@ export default function MuscleGainWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  <strong>Thursday:</strong> Repeat Monday's Push workout (or slight variations) <br/>
-                  <strong>Friday:</strong> Rest day <br/>
-                  <strong>Saturday:</strong> Repeat Tuesday's Pull workout (or variations) <br/>
+                  <strong>Thursday:</strong> Repeat Monday's Push workout (or slight variations) <br />
+                  <strong>Friday:</strong> Rest day <br />
+                  <strong>Saturday:</strong> Repeat Tuesday's Pull workout (or variations) <br />
                   <strong>Sunday:</strong> Rest day
                 </p>
                 <div className="bg-cyan-50 border border-cyan-300 rounded-lg p-4">
@@ -418,11 +463,11 @@ export default function MuscleGainWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Muscle Building Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -449,7 +494,7 @@ export default function MuscleGainWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -480,6 +525,15 @@ export default function MuscleGainWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-700 to-indigo-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -488,10 +542,10 @@ export default function MuscleGainWorkoutPage() {
               Complete Your Muscle Building Journey
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Training breaks down muscle, but proper nutrition provides the building blocks for growth. Get your 
+              Training breaks down muscle, but proper nutrition provides the building blocks for growth. Get your
               complete muscle gain diet plan to maximize results.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -521,10 +575,14 @@ export default function MuscleGainWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands building lean muscle through progressive training and smart nutrition
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

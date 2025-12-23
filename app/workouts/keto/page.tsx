@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, Flame } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function KetoWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Keto Plan", href: "/workouts/keto" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "why-keto", label: "KetoExercise" },
+    { id: "home-workouts", label: "Home Workouts" },
+    { id: "gym-workouts", label: "Gym Workouts" },
+    { id: "tips", label: "Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Why do I feel weak during keto workouts initially?",
+      answer: "During the first 2-4 weeks of keto, your body is transitioning from burning glucose to burning fat for fuel (fat adaptation). Performance drops 20-30% during this period - this is NORMAL. Once adapted (4-6 weeks), energy returns to normal or better. Be patient, reduce intensity initially, and don't quit keto due to temporary fatigue!"
+    },
+    {
+      question: "What's the best exercise type for keto?",
+      answer: "Strength training is #1 - preserves muscle mass perfectly on keto.  LISS cardio (walking, cycling) is #2 - burns pure fat at low intensities. Avoid excessive HIIT initially (depletes glycogen). Once fat-adapted (4+ weeks), you can add moderate HIIT 1-2x weekly."
+    },
+    {
+      question: "Can I build muscle on ketodiet?",
+      answer: "Yes! Keto is EXCELLENT for building muscle IF you eat enough protein (0.8-1g per lb bodyweight) and lift progressively heavier weights. Keto preserves muscle better than high-carb during calorie deficits. Many bodybuilders use keto for contest prep to maintain muscle while losing fat."
+    },
+    {
+      question: "Should I do fasted cardio on keto?",
+      answer: "Yes - fasted cardio on keto burns even MORE  fat since you're already in ketosis. Your body taps into fat stores immediately. Best done: morning, before breakfast, 30-45 min, low-moderate intensity (walking, cycling). Strength training should NOT be fasted - need energy for performance."
+    },
+    {
+      question: "How do I avoid the 'keto flu' while exercising?",
+      answer: "Keto flu is electrolyte depletion, not flu. Fix it: Drink 3-4 liters water daily, add 5g sodium (salt), 1g potassium (supplements/avocado), 400mg magnesium. Electrolytes are CRITICAL on keto - without them, you'll feel terrible and quit. This solves 90% of keto side effects."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-700 to-red-900 text-white py-16">
+      <section className="bg-gradient-to-br from-orange-700 to-red-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-orange-700 font-semibold">
               🔥 Complete Keto Workout Guide
@@ -30,7 +75,7 @@ export default function KetoWorkoutPage() {
               Keto Workout Plan: Maximize Fat Burning on Ketogenic Diet
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover effective workout strategies designed for keto dieters to accelerate fat loss, preserve muscle 
+              Discover effective workout strategies designed for keto dieters to accelerate fat loss, preserve muscle
               mass, optimize performance in ketosis, and achieve maximum results on low-carb nutrition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function KetoWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,17 +117,17 @@ export default function KetoWorkoutPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div id="why-keto" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise on Keto: What You Need to Know</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Working out on a ketogenic diet requires understanding how your body uses fuel. During the first 2-4 weeks 
-                (fat adaptation period), you may experience reduced performance, especially in high-intensity activities. 
-                This is normal - your body is learning to efficiently burn fat instead of glucose. Once fat-adapted, many 
-                keto athletes report excellent endurance, stable energy, and effective fat burning. The key is starting 
-                moderately, focusing on strength training and low-intensity cardio initially, then gradually increasing 
+                Working out on a ketogenic diet requires understanding how your body uses fuel. During the first 2-4 weeks
+                (fat adaptation period), you may experience reduced performance, especially in high-intensity activities.
+                This is normal - your body is learning to efficiently burn fat instead of glucose. Once fat-adapted, many
+                keto athletes report excellent endurance, stable energy, and effective fat burning. The key is starting
+                moderately, focusing on strength training and low-intensity cardio initially, then gradually increasing
                 intensity as you adapt. Keto is excellent for fat loss combined with muscle preservation.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-orange-800">Benefits of Keto + Exercise</h4>
@@ -95,7 +140,7 @@ export default function KetoWorkoutPage() {
                     <li>• Enhanced endurance once fat-adapted</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-red-800">Best Exercise Types for Keto</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -136,7 +181,7 @@ export default function KetoWorkoutPage() {
       </section>
 
       {/* Home Workouts Section */}
-      <section id="home-workouts" className="py-16 bg-gray-50">
+      <section id="home-workouts" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -158,7 +203,7 @@ export default function KetoWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-orange-100 border border-orange-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>💪 Strength Training is BEST for Keto:</strong> Preserves muscle mass while body burns fat, 
+                    <strong>💪 Strength Training is BEST for Keto:</strong> Preserves muscle mass while body burns fat,
                     boosts metabolism, and doesn't require glycogen (glucose) like intense cardio does.
                   </p>
                 </div>
@@ -171,7 +216,7 @@ export default function KetoWorkoutPage() {
 
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Circuit (4 Rounds, 60 sec rest between rounds)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Push-Ups (Modified if Needed)</h6>
@@ -179,7 +224,7 @@ export default function KetoWorkoutPage() {
                           <strong>Reps:</strong> 10-20 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Chest, shoulders, triceps. Do on knees if regular is too hard. Build upper body strength 
+                          Chest, shoulders, triceps. Do on knees if regular is too hard. Build upper body strength
                           without needing carbs for fuel.
                         </p>
                       </div>
@@ -244,7 +289,7 @@ export default function KetoWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  LISS is PERFECT for keto - your body burns fat efficiently at low intensities. This is the "fat burning zone" 
+                  LISS is PERFECT for keto - your body burns fat efficiently at low intensities. This is the "fat burning zone"
                   that actually works on keto because you're already using fat as primary fuel.
                 </p>
 
@@ -285,7 +330,7 @@ export default function KetoWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-red-100 border border-red-300 rounded-lg p-4 mb-4">
                   <p className="text-sm text-gray-800">
-                    <strong>⚠️ Wait Until Fat-Adapted:</strong> HIIT requires more glycogen (glucose). Only do after 4-6 weeks 
+                    <strong>⚠️ Wait Until Fat-Adapted:</strong> HIIT requires more glycogen (glucose). Only do after 4-6 weeks
                     on keto when your body can efficiently use ketones for high-intensity work.
                   </p>
                 </div>
@@ -309,7 +354,7 @@ export default function KetoWorkoutPage() {
       </section>
 
       {/* Gym Workouts Section */}
-      <section id="gym-workouts" className="py-16 bg-white">
+      <section id="gym-workouts" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -462,11 +507,11 @@ export default function KetoWorkoutPage() {
       </section>
 
       {/* Keto Exercise Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Keto Workout Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -493,7 +538,7 @@ export default function KetoWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -524,6 +569,15 @@ export default function KetoWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-orange-700 to-red-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -532,10 +586,10 @@ export default function KetoWorkoutPage() {
               Complete Your Keto Transformation
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise accelerates results, but proper keto nutrition is the foundation. Get your complete ketogenic 
+              Exercise accelerates results, but proper keto nutrition is the foundation. Get your complete ketogenic
               diet plan to maximize fat loss and performance.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -565,10 +619,14 @@ export default function KetoWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands achieving rapid fat loss through keto diet and strategic exercise
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

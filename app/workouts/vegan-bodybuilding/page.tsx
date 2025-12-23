@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Dumbbell, Leaf, TrendingUp, Zap, Target, Activity } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,50 @@ export const metadata: Metadata = {
 }
 
 export default function VeganBodybuildingWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Vegan Bodybuilding", href: "/workouts/vegan-bodybuilding" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "programs", label: "Training Programs" },
+    { id: "timing", label: "Nutrition Timing" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Can you really build muscle on a vegan diet? Won't I lose gains?",
+      answer: "YES, you can 100% build muscle on a vegan diet! Many elite athletes and bodybuilders are vegan. Protein is protein - your body doesn't care if it's from chicken or lentils. Keys: Hit protein targets (0.8-1g per lb bodyweight), eat variety of plant proteins for complete amino acids, time protein around workouts, ensure adequate calories. Vegan sources: tofu, tempeh, seitan, lentils, beans, protein powder (pea/rice/soy). Numerous studies show plant protein builds muscle equally to animal protein when intake and training are matched."
+    },
+    {
+      question: "How much protein do vegan bodybuilders need daily?",
+      answer: "Same as non-vegan bodybuilders: 0.8-1g per lb bodyweight for muscle building. Example: 150 lb person needs 120-150g protein daily. Since plant proteins are less bioavailable, aim for higher end (1g per lb) to be safe. Distribute across 4-5 meals (25-30g per meal) for optimal muscle protein synthesis. EASY to hit with variety: Breakfast tofu scramble (20g), lunch lentil curry + rice (25g), dinner tempeh stir-fry (30g), snacks protein shake + nuts (40g) = 115g+ protein. Not difficult if you plan ahead!"
+    },
+    {
+      question: "Best vegan protein sources for muscle building?",
+      answer: "TOP TIER (high protein, complete amino acids): Tofu (10g/100g), Tempeh (19g/100g), Seitan (25g/100g), Edamame (11g/100g), Soy milk (7g/cup), Vegan protein powder (20-25g/scoop). GOOD TIER (incomplete but combine well): Lentils (18g/cup), Chickpeas (15g/cup), Black beans (15g/cup), Quinoa (8g/cup), Peanut butter (8g/2 tbsp), Almonds (6g/oz). STRATEGY: Combine incomplete sources (rice + beans = complete protein). Supplement with protein powder if needed. Variety = complete amino acid profile!"
+    },
+    {
+      question: "Do I need supplements as a vegan bodybuilder or just protein powder?",
+      answer: "Beyond protein powder (optional but convenient), consider: CRITICAL: Vitamin B12 (not in plants - supplement 1000mcg weekly), Vitamin D (if low sun exposure - 2000 IU daily). BENEFICIAL: Creatine monohydrate (5g daily - most effective supplement for muscle/strength, vegans typically have lower stores), Omega-3 (algae oil 250mg DHA/EPA daily), Iron (if levels low - eat with vitamin C for absorption). NOT needed: BCAAs (overrated, complete protein has all you need), most other supplements. Get bloodwork to identify actual deficiencies!"
+    },
+    {
+      question: "Will I be weaker than meat-eating bodybuilders?",
+      answer: "NO! Strength comes from progressive overload training + adequate protein/calories, NOT from meat consumption. Many world-record holders, elite athletes, and top bodybuilders are vegan: Patrik Baboumian (strongman), Kendrick Farris (Olympic weightlifter), Nimai Delgado (bodybuilder). Plant-based diets may offer advantages: Better recovery (anti-inflammatory), better cardiovascular health (more endurance), better digestion. The gym doesn't care what you eat - it cares if you train hard, eat enough protein/calories, and recover properly. Vegan or not, those principles = gains!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-700 to-emerald-900 text-white py-16">
+      <section className="bg-gradient-to-br from-green-700 to-emerald-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-green-700 font-semibold">
               🌱 Plant-Powered Muscle
@@ -30,7 +74,7 @@ export default function VeganBodybuildingWorkoutPage() {
               Vegan Bodybuilding: Build Muscle on Plants
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover proven muscle-building workouts specifically optimized for vegan athletes. Build serious size and 
+              Discover proven muscle-building workouts specifically optimized for vegan athletes. Build serious size and
               strength with plant-based nutrition and strategic training programs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +94,7 @@ export default function VeganBodybuildingWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,13 +119,13 @@ export default function VeganBodybuildingWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Vegan Muscle Building Principles</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Building muscle on a vegan diet requires the **same training principles** as omnivorous bodybuilding: 
-                progressive overload, adequate volume, proper form, and sufficient recovery. The difference is in nutrition 
-                timing and protein distribution. Train with **heavy compound movements** for mass, 8-12 rep range for 
-                hypertrophy, 4-5 days per week targeting each muscle 2x weekly. Focus on getting stronger over time 
+                Building muscle on a vegan diet requires the **same training principles** as omnivorous bodybuilding:
+                progressive overload, adequate volume, proper form, and sufficient recovery. The difference is in nutrition
+                timing and protein distribution. Train with **heavy compound movements** for mass, 8-12 rep range for
+                hypertrophy, 4-5 days per week targeting each muscle 2x weekly. Focus on getting stronger over time
                 (progressive overload) and fuel workouts with quality plant-based calories and protein.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-green-800">Vegan Bodybuilding Keys</h4>
@@ -94,7 +138,7 @@ export default function VeganBodybuildingWorkoutPage() {
                     <li>• Pre/post workout nutrition timing crucial</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-emerald-800">Why It Works for Vegans</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -116,7 +160,7 @@ export default function VeganBodybuildingWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Vegan Bodybuilding Training Programs</h2>
-            
+
             <div className="space-y-8">
               {/* 4-Day Split */}
               <Card className="border-green-200">
@@ -128,10 +172,10 @@ export default function VeganBodybuildingWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    This split allows you to train each muscle group twice per week with adequate recovery - ideal for 
+                    This split allows you to train each muscle group twice per week with adequate recovery - ideal for
                     maximizing muscle protein synthesis with plant-based nutrition.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Day 1 - Upper Body (Push Focus):</h5>
@@ -186,7 +230,7 @@ export default function VeganBodybuildingWorkoutPage() {
                     <div className="bg-yellow-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2 text-yellow-800">Weekly Schedule:</h5>
                       <p className="text-sm text-gray-700">
-                        <strong>Monday:</strong> Upper Push | <strong>Tuesday:</strong> Lower Quad | <strong>Wednesday:</strong> Rest/Cardio | 
+                        <strong>Monday:</strong> Upper Push | <strong>Tuesday:</strong> Lower Quad | <strong>Wednesday:</strong> Rest/Cardio |
                         <strong>Thursday:</strong> Upper Pull | <strong>Friday:</strong> Lower Hamstring | <strong>Sat/Sun:</strong> Rest
                       </p>
                     </div>
@@ -204,10 +248,10 @@ export default function VeganBodybuildingWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    For experienced lifters who want to maximize volume and frequency. Requires excellent recovery and 
+                    For experienced lifters who want to maximize volume and frequency. Requires excellent recovery and
                     consistent high-protein vegan meals.
                   </p>
-                  
+
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Weekly Structure:</h5>
                     <div className="space-y-2 text-sm text-gray-700">
@@ -234,10 +278,10 @@ export default function VeganBodybuildingWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Timing your plant-based protein and carbs around workouts maximizes muscle protein synthesis and 
+                    Timing your plant-based protein and carbs around workouts maximizes muscle protein synthesis and
                     recovery - especially important for vegans.
                   </p>
-                  
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-orange-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Pre-Workout (1-2 hours before):</h5>
@@ -268,12 +312,12 @@ export default function VeganBodybuildingWorkoutPage() {
         </div>
       </section>
 
-      {/* Sample Workout */}
-      <section className="py-16 bg-white">
+      {/* Nutrition Timing */}
+      <section id="timing" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sample Vegan Bodybuilding Workout (Upper Push Day)</h2>
-            
+
             <Card className="border-green-200">
               <CardHeader className="bg-green-50">
                 <CardTitle className="text-green-800">Chest, Shoulders & Triceps (75 min)</CardTitle>
@@ -348,11 +392,11 @@ export default function VeganBodybuildingWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Vegan Bodybuilding Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Keys to Plant-Based Gains:</h4>
@@ -379,7 +423,7 @@ export default function VeganBodybuildingWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Vegan Lifting Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -410,6 +454,15 @@ export default function VeganBodybuildingWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-green-700 to-emerald-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -418,7 +471,7 @@ export default function VeganBodybuildingWorkoutPage() {
               Complete Your Vegan Muscle-Building Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Training provides the stimulus, but nutrition delivers the building blocks. Get your complete vegan 
+              Training provides the stimulus, but nutrition delivers the building blocks. Get your complete vegan
               bodybuilding diet guide with meal plans, protein sources, and supplement recommendations.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -436,6 +489,10 @@ export default function VeganBodybuildingWorkoutPage() {
             <p className="text-white text-sm mt-6">
               🌱 Build muscle on plants - proven by thousands of vegan athletes worldwide
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

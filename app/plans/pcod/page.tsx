@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, AlertCircle, Apple, Salad, Coffee, TrendingDown, Target, Clock, Flame, Sparkles, Pill, BookOpen, Info } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,50 @@ export const metadata: Metadata = {
 }
 
 export default function PCODDietPage() {
+  const breadcrumbItems = [
+    { label: "Diet Plans", href: "/plans" },
+    { label: "PCOD Diet Plan", href: "/plans/pcod" },
+  ]
+
+  const tocItems = [
+    { id: "understanding", label: "PCOD vs PCOS" },
+    { id: "foods", label: "Foods Guide" },
+    { id: "meal-plan", label: "7-Day Meal Plan" },
+    { id: "supplements", label: "Supplements" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Can diet alone reverse PCOD symptoms or is medication always needed?",
+      answer: "Diet and lifestyle changes CAN reverse PCOD symptoms for many women WITHOUT medication! PCOD (unlike PCOS) is primarily a lifestyle-driven condition that responds extremely well to dietary interventions. Studies show 60-70% of women with PCOD achieve complete symptom reversal (regular periods, weight loss, clear skin, improved fertility) within 3-6 months through: Low GI diet (blood sugar control), adequate protein (20-25g per meal), anti-inflammatory foods (reduce ovarian inflammation), stress management, and regular exercise. However, some women with severe insulin resistance may need temporary metformin support alongside diet. Work with your doctor to assess if you can try diet-first approach for 3 months before medication."
+    },
+    {
+      question: "How long does it take to see weight loss results with PCOD diet?",
+      answer: "Timeline for PCOD weight loss: WEEK 1-2: Water weight loss (2-4 lbs), reduced bloating, better energy. MONTH 1: 5-8 lbs total loss, clearer skin beginning, fewer cravings, improved mood. MONTH 2-3: 10-15 lbs loss, menstrual cycles starting to regulate, noticeable body composition changes. MONTH 4-6: 15-25 lbs loss (goal range), regular ovulation, normalized hormones, sustained energy. KEY: PCOD weight loss is SLOWER than regular dieting due to hormonal resistance - expect 1-2 lbs per week MAX. Faster loss often means muscle loss or water manipulation, which worsens hormones. Be patient and consistent - sustainable results take 4-6 months but LAST for life!"
+    },
+    {
+      question: "Are supplements necessary for PCOD or can I just focus on diet?",
+      answer: "Supplements are OPTIONAL but HIGHLY BENEFICIAL for faster results. Diet alone works, but supplements accelerate improvement: ESSENTIAL (strongly recommended): Inositol (2-4g daily) - clinically proven to improve egg quality and regulate cycles, Omega-3 fish oil - reduces inflammation and balances hormones, Vitamin D - most PCOD women are deficient, critical for fertility. SUPPORTING (helpful): Magnesium - reduces PMS and sugar cravings, NAC - improves fertility and reduces ovarian cysts, Cinnamon extract - enhances insulin sensitivity. If budget limited: Start with diet + inositol + vitamin D (biggest impact for lowest cost). Add others as budget allows. But food ALWAYS comes first - supplements enhance a good diet, they don't replace it!"
+    },
+    {
+      question: "Can I eat out or have cheat meals while managing PCOD with diet?",
+      answer: "YES, but strategically! PCOD management is about CONSISTENCY, not perfection. Guidelines: DURING WEEK (Mon-Fri): Follow plan 90% strictly - this is when hormones stabilize. WEEKENDS: One cheat MEAL (not entire day) is fine - choose wisely (quality restaurant meal vs. junk binge). EATING OUT TIPS: Order grilled protein + vegetables + small portion complex carbs, avoid fried foods and refined carbs, ask for dressings/saucesside, choose water or unsweetened beverages. CHEAT MEAL RULES: Plan it (don't make impulsive decisions), enjoy it fully without guilt, return to plan immediately next meal. REALITY: Life happens! Weddings, celebrations, travel - occasional indulgences WON'T ruin progress if you're consistent 80-90% of the time. Guilt and restriction often worsen hormones more than one planned treat!"
+    },
+    {
+      question: "What's the difference between PCOD diet and general weight loss diet?",
+      answer: "PCOD diet is specifically designed for HORMONAL weight loss, not just calorie deficit: KEY DIFFERENCES: 1) GLYCEMIC CONTROL: PCOD diet prioritizes low-GI carbs (quinoa, sweet potato) over calorie counting - blood sugar stability is MORE important than total calories. 2) PROTEIN TIMING: PCOD requires protein at EVERY meal (20-25g) to manage insulin, not just total daily protein. 3) HEALTHY FATS EMPHASIS: PCOD needs MORE healthy fats (omega-3, nuts) than typical low-fat weight loss diets - hormones are made from fats! 4) ANTI-INFLAMMATORY FOCUS: Turmeric, ginger, berries are ESSENTIAL for PCOD to reduce ovarian inflammation. 5) MEAL FREQUENCY: 3 balanced meals + 2 snacks prevents energy crashes that worsen hormones. Regular weight loss diet: Eat less, move more. PCOD diet: Balance hormones FIRST, weight loss follows naturally. That's why extreme calorie restriction (1200 cal) often FAILS for PCOD - it worsens hormone imbalance!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white py-16">
+      <section className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-purple-600 font-semibold">
               💜 Evidence-Based PCOD Management
@@ -30,8 +74,8 @@ export default function PCODDietPage() {
               PCOD Weight Loss Diet Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based diet plan for Polycystic Ovarian Disease (PCOD) with hormone-balancing foods, 
-              insulin-management nutrition, supplements guide, and proven weight loss strategies. Designed for women in USA, 
+              Complete evidence-based diet plan for Polycystic Ovarian Disease (PCOD) with hormone-balancing foods,
+              insulin-management nutrition, supplements guide, and proven weight loss strategies. Designed for women in USA,
               UK, Canada, Australia, and worldwide with PCOD symptoms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,7 +91,7 @@ export default function PCODDietPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="understanding" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,26 +116,26 @@ export default function PCODDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding PCOD vs PCOS: Complete Guide 2025</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Polycystic Ovarian Disease (PCOD) affects approximately 1 in 5 women worldwide and is one of the most common 
-                hormonal conditions affecting women of reproductive age in the USA, UK, Canada, Australia, and Europe. While 
-                PCOD and PCOS are often confused, PCOD is generally considered a milder condition where the ovaries release 
-                immature or partially mature eggs that develop into cysts. PCOD causes hormonal imbalance, irregular menstrual 
-                periods, weight gain (especially around the abdomen), acne and oily skin, hair thinning on the scalp, and 
+                Polycystic Ovarian Disease (PCOD) affects approximately 1 in 5 women worldwide and is one of the most common
+                hormonal conditions affecting women of reproductive age in the USA, UK, Canada, Australia, and Europe. While
+                PCOD and PCOS are often confused, PCOD is generally considered a milder condition where the ovaries release
+                immature or partially mature eggs that develop into cysts. PCOD causes hormonal imbalance, irregular menstrual
+                periods, weight gain (especially around the abdomen), acne and oily skin, hair thinning on the scalp, and
                 difficulty losing weight despite diet efforts.
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
-                The key difference between PCOD and PCOS is that PCOD is primarily a ovarian disorder that can be managed 
-                effectively through lifestyle changes alone, while PCOS is a more complex metabolic and endocrine syndrome. 
-                The foundation of successful PCOD weight loss lies in managing insulin levels through a <strong>low glycemic 
-                index (GI) diet</strong>, balancing hormones naturally with specific nutrients like inositol, vitamin D, and 
-                omega-3 fatty acids, maintaining steady blood sugar levels throughout the day with balanced meals, reducing 
-                inflammation with anti-inflammatory foods, and combining dietary changes with regular moderate exercise and 
-                stress management techniques. This comprehensive PCOD diet plan focuses on whole foods, complex carbohydrates 
-                with GI below 55, lean protein sources at every meal (20-25g), healthy fats with emphasis on omega-3, and 
+                The key difference between PCOD and PCOS is that PCOD is primarily a ovarian disorder that can be managed
+                effectively through lifestyle changes alone, while PCOS is a more complex metabolic and endocrine syndrome.
+                The foundation of successful PCOD weight loss lies in managing insulin levels through a <strong>low glycemic
+                  index (GI) diet</strong>, balancing hormones naturally with specific nutrients like inositol, vitamin D, and
+                omega-3 fatty acids, maintaining steady blood sugar levels throughout the day with balanced meals, reducing
+                inflammation with anti-inflammatory foods, and combining dietary changes with regular moderate exercise and
+                stress management techniques. This comprehensive PCOD diet plan focuses on whole foods, complex carbohydrates
+                with GI below 55, lean protein sources at every meal (20-25g), healthy fats with emphasis on omega-3, and
                 high-fiber foods (25-30g daily) that support hormonal balance and sustainable weight loss of 1-2 pounds per week.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-purple-800">PCOD Symptoms Improved by Proper Diet</h3>
@@ -106,7 +150,7 @@ export default function PCODDietPage() {
                     <li>• <strong>Better mood:</strong> Reduced mood swings, anxiety, and depression symptoms</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-indigo-800">Evidence-Based PCOD Diet Principles</h3>
                   <ul className="text-gray-700 space-y-2">
@@ -131,12 +175,12 @@ export default function PCODDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">PCOD vs PCOS: Key Differences You Need to Know</h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8 mb-6">
               <p className="text-gray-700 mb-6">
-                Many women confuse PCOD (Polycystic Ovarian Disease) with PCOS (Polycystic Ovary Syndrome), but understanding 
-                the differences is crucial for proper treatment. While both conditions involve ovarian cysts and hormonal imbalances, 
-                they differ significantly in severity, metabolic impact, and treatment approach. PCOD is generally more manageable 
+                Many women confuse PCOD (Polycystic Ovarian Disease) with PCOS (Polycystic Ovary Syndrome), but understanding
+                the differences is crucial for proper treatment. While both conditions involve ovarian cysts and hormonal imbalances,
+                they differ significantly in severity, metabolic impact, and treatment approach. PCOD is generally more manageable
                 through lifestyle changes alone, while PCOS often requires medical intervention alongside diet and exercise.
               </p>
 
@@ -200,9 +244,9 @@ export default function PCODDietPage() {
                   Important Note for Women with PCOD
                 </h4>
                 <p className="text-sm text-gray-700">
-                  If you have been diagnosed with PCOD, the good news is that it is highly manageable through consistent lifestyle 
-                  changes. Most women with PCOD can achieve complete symptom reversal and maintain healthy weight with proper diet, 
-                  regular exercise, and stress management - often without needing long-term medication. This diet plan is specifically 
+                  If you have been diagnosed with PCOD, the good news is that it is highly manageable through consistent lifestyle
+                  changes. Most women with PCOD can achieve complete symptom reversal and maintain healthy weight with proper diet,
+                  regular exercise, and stress management - often without needing long-term medication. This diet plan is specifically
                   designed to help you achieve these goals naturally and sustainably.
                 </p>
               </div>
@@ -212,11 +256,11 @@ export default function PCODDietPage() {
       </section>
 
       {/* Foods to Eat & Avoid */}
-      <section className="py-16 bg-white">
+      <section id="foods" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Complete PCOD Food Guide: Best Foods to Eat & Foods to Strictly Avoid</h2>
-            
+
             <div className="space-y-8">
               {/* Foods to Eat */}
               <Card className="border-green-200">
@@ -228,7 +272,7 @@ export default function PCODDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Focus on whole, unprocessed foods that support hormonal balance, reduce inflammation, and promote sustainable 
+                    Focus on whole, unprocessed foods that support hormonal balance, reduce inflammation, and promote sustainable
                     weight loss. These foods help regulate menstrual cycles, improve egg quality, and support overall reproductive health.
                   </p>
 
@@ -332,7 +376,7 @@ export default function PCODDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    These foods worsen hormonal imbalance, trigger inflammation, cause blood sugar spikes, and make PCOD symptoms 
+                    These foods worsen hormonal imbalance, trigger inflammation, cause blood sugar spikes, and make PCOD symptoms
                     significantly worse. Complete elimination or strict limitation is essential for symptom management and weight loss.
                   </p>
 
@@ -395,10 +439,10 @@ export default function PCODDietPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Complete 7-Day PCOD Diet Meal Plan (1,400-1,500 Calories)</h2>
             <p className="text-center text-gray-600 mb-12">
-              Hormone-balancing, nutrient-dense meal plan with balanced macros (40% carbs, 30% protein, 30% fat) specifically 
+              Hormone-balancing, nutrient-dense meal plan with balanced macros (40% carbs, 30% protein, 30% fat) specifically
               designed for PCOD management and sustainable weight loss. Follow consistently for 4-6 weeks to see significant results.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-purple-200">
@@ -506,18 +550,18 @@ export default function PCODDietPage() {
       </section>
 
       {/* Supplements Section */}
-      <section className="py-16 bg-white">
+      <section id="supplements" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center justify-center">
               <Pill className="w-8 h-8 mr-3 text-indigo-600" />
               Essential Supplements for PCOD Management & Weight Loss
             </h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8">
               <p className="text-gray-700 mb-6">
-                While a healthy diet is the foundation, specific supplements can significantly accelerate PCOD symptom improvement, 
-                support hormone balance, and enhance weight loss results. Always consult your healthcare provider before starting 
+                While a healthy diet is the foundation, specific supplements can significantly accelerate PCOD symptom improvement,
+                support hormone balance, and enhance weight loss results. Always consult your healthcare provider before starting
                 supplements, especially if you're taking medications or planning pregnancy.
               </p>
 
@@ -525,28 +569,28 @@ export default function PCODDietPage() {
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h3 className="font-semibold text-lg mb-3 text-blue-800">Core Supplements (Recommended):</h3>
                   <ul className="text-sm text-gray-700 space-y-3">
-                    <li>• <strong>Inositol (Myo-inositol):</strong> 2,000-4,000mg daily. Improves egg quality, regulates cycles, 
-                    enhances fertility. Take with meals in divided doses (morning and evening).</li>
-                    <li>• <strong>Omega-3 Fish Oil:</strong> 1,000-2,000mg EPA+DHA daily. Reduces inflammation, balances hormones, 
-                    improves skin health. Choose molecularly distilled for purity.</li>
-                    <li>• <strong>Vitamin D3:</strong> 2,000-4,000 IU daily. Critical for hormone production, mood regulation, 
-                    and fertility. Get blood levels tested first (aim for 40-60 ng/mL).</li>
-                    <li>• <strong>Magnesium (Glycinate or Citrate):</strong> 300-400mg daily. Reduces PMS symptoms, improves sleep, 
-                    helps with sugar cravings. Take in evening for better sleep.</li>
+                    <li>• <strong>Inositol (Myo-inositol):</strong> 2,000-4,000mg daily. Improves egg quality, regulates cycles,
+                      enhances fertility. Take with meals in divided doses (morning and evening).</li>
+                    <li>• <strong>Omega-3 Fish Oil:</strong> 1,000-2,000mg EPA+DHA daily. Reduces inflammation, balances hormones,
+                      improves skin health. Choose molecularly distilled for purity.</li>
+                    <li>• <strong>Vitamin D3:</strong> 2,000-4,000 IU daily. Critical for hormone production, mood regulation,
+                      and fertility. Get blood levels tested first (aim for 40-60 ng/mL).</li>
+                    <li>• <strong>Magnesium (Glycinate or Citrate):</strong> 300-400mg daily. Reduces PMS symptoms, improves sleep,
+                      helps with sugar cravings. Take in evening for better sleep.</li>
                   </ul>
                 </div>
 
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h3 className="font-semibold text-lg mb-3 text-purple-800">Supporting Supplements (Optional):</h3>
                   <ul className="text-sm text-gray-700 space-y-3">
-                    <li>• <strong>Vitex (Chasteberry):</strong> 400mg daily. Natural hormone balancer, regulates menstrual cycles, 
-                    reduces PMS. May take 3-6 months for full effects.</li>
-                    <li>• <strong>NAC (N-Acetyl Cysteine):</strong> 600mg twice daily. Antioxidant that improves fertility, 
-                    reduces oxidative stress, supports liver detoxification.</li>
-                    <li>• <strong>Cinnamon Extract:</strong> 500mg 2-3 times daily. Improves insulin sensitivity, helps regulate 
-                    blood sugar, may reduce menstrual irregularity.</li>
-                    <li>• <strong>B-Complex Vitamins:</strong> One daily. Supports energy production, stress management, hormone 
-                    metabolism. Choose methylated forms for better absorption.</li>
+                    <li>• <strong>Vitex (Chasteberry):</strong> 400mg daily. Natural hormone balancer, regulates menstrual cycles,
+                      reduces PMS. May take 3-6 months for full effects.</li>
+                    <li>• <strong>NAC (N-Acetyl Cysteine):</strong> 600mg twice daily. Antioxidant that improves fertility,
+                      reduces oxidative stress, supports liver detoxification.</li>
+                    <li>• <strong>Cinnamon Extract:</strong> 500mg 2-3 times daily. Improves insulin sensitivity, helps regulate
+                      blood sugar, may reduce menstrual irregularity.</li>
+                    <li>• <strong>B-Complex Vitamins:</strong> One daily. Supports energy production, stress management, hormone
+                      metabolism. Choose methylated forms for better absorption.</li>
                   </ul>
                 </div>
               </div>
@@ -556,11 +600,11 @@ export default function PCODDietPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">PCOD Success Tips & Lifestyle Changes</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-bold text-lg mb-4 text-green-700 flex items-center">
@@ -590,7 +634,7 @@ export default function PCODDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-bold text-lg mb-4 text-red-700 flex items-center">
                   <AlertCircle className="w-6 h-6 mr-2" />
@@ -662,6 +706,15 @@ export default function PCODDietPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -670,14 +723,14 @@ export default function PCODDietPage() {
             <p className="text-xl mb-8">
               Get a fully customized diet plan tailored to your specific symptoms, lifestyle, and goals from our certified nutritionists.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">PCOD Consultation</h4>
-                <p className="text-white text-sm mb-4">Personalized plan + support - $100 </p>
+                <p className="text-white text-sm mb-4">Personalized plan + support - <PriceDisplay amountIn={500} amountUs={50} /> </p>
                 <Button size="lg" className="w-full bg-white text-purple-600" asChild>
-                  <Link href="/contact">Book Now - $100</Link>
+                  <Link href="/contact">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
                 </Button>
               </div>
 
@@ -690,6 +743,10 @@ export default function PCODDietPage() {
                 </Button>
               </div>
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

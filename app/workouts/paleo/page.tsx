@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Flame, Activity, Target, TrendingUp, Zap, Mountain } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,50 @@ export const metadata: Metadata = {
 }
 
 export default function PaleoWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Paleo Workout", href: "/workouts/paleo" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "workouts", label: "Workout Programs" },
+    { id: "weekly", label: "Sample Week" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Is paleo/primal fitness different from regular gym workouts?",
+      answer: "YES! Paleo fitness emphasizes FUNCTIONAL, varied movements that mimic ancestral activity patterns - NOT isolation exercises on machines. Focus: Compound lifts (squats, deadlifts, pull-ups), sprinting, jumping, carrying, climbing, outdoor movement. Training is SHORT but INTENSE (20-40 min), constantly varied to prevent boredom. Think CrossFit philosophy meets natural movement. Avoid: Chronic cardio (long boring treadmill), isolation machines, repetitive routines."
+    },
+    {
+      question: "How often should I do paleo workouts?",
+      answer: "3-5x weekly with variation: 2-3x strength training (heavy compound lifts), 1-2x high-intensity MetCon (metabolic conditioning), 1x sprint training (8-10 x 100m sprints), 1-2x outdoor/play activities (hiking, climbing, sports). REST is essential - paleo training is INTENSE. Listen to body. Quality >> quantity. Avoid training same muscle groups on consecutive days. Active recovery (walking, stretching, light movement) is encouraged daily."
+    },
+    {
+      question: "Can beginners do paleo/primal workouts or is it too intense?",
+      answer: "Beginners CAN but must START LIGHT! Scale everything: Use bodyweight instead of barbells initially, do box step-ups instead of box jumps, walk hills instead of sprint them, reduce intensity/volume. Master FORM first before adding weight or speed. Common beginner mistake: Ego lifting with bad form = injury. Build base fitness with bodyweight exercises (push-ups, squats, planks) for 4-8 weeks, THEN add weights and intensity. Primal principles work at ALL levels!"
+    },
+    {
+      question: "Do I need a gym for paleo workouts or can I train at home/outdoors?",
+      answer: "You can do BOTH! Gym: Access to barbells for heavy squats/deadlifts, pull-up bars. Outdoors/Home: Bodyweight exercises (push-ups, pull-ups, squats, lunges), sprinting in park, hill sprints, carrying heavy rocks/logs, climbing, hiking. Many paleo/primal athletes prefer OUTDOOR training - more natural, varied terrain, sunshine, fresh air. Minimal equipment needed: Pull-up bar, some weights/kettlebells. Primal fitness is about MOVEMENT, not machines!"
+    },
+    {
+      question: "Will paleo workouts help me lose fat and build muscle?",
+      answer: "ABSOLUTELY! Paleo training is extremely effective for body composition: 1) High-intensity intervals burn massive calories + boost metabolism for hours after (EPOC effect), 2) Heavy compound lifts build muscle mass, 3) Short, intense sessions preserve muscle while burning fat (unlike long cardio which burns muscle too), 4) Combined with paleo DIET (high protein, moderate fat, controlled carbs), results are excellent. Many people see better results than traditional gym routines because intensity and variety prevent plateaus."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-700 to-amber-900 text-white py-16">
+      <section className="bg-gradient-to-br from-orange-700 to-amber-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-orange-700 font-semibold">
               🔥 Primal Fitness
@@ -30,7 +74,7 @@ export default function PaleoWorkoutPage() {
               Paleo Workout: Train Like Your Ancestors
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover primal fitness with functional movement patterns, high-intensity intervals, natural bodyweight 
+              Discover primal fitness with functional movement patterns, high-intensity intervals, natural bodyweight
               exercises, and varied outdoor training that builds real-world strength and athleticism.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +94,7 @@ export default function PaleoWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,13 +119,13 @@ export default function PaleoWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">The Primal Fitness Philosophy</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Paleo/primal fitness mimics how our ancestors moved - **varied, functional, high-intensity bursts** followed 
-                by rest. No treadmills or machines. Instead: sprinting, lifting heavy things, climbing, jumping, crawling, 
-                and playing. Workouts are short but intense, emphasizing compound movements that build real-world strength, 
-                power, and athleticism. Think CrossFit meets natural movement - constantly varied, functional exercises at 
+                Paleo/primal fitness mimics how our ancestors moved - **varied, functional, high-intensity bursts** followed
+                by rest. No treadmills or machines. Instead: sprinting, lifting heavy things, climbing, jumping, crawling,
+                and playing. Workouts are short but intense, emphasizing compound movements that build real-world strength,
+                power, and athleticism. Think CrossFit meets natural movement - constantly varied, functional exercises at
                 high intensity with adequate rest between sessions.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-orange-800">Primal Movement Patterns</h4>
@@ -95,7 +139,7 @@ export default function PaleoWorkoutPage() {
                     <li>• <strong>Jump:</strong> Explosive power</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-amber-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-amber-800">Why Primal Fitness Works</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -118,7 +162,7 @@ export default function PaleoWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Paleo/Primal Workout Programs</h2>
-            
+
             <div className="space-y-8">
               {/* Strength Training */}
               <Card className="border-red-200">
@@ -130,10 +174,10 @@ export default function PaleoWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Focus on heavy compound lifts - the movements that build true functional strength. Lift heavy things, 
+                    Focus on heavy compound lifts - the movements that build true functional strength. Lift heavy things,
                     just like our ancestors lifted rocks, logs, and carried animals.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-red-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Full Body Strength Workout (40 min):</h5>
@@ -171,10 +215,10 @@ export default function PaleoWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    MetCon (metabolic conditioning) mimics the intense bursts of activity our ancestors did - chasing prey, 
+                    MetCon (metabolic conditioning) mimics the intense bursts of activity our ancestors did - chasing prey,
                     fleeing danger. Short, brutal, effective. Like CrossFit WODs.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-orange-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Sample MetCon Workout #1 - "Primal Grind" (20 min AMRAP*):</h5>
@@ -227,10 +271,10 @@ export default function PaleoWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Our ancestors sprinted occasionally - chasing game or escaping predators. Sprint training builds explosive 
+                    Our ancestors sprinted occasionally - chasing game or escaping predators. Sprint training builds explosive
                     power, burns fat, and improves fast-twitch muscle fibers. But it's intense - once or twice weekly is enough.
                   </p>
-                  
+
                   <div className="bg-yellow-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Sprint Workout (30 min total):</h5>
                     <div className="space-y-2 text-sm text-gray-700">
@@ -258,10 +302,10 @@ export default function PaleoWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Paleo lifestyle emphasizes moving outdoors in natural environments - hiking, climbing, swimming in nature, 
+                    Paleo lifestyle emphasizes moving outdoors in natural environments - hiking, climbing, swimming in nature,
                     obstacle courses. This is "play" but also excellent functional fitness.
                   </p>
-                  
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Natural Movement Activities:</h5>
@@ -295,11 +339,11 @@ export default function PaleoWorkoutPage() {
       </section>
 
       {/* Sample Week */}
-      <section className="py-16 bg-white">
+      <section id="weekly" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sample Paleo Training Week</h2>
-            
+
             <Card className="border-orange-200">
               <CardHeader className="bg-orange-50">
                 <CardTitle className="text-orange-800">Weekly Training Schedule</CardTitle>
@@ -342,11 +386,11 @@ export default function PaleoWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Paleo Training Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Primal Training Principles:</h4>
@@ -373,7 +417,7 @@ export default function PaleoWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -404,6 +448,15 @@ export default function PaleoWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-orange-700 to-amber-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -412,7 +465,7 @@ export default function PaleoWorkoutPage() {
               Complete Your Primal Transformation
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Primal fitness is powerful, but combine with the paleo diet - whole foods, no grains, high protein - 
+              Primal fitness is powerful, but combine with the paleo diet - whole foods, no grains, high protein -
               for complete ancestral health and optimal body composition.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -430,6 +483,10 @@ export default function PaleoWorkoutPage() {
             <p className="text-white text-sm mt-6">
               🔥 Train like your ancestors for primal strength and vitality
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

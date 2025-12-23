@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Heart, Activity, Smile, Sun, Users, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,50 @@ export const metadata: Metadata = {
 }
 
 export default function MediterraneanWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Mediterranean Lifestyle", href: "/workouts/mediterranean" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "activities", label: "Activities" },
+    { id: "weekly", label: "Weekly Plan" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Is walking really enough exercise or do I need to do intense workouts?",
+      answer: "Walking IS enough for general health and Mediterranean lifestyle benefits! Research shows: 30 minutes daily walking reduces heart disease risk by 30-40%, improves mood and mental health, helps maintain healthy weight, strengthens bones, improves longevity. Mediterranean approach isn't about intense gym sessions - it's about CONSISTENT, moderate daily movement you can sustain for life. That said, adding some strength training 2x weekly and occasional higher-intensity activity (hiking, swimming, dancing) provides additional benefits. But if you're currently sedentary, daily walking is an EXCELLENT start and sustainable long-term."
+    },
+    {
+      question: "Can the Mediterranean workout approach help with weight loss?",
+      answer: "YES, but through lifestyle change, not extreme exercise! Mediterranean approach supports weight loss through: 1) Daily movement (walking, active living) burns 200-300+ calories, 2) Enjoyable activities mean better adherence than forcing yourself to hate the gym, 3) Combined with Mediterranean DIET (whole foods, olive oil, fish, vegetables), creates natural calorie balance, 4) Stress reduction (which lowers cortisol and stress-related eating). Results are GRADUAL but SUSTAINABLE. Expect 0.5-1 lb per week, not rapid crashes. Best part: lifestyle is enjoyable, so you maintain it forever vs. yo-yo dieting."
+    },
+    {
+      question: "Do I need a gym for Mediterranean-style exercise?",
+      answer: "NO! Mediterranean exercise philosophy is ANTI-gym. It's about integrating movement into daily life: Walking to markets/errands instead of driving, taking stairs, gardening, outdoor activities (hiking, swimming, cycling), playing with kids/grandkids, dancing, casual sports with friends. The gym is OPTIONAL if you enjoy it, but not required. Mediterranean populations stay active without gyms - through natural movement, walking, outdoor work, social activities. Modern application: Park farther away, walk during lunch breaks, take evening strolls, join outdoor groups. Movement should feel like LIVING, not exercising."
+    },
+    {
+      question: "How much exercise do I need for Mediterranean lifestyle benefits?",
+      answer: "MINIMUM: 30 minutes daily moderate activity (walking, gardening, cycling). IDEAL: 45-60 minutes most days with variety. This doesn't need to be continuous - can be 3x 10-minute walks throughout day. Mediterranean approach emphasizes: CONSISTENCY over intensity (daily gentle movement > occasional intense workout), ENJOYMENT (activities you like so you stick with it), VARIETY (walking, swimming, hiking, cycling, dancing - not repetitive gym routine), SOCIAL (group activities or with family). More important than duration/intensity is making movement a natural daily habit for LIFE, not a temporary fitness phase."
+    },
+    {
+      question: "Can older adults or beginners follow Mediterranean workout approach?",
+      answer: "ABSOLUTELY - it's IDEAL for beginners, older adults, and those new to exercise! Reasons: 1) LOW BARRIER - no equipment, gym, or athletic ability needed, 2) LOW IMPACT - walking, swimming are gentle on joints, 3) SCALABLE - start with 10-minute walks, gradually increase, 4) SAFE - low injury risk compared to intense training, 5) SOCIAL - group walks/activities provide motivation and support, 6) SUSTAINABLE - easy to maintain long-term. Start very gently if sedentary: Week 1-2: 10-minute daily walks, Week 3-4: 15-20 minutes, gradually progress. Mediterranean approach is about LIFELONG active living, not athletic performance. Perfect for any age/fitness level!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-600 to-emerald-700 text-white py-16">
+      <section className="bg-gradient-to-br from-green-600 to-emerald-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-green-700 font-semibold">
               🌿 Active Mediterranean Lifestyle
@@ -30,7 +74,7 @@ export default function MediterraneanWorkoutPage() {
               Mediterranean Lifestyle: Active Living for Longevity
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the Mediterranean approach to fitness - not intense gym sessions, but a lifestyle of daily movement, 
+              Discover the Mediterranean approach to fitness - not intense gym sessions, but a lifestyle of daily movement,
               walking, outdoor activities, and social physical activities for lasting health and longevity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +94,7 @@ export default function MediterraneanWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,13 +119,13 @@ export default function MediterraneanWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">The Mediterranean Approach to Fitness</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Mediterranean cultures prioritize **active living** over structured exercise. Instead of spending hours at 
-                the gym, they integrate movement throughout daily life - walking to markets, gardening, dancing, socializing 
-                while active, and enjoying outdoor activities. This sustainable approach leads to better adherence, lower 
-                stress, and greater longevity than intense, unsustainable gym routines. The focus is moderate, consistent 
+                Mediterranean cultures prioritize **active living** over structured exercise. Instead of spending hours at
+                the gym, they integrate movement throughout daily life - walking to markets, gardening, dancing, socializing
+                while active, and enjoying outdoor activities. This sustainable approach leads to better adherence, lower
+                stress, and greater longevity than intense, unsustainable gym routines. The focus is moderate, consistent
                 activity combined with rest, enjoyment, and social connection.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-green-800">Mediterranean Fitness Principles</h4>
@@ -94,7 +138,7 @@ export default function MediterraneanWorkoutPage() {
                     <li>• Enjoyment and sustainability over intensity</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-emerald-800">Health Benefits</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -117,7 +161,7 @@ export default function MediterraneanWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Mediterranean Active Living Activities</h2>
-            
+
             <div className="space-y-8">
               {/* Walking */}
               <Card className="border-green-200">
@@ -129,11 +173,11 @@ export default function MediterraneanWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Walking is the cornerstone of Mediterranean fitness. It's free, accessible, low-impact, and sustainable 
-                    for life. Mediterranean cultures walk to markets, cafes, friends' homes - building 10,000+ steps into 
+                    Walking is the cornerstone of Mediterranean fitness. It's free, accessible, low-impact, and sustainable
+                    for life. Mediterranean cultures walk to markets, cafes, friends' homes - building 10,000+ steps into
                     daily life without "exercise."
                   </p>
-                  
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Daily Walking Routine:</h5>
@@ -172,10 +216,10 @@ export default function MediterraneanWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Mediterranean lifestyle emphasizes outdoor movement in natural settings, providing both physical 
+                    Mediterranean lifestyle emphasizes outdoor movement in natural settings, providing both physical
                     activity and mental health benefits from nature exposure and vitamin D from sunshine.
                   </p>
-                  
+
                   <div className="grid md:grid-cols-3 gap-4">
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2 text-blue-800">Gardening (2-3x/week):</h5>
@@ -223,10 +267,10 @@ export default function MediterraneanWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Exercise doesn't feel like "work" when it's social and fun. Mediterranean cultures integrate movement 
+                    Exercise doesn't feel like "work" when it's social and fun. Mediterranean cultures integrate movement
                     into social activities, making fitness enjoyable and sustainable.
                   </p>
-                  
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-purple-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Social Activities:</h5>
@@ -263,10 +307,10 @@ export default function MediterraneanWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    While not traditional, adding basic strength training helps maintain muscle mass and bone density with 
+                    While not traditional, adding basic strength training helps maintain muscle mass and bone density with
                     aging. Keep it simple, functional, and enjoyable.
                   </p>
-                  
+
                   <div className="bg-orange-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Simple Home Routine (20 minutes, 2x/week):</h5>
                     <ul className="text-sm text-gray-700 space-y-2">
@@ -286,11 +330,11 @@ export default function MediterraneanWorkoutPage() {
       </section>
 
       {/* Sample Week */}
-      <section className="py-16 bg-white">
+      <section id="weekly" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sample Mediterranean Active Living Week</h2>
-            
+
             <Card className="border-green-200">
               <CardHeader className="bg-green-50">
                 <CardTitle className="text-green-800">Typical Weekly Movement Pattern</CardTitle>
@@ -343,11 +387,11 @@ export default function MediterraneanWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mediterranean Lifestyle Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Embrace Active Living:</h4>
@@ -374,7 +418,7 @@ export default function MediterraneanWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Avoid Modern Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -405,6 +449,15 @@ export default function MediterraneanWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-green-600 to-emerald-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -413,7 +466,7 @@ export default function MediterraneanWorkoutPage() {
               Complete Your Mediterranean Lifestyle
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Active living is one pillar of the Mediterranean lifestyle. Combine with the Mediterranean diet - rich in 
+              Active living is one pillar of the Mediterranean lifestyle. Combine with the Mediterranean diet - rich in
               whole foods, olive oil, and fish - for complete health and longevity.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -431,6 +484,10 @@ export default function MediterraneanWorkoutPage() {
             <p className="text-white text-sm mt-6">
               🌿 Adopt the world's healthiest lifestyle for lasting vitality and longevity
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Baby, Heart, Activity, Shield, Clock, Target, Smile } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function PrenatalWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Prenatal Exercise", href: "/workouts/pregnancy-nutrition" },
+  ]
+
+  const tocItems = [
+    { id: "benefits", label: "Benefits" },
+    { id: "safety", label: "Safety Guidelines" },
+    { id: "exercises", label: "By Trimester" },
+    { id: "routine", label: "Daily Routine" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Is it safe to exercise during pregnancy?",
+      answer: "Yes! For most healthy pregnancies, exercise is SAFE and BENEFICIAL. Moderate activity (20-30 min daily) reduces back pain, improves mood, easier labor, faster recovery, and reduces gestational diabetes risk. ALWAYS get doctor clearance first. Avoid contact sports, hot yoga, lying flat on back (after 1st trimester), and activities with fall risk."
+    },
+    {
+      question: "What trimester is most important for exercise?",
+      answer: "ALL trimesters benefit from exercise, but 2nd trimester (weeks 13-26) is often easiest - energy returns, minimal discomfort, belly not too big yet. 1st trimester focus on gentle movement despite fatigue. 3rd trimester prioritize pelvic floor, gentle walking, and birth prep exercises. Consistency throughout pregnancy gives best results."
+    },
+    {
+      question: "Will exercise harm my baby?",
+      answer: "No! Moderate exercise is GOOD for baby development - improves placental function, healthy birth weight, better brain development, improved cardiovascular health. What HARMS baby: overheating (avoid hot yoga, exercising in heat), falling (no contact sports, skiing), overexertion (stay conversational pace). If you can talk comfortably during exercise, it's safe intensity."
+    },
+    {
+      question: "Why can't I lie on my back after first trimester?",
+      answer: "After week 16, lying flat compresses the vena cava (major vein returning blood to heart), reducing blood flow to baby by 25-30%. This causes dizziness in mom, reduced oxygen to baby. Use wedge/pillows to stay slightly elevated, or exercise standing/on side. Lying on LEFT side is best for blood flow."
+    },
+    {
+      question: "What are Kegels and why are they critical during pregnancy?",
+      answer: "Kegels strengthen pelvic floor muscles that support uterus, bladder, bowels. During pregnancy/labor these muscles stretch MASSIVELY. Doing Kegels daily (10 reps, 10-second holds, 3x daily) prevents: urinary incontinence, pelvic organ prolapse after birth, makes pushing during labor more effective, faster postpartum recovery. Start NOW - it's the #1 exercise for pregnancy."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-600 to-rose-700 text-white py-16">
+      <section className="bg-gradient-to-br from-pink-600 to-rose-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-pink-600 font-semibold">
               👶 Safe Prenatal Exercise
@@ -30,7 +75,7 @@ export default function PrenatalWorkoutPage() {
               Prenatal Exercise: Safe Workouts for Healthy Pregnancy
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete prenatal exercise guide with safe, doctor-approved workouts for each trimester including 
+              Complete prenatal exercise guide with safe, doctor-approved workouts for each trimester including
               gentle cardio, strength training, pelvic floor work, and stretches for comfortable pregnancy and easier delivery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function PrenatalWorkoutPage() {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-16 bg-white">
+      <section id="benefits" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,13 +120,13 @@ export default function PrenatalWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Benefits of Prenatal Exercise</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Regular, moderate exercise during pregnancy offers numerous benefits for both mother and baby. Exercise 
-                reduces back pain and discomfort, improves mood and energy, helps manage weight gain, strengthens muscles 
-                for labor, improves sleep quality, reduces risk of gestational diabetes and pre-eclampsia, aids postpartum 
-                recovery, and promotes healthy baby development. The key is choosing safe, low-impact activities and 
+                Regular, moderate exercise during pregnancy offers numerous benefits for both mother and baby. Exercise
+                reduces back pain and discomfort, improves mood and energy, helps manage weight gain, strengthens muscles
+                for labor, improves sleep quality, reduces risk of gestational diabetes and pre-eclampsia, aids postpartum
+                recovery, and promotes healthy baby development. The key is choosing safe, low-impact activities and
                 listening to your body.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-pink-800">For Mother:</h4>
@@ -94,7 +139,7 @@ export default function PrenatalWorkoutPage() {
                     <li>• Prevents excessive weight gain</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-rose-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-rose-800">For Baby:</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -112,11 +157,11 @@ export default function PrenatalWorkoutPage() {
       </section>
 
       {/* Safety Guidelines */}
-      <section className="py-16 bg-gray-50">
+      <section id="safety" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pregnancy Exercise Safety Guidelines</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <Card className="border-green-200">
                 <CardHeader>
@@ -194,7 +239,7 @@ export default function PrenatalWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Safe Exercises by Trimester</h2>
-            
+
             <div className="space-y-8">
               {/* First Trimester */}
               <Card className="border-pink-200">
@@ -203,10 +248,10 @@ export default function PrenatalWorkoutPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-4">
-                    If you exercised regularly before pregnancy, you can usually continue at similar intensity. If new to 
+                    If you exercised regularly before pregnancy, you can usually continue at similar intensity. If new to
                     exercise, start slowly with low-impact activities. Listen to your body - fatigue is common.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-pink-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Daily Walking Routine (20-30 minutes):</h5>
@@ -232,7 +277,7 @@ export default function PrenatalWorkoutPage() {
                     <div className="bg-pink-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Pelvic Floor Exercises (Daily - CRITICAL):</h5>
                       <p className="text-sm text-gray-700 mb-2">
-                        <strong>Kegel exercises:</strong> Contract pelvic floor muscles (like stopping urine flow), hold 5-10 
+                        <strong>Kegel exercises:</strong> Contract pelvic floor muscles (like stopping urine flow), hold 5-10
                         seconds, release. Do 10 reps, 3 times daily. Prevents incontinence and aids delivery.
                       </p>
                     </div>
@@ -247,15 +292,15 @@ export default function PrenatalWorkoutPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-4">
-                    Energy usually returns! This is often the best time to exercise. Avoid exercises lying flat on back 
+                    Energy usually returns! This is often the best time to exercise. Avoid exercises lying flat on back
                     (reduces blood flow to baby). Modify as belly grows.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-purple-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Swimming/Water Aerobics (3-4x/week, 30 min):</h5>
                       <p className="text-sm text-gray-700">
-                        Excellent low-impact option. Water supports belly, reduces swelling, easy on joints. Swim laps at 
+                        Excellent low-impact option. Water supports belly, reduces swelling, easy on joints. Swim laps at
                         comfortable pace or join prenatal water aerobics class.
                       </p>
                     </div>
@@ -293,15 +338,15 @@ export default function PrenatalWorkoutPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-4">
-                    Balance becomes more difficult as belly grows. Focus on gentle movement, pelvic floor work, and 
+                    Balance becomes more difficult as belly grows. Focus on gentle movement, pelvic floor work, and
                     preparing body for labor. Listen to your body and reduce intensity as needed.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Gentle Walking (Daily, 15-20 min):</h5>
                       <p className="text-sm text-gray-700">
-                        Short, frequent walks are better than long sessions. Helps with swelling, positioning baby, and 
+                        Short, frequent walks are better than long sessions. Helps with swelling, positioning baby, and
                         prepares body for labor. Walk at comfortable pace, stop if tired.
                       </p>
                     </div>
@@ -336,11 +381,11 @@ export default function PrenatalWorkoutPage() {
       </section>
 
       {/* Sample Daily Routine */}
-      <section className="py-16 bg-gray-50">
+      <section id="routine" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sample Daily Prenatal Exercise Routine (20 minutes)</h2>
-            
+
             <Card className="border-pink-200">
               <CardHeader className="bg-pink-50">
                 <CardTitle className="text-pink-800">Morning Routine (Suitable for All Trimesters - Modify as Needed)</CardTitle>
@@ -401,11 +446,11 @@ export default function PrenatalWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-white">
+      <section id="tips" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Prenatal Exercise Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -432,7 +477,7 @@ export default function PrenatalWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -463,6 +508,15 @@ export default function PrenatalWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-pink-600 to-rose-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -471,7 +525,7 @@ export default function PrenatalWorkoutPage() {
               Complete Your Healthy Pregnancy Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise is essential, but proper prenatal nutrition is equally critical for healthy baby development 
+              Exercise is essential, but proper prenatal nutrition is equally critical for healthy baby development
               and maternal well-being. Get your complete pregnancy nutrition guide.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -489,6 +543,10 @@ export default function PrenatalWorkoutPage() {
             <p className="text-white text-sm mt-6">
               ✨ Always consult your healthcare provider before starting any exercise program during pregnancy
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

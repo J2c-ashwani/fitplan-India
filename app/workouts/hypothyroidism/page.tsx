@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Zap, Dumbbell, Heart, Clock, Target, TrendingUp, Flame } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -12,11 +17,45 @@ export const metadata: Metadata = {
 }
 
 export default function HypothyroidismWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Hypothyroidism Plan", href: "/workouts/hypothyroidism" },
+  ]
+
+  const tocItems = [
+    { id: "why-exercise", label: "Why Exercise?" },
+    { id: "workout-plan", label: "4-Week Plan" },
+    { id: "guidelines", label: "Guidelines" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "What's the best exercise for hypothyroidism weight loss?",
+      answer: "Combination approach: 3-4x weekly strength training (builds metabolism-boosting muscle) + 2-3x weekly moderate cardio (walking, cycling, swimming). Strength training is non-negotiable - it prevents muscle loss during calorie deficit and maintains metabolic rate."
+    },
+    {
+      question: "Should I exercise if I'm extremely tired from hypothyroidism?",
+      answer: "Listen to your body. On severe fatigue days, take rest or do gentle 10-minute walk. On moderate energy days, do planned workout but scale intensity down 20-30%. Exercise paradoxically INCREASES energy over 2-4 weeks as body adapts."
+    },
+    {
+      question: "Why is weight loss so slow with hypothyroidism?",
+      answer: "Low thyroid hormones slow metabolism by 20-40%. Your body burns fewer calories at rest and during activity. Weight loss requires MORE patience - expect 0.5-1 lb weekly vs 1-2 lb for normal metabolism. Focus on body composition (fat loss, muscle gain) not just scale weight."
+    },
+    {
+      question: "Can too much exercise make hypothyroidism worse?",
+      answer: "Yes - overtraining increases cortisol which suppresses thyroid function further. Avoid: daily HIIT, excessive cardio (60+ min), training when exhausted, inadequate rest days. Stick to moderate intensity with proper recovery."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-cyan-700 text-white py-16">
+      <section className="bg-gradient-to-br from-blue-600 to-cyan-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-blue-600 font-semibold">
               💪 Thyroid-Friendly Exercise
@@ -25,7 +64,7 @@ export default function HypothyroidismWorkoutPage() {
               Hypothyroidism Exercise Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete workout program designed specifically for underactive thyroid (hypothyroidism) with metabolism-boosting 
+              Complete workout program designed specifically for underactive thyroid (hypothyroidism) with metabolism-boosting
               strength training, gentle cardio, and energy-building exercises that work WITH your thyroid condition, not against it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -41,15 +80,15 @@ export default function HypothyroidismWorkoutPage() {
       </section>
 
       {/* Why Exercise is Critical */}
-      <section className="py-16 bg-white">
+      <section id="why-exercise" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is CRITICAL for Hypothyroidism Weight Loss</h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is absolutely essential for hypothyroidism weight loss because it directly combats the metabolic slowdown 
-                caused by low thyroid hormones. While diet alone can help, combining proper nutrition with the RIGHT type of exercise 
+                Exercise is absolutely essential for hypothyroidism weight loss because it directly combats the metabolic slowdown
+                caused by low thyroid hormones. While diet alone can help, combining proper nutrition with the RIGHT type of exercise
                 accelerates fat loss by 40-60% and dramatically improves energy, mood, and quality of life for thyroid patients.
               </p>
 
@@ -89,17 +128,23 @@ export default function HypothyroidismWorkoutPage() {
                 </div>
               </div>
             </div>
+
+            {/* Engagement Hook: Calculator */}
+            <div className="mb-12">
+              <CalculatorWidget />
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* Workout Plan */}
-      <section id="workout-plan" className="py-16 bg-gray-50">
+      <section id="workout-plan" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Complete 4-Week Hypothyroidism Workout Plan</h2>
             <p className="text-center text-gray-600 mb-12">
-              Beginner to intermediate program focusing on strength training, gentle cardio, and metabolism-boosting exercises. 
+              Beginner to intermediate program focusing on strength training, gentle cardio, and metabolism-boosting exercises.
               5 workouts per week with 2 rest days.
             </p>
 
@@ -153,10 +198,10 @@ export default function HypothyroidismWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    Focus on compound movements that work multiple muscle groups simultaneously. Start with lighter weights, 
+                    Focus on compound movements that work multiple muscle groups simultaneously. Start with lighter weights,
                     perfect form first, then gradually increase weight over 4 weeks.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-2">Warm-up (5 minutes):</h4>
@@ -267,11 +312,11 @@ export default function HypothyroidismWorkoutPage() {
       </section>
 
       {/* Exercise Guidelines */}
-      <section className="py-16 bg-white">
+      <section id="guidelines" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Important Exercise Guidelines for Hypothyroidism</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-bold text-lg mb-4 text-green-700 flex items-center">
@@ -301,7 +346,7 @@ export default function HypothyroidismWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-bold text-lg mb-4 text-red-700 flex items-center">
                   <AlertCircle className="w-6 h-6 mr-2" />
@@ -335,6 +380,15 @@ export default function HypothyroidismWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -346,6 +400,10 @@ export default function HypothyroidismWorkoutPage() {
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold" asChild>
               <Link href="/plans/hypothyroidism">View Hypothyroidism Diet Plan</Link>
             </Button>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

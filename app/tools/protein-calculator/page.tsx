@@ -9,8 +9,38 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Activity, CheckCircle, Info, Database } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import FAQSection from "@/components/FAQSection"
 
 export default function ProteinCalculatorPage() {
+    const breadcrumbItems = [
+        { label: "Tools", href: "/tools" },
+        { label: "Protein Calculator", href: "/tools/protein-calculator" },
+    ]
+
+    const faqs = [
+        {
+            question: "Is it safe to eat a high protein diet?",
+            answer: "For healthy individuals with normal kidney function, high protein diets (up to 2g-2.5g per kg) are perfectly safe. They help with satiety, metabolism, and muscle repair. However, if you have pre-existing kidney conditions, consult a doctor first."
+        },
+        {
+            question: "Do I need protein powder to build muscle?",
+            answer: "No, protein powder is just a convenient source of high-quality protein (like powdered milk/curd). You can absolutely build muscle eating chicken, eggs, soya, paneer, and dal. Supplements are helpful only if you struggle to meet your daily target through food alone."
+        },
+        {
+            question: "What is the best vegetarian protein source?",
+            answer: "Soya chunks contain the highest protein (52g per 100g), followed by Paneer, Tofu, and Lentils. Combining grains (Rice/Roti) with pulses (Dal/Rajma) creates a 'complete protein' with all essential amino acids."
+        },
+        {
+            question: "How much protein do I need for weight loss?",
+            answer: "Protein is critical for weight loss to prevent muscle loss. Aim for 1.2g to 1.6g per kg of body weight. This keeps you full longer and burns more calories during digestion compared to carbs or fats."
+        },
+        {
+            question: "Can I eat all my protein in one meal?",
+            answer: "It's better to spread protein intake across 3-4 meals (e.g., 20-30g per meal). This maximizes muscle protein synthesis throughout the day. Your body can absorb large amounts, but utilizing it for muscle building is more efficient with frequent doses."
+        }
+    ]
+
     const [proteinData, setProteinData] = useState({
         weight: "",
         activity: "moderate",
@@ -78,6 +108,9 @@ export default function ProteinCalculatorPage() {
         <div className="min-h-screen bg-gray-50">
             <section className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white py-16">
                 <div className="container mx-auto px-4">
+                    <div className="mb-6 text-purple-100">
+                        <Breadcrumbs items={breadcrumbItems} />
+                    </div>
                     <div className="max-w-4xl mx-auto text-center">
                         <Badge className="mb-4 bg-white text-purple-600 font-semibold">Free Health Tool</Badge>
                         <h1 className="text-4xl font-bold mb-4">Daily Protein Calculator</h1>
@@ -228,8 +261,18 @@ export default function ProteinCalculatorPage() {
                             </Card>
                         </div>
                     </div>
+
+                    {/* FAQ Section */}
+                    <section className="py-12 bg-white">
+                        <div className="container mx-auto px-4">
+                            <div className="max-w-4xl mx-auto">
+                                <FAQSection faqs={faqs} />
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
         </div>
+            </section >
+        </div >
     )
 }

@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Trophy, Dumbbell, Zap, Clock, Target, TrendingUp, Activity, Heart } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,50 @@ export const metadata: Metadata = {
 }
 
 export default function AthleteWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Athlete Training", href: "/workouts/athlete-nutrition" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "programs", label: "Training Programs" },
+    { id: "sample", label: "Sample Workout" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "How is athlete training different from general fitness?",
+      answer: "Athlete training is SPORT-SPECIFIC and performance-focused, not just general health/aesthetics. Differences: 1) Training mimics sport movements and energy systems (sprinter does explosive work, endurance athlete does aerobic base), 2) Periodization - structured cycles to peak for competitions/season, 3) Higher volume/intensity than recreational fitness, 4) Recovery protocols are critical (sleep, nutrition, mobility), 5) Performance testing and data tracking. General fitness = look good, feel good. Athletic training = WIN, perform at highest level. Requires coaching, planning, specificity."
+    },
+    {
+      question: "How often should athletes train per week?",
+      answer: "Depends on sport and training phase: STRENGTH/POWER athletes (sp rinters, throwers, fighters): 4-6x weekly with at least 1-2 full rest days. ENDURANCE athletes (distance runners, cyclists): 5-7x weekly with varied intensities, 1 rest or active recovery day. TEAM SPORT athletes (football, hockey): 3-4x strength training + 3-5x sport-specific practice. During season: Lower volume, higher intensity. Off-season: Higher volume, building base. KEY: More training NOT always better - recovery is when adaptation happens! Overtraining = decreased performance, injury, burnout."
+    },
+    {
+      question: "Do athletes need different nutrition than regular people?",
+      answer: "YES! Athletes have unique needs: 1) HIGHER calories (can be 3000-6000+ depending on sport/size vs 2000-2500 for sedentary), 2) TIMING matters (pre/post workout nutrition critical for recovery), 3) More PROTEIN (0.7-1g per lb bodyweight to repair muscles), 4) Carb needs vary by sport (endurance athletes need high carbs for glycogen, strength athletes moderate), 5) Hydration + electrolytes (lose significant fluid during training). General diet advice doesn't work. Athletes should work with sports nutritionist to optimize fuel, recovery, performance."
+    },
+    {
+      question: "Can I train for multiple sports at once or should I specialize?",
+      answer: "Depends on AGE and LEVEL: YOUNG athletes (under 16-18): SHOULD play multiple sports! Develops overall athleticism, prevents burnout, builds varied movement skills, reduces overuse injuries. ELITE/COMPETITIVE level (college, professional): MUST specialize to compete at highest levels. Sport-specific adaptations require focused training. RECREATIONAL/MASTERS athletes: Can absolutely do multiple! Cross-training prevents boredom, reduces injury risk, improves overall fitness. Bottom line: Early specialization (before 16) often backfires with injuries/burnout. Let young athletes explore. Specialize when performance level demands it."
+    },
+    {
+      question: "How important is rest and recovery for athletes?",
+      answer: "EXTREMELY CRITICAL - arguably AS IMPORTANT as training itself! Training provides stimulus, but recovery is when adaptation happens. Key recovery strategies: 1) SLEEP 8-10 hours (tissue repair during deep sleep - non-negotiable), 2) Nutrition timing (post-workout meals critical), 3) Active recovery days (light movement aids recovery), 4) Mobility/stretching, 5) Stress management. Without adequate rest, performance plateaus or declines despite hard training. Many athletes train too much and under-recover, leading to overtraining, decreased performance, injury, hormonal disruption. Rule: Quality training + optimal recovery > high volume poor recovery. Recovery IS training!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-700 to-purple-900 text-white py-16">
+      <section className="bg-gradient-to-br from-indigo-700 to-purple-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-indigo-700 font-semibold">
               🏆 Elite Performance Training
@@ -30,7 +74,7 @@ export default function AthleteWorkoutPage() {
               Athlete Training: Peak Performance Workouts
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete training programs for competitive athletes including strength training, speed/agility work, 
+              Complete training programs for competitive athletes including strength training, speed/agility work,
               endurance conditioning, and sport-specific drills to maximize athletic performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +94,7 @@ export default function AthleteWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,13 +119,13 @@ export default function AthleteWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Athletic Training Principles</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Elite athletic performance requires systematic training across multiple components: strength and power 
-                development, speed and agility, sport-specific skills, aerobic and anaerobic conditioning, flexibility 
-                and mobility, and strategic recovery. Training is periodized with off-season (build foundation), pre-season 
-                (sport-specific prep), in-season (maintain performance), and post-season (recovery) phases. Athletes train 
+                Elite athletic performance requires systematic training across multiple components: strength and power
+                development, speed and agility, sport-specific skills, aerobic and anaerobic conditioning, flexibility
+                and mobility, and strategic recovery. Training is periodized with off-season (build foundation), pre-season
+                (sport-specific prep), in-season (maintain performance), and post-season (recovery) phases. Athletes train
                 5-6 days per week with varied intensities and focuses.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">Training Components</h4>
@@ -94,7 +138,7 @@ export default function AthleteWorkoutPage() {
                     <li>• Active recovery (1-2x/week)</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-purple-800">Periodization Phases</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -115,7 +159,7 @@ export default function AthleteWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Complete Training Programs by Sport Type</h2>
-            
+
             <div className="space-y-8">
               {/* Strength & Power Sports */}
               <Card className="border-red-200">
@@ -130,7 +174,7 @@ export default function AthleteWorkoutPage() {
                     <div className="bg-red-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Training Focus:</h5>
                       <p className="text-sm text-gray-700">
-                        Maximum strength, explosive power, speed development. Heavy compound lifts combined with plyometrics 
+                        Maximum strength, explosive power, speed development. Heavy compound lifts combined with plyometrics
                         and Olympic lifting variations.
                       </p>
                     </div>
@@ -179,7 +223,7 @@ export default function AthleteWorkoutPage() {
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Training Focus:</h5>
                       <p className="text-sm text-gray-700">
-                        Aerobic base building, VO2 max development, lactate threshold training, strength endurance. 
+                        Aerobic base building, VO2 max development, lactate threshold training, strength endurance.
                         Mix of long slow distance, tempo work, and interval training.
                       </p>
                     </div>
@@ -227,7 +271,7 @@ export default function AthleteWorkoutPage() {
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Training Focus:</h5>
                       <p className="text-sm text-gray-700">
-                        Balance of strength, power, speed, agility, and endurance. High emphasis on multi-directional movement, 
+                        Balance of strength, power, speed, agility, and endurance. High emphasis on multi-directional movement,
                         change of direction, and repeated sprint ability.
                       </p>
                     </div>
@@ -267,11 +311,11 @@ export default function AthleteWorkoutPage() {
       </section>
 
       {/* Sample Workout */}
-      <section className="py-16 bg-white">
+      <section id="sample" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sample Strength Training Session (All Athletes)</h2>
-            
+
             <Card className="border-indigo-200">
               <CardHeader className="bg-indigo-50">
                 <CardTitle className="text-indigo-800">Full Body Strength Workout (60 minutes)</CardTitle>
@@ -337,11 +381,11 @@ export default function AthleteWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Athletic Training Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Performance Optimization:</h4>
@@ -368,7 +412,7 @@ export default function AthleteWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -399,6 +443,15 @@ export default function AthleteWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-indigo-700 to-purple-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -407,7 +460,7 @@ export default function AthleteWorkoutPage() {
               Optimize Your Athletic Performance
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Training is only half the equation. Proper sports nutrition is essential for performance, recovery, 
+              Training is only half the equation. Proper sports nutrition is essential for performance, recovery,
               and competitive advantage. Get your complete athlete nutrition guide.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -422,6 +475,10 @@ export default function AthleteWorkoutPage() {
                 </Link>
               </Button>
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

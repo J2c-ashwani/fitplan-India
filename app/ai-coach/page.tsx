@@ -1,55 +1,97 @@
 "use client"
 
 import ChatUi from "@/components/ChatUi"
+import { useCurrency } from "@/components/CurrencyProvider"
 import { useState, useEffect } from "react"
 import { Menu, X, Clock, Trash2, MessageSquare, Plus } from "lucide-react"
+
+interface ChatMessage {
+  sender: string
+  text: string
+  type?: "text" | "loader" | "plan"
+}
 
 interface ChatSession {
   id: string
   timestamp: string
   name: string
   preview: string
-  messages: any[]
+  messages: ChatMessage[]
   profile: any
 }
 
+interface Step {
+  key: string
+  question: string
+  type: string
+  options?: string[]
+  validate?: (value: string) => string | boolean
+  response?: (value: string) => string
+}
+
 export default function AICoachPage() {
-  const steps = [
+  const { currency, symbol } = useCurrency()
+  const price = currency === "INR" ? 149 : 29
+
+  const steps: Step[] = [
     // ... keep all your 25 steps
-    { 
-      key: "name", 
-      question: "👋 Hey there! I'm your AI Fitness Coach 🤖\n\nWhat should I call you?", 
+    {
+      key: "name",
+      question: "👋 Hey there! I'm your AI Fitness Coach 🤖\n\nWhat should I call you?",
       type: "text",
       response: (value: string) => `Nice to meet you, ${value}! 🎉`
     },
-    { 
-      key: "age", 
-      question: "How old are you? (This helps me personalize your plan)", 
+    {
+      key: "phone",
+      question: "What's your WhatsApp number? 📱\n\n(Required for your plan delivery)\n⚠️ Please include Country Code (e.g., +91 9876543210)",
+      type: "text",
+      validate: (value: string) => {
+        if (!value.includes("+")) return "Please include the country code (starts with +)"
+        if (value.length < 10) return "Please enter a valid phone number"
+        const cleanVal = value.toLowerCase()
+        if (cleanVal.includes("no") || cleanVal.includes("need") || cleanVal.includes("skip")) return "A valid contact number is required to generate your personalized plan."
+        return true
+      },
+      response: (value: string) => "Got it! 📱"
+    },
+    {
+      key: "email",
+      question: "And your email address? 📧",
+      type: "text",
+      validate: (value: string) => {
+        if (!value.includes("@") || !value.includes(".")) return "Please enter a valid email address"
+        return true
+      },
+      response: (value: string) => `Perfect! 📧`
+    },
+    {
+      key: "age",
+      question: "How old are you? (This helps me personalize your plan)",
       type: "text",
       response: (value: string) => `Got it! ${value} years old. Perfect! ✨`
     },
-    { 
-      key: "gender", 
-      question: "Are you:", 
+    {
+      key: "gender",
+      question: "Are you:",
       type: "buttons",
       options: ["Male 👨", "Female 👩", "Other"],
       response: (value: string) => "Awesome! 👍"
     },
-    { 
-      key: "weight", 
-      question: "What's your current weight? ⚖️ (in kg)", 
+    {
+      key: "weight",
+      question: "What's your current weight? ⚖️ (in kg)",
       type: "text",
       response: (value: string) => `${value}kg - Got it! 📝`
     },
-    { 
-      key: "height", 
-      question: "What's your height? 📏 (in cm)", 
+    {
+      key: "height",
+      question: "What's your height? 📏 (in cm)",
       type: "text",
       response: (value: string) => `${value}cm - Perfect! ✅`
     },
-    { 
-      key: "targetWeight", 
-      question: "And what's your target weight? 🎯 (in kg)", 
+    {
+      key: "targetWeight",
+      question: "And what's your target weight? 🎯 (in kg)",
       type: "text",
       response: (value: string) => `Target: ${value}kg - Let's make it happen! 💪`
     },
@@ -58,28 +100,28 @@ export default function AICoachPage() {
       question: "Let me understand your health better 🏥\n\nDo you have any of these conditions?\n\n(You can select multiple or choose 'None')",
       type: "multiselect",
       options: [
-        "PCOS/PCOD 🩺", 
-        "Hypothyroidism 🦋", 
-        "Hyperthyroidism ⚡", 
-        "Diabetes Type 1 💉", 
-        "Diabetes Type 2 🩸", 
-        "Obesity ⚖️", 
-        "Post-Pregnancy 🤱", 
-        "Hormonal Imbalance ⚖️", 
-        "Heart Issues ❤️", 
+        "PCOS/PCOD 🩺",
+        "Hypothyroidism 🦋",
+        "Hyperthyroidism ⚡",
+        "Diabetes Type 1 💉",
+        "Diabetes Type 2 🩸",
+        "Obesity ⚖️",
+        "Post-Pregnancy 🤱",
+        "Hormonal Imbalance ⚖️",
+        "Heart Issues ❤️",
         "None ✅"
       ],
       response: (value: string) => "Thanks for sharing! 🙏"
     },
-    { 
-      key: "medications", 
-      question: "Are you currently taking any medications? 💊\n\n(Type 'None' if not applicable)", 
+    {
+      key: "medications",
+      question: "Are you currently taking any medications? 💊\n\n(Type 'None' if not applicable)",
       type: "text",
       response: (value: string) => value.toLowerCase() === "none" ? "Great! 👍" : "Noted! I'll keep that in mind. 📝"
     },
-    { 
-      key: "allergies", 
-      question: "Do you have any food allergies? 🚫\n\n(e.g., Nuts, Dairy, Gluten)\n\nType 'None' if not applicable", 
+    {
+      key: "allergies",
+      question: "Do you have any food allergies? 🚫\n\n(e.g., Nuts, Dairy, Gluten)\n\nType 'None' if not applicable",
       type: "text",
       response: (value: string) => value.toLowerCase() === "none" ? "Perfect! ✅" : "Got it! I'll avoid those. 🙏"
     },
@@ -102,10 +144,10 @@ export default function AICoachPage() {
       question: "How active are you currently? 🏃‍♀️",
       type: "buttons",
       options: [
-        "Sedentary 🪑 (Desk job, no exercise)", 
-        "Light 🚶 (1-3 days/week)", 
-        "Moderate 🏋️ (3-5 days/week)", 
-        "Active 💪 (6-7 days/week)", 
+        "Sedentary 🪑 (Desk job, no exercise)",
+        "Light 🚶 (1-3 days/week)",
+        "Moderate 🏋️ (3-5 days/week)",
+        "Active 💪 (6-7 days/week)",
         "Very Active 🔥 (Athlete level)"
       ],
       response: (value: string) => "Got your activity level! 📊"
@@ -145,9 +187,9 @@ export default function AICoachPage() {
       options: ["Minimal (Quick meals) ⚡", "Moderate (30-45 min) ⏱️", "Extensive (Meal prep OK) 👩‍🍳"],
       response: (value: string) => "Perfect! I'll match your schedule! ⏰"
     },
-    { 
-      key: "foodsToAvoid", 
-      question: "Any foods you want to avoid? 🚫\n\n(Type 'None' if not applicable)", 
+    {
+      key: "foodsToAvoid",
+      question: "Any foods you want to avoid? 🚫\n\n(Type 'None' if not applicable)",
       type: "text",
       response: (value: string) => value.toLowerCase() === "none" ? "Great! No restrictions! 🎉" : "Noted! I'll avoid those! 📝"
     },
@@ -185,24 +227,13 @@ export default function AICoachPage() {
       type: "buttons",
       options: ["Budget-Friendly 💵", "Moderate 💳", "Flexible 💎"],
       response: (value: string) => "Perfect! I'll keep it within budget! 💰"
-    },
-    { 
-      key: "email", 
-      question: "Almost done! 🎉\n\nWhat's your email? 📧\n\n(We'll send your plan here)", 
-      type: "text",
-      response: (value: string) => `Perfect! I'll send everything to ${value}! ✉️`
-    },
-    { 
-      key: "phone", 
-      question: "Last question! What's your phone number? 📱\n\n(Optional - for WhatsApp updates)", 
-      type: "text",
-      response: (value: string) => "Awesome! We're all set! 🎊"
-    },
+    }
   ]
 
-  const [messages, setMessages] = useState([
-    { sender: "ai", text: "🎉 Welcome to Your AI Fitness Journey!" },
-    { sender: "ai", text: steps[0].question }
+
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    { sender: "ai", text: "👋 Hi! I'm your AI Fitness Coach. I can build a 100% personalized diet & workout plan for you." },
+    { sender: "ai", text: "Ask me anything to get started! Try asking: 'Plan for PCOS weight loss' or 'Vegetarian muscle gain diet'👇" }
   ])
   const [input, setInput] = useState("")
   const [currentStep, setCurrentStep] = useState(0)
@@ -213,7 +244,7 @@ export default function AICoachPage() {
   const [isMultiSelectActive, setIsMultiSelectActive] = useState(false)
   const [paymentCompleted, setPaymentCompleted] = useState(false)
   const [leadId, setLeadId] = useState<string | null>(null)
-  
+
   // History management
   const [chatHistory, setChatHistory] = useState<ChatSession[]>([])
   const [showHistory, setShowHistory] = useState(true) // ✅ Show by default
@@ -247,7 +278,7 @@ export default function AICoachPage() {
     const updatedHistory = chatHistory.filter(s => s.id !== currentSessionId)
     updatedHistory.unshift(session)
     const trimmedHistory = updatedHistory.slice(0, 10)
-    
+
     setChatHistory(trimmedHistory)
     localStorage.setItem("aiCoachHistory", JSON.stringify(trimmedHistory))
   }
@@ -273,16 +304,28 @@ export default function AICoachPage() {
     setCurrentSessionId(Date.now().toString())
     setProfile({})
     setLeadId(null)
-    setCurrentStep(0)
+    setCurrentStep(0) // Will be ignored if in Demo Mode
     setShowPayment(false)
     setPaymentCompleted(false)
     setMultiSelectAnswers([])
     setIsMultiSelectActive(false)
+    setIsDemoMode(true) // Start in Demo Mode
     setMessages([
-      { sender: "ai", text: "🎉 Welcome to Your AI Fitness Journey!" },
-      { sender: "ai", text: steps[0].question }
+      { sender: "ai", text: "👋 Hi! I'm your AI Fitness Coach. I can build a 100% personalized diet & workout plan for you." },
+      { sender: "ai", text: "Ask me anything to get started! Try asking: 'Plan for PCOS weight loss' or 'Vegetarian muscle gain diet'👇" }
     ])
   }
+
+  // Demo Mode State
+  const [isDemoMode, setIsDemoMode] = useState(true)
+
+  const samplePrompts = [
+    "📉 Plan for rapid weight loss",
+    "🥑 Keto diet for beginners",
+    "💪 Vegeterian muscle building",
+    "🩸 Diabetic-friendly meal plan",
+    "🤰 Post-pregnancy weight loss",
+  ]
 
   useEffect(() => {
     console.log("🔔 showPayment:", showPayment)
@@ -338,7 +381,39 @@ export default function AICoachPage() {
   })()
 
   const handleResponse = (response: string) => {
+    // Demo Mode Interception
+    if (isDemoMode) {
+      setMessages((prev) => [...prev, { sender: "user", text: response }])
+      setIsDemoMode(false)
+
+      // Smart Pivot Response
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          { sender: "ai", text: `I can definitely help with "${response}"! 🧠` },
+          { sender: "ai", text: "To create a plan that actually WORKS for your body type, I need to know a few details first." },
+          { sender: "ai", text: steps[0].question }
+        ])
+        // Start Step 0
+        setCurrentStep(0)
+      }, 600)
+      return
+    }
+
     if (currentStep === -1 || !steps[currentStep]) return
+
+    // 1. Validation Logic
+    if (steps[currentStep].validate) {
+      const error = steps[currentStep].validate!(response)
+      if (typeof error === "string") {
+        setMessages((prev) => [
+          ...prev,
+          { sender: "user", text: response },
+          { sender: "ai", text: `⚠️ ${error}` }
+        ])
+        return
+      }
+    }
 
     const cleanResponse = response.replace(/[🏋️‍♀️🔥💪🌱🏠🏋️🌳🔄💧💦😴😫✅😌😰🕘🔄🌙💵💳💎👨👩🎯📉⚖️🏃💊🚫🥬🍗🌱🥑🥩🍽️🇮🇳🇺🇸🇮🇹🇨🇳🌍⏱️⏰🍱👨‍🍳👩‍🍳⚡💼📧📱🪑🚶🩺🦋💉🩸🤱❤️]/g, '').trim()
     setMessages((prev) => [...prev, { sender: "user", text: response }])
@@ -401,7 +476,7 @@ export default function AICoachPage() {
 🥗 ${profile.dietType} | 🍛 ${profile.cuisinePreference}
 📧 ${profile.email}`
 
-    setMessages((prev) => [...prev, { sender: "ai", text: summary }, { sender: "ai", text: "Perfect! 🎉 Your AI plan is ready for $25!" }])
+    setMessages((prev) => [...prev, { sender: "ai", text: summary }, { sender: "ai", text: `Perfect! 🎉 Your AI plan is ready for ${symbol}${price}!` }])
     setTimeout(() => {
       setShowPayment(true)
       saveLeadToSheets("Payment Screen Shown")
@@ -417,13 +492,13 @@ export default function AICoachPage() {
   const handlePayment = async () => {
     setShowPayment(false)
     setLoadingPlan(true)
-    await saveLeadToSheets("Payment Success", { paymentAmount: 25, paymentDate: new Date().toISOString() })
+    await saveLeadToSheets("Payment Success", { paymentAmount: price, paymentCurrency: currency, paymentDate: new Date().toISOString() })
     setMessages((prev) => [...prev, { sender: "ai", text: "🎉 Payment successful!" }, { sender: "ai", text: "🤖 Generating...", type: "loader" }])
 
     try {
       const res = await fetch("/api/generate-plan", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) })
       const data = await res.json()
-      await fetch("/api/send-plan-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: profile.email, name: profile.name, plan: data.plan, profile }) })
+      await fetch("/api/send-plan-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: profile.email, name: profile.name, plan: data.plan, profile, currency }) })
       await saveLeadToSheets("Success", { planGenerated: true, emailSent: true, completedDate: new Date().toISOString() })
       setMessages((prev) => prev.filter(m => m.type !== "loader").concat({ sender: "ai", text: data.plan || "Plan generated!", type: "plan" }, { sender: "ai", text: `✅ Emailed to ${profile.email}` }))
       setPaymentCompleted(true)
@@ -450,12 +525,22 @@ export default function AICoachPage() {
             <Plus className="w-4 h-4" /> New Chat
           </button>
         </div>
-        
+
         <div className="overflow-y-auto h-[calc(100vh-60px)] p-2">
           {chatHistory.length === 0 ? (
-            <div className="text-center text-gray-500 py-8 text-sm">
-              <MessageSquare className="w-8 h-8 mx-auto mb-2 opacity-50" />
-              No history yet
+            <div className="p-4">
+              <p className="text-gray-400 text-xs mb-3 font-medium uppercase tracking-wider">Try these prompts:</p>
+              <div className="space-y-2">
+                {samplePrompts.map((prompt, i) => (
+                  <button
+                    key={i}
+                    onClick={() => handleResponse(prompt)}
+                    className="w-full text-left bg-gray-800 hover:bg-gray-700 p-3 rounded-lg text-sm text-gray-300 transition-colors border border-gray-700 hover:border-gray-500"
+                  >
+                    {prompt}
+                  </button>
+                ))}
+              </div>
             </div>
           ) : (
             chatHistory.map((session) => (
@@ -499,13 +584,13 @@ export default function AICoachPage() {
               onQuickReplyClick={handleResponse}
               showSummary={false}
               showPayment={showPayment}
-              confirmProfile={() => {}}
+              confirmProfile={() => { }}
               handlePayment={handlePayment}
               handlePaymentAbandoned={handlePaymentAbandoned}
               restartFlow={startNewChat}
               loadingPlan={loadingPlan}
               disableConfirm={loadingPlan}
-              paymentAmount={25}
+              paymentAmount={price}
             />
           </div>
         </div>

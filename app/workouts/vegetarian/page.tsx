@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, Leaf } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +21,50 @@ export const metadata: Metadata = {
 }
 
 export default function VegetarianWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Vegetarian Workout", href: "/workouts/vegetarian" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Why Exercise" },
+    { id: "home-workouts", label: "Home Workouts" },
+    { id: "gym-workouts", label: "Gym Workouts" },
+    { id: "guidelines", label: "Training Guidelines" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Do vegetarians build muscle slower than non-vegetarians?",
+      answer: "NO! With proper nutrition, vegetarians build muscle at the SAME RATE as non-vegetarians. Muscle building depends on: 1) Adequate protein intake (0.8-1g per lb bodyweight - easily achievable with dairy, eggs, lentils, tofu), 2) Progressive overload training, 3) Sufficient calories. Vegetarian diet includes complete proteins from dairy and eggs, PLUS plant proteins. Many elite bodybuilders and athletes are vegetarian. The key is intentional protein planning, not animal vs. plant debate. Hit your macros, train hard, muscle will grow!"
+    },
+    {
+      question: "How much protein do vegetarians need for muscle building?",
+      answer: "Same as anyone else: 0.8-1g per lb bodyweight for muscle building. Example: 150 lb person needs 120-150g protein daily. EASY vegetarian protein sources: Greek yogurt (20g/cup), paneer (18g/100g), eggs (6g each), milk (8g/cup), lentils (18g/cup), chickpeas (15g/cup), quinoa (8g/cup), protein powder (20-25g/scoop). Sample day: Breakfast 3 eggs + slice paneer (30g), Lunch lentil dal + yogurt (25g), Dinner paneer curry + chickpeas (35g), Snacks protein shake + nuts (30g) = 120g protein. Very achievable!"
+    },
+    {
+      question: "Best vegetarian protein sources for muscle gain?",
+      answer: "COMPLETE PROTEINS (all amino acids): Eggs (6g each - best bioavailability), Greek yogurt (20g/cup), Paneer (18g/100g), Milk (8g/cup), Cottage cheese/chhena (11g/100g), Protein powder (whey/casein). INCOMPLETE (combine for completeness): Lentils/dal (18g/cup), Chickpeas (15g/cup), Kidney beans/rajma (15g/cup), Quinoa (8g/cup), Peanut butter (8g/2 tbsp), Tofu (10g/100g). PRO TIP: Dairy + eggs make vegetarian muscle building EASIER than vegan since you have complete proteins readily available. Focus on variety!"
+    },
+    {
+      question: "Should I take supplements as a vegetarian bodybuilder?",
+      answer: "Optional but beneficial: PROTEIN POWDER (whey/casein) - convenient way to hit daily protein targets, especially post-workout. CREATINE monohydrate (5g daily) - most effective muscle/strength supplement, safe, well-researched. OMEGA-3 (if not eating fish) - get from flaxseed, chia, walnuts, or algae supplement. VITAMIN D (if low sun exposure) - 2000 IU daily. Vitamin B12 - usually fine for vegetarians (dairy/eggs have it), but check bloodwork. NOT needed: BCAAs (waste of money if eating enough protein), most other supplements. Food first, supplements second!"
+    },
+    {
+      question: "Is it harder to lose fat and stay lean on a vegetarian diet?",
+      answer: "NO - if anything, vegetarian diets can HELP fat loss! Plant foods are typically: Lower calorie density (more volume, fewer calories), higher fiber (increases satiety, reduces hunger), nutrient-dense. Many vegetarians naturally maintain leaner physiques. Keys for fat loss: 1) Calorie deficit (eat less than you burn), 2) High protein (0.8-1g/lb to preserve muscle), 3) Strength training (maintain muscle mass), 4) Consistency. Vegetarian protein sources like Greek yogurt, eggs, lentils are filling and satisfying. Avoid: Excess ghee/oil, fried foods, excessive sweets. Vegetarian diet + smart choices = excellent for staying lean!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-700 to-emerald-900 text-white py-16">
+      <section className="bg-gradient-to-br from-green-700 to-teal-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-green-700 font-semibold">
               🌱 Complete Vegetarian Fitness Guide
@@ -30,7 +73,7 @@ export default function VegetarianWorkoutPage() {
               Vegetarian Workout Plan: Build Muscle on Plant-Based Nutrition
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover effective workout routines designed for vegetarians to build muscle, increase strength, 
+              Discover effective workout routines designed for vegetarians to build muscle, increase strength,
               boost athletic performance, and achieve fitness goals with plant-based nutrition support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +93,7 @@ export default function VegetarianWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,14 +118,14 @@ export default function VegetarianWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Building Muscle on a Vegetarian Diet</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Contrary to myths, vegetarians can build significant muscle and strength. The key is progressive overload 
-                (gradually increasing weight/reps), adequate protein intake (0.8-1g per lb body weight), proper recovery, 
-                and strategic nutrient timing. Many successful athletes, bodybuilders, and strength competitors thrive on 
-                vegetarian diets. Plant proteins from legumes, soy, dairy, eggs, and protein powders provide all essential 
-                amino acids needed for muscle growth. Combined with proper training, vegetarians can achieve the same results 
+                Contrary to myths, vegetarians can build significant muscle and strength. The key is progressive overload
+                (gradually increasing weight/reps), adequate protein intake (0.8-1g per lb body weight), proper recovery,
+                and strategic nutrient timing. Many successful athletes, bodybuilders, and strength competitors thrive on
+                vegetarian diets. Plant proteins from legumes, soy, dairy, eggs, and protein powders provide all essential
+                amino acids needed for muscle growth. Combined with proper training, vegetarians can achieve the same results
                 as meat-eaters.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-green-800">Training Advantages for Vegetarians</h4>
@@ -95,7 +138,7 @@ export default function VegetarianWorkoutPage() {
                     <li>• Improved insulin sensitivity for muscle growth</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-emerald-800">Keys to Vegetarian Muscle Building</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -164,7 +207,7 @@ export default function VegetarianWorkoutPage() {
 
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Main Workout (4 Rounds)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Push-Ups (Regular or Modified)</h6>
@@ -172,7 +215,7 @@ export default function VegetarianWorkoutPage() {
                           <strong>Reps:</strong> 12-20 | <strong>Rest:</strong> 45 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Best upper body builder. Do on knees if needed. Progress to decline push-ups (feet elevated) 
+                          Best upper body builder. Do on knees if needed. Progress to decline push-ups (feet elevated)
                           for more difficulty. Builds chest, shoulders, triceps, core.
                         </p>
                       </div>
@@ -183,7 +226,7 @@ export default function VegetarianWorkoutPage() {
                           <strong>Reps:</strong> 20-30 | <strong>Rest:</strong> 45 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          King of leg exercises. Go deep (thighs parallel to ground). Hold dumbbells, backpack with books, 
+                          King of leg exercises. Go deep (thighs parallel to ground). Hold dumbbells, backpack with books,
                           or water jugs for added resistance. Builds quads, glutes, hamstrings.
                         </p>
                       </div>
@@ -194,7 +237,7 @@ export default function VegetarianWorkoutPage() {
                           <strong>Reps:</strong> 10-15 | <strong>Rest:</strong> 45 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Start in downward dog position, lower head toward ground, push back up. Targets shoulders more 
+                          Start in downward dog position, lower head toward ground, push back up. Targets shoulders more
                           than regular push-ups. Progress to handstand push-ups against wall.
                         </p>
                       </div>
@@ -205,7 +248,7 @@ export default function VegetarianWorkoutPage() {
                           <strong>Reps:</strong> 12-15 each leg | <strong>Rest:</strong> 45 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Back foot elevated on chair/bench, lunge down on front leg. Unilateral leg training builds 
+                          Back foot elevated on chair/bench, lunge down on front leg. Unilateral leg training builds
                           strength and balance. Add weight when bodyweight becomes easy.
                         </p>
                       </div>
@@ -216,7 +259,7 @@ export default function VegetarianWorkoutPage() {
                           <strong>Reps:</strong> 5-12 (pull-ups) or 12-20 (rows) | <strong>Rest:</strong> 60 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          If you have pull-up bar, do pull-ups. Otherwise, do inverted rows under a table. Back development 
+                          If you have pull-up bar, do pull-ups. Otherwise, do inverted rows under a table. Back development
                           is crucial for balanced physique.
                         </p>
                       </div>
@@ -227,7 +270,7 @@ export default function VegetarianWorkoutPage() {
                           <strong>Duration:</strong> 45-90 seconds | <strong>Rest:</strong> 90 sec (end of round)
                         </p>
                         <p className="text-sm text-gray-600">
-                          Core strength is foundation for all exercises. Keep body straight, don't let hips sag. 
+                          Core strength is foundation for all exercises. Keep body straight, don't let hips sag.
                           Progress to side planks and plank variations.
                         </p>
                       </div>
@@ -241,7 +284,7 @@ export default function VegetarianWorkoutPage() {
 
                   <div className="bg-green-100 border border-green-300 rounded-lg p-4 mt-4">
                     <p className="text-sm text-gray-800">
-                      <strong>💪 Progressive Overload:</strong> When you can do max reps easily for 4 rounds, add weight 
+                      <strong>💪 Progressive Overload:</strong> When you can do max reps easily for 4 rounds, add weight
                       (weighted vest, backpack, dumbbells) or increase difficulty (decline push-ups, pistol squats).
                     </p>
                   </div>
@@ -259,7 +302,7 @@ export default function VegetarianWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Strong core improves all lifts, prevents injury, and builds visible abs (with proper diet). 
+                  Strong core improves all lifts, prevents injury, and builds visible abs (with proper diet).
                   Do 3-4 rounds of this circuit.
                 </p>
 
@@ -479,7 +522,7 @@ export default function VegetarianWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Vegetarian Muscle Building Guidelines</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Training Best Practices:</h4>
@@ -506,7 +549,7 @@ export default function VegetarianWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -537,6 +580,15 @@ export default function VegetarianWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-green-700 to-emerald-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -545,10 +597,10 @@ export default function VegetarianWorkoutPage() {
               Complete Your Vegetarian Fitness Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Training is only half the equation. Proper vegetarian nutrition with adequate protein is essential 
+              Training is only half the equation. Proper vegetarian nutrition with adequate protein is essential
               for muscle growth, recovery, and optimal performance. Get your complete diet plan.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -578,7 +630,7 @@ export default function VegetarianWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands building muscle and strength on plant-based nutrition
             </p>

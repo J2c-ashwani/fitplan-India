@@ -3,9 +3,13 @@ import { Resend } from "resend"
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, name, plan, profile } = await req.json()
+    const { email, name, plan, profile, currency } = await req.json()
 
     const resend = new Resend(process.env.RESEND_API_KEY)
+
+    // Determine consultation price based on currency
+    const isINR = currency === "INR"
+    const consultationPrice = isINR ? "₹500" : "$50"
 
     // Generate PDF content (you can use libraries like jsPDF or puppeteer)
     // For now, sending HTML email with plan
@@ -37,7 +41,7 @@ export async function POST(req: NextRequest) {
 
             <div style="text-align: center; margin-top: 30px;">
               <a href="https://fitplan.com/contact" style="display: inline-block; background: #059669; color: #ffffff; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 600;">
-                Book 1:1 Consultation ($100)
+                Book 1:1 Consultation (${consultationPrice})
               </a>
             </div>
           </div>

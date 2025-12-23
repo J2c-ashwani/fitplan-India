@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, TrendingUp, Apple, Scale } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function ObesityWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Obesity Plan", href: "/workouts/obesity" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "why-exercise", label: "Why Exercise?" },
+    { id: "home-workouts", label: "Home Workouts" },
+    { id: "gym-workouts", label: "Gym Workouts" },
+    { id: "guidelines", label: "Guidelines" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Is it safe to exercise if I'm obese?",
+      answer: "Yes! Exercise is crucial for weight loss and health improvement. Start with low-impact activities like walking, swimming,or seated exercises. Begin with just 5-10 minutes daily. Always consult your doctor before starting, especially if you have joint pain or other health conditions."
+    },
+    {
+      question: "What's the best exercise for obesity weight loss?",
+      answer: "Walking is #1 - accessible, free, low-impact, and sustainable. Swimming/ water exercises are excellent (zero joint stress). Recumbent bike at gym provides seated cardio support. Start with what you can do comfortably for 10 minutes, then gradually increase."
+    },
+    {
+      question: "How much should I exercise to lose weight with obesity?",
+      answer: "Start with 10-15 minutes, 3-5x weekly. Gradually build to 30 minutes most days over 4-8 weeks. Quality and consistency matter more than intensity. Even 10 minutes daily burns ~700 calories weekly (equivalent to losing 0.2 lbs). DIET is 70-80% of weight loss - exercise supports but can't overcome poor nutrition."
+    },
+    {
+      question: "Why do my joints hurt when I exercise?",
+      answer: "High-impact activities (running, jumping) stress joints when carrying extra weight. Switch to low/zero-impact: walking, swimming, recumbent bike, seated exercises. Strengthen muscles around joints with light resistance training. Proper supportive shoes are critical. If pain persists, consult doctor."
+    },
+    {
+      question: "How long until I see weight loss results from exercise?",
+      answer: "Expect 2-4 weeks for energy/mood improvement,4-8 weeks for noticeable weight loss (1-2 lbs weekly is healthy). Results are slower at first as body adapts. Track non-scale victories: sleeping better, more energy, clothes fitting better, less joint pain, improved mood."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-700 to-red-900 text-white py-16">
+      <section className="bg-gradient-to-br from-orange-700 to-red-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-orange-700 font-semibold">
               💪 Complete Obesity Workout Guide 2025
@@ -30,7 +75,7 @@ export default function ObesityWorkoutPage() {
               Obesity Workout Plan: Safe Low-Impact Exercises for Weight Loss
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective workout routines specifically designed for individuals with obesity. 
+              Discover safe, effective workout routines specifically designed for individuals with obesity.
               Low-impact exercises that support weight loss, improve fitness, and protect your joints.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function ObesityWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,15 +117,15 @@ export default function ObesityWorkoutPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Crucial for Obesity</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is essential for successful weight loss with obesity. Physical activity burns calories, builds 
-                lean muscle mass, improves metabolism, enhances mood, and reduces health risks associated with obesity. 
-                The key is starting slowly with low-impact activities that don't stress joints, then gradually increasing 
+                Exercise is essential for successful weight loss with obesity. Physical activity burns calories, builds
+                lean muscle mass, improves metabolism, enhances mood, and reduces health risks associated with obesity.
+                The key is starting slowly with low-impact activities that don't stress joints, then gradually increasing
                 intensity as fitness improves. Even 10-15 minutes of daily movement makes a significant difference.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-orange-800">Exercise Benefits for Obesity</h4>
@@ -93,7 +138,7 @@ export default function ObesityWorkoutPage() {
                     <li>• Improves mood, confidence, and sleep quality</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Best Exercise Types for Obesity</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -136,7 +181,7 @@ export default function ObesityWorkoutPage() {
       </section>
 
       {/* Home Workouts Section */}
-      <section id="home-workouts" className="py-16 bg-gray-50">
+      <section id="home-workouts" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -163,7 +208,7 @@ export default function ObesityWorkoutPage() {
                       <strong>Duration:</strong> 10-15 minutes | <strong>Pace:</strong> Very comfortable, can talk easily
                     </p>
                     <p className="text-sm text-gray-600">
-                      Walk at a comfortable pace around your home, yard, or neighborhood. If 10 minutes feels too long, 
+                      Walk at a comfortable pace around your home, yard, or neighborhood. If 10 minutes feels too long,
                       start with 5 minutes twice daily. Focus on consistency, not speed or distance.
                     </p>
                   </div>
@@ -174,7 +219,7 @@ export default function ObesityWorkoutPage() {
                       <strong>Duration:</strong> 15-20 minutes | <strong>Pace:</strong> Comfortable, steady
                     </p>
                     <p className="text-sm text-gray-600">
-                      Add 2-3 minutes each week. Break into multiple sessions if needed (e.g., 10 min morning + 10 min evening). 
+                      Add 2-3 minutes each week. Break into multiple sessions if needed (e.g., 10 min morning + 10 min evening).
                       Walking is the #1 exercise for safe obesity weight loss.
                     </p>
                   </div>
@@ -185,7 +230,7 @@ export default function ObesityWorkoutPage() {
                       <strong>Duration:</strong> 25-30 minutes | <strong>Pace:</strong> Moderate, slightly breathless
                     </p>
                     <p className="text-sm text-gray-600">
-                      Continue increasing by 2-3 minutes weekly. Goal is 30 minutes of continuous walking. 
+                      Continue increasing by 2-3 minutes weekly. Goal is 30 minutes of continuous walking.
                       You can add gentle inclines or vary your route for challenge.
                     </p>
                   </div>
@@ -203,10 +248,10 @@ export default function ObesityWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Chair exercises are perfect for beginners with obesity - they're safe, supported, and highly effective 
+                  Chair exercises are perfect for beginners with obesity - they're safe, supported, and highly effective
                   for building strength without stressing joints.
                 </p>
-                
+
                 <div className="space-y-3">
                   <div className="bg-white p-4 rounded-lg border border-gray-200">
                     <h6 className="font-semibold mb-2">1. Seated Marching</h6>
@@ -302,7 +347,7 @@ export default function ObesityWorkoutPage() {
       </section>
 
       {/* Gym Workouts Section */}
-      <section id="gym-workouts" className="py-16 bg-white">
+      <section id="gym-workouts" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -329,7 +374,7 @@ export default function ObesityWorkoutPage() {
                       <strong>Duration:</strong> 15-30 minutes | <strong>Resistance:</strong> Low to moderate
                     </p>
                     <p className="text-sm text-gray-600">
-                      Seated with back support, easiest on joints. Start with 10-15 min at comfortable resistance. 
+                      Seated with back support, easiest on joints. Start with 10-15 min at comfortable resistance.
                       Excellent for building cardiovascular endurance safely. Burns 150-250 calories per session.
                     </p>
                   </div>
@@ -340,7 +385,7 @@ export default function ObesityWorkoutPage() {
                       <strong>Duration:</strong> 15-25 minutes | <strong>Speed:</strong> 1.5-2.5 mph
                     </p>
                     <p className="text-sm text-gray-600">
-                      Use handles for support. Keep treadmill flat (0% incline initially). Start slow - safety is priority. 
+                      Use handles for support. Keep treadmill flat (0% incline initially). Start slow - safety is priority.
                       Burns 100-200 calories per session depending on speed and weight.
                     </p>
                   </div>
@@ -351,7 +396,7 @@ export default function ObesityWorkoutPage() {
                       <strong>Duration:</strong> 10-20 minutes | <strong>Resistance:</strong> Very low
                     </p>
                     <p className="text-sm text-gray-600">
-                      Some gyms have seated ellipticals - perfect for obesity. Zero impact, full body movement. 
+                      Some gyms have seated ellipticals - perfect for obesity. Zero impact, full body movement.
                       Start with 5-10 minutes and gradually increase.
                     </p>
                   </div>
@@ -362,7 +407,7 @@ export default function ObesityWorkoutPage() {
                       <strong>Duration:</strong> 15-25 minutes | <strong>Level:</strong> 3-5
                     </p>
                     <p className="text-sm text-gray-600">
-                      Seated recumbent cross-trainer combines upper and lower body. Wide, stable seat perfect for obesity. 
+                      Seated recumbent cross-trainer combines upper and lower body. Wide, stable seat perfect for obesity.
                       Excellent full-body low-impact workout.
                     </p>
                   </div>
@@ -380,10 +425,10 @@ export default function ObesityWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Machines provide stability and support, making them safer than free weights. Focus on learning proper form 
+                  Machines provide stability and support, making them safer than free weights. Focus on learning proper form
                   with light weight before increasing resistance.
                 </p>
-                
+
                 <div className="space-y-3">
                   <div className="bg-white p-4 rounded-lg border border-gray-200">
                     <h6 className="font-semibold mb-2">1. Seated Leg Press</h6>
@@ -449,11 +494,11 @@ export default function ObesityWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-blue-100 border-2 border-blue-300 rounded-lg p-4 mb-4">
                   <p className="text-sm text-gray-800">
-                    <strong>💙 Best Exercise for Obesity:</strong> Water exercises are the #1 recommended activity for individuals 
+                    <strong>💙 Best Exercise for Obesity:</strong> Water exercises are the #1 recommended activity for individuals
                     with obesity. The water supports body weight, eliminates joint stress, and provides natural resistance for muscle building.
                   </p>
                 </div>
-                
+
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-white p-4 rounded-lg border border-gray-200">
                     <h6 className="font-semibold mb-2">Water Walking/Jogging:</h6>
@@ -464,7 +509,7 @@ export default function ObesityWorkoutPage() {
                       <li>• Burns 200-350 calories per session</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-white p-4 rounded-lg border border-gray-200">
                     <h6 className="font-semibold mb-2">Water Aerobics:</h6>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -474,7 +519,7 @@ export default function ObesityWorkoutPage() {
                       <li>• Modified for all fitness levels</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-white p-4 rounded-lg border border-gray-200">
                     <h6 className="font-semibold mb-2">Swimming (if comfortable):</h6>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -484,7 +529,7 @@ export default function ObesityWorkoutPage() {
                       <li>• Excellent full-body workout</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-white p-4 rounded-lg border border-gray-200">
                     <h6 className="font-semibold mb-2">Water Exercises:</h6>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -502,11 +547,11 @@ export default function ObesityWorkoutPage() {
       </section>
 
       {/* Exercise Guidelines */}
-      <section className="py-16 bg-gray-50">
+      <section id="guidelines" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Exercise Guidelines for Obesity</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -533,7 +578,7 @@ export default function ObesityWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Avoid These Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -564,6 +609,15 @@ export default function ObesityWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-orange-700 to-red-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -572,10 +626,10 @@ export default function ObesityWorkoutPage() {
               Complete Your Weight Loss Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise works best when combined with proper nutrition. Get your personalized obesity diet plan 
+              Exercise works best when combined with proper nutrition. Get your personalized obesity diet plan
               to maximize weight loss results and improve your health.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -605,10 +659,14 @@ export default function ObesityWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands achieving safe, sustainable weight loss through evidence-based methods
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

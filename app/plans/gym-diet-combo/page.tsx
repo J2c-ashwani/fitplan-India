@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, AlertCircle, Dumbbell, Target, Zap, Apple, TrendingUp, Activity } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,49 @@ export const metadata: Metadata = {
 }
 
 export default function GymDietComboPage() {
+  const breadcrumbItems = [
+    { label: "Diet Plans", href: "/plans" },
+    { label: "Gym Diet Combo", href: "/plans/gym-diet-combo" },
+  ]
+
+  const tocItems = [
+    { id: "understanding", label: "Gym Nutrition" },
+    { id: "timing", label: "Nutrient Timing" },
+    { id: "meal-plan", label: "Meal Plan" },
+    { id: "supplements", label: "Supplements" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Do I need protein powder to build muscle?",
+      answer: "No, protein powder is a convenience, not a necessity. You can get all your protein from chicken, eggs, fish, dairy, and beans. However, a whey protein shake post-workout is often recommended because it digests quickly and hits your muscles faster than solid food when they need it most."
+    },
+    {
+      question: "I want to lose fat but build muscle. How do I eat?",
+      answer: "This is called 'body recomposition'. The key is: Keep protein HIGH (2.2g/kg), maintain a slight calorie deficit (200-300 cal below maintenance), and time your carbohydrates around your workout (pre and post). Eating enough protein is critical to prevent muscle loss while in a deficit."
+    },
+    {
+      question: "What should I eat before my 6 AM workout?",
+      answer: "Training completely fasted is fine for fat loss but may limit intensity. Ideally, have something small and fast-digesting 30 mins prior: a banana, a slice of toast with honey, or just a protein shake. Avoid fats and heavy fibers as they slow digestion and might cause stomach upset during lifting."
+    },
+    {
+      question: "Are carbs bad for gym goers?",
+      answer: "Absolutely NOT. Carbs are the body's primary fuel source for high-intensity anaerobic training (lifting weights). If you cut carbs too low, your strength will tank and you'll feel flat. Eat complex carbs at meals (oats, rice, potatoes) and simple carbs post-workout for recovery."
+    },
+    {
+      question: "How much water do I really need?",
+      answer: "A lot. Muscles are 75% water. Dehydration of even 2% can reduce strength by 10-15%. Aim for 3-4 liters daily, plus 500-700ml for every hour of intense exercise. Clear or pale yellow urine is the best indicator of good hydration."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-600 to-red-700 text-white py-16">
+      <section className="bg-gradient-to-br from-orange-600 to-red-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-orange-600 font-semibold">
               💪 Workout + Nutrition Combined
@@ -30,8 +73,8 @@ export default function GymDietComboPage() {
               Gym + Diet Combo Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete gym diet plan combining strategic workout routines with optimized nutrition for maximum muscle gain, fat loss, 
-              and body transformation. Includes pre-workout nutrition, post-workout meals, protein timing, and meal plans designed 
+              Complete gym diet plan combining strategic workout routines with optimized nutrition for maximum muscle gain, fat loss,
+              and body transformation. Includes pre-workout nutrition, post-workout meals, protein timing, and meal plans designed
               for gym-goers in USA, UK, Canada, Australia, and India seeking serious results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,7 +90,7 @@ export default function GymDietComboPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="understanding" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,31 +115,31 @@ export default function GymDietComboPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Gym Nutrition: The Missing Piece for Results</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The hard truth about gym results: training is only 30% of the equation - diet accounts for 70% of your body transformation 
-                success. You can train perfectly with the best workout program, but without proper nutrition to support muscle growth and 
-                recovery, your gains will be minimal or non-existent. Your muscles grow and fat burns OUTSIDE the gym during recovery, 
-                fueled by the nutrients you provide. This is why professional bodybuilders and athletes obsess over nutrition timing, macro 
-                ratios, and meal frequency - they understand that optimal nutrition is the FOUNDATION of all gym progress. Common mistakes 
-                gym-goers make include: inadequate protein intake (need 1.6-2.2g per kg body weight daily, or 120-180g for a 75kg person), 
-                not eating enough calories to support muscle growth (need 300-500 calorie surplus for bulking), skipping pre-workout nutrition 
-                (depleted glycogen = poor performance and muscle loss), ignoring post-workout nutrition window (missing 30-60 minute anabolic 
-                window), poor meal timing (eating 2-3 large meals instead of 5-6 smaller meals every 3 hours), and insufficient carbohydrates 
+                The hard truth about gym results: training is only 30% of the equation - diet accounts for 70% of your body transformation
+                success. You can train perfectly with the best workout program, but without proper nutrition to support muscle growth and
+                recovery, your gains will be minimal or non-existent. Your muscles grow and fat burns OUTSIDE the gym during recovery,
+                fueled by the nutrients you provide. This is why professional bodybuilders and athletes obsess over nutrition timing, macro
+                ratios, and meal frequency - they understand that optimal nutrition is the FOUNDATION of all gym progress. Common mistakes
+                gym-goers make include: inadequate protein intake (need 1.6-2.2g per kg body weight daily, or 120-180g for a 75kg person),
+                not eating enough calories to support muscle growth (need 300-500 calorie surplus for bulking), skipping pre-workout nutrition
+                (depleted glycogen = poor performance and muscle loss), ignoring post-workout nutrition window (missing 30-60 minute anabolic
+                window), poor meal timing (eating 2-3 large meals instead of 5-6 smaller meals every 3 hours), and insufficient carbohydrates
                 (fuel for intense workouts - need 3-5g per kg body weight for gym training).
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
-                The foundation of effective gym nutrition lies in understanding your specific goal and eating accordingly. For <strong>muscle 
-                gain/bulking</strong>: eat in calorie surplus (300-500 calories above maintenance), consume 2-2.2g protein per kg body weight 
-                (prioritize muscle protein synthesis), eat 4-6g carbs per kg body weight (fuel intense training), include healthy fats at 
-                20-30% of calories (hormone production), eat every 3-4 hours (5-6 meals daily keeps muscles in anabolic state), and emphasize 
-                pre-workout and post-workout nutrition for maximum gains. For <strong>fat loss while maintaining muscle</strong>: eat in moderate 
-                calorie deficit (300-500 calories below maintenance), consume HIGH protein at 2-2.5g per kg body weight (prevents muscle loss 
-                during deficit), moderate carbs at 2-3g per kg body weight (enough for training performance), include healthy fats at 20-25% 
-                calories, prioritize protein timing around workouts (pre and post), and consider intermittent fasting or carb cycling for 
-                advanced fat loss. This comprehensive gym diet plan provides strategic meal timing, optimal macro ratios, pre/post-workout 
+                The foundation of effective gym nutrition lies in understanding your specific goal and eating accordingly. For <strong>muscle
+                  gain/bulking</strong>: eat in calorie surplus (300-500 calories above maintenance), consume 2-2.2g protein per kg body weight
+                (prioritize muscle protein synthesis), eat 4-6g carbs per kg body weight (fuel intense training), include healthy fats at
+                20-30% of calories (hormone production), eat every 3-4 hours (5-6 meals daily keeps muscles in anabolic state), and emphasize
+                pre-workout and post-workout nutrition for maximum gains. For <strong>fat loss while maintaining muscle</strong>: eat in moderate
+                calorie deficit (300-500 calories below maintenance), consume HIGH protein at 2-2.5g per kg body weight (prevents muscle loss
+                during deficit), moderate carbs at 2-3g per kg body weight (enough for training performance), include healthy fats at 20-25%
+                calories, prioritize protein timing around workouts (pre and post), and consider intermittent fasting or carb cycling for
+                advanced fat loss. This comprehensive gym diet plan provides strategic meal timing, optimal macro ratios, pre/post-workout
                 nutrition protocols, and complete meal plans for both muscle gain and fat loss goals combined with gym training.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-orange-800">Why Gym Diet Combo Works</h3>
@@ -111,7 +154,7 @@ export default function GymDietComboPage() {
                     <li>• <strong>Body recomposition:</strong> Build muscle AND lose fat simultaneously</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-red-800">Gym Nutrition Principles</h3>
                   <ul className="text-gray-700 space-y-2">
@@ -132,11 +175,11 @@ export default function GymDietComboPage() {
       </section>
 
       {/* Workout Nutrition Timing */}
-      <section className="py-16 bg-gray-50">
+      <section id="timing" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Critical Workout Nutrition Timing: Pre, Intra, Post</h2>
-            
+
             <div className="space-y-6">
               <Card className="border-blue-200">
                 <CardHeader className="bg-blue-50">
@@ -149,8 +192,8 @@ export default function GymDietComboPage() {
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-2">Purpose:</h4>
-                      <p className="text-gray-700">Fuel your workout with readily available energy (glycogen), prevent muscle breakdown 
-                      during training, maximize strength and performance, and start muscle protein synthesis before training even begins.</p>
+                      <p className="text-gray-700">Fuel your workout with readily available energy (glycogen), prevent muscle breakdown
+                        during training, maximize strength and performance, and start muscle protein synthesis before training even begins.</p>
                     </div>
 
                     <div className="bg-blue-50 p-4 rounded-lg">
@@ -198,13 +241,13 @@ export default function GymDietComboPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <div className="space-y-3">
-                    <p className="text-gray-700"><strong>For workouts under 60 minutes:</strong> Water is sufficient. Sip 150-250ml 
-                    every 15-20 minutes.</p>
-                    <p className="text-gray-700"><strong>For intense workouts over 90 minutes:</strong> Consider intra-workout carbs 
-                    (30-60g per hour) from sports drinks, dextrose, or BCAA + carb supplements. This prevents muscle breakdown and 
-                    maintains performance during very long training sessions.</p>
-                    <p className="text-sm text-gray-600"><strong>Most gym-goers:</strong> Just water is fine. Intra-workout nutrition 
-                    is mainly for elite athletes or marathon gym sessions (2+ hours).</p>
+                    <p className="text-gray-700"><strong>For workouts under 60 minutes:</strong> Water is sufficient. Sip 150-250ml
+                      every 15-20 minutes.</p>
+                    <p className="text-gray-700"><strong>For intense workouts over 90 minutes:</strong> Consider intra-workout carbs
+                      (30-60g per hour) from sports drinks, dextrose, or BCAA + carb supplements. This prevents muscle breakdown and
+                      maintains performance during very long training sessions.</p>
+                    <p className="text-sm text-gray-600"><strong>Most gym-goers:</strong> Just water is fine. Intra-workout nutrition
+                      is mainly for elite athletes or marathon gym sessions (2+ hours).</p>
                   </div>
                 </CardContent>
               </Card>
@@ -220,10 +263,10 @@ export default function GymDietComboPage() {
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-2">Purpose (The "Anabolic Window"):</h4>
-                      <p className="text-gray-700">After intense training, your muscles are PRIMED to absorb nutrients for maximum growth 
-                      and recovery. Muscle protein synthesis rates are elevated 2-3x normal for 24-48 hours post-workout, with the HIGHEST 
-                      rates in the first 1-2 hours. Glycogen stores are depleted and need rapid replenishment. This is THE most important 
-                      meal of the day for gym results!</p>
+                      <p className="text-gray-700">After intense training, your muscles are PRIMED to absorb nutrients for maximum growth
+                        and recovery. Muscle protein synthesis rates are elevated 2-3x normal for 24-48 hours post-workout, with the HIGHEST
+                        rates in the first 1-2 hours. Glycogen stores are depleted and need rapid replenishment. This is THE most important
+                        meal of the day for gym results!</p>
                     </div>
 
                     <div className="bg-green-50 p-4 rounded-lg">
@@ -262,9 +305,9 @@ export default function GymDietComboPage() {
 
                     <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
                       <h4 className="font-semibold text-yellow-800 mb-2">⚠️ DON'T Skip Post-Workout Nutrition!</h4>
-                      <p className="text-sm text-gray-700">This is the MOST important meal for gym results. Skipping it means wasted 
-                      workout, slower muscle growth, prolonged soreness, and potential muscle loss. Even if not hungry, force down a 
-                      protein shake at minimum. Your future gains depend on it!</p>
+                      <p className="text-sm text-gray-700">This is the MOST important meal for gym results. Skipping it means wasted
+                        workout, slower muscle growth, prolonged soreness, and potential muscle loss. Even if not hungry, force down a
+                        protein shake at minimum. Your future gains depend on it!</p>
                     </div>
                   </div>
                 </CardContent>
@@ -275,12 +318,12 @@ export default function GymDietComboPage() {
       </section>
 
       {/* Gym Diet Meal Plan */}
-      <section id="meal-plan" className="py-16 bg-white">
+      <section id="meal-plan" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Complete Gym Diet Meal Plan (Muscle Gain - 2,800 Calories)</h2>
             <p className="text-center text-gray-600 mb-12">
-              High-protein, high-carb meal plan for muscle building. Training days schedule. Macros: 180g protein (26%), 360g carbs (51%), 
+              High-protein, high-carb meal plan for muscle building. Training days schedule. Macros: 180g protein (26%), 360g carbs (51%),
               72g fat (23%). Adjust portions for your body weight and goals.
             </p>
 
@@ -346,8 +389,8 @@ export default function GymDietComboPage() {
                 <CardTitle className="text-red-800">Fat Loss Variation (2,200 Calories)</CardTitle>
               </CardHeader>
               <CardContent className="pt-6">
-                <p className="text-gray-700 mb-4">For fat loss while maintaining muscle, reduce carbs and total calories while keeping 
-                protein HIGH:</p>
+                <p className="text-gray-700 mb-4">For fat loss while maintaining muscle, reduce carbs and total calories while keeping
+                  protein HIGH:</p>
                 <ul className="text-sm text-gray-700 space-y-2">
                   <li>• <strong>Reduce carb portions:</strong> 1 cup rice instead of 1.5-2 cups, 1 toast instead of 2</li>
                   <li>• <strong>Increase protein slightly:</strong> 2-2.5g per kg body weight (prevents muscle loss in deficit)</li>
@@ -362,11 +405,11 @@ export default function GymDietComboPage() {
       </section>
 
       {/* Supplements */}
-      <section className="py-16 bg-gray-50">
+      <section id="supplements" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Essential Gym Supplements (Optional but Helpful)</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-6">
               <Card>
                 <CardHeader>
@@ -404,6 +447,15 @@ export default function GymDietComboPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-orange-600 to-red-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -412,14 +464,14 @@ export default function GymDietComboPage() {
             <p className="text-xl mb-8">
               Get customized meal plans, workout routines, and supplement guidance tailored to your body type and goals.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Gym + Diet Consultation</h4>
-                <p className="text-white text-sm mb-4">Personalized plan - $100</p>
+                <p className="text-white text-sm mb-4">Personalized plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-orange-600" asChild>
-                  <Link href="/contact">Book Now - $100</Link>
+                  <Link href="/contact">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
                 </Button>
               </div>
 
@@ -435,6 +487,12 @@ export default function GymDietComboPage() {
           </div>
         </div>
       </section>
-    </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+          <RelatedContent />
+        </div>
+      </div>
+    </div >
   )
 }

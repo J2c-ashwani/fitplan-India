@@ -56,83 +56,75 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Health condition plans
-  const healthPlans = [
-    'pcos',
-    'pcod',
+  // Diet Plans (Verified directories)
+  const plans = [
     'diabetes',
-    'diabetes-type-1',
-    'diabetes-type-2',
-    'hypothyroidism',
-    'hyperthyroidism',
-    'thyroid',
-    'obesity',
-    'post-pregnancy',
-    'hormonal-imbalance',
-    'metabolic-syndrome',
-  ].map((plan) => ({
-    url: `${baseUrl}/plans/${plan}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  // Lifestyle plans
-  const lifestylePlans = [
-    'weight-loss',
-    'weight-gain',
-    'muscle-gain',
-    'fat-loss',
-    'general-wellness',
-  ].map((plan) => ({
-    url: `${baseUrl}/plans/${plan}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  // Diet plans
-  const dietPlans = [
-    'vegetarian',
-    'vegan',
-    'keto',
-    'low-carb',
-    'high-protein',
-    'intermittent-fasting',
-    'balanced-diet',
-    'indian-diet',
-  ].map((plan) => ({
-    url: `${baseUrl}/plans/${plan}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  // Age-specific plans
-  const agePlans = [
-    'teenagers',
-    'twenties',
-    'thirties',
-    'forties',
-    'senior-citizens',
-  ].map((plan) => ({
-    url: `${baseUrl}/plans/${plan}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
-  }))
-
-  // Special plans
-  const specialPlans = [
     'gym-diet-combo',
-    'home-workout',
-    'office-workers',
-    'busy-professionals',
+    'hormonal-imbalance',
+    'hyperthyroidism',
+    'hypothyroidism',
+    'intermittent-fasting',
+    'keto-diet',
+    'metabolic',
+    'obesity',
+    'pcod',
+    'pcos',
+    'post-pregnancy',
+    'senior-citizens',
+    'teenagers',
+    'thyroid',
+    'vegetarian',
   ].map((plan) => ({
     url: `${baseUrl}/plans/${plan}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.8,
+  }))
+
+  // Workout Plans (Verified directories)
+  const workouts = [
+    'athlete-nutrition',
+    'diabetes',
+    'general',
+    'heart-health',
+    'hormonal',
+    'hyperthyroidism',
+    'hypothyroidism',
+    'intermittent-fasting',
+    'keto',
+    'mediterranean',
+    'metabolic',
+    'muscle-gain',
+    'obesity',
+    'paleo',
+    'pcod',
+    'pcos',
+    'post-pregnancy',
+    'pregnancy-nutrition',
+    'senior-citizens',
+    'teenagers',
+    'thyroid',
+    'vegan-bodybuilding',
+    'vegetarian',
+    'weight-loss',
+  ].map((workout) => ({
+    url: `${baseUrl}/workouts/${workout}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  // Tools (Verified directories)
+  const tools = [
+    'bmi-calculator',
+    'calorie-calculator',
+    'protein-calculator',
+    'water-intake-calculator',
+  ].map((tool) => ({
+    url: `${baseUrl}/tools/${tool}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
   }))
 
   // Legal pages
@@ -159,11 +151,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...mainPages,
-    ...healthPlans,
-    ...lifestylePlans,
-    ...dietPlans,
-    ...agePlans,
-    ...specialPlans,
+    ...plans,
+    ...workouts,
+    ...tools,
     ...legalPages,
   ]
 }

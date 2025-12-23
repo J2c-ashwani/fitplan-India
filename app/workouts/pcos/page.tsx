@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Zap, Clock, Target, TrendingUp, Apple, Sparkles } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function PCOSWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "PCOS Plan", href: "/workouts/pcos" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Benefits" },
+    { id: "why-exercise", label: "Why Exercise?" },
+    { id: "home-workouts", label: "Home Routine" },
+    { id: "gym-workouts", label: "Gym Routine" },
+    { id: "guidelines", label: "Safety Guide" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Which exercise is best for PCOS belly fat?",
+      answer: "Strength training is most effective because it builds muscle mass, which improves insulin sensitivity—the root cause of PCOS belly fat. Combine it with steady-state cardio (like walking) to burn calories without spiking cortisol, which can store more belly fat."
+    },
+    {
+      question: "Can I do HIIT with PCOS?",
+      answer: "Use caution. While HIIT burns calories, it also significantly raises cortisol (stress hormone). If you have adrenal PCOS or feel 'wired but tired' after HIIT, switch to strength training and walking. Limit HIIT to 1-2 times per week max, for no longer than 20 minutes."
+    },
+    {
+      question: "How many days should I workout with PCOS?",
+      answer: "Consistency beats intensity. Aim for 4-5 days per week. Example: 3 days strength training + 2 days moderate cardio/yoga. Rest days are crucial for hormone balancing—don't skip them!"
+    },
+    {
+      question: "Will lifting weights make me bulky with PCOS?",
+      answer: "No. Women with PCOS often have higher testosterone, but not enough to become 'bulky' without extreme training/supplements. Lifting weights will just make you look 'toned' and leaner because muscle is denser than fat and boosts your metabolism."
+    },
+    {
+      question: "How long does it take to see results?",
+      answer: "With consistent strength training and proper nutrition, you can feel energy improvements in 2 weeks. Visible body composition changes typically take 8-12 weeks. Focus on how your clothes fit rather than just the scale."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white py-16">
+      <section className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
               💪 Complete PCOS Workout Guide 2025
@@ -30,7 +75,7 @@ export default function PCOSWorkoutPage() {
               PCOS Workout Plan: Best Home & Gym Exercises for Weight Loss
             </h1>
             <p className="text-xl text-purple-100 mb-8">
-              Discover evidence-based workout routines specifically designed for women with PCOS to improve insulin 
+              Discover evidence-based workout routines specifically designed for women with PCOS to improve insulin
               sensitivity, reduce inflammation, balance hormones, and achieve sustainable weight loss.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function PCOSWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,15 +117,15 @@ export default function PCOSWorkoutPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Crucial for PCOS Management</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is one of the most effective non-pharmaceutical interventions for managing PCOS symptoms. 
-                Regular physical activity improves insulin sensitivity, reduces testosterone levels, promotes weight loss, 
-                decreases inflammation, and helps regulate menstrual cycles. Research shows that combining strength training 
+                Exercise is one of the most effective non-pharmaceutical interventions for managing PCOS symptoms.
+                Regular physical activity improves insulin sensitivity, reduces testosterone levels, promotes weight loss,
+                decreases inflammation, and helps regulate menstrual cycles. Research shows that combining strength training
                 with moderate cardio produces the best results for women with PCOS.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-purple-800">Exercise Benefits for PCOS</h4>
@@ -93,7 +138,7 @@ export default function PCOSWorkoutPage() {
                     <li>• Improves mood and reduces anxiety/depression</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Best Exercise Types for PCOS</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -106,19 +151,25 @@ export default function PCOSWorkoutPage() {
                 </div>
               </div>
             </div>
+
+            {/* Engagement Hook: Calculator */}
+            <div className="mb-12">
+              <CalculatorWidget />
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* Home Workouts Section */}
-      <section id="home-workouts" className="py-16 bg-gray-50">
+      <section id="home-workouts" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Home className="w-16 h-16 text-purple-600 mx-auto mb-4" />
               <h2 className="text-3xl font-bold text-gray-900 mb-4">PCOS Home Workout Plan</h2>
               <p className="text-lg text-gray-600">
-                No equipment needed! These bodyweight exercises can be done in the comfort of your home to improve 
+                No equipment needed! These bodyweight exercises can be done in the comfort of your home to improve
                 insulin sensitivity and promote weight loss.
               </p>
             </div>
@@ -150,7 +201,7 @@ export default function PCOSWorkoutPage() {
                       <Target className="w-4 h-4 mr-2 text-purple-600" />
                       Main Workout (3 Rounds)
                     </h5>
-                    
+
                     <div className="space-y-4">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Bodyweight Squats</h6>
@@ -158,7 +209,7 @@ export default function PCOSWorkoutPage() {
                           <strong>Reps:</strong> 15-20 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Stand with feet shoulder-width apart, lower down as if sitting in a chair, keep chest up, 
+                          Stand with feet shoulder-width apart, lower down as if sitting in a chair, keep chest up,
                           push through heels to stand. Targets: quads, glutes, core.
                         </p>
                       </div>
@@ -169,7 +220,7 @@ export default function PCOSWorkoutPage() {
                           <strong>Reps:</strong> 10-15 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Start in plank position, lower chest to ground, push back up. Modify on knees if needed. 
+                          Start in plank position, lower chest to ground, push back up. Modify on knees if needed.
                           Targets: chest, shoulders, triceps, core.
                         </p>
                       </div>
@@ -180,7 +231,7 @@ export default function PCOSWorkoutPage() {
                           <strong>Reps:</strong> 10-12 each leg | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Step forward, lower back knee toward ground, push up and step forward with other leg. 
+                          Step forward, lower back knee toward ground, push up and step forward with other leg.
                           Targets: quads, glutes, hamstrings, balance.
                         </p>
                       </div>
@@ -191,7 +242,7 @@ export default function PCOSWorkoutPage() {
                           <strong>Duration:</strong> 30-60 seconds | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Hold plank position on forearms or hands, keep body in straight line, engage core. 
+                          Hold plank position on forearms or hands, keep body in straight line, engage core.
                           Targets: entire core, shoulders, stability.
                         </p>
                       </div>
@@ -202,7 +253,7 @@ export default function PCOSWorkoutPage() {
                           <strong>Reps:</strong> 15-20 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Lie on back, feet flat on ground, lift hips up, squeeze glutes at top, lower down. 
+                          Lie on back, feet flat on ground, lift hips up, squeeze glutes at top, lower down.
                           Targets: glutes, hamstrings, lower back.
                         </p>
                       </div>
@@ -213,7 +264,7 @@ export default function PCOSWorkoutPage() {
                           <strong>Duration:</strong> 30-45 seconds | <strong>Rest:</strong> 60 seconds between rounds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Start in plank, alternate bringing knees toward chest quickly. Targets: core, shoulders, 
+                          Start in plank, alternate bringing knees toward chest quickly. Targets: core, shoulders,
                           cardio conditioning.
                         </p>
                       </div>
@@ -299,7 +350,7 @@ export default function PCOSWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Gentle yoga and stretching help reduce cortisol, improve flexibility, and support recovery. 
+                  Gentle yoga and stretching help reduce cortisol, improve flexibility, and support recovery.
                   Focus on poses that support reproductive health and stress reduction.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
@@ -333,14 +384,14 @@ export default function PCOSWorkoutPage() {
       </section>
 
       {/* Gym Workouts Section */}
-      <section id="gym-workouts" className="py-16 bg-white">
+      <section id="gym-workouts" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <Dumbbell className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
               <h2 className="text-3xl font-bold text-gray-900 mb-4">PCOS Gym Workout Plan</h2>
               <p className="text-lg text-gray-600">
-                Progressive resistance training with gym equipment to maximize muscle building, insulin sensitivity, 
+                Progressive resistance training with gym equipment to maximize muscle building, insulin sensitivity,
                 and metabolic rate for optimal PCOS management.
               </p>
             </div>
@@ -478,11 +529,11 @@ export default function PCOSWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
                   <p className="text-sm text-gray-700">
-                    <strong>⚠️ Important:</strong> HIIT should be done sparingly if you have PCOS, as too much high-intensity 
+                    <strong>⚠️ Important:</strong> HIIT should be done sparingly if you have PCOS, as too much high-intensity
                     exercise can increase cortisol. Only include if you're managing stress well.
                   </p>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="bg-white p-4 rounded-lg border border-gray-200">
                     <h6 className="font-semibold mb-2">Treadmill Intervals</h6>
@@ -512,11 +563,11 @@ export default function PCOSWorkoutPage() {
       </section>
 
       {/* Exercise Guidelines & Safety */}
-      <section className="py-16 bg-gray-50">
+      <section id="guidelines" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">PCOS Exercise Guidelines & Safety</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Exercise Best Practices:</h4>
@@ -543,7 +594,7 @@ export default function PCOSWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Exercise Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -574,6 +625,15 @@ export default function PCOSWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-purple-600 to-indigo-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -582,10 +642,10 @@ export default function PCOSWorkoutPage() {
               Complete Your PCOS Management Plan
             </h2>
             <p className="text-xl text-purple-100 mb-8">
-              Exercise works best when combined with proper nutrition. Get your personalized PCOS diet plan 
+              Exercise works best when combined with proper nutrition. Get your personalized PCOS diet plan
               to maximize your results and manage symptoms effectively.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -615,10 +675,14 @@ export default function PCOSWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-purple-200 text-sm mt-6">
               ✨ Join 10,000+ women managing PCOS naturally through diet and exercise
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

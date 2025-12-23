@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Baby, Apple } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function PostPregnancyWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Post-Pregnancy Recovery", href: "/workouts/post-pregnancy" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "why-exercise", label: "Why Exercise?" },
+    { id: "home-workouts", label: "Home Workouts" },
+    { id: "gym-workouts", label: "Gym Workouts" },
+    { id: "guidelines", label: "Safety Guidelines" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "When can I start exercising after giving birth?",
+      answer: "Wait for doctor clearance at 6-week checkup (vaginal delivery) or 8-12 week checkup (C-section). Earlier activity is limited to GENTLE walking and pelvic floor exercises only. Your body needs TIME to heal - uterus shrinking, bleeding stopping, tissues repairing. Exercising too soon increases risk of prolapse, bleeding, and complications."
+    },
+    {
+      question: "What is diastasis recti and how do I know if I have it?",
+      answer: "Diastasis recti is abdominal muscle separation that happens during pregnancy. To check: lie on back, knees bent, lift head slightly. Feel along midline of belly - if there's a gap wider than 2 finger-widths, you likely have it. Avoid crunches, sit-ups, planks until healed. Do deep core breathing, pelvic tilts, modified exercises. See physical therapist if severe (3+ fingers)."
+    },
+    {
+      question: "Why am I leaking urine when I exercise postpartum?",
+      answer: "Pelvic floor muscles are weakened from pregnancy/delivery causing stress incontinence. This is COMMON but NOT normal. Fix it: Do Kegels 3x daily (10 reps, 10-sec holds), avoid jumping/running/HIIT until strengthened, see pelvic floor physical therapist, empty bladder before exercise. Typically improves in 2-3 months with consistent pelvic floor work."
+    },
+    {
+      question: "Can I do ab exercises if I'm breastfeeding?",
+      answer: "Yes, but choose SAFE exercises: pelvic tilts, dead bugs, bird dogs, modified planks (on knees), diaphragmatic breathing. AVOID: crunches, sit-ups, v-ups, full planks (until diastasis closes). Breastfeeding doesn't affect core healing - focus on gentle core reconnection first. Wear supportive nursing bra during exercise."
+    },
+    {
+      question: "How long does it take to get my body back after pregnancy?",
+      answer: "Realistic timeline: 9-12 months to feel 'normal' again, 12-18 months to fully recover strength/fitness. It took 9 months to grow baby - give at least that long to recover. Focus on healing FIRST (months 1-3), gradual strengthening SECOND (months 4-6), then return to regular fitness (month 7+). Patience is critical - rushing causes injuries."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-700 to-rose-900 text-white py-16">
+      <section className="bg-gradient-to-br from-pink-700 to-rose-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-pink-700 font-semibold">
               👶 Complete Post-Pregnancy Workout Guide 2025
@@ -30,7 +75,7 @@ export default function PostPregnancyWorkoutPage() {
               Post-Pregnancy Workout Plan: Safe Postpartum Exercise & Recovery
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective postpartum exercises to heal your core, strengthen your pelvic floor, 
+              Discover safe, effective postpartum exercises to heal your core, strengthen your pelvic floor,
               restore fitness, and regain strength after childbirth with doctor-approved routines.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function PostPregnancyWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,16 +117,16 @@ export default function PostPregnancyWorkoutPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Postpartum Exercise is Important</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Exercise after pregnancy is crucial for physical recovery, mental health, and overall wellbeing. However, 
-                your body has undergone significant changes and needs time to heal before resuming activity. Starting with 
-                gentle movements, progressing to core rehabilitation, and eventually returning to regular exercise helps 
-                restore strength, heal diastasis recti, strengthen pelvic floor muscles, improve mood, boost energy, and 
+                Exercise after pregnancy is crucial for physical recovery, mental health, and overall wellbeing. However,
+                your body has undergone significant changes and needs time to heal before resuming activity. Starting with
+                gentle movements, progressing to core rehabilitation, and eventually returning to regular exercise helps
+                restore strength, heal diastasis recti, strengthen pelvic floor muscles, improve mood, boost energy, and
                 support healthy weight loss. Always get medical clearance before starting any postpartum exercise program.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-pink-800">Benefits of Postpartum Exercise</h4>
@@ -94,7 +139,7 @@ export default function PostPregnancyWorkoutPage() {
                     <li>• Enhances cardiovascular fitness and endurance</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Exercise Priorities Postpartum</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -139,7 +184,7 @@ export default function PostPregnancyWorkoutPage() {
       </section>
 
       {/* Home Workouts Section */}
-      <section id="home-workouts" className="py-16 bg-gray-50">
+      <section id="home-workouts" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -161,7 +206,7 @@ export default function PostPregnancyWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>🩺 Medical Clearance Required:</strong> Do not begin this phase until your doctor has cleared you 
+                    <strong>🩺 Medical Clearance Required:</strong> Do not begin this phase until your doctor has cleared you
                     for exercise (typically 6-8 weeks for vaginal birth, 8-12 weeks for C-section).
                   </p>
                 </div>
@@ -173,7 +218,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Sets:</strong> 3 | <strong>Reps:</strong> 10 holds | <strong>Duration:</strong> 5-10 seconds each
                     </p>
                     <p className="text-sm text-gray-600">
-                      Tighten pelvic floor muscles as if stopping urine flow. Hold, then release. Most important postpartum exercise. 
+                      Tighten pelvic floor muscles as if stopping urine flow. Hold, then release. Most important postpartum exercise.
                       Can be done lying, sitting, or standing. Do 3x daily.
                     </p>
                   </div>
@@ -184,7 +229,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Duration:</strong> 5 minutes | <strong>Frequency:</strong> 2-3x daily
                     </p>
                     <p className="text-sm text-gray-600">
-                      Lie on back, knees bent. Place hand on belly. Breathe deeply into belly, feeling it rise. Exhale slowly. 
+                      Lie on back, knees bent. Place hand on belly. Breathe deeply into belly, feeling it rise. Exhale slowly.
                       Reconnects brain to core muscles. Essential for diastasis recti healing.
                     </p>
                   </div>
@@ -195,7 +240,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Duration:</strong> 10-15 minutes | <strong>Pace:</strong> Very slow and comfortable
                     </p>
                     <p className="text-sm text-gray-600">
-                      Start with short walks around the house or yard. Gradually increase to neighborhood walks. 
+                      Start with short walks around the house or yard. Gradually increase to neighborhood walks.
                       Don't push pace - focus on gentle movement. Can push stroller if comfortable.
                     </p>
                   </div>
@@ -206,7 +251,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Sets:</strong> 2 | <strong>Reps:</strong> 10-12 | <strong>Rest:</strong> 30 sec
                     </p>
                     <p className="text-sm text-gray-600">
-                      Lie on back, knees bent, feet flat. Gently tilt pelvis up, flattening lower back against floor. 
+                      Lie on back, knees bent, feet flat. Gently tilt pelvis up, flattening lower back against floor.
                       Hold 3 seconds, release. Gentle core activation without crunches.
                     </p>
                   </div>
@@ -217,7 +262,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Sets:</strong> 2 | <strong>Reps:</strong> 15 each direction
                     </p>
                     <p className="text-sm text-gray-600">
-                      Lie or sit comfortably. Pump ankles up and down, then circle both directions. 
+                      Lie or sit comfortably. Pump ankles up and down, then circle both directions.
                       Improves circulation, reduces swelling, prevents blood clots.
                     </p>
                   </div>
@@ -235,7 +280,7 @@ export default function PostPregnancyWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Progress to this phase only if: bleeding has completely stopped, no pain during Phase 1 exercises, 
+                  Progress to this phase only if: bleeding has completely stopped, no pain during Phase 1 exercises,
                   doctor approval, and diastasis recti gap is closing (check with physical therapist if unsure).
                 </p>
 
@@ -246,7 +291,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Sets:</strong> 2-3 | <strong>Duration:</strong> 10-20 seconds | <strong>Rest:</strong> 60 sec
                     </p>
                     <p className="text-sm text-gray-600">
-                      Start on hands and knees, keep body in straight line from head to knees. Engage core, don't sag hips. 
+                      Start on hands and knees, keep body in straight line from head to knees. Engage core, don't sag hips.
                       Progress slowly - stop if you see doming in abdomen.
                     </p>
                   </div>
@@ -257,7 +302,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Sets:</strong> 2-3 | <strong>Reps:</strong> 12-15 | <strong>Rest:</strong> 45 sec
                     </p>
                     <p className="text-sm text-gray-600">
-                      Lie on back, knees bent, feet flat. Lift hips up, squeezing glutes at top. Lower slowly. 
+                      Lie on back, knees bent, feet flat. Lift hips up, squeezing glutes at top. Lower slowly.
                       Excellent for glute strength without stressing core.
                     </p>
                   </div>
@@ -268,7 +313,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Sets:</strong> 2 | <strong>Reps:</strong> 10-12 | <strong>Rest:</strong> 45 sec
                     </p>
                     <p className="text-sm text-gray-600">
-                      Stand arm's length from wall, hands on wall at shoulder height. Lean in, push back. 
+                      Stand arm's length from wall, hands on wall at shoulder height. Lean in, push back.
                       Rebuilds upper body strength without floor exercises.
                     </p>
                   </div>
@@ -279,7 +324,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Sets:</strong> 2-3 | <strong>Reps:</strong> 10-15 | <strong>Rest:</strong> 45 sec
                     </p>
                     <p className="text-sm text-gray-600">
-                      Stand with feet shoulder-width, lower down as if sitting in chair, keep chest up. 
+                      Stand with feet shoulder-width, lower down as if sitting in chair, keep chest up.
                       Use chair for support if needed. Great functional strength exercise.
                     </p>
                   </div>
@@ -290,7 +335,7 @@ export default function PostPregnancyWorkoutPage() {
                       <strong>Sets:</strong> 2 | <strong>Reps:</strong> 8-10 each side | <strong>Rest:</strong> 45 sec
                     </p>
                     <p className="text-sm text-gray-600">
-                      Start on hands and knees. Extend opposite arm and leg, hold 3 seconds, return. Alternate sides. 
+                      Start on hands and knees. Extend opposite arm and leg, hold 3 seconds, return. Alternate sides.
                       Excellent for core stability and balance.
                     </p>
                   </div>
@@ -308,7 +353,7 @@ export default function PostPregnancyWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Progress to this phase when: core is fully healed (no diastasis or gap closed), pelvic floor is strong, 
+                  Progress to this phase when: core is fully healed (no diastasis or gap closed), pelvic floor is strong,
                   no pain or heaviness, clearance from doctor or physical therapist for regular exercise.
                 </p>
 
@@ -342,7 +387,7 @@ export default function PostPregnancyWorkoutPage() {
       </section>
 
       {/* Gym Workouts Section */}
-      <section id="gym-workouts" className="py-16 bg-white">
+      <section id="gym-workouts" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -452,11 +497,11 @@ export default function PostPregnancyWorkoutPage() {
       </section>
 
       {/* Exercise Guidelines */}
-      <section className="py-16 bg-gray-50">
+      <section id="guidelines" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Postpartum Exercise Safety Guidelines</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Safe Exercise Practices:</h4>
@@ -483,7 +528,7 @@ export default function PostPregnancyWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Warning Signs to Stop:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -514,6 +559,15 @@ export default function PostPregnancyWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-pink-700 to-rose-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -522,10 +576,10 @@ export default function PostPregnancyWorkoutPage() {
               Complete Your Postpartum Recovery
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise alone isn't enough - proper nutrition is crucial for postpartum recovery, milk production, 
+              Exercise alone isn't enough - proper nutrition is crucial for postpartum recovery, milk production,
               and healthy weight loss. Get your complete postpartum plan today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -555,10 +609,14 @@ export default function PostPregnancyWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands of new moms recovering safely and regaining strength postpartum
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

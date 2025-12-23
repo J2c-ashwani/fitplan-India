@@ -1,8 +1,14 @@
 import { Badge } from "@/components/ui/badge"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Moon, Heart, Activity, Clock, TrendingDown, AlertCircle, Sparkles } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +23,49 @@ export const metadata: Metadata = {
 }
 
 export default function HormonalWorkoutsPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Hormone Balance Plan", href: "/workouts/hormonal" },
+  ]
+
+  const tocItems = [
+    { id: "why-different", label: "Why Different?" },
+    { id: "workout-plan", label: "4-Week Plan" },
+    { id: "tips", label: "Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Why is regular exercise bad for hormonal imbalances?",
+      answer: "Not all exercise is bad - but EXCESSIVE or HIGH-INTENSITY exercise is harmful. Daily HIIT, long cardio sessions, and overtraining increase cortisol (stress hormone), suppress thyroid function, worsen insulin resistance, and disrupt all hormones. Moderate strength training + walking is ideal."
+    },
+    {
+      question: "How does strength training help balance hormones?",
+      answer: "Strength training improves insulin sensitivity by 30-50% (critical for PCOS), builds muscle that burns calories 24/7 (helps sluggish thyroid metabolism), reduces cortisol when done moderately, and supports regular menstrual cycles. It's the #1 exercise type for hormonal health."
+    },
+    {
+      question: "Can I do HIIT if I have PCOS or thyroid issues?",
+      answer: "Maximum 1-2x weekly, and only if you're sleeping well and not stressed. HIIT increases cortisol which can worsen hormonal imbalances. If you're tired, stressed, or have irregular cycles, skip HIIT entirely and focus on strength training + walking instead."
+    },
+    {
+      question: "Why am I gaining weight despite exercising with hormonal issues?",
+      answer: "Possible causes: 1) Overtraining (too much exercise increases cortisol = weight gain), 2) Wrong exercise type (cardio without strength training), 3) Under-eating (slows metabolism further), 4) Poor sleep (disrupts all hormones), 5) Not enough rest days. Try LESS intense exercise, more strength training, and prioritize sleep."
+    },
+    {
+      question: "How long until exercise helps balance my hormones?",
+      answer: "Expect 4-6 weeks for initial improvements (better sleep, mood, energy), 8-12 weeks for cycle regulation and weight loss, 12-16 weeks for significant hormone improvements. Patience is critical - hormones need TIME to heal. Consistency over months matters more than intensity."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-violet-600 to-purple-700 text-white py-16">
+      <section className="bg-gradient-to-br from-violet-600 to-purple-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-violet-600 font-semibold">
               ⚖️ Gentle & Effective
@@ -47,7 +91,7 @@ export default function HormonalWorkoutsPage() {
       </section>
 
       {/* Why Hormone-Friendly Exercise */}
-      <section className="py-16 bg-white">
+      <section id="why-different" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Hormone-Friendly Exercise is Different</h2>
@@ -154,7 +198,7 @@ export default function HormonalWorkoutsPage() {
       </section>
 
       {/* Workout Program */}
-      <section id="workout-plan" className="py-16 bg-gray-50">
+      <section id="workout-plan" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">4-Week Hormone-Balancing Workout Program</h2>
@@ -402,7 +446,7 @@ export default function HormonalWorkoutsPage() {
       </section>
 
       {/* Tips */}
-      <section className="py-16 bg-white">
+      <section id="tips" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Important Tips for Hormone-Friendly Exercise</h2>
@@ -448,6 +492,15 @@ export default function HormonalWorkoutsPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-violet-600 to-purple-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -461,7 +514,7 @@ export default function HormonalWorkoutsPage() {
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Personalized Program</h4>
-                <p className="text-white text-sm mb-4">Custom plan - $100</p>
+                <p className="text-white text-sm mb-4">Custom plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-violet-600" asChild>
                   <Link href="/contact">Get Custom Plan</Link>
                 </Button>
@@ -476,6 +529,10 @@ export default function HormonalWorkoutsPage() {
                 </Button>
               </div>
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

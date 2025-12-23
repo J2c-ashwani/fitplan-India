@@ -9,8 +9,38 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Droplets, CheckCircle, Info } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import FAQSection from "@/components/FAQSection"
 
 export default function WaterCalculatorPage() {
+    const breadcrumbItems = [
+        { label: "Tools", href: "/tools" },
+        { label: "Water Intake Calculator", href: "/tools/water-intake-calculator" },
+    ]
+
+    const faqs = [
+        {
+            question: "Does tea/coffee count towards water intake?",
+            answer: "Yes, but with caveats. While they provide hydration, caffeine acts as a mild diuretic (makes you pee more). It's best to count a cup of coffee as half a cup of water. Herbal teas count 100%!"
+        },
+        {
+            question: "Can drinking too much water be dangerous?",
+            answer: "Yes, condition called Hyponatremia (water intoxication) dilutes sodium levels in blood, which can be fatal. This usually happens if you drink liters of water in a very short time. Trust your thirst and spread intake throughout the day."
+        },
+        {
+            question: "Should I drink warm or cold water?",
+            answer: "Ayurveda suggests warm water aids digestion. However, cold water helps cool the body during exercise or Indian summers. The best temperature is the one that encourages you to drink enough!"
+        },
+        {
+            question: "Does drinking water before meals help weight loss?",
+            answer: "Yes! Drinking 500ml water 30 minutes before a meal can increase satiety and reduce calorie intake. It also boosts metabolism temporarily."
+        },
+        {
+            question: "How do I know if I'm hydrated properly?",
+            answer: "Check your urine color. Pale straw color = Hydrated. Clear = Over-hydrated. Dark yellow/Amber = Dehydrated. Also, if you rarely feel thirsty, you're likely doing a good job."
+        }
+    ]
+
     const [waterData, setWaterData] = useState({
         weight: "",
         activity: "moderate",
@@ -67,6 +97,9 @@ export default function WaterCalculatorPage() {
         <div className="min-h-screen bg-gray-50">
             <section className="bg-gradient-to-br from-cyan-500 to-blue-600 text-white py-16">
                 <div className="container mx-auto px-4">
+                    <div className="mb-6 text-cyan-100">
+                        <Breadcrumbs items={breadcrumbItems} />
+                    </div>
                     <div className="max-w-4xl mx-auto text-center">
                         <Badge className="mb-4 bg-white text-cyan-600 font-semibold">Free Health Tool</Badge>
                         <h1 className="text-4xl font-bold mb-4">Daily Water Intake Calculator</h1>
@@ -228,8 +261,18 @@ export default function WaterCalculatorPage() {
                             </Card>
                         </div>
                     </div>
+
+                    {/* FAQ Section */}
+                    <section className="py-12 bg-white">
+                        <div className="container mx-auto px-4">
+                            <div className="max-w-4xl mx-auto">
+                                <FAQSection faqs={faqs} />
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
         </div>
+            </section >
+        </div >
     )
 }

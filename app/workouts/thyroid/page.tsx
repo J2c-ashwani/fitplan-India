@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, Shield } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function ThyroidWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Thyroid Plan", href: "/workouts/thyroid" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "why-exercise", label: "Why Exercise?" },
+    { id: "home-workouts", label: "Home Workouts" },
+    { id: "gym-workouts", label: "Gym Workouts" },
+    { id: "guidelines", label: "Guidelines" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Can I exercise if I have hypothyroidism?",
+      answer: "Yes! Exercise is crucial for thyroid health. Start slowly (10-15 min sessions), gradually build up, and avoid overtraining. Focus on strength training 3x weekly plus moderate cardio. Always check with your doctor before starting a new program."
+    },
+    {
+      question: "Will exercise help me lose weight with thyroid problems?",
+      answer: "Yes, but slower than normal. Exercise boosts your sluggish metabolism, builds muscle (burns more calories at rest), and supports weight loss. Combine with proper thyroid diet for best results. Be patient - weight loss is 30-50% slower with hypothyroidism."
+    },
+    {
+      question: "Why am I so tired to exercise with thyroid issues?",
+      answer: "Hypothyroidism causes severe fatigue. Start with just 10-15 minutes of walking after breakfast (when energy is highest). As your medication stabilizes and fitness improves, energy levels increase significantly. Don't push through exhaustion - rest when needed."
+    },
+    {
+      question: "Is HIIT/intense exercise safe for thyroid patients?",
+      answer: "Generally avoid excessive HIIT. High-intensity exercise can increase cortisol, which suppresses thyroid function further. Stick to moderate-intensity workouts. If doing HIIT, limit to 1x weekly maximum and only when energy is good."
+    },
+    {
+      question: "How long until I see results from exercise with thyroid?",
+      answer: "Expect 4-8 weeks for noticeable energy improvement, 8-12 weeks for weight loss results. Progress is slower than average due to metabolic slowdown, but consistency pays off. Focus on how you feel (energy, mood, sleep) not just the scale."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-700 to-cyan-900 text-white py-16">
+      <section className="bg-gradient-to-br from-teal-700 to-cyan-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-teal-700 font-semibold">
               🦋 Complete Thyroid Exercise Guide
@@ -30,7 +75,7 @@ export default function ThyroidWorkoutPage() {
               Thyroid Workout Plan: Boost Metabolism & Manage Weight
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective workouts specifically designed for thyroid patients to boost metabolism, 
+              Discover safe, effective workouts specifically designed for thyroid patients to boost metabolism,
               increase energy levels, support weight loss, and improve overall health despite hypothyroidism.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function ThyroidWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,17 +117,17 @@ export default function ThyroidWorkoutPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Crucial for Thyroid Health</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Hypothyroidism slows metabolism, causing fatigue, weight gain, and muscle weakness. Exercise is one of 
-                the most powerful tools to counteract these effects. Regular physical activity boosts metabolism even 
-                with low thyroid function, improves energy levels and reduces fatigue, supports weight loss despite slower 
-                metabolism, builds muscle mass which burns more calories, enhances mood and reduces depression, improves 
-                cardiovascular health, and increases overall quality of life. The key is starting slowly and building 
+                Hypothyroidism slows metabolism, causing fatigue, weight gain, and muscle weakness. Exercise is one of
+                the most powerful tools to counteract these effects. Regular physical activity boosts metabolism even
+                with low thyroid function, improves energy levels and reduces fatigue, supports weight loss despite slower
+                metabolism, builds muscle mass which burns more calories, enhances mood and reduces depression, improves
+                cardiovascular health, and increases overall quality of life. The key is starting slowly and building
                 gradually - your body needs time to adapt when thyroid hormones are imbalanced.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-teal-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-teal-800">Exercise Benefits for Thyroid Patients</h4>
@@ -95,7 +140,7 @@ export default function ThyroidWorkoutPage() {
                     <li>• Strengthens heart health affected by thyroid</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-cyan-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-cyan-800">Best Exercise Types for Thyroid</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -138,7 +183,7 @@ export default function ThyroidWorkoutPage() {
       </section>
 
       {/* Home Workouts Section */}
-      <section id="home-workouts" className="py-16 bg-gray-50">
+      <section id="home-workouts" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -160,7 +205,7 @@ export default function ThyroidWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-teal-100 border border-teal-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>🚶 Walking is THE best exercise for thyroid patients:</strong> Low-impact, manageable with fatigue, 
+                    <strong>🚶 Walking is THE best exercise for thyroid patients:</strong> Low-impact, manageable with fatigue,
                     burns calories, boosts mood, and can be done daily without overtaxing your system.
                   </p>
                 </div>
@@ -172,7 +217,7 @@ export default function ThyroidWorkoutPage() {
                       <strong>Duration:</strong> 15-20 minutes | <strong>Pace:</strong> Comfortable, easy
                     </p>
                     <p className="text-sm text-gray-600">
-                      Start with short walks at comfortable pace. If 15 min feels too long, start with 10 min twice daily. 
+                      Start with short walks at comfortable pace. If 15 min feels too long, start with 10 min twice daily.
                       Focus on consistency, not speed. Walk when your energy is highest (usually morning after breakfast).
                     </p>
                   </div>
@@ -183,7 +228,7 @@ export default function ThyroidWorkoutPage() {
                       <strong>Duration:</strong> 25-30 minutes | <strong>Pace:</strong> Moderate, steady
                     </p>
                     <p className="text-sm text-gray-600">
-                      Add 3-5 minutes each week as tolerance improves. You should be able to hold a conversation. 
+                      Add 3-5 minutes each week as tolerance improves. You should be able to hold a conversation.
                       Burns ~100-150 calories per session, boosts metabolism for hours after.
                     </p>
                   </div>
@@ -194,7 +239,7 @@ export default function ThyroidWorkoutPage() {
                       <strong>Duration:</strong> 30-45 minutes | <strong>Pace:</strong> Brisk when possible
                     </p>
                     <p className="text-sm text-gray-600">
-                      Goal is 30-45 min most days. Some days do brisk intervals (2 min fast, 3 min normal). 
+                      Goal is 30-45 min most days. Some days do brisk intervals (2 min fast, 3 min normal).
                       This level supports consistent weight loss and energy improvement.
                     </p>
                   </div>
@@ -212,7 +257,7 @@ export default function ThyroidWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Muscle burns more calories at rest than fat - crucial for thyroid patients with slower metabolism. 
+                  Muscle burns more calories at rest than fat - crucial for thyroid patients with slower metabolism.
                   Strength training builds muscle, boosts metabolic rate, and helps with weight management.
                 </p>
 
@@ -224,7 +269,7 @@ export default function ThyroidWorkoutPage() {
 
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Main Circuit (2-3 Rounds, 60 sec rest between)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Chair Squats</h6>
@@ -232,7 +277,7 @@ export default function ThyroidWorkoutPage() {
                           <strong>Reps:</strong> 10-15 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Stand from chair without using hands (if possible). Sit back down slowly. Best functional 
+                          Stand from chair without using hands (if possible). Sit back down slowly. Best functional
                           exercise - builds legs and core.
                         </p>
                       </div>
@@ -243,7 +288,7 @@ export default function ThyroidWorkoutPage() {
                           <strong>Reps:</strong> 10-15 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Stand arm's length from wall, lean in, push back. Builds upper body without floor work. 
+                          Stand arm's length from wall, lean in, push back. Builds upper body without floor work.
                           Good for those with low energy.
                         </p>
                       </div>
@@ -298,7 +343,7 @@ export default function ThyroidWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Yoga reduces stress (which worsens thyroid function), improves flexibility, supports gentle strength 
+                  Yoga reduces stress (which worsens thyroid function), improves flexibility, supports gentle strength
                   building, and helps with energy levels without exhausting you.
                 </p>
 
@@ -333,7 +378,7 @@ export default function ThyroidWorkoutPage() {
       </section>
 
       {/* Gym Workouts Section */}
-      <section id="gym-workouts" className="py-16 bg-white">
+      <section id="gym-workouts" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -360,7 +405,7 @@ export default function ThyroidWorkoutPage() {
                       <strong>Duration:</strong> 20-30 minutes | <strong>Resistance:</strong> Low to moderate
                     </p>
                     <p className="text-sm text-gray-600">
-                      Seated with back support, easy on joints. Start with 15 min and build up. Burns 150-250 calories, 
+                      Seated with back support, easy on joints. Start with 15 min and build up. Burns 150-250 calories,
                       doesn't exhaust you like running.
                     </p>
                   </div>
@@ -371,7 +416,7 @@ export default function ThyroidWorkoutPage() {
                       <strong>Duration:</strong> 20-30 minutes | <strong>Resistance:</strong> Level 3-5
                     </p>
                     <p className="text-sm text-gray-600">
-                      Low-impact, full-body movement. Don't go too hard - moderate steady pace is best for thyroid. 
+                      Low-impact, full-body movement. Don't go too hard - moderate steady pace is best for thyroid.
                       Burns 200-300 calories.
                     </p>
                   </div>
@@ -382,7 +427,7 @@ export default function ThyroidWorkoutPage() {
                       <strong>Duration:</strong> 25-35 minutes | <strong>Speed:</strong> 2.5-3.5 mph
                     </p>
                     <p className="text-sm text-gray-600">
-                      Walking is best - NO running until thyroid is well-controlled. Add slight incline (2-4%) for 
+                      Walking is best - NO running until thyroid is well-controlled. Add slight incline (2-4%) for
                       extra calorie burn without exhaustion.
                     </p>
                   </div>
@@ -400,7 +445,7 @@ export default function ThyroidWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Focus on compound movements with machines (safer than free weights when fatigued). Build muscle 
+                  Focus on compound movements with machines (safer than free weights when fatigued). Build muscle
                   to boost resting metabolic rate - critical for thyroid weight management.
                 </p>
 
@@ -456,7 +501,7 @@ export default function ThyroidWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-blue-100 border-2 border-blue-300 rounded-lg p-4 mb-4">
                   <p className="text-sm text-gray-800">
-                    <strong>💙 Excellent for Thyroid Patients:</strong> Zero impact on joints, full-body workout, 
+                    <strong>💙 Excellent for Thyroid Patients:</strong> Zero impact on joints, full-body workout,
                     doesn't spike cortisol like intense cardio, perfect for managing fatigue while burning calories.
                   </p>
                 </div>
@@ -491,11 +536,11 @@ export default function ThyroidWorkoutPage() {
       </section>
 
       {/* Exercise Guidelines */}
-      <section className="py-16 bg-gray-50">
+      <section id="guidelines" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Thyroid Exercise Guidelines</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -522,7 +567,7 @@ export default function ThyroidWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Avoid These Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -553,6 +598,15 @@ export default function ThyroidWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-teal-700 to-cyan-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -561,10 +615,10 @@ export default function ThyroidWorkoutPage() {
               Complete Your Thyroid Management Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise works best when combined with proper nutrition. Get your personalized thyroid diet plan 
+              Exercise works best when combined with proper nutrition. Get your personalized thyroid diet plan
               to maximize weight loss, energy, and overall thyroid health.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -594,10 +648,14 @@ export default function ThyroidWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands managing thyroid symptoms naturally through exercise and proper nutrition
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

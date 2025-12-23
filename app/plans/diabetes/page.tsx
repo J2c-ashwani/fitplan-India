@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, AlertCircle, TrendingDown, Target, Clock, Droplets, Activity, Info } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,49 @@ export const metadata: Metadata = {
 }
 
 export default function DiabetesDietPage() {
+  const breadcrumbItems = [
+    { label: "Diet Plans", href: "/plans" },
+    { label: "Diabetes Diet Plan", href: "/plans/diabetes" },
+  ]
+
+  const tocItems = [
+    { id: "understanding", label: "Understanding Diabetes" },
+    { id: "why-weight-gain", label: "Why Weight Gain" },
+    { id: "foods", label: "Foods Guide" },
+    { id: "meal-plan", label: "7-Day Meal Plan" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Can Type 2 diabetes be reversed permanently with diet alone?",
+      answer: "YES, for many people - especially if caught early! Type 2 diabetes REMISSION (A1C below 6.5% without medications for 3+ months) is achievable for 40-60% of people through: Sustained weight loss (10-15% of body weight or more), strict low-GI diet eliminating all refined carbs and added sugars, regular exercise (30+ min daily), lifestyle changes maintained long-term (not temporary diet). REALITY: Prediabetes and newly diagnosed (less than 5 years) have highest reversal success rate (60-70%). Long-standing diabetes (10+ years) is HARDER but still possible with aggressive intervention. CRITICAL: Reversal requires PERMANENT lifestyle change. Going back to old habits WILL cause diabetes to return. Work with doctor to reduce medications safely as blood sugar improves. Reversal is possible but requires lifelong commitment!"
+    },
+    {
+      question: "How much can I lower my A1C with diet changes in 3 months?",
+      answer: "Realistic A1C reduction with STRICT diet adherence: EXCELLENT compliance (95%+): Expect A1C reduction of 1-2% in 3 months. Example: 8.5% → 6.5-7.5%. GOOD compliance (80-90%): Expect 0.5-1% reduction. Example: 8.0% → 7.0-7.5%. Fair compliance (60-80%): Expect 0.3-0.5% reduction. FACTORS affecting results: Starting A1C (higher = more room to improve), weight loss amount (more loss = bigger drop), exercise consistency (critical for insulin sensitivity), medication adherence, stress management. TIMELINE: First improvements visible in 2-4 weeks (daily blood sugars), but A1C reflects 3-month average so full results take 90 days. Keep strict diet for at least 6 months before deciding if it's working. Many people see 2-3% total reduction in 6-12 months with perfect adherence!"
+    },
+    {
+      question: "Should I test blood sugar after every meal or just fasting?",
+      answer: "For OPTIMAL diabetes control, test BOTH fasting AND post-meal: MINIMUM testing schedule: Fasting (morning upon waking) - DAILY, 2 hours after largest meal (usually lunch or dinner) - DAILY, Before bed - 2-3x weekly. IDEAL testing schedule (tight control): Fasting every morning, 1-2 hours after EACH main meal (breakfast, lunch, dinner), Before bed daily, Occasionally 3 AM (check for nighttime lows). WHY post-meal testing matters: Shows which foods spike YOUR blood sugar (everyone different), helps adjust portions and food combinations, reveals hidden problems fasting misses, most important for preventing complications. TARGETS: Fasting 80-130 mg/dL, 1-2 hour post-meal below 180 mg/dL (ideally below 140). Test more frequently when starting new diet, changing medications, or blood sugars unstable. Reduce frequency once well-controlled for 3+ months."
+    },
+    {
+      question: "Can I ever eat carbs again or must I avoid them completely forever?",
+      answer: "You CAN eat carbs - just the RIGHT carbs in RIGHT portions! ELIMINATE forever: Refined carbs (white bread, white rice, sugar, soda, candy, pastries), added sugars in any form, fruit juices, high-GI foods (GI above 70). EAT strategically: LOW-GI complex carbs (GI below 55): Steel-cut oats, quinoa, brown rice, sweet potato, whole wheat bread, legumes, barley. PORTION CONTROL is key: ¼ of your plate = carbs (½ cup cooked grain OR 1 slice bread OR ½ medium sweet potato), always pair with protein + healthy fat, never eat carbs alone (causes spike). CARB amount per meal: 30-45g for women, 45-60g for men (adjust based on blood sugar response). REALITY: You're not eliminating carbs, you're choosing SMART carbs and controlling portions. Focus on non-starchy vegetables (unlimited), then add measured low-GI carbs. This is sustainable for life!"
+    },
+    {
+      question: "What's the single most important thing I can do for my diabetes TODAY?",
+      answer: "ELIMINATE ALL ADDED SUGARS AND REFINED CARBS - starting THIS meal! This ONE change has biggest immediate impact: Stops dangerous blood sugar spikes within hours, reduces insulin requirement by 30-50% within days, often lowers fasting blood sugar 20-40 mg/dL within 1 week, starts weight loss immediately. SPECIFICALLY avoid: All soda and sweet beverages (biggest culprit), white bread/rice/pasta, candy/cookies/cakes, fruit juice, added sugar in coffee/tea, sweetened yogurt/cereals. REPLACE with: Water, unsweetened tea/coffee, whole grains (brown rice, whole wheat), whole fruits (not juice), plain Greek yogurt. COMBINED with: Test blood sugar 2 hours after meals to see impact, walk 15-20 minutes after dinner (lowers post-meal spike), drink 8+ glasses water daily. This simple change can reduce A1C by 0.5-1% alone! Don't try to be perfect with everything - start here, master this, then add more improvements. Small changes sustained = big results!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-red-600 to-rose-700 text-white py-16">
+      <section className="bg-gradient-to-br from-red-600 to-rose-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-red-600 font-semibold">
               🩸 Evidence-Based Diabetes Management
@@ -30,8 +73,8 @@ export default function DiabetesDietPage() {
               Diabetes Diet Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based diet plan for Type 2 diabetes with low-GI foods, blood sugar control strategies, 
-              weight loss guidance, and proven meal plans. Designed for diabetic patients in USA, UK, Canada, Australia 
+              Complete evidence-based diet plan for Type 2 diabetes with low-GI foods, blood sugar control strategies,
+              weight loss guidance, and proven meal plans. Designed for diabetic patients in USA, UK, Canada, Australia
               to manage A1C, lose weight, and reverse prediabetes naturally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,7 +90,7 @@ export default function DiabetesDietPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="understanding" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,30 +115,30 @@ export default function DiabetesDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Type 2 Diabetes and Diet: Complete Guide 2025</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Type 2 diabetes affects over 37 million Americans (11% of US population) and over 500 million people worldwide, 
-                with numbers increasing dramatically in USA, UK, Canada, Australia, and India. It occurs when your body becomes 
-                resistant to insulin (insulin resistance) and/or your pancreas doesn't produce enough insulin to maintain normal 
-                blood glucose levels. This leads to chronically elevated blood sugar (hyperglycemia) causing damage to blood vessels, 
-                nerves, kidneys, eyes, and heart over time. Common symptoms include increased thirst and urination, extreme hunger 
-                despite eating, unexplained weight loss or weight gain (especially belly fat), fatigue and weakness, blurred vision, 
+                Type 2 diabetes affects over 37 million Americans (11% of US population) and over 500 million people worldwide,
+                with numbers increasing dramatically in USA, UK, Canada, Australia, and India. It occurs when your body becomes
+                resistant to insulin (insulin resistance) and/or your pancreas doesn't produce enough insulin to maintain normal
+                blood glucose levels. This leads to chronically elevated blood sugar (hyperglycemia) causing damage to blood vessels,
+                nerves, kidneys, eyes, and heart over time. Common symptoms include increased thirst and urination, extreme hunger
+                despite eating, unexplained weight loss or weight gain (especially belly fat), fatigue and weakness, blurred vision,
                 slow-healing wounds and infections, numbness or tingling in hands/feet, and darkened skin patches (acanthosis nigricans).
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
-                The revolutionary truth about Type 2 diabetes is that it's largely REVERSIBLE through diet and lifestyle changes, 
-                especially if caught early (prediabetes or newly diagnosed). Research shows that losing just 5-10% of body weight 
-                can significantly improve blood sugar control, reduce A1C by 1-2%, and in many cases allow reduction or elimination 
-                of diabetes medications under doctor supervision. The foundation of successful diabetes management and reversal lies 
-                in <strong>eating low glycemic index (GI) foods</strong> that don't spike blood sugar (choose foods with GI below 55), 
-                prioritizing fiber intake (25-35g daily) which slows sugar absorption and improves insulin sensitivity, eating adequate 
-                protein (0.8-1g per pound body weight) to control appetite and preserve muscle during weight loss, timing carbohydrates 
-                properly (smaller portions, paired with protein/fat), eliminating added sugars and refined carbohydrates completely, 
-                losing weight gradually (1-2 pounds weekly) through sustainable calorie deficit, and combining diet with regular exercise 
-                (critical for insulin sensitivity). This comprehensive diabetes diet plan focuses on whole foods, complex carbs with 
-                GI below 55, lean proteins, healthy fats, and balanced macros (40% carbs, 30% protein, 30% fat) proven to control blood 
+                The revolutionary truth about Type 2 diabetes is that it's largely REVERSIBLE through diet and lifestyle changes,
+                especially if caught early (prediabetes or newly diagnosed). Research shows that losing just 5-10% of body weight
+                can significantly improve blood sugar control, reduce A1C by 1-2%, and in many cases allow reduction or elimination
+                of diabetes medications under doctor supervision. The foundation of successful diabetes management and reversal lies
+                in <strong>eating low glycemic index (GI) foods</strong> that don't spike blood sugar (choose foods with GI below 55),
+                prioritizing fiber intake (25-35g daily) which slows sugar absorption and improves insulin sensitivity, eating adequate
+                protein (0.8-1g per pound body weight) to control appetite and preserve muscle during weight loss, timing carbohydrates
+                properly (smaller portions, paired with protein/fat), eliminating added sugars and refined carbohydrates completely,
+                losing weight gradually (1-2 pounds weekly) through sustainable calorie deficit, and combining diet with regular exercise
+                (critical for insulin sensitivity). This comprehensive diabetes diet plan focuses on whole foods, complex carbs with
+                GI below 55, lean proteins, healthy fats, and balanced macros (40% carbs, 30% protein, 30% fat) proven to control blood
                 sugar, promote fat loss, and potentially reverse Type 2 diabetes naturally.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-red-800">Benefits of Diabetes Diet</h3>
@@ -110,7 +153,7 @@ export default function DiabetesDietPage() {
                     <li>• <strong>Possible remission:</strong> Prediabetes and early Type 2 can be reversed</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-rose-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-rose-800">Diabetes Diet Principles</h3>
                   <ul className="text-gray-700 space-y-2">
@@ -131,14 +174,14 @@ export default function DiabetesDietPage() {
       </section>
 
       {/* Why Diabetes Causes Weight Gain */}
-      <section className="py-16 bg-gray-50">
+      <section id="why-weight-gain" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Type 2 Diabetes Causes Weight Gain and Makes Losing Weight Difficult</h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8 mb-6">
               <p className="text-gray-700 mb-6">
-                Type 2 diabetes and obesity are deeply interconnected in a vicious cycle. Understanding why diabetes makes weight loss 
+                Type 2 diabetes and obesity are deeply interconnected in a vicious cycle. Understanding why diabetes makes weight loss
                 challenging is essential for developing effective strategies that actually work despite insulin resistance and metabolic dysfunction.
               </p>
 
@@ -149,15 +192,15 @@ export default function DiabetesDietPage() {
                     1. Insulin Resistance: The Root Cause of Diabetic Weight Gain
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Insulin resistance means your cells don't respond properly to insulin signals. To compensate, your pancreas produces 
-                    EXCESSIVE amounts of insulin (hyperinsulinemia), sometimes 2-3x normal levels. High insulin is a powerful fat-storage 
-                    hormone that signals your body to aggressively store calories as fat (especially belly fat/visceral fat) while 
+                    Insulin resistance means your cells don't respond properly to insulin signals. To compensate, your pancreas produces
+                    EXCESSIVE amounts of insulin (hyperinsulinemia), sometimes 2-3x normal levels. High insulin is a powerful fat-storage
+                    hormone that signals your body to aggressively store calories as fat (especially belly fat/visceral fat) while
                     simultaneously blocking fat breakdown (lipolysis). This makes weight loss extremely difficult despite eating less.
                   </p>
                   <p className="text-sm text-gray-600">
-                    High insulin levels also increase hunger signals, trigger intense carbohydrate and sugar cravings, cause hypoglycemia 
-                    (low blood sugar crashes) leading to overeating, and prevent your body from accessing stored fat for energy. Breaking 
-                    this cycle requires a low-GI diet that doesn't spike blood sugar/insulin, allowing insulin levels to drop naturally 
+                    High insulin levels also increase hunger signals, trigger intense carbohydrate and sugar cravings, cause hypoglycemia
+                    (low blood sugar crashes) leading to overeating, and prevent your body from accessing stored fat for energy. Breaking
+                    this cycle requires a low-GI diet that doesn't spike blood sugar/insulin, allowing insulin levels to drop naturally
                     and fat-burning to resume.
                   </p>
                 </div>
@@ -168,14 +211,14 @@ export default function DiabetesDietPage() {
                     2. Blood Sugar Roller Coaster Causing Constant Hunger
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    When you eat high-GI foods (white bread, sugary foods, refined carbs), blood sugar spikes rapidly. Your pancreas 
-                    releases massive insulin surge to bring sugar down. But this often overshoots, causing blood sugar to crash below 
-                    normal 2-3 hours later (reactive hypoglycemia). Low blood sugar triggers extreme hunger, shakiness, irritability, 
+                    When you eat high-GI foods (white bread, sugary foods, refined carbs), blood sugar spikes rapidly. Your pancreas
+                    releases massive insulin surge to bring sugar down. But this often overshoots, causing blood sugar to crash below
+                    normal 2-3 hours later (reactive hypoglycemia). Low blood sugar triggers extreme hunger, shakiness, irritability,
                     and intense cravings for more carbs/sugar, perpetuating the cycle.
                   </p>
                   <p className="text-sm text-gray-600">
-                    This blood sugar roller coaster makes consistent calorie control virtually impossible. You feel constantly hungry 
-                    despite eating adequate calories. The solution is eating ONLY low-GI foods (GI below 55) that cause gentle, gradual 
+                    This blood sugar roller coaster makes consistent calorie control virtually impossible. You feel constantly hungry
+                    despite eating adequate calories. The solution is eating ONLY low-GI foods (GI below 55) that cause gentle, gradual
                     blood sugar rises and falls, maintaining stable energy and hunger levels for 3-4 hours between meals without crashes.
                   </p>
                 </div>
@@ -186,14 +229,14 @@ export default function DiabetesDietPage() {
                     3. Metabolic Dysfunction and Slower Fat Burning
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Type 2 diabetes causes metabolic dysfunction where your body preferentially burns carbohydrates for energy instead 
-                    of fat, even when plenty of body fat is available. High insulin levels keep you in "sugar-burning mode" 24/7, 
-                    preventing the metabolic switch to "fat-burning mode" that's necessary for weight loss. Your metabolism also tends 
+                    Type 2 diabetes causes metabolic dysfunction where your body preferentially burns carbohydrates for energy instead
+                    of fat, even when plenty of body fat is available. High insulin levels keep you in "sugar-burning mode" 24/7,
+                    preventing the metabolic switch to "fat-burning mode" that's necessary for weight loss. Your metabolism also tends
                     to be 10-20% slower than non-diabetics of the same weight.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Additionally, diabetes often damages mitochondria (cellular powerhouses), reducing your cells' ability to efficiently 
-                    burn calories for energy. This manifests as fatigue, reduced exercise capacity, and lower non-exercise activity 
+                    Additionally, diabetes often damages mitochondria (cellular powerhouses), reducing your cells' ability to efficiently
+                    burn calories for energy. This manifests as fatigue, reduced exercise capacity, and lower non-exercise activity
                     (NEAT - fidgeting, movement throughout day), further reducing daily calorie burn by 200-400 calories.
                   </p>
                 </div>
@@ -204,14 +247,14 @@ export default function DiabetesDietPage() {
                     4. Certain Diabetes Medications Cause Weight Gain
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Several common diabetes medications actually CAUSE weight gain as a side effect, making weight loss even more 
-                    challenging. Insulin injections, sulfonylureas (glipizide, glyburide), and TZDs (pioglitazone) all promote weight 
-                    gain of 5-15 pounds by increasing insulin levels, promoting fat storage, and increasing appetite. This creates a 
+                    Several common diabetes medications actually CAUSE weight gain as a side effect, making weight loss even more
+                    challenging. Insulin injections, sulfonylureas (glipizide, glyburide), and TZDs (pioglitazone) all promote weight
+                    gain of 5-15 pounds by increasing insulin levels, promoting fat storage, and increasing appetite. This creates a
                     frustrating situation where medication helps blood sugar but worsens weight.
                   </p>
                   <p className="text-sm text-gray-600">
-                    If weight gain from medications is significant, discuss alternatives with your doctor. Newer medications like 
-                    metformin (neutral or slight weight loss), SGLT2 inhibitors (causes weight loss), and GLP-1 agonists like Ozempic/Wegovy 
+                    If weight gain from medications is significant, discuss alternatives with your doctor. Newer medications like
+                    metformin (neutral or slight weight loss), SGLT2 inhibitors (causes weight loss), and GLP-1 agonists like Ozempic/Wegovy
                     (significant weight loss) may be better options. Never change medications without doctor guidance.
                   </p>
                 </div>
@@ -222,11 +265,11 @@ export default function DiabetesDietPage() {
       </section>
 
       {/* Foods to Eat & Avoid */}
-      <section className="py-16 bg-white">
+      <section id="foods" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Complete Diabetes Food Guide: Best Foods & Foods to Strictly Avoid</h2>
-            
+
             <div className="space-y-8">
               {/* Foods to Eat */}
               <Card className="border-green-200">
@@ -238,7 +281,7 @@ export default function DiabetesDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Focus on low-GI whole foods (GI below 55) that cause minimal blood sugar spikes. Prioritize fiber, protein, and 
+                    Focus on low-GI whole foods (GI below 55) that cause minimal blood sugar spikes. Prioritize fiber, protein, and
                     healthy fats at every meal to slow digestion and improve insulin sensitivity.
                   </p>
 
@@ -326,7 +369,7 @@ export default function DiabetesDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    These foods cause dangerous blood sugar spikes, worsen insulin resistance, and make diabetes control impossible. 
+                    These foods cause dangerous blood sugar spikes, worsen insulin resistance, and make diabetes control impossible.
                     Complete elimination is necessary for successful blood sugar management and weight loss.
                   </p>
 
@@ -386,7 +429,7 @@ export default function DiabetesDietPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Complete 7-Day Diabetes Meal Plan (1,500-1,600 Calories)</h2>
             <p className="text-center text-gray-600 mb-12">
-              Low-GI, high-fiber meal plan with balanced macros (40% carbs, 30% protein, 30% fat) designed to control blood sugar, 
+              Low-GI, high-fiber meal plan with balanced macros (40% carbs, 30% protein, 30% fat) designed to control blood sugar,
               promote weight loss of 1-2 lbs weekly, and reduce A1C by 1-2% in 3-6 months. Pair with blood sugar monitoring.
             </p>
 
@@ -492,6 +535,15 @@ export default function DiabetesDietPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-red-600 to-rose-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -500,14 +552,18 @@ export default function DiabetesDietPage() {
             <p className="text-xl mb-8">
               Get a customized meal plan tailored to your A1C, medications, and weight loss goals from certified diabetes nutritionists.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Diabetes Consultation</h4>
-                <p className="text-white text-sm mb-4">Personalized plan - ₹500 ($6 USD)</p>
+                <p className="text-white text-sm mb-4">
+                  Personalized plan - <PriceDisplay amountIn={500} amountUs={50} />
+                </p>
                 <Button size="lg" className="w-full bg-white text-red-600" asChild>
-                  <Link href="/contact">Book Now - ₹500</Link>
+                  <Link href="/contact">
+                    Book Now - <PriceDisplay amountIn={500} amountUs={50} />
+                  </Link>
                 </Button>
               </div>
 
@@ -520,6 +576,10 @@ export default function DiabetesDietPage() {
                 </Button>
               </div>
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

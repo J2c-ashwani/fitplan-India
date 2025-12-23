@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, Flame, TrendingDown } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function WeightLossWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Weight Loss Plan", href: "/workouts/weight-loss" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "why-exercise", label: "Why Exercise?" },
+    { id: "home-workouts", label: "Home Workouts" },
+    { id: "gym-workouts", label: "Gym Plan" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "How much weight can I lose per week with exercise?",
+      answer: "Healthy weight loss is 1-2 lbs per week. Exercise burns 300-600 calories per session, adding up to 2,000-3,500 calories per week (roughly 0.5-1 lb). Combined with proper diet, expect 1-2 lbs weekly loss sustainably."
+    },
+    {
+      question: "Is cardio or strength training better for weight loss?",
+      answer: "Both! Strength training preserves muscle mass during calorie deficit (preventing metabolic slowdown), while cardio burns immediate calories. The best approach combines 3-4 strength sessions with 2-3 cardio sessions weekly."
+    },
+    {
+      question: "Can I lose weight by exercise alone without dieting?",
+      answer: "Unlikely. Diet controls 70-80% of weight loss. You'd need to burn 500+ calories daily through exercise (1+ hour of hard work) to lose 1 lb/week, and it's easy to eat back those calories. Exercise + diet is the proven combination."
+    },
+    {
+      question: "How often should I work out to lose weight?",
+      answer: "Aim for 4-6 sessions per week: 3-4 strength training, 2-3 cardio. Include daily walking (8,000-10,000 steps). Rest 1-2 days for recovery. Consistency over months matters more than intensity over days."
+    },
+    {
+      question: "Will I lose muscle while losing weight?",
+      answer: "Not if you strength train 3-4x weekly and eat adequate protein (0.7-1g per lb bodyweight). Strength training signals your body to preserve muscle while burning fat. Cardio-only approaches often lose muscle along with fat."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-red-600 to-orange-700 text-white py-16">
+      <section className="bg-gradient-to-br from-red-600 to-orange-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-red-600 font-semibold">
               🔥 Complete Weight Loss Workout Guide
@@ -50,7 +95,7 @@ export default function WeightLossWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,7 +117,7 @@ export default function WeightLossWorkoutPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise for Weight Loss: What Actually Works</h2>
               <p className="text-lg text-gray-700 mb-6">
                 While diet creates the calorie deficit needed for weight loss (you cannot out-exercise a bad diet),
@@ -138,7 +183,7 @@ export default function WeightLossWorkoutPage() {
       </section>
 
       {/* Home Workouts Section */}
-      <section id="home-workouts" className="py-16 bg-gray-50">
+      <section id="home-workouts" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -357,7 +402,7 @@ export default function WeightLossWorkoutPage() {
       </section>
 
       {/* Gym Workouts Section */}
-      <section id="gym-workouts" className="py-16 bg-white">
+      <section id="gym-workouts" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -436,7 +481,7 @@ export default function WeightLossWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Weight Loss Workout Success Tips</h2>
@@ -498,6 +543,15 @@ export default function WeightLossWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-red-600 to-orange-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -543,6 +597,10 @@ export default function WeightLossWorkoutPage() {
             <p className="text-white text-sm mt-6">
               ✨ Join thousands losing weight sustainably through smart exercise and nutrition
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

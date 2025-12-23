@@ -17,8 +17,12 @@ import {
   ArrowRight,
   Sparkles,
   Calendar,
+  HelpCircle,
 } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import FAQSection from "@/components/FAQSection"
+import PriceDisplay from "@/components/PriceDisplay"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -218,11 +222,40 @@ const difficultyColors: Record<string, string> = {
 }
 
 export default function PlansPage() {
+  const breadcrumbItems = [
+    { label: "Home", href: "/" },
+    { label: "Diet Plans", href: "/plans" },
+  ]
+
+  const faqs = [
+    {
+      question: "Are these diet plans suitable for Indian vegetarians?",
+      answer: "Absolutely! All our meal plans are 100% Indian-cuisine based and highly customizable. We have dedicated options for Vegetarians, Eggetarians, and Non-Vegetarians. Even our condition-specific plans (like PCOS or Diabetes) include full vegetarian substitution guides."
+    },
+    {
+      question: "How do I know which plan is right for me?",
+      answer: "If you have a diagnosed condition (PCOS, Thyroid, Diabetes), choose that specific plan as it targets the root hormonal or metabolic cause. If your goal is general fitness or weight loss without a medical condition, the 'Metabolic Weight Loss' or 'Gym + Diet Combo' are excellent starting points. You can also book a consultation for personalized guidance."
+    },
+    {
+      question: "Can I switch plans later if my goals change?",
+      answer: "Yes. Many users start with a condition-specific plan (e.g., to manage PCOS) and then switch to a general fitness plan (like Gym + Diet) once their hormones are balanced. Our flexible structure supports your longterm health journey."
+    },
+    {
+      question: "Do I need to buy expensive supplements?",
+      answer: "No. Our philosophy is 'Food First'. While we provide a supplement guide for optimization (especially for conditions like Thyroid or PCOS), they are optional. The core results come from the balanced, nutrient-dense Indian meal plans provided."
+    },
+    {
+      question: "Is there support available if I get stuck?",
+      answer: "Yes! You can upgrade to a personalized plan at any time to get 1-on-1 access to a certified nutritionist who can tweak your plan, answer daily queries, and keep you accountable."
+    }
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 text-white py-20">
+      <section className="bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 text-white pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-teal-700 font-semibold text-base">
               🎯 Specialized Diet Plans
@@ -231,7 +264,7 @@ export default function PlansPage() {
               Expert Diet Plans for Every Health Condition
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              16 specialized, expert-designed diet plans tailored for specific health conditions, age groups, and 
+              16 specialized, expert-designed diet plans tailored for specific health conditions, age groups, and
               dietary preferences. Indian cuisine-based with proven results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -242,7 +275,7 @@ export default function PlansPage() {
               </Button>
               <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white border-2 border-white font-semibold" asChild>
                 <Link href="/contact">
-                  Get Personalized Plan - $100
+                  Get Personalized Plan - <PriceDisplay amountIn={500} amountUs={50} />
                 </Link>
               </Button>
             </div>
@@ -309,7 +342,7 @@ export default function PlansPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600 mb-6">{plan.description}</p>
-                      <Button 
+                      <Button
                         className={`w-full font-bold shadow-md ${colorButtons[plan.color]}`}
                         size="lg"
                         asChild
@@ -328,6 +361,24 @@ export default function PlansPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-white border-t border-gray-100">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4 inline-flex items-center gap-2">
+                <HelpCircle className="w-8 h-8 text-teal-600" />
+                Common Questions
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Everything you need to know about our specialized Indian diet plans.
+              </p>
+            </div>
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,21 +387,21 @@ export default function PlansPage() {
               Not Sure Which Plan is Right for You?
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Book a consultation with our certified nutritionists to get a personalized recommendation based on 
+              Book a consultation with our certified nutritionists to get a personalized recommendation based on
               your health condition, lifestyle, medical history, and fitness goals.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Personalized Consultation */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <TrendingUp className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2 text-xl">Personalized Consultation</h4>
                 <p className="text-white text-sm mb-4 leading-relaxed">
-                  Get expert advice from certified nutritionists with customized diet plan - $100.
+                  Get expert advice from certified nutritionists with customized diet plan - <PriceDisplay amountIn={500} amountUs={50} />.
                 </p>
                 <Button size="lg" className="w-full bg-white text-teal-700 hover:bg-gray-100 font-semibold" asChild>
                   <Link href="/contact">
-                    Book Consultation - $100
+                    Book Consultation - <PriceDisplay amountIn={500} amountUs={50} />
                   </Link>
                 </Button>
               </div>
@@ -369,7 +420,7 @@ export default function PlansPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join 15,000+ Indians who transformed their health with FitPlan India
             </p>

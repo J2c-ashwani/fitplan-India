@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, AlertCircle, Apple, TrendingDown, Target, Clock, Flame, Sparkles, Pill, Info, Zap, Activity } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function HypothyroidismDietPage() {
+  const breadcrumbItems = [
+    { label: "Diet Plans", href: "/plans" },
+    { label: "Hypothyroidism Diet", href: "/plans/hypothyroidism" },
+  ]
+
+  const tocItems = [
+    { id: "understanding", label: "Understanding Hypothyroidism" },
+    { id: "why-weight-gain", label: "Why Weight Gain?" },
+    { id: "foods", label: "Foods Guide" },
+    { id: "meal-plan", label: "7-Day Meal Plan" },
+    { id: "supplements", label: "Supplements" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Why is it so hard to lose weight with hypothyroidism?",
+      answer: "Hypothyroidism lowers your Basal Metabolic Rate (BMR) by 20-40% because your body lacks the thyroid hormones (T3/T4) that regulate metabolism. You burn 200-600 fewer calories daily at rest than a normal person. Additionally, fatigue reduces your physical activity, and fluid retention adds 'water weight.' To lose weight, you must optimize medication levels (TSH 1-2 mIU/L), consume a controlled calorie intake (but not too low!), and prioritize protein and strength training to boost metabolism."
+    },
+    {
+      question: "Do I really need to avoid broccoli and kale (goitrogens)?",
+      answer: "Not necessarily! While raw cruciferous vegetables contain goitrogens that can interfere with thyroid function, COOKING them (steaming, baking, roasting) deactivates about 90% of the goitrogentic compounds. You can enjoy cooked broccoli, cauliflower, and kale in moderation. Avoid juicing large amounts of raw greens. If you have severe iodine deficiency, be more cautious, but for most treated hypothyroid patients, cooked veggies are healthy."
+    },
+    {
+      question: "Should I go gluten-free for hypothyroidism?",
+      answer: "If you have Hashimoto's Thyroiditis (autoimmune hypothyroidism), going gluten-free is highly recommended. About 90% of hypothyroid cases are Hashimoto's. The molecular structure of gluten resembles thyroid tissue, leading to 'molecular mimicry' where your immune system attacks your thyroid when you eat gluten. Many patients report reduced antibodies, less bloating, and better energy after 3-6 months gluten-free."
+    },
+    {
+      question: "How much should I eat to lose weight without slowing my metabolism?",
+      answer: "Avoid extreme calorie restriction (below 1,200 calories), which signals your body to slow metabolism further ('starvation mode'). Aim for a moderate deficit (1,400-1,600 calories for most women). Focus on nutrient density: high protein (25-30g per meal) to stay full and burn more calories during digestion, fiber from vegetables, and healthy fats. Consistency is key, not starvation."
+    },
+    {
+      question: "What is the best type of exercise for hypothyroidism?",
+      answer: "Strength training is superior to endless cardio for hypothyroidism. Since you are prone to muscle loss and slow metabolism, building muscle is the best way to permanently increase your daily calorie burn. Aim for 2-3 full-body strength sessions per week. Low-intensity steady cardio (walking) is good for stress reduction, but avoid excessive high-intensity cardio (HIIT) if you are exhausted, as it can spike cortisol and worsen thyroid function."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-cyan-700 text-white py-16">
+      <section className="bg-gradient-to-br from-blue-600 to-cyan-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-blue-600 font-semibold">
               🦋 Evidence-Based Thyroid Management
@@ -30,8 +75,8 @@ export default function HypothyroidismDietPage() {
               Hypothyroidism Weight Loss Diet Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based diet plan for underactive thyroid (hypothyroidism) with metabolism-boosting foods, 
-              thyroid-supporting nutrients, selenium and iodine guidance, supplements, and proven weight loss strategies. 
+              Complete evidence-based diet plan for underactive thyroid (hypothyroidism) with metabolism-boosting foods,
+              thyroid-supporting nutrients, selenium and iodine guidance, supplements, and proven weight loss strategies.
               Designed for thyroid patients in USA, UK, Canada, Australia, and worldwide including Hashimoto's thyroiditis.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,7 +92,7 @@ export default function HypothyroidismDietPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="understanding" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,29 +117,29 @@ export default function HypothyroidismDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Hypothyroidism and Weight Loss Challenges</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Hypothyroidism (underactive thyroid) affects over 20 million Americans and millions more worldwide in the UK, 
-                Canada, Australia, and Europe. It occurs when the thyroid gland doesn't produce enough thyroid hormones (T3 and T4), 
-                causing metabolism to slow down significantly. This leads to unexplained weight gain (even with diet and exercise), 
-                extreme fatigue and low energy, feeling cold all the time especially hands and feet, dry skin and brittle hair, 
-                constipation and digestive issues, depression and brain fog, muscle weakness and joint pain, and difficulty losing 
-                weight despite eating less. Hashimoto's thyroiditis is the most common cause (autoimmune condition attacking the 
+                Hypothyroidism (underactive thyroid) affects over 20 million Americans and millions more worldwide in the UK,
+                Canada, Australia, and Europe. It occurs when the thyroid gland doesn't produce enough thyroid hormones (T3 and T4),
+                causing metabolism to slow down significantly. This leads to unexplained weight gain (even with diet and exercise),
+                extreme fatigue and low energy, feeling cold all the time especially hands and feet, dry skin and brittle hair,
+                constipation and digestive issues, depression and brain fog, muscle weakness and joint pain, and difficulty losing
+                weight despite eating less. Hashimoto's thyroiditis is the most common cause (autoimmune condition attacking the
                 thyroid gland), affecting 90% of hypothyroid cases in developed countries.
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
-                The key challenge with hypothyroidism weight loss is that a sluggish thyroid slows your basal metabolic rate (BMR) 
-                by 20-40%, meaning you burn 200-600 fewer calories per day at rest compared to someone with normal thyroid function. 
-                The foundation of successful hypothyroidism weight loss lies in <strong>optimizing thyroid medication dosage</strong> 
-                (work closely with your endocrinologist to ensure TSH levels are in optimal range 1-2 mIU/L, not just "normal"), 
-                eating thyroid-supporting foods rich in selenium, zinc, iodine (if deficient), and tyrosine, avoiding goitrogenic 
-                foods that interfere with thyroid function when consumed raw and in excess, maintaining adequate protein intake 
-                (0.8-1g per pound of body weight) to preserve muscle mass and boost metabolism, managing stress and cortisol levels 
-                (high cortisol worsens thyroid function), getting 7-9 hours quality sleep nightly (poor sleep disrupts thyroid hormones), 
-                and combining diet with strength training exercise to rebuild metabolism. This comprehensive hypothyroidism diet plan 
-                focuses on nutrient-dense whole foods, metabolism-boosting nutrients, anti-inflammatory foods, and balanced macros 
+                The key challenge with hypothyroidism weight loss is that a sluggish thyroid slows your basal metabolic rate (BMR)
+                by 20-40%, meaning you burn 200-600 fewer calories per day at rest compared to someone with normal thyroid function.
+                The foundation of successful hypothyroidism weight loss lies in <strong>optimizing thyroid medication dosage</strong>
+                (work closely with your endocrinologist to ensure TSH levels are in optimal range 1-2 mIU/L, not just "normal"),
+                eating thyroid-supporting foods rich in selenium, zinc, iodine (if deficient), and tyrosine, avoiding goitrogenic
+                foods that interfere with thyroid function when consumed raw and in excess, maintaining adequate protein intake
+                (0.8-1g per pound of body weight) to preserve muscle mass and boost metabolism, managing stress and cortisol levels
+                (high cortisol worsens thyroid function), getting 7-9 hours quality sleep nightly (poor sleep disrupts thyroid hormones),
+                and combining diet with strength training exercise to rebuild metabolism. This comprehensive hypothyroidism diet plan
+                focuses on nutrient-dense whole foods, metabolism-boosting nutrients, anti-inflammatory foods, and balanced macros
                 (35% protein, 35% carbs, 30% healthy fats) designed specifically for optimal thyroid function and sustainable weight loss.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-blue-800">Benefits of Thyroid-Optimized Diet</h3>
@@ -109,7 +154,7 @@ export default function HypothyroidismDietPage() {
                     <li>• <strong>Better thyroid labs:</strong> Optimized TSH, T3, T4 levels</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-cyan-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-cyan-800">Hypothyroidism Diet Principles</h3>
                   <ul className="text-gray-700 space-y-2">
@@ -130,15 +175,15 @@ export default function HypothyroidismDietPage() {
       </section>
 
       {/* Why Hypothyroidism Causes Weight Gain */}
-      <section className="py-16 bg-gray-50">
+      <section id="why-weight-gain" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Hypothyroidism Causes Weight Gain and Makes Losing Weight So Difficult</h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8 mb-6">
               <p className="text-gray-700 mb-6">
-                People with hypothyroidism face unique metabolic challenges that make weight loss 40-60% more difficult than those 
-                with normal thyroid function. Understanding the science behind thyroid-related weight gain is essential for developing 
+                People with hypothyroidism face unique metabolic challenges that make weight loss 40-60% more difficult than those
+                with normal thyroid function. Understanding the science behind thyroid-related weight gain is essential for developing
                 an effective strategy that actually works despite a sluggish metabolism.
               </p>
 
@@ -149,14 +194,14 @@ export default function HypothyroidismDietPage() {
                     1. Dramatically Slower Metabolism (BMR Reduction)
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Low thyroid hormone levels (T3 and T4) directly decrease your basal metabolic rate (BMR) by 20-40%. This means 
-                    if your normal BMR should be 1,500 calories per day, hypothyroidism can reduce it to 900-1,200 calories daily. 
-                    You're burning 300-600 fewer calories per day just existing, which equals 1-2 pounds of extra weight gain per 
+                    Low thyroid hormone levels (T3 and T4) directly decrease your basal metabolic rate (BMR) by 20-40%. This means
+                    if your normal BMR should be 1,500 calories per day, hypothyroidism can reduce it to 900-1,200 calories daily.
+                    You're burning 300-600 fewer calories per day just existing, which equals 1-2 pounds of extra weight gain per
                     month if calorie intake stays the same.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Thyroid hormones regulate how every cell in your body uses energy. When levels are low, mitochondria (cellular 
-                    powerhouses) produce less ATP (energy), cells burn fuel more slowly, and your body switches to "energy conservation 
+                    Thyroid hormones regulate how every cell in your body uses energy. When levels are low, mitochondria (cellular
+                    powerhouses) produce less ATP (energy), cells burn fuel more slowly, and your body switches to "energy conservation
                     mode" storing more calories as fat. This is why thyroid patients gain weight even while eating normally or dieting.
                   </p>
                 </div>
@@ -167,13 +212,13 @@ export default function HypothyroidismDietPage() {
                     2. Severe Fatigue Leading to Reduced Activity
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Hypothyroidism causes profound, debilitating fatigue that makes exercise feel impossible. Low thyroid hormones 
-                    reduce ATP production in muscles, causing weakness and early exhaustion. You burn far fewer calories through 
+                    Hypothyroidism causes profound, debilitating fatigue that makes exercise feel impossible. Low thyroid hormones
+                    reduce ATP production in muscles, causing weakness and early exhaustion. You burn far fewer calories through
                     daily activity (NEAT - non-exercise activity thermogenesis) and formal exercise, compounding the metabolic slowdown.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Even simple activities like walking, climbing stairs, or household chores become exhausting. This activity reduction 
-                    can decrease daily calorie burn by another 200-400 calories. Combined with lower BMR, you're burning 500-1,000 fewer 
+                    Even simple activities like walking, climbing stairs, or household chores become exhausting. This activity reduction
+                    can decrease daily calorie burn by another 200-400 calories. Combined with lower BMR, you're burning 500-1,000 fewer
                     calories daily than someone with normal thyroid function, making weight gain inevitable without intervention.
                   </p>
                 </div>
@@ -184,13 +229,13 @@ export default function HypothyroidismDietPage() {
                     3. Water Retention and Fluid Accumulation
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Hypothyroidism causes significant water retention and edema (swelling), particularly in the face (puffy appearance), 
-                    hands, feet, and abdomen. Low thyroid hormones impair kidney function and reduce ability to excrete excess fluid. 
+                    Hypothyroidism causes significant water retention and edema (swelling), particularly in the face (puffy appearance),
+                    hands, feet, and abdomen. Low thyroid hormones impair kidney function and reduce ability to excrete excess fluid.
                     Mucopolysaccharides (sugar-protein compounds) accumulate in tissues causing myxedema (thick, doughy skin swelling).
                   </p>
                   <p className="text-sm text-gray-600">
-                    This fluid retention can account for 5-15 pounds of "weight gain" that isn't actually fat. While frustrating, 
-                    this water weight typically resolves within 4-8 weeks once thyroid medication is optimized and metabolism improves. 
+                    This fluid retention can account for 5-15 pounds of "weight gain" that isn't actually fat. While frustrating,
+                    this water weight typically resolves within 4-8 weeks once thyroid medication is optimized and metabolism improves.
                     Many patients lose 10+ pounds of water weight in the first month of proper treatment.
                   </p>
                 </div>
@@ -201,13 +246,13 @@ export default function HypothyroidismDietPage() {
                     4. Decreased Muscle Mass (Sarcopenia)
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Hypothyroidism accelerates muscle loss (sarcopenia) because low thyroid hormones impair protein synthesis and muscle 
-                    tissue maintenance. Since muscle tissue burns 3-5 times more calories than fat tissue even at rest, losing muscle 
+                    Hypothyroidism accelerates muscle loss (sarcopenia) because low thyroid hormones impair protein synthesis and muscle
+                    tissue maintenance. Since muscle tissue burns 3-5 times more calories than fat tissue even at rest, losing muscle
                     further slows metabolism in a vicious downward spiral. Thyroid patients often have 10-20% lower muscle mass.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Preserving and rebuilding muscle through adequate protein intake (0.8-1g per pound body weight daily) and strength 
-                    training exercise 2-3 times weekly is absolutely critical for hypothyroidism weight loss. You must fight muscle loss 
+                    Preserving and rebuilding muscle through adequate protein intake (0.8-1g per pound body weight daily) and strength
+                    training exercise 2-3 times weekly is absolutely critical for hypothyroidism weight loss. You must fight muscle loss
                     aggressively to restore metabolic rate and create sustainable fat loss.
                   </p>
                 </div>
@@ -218,11 +263,11 @@ export default function HypothyroidismDietPage() {
       </section>
 
       {/* Foods to Eat & Avoid */}
-      <section className="py-16 bg-white">
+      <section id="foods" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Complete Hypothyroidism Food Guide: Thyroid-Supporting Foods & Foods to Avoid</h2>
-            
+
             <div className="space-y-8">
               {/* Foods to Eat */}
               <Card className="border-green-200">
@@ -234,7 +279,7 @@ export default function HypothyroidismDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Focus on nutrient-dense whole foods rich in selenium, zinc, iodine, tyrosine, and B vitamins that support thyroid 
+                    Focus on nutrient-dense whole foods rich in selenium, zinc, iodine, tyrosine, and B vitamins that support thyroid
                     hormone production and conversion. High protein intake is critical to preserve muscle mass and boost metabolism.
                   </p>
 
@@ -334,7 +379,7 @@ export default function HypothyroidismDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    These foods interfere with thyroid function, block iodine absorption, impair thyroid medication effectiveness, 
+                    These foods interfere with thyroid function, block iodine absorption, impair thyroid medication effectiveness,
                     or slow metabolism further. Avoid or strictly limit for optimal thyroid health and weight loss success.
                   </p>
 
@@ -342,10 +387,10 @@ export default function HypothyroidismDietPage() {
                     <div className="bg-red-50 p-4 rounded-lg">
                       <h4 className="font-semibold mb-2 text-red-800">Goitrogenic Foods (Limit Raw Forms):</h4>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• <strong>Raw cruciferous vegetables:</strong> Raw broccoli, cauliflower, cabbage, kale, Brussels sprouts 
-                        (cooking deactivates goitrogens, so cooked is fine in moderation)</li>
-                        <li>• <strong>Soy products:</strong> Tofu, soy milk, edamame, soy protein isolate (interferes with thyroid 
-                        medication absorption - take 4 hours apart)</li>
+                        <li>• <strong>Raw cruciferous vegetables:</strong> Raw broccoli, cauliflower, cabbage, kale, Brussels sprouts
+                          (cooking deactivates goitrogens, so cooked is fine in moderation)</li>
+                        <li>• <strong>Soy products:</strong> Tofu, soy milk, edamame, soy protein isolate (interferes with thyroid
+                          medication absorption - take 4 hours apart)</li>
                         <li>• <strong>Millet:</strong> Contains goitrogens, avoid if hypothyroid</li>
                         <li>• <strong>Pine nuts, peanuts:</strong> Moderate goitrogenic effect</li>
                         <li>• <strong>Cassava/tapioca:</strong> High goitrogen content</li>
@@ -371,8 +416,8 @@ export default function HypothyroidismDietPage() {
                   <div className="mt-6 bg-red-50 p-4 rounded-lg">
                     <h4 className="font-semibold mb-2 text-red-800">Foods That Interfere with Thyroid Medication:</h4>
                     <ul className="text-sm text-gray-700 space-y-2">
-                      <li>• <strong>Calcium supplements, dairy (within 4 hours):</strong> Blocks levothyroxine absorption. Take medication 
-                      on empty stomach, wait 4 hours before dairy/calcium.</li>
+                      <li>• <strong>Calcium supplements, dairy (within 4 hours):</strong> Blocks levothyroxine absorption. Take medication
+                        on empty stomach, wait 4 hours before dairy/calcium.</li>
                       <li>• <strong>Iron supplements (within 4 hours):</strong> Binds to thyroid medication. Take separately.</li>
                       <li>• <strong>Soy products (within 4 hours):</strong> Interferes with medication effectiveness.</li>
                       <li>• <strong>High-fiber foods at medication time:</strong> Can reduce absorption. Take meds 1 hour before food.</li>
@@ -386,8 +431,8 @@ export default function HypothyroidismDietPage() {
                       Gluten Consideration for Hashimoto's Thyroiditis
                     </h4>
                     <p className="text-sm text-gray-700">
-                      If you have Hashimoto's (autoimmune hypothyroidism), consider eliminating gluten for 3-6 months. Research shows 
-                      70-80% of Hashimoto's patients improve significantly on a gluten-free diet due to reduced autoimmune antibodies. 
+                      If you have Hashimoto's (autoimmune hypothyroidism), consider eliminating gluten for 3-6 months. Research shows
+                      70-80% of Hashimoto's patients improve significantly on a gluten-free diet due to reduced autoimmune antibodies.
                       Gluten molecular structure resembles thyroid tissue, triggering autoimmune attacks (molecular mimicry).
                     </p>
                   </div>
@@ -404,10 +449,10 @@ export default function HypothyroidismDietPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Complete 7-Day Hypothyroidism Diet Plan (1,400-1,500 Calories)</h2>
             <p className="text-center text-gray-600 mb-12">
-              High-protein (35%), moderate-carb (35%), moderate-fat (30%) meal plan designed to boost metabolism, support thyroid 
+              High-protein (35%), moderate-carb (35%), moderate-fat (30%) meal plan designed to boost metabolism, support thyroid
               function, and promote fat loss while preserving muscle mass. Rich in selenium, zinc, and tyrosine.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-blue-200">
@@ -515,18 +560,18 @@ export default function HypothyroidismDietPage() {
       </section>
 
       {/* Supplements */}
-      <section className="py-16 bg-white">
+      <section id="supplements" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center justify-center">
               <Pill className="w-8 h-8 mr-3 text-cyan-600" />
               Essential Supplements for Hypothyroidism & Weight Loss
             </h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8">
               <p className="text-gray-700 mb-6">
-                Work with your endocrinologist to optimize thyroid medication first (TSH goal: 1-2 mIU/L, not just "normal range"). 
-                These supplements can support thyroid function, improve T4-to-T3 conversion, and accelerate weight loss when combined 
+                Work with your endocrinologist to optimize thyroid medication first (TSH goal: 1-2 mIU/L, not just "normal range").
+                These supplements can support thyroid function, improve T4-to-T3 conversion, and accelerate weight loss when combined
                 with proper diet and medication.
               </p>
 
@@ -534,28 +579,28 @@ export default function HypothyroidismDietPage() {
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h3 className="font-semibold text-lg mb-3 text-blue-800">Core Thyroid Support Supplements:</h3>
                   <ul className="text-sm text-gray-700 space-y-3">
-                    <li>• <strong>Selenium:</strong> 200mcg daily (or 2 Brazil nuts). Essential for T4-to-T3 conversion. Don't exceed 
-                    400mcg daily. Most important supplement for hypothyroidism.</li>
-                    <li>• <strong>Zinc:</strong> 30mg daily with food. Required for thyroid hormone production and T3 receptor function. 
-                    Deficiency common in hypothyroid patients.</li>
-                    <li>• <strong>Vitamin D3:</strong> 2,000-5,000 IU daily (test blood levels first, aim 50-70 ng/mL). Deficiency 
-                    worsens hypothyroidism and weight gain.</li>
-                    <li>• <strong>Magnesium:</strong> 300-400mg daily (glycinate form). Required for thyroid hormone production, muscle 
-                    function, and metabolism.</li>
+                    <li>• <strong>Selenium:</strong> 200mcg daily (or 2 Brazil nuts). Essential for T4-to-T3 conversion. Don't exceed
+                      400mcg daily. Most important supplement for hypothyroidism.</li>
+                    <li>• <strong>Zinc:</strong> 30mg daily with food. Required for thyroid hormone production and T3 receptor function.
+                      Deficiency common in hypothyroid patients.</li>
+                    <li>• <strong>Vitamin D3:</strong> 2,000-5,000 IU daily (test blood levels first, aim 50-70 ng/mL). Deficiency
+                      worsens hypothyroidism and weight gain.</li>
+                    <li>• <strong>Magnesium:</strong> 300-400mg daily (glycinate form). Required for thyroid hormone production, muscle
+                      function, and metabolism.</li>
                   </ul>
                 </div>
 
                 <div className="bg-cyan-50 p-6 rounded-lg">
                   <h3 className="font-semibold text-lg mb-3 text-cyan-800">Supporting Supplements (Optional):</h3>
                   <ul className="text-sm text-gray-700 space-y-3">
-                    <li>• <strong>Omega-3 Fish Oil:</strong> 1,000-2,000mg EPA+DHA daily. Reduces inflammation (especially for 
-                    Hashimoto's), supports metabolism.</li>
-                    <li>• <strong>B-Complex Vitamins:</strong> Once daily. Support energy production, metabolism, and thyroid function. 
-                    Choose methylated forms (methylcobalamin B12).</li>
-                    <li>• <strong>L-Tyrosine:</strong> 500-1,000mg daily on empty stomach. Amino acid building block for thyroid hormones. 
-                    May help with energy and focus.</li>
-                    <li>• <strong>Ashwagandha:</strong> 600mg daily. Adaptogen that may support healthy thyroid function and reduce cortisol. 
-                    (Consult doctor if Hashimoto's)</li>
+                    <li>• <strong>Omega-3 Fish Oil:</strong> 1,000-2,000mg EPA+DHA daily. Reduces inflammation (especially for
+                      Hashimoto's), supports metabolism.</li>
+                    <li>• <strong>B-Complex Vitamins:</strong> Once daily. Support energy production, metabolism, and thyroid function.
+                      Choose methylated forms (methylcobalamin B12).</li>
+                    <li>• <strong>L-Tyrosine:</strong> 500-1,000mg daily on empty stomach. Amino acid building block for thyroid hormones.
+                      May help with energy and focus.</li>
+                    <li>• <strong>Ashwagandha:</strong> 600mg daily. Adaptogen that may support healthy thyroid function and reduce cortisol.
+                      (Consult doctor if Hashimoto's)</li>
                   </ul>
                 </div>
               </div>
@@ -566,11 +611,11 @@ export default function HypothyroidismDietPage() {
                   Important Supplement Warnings
                 </h4>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li>• <strong>Iodine:</strong> Don't supplement iodine without testing levels first. Excess iodine can worsen 
-                  Hashimoto's and hypothyroidism. Get from food (fish, seaweed in moderation).</li>
+                  <li>• <strong>Iodine:</strong> Don't supplement iodine without testing levels first. Excess iodine can worsen
+                    Hashimoto's and hypothyroidism. Get from food (fish, seaweed in moderation).</li>
                   <li>• <strong>Kelp/Seaweed supplements:</strong> Avoid - unpredictable iodine content can harm thyroid.</li>
-                  <li>• <strong>Take separately from thyroid medication:</strong> Calcium, iron, and fiber supplements interfere with 
-                  levothyroxine. Space 4+ hours apart.</li>
+                  <li>• <strong>Take separately from thyroid medication:</strong> Calcium, iron, and fiber supplements interfere with
+                    levothyroxine. Space 4+ hours apart.</li>
                 </ul>
               </div>
             </div>
@@ -579,11 +624,11 @@ export default function HypothyroidismDietPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Hypothyroidism Weight Loss Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-bold text-lg mb-4 text-green-700 flex items-center">
@@ -613,7 +658,7 @@ export default function HypothyroidismDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-bold text-lg mb-4 text-red-700 flex items-center">
                   <AlertCircle className="w-6 h-6 mr-2" />
@@ -678,6 +723,15 @@ export default function HypothyroidismDietPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -686,14 +740,14 @@ export default function HypothyroidismDietPage() {
             <p className="text-xl mb-8">
               Get a customized plan tailored to your thyroid levels, symptoms, and weight loss goals from certified thyroid nutritionists.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Thyroid Consultation</h4>
-                <p className="text-white text-sm mb-4">Personalized plan - $100</p>
+                <p className="text-white text-sm mb-4">Personalized plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-blue-600" asChild>
-                  <Link href="/contact">Book Now - $100</Link>
+                  <Link href="/contact">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
                 </Button>
               </div>
 
@@ -705,6 +759,10 @@ export default function HypothyroidismDietPage() {
                 </Button>
               </div>
             </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

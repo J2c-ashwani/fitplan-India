@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function IntermittentFastingWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "IF Workout Plan", href: "/workouts/intermittent-fasting" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "timing", label: "Optimal Timing" },
+    { id: "fasted-workouts", label: "Fasted Training" },
+    { id: "fed-workouts", label: "Fed State Training" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Can I build muscle while doing intermittent fasting?",
+      answer: "YES! IF does NOT prevent muscle growth IF you: 1) Eat enough protein (0.8-1g per lb bodyweight) in eating window, 2) Maintain calorie surplus for muscle gain, 3) Do strength training in FED state (not fasted), 4) Get adequate sleep. Time meals around workouts. IF just changes WHEN you eat, not muscle-building principles. Many bodybuilders use IF successfully!"
+    },
+    {
+      question: "Is fasted cardio better for fat loss than fed cardio?",
+      answer: "Fasted cardio burns 10-20% more FAT during workout, BUT total daily fat loss is similar if calories equal. Benefits: Convenience (workout before first meal), autophagy, mental clarity. Downsides: Lower intensity, potential muscle loss if overdone. Best approach: Fasted for light cardio (walking, cycling), fed state for strength/HIIT. Don't overthink - consistency matters more than timing!"
+    },
+    {
+      question: "Should I take BCAAs or protein before fasted workouts?",
+      answer: "NO for fasted cardio (breaks fast, defeats purpose). MAYBE for fasted strength training if worried about muscle loss, but NOT necessary if: 1) Training < 60 min, 2) Not in severe calorie deficit, 3) Eating protein within 2 hours after. BCAAs technically break fast. If doing fasted strength, keep light, then break fast with protein meal immediately after. Fed state strength is always better anyway."
+    },
+    {
+      question: "What's the best IF workout schedule for 16:8 fasting?",
+      answer: "Example (eating window 12 PM - 8 PM): Morning 8 AM - Fasted cardio 30 min (walk/bike). Afternoon 3 PM - Strength training (2-3 hours after first meal at 12). Evening 6-7 PM - Optional workout before dinner. KEY: Strength training in eating window with food 2-3 hours before = best performance. Cardio flexible anytime, but light if fasted."
+    },
+    {
+      question: "Will training fasted make me lose muscle?",
+      answer: "NOT if done correctly! Muscle loss risk IF: 1) Fasted HIIT or heavy lifting (too intense), 2) Fasted training > 60 min, 3) Not eating protein within 2 hours after, 4) Severe calorie deficit. SAFE: Fasted low-moderate cardio 30-45 min, eating protein after, maintaining calories. Growth hormone actually INCREASES during fasted state, protecting muscle. Listen to body - if weak/dizzy, eat!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-700 to-indigo-900 text-white py-16">
+      <section className="bg-gradient-to-br from-blue-700 to-indigo-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-blue-700 font-semibold">
               ⏰ Complete IF Workout Guide
@@ -30,7 +75,7 @@ export default function IntermittentFastingWorkoutPage() {
               Intermittent Fasting Workout Plan: Optimize Exercise Timing
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the best workout strategies for intermittent fasting including optimal exercise timing, 
+              Discover the best workout strategies for intermittent fasting including optimal exercise timing,
               fasted training benefits, fed state workouts, and maximizing fat loss while preserving muscle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function IntermittentFastingWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,14 +120,14 @@ export default function IntermittentFastingWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise Timing with Intermittent Fasting</h2>
               <p className="text-lg text-gray-700 mb-6">
-                When you work out during intermittent fasting significantly impacts results. Fasted training (during 
-                fasting window) maximizes fat burning and promotes autophagy, while fed state training (during eating 
-                window) optimizes performance and muscle building. Both approaches have benefits - the key is understanding 
-                when to use each. Fasted cardio can burn up to 20% more fat, while fed state strength training allows 
-                for better performance and recovery. Most people do best combining both: light cardio fasted in morning, 
+                When you work out during intermittent fasting significantly impacts results. Fasted training (during
+                fasting window) maximizes fat burning and promotes autophagy, while fed state training (during eating
+                window) optimizes performance and muscle building. Both approaches have benefits - the key is understanding
+                when to use each. Fasted cardio can burn up to 20% more fat, while fed state strength training allows
+                for better performance and recovery. Most people do best combining both: light cardio fasted in morning,
                 strength training in eating window.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Fasted Training Benefits</h4>
@@ -95,7 +140,7 @@ export default function IntermittentFastingWorkoutPage() {
                     <li>• Best for: Low-moderate intensity cardio</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">Fed State Training Benefits</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -114,7 +159,7 @@ export default function IntermittentFastingWorkoutPage() {
       </section>
 
       {/* Training Schedule Guide */}
-      <section className="py-8 bg-yellow-50">
+      <section id="timing" className="py-8 bg-yellow-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-6">
@@ -159,7 +204,7 @@ export default function IntermittentFastingWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-blue-100 border border-blue-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>🔥 Maximum Fat Burning:</strong> Fasted cardio burns stored fat directly since glycogen 
+                    <strong>🔥 Maximum Fat Burning:</strong> Fasted cardio burns stored fat directly since glycogen
                     (glucose stores) are depleted. Studies show 20%+ more fat oxidation compared to fed state cardio.
                   </p>
                 </div>
@@ -167,7 +212,7 @@ export default function IntermittentFastingWorkoutPage() {
                 <div className="space-y-4">
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Best Fasted Cardio Activities:</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Brisk Walking</h6>
@@ -175,7 +220,7 @@ export default function IntermittentFastingWorkoutPage() {
                           <strong>Duration:</strong> 30-60 minutes | <strong>Intensity:</strong> Moderate (60-70% max HR)
                         </p>
                         <p className="text-sm text-gray-600">
-                          Most accessible fasted cardio. Walk at pace where you can talk but slightly breathless. 
+                          Most accessible fasted cardio. Walk at pace where you can talk but slightly breathless.
                           Burns fat without overtaxing fasted body.
                         </p>
                       </div>
@@ -186,7 +231,7 @@ export default function IntermittentFastingWorkoutPage() {
                           <strong>Duration:</strong> 20-40 minutes | <strong>Intensity:</strong> Low-moderate
                         </p>
                         <p className="text-sm text-gray-600">
-                          Easy pace - don't push hard when fasted. Zone 2 cardio is perfect for fat burning 
+                          Easy pace - don't push hard when fasted. Zone 2 cardio is perfect for fat burning
                           without muscle breakdown.
                         </p>
                       </div>
@@ -197,7 +242,7 @@ export default function IntermittentFastingWorkoutPage() {
                           <strong>Duration:</strong> 30-45 minutes | <strong>Intensity:</strong> Low-moderate
                         </p>
                         <p className="text-sm text-gray-600">
-                          Less impact than running. Steady pace, low-moderate resistance. Read or watch content 
+                          Less impact than running. Steady pace, low-moderate resistance. Read or watch content
                           while burning fat.
                         </p>
                       </div>
@@ -208,7 +253,7 @@ export default function IntermittentFastingWorkoutPage() {
                           <strong>Duration:</strong> 20-30 minutes | <strong>Intensity:</strong> Easy pace
                         </p>
                         <p className="text-sm text-gray-600">
-                          Full body, zero impact. Don't sprint - gentle laps only when fasted. 
+                          Full body, zero impact. Don't sprint - gentle laps only when fasted.
                           Excellent for joint-friendly fat burning.
                         </p>
                       </div>
@@ -240,7 +285,7 @@ export default function IntermittentFastingWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Light bodyweight exercises can be done fasted, but keep intensity moderate. Best done right before 
+                  Light bodyweight exercises can be done fasted, but keep intensity moderate. Best done right before
                   breaking fast so you can eat protein immediately after.
                 </p>
 
@@ -286,7 +331,7 @@ export default function IntermittentFastingWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-indigo-100 border border-indigo-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>💪 Best Time for Weights:</strong> 2-3 hours after eating provides optimal energy for 
+                    <strong>💪 Best Time for Weights:</strong> 2-3 hours after eating provides optimal energy for
                     lifting heavy. Nutrients available for performance and muscle protein synthesis.
                   </p>
                 </div>
@@ -294,7 +339,7 @@ export default function IntermittentFastingWorkoutPage() {
                 <div className="space-y-4">
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Full Body Strength Routine (3-4x per week)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Barbell Squats or Goblet Squats</h6>
@@ -340,8 +385,8 @@ export default function IntermittentFastingWorkoutPage() {
 
                   <div className="bg-green-50 border border-green-300 rounded-lg p-4 mt-6">
                     <h5 className="font-semibold mb-2 text-green-800">✅ Post-Workout Nutrition:</h5>
-                    <p className="text-sm text-gray-700">Within 1-2 hours: Protein shake or meal with 20-30g protein + carbs for recovery. 
-                    IF makes this easy - just eat your next scheduled meal!</p>
+                    <p className="text-sm text-gray-700">Within 1-2 hours: Protein shake or meal with 20-30g protein + carbs for recovery.
+                      IF makes this easy - just eat your next scheduled meal!</p>
                   </div>
                 </div>
               </CardContent>
@@ -358,7 +403,7 @@ export default function IntermittentFastingWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-purple-100 border border-purple-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>⚡ High-Intensity = Fed State Only:</strong> HIIT requires glycogen (glucose stores). 
+                    <strong>⚡ High-Intensity = Fed State Only:</strong> HIIT requires glycogen (glucose stores).
                     NEVER do HIIT during fasting window - you'll feel terrible and risk muscle loss.
                   </p>
                 </div>
@@ -387,7 +432,7 @@ export default function IntermittentFastingWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sample Weekly IF Workout Schedule (16:8)</h2>
-            
+
             <Card className="border-blue-200">
               <CardContent className="pt-6">
                 <div className="space-y-4">
@@ -442,11 +487,11 @@ export default function IntermittentFastingWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-white">
+      <section id="tips" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">IF Workout Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -473,7 +518,7 @@ export default function IntermittentFastingWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -504,6 +549,15 @@ export default function IntermittentFastingWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-700 to-indigo-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -512,10 +566,10 @@ export default function IntermittentFastingWorkoutPage() {
               Complete Your IF Transformation
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise timing is crucial, but proper intermittent fasting nutrition is the foundation. Get your 
+              Exercise timing is crucial, but proper intermittent fasting nutrition is the foundation. Get your
               complete IF diet plan to maximize results.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -545,10 +599,14 @@ export default function IntermittentFastingWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands optimizing workouts with intermittent fasting for maximum fat loss
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

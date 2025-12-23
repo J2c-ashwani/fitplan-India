@@ -1,8 +1,12 @@
 import { Button } from "@/components/ui/button"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Heart, Users, Clock, Target, Zap, Baby, Activity, Leaf, Dumbbell, TrendingUp, Apple, Trophy, GraduationCap, Scale, Sparkles, Mountain, Sun, Flame, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -66,11 +70,39 @@ const colorButtons: Record<string, string> = {
 }
 
 export default function WorkoutsPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+  ]
+
+  const faqs = [
+    {
+      question: "How do I choose the right workout program for my goals?",
+      answer: "Match your program to your PRIMARY goal: Weight Loss = cardio-focused with HIIT, Muscle Gain = strength training 4-6x weekly, Health Condition (PCOS, diabetes) = condition-specific programs designed for hormone/blood sugar management, General Fitness = balanced approach with variety. Consider your experience level: Beginners should start with 'General', 'Mediterranean', or condition-specific gentle programs. Intermediate/Advanced can tackle 'Muscle Gain', 'Athlete Training', 'Paleo'. When in doubt, start easier - you can always progress! Most important: Choose something you'll ENJOY and stick with consistently."
+    },
+    {
+      question: "Can I follow multiple workout programs at the same time?",
+      answer: "Generally NO - stick to ONE primary program for best results! Reasons: 1) Programs are designed as complete systems with specific progression, 2) Mixing programs often leads to overtraining and poor recovery, 3) Confuses your body's adaptation, 4) Makes tracking progress difficult. EXCEPTION: You can add LIGHT complementary work (e.g., following 'Muscle Gain' + adding 2x weekly yoga/walking for recovery). Better approach: Follow one program for 8-12 weeks, assess results, then switch if needed. Consistency with one program >> jumping between multiple programs!"
+    },
+    {
+      question: "How long should I follow a workout program before seeing results?",
+      answer: "Timeline varies by goal: STRENGTH gains: 2-4 weeks (neural adaptations), VISIBLE muscle growth: 6-8 weeks minimum, FAT LOSS: 4-8 weeks (with proper diet), FITNESS improvements (cardio, endurance): 3-6 weeks, HEALTH METRICS (blood sugar, cholesterol): 8-12 weeks. CRITICAL: Results require CONSISTENCY + proper nutrition. Following program 2-3x weekly sporadically won't work. Commit to 8-12 weeks minimum before judging effectiveness. Many people quit at week 3-4, right before visible results appear! Stick with it. Track metrics (weight, measurements, strength levels) biweekly to see progress."
+    },
+    {
+      question: "Do I need a gym or can I workout at home?",
+      answer: "Depends on program and goals: CAN DO AT HOME: 'General', 'Weight Loss', 'PCOS/PCOD', 'Diabetes', 'Senior Fitness', 'Mediterranean', 'Teens' - all have suitable home workout options with minimal equipment (dumbbells, resistance bands). BETTER WITH GYM: 'Muscle Gain', 'Athlete Training', 'Vegan/Vegetarian Bodybuilding' - benefit significantly from barbells, machines, heavier weights for progressive overload. HYBRID: 'Paleo', 'Intermittent Fasting' work well both ways. Equipment needs listed in each program. TIP: Many start at home to build habit, then join gym when ready to level up!"
+    },
+    {
+      question: "What if I have a health condition - which program is safe?",
+      answer: "FIRST: Get doctor clearance before starting ANY exercise program with a health condition! Choose condition-specific programs when available: PCOS/PCOD, Diabetes, Heart Health, Thyroid, Obesity programs are designed WITH medical considerations. For other conditions: 'Senior Fitness' or 'Mediterranean' are gentlest, lowest-risk options. 'General Fitness' is moderate intensity. AVOID initially: High-intensity programs ('Paleo', 'Athlete Training', 'Muscle Gain intense') without medical clearance. Our programs include safety guidelines, but they DON'T replace medical advice. When in doubt, consult doctor and consider working with qualified fitness professional initially."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-purple-700 font-semibold text-base">
               💪 Complete Workout Library
@@ -79,7 +111,7 @@ export default function WorkoutsPage() {
               Expert Workout Programs & Exercise Guides
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              20 comprehensive, expert-designed workout programs covering weight loss, muscle building, specialized 
+              20 comprehensive, expert-designed workout programs covering weight loss, muscle building, specialized
               conditions, and fitness for every life stage and goal.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -152,7 +184,7 @@ export default function WorkoutsPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600 mb-6">{workout.description}</p>
-                      <Button 
+                      <Button
                         className={`w-full font-bold shadow-md ${colorButtons[workout.color]}`}
                         size="lg"
                         asChild
@@ -171,6 +203,15 @@ export default function WorkoutsPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-purple-700 via-indigo-700 to-blue-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -179,7 +220,7 @@ export default function WorkoutsPage() {
               Want a Personalized Workout Plan?
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Get expert guidance tailored to your specific fitness goals, schedule, and equipment availability. 
+              Get expert guidance tailored to your specific fitness goals, schedule, and equipment availability.
               Our certified trainers provide personalized workout programs.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -200,16 +241,16 @@ export default function WorkoutsPage() {
                 <Heart className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2 text-xl">Expert Trainer</h4>
                 <p className="text-yellow-100 text-sm mb-4 leading-relaxed">
-                  Book one-on-one training with certified fitness professionals for $100.
+                  Book one-on-one training with certified fitness professionals for <PriceDisplay amountIn={500} amountUs={50} />.
                 </p>
                 <Button size="lg" className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold" asChild>
                   <Link href="/contact">
-                    Book Training - $100
+                    Book Training - <PriceDisplay amountIn={500} amountUs={50} />
                   </Link>
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands achieving their fitness goals with FitPlan India
             </p>

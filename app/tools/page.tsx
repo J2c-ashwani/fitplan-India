@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Calculator, Droplets, Zap, Target, ArrowRight, Activity } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export const metadata: Metadata = {
   title: "Health & Fitness Calculators | Free BMI, BMR & Protein Tools | FitPlan India",
@@ -12,11 +13,18 @@ export const metadata: Metadata = {
 }
 
 export default function ToolsPage() {
+  const breadcrumbItems = [
+    { label: "Tools", href: "/tools" },
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-emerald-600 to-green-700 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 text-emerald-100">
+            <Breadcrumbs items={breadcrumbItems} />
+          </div>
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
               🧮 Free Health Tools

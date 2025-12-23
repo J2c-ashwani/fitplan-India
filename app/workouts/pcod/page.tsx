@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, Shield } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function PCODWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "PCOD Plan", href: "/workouts/pcod" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "guidelines", label: "Guidelines" },
+    { id: "home-workouts", label: "Home Workouts" },
+    { id: "gym-workouts", label: "Gym Workouts" },
+    { id: "tips", label: "Success Tips" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Is PCOD/PCOS the same thing? What's the difference?",
+      answer: "Practically the same - PCOD (Polycystic Ovarian Disease) and PCOS (Polycystic Ovary Syndrome) are used interchangeably, though PCOS is the medically correct term. Both refer to hormonal imbalance causing irregular periods, insulin resistance, weight gain, excess androgens (testosterone). Treatment approach (exercise + diet) is identical for both."
+    },
+    {
+      question: "Why is strength training better than cardio for PCOD?",
+      answer: "Strength training builds MUSCLE, which acts like a 'glucose sink' - absorbs sugar from blood without needing insulin. This directly improves insulin resistance (root cause of PCOD). Muscle also burns calories 24/7, even at rest. Excessive cardio raises cortisol (stress hormone), which worsens  insulin resistance. Best approach: 3-4x strength + moderate cardio (walking)."
+    },
+    {
+      question: "How long until exercise improves my PCOD symptoms?",
+      answer: "Timeline: Insulin sensitivity improves in 2-4 weeks. Weight loss visible in 4-8 weeks (if in calorie deficit). Menstrual cycle regulation in 2-3 months. Androgen levels drop in 3-6 months. Consistency is KEY - results require 4-5 workouts weekly for 3+ months minimum. Pair with low-GI diet for fastest results."
+    },
+    {
+      question: "Can I do HIIT with PCOD or will it worsen symptoms?",
+      answer: "Limited HIIT is OK (1-2x weekly max), but DAILY HIIT worsens PCOD by raising cortisol excessively. Cortisol increases insulin resistance and disrupts hormones. Stick to: 3-4x strength training, daily walking, 1-2x HIIT (optional, not mandatory). Moderate intensity is better than excessive high-intensity for PCOD."
+    },
+    {
+      question: "Will exercise alone cure my PCOD, or do I need diet changes too?",
+      answer: "Need BOTH. Exercise improves insulin sensitivity 30-50%, but diet controls blood sugar spikes that drive PCOD. Best results: Strength training 3-4x weekly + low-GI diet (avoid refined carbs, sugar, processed foods) + stress management. Exercise alone gives 40% results; diet alone gives 40%; combined gives 80-90%! Medication may still be needed in severe cases."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-600 to-purple-800 text-white py-16">
+      <section className="bg-gradient-to-br from-pink-600 to-purple-800 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-pink-600 font-semibold">
               💪 Complete PCOD Exercise Guide
@@ -30,7 +75,7 @@ export default function PCODWorkoutPage() {
               PCOD Workout Plan: Balance Hormones Through Exercise
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover effective workout strategies for PCOD/PCOS to improve insulin sensitivity, reduce inflammation, 
+              Discover effective workout strategies for PCOD/PCOS to improve insulin sensitivity, reduce inflammation,
               support weight loss, balance hormones, and naturally manage symptoms through targeted exercise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function PCODWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,14 +120,14 @@ export default function PCODWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise and PCOD: The Powerful Connection</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is one of the most effective natural treatments for PCOD/PCOS. Regular physical activity improves 
-                insulin sensitivity by up to 50%, helps balance hormones (reduces androgens), supports healthy weight loss, 
-                reduces inflammation, regulates menstrual cycles, and significantly improves symptoms - often without medication. 
-                The key is choosing the RIGHT type of exercise. Strength training is superior to cardio alone for PCOD because 
-                it builds muscle (which improves insulin sensitivity long-term), doesn't spike cortisol like excessive cardio, 
+                Exercise is one of the most effective natural treatments for PCOD/PCOS. Regular physical activity improves
+                insulin sensitivity by up to 50%, helps balance hormones (reduces androgens), supports healthy weight loss,
+                reduces inflammation, regulates menstrual cycles, and significantly improves symptoms - often without medication.
+                The key is choosing the RIGHT type of exercise. Strength training is superior to cardio alone for PCOD because
+                it builds muscle (which improves insulin sensitivity long-term), doesn't spike cortisol like excessive cardio,
                 and provides lasting metabolic benefits. Combine strength training with moderate cardio for optimal results.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-pink-800">How Exercise Helps PCOD</h4>
@@ -95,7 +140,7 @@ export default function PCODWorkoutPage() {
                     <li>• Regulates menstrual cycles naturally</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-purple-800">Best Exercise Types for PCOD</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -113,7 +158,7 @@ export default function PCODWorkoutPage() {
       </section>
 
       {/* Important Guidelines */}
-      <section className="py-8 bg-yellow-50">
+      <section id="guidelines" className="py-8 bg-yellow-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-6">
@@ -159,7 +204,7 @@ export default function PCODWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-pink-100 border border-pink-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>💪 Strength training is KEY for PCOD:</strong> Builds muscle which acts like a "glucose sink" - 
+                    <strong>💪 Strength training is KEY for PCOD:</strong> Builds muscle which acts like a "glucose sink" -
                     absorbs sugar from blood without needing insulin. This directly improves insulin resistance!
                   </p>
                 </div>
@@ -172,7 +217,7 @@ export default function PCODWorkoutPage() {
 
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Main Circuit (4 Rounds, 60 sec rest between)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Bodyweight Squats</h6>
@@ -180,7 +225,7 @@ export default function PCODWorkoutPage() {
                           <strong>Reps:</strong> 15-20 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Largest muscle group = biggest impact on insulin sensitivity. Go as deep as comfortable. 
+                          Largest muscle group = biggest impact on insulin sensitivity. Go as deep as comfortable.
                           Progress to goblet squats with weight.
                         </p>
                       </div>
@@ -245,7 +290,7 @@ export default function PCODWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Walking is PERFECT for PCOD - improves insulin sensitivity without raising cortisol like intense cardio does. 
+                  Walking is PERFECT for PCOD - improves insulin sensitivity without raising cortisol like intense cardio does.
                   Aim for 8,000-10,000 steps daily if possible.
                 </p>
 
@@ -285,7 +330,7 @@ export default function PCODWorkoutPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  Yoga reduces stress (cortisol), which is critical for PCOD management. High stress worsens insulin resistance 
+                  Yoga reduces stress (cortisol), which is critical for PCOD management. High stress worsens insulin resistance
                   and hormonal imbalances. Gentle yoga also improves flexibility and mindfulness.
                 </p>
 
@@ -430,7 +475,7 @@ export default function PCODWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-blue-100 border border-blue-300 rounded-lg p-4 mb-4">
                   <p className="text-sm text-gray-800">
-                    <strong>⚠️ Important:</strong> Moderate cardio only - excessive cardio raises cortisol and can worsen PCOD. 
+                    <strong>⚠️ Important:</strong> Moderate cardio only - excessive cardio raises cortisol and can worsen PCOD.
                     Keep intensity conversational, 30-40 minutes maximum.
                   </p>
                 </div>
@@ -467,11 +512,11 @@ export default function PCODWorkoutPage() {
       </section>
 
       {/* Success Tips */}
-      <section className="py-16 bg-gray-50">
+      <section id="tips" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">PCOD Exercise Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -498,7 +543,7 @@ export default function PCODWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -537,10 +582,10 @@ export default function PCODWorkoutPage() {
               Complete Your PCOD Management
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise improves symptoms, but proper PCOD nutrition is equally critical. Get your complete low GI 
+              Exercise improves symptoms, but proper PCOD nutrition is equally critical. Get your complete low GI
               diet plan to maximize hormonal balance and insulin sensitivity.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -570,10 +615,14 @@ export default function PCODWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands managing PCOD naturally through exercise and nutrition
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

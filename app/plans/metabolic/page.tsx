@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, AlertCircle, Flame, Target, Zap, TrendingUp, Activity, Clock } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,49 @@ export const metadata: Metadata = {
 }
 
 export default function MetabolicWeightLossPage() {
+  const breadcrumbItems = [
+    { label: "Diet Plans", href: "/plans" },
+    { label: "Metabolic Weight Loss", href: "/plans/metabolic-weight-loss" },
+  ]
+
+  const tocItems = [
+    { id: "understanding", label: "Understanding Metabolism" },
+    { id: "causes", label: "Causes of Slow Metabolism" },
+    { id: "foods", label: "Boosting Foods" },
+    { id: "meal-plan", label: "Meal Plan" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "How do I know if I have a 'slow metabolism'?",
+      answer: "Common signs include: gaining weight despite eating less (1,200-1,400 calories), inability to lose weight with exercise, constant fatigue even after sleeping, always feeling cold (especially hands/feet), dry skin, thin hair, and brittle nails. Medically, this can be confirmed by measuring your Basal Metabolic Rate (BMR) or checking thyroid function (TSH, T3, T4) with your doctor."
+    },
+    {
+      question: "Can I legitimately speed up my metabolism?",
+      answer: "Yes! While you can't change your genetics or age, you can significantly increase your daily burn. The most effective way is building muscle—muscle tissue burns 3-5x more calories at rest than fat. Eating high protein also boosts metabolism by 15-30% due to the Thermic Effect of Food (TEF). Increasing NEAT (daily movement like walking, standing) can also burn an extra 300-500 calories daily."
+    },
+    {
+      question: "Does drinking ice water boost metabolism?",
+      answer: "Technically yes, but the effect is negligible. Your body uses a tiny amount of energy to warm the water to body temperature (about 8 calories per glass). You would need to drink gallons to see any weight loss difference. Focus on muscle building, protein intake, and activity for real metabolic results, not gimmicks."
+    },
+    {
+      question: "How often should I eat to keep my metabolism going?",
+      answer: "The 'stoking the fire' myth (eating every 2 hours) has been debunked. Total daily calories and macronutrients matter most. However, for some people, eating 3-4 balanced meals with protein prevents hunger and energy crashes, which helps maintain higher activity levels (NEAT). Don't force yourself to eat if you aren't hungry, but don't starve yourself all day and binge at night."
+    },
+    {
+      question: "What is the single best exercise for slow metabolism?",
+      answer: "Strength training (lifting weights) is the gold standard. Cardio burns calories *while* you do it, but strength training builds muscle that burns calories *24/7*, even while you sleep. Combining strength training with occasional HIIT (High-Intensity Interval Training) provides the best metabolic boost."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-rose-600 to-pink-700 text-white py-16">
+      <section className="bg-gradient-to-br from-rose-600 to-pink-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-rose-600 font-semibold">
               🔥 Rev Up Your Metabolism
@@ -30,9 +73,9 @@ export default function MetabolicWeightLossPage() {
               Metabolic Weight Loss Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete metabolic weight loss plan designed to fix slow metabolism, boost metabolic rate, and achieve sustainable fat loss 
-              without extreme dieting. Science-based strategies including metabolism-boosting foods, meal timing, strategic exercise, and 
-              proven methods to overcome metabolic adaptation. Designed for adults in USA, UK, Canada, Australia struggling with stubborn 
+              Complete metabolic weight loss plan designed to fix slow metabolism, boost metabolic rate, and achieve sustainable fat loss
+              without extreme dieting. Science-based strategies including metabolism-boosting foods, meal timing, strategic exercise, and
+              proven methods to overcome metabolic adaptation. Designed for adults in USA, UK, Canada, Australia struggling with stubborn
               weight despite eating less.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -48,7 +91,7 @@ export default function MetabolicWeightLossPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="understanding" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -73,32 +116,32 @@ export default function MetabolicWeightLossPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Metabolism and Why It Slows Down</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Your metabolism (also called basal metabolic rate or BMR) is the number of calories your body burns at rest just to keep you 
-                alive - breathing, circulating blood, producing hormones, growing and repairing cells. BMR accounts for 60-70% of your total 
-                daily calorie burn, with physical activity adding another 20-30%, and the thermic effect of food (calories burned digesting) 
-                adding 10%. Average BMR is approximately 1,200-1,800 calories daily for women and 1,600-2,400 for men depending on age, weight, 
-                height, and muscle mass. Many people experience "slow metabolism" where they burn significantly fewer calories than expected 
-                for their body size, making weight loss extremely difficult despite eating very little. Common symptoms of slow metabolism 
-                include inability to lose weight despite strict dieting (eating 1,200-1,400 calories but no weight loss), constant fatigue and 
-                low energy, always feeling cold (especially hands and feet), constipation and digestive issues, dry skin and hair loss, difficulty 
+                Your metabolism (also called basal metabolic rate or BMR) is the number of calories your body burns at rest just to keep you
+                alive - breathing, circulating blood, producing hormones, growing and repairing cells. BMR accounts for 60-70% of your total
+                daily calorie burn, with physical activity adding another 20-30%, and the thermic effect of food (calories burned digesting)
+                adding 10%. Average BMR is approximately 1,200-1,800 calories daily for women and 1,600-2,400 for men depending on age, weight,
+                height, and muscle mass. Many people experience "slow metabolism" where they burn significantly fewer calories than expected
+                for their body size, making weight loss extremely difficult despite eating very little. Common symptoms of slow metabolism
+                include inability to lose weight despite strict dieting (eating 1,200-1,400 calories but no weight loss), constant fatigue and
+                low energy, always feeling cold (especially hands and feet), constipation and digestive issues, dry skin and hair loss, difficulty
                 building muscle, and rapid weight regain after any diet.
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
-                The hard truth is that <strong>years of yo-yo dieting, extreme calorie restriction, and crash diets DAMAGE your metabolism</strong> 
-                through a process called "metabolic adaptation" or "adaptive thermogenesis." When you drastically cut calories (eating 1,000-1,200 
-                calories for extended periods), your body perceives starvation and responds by lowering metabolic rate by 15-30% to conserve energy. 
-                This happens through: decreased thyroid hormone production (T3 converts to inactive reverse T3 instead), reduced NEAT (non-exercise 
-                activity thermogenesis - you unconsciously move less, fidget less, burn 200-400 fewer calories daily), muscle loss (muscle burns 
-                50-100 calories per pound daily at rest - losing muscle crashes metabolism), decreased leptin (satiety hormone) making you constantly 
-                hungry, increased cortisol (stress hormone) promoting fat storage especially belly fat, and mitochondrial dysfunction (cellular energy 
-                factories become less efficient). The metabolic weight loss plan focuses on REVERSING metabolic damage through strategic eating that 
-                BOOSTS metabolism rather than suppressing it, including eating adequate calories (no starvation diets), prioritizing protein to build 
-                calorie-burning muscle mass, incorporating metabolism-boosting foods and spices, strategic meal timing and frequency, combining strength 
-                training with HIIT to maximize calorie burn, managing stress and sleep (critical for hormones), and using diet breaks and refeeds to 
+                The hard truth is that <strong>years of yo-yo dieting, extreme calorie restriction, and crash diets DAMAGE your metabolism</strong>
+                through a process called "metabolic adaptation" or "adaptive thermogenesis." When you drastically cut calories (eating 1,000-1,200
+                calories for extended periods), your body perceives starvation and responds by lowering metabolic rate by 15-30% to conserve energy.
+                This happens through: decreased thyroid hormone production (T3 converts to inactive reverse T3 instead), reduced NEAT (non-exercise
+                activity thermogenesis - you unconsciously move less, fidget less, burn 200-400 fewer calories daily), muscle loss (muscle burns
+                50-100 calories per pound daily at rest - losing muscle crashes metabolism), decreased leptin (satiety hormone) making you constantly
+                hungry, increased cortisol (stress hormone) promoting fat storage especially belly fat, and mitochondrial dysfunction (cellular energy
+                factories become less efficient). The metabolic weight loss plan focuses on REVERSING metabolic damage through strategic eating that
+                BOOSTS metabolism rather than suppressing it, including eating adequate calories (no starvation diets), prioritizing protein to build
+                calorie-burning muscle mass, incorporating metabolism-boosting foods and spices, strategic meal timing and frequency, combining strength
+                training with HIIT to maximize calorie burn, managing stress and sleep (critical for hormones), and using diet breaks and refeeds to
                 prevent metabolic adaptation.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-rose-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-rose-800">Benefits of Metabolic Weight Loss</h3>
@@ -113,7 +156,7 @@ export default function MetabolicWeightLossPage() {
                     <li>• <strong>Long-term success:</strong> Fix metabolism permanently, not temporary loss</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-pink-800">Metabolic Weight Loss Principles</h3>
                   <ul className="text-gray-700 space-y-2">
@@ -134,11 +177,11 @@ export default function MetabolicWeightLossPage() {
       </section>
 
       {/* Why Metabolism Slows */}
-      <section className="py-16 bg-gray-50">
+      <section id="causes" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">5 Major Causes of Slow Metabolism and How to Fix Them</h2>
-            
+
             <div className="space-y-6">
               <Card className="border-red-200">
                 <CardHeader className="bg-red-50">
@@ -149,20 +192,20 @@ export default function MetabolicWeightLossPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-3">
-                    <strong>The Problem:</strong> Every time you drastically cut calories (eating 1,000-1,200 daily for weeks/months), your 
-                    body adapts by lowering metabolic rate 15-30%. After years of yo-yo dieting, your metabolism is permanently suppressed - 
-                    you now burn 300-500 fewer calories daily than someone your size who never dieted. This is why you can't lose weight 
+                    <strong>The Problem:</strong> Every time you drastically cut calories (eating 1,000-1,200 daily for weeks/months), your
+                    body adapts by lowering metabolic rate 15-30%. After years of yo-yo dieting, your metabolism is permanently suppressed -
+                    you now burn 300-500 fewer calories daily than someone your size who never dieted. This is why you can't lose weight
                     eating 1,200 calories (normal for your current damaged metabolism).
                   </p>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-green-800 mb-2">✅ The Fix - Reverse Dieting:</p>
                     <p className="text-sm text-gray-700 mb-2">
-                      Slowly increase calories by 100-200 weekly over 8-12 weeks until eating at maintenance (1,800-2,200 for most women, 
-                      2,200-2,800 for men). Yes, you may gain 2-5 pounds initially, but you're REPAIRING metabolism. Once metabolism is 
+                      Slowly increase calories by 100-200 weekly over 8-12 weeks until eating at maintenance (1,800-2,200 for most women,
+                      2,200-2,800 for men). Yes, you may gain 2-5 pounds initially, but you're REPAIRING metabolism. Once metabolism is
                       restored to normal, THEN create moderate 300-500 calorie deficit for sustainable fat loss.
                     </p>
                     <p className="text-xs text-gray-600">
-                      Example: Week 1: 1,400 cal → Week 2: 1,500 cal → Week 3: 1,600 cal → Continue until 2,000 cal maintenance. Maintain 
+                      Example: Week 1: 1,400 cal → Week 2: 1,500 cal → Week 3: 1,600 cal → Continue until 2,000 cal maintenance. Maintain
                       2-4 weeks, then cut to 1,700 for fat loss (still MORE food than before!).
                     </p>
                   </div>
@@ -178,16 +221,16 @@ export default function MetabolicWeightLossPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-3">
-                    <strong>The Problem:</strong> Muscle tissue burns 5-10x more calories at rest than fat tissue. Each pound of muscle burns 
-                    approximately 50-100 calories daily doing nothing. When you lose weight through cardio-only and low-calorie diets, you lose 
-                    MUSCLE along with fat. Losing 10 pounds of muscle means burning 500-1,000 fewer calories daily! This is the primary reason 
+                    <strong>The Problem:</strong> Muscle tissue burns 5-10x more calories at rest than fat tissue. Each pound of muscle burns
+                    approximately 50-100 calories daily doing nothing. When you lose weight through cardio-only and low-calorie diets, you lose
+                    MUSCLE along with fat. Losing 10 pounds of muscle means burning 500-1,000 fewer calories daily! This is the primary reason
                     metabolism crashes during weight loss.
                   </p>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-green-800 mb-2">✅ The Fix - Build Muscle with Strength Training:</p>
                     <p className="text-sm text-gray-700 mb-2">
-                      Prioritize heavy strength training 3-4x weekly (not just cardio). Compound exercises: squats, deadlifts, bench press, 
-                      rows, overhead press. Progressive overload - lift heavier each week. Eat adequate protein (1-1.2g per pound body weight) 
+                      Prioritize heavy strength training 3-4x weekly (not just cardio). Compound exercises: squats, deadlifts, bench press,
+                      rows, overhead press. Progressive overload - lift heavier each week. Eat adequate protein (1-1.2g per pound body weight)
                       to build muscle while losing fat. Even gaining 5 pounds of muscle increases metabolism by 250-500 calories daily!
                     </p>
                   </div>
@@ -203,15 +246,15 @@ export default function MetabolicWeightLossPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-3">
-                    <strong>The Problem:</strong> Thyroid hormones (T3, T4) directly regulate metabolic rate. Hypothyroidism (underactive thyroid) 
-                    affects 5-10% of adults, causing metabolism to slow 20-40%. Symptoms: unexplained weight gain, constant fatigue, always cold, 
+                    <strong>The Problem:</strong> Thyroid hormones (T3, T4) directly regulate metabolic rate. Hypothyroidism (underactive thyroid)
+                    affects 5-10% of adults, causing metabolism to slow 20-40%. Symptoms: unexplained weight gain, constant fatigue, always cold,
                     dry skin, constipation, brain fog. Chronic dieting can also suppress thyroid function (adaptive response).
                   </p>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-green-800 mb-2">✅ The Fix:</p>
                     <p className="text-sm text-gray-700">
-                      Get thyroid blood test (TSH, Free T3, Free T4) from doctor. If diagnosed with hypothyroidism, thyroid medication 
-                      (levothyroxine) is life-changing. Support thyroid naturally: adequate iodine (seaweed, iodized salt), selenium (Brazil 
+                      Get thyroid blood test (TSH, Free T3, Free T4) from doctor. If diagnosed with hypothyroidism, thyroid medication
+                      (levothyroxine) is life-changing. Support thyroid naturally: adequate iodine (seaweed, iodized salt), selenium (Brazil
                       nuts - 2-3 daily), zinc (oysters, pumpkin seeds), avoid excessive soy, and don't under-eat (suppresses thyroid further).
                     </p>
                   </div>
@@ -227,15 +270,15 @@ export default function MetabolicWeightLossPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-3">
-                    <strong>The Problem:</strong> NEAT (Non-Exercise Activity Thermogenesis) - calories burned through daily movement outside 
-                    formal exercise - accounts for 15-30% of daily calorie burn (300-800 calories). When metabolism slows or you're in calorie 
-                    deficit, NEAT unconsciously decreases dramatically (less fidgeting, moving less, taking elevator instead of stairs) - you 
+                    <strong>The Problem:</strong> NEAT (Non-Exercise Activity Thermogenesis) - calories burned through daily movement outside
+                    formal exercise - accounts for 15-30% of daily calorie burn (300-800 calories). When metabolism slows or you're in calorie
+                    deficit, NEAT unconsciously decreases dramatically (less fidgeting, moving less, taking elevator instead of stairs) - you
                     burn 200-400 fewer calories daily without realizing.
                   </p>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-green-800 mb-2">✅ The Fix - Increase Daily Movement:</p>
                     <p className="text-sm text-gray-700">
-                      Target 8,000-10,000 steps daily (track with phone/watch). Take walking breaks every hour if desk job. Stand more, sit less. 
+                      Target 8,000-10,000 steps daily (track with phone/watch). Take walking breaks every hour if desk job. Stand more, sit less.
                       Take stairs. Park farther away. Do household chores actively. Even small movements add up to 200-400 extra calories daily!
                     </p>
                   </div>
@@ -251,16 +294,16 @@ export default function MetabolicWeightLossPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-3">
-                    <strong>The Problem:</strong> Sleep deprivation (less than 7 hours nightly) decreases metabolism 5-20% through hormonal 
-                    disruption: increased cortisol (stress hormone promoting belly fat storage), decreased leptin (satiety hormone - makes you 
-                    hungrier), increased ghrelin (hunger hormone), reduced growth hormone (impairs fat burning and muscle building), and insulin 
+                    <strong>The Problem:</strong> Sleep deprivation (less than 7 hours nightly) decreases metabolism 5-20% through hormonal
+                    disruption: increased cortisol (stress hormone promoting belly fat storage), decreased leptin (satiety hormone - makes you
+                    hungrier), increased ghrelin (hunger hormone), reduced growth hormone (impairs fat burning and muscle building), and insulin
                     resistance worsening. Chronic stress has identical effects through elevated cortisol 24/7.
                   </p>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <p className="text-sm font-semibold text-green-800 mb-2">✅ The Fix:</p>
                     <p className="text-sm text-gray-700">
-                      Prioritize 7-9 hours quality sleep nightly (non-negotiable for weight loss). Sleep hygiene: dark room, cool temperature, 
-                      no screens 1 hour before bed, consistent schedule. Manage stress: meditation, yoga, walking, therapy, reduce caffeine. 
+                      Prioritize 7-9 hours quality sleep nightly (non-negotiable for weight loss). Sleep hygiene: dark room, cool temperature,
+                      no screens 1 hour before bed, consistent schedule. Manage stress: meditation, yoga, walking, therapy, reduce caffeine.
                       High cortisol makes fat loss impossible regardless of diet/exercise.
                     </p>
                   </div>
@@ -272,11 +315,11 @@ export default function MetabolicWeightLossPage() {
       </section>
 
       {/* Metabolism-Boosting Foods */}
-      <section className="py-16 bg-white">
+      <section id="foods" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Top Metabolism-Boosting Foods and Strategies</h2>
-            
+
             <Card className="border-green-200">
               <CardHeader>
                 <CardTitle className="text-green-700">🔥 Foods That Rev Up Your Metabolism</CardTitle>
@@ -327,7 +370,7 @@ export default function MetabolicWeightLossPage() {
                 <div className="mt-6 bg-blue-50 p-4 rounded-lg">
                   <h4 className="font-semibold mb-2 text-blue-800">Metabolism-Boosting Meal Example:</h4>
                   <p className="text-sm text-gray-700">
-                    Breakfast: Omelet (3 eggs) with spinach, tomatoes, topped with hot sauce + green tea = High protein (21g), thermogenic 
+                    Breakfast: Omelet (3 eggs) with spinach, tomatoes, topped with hot sauce + green tea = High protein (21g), thermogenic
                     from hot sauce and green tea, keeps you full 4-5 hours, burns 60-90 calories just digesting (TEF)!
                   </p>
                 </div>
@@ -338,12 +381,12 @@ export default function MetabolicWeightLossPage() {
       </section>
 
       {/* Sample Meal Plan */}
-      <section id="meal-plan" className="py-16 bg-gray-50">
+      <section id="meal-plan" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Metabolic Weight Loss Meal Plan (1,800 Calories)</h2>
             <p className="text-center text-gray-600 mb-12">
-              High-protein, metabolism-boosting meal plan with strategic timing. Moderate deficit supporting muscle growth and metabolic rate. 
+              High-protein, metabolism-boosting meal plan with strategic timing. Moderate deficit supporting muscle growth and metabolic rate.
               Macros: 150g protein (33%), 180g carbs (40%), 60g fat (30%).
             </p>
 
@@ -389,6 +432,15 @@ export default function MetabolicWeightLossPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-rose-600 to-pink-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -397,14 +449,14 @@ export default function MetabolicWeightLossPage() {
             <p className="text-xl mb-8">
               Get customized strategies to boost your metabolism, reverse metabolic damage, and achieve sustainable fat loss.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Metabolism Consultation</h4>
-                <p className="text-white text-sm mb-4">Personalized plan - $100</p>
+                <p className="text-white text-sm mb-4">Personalized plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-rose-600" asChild>
-                  <Link href="/contact">Book Now - $100</Link>
+                  <Link href="/contact">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
                 </Button>
               </div>
 
@@ -420,6 +472,12 @@ export default function MetabolicWeightLossPage() {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+          <RelatedContent />
+        </div>
+      </div>
     </div>
   )
 }

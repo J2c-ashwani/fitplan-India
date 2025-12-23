@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Heart, Clock, Target, TrendingUp, Activity, Zap } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -12,11 +17,49 @@ export const metadata: Metadata = {
 }
 
 export default function HyperthyroidismWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Hyperthyroidism Plan", href: "/workouts/hyperthyroidism" },
+  ]
+
+  const tocItems = [
+    { id: "why-exercise", label: "Why Exercise?" },
+    { id: "workout-plan", label: "4-Week Plan" },
+    { id: "guidelines", label: "Guidelines" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Why can't I do high-intensity exercise with hyperthyroidism?",
+      answer: "Your body is ALREADY in overdrive mode - metabolism racing, heart rate elevated, burning excessive calories. High-intensity exercise (HIIT, running, CrossFit) adds MORE stress, spikes heart rate dangerously (can trigger arrhythmias), burns more calories (worsens weight loss), and depletes limited energy. Gentle strength training rebuilds muscle WITHOUT excessive metabolic stress. Wait until thyroid levels normalize before intense exercise."
+    },
+    {
+      question: "How is hyperthyroidism exercise different from hypothyroidism?",
+      answer: "OPPOSITE approaches! Hypothyroidism (underactive) = slow metabolism, weight GAIN, low energy → Can do MORE exercise inc HIIT. Hyperthyroidism (overactive) = fast metabolism, weight LOSS, high energy but unstable → Need LESS exercise, gentle only. Hyper focuses on muscle-building with minimal cardio; Hypo focuses on calorie-burning with more cardio. Never follow a hypothyroidism workout plan if you have hyperthyroidism!"
+    },
+    {
+      question: "Will exercise help me gain weight with hyperthyroidism?",
+      answer: "Indirectly, YES - but ONLY strength training, not cardio. Strength training builds MUSCLE mass (muscle weighs more than fat). Combined with high-calorie diet, you gain healthy weight. Cardio BURNS calories, making weight gain harder. Workout 3-4x weekly max, focus on compound movements (squats, rows), eat immediately after workout. Results in 8-12 weeks with consistent training + nutrition."
+    },
+    {
+      question: "Why do I need so many rest days with hyperthyroidism?",
+      answer: "Muscle grows during REST, not during workouts. Hyperthyroidism already breaks down muscle tissue excessively - your body needs maximum recovery time to reverse this. 3-4 rest days weekly allows: muscle repair, energy restoration, hormone stabilization, nervous system recovery. Overtraining worsens hyperthyroid symptoms (palpitations, anxiety, fatigue, muscle loss). More exercise ≠ better results with hyper."
+    },
+    {
+      question: "When can I return to normal/intense exercise after hyperthyroidism treatment?",
+      answer: "Wait until thyroid levels (TSH, T3, T4) are NORMAL for 2-3 months consistently, confirmed by blood tests. Then gradually increase intensity over 4-8 weeks: start moderate cardio (jogging), add interval training, eventually HIIT. Always monitor: If heart palpitations, excessive fatigue, or weight loss returns, scale back immediately. Get endocrinologist clearance before resuming intense training."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-600 to-amber-700 text-white py-16">
+      <section className="bg-gradient-to-br from-orange-600 to-amber-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-orange-600 font-semibold">
               💪 Gentle, Restorative Exercise
@@ -25,8 +68,8 @@ export default function HyperthyroidismWorkoutPage() {
               Hyperthyroidism Exercise Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete workout program designed specifically for overactive thyroid (hyperthyroidism) with gentle strength 
-              training, low-impact cardio, and muscle-building exercises that support weight gain and manage symptoms without 
+              Complete workout program designed specifically for overactive thyroid (hyperthyroidism) with gentle strength
+              training, low-impact cardio, and muscle-building exercises that support weight gain and manage symptoms without
               overexertion.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -42,16 +85,16 @@ export default function HyperthyroidismWorkoutPage() {
       </section>
 
       {/* Why Exercise Matters */}
-      <section className="py-16 bg-white">
+      <section id="why-exercise" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Important for Hyperthyroidism (But Different Approach Needed)</h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is beneficial for hyperthyroidism BUT requires a completely different approach than for hypothyroidism or 
-                healthy individuals. With an overactive thyroid, your body is already in "overdrive mode" burning excessive calories 
-                and breaking down muscle tissue. The goal is gentle, restorative exercise that builds muscle and strength WITHOUT 
+                Exercise is beneficial for hyperthyroidism BUT requires a completely different approach than for hypothyroidism or
+                healthy individuals. With an overactive thyroid, your body is already in "overdrive mode" burning excessive calories
+                and breaking down muscle tissue. The goal is gentle, restorative exercise that builds muscle and strength WITHOUT
                 adding more metabolic stress or depleting limited energy reserves further.
               </p>
 
@@ -101,7 +144,7 @@ export default function HyperthyroidismWorkoutPage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Complete 4-Week Hyperthyroidism Workout Plan</h2>
             <p className="text-center text-gray-600 mb-12">
-              Gentle strength training and low-impact exercise program. Only 3-4 workouts per week with emphasis on rest and 
+              Gentle strength training and low-impact exercise program. Only 3-4 workouts per week with emphasis on rest and
               recovery. Start with lightest weights, focus on perfect form, gradually increase over 4-8 weeks.
             </p>
 
@@ -142,15 +185,15 @@ export default function HyperthyroidismWorkoutPage() {
                       <div className="text-gray-700">REST DAY - Focus on meal prep and recovery</div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-6 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
                     <h4 className="font-semibold mb-2 text-yellow-800 flex items-center">
                       <AlertCircle className="w-5 h-5 mr-2" />
                       Important: More Rest Than Exercise!
                     </h4>
                     <p className="text-sm text-gray-700">
-                      Notice this schedule has MORE rest days than workout days. This is intentional and critical for hyperthyroidism. 
-                      Your body needs maximum recovery time to rebuild muscle and conserve energy. Do not add extra workouts - more 
+                      Notice this schedule has MORE rest days than workout days. This is intentional and critical for hyperthyroidism.
+                      Your body needs maximum recovery time to rebuild muscle and conserve energy. Do not add extra workouts - more
                       is NOT better with an overactive thyroid.
                     </p>
                   </div>
@@ -167,10 +210,10 @@ export default function HyperthyroidismWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 mb-4">
-                    Focus on building upper body strength with lighter weights and controlled movements. Take long rests between 
+                    Focus on building upper body strength with lighter weights and controlled movements. Take long rests between
                     sets (2-3 minutes). Stop immediately if experiencing heart palpitations or excessive fatigue.
                   </p>
-                  
+
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-gray-800 mb-2">Warm-up (5 minutes):</h4>
@@ -312,11 +355,11 @@ export default function HyperthyroidismWorkoutPage() {
       </section>
 
       {/* Exercise Guidelines */}
-      <section className="py-16 bg-white">
+      <section id="guidelines" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Critical Exercise Guidelines for Hyperthyroidism</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h3 className="font-bold text-lg mb-4 text-green-700 flex items-center">
@@ -350,7 +393,7 @@ export default function HyperthyroidismWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-bold text-lg mb-4 text-red-700 flex items-center">
                   <AlertCircle className="w-6 h-6 mr-2" />
@@ -402,10 +445,19 @@ export default function HyperthyroidismWorkoutPage() {
                 <li>• Vision changes or seeing spots</li>
               </ul>
               <p className="text-sm text-red-800 font-semibold mt-4">
-                If experiencing any of these symptoms during exercise, stop immediately, sit or lie down, and seek medical attention 
+                If experiencing any of these symptoms during exercise, stop immediately, sit or lie down, and seek medical attention
                 if symptoms don't resolve quickly. Contact your endocrinologist before resuming exercise.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
           </div>
         </div>
       </section>
@@ -421,6 +473,10 @@ export default function HyperthyroidismWorkoutPage() {
             <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold" asChild>
               <Link href="/plans/hyperthyroidism">View Hyperthyroidism Diet Plan</Link>
             </Button>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

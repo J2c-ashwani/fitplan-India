@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Heart, Activity, Shield, TrendingUp, Clock, Target } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function HeartHealthWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Heart Health Plan", href: "/workouts/heart-health" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Stats" },
+    { id: "heart-rate", label: "Target Heart Rate" },
+    { id: "exercises", label: "Best Exercises" },
+    { id: "weekly-plan", label: "Weekly Plan" },
+    { id: "safety", label: "Safety" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "How much exercise do I need for heart health?",
+      answer: "American Heart Association recommends 150 min/week moderate cardio (30 min, 5x/week) OR 75 min/week vigorous cardio, PLUS 2 days strength training. Moderate = can talk but slightly breathless (50-70% max heart rate). Walking, cycling, swimming are perfect. Even 10-min sessions count - consistency matters most!"
+    },
+    {
+      question: "Can exercise lower my blood pressure? By how much?",
+      answer: "Yes! Regular aerobic exercise lowers blood pressure by 5-10 mmHg on average. This  reduction is as effective as some blood pressure medications. Results visible in 4-8 weeks of consistent exercise (5-6 days/week, 30-60 min). Walking is the #1 recommended exercise for high BP - simple, safe, effective."
+    },
+    {
+      question: "Is it safe to exercise with heart disease?",
+      answer: "Yes, BUT get doctor clearance first (stress test recommended). Exercise strengthens heart, improves circulation, reduces future heart attack risk by 35%. Start slowly with doctor-supervised cardiac rehab if available. Walking is safest starting point. STOP immediately if chest pain, severe shortness of breath, dizziness, or irregular heartbeat."
+    },
+    {
+      question: "What's the best exercise for heart health - cardio or strength?",
+      answer: "Cardio is #1 priority (walking, swimming, cycling) for direct heart benefits. Strength training is #2 but still important - improves metabolism, blood pressure, cholesterol. Best approach: 150 min cardio + 2 strength sessions weekly. If time-limited, prioritize cardio. Don't do ONLY strength training - heart needs cardio."
+    },
+    {
+      question: "How do I calculate my target heart rate for safe exercise?",
+      answer: "Formula: (220 - Age) × 0.50 to 0.70 = Moderate zone. Example: Age 60 → Max HR 160 → Moderate zone 80-112 bpm. Stay in this zone for heart health. Use fitness tracker or check pulse manually (count 15 sec × 4). 'Talk test' works too - should be able to hold conversation during exercise. If gasping, slow down!"
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-red-600 to-rose-700 text-white py-16">
+      <section className="bg-gradient-to-br from-red-600 to-rose-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-red-600 font-semibold">
               ❤️ Cardiovascular Health
@@ -30,7 +75,7 @@ export default function HeartHealthWorkoutPage() {
               Heart Health Exercise: Strengthen Your Cardiovascular System
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective cardiovascular exercises to lower blood pressure, reduce cholesterol, strengthen 
+              Discover safe, effective cardiovascular exercises to lower blood pressure, reduce cholesterol, strengthen
               your heart, and prevent heart disease with aerobic training and heart-healthy workouts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function HeartHealthWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,13 +120,13 @@ export default function HeartHealthWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise for Cardiovascular Health</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Regular aerobic exercise is one of the most powerful tools for heart health. Exercise strengthens the heart 
-                muscle, lowers blood pressure (by 5-10 mmHg), reduces LDL cholesterol, increases HDL cholesterol, improves 
-                circulation, reduces inflammation, and helps maintain healthy weight. The American Heart Association recommends 
-                150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic exercise per week, plus 2 days 
+                Regular aerobic exercise is one of the most powerful tools for heart health. Exercise strengthens the heart
+                muscle, lowers blood pressure (by 5-10 mmHg), reduces LDL cholesterol, increases HDL cholesterol, improves
+                circulation, reduces inflammation, and helps maintain healthy weight. The American Heart Association recommends
+                150 minutes of moderate-intensity or 75 minutes of vigorous-intensity aerobic exercise per week, plus 2 days
                 of strength training. For heart health, focus on **moderate, steady-state cardio** at 50-70% max heart rate.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-red-800">Heart Health Benefits</h4>
@@ -94,7 +139,7 @@ export default function HeartHealthWorkoutPage() {
                     <li>• Reduces risk of heart attack/stroke by 35%</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-rose-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-rose-800">Exercise Guidelines</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -112,11 +157,11 @@ export default function HeartHealthWorkoutPage() {
       </section>
 
       {/* Target Heart Rate */}
-      <section className="py-16 bg-gray-50">
+      <section id="heart-rate" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Understanding Target Heart Rate</h2>
-            
+
             <Card className="border-red-200 mb-8">
               <CardHeader>
                 <div className="flex items-center mb-2">
@@ -181,7 +226,7 @@ export default function HeartHealthWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Best Exercises for Heart Health</h2>
-            
+
             <div className="space-y-8">
               {/* Walking */}
               <Card className="border-green-200">
@@ -193,10 +238,10 @@ export default function HeartHealthWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Walking is the safest, most accessible, and most effective exercise for heart health. It's low-impact, 
+                    Walking is the safest, most accessible, and most effective exercise for heart health. It's low-impact,
                     requires no equipment, and delivers excellent cardiovascular benefits when done regularly.
                   </p>
-                  
+
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Daily Walking Program:</h5>
@@ -235,10 +280,10 @@ export default function HeartHealthWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Swimming is excellent for heart health - full-body aerobic workout with zero impact on joints. Perfect 
+                    Swimming is excellent for heart health - full-body aerobic workout with zero impact on joints. Perfect
                     for people with arthritis or mobility issues.
                   </p>
-                  
+
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Swimming Program (3-4x/week):</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -262,10 +307,10 @@ export default function HeartHealthWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Cycling strengthens heart and legs while being gentle on joints. Stationary bikes are ideal for those 
+                    Cycling strengthens heart and legs while being gentle on joints. Stationary bikes are ideal for those
                     with balance concerns or during bad weather.
                   </p>
-                  
+
                   <div className="bg-purple-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Cycling Program (3-5x/week):</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -289,10 +334,10 @@ export default function HeartHealthWorkoutPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    While cardio is priority, strength training 2x/week helps maintain muscle mass, supports metabolism, 
+                    While cardio is priority, strength training 2x/week helps maintain muscle mass, supports metabolism,
                     and improves overall heart health.
                   </p>
-                  
+
                   <div className="bg-orange-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Circuit Workout (30 min, 2x/week):</h5>
                     <ul className="text-sm text-gray-700 space-y-2">
@@ -313,11 +358,11 @@ export default function HeartHealthWorkoutPage() {
       </section>
 
       {/* Sample Week */}
-      <section className="py-16 bg-gray-50">
+      <section id="weekly-plan" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sample Heart-Healthy Exercise Week</h2>
-            
+
             <Card className="border-red-200">
               <CardHeader className="bg-red-50">
                 <CardTitle className="text-red-800">Weekly Cardiovascular Training Schedule</CardTitle>
@@ -370,11 +415,11 @@ export default function HeartHealthWorkoutPage() {
       </section>
 
       {/* Safety & Success Tips */}
-      <section className="py-16 bg-white">
+      <section id="safety" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Heart Health Exercise Safety & Success</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -401,7 +446,7 @@ export default function HeartHealthWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">⚠️ Warning Signs - STOP & Call Doctor:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -440,7 +485,7 @@ export default function HeartHealthWorkoutPage() {
               Complete Your Heart Health Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise is crucial, but combine with the DASH diet - low sodium, high potassium, rich in fruits and vegetables - 
+              Exercise is crucial, but combine with the DASH diet - low sodium, high potassium, rich in fruits and vegetables -
               for maximum heart health and blood pressure control.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -458,6 +503,10 @@ export default function HeartHealthWorkoutPage() {
             <p className="text-white text-sm mt-6">
               ❤️ Always consult your doctor before starting any exercise program, especially with heart conditions
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

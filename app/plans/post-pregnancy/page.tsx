@@ -1,8 +1,13 @@
 import { Badge } from "@/components/ui/badge"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, AlertCircle, Baby, Target, Clock, Milk, Activity, Info } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,49 @@ export const metadata: Metadata = {
 }
 
 export default function PostPregnancyWeightLossPage() {
+  const breadcrumbItems = [
+    { label: "Diet Plans", href: "/plans" },
+    { label: "Post-Pregnancy Weight Loss", href: "/plans/post-pregnancy" },
+  ]
+
+  const tocItems = [
+    { id: "understanding", label: "Understanding Recovery" },
+    { id: "differences", label: "Why It's Different" },
+    { id: "foods", label: "Nutrition Guide" },
+    { id: "meal-plan", label: "Meal Plan" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "Will dieting affect my breast milk supply?",
+      answer: "Extreme calorie restriction (below 1,500-1,800 calories) CAN decrease milk supply. However, a moderate plan (1,800-2,200 calories) focusing on nutrient-dense foods usually supports supply well. Hydration is even more critical than calories—drink water every time you nurse. If you notice a drop in supply, add a snack of oats and nuts immediately."
+    },
+    {
+      question: "When is it safe to start exercising after a C-section?",
+      answer: "Typically, doctors recommend waiting 6-8 weeks for a vaginal birth and 8-10 weeks for a C-section before starting formal exercise. However, gentle walking is encouraged as soon as you feel able (even days after birth) to prevent blood clots. Avoid heavy lifting and abdominal crunches until you have been cleared and checked for Diastasis Recti (abdominal separation)."
+    },
+    {
+      question: "How do I get rid of the 'mommy pooch'?",
+      answer: "The 'pooch' is often caused by Diastasis Recti (separation of ab muscles) or weak deep core muscles, NOT just fat. Traditional crunches can make it worse! Focus on 'deep core' breathing exercises (transverse abdominis activation) and pelvic floor rehabilitation. Be patient—it took 9 months to stretch out, give it at least 9 months to recover."
+    },
+    {
+      question: "Can I do Intermittent Fasting while breastfeeding?",
+      answer: "It is generally NOT recommended to do strict fasting (16:8) while breastfeeding exclusively, as it can spike cortisol and stress supply. A gentle 12-hour overnight window (e.g., 8 PM to 8 AM) is usually safe, but listen to your body. If you feel dizzy or your supply drops, stop immediately. Your body needs constant fuel for milk production."
+    },
+    {
+      question: "I'm so tired. What foods give the best energy?",
+      answer: "Avoid sugar and caffeine crashes. the best energy comes from complex carbs paired with protein: Oatmeal with walnuts, an apple with almond butter, or whole grain toast with eggs. These provide slow-release glucose. Also, low iron is a common cause of postpartum fatigue—eat iron-rich leafy greens, lentils, or lean red meat."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-pink-600 to-rose-700 text-white py-16">
+      <section className="bg-gradient-to-br from-pink-600 to-rose-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-pink-600 font-semibold">
               👶 Safe & Sustainable for New Moms
@@ -30,8 +73,8 @@ export default function PostPregnancyWeightLossPage() {
               Post-Pregnancy Weight Loss Plan 2025
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based postpartum weight loss plan with breastfeeding-safe nutrition, realistic meal plans for busy 
-              moms, recovery-focused strategies, and proven methods to lose baby weight safely. Designed for new mothers in USA, 
+              Complete evidence-based postpartum weight loss plan with breastfeeding-safe nutrition, realistic meal plans for busy
+              moms, recovery-focused strategies, and proven methods to lose baby weight safely. Designed for new mothers in USA,
               UK, Canada, Australia during the fourth trimester and beyond.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,7 +90,7 @@ export default function PostPregnancyWeightLossPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="understanding" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,30 +115,30 @@ export default function PostPregnancyWeightLossPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Post-Pregnancy Weight Loss: Complete Guide for New Moms</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Pregnancy weight gain is normal, necessary, and healthy for growing a baby. The average woman gains 25-35 pounds during 
-                pregnancy (recommended range: 25-35 lbs for normal weight, 28-40 lbs for underweight, 15-25 lbs for overweight, 11-20 lbs 
-                for obese). This weight consists of baby (7-8 lbs), placenta (1-2 lbs), amniotic fluid (2 lbs), breast tissue (1-2 lbs), 
-                increased blood volume (3-4 lbs), fat stores for delivery and breastfeeding (6-8 lbs), and increased uterus size (2 lbs). 
-                Immediately after delivery, you'll lose approximately 10-13 pounds (baby, placenta, amniotic fluid), leaving 15-25 pounds 
-                of pregnancy weight to lose gradually over the following 6-12 months through healthy eating, breastfeeding (if applicable), 
+                Pregnancy weight gain is normal, necessary, and healthy for growing a baby. The average woman gains 25-35 pounds during
+                pregnancy (recommended range: 25-35 lbs for normal weight, 28-40 lbs for underweight, 15-25 lbs for overweight, 11-20 lbs
+                for obese). This weight consists of baby (7-8 lbs), placenta (1-2 lbs), amniotic fluid (2 lbs), breast tissue (1-2 lbs),
+                increased blood volume (3-4 lbs), fat stores for delivery and breastfeeding (6-8 lbs), and increased uterus size (2 lbs).
+                Immediately after delivery, you'll lose approximately 10-13 pounds (baby, placenta, amniotic fluid), leaving 15-25 pounds
+                of pregnancy weight to lose gradually over the following 6-12 months through healthy eating, breastfeeding (if applicable),
                 and gentle exercise once medically cleared.
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
-                The crucial truth about postpartum weight loss is that it should NEVER be rushed, especially if breastfeeding. Your body 
-                needs adequate nutrition and calories to heal from pregnancy and childbirth (whether vaginal or C-section), produce sufficient 
-                breast milk for your baby if breastfeeding (requires 300-500 extra calories daily), maintain energy levels for caring for 
-                newborn with minimal sleep, support hormone rebalancing (takes 6-12 months), and prevent nutrient deficiencies that cause 
-                hair loss, fatigue, and mood issues. The foundation of safe postpartum weight loss lies in <strong>waiting minimum 6 weeks 
-                postpartum before starting any weight loss efforts</strong> (8-12 weeks after C-section, and only after medical clearance), 
-                eating nutrient-dense whole foods that support recovery and milk production, maintaining MODERATE calorie deficit of only 
-                300-500 calories daily (never extreme restriction), prioritizing protein (0.8-1g per pound body weight) and healthy fats for 
-                hormones, staying well-hydrated (100+ oz water daily, especially if breastfeeding), incorporating gentle movement once cleared 
-                by doctor, getting adequate sleep whenever possible (critical for hormone balance), and being patient with realistic timeline 
-                of 9-12 months to return to pre-pregnancy weight. This comprehensive postpartum weight loss plan provides a safe, realistic 
+                The crucial truth about postpartum weight loss is that it should NEVER be rushed, especially if breastfeeding. Your body
+                needs adequate nutrition and calories to heal from pregnancy and childbirth (whether vaginal or C-section), produce sufficient
+                breast milk for your baby if breastfeeding (requires 300-500 extra calories daily), maintain energy levels for caring for
+                newborn with minimal sleep, support hormone rebalancing (takes 6-12 months), and prevent nutrient deficiencies that cause
+                hair loss, fatigue, and mood issues. The foundation of safe postpartum weight loss lies in <strong>waiting minimum 6 weeks
+                  postpartum before starting any weight loss efforts</strong> (8-12 weeks after C-section, and only after medical clearance),
+                eating nutrient-dense whole foods that support recovery and milk production, maintaining MODERATE calorie deficit of only
+                300-500 calories daily (never extreme restriction), prioritizing protein (0.8-1g per pound body weight) and healthy fats for
+                hormones, staying well-hydrated (100+ oz water daily, especially if breastfeeding), incorporating gentle movement once cleared
+                by doctor, getting adequate sleep whenever possible (critical for hormone balance), and being patient with realistic timeline
+                of 9-12 months to return to pre-pregnancy weight. This comprehensive postpartum weight loss plan provides a safe, realistic
                 approach for losing baby weight while prioritizing your health, recovery, and baby's nutrition.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-pink-800">Benefits of Healthy Postpartum Weight Loss</h3>
@@ -110,7 +153,7 @@ export default function PostPregnancyWeightLossPage() {
                     <li>• <strong>Healthy future pregnancies:</strong> Returning to healthy weight before next pregnancy</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-rose-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-rose-800">Post-Pregnancy Weight Loss Principles</h3>
                   <ul className="text-gray-700 space-y-2">
@@ -131,15 +174,15 @@ export default function PostPregnancyWeightLossPage() {
       </section>
 
       {/* Why Postpartum Weight Loss is Different */}
-      <section className="py-16 bg-gray-50">
+      <section id="differences" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Post-Pregnancy Weight Loss Requires a Different Approach</h2>
-            
+
             <div className="bg-white rounded-lg shadow-sm p-8 mb-6">
               <p className="text-gray-700 mb-6">
-                Postpartum weight loss is fundamentally different from regular weight loss due to unique physiological, hormonal, and 
-                lifestyle factors. Understanding these differences is essential for safe, effective, and sustainable results that don't 
+                Postpartum weight loss is fundamentally different from regular weight loss due to unique physiological, hormonal, and
+                lifestyle factors. Understanding these differences is essential for safe, effective, and sustainable results that don't
                 compromise your health or your baby's nutrition.
               </p>
 
@@ -150,17 +193,17 @@ export default function PostPregnancyWeightLossPage() {
                     1. Breastfeeding Requires Extra Calories and Nutrients
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    If breastfeeding, your body burns an additional 300-500 calories daily producing breast milk (approximately 25-30 oz 
-                    per day for exclusively breastfed baby). This means you need MORE calories than pre-pregnancy, not fewer. Aggressive 
-                    calorie restriction below 1,800 calories daily can reduce milk supply, decrease milk quality (lower fat and nutrient 
-                    content), cause fatigue and weakness making baby care difficult, and trigger rapid weight loss that releases stored 
+                    If breastfeeding, your body burns an additional 300-500 calories daily producing breast milk (approximately 25-30 oz
+                    per day for exclusively breastfed baby). This means you need MORE calories than pre-pregnancy, not fewer. Aggressive
+                    calorie restriction below 1,800 calories daily can reduce milk supply, decrease milk quality (lower fat and nutrient
+                    content), cause fatigue and weakness making baby care difficult, and trigger rapid weight loss that releases stored
                     toxins into breast milk.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Nutrient needs are also HIGHER during breastfeeding than pregnancy for certain vitamins and minerals including vitamin A, 
-                    vitamin C, vitamin E, B vitamins, iodine, selenium, and zinc. Inadequate nutrition causes hair loss (telogen effluvium), 
-                    brittle nails, extreme fatigue, mood swings, and depletes maternal nutrient stores. The solution is eating 1,800-2,200 
-                    calories daily of nutrient-dense whole foods, allowing breastfeeding alone to create a natural 300-500 calorie deficit for 
+                    Nutrient needs are also HIGHER during breastfeeding than pregnancy for certain vitamins and minerals including vitamin A,
+                    vitamin C, vitamin E, B vitamins, iodine, selenium, and zinc. Inadequate nutrition causes hair loss (telogen effluvium),
+                    brittle nails, extreme fatigue, mood swings, and depletes maternal nutrient stores. The solution is eating 1,800-2,200
+                    calories daily of nutrient-dense whole foods, allowing breastfeeding alone to create a natural 300-500 calorie deficit for
                     gradual 0.5-1 pound weekly weight loss without compromising milk supply or baby's nutrition.
                   </p>
                 </div>
@@ -171,16 +214,16 @@ export default function PostPregnancyWeightLossPage() {
                     2. Hormonal Chaos and Recovery Period
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    After delivery, your body experiences dramatic hormonal shifts more extreme than puberty or menopause. Estrogen and 
-                    progesterone plummet within hours, prolactin surges (for milk production), oxytocin increases (for bonding and milk 
-                    letdown), cortisol remains elevated (from stress and sleep deprivation), thyroid hormones fluctuate (postpartum thyroiditis 
+                    After delivery, your body experiences dramatic hormonal shifts more extreme than puberty or menopause. Estrogen and
+                    progesterone plummet within hours, prolactin surges (for milk production), oxytocin increases (for bonding and milk
+                    letdown), cortisol remains elevated (from stress and sleep deprivation), thyroid hormones fluctuate (postpartum thyroiditis
                     affects 5-10% of women), and insulin sensitivity changes. These hormonal fluctuations take 6-12 months to stabilize.
                   </p>
                   <p className="text-sm text-gray-600">
-                    High cortisol from chronic sleep deprivation, stress, and frequent night wakings promotes belly fat storage, increases 
-                    sugar cravings, and interferes with weight loss. Thyroid dysfunction (hyperthyroidism followed by hypothyroidism in 
-                    postpartum thyroiditis) causes weight fluctuations, fatigue, and mood changes. Rushing weight loss with extreme dieting 
-                    further disrupts these delicate hormones, potentially worsening postpartum depression, anxiety, and recovery. The solution 
+                    High cortisol from chronic sleep deprivation, stress, and frequent night wakings promotes belly fat storage, increases
+                    sugar cravings, and interferes with weight loss. Thyroid dysfunction (hyperthyroidism followed by hypothyroidism in
+                    postpartum thyroiditis) causes weight fluctuations, fatigue, and mood changes. Rushing weight loss with extreme dieting
+                    further disrupts these delicate hormones, potentially worsening postpartum depression, anxiety, and recovery. The solution
                     is gentle, gradual weight loss that supports hormone rebalancing naturally.
                   </p>
                 </div>
@@ -191,17 +234,17 @@ export default function PostPregnancyWeightLossPage() {
                     3. Sleep Deprivation and Extreme Fatigue
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    New mothers average only 4-5 hours of fragmented sleep nightly in the first 3 months (compared to recommended 7-9 hours). 
-                    Chronic sleep deprivation has devastating effects on weight loss efforts: increases hunger hormone ghrelin by 28%, decreases 
-                    satiety hormone leptin by 18%, increases cortisol (stress hormone) promoting fat storage, increases cravings for high-calorie, 
-                    high-carb foods by 33%, decreases insulin sensitivity worsening blood sugar control, and reduces willpower and decision-making 
+                    New mothers average only 4-5 hours of fragmented sleep nightly in the first 3 months (compared to recommended 7-9 hours).
+                    Chronic sleep deprivation has devastating effects on weight loss efforts: increases hunger hormone ghrelin by 28%, decreases
+                    satiety hormone leptin by 18%, increases cortisol (stress hormone) promoting fat storage, increases cravings for high-calorie,
+                    high-carb foods by 33%, decreases insulin sensitivity worsening blood sugar control, and reduces willpower and decision-making
                     ability making healthy choices nearly impossible.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Sleep-deprived mothers burn 300-400 fewer calories daily due to reduced NEAT (non-exercise activity thermogenesis) - they 
-                    move less, fidget less, and conserve energy unconsciously. Adding aggressive diet and exercise on top of severe sleep 
-                    deprivation is a recipe for failure, burnout, and potentially dangerous health consequences. The realistic approach is 
-                    prioritizing sleep whenever possible (nap when baby naps), focusing on easy, convenient healthy foods that require minimal 
+                    Sleep-deprived mothers burn 300-400 fewer calories daily due to reduced NEAT (non-exercise activity thermogenesis) - they
+                    move less, fidget less, and conserve energy unconsciously. Adding aggressive diet and exercise on top of severe sleep
+                    deprivation is a recipe for failure, burnout, and potentially dangerous health consequences. The realistic approach is
+                    prioritizing sleep whenever possible (nap when baby naps), focusing on easy, convenient healthy foods that require minimal
                     preparation, and accepting slower weight loss while your baby is very young (0-6 months).
                   </p>
                 </div>
@@ -212,17 +255,17 @@ export default function PostPregnancyWeightLossPage() {
                     4. Physical Recovery and Core/Pelvic Floor Healing
                   </h3>
                   <p className="text-gray-700 mb-3">
-                    Your body needs time to heal from pregnancy and childbirth regardless of delivery method. After vaginal delivery: pelvic 
-                    floor muscles are stretched and weakened (may take 3-6 months to regain strength), perineum may have tears or episiotomy 
-                    requiring healing (2-6 weeks), and abdominal muscles are separated (diastasis recti in 60% of pregnancies). After C-section: 
-                    major abdominal surgery requires 6-8 weeks minimum recovery, internal and external incisions must heal, and core strength is 
+                    Your body needs time to heal from pregnancy and childbirth regardless of delivery method. After vaginal delivery: pelvic
+                    floor muscles are stretched and weakened (may take 3-6 months to regain strength), perineum may have tears or episiotomy
+                    requiring healing (2-6 weeks), and abdominal muscles are separated (diastasis recti in 60% of pregnancies). After C-section:
+                    major abdominal surgery requires 6-8 weeks minimum recovery, internal and external incisions must heal, and core strength is
                     significantly compromised.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Rushing into intense exercise before proper healing causes: worsening of diastasis recti (abdominal separation), pelvic floor 
-                    dysfunction (incontinence, prolapse), injury risk due to relaxin hormone (loosens joints, present up to 6 months postpartum), 
-                    and delayed overall recovery. The safe approach is waiting for doctor clearance (6 weeks minimum, 8-12 weeks for C-section), 
-                    starting with gentle walking and pelvic floor exercises (Kegels), working with pelvic floor physical therapist if available, 
+                    Rushing into intense exercise before proper healing causes: worsening of diastasis recti (abdominal separation), pelvic floor
+                    dysfunction (incontinence, prolapse), injury risk due to relaxin hormone (loosens joints, present up to 6 months postpartum),
+                    and delayed overall recovery. The safe approach is waiting for doctor clearance (6 weeks minimum, 8-12 weeks for C-section),
+                    starting with gentle walking and pelvic floor exercises (Kegels), working with pelvic floor physical therapist if available,
                     and gradually progressing to more intense exercise only after core and pelvic floor are rehabilitated properly.
                   </p>
                 </div>
@@ -233,11 +276,11 @@ export default function PostPregnancyWeightLossPage() {
       </section>
 
       {/* Foods to Eat & Avoid */}
-      <section className="py-16 bg-white">
+      <section id="foods" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Post-Pregnancy Nutrition Guide: Best Foods for Recovery & Weight Loss</h2>
-            
+
             <div className="space-y-8">
               <Card className="border-green-200">
                 <CardHeader>
@@ -248,7 +291,7 @@ export default function PostPregnancyWeightLossPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Focus on nutrient-dense whole foods that support recovery, provide energy for baby care, support breast milk production 
+                    Focus on nutrient-dense whole foods that support recovery, provide energy for baby care, support breast milk production
                     (if applicable), and promote gradual healthy weight loss. Every calorie should be packed with nutrition.
                   </p>
 
@@ -384,12 +427,12 @@ export default function PostPregnancyWeightLossPage() {
       </section>
 
       {/* Meal Plan */}
-      <section id="meal-plan" className="py-16 bg-gray-50">
+      <section id="meal-plan" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Post-Pregnancy Meal Plan (1,800-2,000 Calories for Breastfeeding)</h2>
             <p className="text-center text-gray-600 mb-12">
-              Nutrient-dense meal plan supporting recovery and milk production while promoting gradual weight loss. If not breastfeeding, 
+              Nutrient-dense meal plan supporting recovery and milk production while promoting gradual weight loss. If not breastfeeding,
               reduce to 1,500-1,700 calories by reducing portions slightly.
             </p>
 
@@ -440,6 +483,15 @@ export default function PostPregnancyWeightLossPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-pink-600 to-rose-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -448,14 +500,14 @@ export default function PostPregnancyWeightLossPage() {
             <p className="text-xl mb-8">
               Get customized meal plans tailored to your recovery stage, breastfeeding status, and lifestyle as a new mom.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Postpartum Consultation</h4>
-                <p className="text-white text-sm mb-4">Personalized plan - $100</p>
+                <p className="text-white text-sm mb-4">Personalized plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-pink-600" asChild>
-                  <Link href="/contact">Book Now - $100</Link>
+                  <Link href="/contact">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
                 </Button>
               </div>
 
@@ -471,6 +523,12 @@ export default function PostPregnancyWeightLossPage() {
           </div>
         </div>
       </section>
-    </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+        <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+          <RelatedContent />
+        </div>
+      </div>
+    </div >
   )
 }

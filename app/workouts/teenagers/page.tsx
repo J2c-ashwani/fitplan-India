@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function TeenagerWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Teen Workout Plan", href: "/workouts/teenagers" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Why Exercise" },
+    { id: "safety", label: "Safety Guidelines" },
+    { id: "home-workouts", label: "Home Workouts" },
+    { id: "gym-workouts", label: "Gym Workouts" },
+    { id: "guidelines", label: "Training Guidelines" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "At what age can teenagers start lifting weights? Is it safe?",
+      answer: "Teens can start strength training around age 13-14 (after puberty begins) with proper supervision. Weight training is SAFE if done correctly: Master bodyweight exercises first (push-ups, squats), start with light weights (focus on form, not ego), get supervision from coach/trainer/parent initially, NEVER max out (1-rep max) - growth plates still developing. Benefits: Builds confidence, improves sports performance, establishes healthy habits. More dangerous = contact sports. With proper technique, weight training is very safe for teens!"
+    },
+    {
+      question: "How much should teenagers exercise weekly?",
+      answer: "Guidelines: 60 minutes daily physical activity (can include sports, PE class, active play). For structured training: 3-4x weekly strength training (30-45 min), 2-3x weekly cardio/sports (30-60 min), 1-2 rest days. DON'T overdo it - teens need recovery for growth. Balance training with school, sleep (8-10 hours essential!), social life. Quality >> quantity. Listen to body - persistent fatigue or pain = need rest. Many teen athletes overtrain, which hinders growth and performance."
+    },
+    {
+      question: "Will lifting weights stunt my growth as a teenager?",
+      answer: "NO! This is a MYTH with zero scientific evidence. Proper weight training does NOT stunt growth. Growth plates close based on genetics and hormones, not exercise. Actually, resistance training STIMULATES growth hormone release! What CAN damage growth plates: Improper technique with heavy weights, maxing out (1-rep max), lack of supervision, sports injuries (much higher risk than weight training). With proper form and reasonable weights, lifting is perfectly safe and beneficial for developing teens."
+    },
+    {
+      question: "How can teenagers build muscle and get bigger?",
+      answer: "Teen years are BEST time to build muscle - hormones (testosterone, growth hormone) are sky-high! Keys: 1) Strength train 3-4x weekly with progressive overload (gradually add weight), 2) Eat ENOUGH calories (most teens under-eat), especially protein (0.7-1g per lb bodyweight), 3) Sleep 8-10 hours (growth and recovery happen during sleep - NON-NEGOTIABLE), 4) Be patient - natural muscle building takes months/years, not weeks. Avoid: Steroids, extreme diets, overtraining. Focus on compound movements (squats, deadlifts, bench press, pull-ups)."
+    },
+    {
+      question: "Should teenagers do the same workouts as adults?",
+      answer: "Similar principles but modified approach: Same exercises (squats, push-ups, rows) but START LIGHTER, focus more on FORM than weight, avoid max effort lifts initially, include more variety/fun (sports, activities), emphasize skill development and movement quality. Teens recover faster than adults (can train more frequently), but also need more sleep and nutrition for growth. Teen workouts should be challenging but sustainable - avoid adult 'bodybuilder' routines which are too much volume. Full-body workouts 3x weekly work great for teens."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-indigo-700 to-purple-900 text-white py-16">
+      <section className="bg-gradient-to-br from-indigo-700 to-purple-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-indigo-700 font-semibold">
               💪 Complete Teen Workout Guide
@@ -30,7 +75,7 @@ export default function TeenagerWorkoutPage() {
               Teen Workout Plan: Build Strength, Power & Athletic Performance
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective workouts designed specifically for teenagers to build muscle, improve sports 
+              Discover safe, effective workouts designed specifically for teenagers to build muscle, improve sports
               performance, boost confidence, and establish lifelong fitness habits during adolescent years.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -50,7 +95,7 @@ export default function TeenagerWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -75,13 +120,13 @@ export default function TeenagerWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Essential for Teens</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The teenage years are a crucial period for building strength, establishing healthy habits, and developing 
-                athletic abilities. Regular exercise during adolescence builds bone density, develops muscle mass, improves 
-                cardiovascular fitness, enhances sports performance, boosts self-confidence and body image, reduces stress 
-                and anxiety, improves focus and academic performance, and establishes lifelong fitness habits. Teens who 
+                The teenage years are a crucial period for building strength, establishing healthy habits, and developing
+                athletic abilities. Regular exercise during adolescence builds bone density, develops muscle mass, improves
+                cardiovascular fitness, enhances sports performance, boosts self-confidence and body image, reduces stress
+                and anxiety, improves focus and academic performance, and establishes lifelong fitness habits. Teens who
                 exercise regularly have better mental health, stronger immune systems, and reduced risk of obesity.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">Benefits of Teen Exercise</h4>
@@ -94,7 +139,7 @@ export default function TeenagerWorkoutPage() {
                     <li>• Enhances focus and academic performance</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-purple-800">Teen Training Priorities</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -112,7 +157,7 @@ export default function TeenagerWorkoutPage() {
       </section>
 
       {/* Safety Guidelines */}
-      <section className="py-8 bg-yellow-50">
+      <section id="safety" className="py-8 bg-yellow-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="bg-yellow-100 border-2 border-yellow-400 rounded-lg p-6">
@@ -165,7 +210,7 @@ export default function TeenagerWorkoutPage() {
 
                   <div>
                     <h5 className="font-semibold text-gray-800 mb-3">Main Workout (3-4 Rounds)</h5>
-                    
+
                     <div className="space-y-3">
                       <div className="bg-white p-4 rounded-lg border border-gray-200">
                         <h6 className="font-semibold mb-2">1. Push-Ups (Regular or Modified)</h6>
@@ -173,7 +218,7 @@ export default function TeenagerWorkoutPage() {
                           <strong>Reps:</strong> 10-20 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Start in plank, lower chest to ground, push back up. Do on knees if regular is too hard. 
+                          Start in plank, lower chest to ground, push back up. Do on knees if regular is too hard.
                           Builds chest, shoulders, triceps, and core.
                         </p>
                       </div>
@@ -184,7 +229,7 @@ export default function TeenagerWorkoutPage() {
                           <strong>Reps:</strong> 15-25 | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Feet shoulder-width apart, lower down as if sitting in chair, keep chest up, drive through heels to stand. 
+                          Feet shoulder-width apart, lower down as if sitting in chair, keep chest up, drive through heels to stand.
                           Best leg exercise for teens.
                         </p>
                       </div>
@@ -195,7 +240,7 @@ export default function TeenagerWorkoutPage() {
                           <strong>Reps:</strong> 10-12 each leg | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Step forward, lower back knee toward ground, push up and step forward with other leg. 
+                          Step forward, lower back knee toward ground, push up and step forward with other leg.
                           Builds leg strength and balance.
                         </p>
                       </div>
@@ -206,7 +251,7 @@ export default function TeenagerWorkoutPage() {
                           <strong>Duration:</strong> 30-60 seconds | <strong>Rest:</strong> 30 seconds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Hold plank position on forearms or hands, keep body straight from head to heels. 
+                          Hold plank position on forearms or hands, keep body straight from head to heels.
                           Core strength is crucial for all sports.
                         </p>
                       </div>
@@ -217,7 +262,7 @@ export default function TeenagerWorkoutPage() {
                           <strong>Reps:</strong> 8-15 | <strong>Rest:</strong> 60 seconds between rounds
                         </p>
                         <p className="text-sm text-gray-600">
-                          Squat, place hands down, jump feet back to plank, do push-up, jump feet in, jump up. 
+                          Squat, place hands down, jump feet back to plank, do push-up, jump feet in, jump up.
                           Full-body exercise that builds power and endurance.
                         </p>
                       </div>
@@ -343,7 +388,7 @@ export default function TeenagerWorkoutPage() {
               <CardContent className="pt-6">
                 <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4 mb-6">
                   <p className="text-sm text-gray-800">
-                    <strong>⚠️ Important:</strong> Start with light weights (even just the bar). Master form first. 
+                    <strong>⚠️ Important:</strong> Start with light weights (even just the bar). Master form first.
                     Have a coach or trainer supervise initially. Never train alone with heavy weights.
                   </p>
                 </div>
@@ -497,11 +542,11 @@ export default function TeenagerWorkoutPage() {
       </section>
 
       {/* Exercise Guidelines */}
-      <section className="py-16 bg-gray-50">
+      <section id="guidelines" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Teen Training Guidelines & Safety</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Training Best Practices:</h4>
@@ -528,7 +573,7 @@ export default function TeenagerWorkoutPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Teen Training Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -559,6 +604,15 @@ export default function TeenagerWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-indigo-700 to-purple-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -567,10 +621,10 @@ export default function TeenagerWorkoutPage() {
               Complete Your Teen Fitness Journey
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Working out is only half the equation. Proper nutrition is essential for muscle growth, recovery, 
+              Working out is only half the equation. Proper nutrition is essential for muscle growth, recovery,
               and athletic performance. Get your complete teen nutrition plan today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Diet Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -600,10 +654,14 @@ export default function TeenagerWorkoutPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands of teens building strength and confidence through proper training
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

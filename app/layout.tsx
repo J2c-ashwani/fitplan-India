@@ -8,6 +8,7 @@ import Footer from "@/app/components/Footer"
 import { Analytics } from "@vercel/analytics/next"
 import FloatingAIButton from "@/components/FloatingAIButton"
 import Script from "next/script"  // ✅ Added for AdSense
+import { CurrencyProvider } from "@/components/CurrencyProvider"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -39,14 +40,14 @@ export const metadata: Metadata = {
   description:
     "Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted by 10,000+ clients worldwide in USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.",
   keywords: [
-    "weight loss India",
-    "PCOS diet plan",
-    "thyroid diet plan",
-    "diabetes diet plan",
-    "Indian weight loss program",
-    "post pregnancy diet",
-    "healthy lifestyle India",
-    "personalized diet plan India",
+    "Indian diet plan for weight loss",
+    "PCOS Indian diet plan",
+    "thyroid Indian diet chart",
+    "diabetes Indian diet food list",
+    "post pregnancy Indian diet",
+    "healthy indian recipes for weight loss",
+    "personalized indian diet plan",
+    "fitplan india",
   ],
   authors: [{ name: "FitPlan India", url: "https://fitplanindia.com" }, { name: "Dr. Arti Kumari", url: "https://fitplanindia.com/about" }],
   creator: "FitPlan India",
@@ -72,27 +73,27 @@ export const metadata: Metadata = {
     other: [{ rel: "mask-icon", url: "/favicon.svg", color: "#166534" }],
   },
   openGraph: {
-    title: "FitPlan India - Personalized Weight Loss Plans for Every Condition",
+    title: "FitPlan India - Authentic Indian Diet Plans for Global Weight Loss",
     description:
-      "Custom Indian diet plans for PCOS, thyroid, diabetes, post-pregnancy, and more. Start your health journey with FitPlan India today.",
+      "#1 Rated Indian Diet Plans for weight loss, PCOS, and Thyroid. Trusted by 20,000+ clients across USA, UK, Canada, Australia & India.",
     url: "https://fitplanindia.com",
     siteName: "FitPlan India",
-    locale: "en_IN",
+    locale: "en_US",
     type: "website",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "FitPlan India - Personalized Weight Loss Plans",
+        alt: "FitPlan India - Global Indian Weight Loss Experts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FitPlan India - Personalized Weight Loss Plans for Every Condition",
+    title: "FitPlan India - Authentic Indian Diet Plans for Global Weight Loss",
     description:
-      "Custom Indian diet & lifestyle plans for PCOS, thyroid, diabetes, post-pregnancy, and more.",
+      "#1 Rated Indian Diet Plans for weight loss, PCOS, and Thyroid. Trusted by 20,000+ clients across USA, UK, Canada, Australia & India.",
     images: ["/og-image.jpg"],
     creator: "@fitplanindia",
   },
@@ -151,7 +152,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@type": "ContactPoint",
               telephone: "+91-98765-43210",
               contactType: "customer service",
-              areaServed: "IN",
+              areaServed: ["US", "GB", "CA", "AU", "IN", "AE"],
               availableLanguage: ["English", "Hindi"],
             },
             sameAs: [
@@ -183,11 +184,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       </head>
       <body className="font-sans antialiased">
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <FloatingAIButton />
-        <Analytics />
+        <CurrencyProvider>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+          <FloatingAIButton />
+          <Analytics />
+        </CurrencyProvider>
       </body>
     </html>
   )

@@ -9,8 +9,38 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Target, CheckCircle, AlertCircle, Info } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import FAQSection from "@/components/FAQSection"
 
 export default function BMICalculatorPage() {
+    const breadcrumbItems = [
+        { label: "Tools", href: "/tools" },
+        { label: "BMI Calculator", href: "/tools/bmi-calculator" },
+    ]
+
+    const faqs = [
+        {
+            question: "What is the best BMI for Indian adults?",
+            answer: "For the Indian population, the healthy BMI range is typically considered 18.5 to 22.9 kg/m², which is lower than the global standard of 24.9. This is because Indians have a higher predisposition to abdominal obesity and related metabolic diseases like diabetes at lower BMIs."
+        },
+        {
+            question: "Is BMI accurate for bodybuilders or athletes?",
+            answer: "No, BMI does not distinguish between muscle and fat. Athletes with high muscle mass may be classified as 'overweight' or 'obese' despite having low body fat. For athletes, Body Fat Percentage is a much better metric than BMI."
+        },
+        {
+            question: "How often should I check my BMI?",
+            answer: "Checking your BMI once every 2-4 weeks is sufficient. Daily fluctuations in weight are normal and mostly due to water retention. Focus on long-term trends rather than daily numbers."
+        },
+        {
+            question: "Can BMI predict health problems?",
+            answer: "BMI is a screening tool, not a diagnostic one. However, a high BMI (>23 for Indians) is strongly linked to increased risk of Type 2 Diabetes, Hypertension, Heart Disease, and PCOD/PCOS in women."
+        },
+        {
+            question: "What should I do if my BMI is high?",
+            answer: "Start with small changes: reduce refined carbs (sugar, maida), increase protein intake, and walk for 30 minutes daily. Consult a nutritionist for a personalized plan, as crash diets often lead to muscle loss and rebound weight gain."
+        }
+    ]
+
     const [bmiData, setBmiData] = useState({
         height: "",
         weight: "",
@@ -80,6 +110,9 @@ export default function BMICalculatorPage() {
         <div className="min-h-screen bg-gray-50">
             <section className="bg-gradient-to-br from-emerald-600 to-green-700 text-white py-16">
                 <div className="container mx-auto px-4">
+                    <div className="mb-6 text-emerald-100">
+                        <Breadcrumbs items={breadcrumbItems} />
+                    </div>
                     <div className="max-w-4xl mx-auto text-center">
                         <Badge className="mb-4 bg-white text-emerald-600 font-semibold">Free Health Tool</Badge>
                         <h1 className="text-4xl font-bold mb-4">BMI Calculator India</h1>
@@ -216,6 +249,14 @@ export default function BMICalculatorPage() {
                                 </CardContent>
                             </Card>
                         </div>
+                        {/* FAQ Section */}
+                        <section className="py-12 bg-white">
+                            <div className="container mx-auto px-4">
+                                <div className="max-w-4xl mx-auto">
+                                    <FAQSection faqs={faqs} />
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </section>

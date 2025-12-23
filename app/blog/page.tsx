@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import PriceDisplay from "@/components/PriceDisplay"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Heart, Users, Clock, Target, Zap, Baby, Activity, Leaf, Dumbbell, TrendingUp, Apple, Trophy, BookOpen, GraduationCap, Scale, Sparkles, ArrowRight } from "lucide-react"
@@ -80,7 +81,7 @@ export default function BlogPage() {
               Expert Diet Plans & Fitness Guides
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              21 comprehensive, evidence-based guides covering weight loss, muscle building, PCOS, diabetes, 
+              21 comprehensive, evidence-based guides covering weight loss, muscle building, PCOS, diabetes,
               heart health, popular diets, and specialized nutrition for every life stage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -153,7 +154,7 @@ export default function BlogPage() {
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600 mb-6">{blog.description}</p>
-                      <Button 
+                      <Button
                         className={`w-full font-bold shadow-md ${colorButtons[blog.color]}`}
                         size="lg"
                         asChild
@@ -180,7 +181,7 @@ export default function BlogPage() {
               Want Personalized Health Advice?
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Get expert guidance tailored to your specific health condition and goals. Our certified nutritionists 
+              Get expert guidance tailored to your specific health condition and goals. Our certified nutritionists
               provide personalized diet plans and lifestyle recommendations.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -201,16 +202,16 @@ export default function BlogPage() {
                 <Heart className="w-12 h-12 text-yellow-300 mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2 text-xl">Expert Consultation</h4>
                 <p className="text-yellow-100 text-sm mb-4 leading-relaxed">
-                  Book one-on-one consultation with certified nutritionists for $100.
+                  Book one-on-one consultation with certified nutritionists for <PriceDisplay amountIn={500} amountUs={50} />.
                 </p>
                 <Button size="lg" className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold" asChild>
                   <Link href="/contact">
-                    Book Consultation - $100
+                    Book Consultation - <PriceDisplay amountIn={500} amountUs={50} />
                   </Link>
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands transforming their health with FitPlan India
             </p>

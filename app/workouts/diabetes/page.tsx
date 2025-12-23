@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, TrendingUp, Apple, Droplet } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import StickyTOC from "@/components/StickyTOC"
+import CalculatorWidget from "@/components/CalculatorWidget"
+import RelatedContent from "@/components/RelatedContent"
+import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -17,11 +22,51 @@ export const metadata: Metadata = {
 }
 
 export default function DiabetesWorkoutPage() {
+  const breadcrumbItems = [
+    { label: "Workouts", href: "/workouts" },
+    { label: "Diabetes Plan", href: "/workouts/diabetes" },
+  ]
+
+  const tocItems = [
+    { id: "stats", label: "Key Benefits" },
+    { id: "why-exercise", label: "Why Exercise?" },
+    { id: "home-workouts", label: "Home Routine" },
+    { id: "gym-workouts", label: "Gym Routine" },
+    { id: "guidelines", label: "Safety Guide" },
+    { id: "faq", label: "FAQs" },
+  ]
+
+  const faqs = [
+    {
+      question: "When is the best time to exercise for blood sugar control?",
+      answer: "Generally, 1-3 hours after eating is optimal as blood sugar levels are higher, reducing hypoglycemia risk. Post-meal walking (even 10-15 mins) is highly effective at reducing glucose spikes. Always check blood sugar before starting if you take insulin."
+    },
+    {
+      question: "Which is better for diabetes: Cardio or Weights?",
+      answer: "You need both! IMPACT: Cardio (walking, cycling) lowers blood sugar immediately. Strength training builds muscle which improves insulin sensitivity long-term (24-48 hours). The 'Gold Standard' is combining them: warm up with cardio, do weights, finish with cool-down."
+    },
+    {
+      question: "What should I do if my blood sugar drops during exercise?",
+      answer: "Stop immediately. Follow the '15-15 Rule': Consome 15g fast-acting carbs (4oz juice, 3-4 glucose tabs, or 1 tbsp honey), wait 15 minutes, and check levels again. Do not return to exercise until blood sugar is stable above 100 mg/dL."
+    },
+    {
+      question: "How often should I exercise to manage diabetes?",
+      answer: "Consistency is more important than intensity. Aim for 30 minutes, 5 days a week. Avoid going more than 2 consecutive days without physical activity, as the insulin-sensitizing effect of exercise creates a 'window' that lasts about 24-48 hours."
+    },
+    {
+      question: "Is it safe to exercise with foot neuropathy?",
+      answer: "Yes, but use caution. Avoid high-impact activities like running or jumping which can cause unnoticed trauma. Choose low-impact options like cycling, swimming, or elliptical. Wear specialized, well-fitted athletic shoes and inspect your feet daily for any blisters or red spots."
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20">
+      <StickyTOC items={tocItems} />
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-700 to-cyan-900 text-white py-16">
+      <section className="bg-gradient-to-br from-blue-700 to-cyan-900 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-blue-700 font-semibold">
               🩺 Complete Diabetes Workout Guide 2025
@@ -50,7 +95,7 @@ export default function DiabetesWorkoutPage() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-16 bg-white">
+      <section id="stats" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
@@ -72,7 +117,7 @@ export default function DiabetesWorkoutPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
+            <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Essential for Diabetes</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Exercise is one of the most powerful tools for managing diabetes. Physical activity helps your muscles
@@ -106,12 +151,18 @@ export default function DiabetesWorkoutPage() {
                 </div>
               </div>
             </div>
+
+            {/* Engagement Hook: Calculator */}
+            <div className="mb-12">
+              <CalculatorWidget />
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* Home Workouts Section */}
-      <section id="home-workouts" className="py-16 bg-gray-50">
+      <section id="home-workouts" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -302,7 +353,7 @@ export default function DiabetesWorkoutPage() {
       </section>
 
       {/* Gym Workouts Section */}
-      <section id="gym-workouts" className="py-16 bg-white">
+      <section id="gym-workouts" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -471,7 +522,7 @@ export default function DiabetesWorkoutPage() {
       </section>
 
       {/* Exercise Guidelines & Safety */}
-      <section className="py-16 bg-gray-50">
+      <section id="guidelines" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Diabetes Exercise Safety Guidelines</h2>
@@ -533,6 +584,15 @@ export default function DiabetesWorkoutPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-700 to-cyan-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -578,6 +638,10 @@ export default function DiabetesWorkoutPage() {
             <p className="text-white text-sm mt-6">
               ✨ Join thousands managing diabetes naturally through diet and exercise
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
+            <RelatedContent />
           </div>
         </div>
       </section>

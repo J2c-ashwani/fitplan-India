@@ -9,8 +9,38 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Zap, CheckCircle, Info, Flame } from "lucide-react"
 import Link from "next/link"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import FAQSection from "@/components/FAQSection"
 
 export default function CalorieCalculatorPage() {
+    const breadcrumbItems = [
+        { label: "Tools", href: "/tools" },
+        { label: "Calorie Calculator", href: "/tools/calorie-calculator" },
+    ]
+
+    const faqs = [
+        {
+            question: "How accurate is this calorie calculator?",
+            answer: "This calculator uses the Mifflin-St Jeor equation, which is considered the 'gold standard' for estimating calorie needs. However, it provides an estimate. Your actual metabolism can vary based on genetics, muscle mass, and hormonal health (like Thyroid/PCOS)."
+        },
+        {
+            question: "Should I count vegetable calories?",
+            answer: "Generally, no. Green leafy vegetables and fibrous veggies (cucumber, broccoli, spinach) are very low in calories and high in fiber. You can eat them in abundance. Focus on counting calories from grains, oils, dairy, fruits, and proteins."
+        },
+        {
+            question: "How much of a calorie deficit do I need to lose weight?",
+            answer: "A safe deficit is 200-500 calories below your maintenance (TDEE). This leads to sustainable weight loss of 0.25-0.5 kg per week. Aggressive deficits (>750 calories) often cause muscle loss and metabolic slowdown."
+        },
+        {
+            question: "Does eating late at night make me gain weight?",
+            answer: "No, calories are calories regardless of the time. However, late-night eating often leads to mindless snacking on high-calorie foods. If you stick to your daily calorie limit, meal timing doesn't significantly impact weight loss."
+        },
+        {
+            question: "Why am I not losing weight in a calorie deficit?",
+            answer: "Common reasons: 1) Underestimating portions (oils/sauces), 2) Water retention (salty food/hormones), 3) Metabolic adaptation (need a diet break), 4) Medical issues like Hypothyroidism. If stuck for >2 weeks, reassess your tracking accuracy."
+        }
+    ]
+
     const [calorieData, setCalorieData] = useState({
         age: "",
         gender: "female",
@@ -92,6 +122,9 @@ export default function CalorieCalculatorPage() {
         <div className="min-h-screen bg-gray-50">
             <section className="bg-gradient-to-br from-blue-600 to-cyan-700 text-white py-16">
                 <div className="container mx-auto px-4">
+                    <div className="mb-6 text-blue-100">
+                        <Breadcrumbs items={breadcrumbItems} />
+                    </div>
                     <div className="max-w-4xl mx-auto text-center">
                         <Badge className="mb-4 bg-white text-blue-600 font-semibold">Free Health Tool</Badge>
                         <h1 className="text-4xl font-bold mb-4">Daily Calorie Calculator (BMR & TDEE)</h1>
@@ -300,8 +333,18 @@ export default function CalorieCalculatorPage() {
                             </Card>
                         </div>
                     </div>
+
+                    {/* FAQ Section */}
+                    <section className="py-12 bg-white">
+                        <div className="container mx-auto px-4">
+                            <div className="max-w-4xl mx-auto">
+                                <FAQSection faqs={faqs} />
+                            </div>
+                        </div>
+                    </section>
                 </div>
-            </section>
         </div>
+            </section >
+        </div >
     )
 }
