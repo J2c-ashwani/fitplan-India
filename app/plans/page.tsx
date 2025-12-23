@@ -18,6 +18,7 @@ import {
   Sparkles,
   Calendar,
   HelpCircle,
+  Scissors,
 } from "lucide-react"
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -183,6 +184,33 @@ const dietPlans = [
     difficulty: "Moderate",
     color: "rose",
   },
+  {
+    title: "Hair Growth Diet Plan",
+    description: "Ayurvedic and protein-rich nutrition to stop hair fall and boost volume",
+    href: "/plans/hair-growth",
+    icon: Scissors,
+    duration: "3-6 months",
+    difficulty: "Moderate",
+    color: "emerald",
+  },
+  {
+    title: "Skin Detox Diet Plan",
+    description: "Blood purification diet for acne-free, glowing, and radiant skin",
+    href: "/plans/skin-detox",
+    icon: Sparkles,
+    duration: "2-4 months",
+    difficulty: "Moderate",
+    color: "rose",
+  },
+  {
+    title: "Anti-Aging & Eye Plan",
+    description: "Collagen-boosting diet for youthful skin and better vision",
+    href: "/plans/anti-aging",
+    icon: Sparkles,
+    duration: "4-6 months",
+    difficulty: "Moderate",
+    color: "purple",
+  },
 ]
 
 const colorGradients: Record<string, string> = {
@@ -191,6 +219,7 @@ const colorGradients: Record<string, string> = {
   blue: "from-blue-600 to-indigo-700",
   orange: "from-orange-600 to-amber-700",
   green: "from-green-600 to-emerald-700",
+  emerald: "from-emerald-600 to-teal-700",
   red: "from-red-600 to-rose-700",
   yellow: "from-yellow-600 to-orange-600",
   indigo: "from-indigo-600 to-purple-700",
@@ -206,6 +235,7 @@ const colorButtons: Record<string, string> = {
   blue: "bg-blue-600 hover:bg-blue-700 text-white",
   orange: "bg-orange-600 hover:bg-orange-700 text-white",
   green: "bg-green-600 hover:bg-green-700 text-white",
+  emerald: "bg-emerald-600 hover:bg-emerald-700 text-white",
   red: "bg-red-600 hover:bg-red-700 text-white",
   yellow: "bg-yellow-600 hover:bg-yellow-700 text-white",
   indigo: "bg-indigo-600 hover:bg-indigo-700 text-white",

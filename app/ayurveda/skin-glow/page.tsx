@@ -174,8 +174,8 @@ export default function SkinGlowPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/plans"
-                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-emerald-600 rounded-lg hover:bg-emerald-700 shadow-md"
+                                href="/plans/skin-detox"
+                                className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-rose-600 rounded-lg hover:bg-rose-700 shadow-md"
                             >
                                 Get Skin Detox Plan
                             </Link>

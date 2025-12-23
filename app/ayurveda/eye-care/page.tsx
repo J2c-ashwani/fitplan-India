@@ -183,10 +183,10 @@ export default function EyeCarePage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
-                                href="/plans"
+                                href="/plans/anti-aging"
                                 className="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-200 bg-teal-600 rounded-lg hover:bg-teal-700 shadow-md"
                             >
-                                Get Anti-Aging Diet
+                                Get Eye Health Plan
                             </Link>
                         </div>
                     </section>

@@ -2,8 +2,9 @@ import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Leaf, Moon, Sun, Wind, Droplet, Flame, Brain, Heart, Activity, Coffee, Smile, Star } from "lucide-react"
+import { Leaf, Moon, Sun, Wind, Droplet, Flame, Brain, Heart, Activity, Coffee, Smile, Star, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
     title: "Ayurveda Hub - Ancient Wisdom for Modern Health | FitPlan India",
@@ -111,21 +112,33 @@ export default function AyurvedaHub() {
                                 </div>
                                 <div className="grid gap-4">
                                     {category.items.map((item, i) => (
-                                        <Link key={i} href={item.href} className="group">
-                                            <Card className="h-full border hover:border-emerald-500 hover:shadow-md transition-all duration-300">
+                                        <Card key={i} className="h-full border hover:border-emerald-500 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                                            <div>
                                                 <CardHeader className="p-4 pb-2">
-                                                    <CardTitle className="text-base font-semibold group-hover:text-emerald-700 flex items-center justify-between">
+                                                    <CardTitle className="text-base font-semibold text-gray-900 flex items-center justify-between">
                                                         {item.title}
-                                                        <Wind className="w-4 h-4 text-gray-300 group-hover:text-emerald-500 transition-colors opacity-0 group-hover:opacity-100" />
+                                                        <Wind className="w-4 h-4 text-emerald-500 opacity-50" />
                                                     </CardTitle>
                                                 </CardHeader>
                                                 <CardContent className="p-4 pt-0">
-                                                    <CardDescription className="text-sm line-clamp-2">
+                                                    <CardDescription className="text-sm line-clamp-2 mb-4">
                                                         {item.desc}
                                                     </CardDescription>
                                                 </CardContent>
-                                            </Card>
-                                        </Link>
+                                            </div>
+                                            <div className="p-4 pt-0 mt-auto">
+                                                <Button
+                                                    className="w-full bg-emerald-50 text-emerald-700 hover:bg-emerald-100 hover:text-emerald-800 font-semibold justify-between group"
+                                                    variant="ghost"
+                                                    asChild
+                                                >
+                                                    <Link href={item.href}>
+                                                        Learn about
+                                                        <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                                                    </Link>
+                                                </Button>
+                                            </div>
+                                        </Card>
                                     ))}
                                 </div>
                             </div>
