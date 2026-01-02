@@ -1,103 +1,195 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import { Sparkles, Droplet, Clock } from "lucide-react"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Sparkles, Droplet, Clock, ShieldCheck, Microscope, AlertTriangle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
 
 export const metadata: Metadata = {
-    title: "Ayurvedic Oil Pulling: Benefits & How To Start | Gandusha Guide",
-    description: "Master the ancient art of Oil Pulling (Gandusha). Learn how swishing coconut or sesame oil can whiten teeth, remove toxins, and improve gut health.",
-    keywords: ["Oil pulling benefits", "Gandusha ayurveda", "Coconut oil pulling", "Sesame oil for teeth", "Oral detox"],
+    title: "Oil Pulling (Gandusha): The Ultimate Guide | Ayurvedic Detox",
+    description: "Everything you need to know about Oil Pulling. Scientific benefits for teeth whitening, bad breath, and gut health. Step-by-step 20-minute protocol.",
+    keywords: ["Oil pulling science", "Coconut oil pulling benefits", "Ayurvedic oral detox", "How to do oil pulling correctly", "Oil pulling side effects"],
 }
 
 export default function OilPullingPage() {
     const tocItems = [
-        { id: "what-is", label: "What is It?" },
-        { id: "benefits", label: "Key Benefits" },
-        { id: "how-to", label: "Step-by-Step" },
+        { id: "intro", label: "What is Oil Pulling?" },
+        { id: "science", label: "The Science" },
+        { id: "protocol", label: "Step-by-Step" },
         { id: "oils", label: "Best Oils" },
+        { id: "faq", label: "FAQs" },
     ]
 
     return (
         <div className="min-h-screen bg-stone-50">
             <StickyTOC items={tocItems} />
 
-            <div className="relative bg-[#064e3b] text-white py-20">
+            {/* Hero Section */}
+            <div className="relative bg-[#064e3b] text-white py-24">
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
-                    <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Gandusha: The Ancient Detox
+                    <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
+                        The Master Detox: Oil Pulling
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Oil Pulling is not just for white teeth. In Ayurveda, the tongue is the mirror of the internal organs. Cleaning the mouth detoxifies the entire body.
+                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
+                        Known in Sanskrit as <strong>Gandusha</strong> or <strong>Kavala</strong>, this 3,000-year-old practice acts as a magnet for toxins, purifying not just your mouth, but your entire system.
                     </p>
                 </div>
-                <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
+                <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
             </div>
 
-            <div className="container mx-auto px-4 py-12 max-w-4xl">
-                <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-8 md:p-12">
+            <div className="container mx-auto px-4 py-16 max-w-4xl">
 
-                    <section id="what-is" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">More Than Just Mouthwash</h2>
-                        <p className="text-gray-700">
-                            <strong>Gandusha</strong> (holding liquid) or <strong>Kavala</strong> (swishing liquid) involves swishing oil in the mouth for 15-20 minutes. Ideally done first thing in the morning on an empty stomach.
+                {/* Introduction */}
+                <section id="intro" className="mb-20">
+                    <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">More Than Just a Trend</h2>
+                        <div className="prose prose-lg text-gray-700">
+                            <p>
+                                While Oil Pulling has become a modern wellness trend, it is described in the ancient Ayurvedic text <em>Charaka Samhita</em> as a daily ritual for strengthening teeth, improving voice, and enhancing taste.
+                            </p>
+                            <p className="mt-4">
+                                The concept is simple: <strong>"Like attracts like."</strong> Most microorganisms in the mouth consist of a single cell covered in a lipid (fatty) membrane. When you swish oil, the fats attract each other, pulling the bacteria out of hiding spots that a toothbrush can't reach.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Science Section */}
+                <section id="science" className="mb-20 scroll-mt-24">
+                    <div className="bg-indigo-50/50 p-8 md:p-12 rounded-3xl border border-indigo-100">
+                        <div className="flex items-center gap-3 mb-6">
+                            <Microscope className="w-8 h-8 text-indigo-600" />
+                            <h2 className="text-3xl font-serif font-bold text-indigo-900">What Does Science Say?</h2>
+                        </div>
+                        <p className="text-gray-700 mb-8 leading-relaxed">
+                            Critics often call it pseudoscience, but clinical trials tell a different story. Here are proven benefits backed by research:
                         </p>
-                    </section>
-
-                    <section id="benefits" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Why Swish Oil?</h2>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <Card className="bg-stone-50">
-                                <CardContent className="p-6">
-                                    <h3 className="font-bold text-emerald-900 mb-2">1. Pulls Toxins (Ama)</h3>
-                                    <p className="text-gray-700 text-sm">Oral bacteria have a lipid (fat) outer coating. They stick to the oil like a magnet and are spit out.</p>
-                                </CardContent>
-                            </Card>
-                            <Card className="bg-stone-50">
-                                <CardContent className="p-6">
-                                    <h3 className="font-bold text-emerald-900 mb-2">2. Whitens Teeth</h3>
-                                    <p className="text-gray-700 text-sm">Natural mechanical cleaning removes stains without damaging enamel like chemical bleaches.</p>
-                                </CardContent>
-                            </Card>
-                            <Card className="bg-stone-50">
-                                <CardContent className="p-6">
-                                    <h3 className="font-bold text-emerald-900 mb-2">3. Cures Bad Breath</h3>
-                                    <p className="text-gray-700 text-sm">Halitosis is often caused by bacteria on the tongue. Oil pulling creates a clean oral microbiome.</p>
-                                </CardContent>
-                            </Card>
-                        </div>
-                    </section>
-
-                    <section id="how-to" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">How To Do It Correctly</h2>
-                        <div className="bg-teal-50 p-6 rounded-xl border border-teal-100">
-                            <ol className="list-decimal ml-5 space-y-3 text-gray-800">
-                                <li><strong>Take 1 tbsp of Oil:</strong> Put it in your mouth. Do not swallow!</li>
-                                <li><strong>Swish Gently:</strong> Push and pull the oil through your teeth.</li>
-                                <li><strong>Time it:</strong> Continue for 10-15 minutes until the oil turns thin and milky white.</li>
-                                <li><strong>Spit into Trash:</strong> Do not spit in the sink (it clogs pipes) or swallow (it's full of toxins).</li>
-                                <li><strong>Rinse:</strong> Rinse with warm water and brush as usual.</li>
-                            </ol>
-                        </div>
-                    </section>
-
-                    <section id="oils" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Which Oil is Best?</h2>
-                        <div className="space-y-4">
-                            <div className="p-4 bg-orange-50 rounded-lg border border-orange-100">
-                                <h4 className="font-bold text-orange-900 mb-1">Cold-Pressed Sesame Oil</h4>
-                                <p className="text-sm text-gray-700">The traditional Ayurveda choice. Warming nature. Good for receding gums and tooth sensitivity.</p>
+                        <div className="grid gap-6">
+                            <div className="bg-white p-6 rounded-xl shadow-sm">
+                                <h3 className="font-bold text-indigo-900 text-lg mb-2">1. Reduces Streptococcus Mutans</h3>
+                                <p className="text-gray-600">A 2008 study found that swishing with sesame oil for 2 weeks significantly reduced the count of <em>S. mutans</em>, the primary bacteria responsible for tooth decay.</p>
                             </div>
-                            <div className="p-4 bg-blue-50 rounded-lg border border-blue-100">
-                                <h4 className="font-bold text-blue-900 mb-1">Virgin Coconut Oil</h4>
-                                <p className="text-sm text-gray-700">The modern choice. Cooling nature. Antimicrobial and tastes better. Great for whitening.</p>
+                            <div className="bg-white p-6 rounded-xl shadow-sm">
+                                <h3 className="font-bold text-indigo-900 text-lg mb-2">2. Combats Gingivitis</h3>
+                                <p className="text-gray-600">Research shows oil pulling reduces plaque-induced gingivitis. The saponification process (oil turning soapy) creates a cleansing environment.</p>
+                            </div>
+                            <div className="bg-white p-6 rounded-xl shadow-sm">
+                                <h3 className="font-bold text-indigo-900 text-lg mb-2">3. Detoxifies the Body</h3>
+                                <p className="text-gray-600">By reducing final oral bacterial load, you swallow fewer toxins daily, relieving stress on the kidney and liver.</p>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                </div>
+                {/* Protocol Section */}
+                <section id="protocol" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">The Perfect 20-Minute Protocol</h2>
+                    <div className="relative">
+                        <div className="absolute left-8 top-0 bottom-0 w-1 bg-emerald-100 hidden md:block"></div>
+
+                        <div className="space-y-12">
+                            {/* Step 1 */}
+                            <div className="relative md:pl-24">
+                                <div className="hidden md:flex absolute left-0 top-0 w-16 h-16 bg-[#064e3b] text-white rounded-full items-center justify-center font-bold text-2xl shadow-lg">1</div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3">Wake Up & Stomach Check</h3>
+                                <p className="text-gray-600 leading-relaxed bg-stone-50 p-6 rounded-xl border border-stone-100">
+                                    This <strong>MUST</strong> be done first thing in the morning on an empty stomach. Before water, coffee, or brushing. Your mouth contains the highest bacteria load right after waking up.
+                                </p>
+                            </div>
+
+                            {/* Step 2 */}
+                            <div className="relative md:pl-24">
+                                <div className="hidden md:flex absolute left-0 top-0 w-16 h-16 bg-[#064e3b] text-white rounded-full items-center justify-center font-bold text-2xl shadow-lg">2</div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3">The Spoonful</h3>
+                                <p className="text-gray-600 leading-relaxed bg-stone-50 p-6 rounded-xl border border-stone-100">
+                                    Take <strong>1 tablespoon</strong> of oil. Put it in your mouth. <span className="text-red-600 font-bold">DO NOT SWALLOW.</span> Just hold it. It will feel thick at first.
+                                </p>
+                            </div>
+
+                            {/* Step 3 */}
+                            <div className="relative md:pl-24">
+                                <div className="hidden md:flex absolute left-0 top-0 w-16 h-16 bg-[#064e3b] text-white rounded-full items-center justify-center font-bold text-2xl shadow-lg">3</div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3">Swish & Multitask (15-20 Mins)</h3>
+                                <p className="text-gray-600 leading-relaxed bg-stone-50 p-6 rounded-xl border border-stone-100">
+                                    Gently push and pull the oil through your teeth. Don't gargle. Read a book, make your bed, or shower while you do this.
+                                    <br /><br />
+                                    <strong>The Sign:</strong> After 15 mins, the oil will turn thin, watery, and milky white. This means it is full of bacteria.
+                                </p>
+                            </div>
+
+                            {/* Step 4 */}
+                            <div className="relative md:pl-24">
+                                <div className="hidden md:flex absolute left-0 top-0 w-16 h-16 bg-[#064e3b] text-white rounded-full items-center justify-center font-bold text-2xl shadow-lg">4</div>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-3">Spit & Rinse</h3>
+                                <p className="text-gray-600 leading-relaxed bg-stone-50 p-6 rounded-xl border border-stone-100">
+                                    Spit into the trash can (oil clogs sink pipes!). Rinse your mouth with warm saline water. Finally, brush your teeth as normal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Oils Section */}
+                <section id="oils" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">Choosing Your Oil</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <Card className="bg-orange-50 border-orange-100">
+                            <CardContent className="p-8">
+                                <h3 className="text-xl font-bold text-orange-900 mb-3">Sesame Oil (Traditional)</h3>
+                                <p className="text-gray-700 mb-4">The "King of Oils" in Ayurveda.</p>
+                                <ul className="space-y-2 text-sm text-gray-600">
+                                    <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> Warming nature (Good for Vata)</li>
+                                    <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> High Calcium (Strengthens teeth)</li>
+                                    <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> Best for receding gums</li>
+                                </ul>
+                            </CardContent>
+                        </Card>
+                        <Card className="bg-blue-50 border-blue-100">
+                            <CardContent className="p-8">
+                                <h3 className="text-xl font-bold text-blue-900 mb-3">Coconut Oil (Modern)</h3>
+                                <p className="text-gray-700 mb-4">The popular, tasty choice.</p>
+                                <ul className="space-y-2 text-sm text-gray-600">
+                                    <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> Cooling nature (Good for Pitta)</li>
+                                    <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> Lauric Acid (Strong antimicrobial)</li>
+                                    <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> Better for whitening</li>
+                                </ul>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </section>
+
+                {/* FAQ Section */}
+                <section id="faq" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
+                    <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger className="text-lg font-medium text-gray-900">Can I swallow the oil?</AccordionTrigger>
+                            <AccordionContent className="text-gray-600 leading-relaxed">
+                                <strong>Absolutely NOT.</strong> By the end of 20 minutes, that oil is a toxic soup of bacteria and plaque. Swallowing it re-ingests the toxins you just worked hard to pull out.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-2">
+                            <AccordionTrigger className="text-lg font-medium text-gray-900">Can I do it if I have fillings?</AccordionTrigger>
+                            <AccordionContent className="text-gray-600 leading-relaxed">
+                                Yes, it is generally safe for metallic or composite fillings. However, the rigorous swishing <em>can</em> rarely loosen loose crowns. Be gentle if you have extensive dental work.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-3">
+                            <AccordionTrigger className="text-lg font-medium text-gray-900">How long until I see results?</AccordionTrigger>
+                            <AccordionContent className="text-gray-600 leading-relaxed">
+                                <ul className="list-disc ml-5 mt-2 space-y-1">
+                                    <li><strong>1 Week:</strong> Fresher breath and cleaner feeling teeth.</li>
+                                    <li><strong>1 Month:</strong> Reduced gum bleeding and visible whitening.</li>
+                                    <li><strong>3 Months:</strong> Improved sinus health and clearer skin.</li>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </section>
+
             </div>
         </div>
     )

@@ -1,98 +1,171 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { Utensils, Clock, Flame, Ban } from "lucide-react"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Clock, Flame, Utensils, Ban, CheckCircle, AlertOctagon } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
 
 export const metadata: Metadata = {
-    title: "10 Golden Ayurvedic Diet Rules | FitPlan India",
-    description: "Eating the right food is not enough; eating it the right way matters. Learn about Viruddha Ahar, Agni, and mindful eating habits.",
-    keywords: ["Ayurvedic eating rules", "Viruddha Ahar examples", "Mindful eating Ayurveda", "Drinking water rules ayurveda"],
+    title: "10 Golden Ayurvedic Diet Rules | Art of Mindful Eating",
+    description: "Ayurveda is not just about what you eat, but HOW you eat. Master the 10 rules of Ahara, the concept of Viruddha Ahar (Incompatible Foods), and the ideal daily eating schedule.",
+    keywords: ["Ayurvedic eating rules", "Viruddha Ahar examples", "Ayurveda food combinations", "Mindful eating guide", "Digestive fire Agni"],
 }
 
 export default function DietRulesPage() {
     const tocItems = [
-        { id: "agni", label: "Respect Your Agni" },
-        { id: "rules", label: "The 10 Golden Rules" },
-        { id: "viruddha", label: "Incompatible Foods" },
+        { id: "agni", label: "The Concept of Agni" },
+        { id: "rules", label: "10 Golden Rules" },
+        { id: "incompatible", label: "Incompatible Foods" },
+        { id: "schedule", label: "Ideal Schedule" },
+        { id: "faq", label: "FAQs" },
     ]
 
     return (
         <div className="min-h-screen bg-stone-50">
             <StickyTOC items={tocItems} />
 
-            <div className="relative bg-[#064e3b] text-white py-20">
+            {/* Hero Section */}
+            <div className="relative bg-[#064e3b] text-white py-24">
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
-                    <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        The Art of Eating: Ayurvedic Diet Rules
+                    <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
+                        The Art of Eating
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        In Ayurveda, <strong>how</strong> you eat is just as important as <strong>what</strong> you eat. Even nectar can become poison if eaten incorrectly.
+                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
+                        In Ayurveda, food is medicine. But even the healthiest food can become poison (Ama) if eaten at the wrong time, in the wrong quantity, or with the wrong combination.
                     </p>
                 </div>
-                <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
+                <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
             </div>
 
-            <div className="container mx-auto px-4 py-12 max-w-4xl">
-                <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-8 md:p-12">
+            <div className="container mx-auto px-4 py-16 max-w-4xl">
 
-                    <section id="agni" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">Agni: The Digestive Fire</h2>
-                        <p className="text-gray-700 leading-relaxed">
-                            Think of your digestion like a campfire. If the fire is strong, it burns the wood (food) completely. If it is weak, the wood smokes and chars (creating <strong>Ama</strong>/toxins). All Ayurvedic rules focus on keeping this fire burning bright.
+                {/* Agni Section */}
+                <section id="agni" className="mb-20">
+                    <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-3 bg-orange-100 rounded-full">
+                                <Flame className="w-8 h-8 text-orange-600" />
+                            </div>
+                            <h2 className="text-3xl font-serif font-bold text-gray-900">Respect Your Agni</h2>
+                        </div>
+                        <div className="prose prose-lg text-gray-700">
+                            <p>
+                                <strong>Agni</strong> is your digestive fire. Think of it like a campfire. If you dump too much wood (food) on a small fire, it suffocates. If you pour cold water (ice drinks) on it, it dies.
+                            </p>
+                            <p className="mt-4">
+                                90% of diseases begin in the gut when Agni is weak and cannot digest food, leading to the formation of sticky toxins called <strong>Ama</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 10 Rules Section */}
+                <section id="rules" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">The 10 Golden Rules (Ahara Vidhi)</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        {[
+                            { title: "1. Eat Warm Food", desc: "Warm food stimulates Agni and enzymes. Cold food slows digestion." },
+                            { title: "2. Eat Unctuous Food", desc: "Food should have some fat (Ghee/Oil) to lubricate the system." },
+                            { title: "3. Eat in Proper Quantity", desc: "Fill 50% with food, 25% with water, and leave 25% empty for air." },
+                            { title: "4. Eat Only When Hungry", desc: "Real hunger comes after the previous meal is fully digested (4-6 hours)." },
+                            { title: "5. No Contradictory Foods", desc: "Avoid combinations like Milk + Fish or Fruit + Yogurt." },
+                            { title: "6. Eat in a Peaceful Place", desc: "No TV, no phone. Stress shuts down blood flow to the gut." },
+                            { title: "7. Don't Eat Too Fast", desc: "Chew your food. Digestion begins in the mouth." },
+                            { title: "8. Don't Eat Too Slow", desc: "Eating for 1 hour confuses satiety signals." },
+                            { title: "9. Focus on Food", desc: "Engage all senses—smell, sight, and taste—to prime digestion." },
+                            { title: "10. Eat with Confidence", desc: "Trust that the food will nourish you. Anxiety causes indigestion." },
+                        ].map((rule, i) => (
+                            <Card key={i} className="hover:shadow-md transition-shadow">
+                                <CardContent className="p-6">
+                                    <h3 className="font-bold text-lg text-[#064e3b] mb-2">{rule.title}</h3>
+                                    <p className="text-gray-600 text-sm">{rule.desc}</p>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+                </section>
+
+                {/* Incompatible Foods */}
+                <section id="incompatible" className="mb-20 scroll-mt-24">
+                    <div className="bg-red-50/50 p-8 md:p-12 rounded-3xl border border-red-100">
+                        <div className="flex items-center gap-3 mb-6">
+                            <AlertOctagon className="w-8 h-8 text-red-600" />
+                            <h2 className="text-3xl font-serif font-bold text-red-900">Viruddha Ahar (Danger Combos)</h2>
+                        </div>
+                        <p className="text-gray-700 mb-8">
+                            Some foods are healthy alone but toxic together. They upset the balance of Doshas and create instant toxins.
                         </p>
-                    </section>
 
-                    <section id="rules" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">The 10 Golden Rules</h2>
-                        <div className="space-y-6">
-                            {[
-                                { title: "1. Eat only when hungry", desc: "Real hunger is the signal your Agni is ready. Eating out of boredom creates toxins." },
-                                { title: "2. Eat warm, fresh food", desc: "Cold food douses the digestive fire. Warm food stimulates enzymes." },
-                                { title: "3. Sit down to eat", desc: "Eating while standing or walking disturbs Vata and causes bloating." },
-                                { title: "4. Don't drink water with meals", desc: "Small sips are okay/good. But a large glass dilutes digestive acids. Drink water 45 mins before or after meals." },
-                                { title: "5. Chew 32 times", desc: "Digestion begins in the mouth. Saliva is essential for breaking down carbs." },
-                                { title: "6. Lunch should be the largest meal", desc: "Agni follows the sun. It is strongest at noon. Dinner should be light." },
-                                { title: "7. Include all 6 tastes", desc: "Sweet, Sour, Salty, Bitter, Pungent, Astringent. Most of us miss the last three." },
-                                { title: "8. Avoid distractions", desc: "No TV or phone. Focus on the taste and texture of food to satisfy the brain." },
-                                { title: "9. Leave 1/4th stomach empty", desc: "2 parts food, 1 part liquid, 1 part air. Don't stuff yourself." },
-                                { title: "10. Rest briefly after eating", desc: "Sit in Vajrasana or walk 100 steps. Do not sleep immediately." }
-                            ].map((rule, i) => (
-                                <div key={i} className="flex items-start">
-                                    <div className="bg-emerald-100 rounded-full p-1 mr-4 mt-1"><CheckCircleIcon /></div>
-                                    <div>
-                                        <h4 className="font-bold text-gray-900">{rule.title}</h4>
-                                        <p className="text-gray-600 text-sm">{rule.desc}</p>
-                                    </div>
+                        <div className="space-y-4">
+                            <div className="bg-white p-4 rounded-xl shadow-sm flex gap-4 items-center">
+                                <span className="text-3xl">🥛 + 🍌</span>
+                                <div>
+                                    <h4 className="font-bold text-gray-900">Milk + Banana (Smoothies)</h4>
+                                    <p className="text-sm text-gray-600">The heavy/sour quality of banana clashes with milk, causing instant phlegm and toxins.</p>
                                 </div>
-                            ))}
+                            </div>
+                            <div className="bg-white p-4 rounded-xl shadow-sm flex gap-4 items-center">
+                                <span className="text-3xl">🐟 + 🥛</span>
+                                <div>
+                                    <h4 className="font-bold text-gray-900">Fish + Milk</h4>
+                                    <p className="text-sm text-gray-600">Fish is heating, milk is cooling. This thermal clash vitiates blood and causes skin diseases.</p>
+                                </div>
+                            </div>
+                            <div className="bg-white p-4 rounded-xl shadow-sm flex gap-4 items-center">
+                                <span className="text-3xl">🍯 + 🔥</span>
+                                <div>
+                                    <h4 className="font-bold text-gray-900">Honey + Heat</h4>
+                                    <p className="text-sm text-gray-600">Cooking honey turns it into a glue-like toxin. Only add honey to lukewarm water.</p>
+                                </div>
+                            </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <section id="viruddha" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Viruddha Ahar (Incompatible Foods)</h2>
-                        <div className="bg-red-50 border-l-4 border-red-500 p-6">
-                            <p className="mb-4 text-red-900">Never combine these foods, as they create chemical reactions that the body cannot process:</p>
-                            <ul className="list-disc ml-5 space-y-2 text-gray-800">
-                                <li><strong>Milk + Fruit:</strong> Especially sour fruits or bananas. (Yes, banana shake is bad digestion-wise!)</li>
-                                <li><strong>Milk + Fish/Meat:</strong> Highly toxic combination.</li>
-                                <li><strong>Honey + Ghee (Equal quantity):</strong> Becomes toxic. Use unequal ratios (e.g., 2:1).</li>
-                                <li><strong>Hot + Cold:</strong> Ice cream immediately after hot coffee.</li>
-                                <li><strong>Curd (Yogurt) at Night:</strong> Increases mucus and blocks channels.</li>
-                            </ul>
+                {/* Daily Schedule */}
+                <section id="schedule" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">The Circadian Eating Schedule</h2>
+                    <div className="relative border-l-2 border-emerald-200 ml-6 space-y-12">
+                        <div className="relative pl-8">
+                            <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white shadow"></span>
+                            <h3 className="text-xl font-bold text-gray-900">7:00 AM - 8:00 AM: Breakfast</h3>
+                            <p className="text-gray-600">Agni is just waking up. Eat something light, warm, and moist like stewed apples or oatmeal.</p>
                         </div>
-                    </section>
+                        <div className="relative pl-8">
+                            <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white shadow"></span>
+                            <h3 className="text-xl font-bold text-gray-900">12:00 PM - 1:30 PM: Lunch (King's Meal)</h3>
+                            <p className="text-gray-600">Agni is strongest when the sun is highest. This is the time for your heaviest meal—grains, proteins, dairy.</p>
+                        </div>
+                        <div className="relative pl-8">
+                            <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500 border-4 border-white shadow"></span>
+                            <h3 className="text-xl font-bold text-gray-900">6:30 PM - 7:30 PM: Dinner (Pauper's Meal)</h3>
+                            <p className="text-gray-600">Eat before sunset. Agni sets with the sun. Keep it very light—soups or cooked vegetables. No raw salads or heavy proteins.</p>
+                        </div>
+                    </div>
+                </section>
 
-                </div>
+                {/* FAQ Section */}
+                <section id="faq" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
+                    <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger className="text-lg font-medium text-gray-900">Can I drink water with meals?</AccordionTrigger>
+                            <AccordionContent className="text-gray-600 leading-relaxed">
+                                Small sips of warm water <strong>during</strong> a meal aids digestion. Drinking a huge glass <strong>before</strong> dilutes acid (kills appetite). Drinking <strong>after</strong> causes weight gain (slows metabolism).
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-2">
+                            <AccordionTrigger className="text-lg font-medium text-gray-900">Why shouldn't I eat cold yogurt at night?</AccordionTrigger>
+                            <AccordionContent className="text-gray-600 leading-relaxed">
+                                Yogurt is heavy and mucus-forming (Kapha increasing). At night, Kapha is naturally high. Eating yogurt then clogs the channels (Strotas) leading to colds, coughs, and weight gain.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </section>
+
             </div>
         </div>
-    )
-}
-
-function CheckCircleIcon() {
-    return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
     )
 }
