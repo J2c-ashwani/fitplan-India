@@ -131,6 +131,27 @@ export default function DisclaimerPage() {
 
           <Card>
             <CardHeader>
+              <CardTitle>Contact Information</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                If you have any questions about this disclaimer, please contact us:
+              </p>
+              <div className="bg-muted p-4 rounded-lg mt-4 text-sm">
+                <p className="font-semibold text-foreground">FitPlan India</p>
+                <p className="text-muted-foreground mt-1">
+                  1102, Serene 53, Vaishnodevi Circle,<br />
+                  Ahmedabad, Gujarat - 380060
+                </p>
+                <p className="text-muted-foreground mt-2">
+                  Email: <a href="mailto:support@fitplanindia.com" className="hover:underline text-primary">support@fitplanindia.com</a>
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
               <CardTitle>Your Responsibility</CardTitle>
             </CardHeader>
             <CardContent>
