@@ -44,7 +44,7 @@ export default function PrivacyPolicy() {
         <p>Like any other website, FitPlan India uses "cookies". These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
 
         <h2 className="text-2xl font-bold text-gray-900 pt-4">Google DoubleClick DART Cookie</h2>
-        <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads" className="text-blue-600 underline">https://policies.google.com/technologies/ads</a></p>
+        <p>Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to fitplanindia.com and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL – <a href="https://policies.google.com/technologies/ads" className="text-blue-600 underline">https://policies.google.com/technologies/ads</a></p>
 
         <h2 className="text-2xl font-bold text-gray-900 pt-4">GDPR Data Protection Rights</h2>
         <p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
@@ -55,7 +55,18 @@ export default function PrivacyPolicy() {
         </ul>
 
         <h2 className="text-2xl font-bold text-gray-900 pt-4">Contact Us</h2>
-        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at support@fitplanindia.com.</p>
+        <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+        <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 mt-4">
+          <p className="font-semibold text-gray-900">FitPlan India</p>
+          <p className="text-gray-600 mt-2">
+            1102, Serene 53, Vaishnodevi Circle,<br />
+            Ahmedabad, Gujarat - 380060<br />
+            India
+          </p>
+          <p className="text-gray-600 mt-4">
+            Email: <a href="mailto:support@fitplanindia.com" className="text-emerald-600 hover:underline">support@fitplanindia.com</a>
+          </p>
+        </div>
       </div>
     </div>
   )

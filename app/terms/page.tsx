@@ -39,6 +39,20 @@ export default function TermsPage() {
           <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
           <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
         </ul>
+
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">6. Contact Information</h2>
+        <p>If you have any queries regarding any of our terms, please contact us.</p>
+        <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 mt-4">
+          <p className="font-semibold text-gray-900">FitPlan India</p>
+          <p className="text-gray-600 mt-2">
+            1102, Serene 53, Vaishnodevi Circle,<br />
+            Ahmedabad, Gujarat - 380060<br />
+            India
+          </p>
+          <p className="text-gray-600 mt-4">
+            Email: <a href="mailto:support@fitplanindia.com" className="text-emerald-600 hover:underline">support@fitplanindia.com</a>
+          </p>
+        </div>
       </div>
     </div>
   )
