@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed senior diet with meal plans, bone health strategies, and nutrition for optimal aging.",
     url: "https://fitplanindia.com/blog/senior-citizens",
   },
+  alternates: {
+    canonical: "/plans/senior-citizens",
+  },
 }
 
 export default function SeniorCitizenDietPage() {
@@ -30,7 +33,7 @@ export default function SeniorCitizenDietPage() {
               Senior Citizen Diet Plan: Nutrition for Vitality After 60
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover complete senior nutrition with age-appropriate meal plans, bone health strategies, heart-healthy 
+              Discover complete senior nutrition with age-appropriate meal plans, bone health strategies, heart-healthy
               foods, muscle preservation, and dietary approaches for vibrant, independent living in golden years.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,16 +78,16 @@ export default function SeniorCitizenDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Senior Nutrition Needs</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Nutritional needs change significantly after 60 due to decreased metabolism (need fewer calories), reduced 
-                muscle mass (sarcopenia), changes in digestion and absorption, decreased appetite, medications affecting 
-                nutrients, and chronic health conditions. However, nutrient density becomes MORE important - seniors need 
-                same or higher amounts of protein, calcium, vitamin D, B12, and fiber but in fewer calories. Key challenges 
-                include maintaining muscle mass (protein crucial), preventing bone loss (calcium and vitamin D), supporting 
-                heart health (limit sodium, saturated fat), managing chronic diseases (diabetes, hypertension), preventing 
-                malnutrition, and staying hydrated. Proper senior nutrition maintains independence, mobility, cognitive 
+                Nutritional needs change significantly after 60 due to decreased metabolism (need fewer calories), reduced
+                muscle mass (sarcopenia), changes in digestion and absorption, decreased appetite, medications affecting
+                nutrients, and chronic health conditions. However, nutrient density becomes MORE important - seniors need
+                same or higher amounts of protein, calcium, vitamin D, B12, and fiber but in fewer calories. Key challenges
+                include maintaining muscle mass (protein crucial), preventing bone loss (calcium and vitamin D), supporting
+                heart health (limit sodium, saturated fat), managing chronic diseases (diabetes, hypertension), preventing
+                malnutrition, and staying hydrated. Proper senior nutrition maintains independence, mobility, cognitive
                 function, immune health, and quality of life while reducing falls, fractures, hospitalization, and frailty.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Age-Related Nutrition Changes</h4>
@@ -97,7 +100,7 @@ export default function SeniorCitizenDietPage() {
                     <li>• Medications can interfere with nutrients</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">Why Senior Nutrition Matters</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -120,7 +123,7 @@ export default function SeniorCitizenDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Critical Nutrients for Seniors (60+)</h2>
-            
+
             <div className="space-y-6">
               <Card className="border-orange-200">
                 <CardHeader>
@@ -245,7 +248,7 @@ export default function SeniorCitizenDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Managing Common Senior Health Conditions with Diet</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-red-200">
                 <CardHeader>
@@ -331,7 +334,7 @@ export default function SeniorCitizenDietPage() {
             <p className="text-center text-gray-600 mb-12">
               Balanced nutrition for healthy aging with adequate protein, calcium, fiber, and nutrients for a 150 lb senior.
             </p>
-            
+
             <Card className="border-blue-200 mb-8">
               <CardHeader className="bg-blue-50">
                 <CardTitle className="text-blue-800">Sample Day - Senior Nutrition</CardTitle>
@@ -434,7 +437,7 @@ export default function SeniorCitizenDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Senior Nutrition Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -461,7 +464,7 @@ export default function SeniorCitizenDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -500,10 +503,10 @@ export default function SeniorCitizenDietPage() {
               Age Gracefully with Proper Nutrition & Gentle Exercise
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Good nutrition provides the foundation, but gentle regular movement maintains strength, balance, and 
+              Good nutrition provides the foundation, but gentle regular movement maintains strength, balance, and
               independence. Discover senior-appropriate exercises.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Dumbbell className="w-12 h-12 text-white mx-auto mb-4" />
@@ -531,7 +534,7 @@ export default function SeniorCitizenDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Always consult your healthcare provider before major dietary changes, especially with medications
             </p>

@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Complete ketogenic diet adapted for Indian cuisine.",
     url: "https://fitplanindia.com/blog/keto",
   },
+  alternates: {
+    canonical: "/plans/keto-diet",
+  },
 }
 
 export default function KetoDietPage() {
@@ -30,7 +33,7 @@ export default function KetoDietPage() {
               Keto Diet Plan: Complete Guide to Ketogenic Weight Loss
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the complete ketogenic diet strategy for rapid fat loss, sustained energy, mental clarity, 
+              Discover the complete ketogenic diet strategy for rapid fat loss, sustained energy, mental clarity,
               and metabolic transformation through low-carb, high-fat nutrition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,14 +79,14 @@ export default function KetoDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Ketogenic Diet</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The ketogenic (keto) diet is a very low-carb, high-fat eating plan that shifts your body into a metabolic 
-                state called ketosis. In ketosis, your body becomes incredibly efficient at burning fat for energy instead 
-                of glucose. By drastically reducing carbs (to 20-50g net carbs daily) and increasing fat intake (70-80% of 
-                calories), your liver produces ketones from fat, which become the primary fuel source. This metabolic switch 
-                leads to rapid fat loss, reduced appetite, stable blood sugar, increased energy, mental clarity, and numerous 
+                The ketogenic (keto) diet is a very low-carb, high-fat eating plan that shifts your body into a metabolic
+                state called ketosis. In ketosis, your body becomes incredibly efficient at burning fat for energy instead
+                of glucose. By drastically reducing carbs (to 20-50g net carbs daily) and increasing fat intake (70-80% of
+                calories), your liver produces ketones from fat, which become the primary fuel source. This metabolic switch
+                leads to rapid fat loss, reduced appetite, stable blood sugar, increased energy, mental clarity, and numerous
                 health benefits. Keto is highly effective for weight loss, type 2 diabetes management, and metabolic health.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-orange-800">Benefits of Keto Diet</h4>
@@ -96,7 +99,7 @@ export default function KetoDietPage() {
                     <li>• Reduced inflammation and triglycerides</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-red-800">How Ketosis Works</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -118,7 +121,7 @@ export default function KetoDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Keto Diet Macros & Food Guidelines</h2>
-            
+
             <div className="space-y-8">
               {/* Macro Breakdown */}
               <Card className="border-orange-200">
@@ -236,7 +239,7 @@ export default function KetoDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Days 2-7 of keto, many experience "keto flu" - fatigue, headaches, irritability, brain fog. This is your 
+                    Days 2-7 of keto, many experience "keto flu" - fatigue, headaches, irritability, brain fog. This is your
                     body transitioning from glucose to fat burning. It's temporary and preventable with proper electrolytes.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -287,7 +290,7 @@ export default function KetoDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This meal plan provides approximately 25g net carbs, 140g fat, and 100g protein daily for ketosis.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-orange-200">
@@ -379,7 +382,7 @@ export default function KetoDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Keto Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Keys to Keto Success:</h4>
@@ -406,7 +409,7 @@ export default function KetoDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Keto Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -445,10 +448,10 @@ export default function KetoDietPage() {
               Complete Your Keto Transformation
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Diet is crucial, but proper exercise accelerates fat loss, preserves muscle, and enhances the benefits 
+              Diet is crucial, but proper exercise accelerates fat loss, preserves muscle, and enhances the benefits
               of ketosis. Get your complete keto workout plan.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -478,7 +481,7 @@ export default function KetoDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands achieving rapid fat loss and metabolic transformation through keto
             </p>

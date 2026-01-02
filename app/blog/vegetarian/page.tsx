@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed vegetarian diet with meal plans, protein optimization, and complete nutrition strategies.",
     url: "https://fitplanindia.com/blog/vegetarian",
   },
+  alternates: {
+    canonical: "/plans/vegetarian",
+  },
 }
 
 export default function VegetarianDietPage() {
@@ -30,7 +33,7 @@ export default function VegetarianDietPage() {
               Vegetarian Diet Plan: Complete Plant-Based Nutrition
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover balanced vegetarian nutrition strategies for optimal health, muscle building, weight management, 
+              Discover balanced vegetarian nutrition strategies for optimal health, muscle building, weight management,
               athletic performance, and ensuring complete nutrition without meat or fish.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,13 +79,13 @@ export default function VegetarianDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Vegetarian Nutrition</h2>
               <p className="text-lg text-gray-700 mb-6">
-                A well-planned vegetarian diet can provide all essential nutrients for optimal health, fitness, and 
-                performance. Vegetarians exclude meat, poultry, and fish but include dairy and eggs (lacto-ovo vegetarian). 
-                The key to success is understanding complete protein sources, ensuring adequate iron and B12, getting enough 
-                calcium and omega-3s, and meeting calorie needs for your goals. Research shows vegetarians have lower risk 
+                A well-planned vegetarian diet can provide all essential nutrients for optimal health, fitness, and
+                performance. Vegetarians exclude meat, poultry, and fish but include dairy and eggs (lacto-ovo vegetarian).
+                The key to success is understanding complete protein sources, ensuring adequate iron and B12, getting enough
+                calcium and omega-3s, and meeting calorie needs for your goals. Research shows vegetarians have lower risk
                 of heart disease, certain cancers, type 2 diabetes, and obesity when following a balanced whole-foods approach.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-green-800">Benefits of Vegetarian Diet</h4>
@@ -95,7 +98,7 @@ export default function VegetarianDietPage() {
                     <li>• Cost-effective compared to meat-based diets</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-emerald-800">Key Nutritional Focus Areas</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -117,7 +120,7 @@ export default function VegetarianDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Vegetarian Diet Principles for Complete Nutrition</h2>
-            
+
             <div className="space-y-8">
               {/* Complete Protein */}
               <Card className="border-green-200">
@@ -143,8 +146,8 @@ export default function VegetarianDietPage() {
                     </div>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Protein is made of amino acids - 9 are "essential" (must come from food). Animal proteins are "complete" 
-                    (contain all 9), but most plant proteins are "incomplete" (missing 1-2). Solution: Eat variety of plant 
+                    Protein is made of amino acids - 9 are "essential" (must come from food). Animal proteins are "complete"
+                    (contain all 9), but most plant proteins are "incomplete" (missing 1-2). Solution: Eat variety of plant
                     proteins daily - they complement each other. Legumes + grains = complete protein!
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -192,7 +195,7 @@ export default function VegetarianDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Certain nutrients are harder to get from vegetarian diets. Pay special attention to these to avoid 
+                    Certain nutrients are harder to get from vegetarian diets. Pay special attention to these to avoid
                     deficiencies that can affect energy, mood, and long-term health.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -246,7 +249,7 @@ export default function VegetarianDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Vegetarian diets naturally tend toward higher carbs due to grains, legumes, and fruits. Balance with 
+                    Vegetarian diets naturally tend toward higher carbs due to grains, legumes, and fruits. Balance with
                     adequate protein and healthy fats for satiety, muscle maintenance, and hormone health.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -296,7 +299,7 @@ export default function VegetarianDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This meal plan provides 100-120g protein daily from plant and dairy sources for muscle building and satiety.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-green-200">
@@ -393,7 +396,7 @@ export default function VegetarianDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Vegetarian Diet: Foods to Prioritize vs Limit</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Nutrient-Dense Vegetarian Foods:</h4>
@@ -408,7 +411,7 @@ export default function VegetarianDietPage() {
                       <li>• Eggs (whole and whites)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Whole Grains & Seeds:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -418,7 +421,7 @@ export default function VegetarianDietPage() {
                       <li>• Pumpkin seeds, sunflower seeds</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Fats & Vegetables:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -430,7 +433,7 @@ export default function VegetarianDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Limit These Vegetarian Foods:</h4>
                 <div className="space-y-4">
@@ -444,7 +447,7 @@ export default function VegetarianDietPage() {
                       <li>• Fried foods (pakoras, samosas - deep-fried)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Refined Carbs & Sugars:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -454,7 +457,7 @@ export default function VegetarianDietPage() {
                       <li>• Sweetened yogurts (high sugar)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Low-Nutrient Vegetarian Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -476,7 +479,7 @@ export default function VegetarianDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Essential Vegetarian Supplements</h2>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-red-200">
                 <CardContent className="pt-6">
@@ -486,7 +489,7 @@ export default function VegetarianDietPage() {
                   <p className="text-xs text-red-600 font-semibold">Dose: 250-500mcg daily or weekly 2,500mcg</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-blue-200">
                 <CardContent className="pt-6">
                   <Heart className="w-8 h-8 text-blue-600 mb-3" />
@@ -495,7 +498,7 @@ export default function VegetarianDietPage() {
                   <p className="text-xs text-blue-600 font-semibold">Dose: 250-500mg DHA+EPA daily</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-purple-200">
                 <CardContent className="pt-6">
                   <TrendingUp className="w-8 h-8 text-purple-600 mb-3" />
@@ -505,10 +508,10 @@ export default function VegetarianDietPage() {
                 </CardContent>
               </Card>
             </div>
-            
+
             <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
               <p className="text-sm text-gray-700">
-                <strong>Note:</strong> Iron and zinc from plants are absorbed less efficiently. If blood tests show deficiency, 
+                <strong>Note:</strong> Iron and zinc from plants are absorbed less efficiently. If blood tests show deficiency,
                 supplement under doctor's guidance. Most vegetarians get enough from food with proper planning.
               </p>
             </div>
@@ -521,7 +524,7 @@ export default function VegetarianDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Vegetarian Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -548,7 +551,7 @@ export default function VegetarianDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -587,10 +590,10 @@ export default function VegetarianDietPage() {
               Complete Your Vegetarian Fitness Journey
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Proper nutrition is essential, but combining it with effective exercise maximizes muscle growth, 
+              Proper nutrition is essential, but combining it with effective exercise maximizes muscle growth,
               athletic performance, and overall health. Get your complete vegetarian fitness plan.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -620,7 +623,7 @@ export default function VegetarianDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands thriving on plant-based nutrition with complete, balanced diets
             </p>

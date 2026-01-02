@@ -64,6 +64,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Ayurveda Pages (Verified)
   const ayurveda = [
+    'doshas',
     'pcos-herbs',
     'thyroid-remedies',
     'diabetes-control',
@@ -80,6 +81,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'acidity-bloating',
     'mens-vitality',
     'home-detox',
+    'kidney-health',
+    'liver-care',
+    'immunity',
+    'diet-rules',
+    'heart-health',
+    'seasonal-guide',
+    'migraine',
+    'constipation',
+    'menopause',
+    'kids-health',
   ].map((page) => ({
     url: `${baseUrl}/ayurveda/${page}`,
     lastModified: currentDate,
@@ -162,6 +173,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
+  const blogs = [
+    'athlete-nutrition',
+    'diabetes',
+    'exercise-fitness',
+    'heart-health',
+    'intermittent-fasting',
+    'keto',
+    'mediterranean',
+    'muscle-gain',
+    'nutrition-science',
+    'obesity',
+    'paleo',
+    'pcod',
+    'pcos',
+    'post-pregnancy',
+    'pregnancy-nutrition',
+    'senior-citizens',
+    'teenagers',
+    'thyroid',
+    'vegan-bodybuilding',
+    'vegetarian',
+    'weight-loss',
+  ].map((blog) => ({
+    url: `${baseUrl}/blog/${blog}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
   // Legal pages
   const legalPages = [
     {
@@ -190,6 +230,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...ayurveda,
     ...workouts,
     ...tools,
+    ...blogs,
     ...legalPages,
   ]
 }

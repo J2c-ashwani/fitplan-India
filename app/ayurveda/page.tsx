@@ -18,10 +18,14 @@ export default function AyurvedaHub() {
             title: "Core Health Conditions",
             icon: <Activity className="w-6 h-6 text-emerald-600" />,
             items: [
+                { title: "Understanding Doshas", href: "/ayurveda/doshas", desc: "Vata, Pitta, Kapha Explained" },
                 { title: "PCOS Herbs", href: "/ayurveda/pcos-herbs", desc: "5 Essential Herbs for Hormonal Balance" },
                 { title: "Thyroid Remedies", href: "/ayurveda/thyroid-remedies", desc: "Natural Boosters for Thyroid Function" },
                 { title: "Diabetes Control", href: "/ayurveda/diabetes-control", desc: "Managing Sugar Levels Naturally" },
                 { title: "Joint Pain", href: "/ayurveda/joint-pain", desc: "Relief from Arthritis & Inflammation" },
+                { title: "Kidney Health", href: "/ayurveda/kidney-health", desc: "Natural Ways to Support Renal Function" },
+                { title: "Liver Care", href: "/ayurveda/liver-care", desc: "Detox and Strengthen Your Liver" },
+                { title: "Heart Health", href: "/ayurveda/heart-health", desc: "Ayurvedic Cardiac Wellness" },
             ],
         },
         {
@@ -32,6 +36,9 @@ export default function AyurvedaHub() {
                 { title: "Gut Health & Agni", href: "/ayurveda/gut-health", desc: "Improve Digestion & Immunity" },
                 { title: "Sleep Hygiene", href: "/ayurveda/sleep-hygiene", desc: "Night Rituals for Deep Sleep" },
                 { title: "Stress & Anxiety", href: "/ayurveda/stress-anxiety", desc: "Calming Herbs for the Mind" },
+                { title: "Immunity Boosting", href: "/ayurveda/immunity", desc: "Build Ojas & Resilience" },
+                { title: "Ayurvedic Diet Rules", href: "/ayurveda/diet-rules", desc: "The Art of Mindful Eating" },
+                { title: "Seasonal Guide", href: "/ayurveda/seasonal-guide", desc: "Ritucharya: Living with Seasons" },
             ],
         },
         {
@@ -52,6 +59,10 @@ export default function AyurvedaHub() {
                 { title: "Acidity & Bloating", href: "/ayurveda/acidity-bloating", desc: "Home Remedies for Acid Reflux" },
                 { title: "Men's Vitality", href: "/ayurveda/mens-vitality", desc: "Herbs for Strength & Stamina" },
                 { title: "Home Detox", href: "/ayurveda/home-detox", desc: "Weekend Mini-Panchakarma Plan" },
+                { title: "Migraine Relief", href: "/ayurveda/migraine", desc: "Natural Solutions for Headaches" },
+                { title: "Constipation Relief", href: "/ayurveda/constipation", desc: "Gentle Bowel Regulation" },
+                { title: "Healthy Menopause", href: "/ayurveda/menopause", desc: "Navigating Change Gracefully" },
+                { title: "Ayurveda for Kids", href: "/ayurveda/kids-health", desc: "Natural Immunity for Children" },
             ],
         },
     ]

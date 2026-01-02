@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed PCOS diet plan with meal examples, hormonal balance strategies, and proven weight loss methods.",
     url: "https://fitplanindia.com/blog/pcos",
   },
+  alternates: {
+    canonical: "/plans/pcos",
+  },
 }
 
 export default function PCOSDietPage() {
@@ -30,7 +33,7 @@ export default function PCOSDietPage() {
               PCOS Diet Plan for Weight Loss: Complete Evidence-Based Guide
             </h1>
             <p className="text-xl text-pink-100 mb-8">
-              Discover the proven PCOS diet strategies used by thousands of women worldwide to manage symptoms, 
+              Discover the proven PCOS diet strategies used by thousands of women worldwide to manage symptoms,
               balance hormones, and achieve sustainable weight loss through nutrition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,12 +79,12 @@ export default function PCOSDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">What is PCOS and Why Diet Matters</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Polycystic Ovary Syndrome (PCOS) affects 1 in 10 women of reproductive age worldwide, making it one 
-                of the most common hormonal disorders. Women with PCOS often experience insulin resistance, hormonal 
-                imbalances, inflammation, and difficulty losing weight. The right PCOS diet plan can help manage these 
+                Polycystic Ovary Syndrome (PCOS) affects 1 in 10 women of reproductive age worldwide, making it one
+                of the most common hormonal disorders. Women with PCOS often experience insulin resistance, hormonal
+                imbalances, inflammation, and difficulty losing weight. The right PCOS diet plan can help manage these
                 symptoms, regulate hormones naturally, and support sustainable weight loss.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-pink-800">How PCOS Affects Weight</h4>
@@ -93,7 +96,7 @@ export default function PCOSDietPage() {
                     <li>• Irregular periods affect weight regulation</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Diet Benefits for PCOS</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -115,7 +118,7 @@ export default function PCOSDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">PCOS Diet Principles for Weight Loss</h2>
-            
+
             <div className="space-y-8">
               {/* Low Glycemic Index */}
               <Card className="border-green-200">
@@ -178,7 +181,7 @@ export default function PCOSDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Chronic inflammation worsens PCOS symptoms and insulin resistance. Anti-inflammatory foods help 
+                    Chronic inflammation worsens PCOS symptoms and insulin resistance. Anti-inflammatory foods help
                     reduce inflammation, balance hormones, and support healthy weight loss.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -223,7 +226,7 @@ export default function PCOSDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Adequate protein and fiber intake helps manage insulin levels, keeps you full longer, and supports 
+                    Adequate protein and fiber intake helps manage insulin levels, keeps you full longer, and supports
                     healthy hormone production. Aim for 25-30g protein per meal and 25-35g fiber daily.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -265,7 +268,7 @@ export default function PCOSDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This balanced meal plan focuses on low GI foods, anti-inflammatory ingredients, and optimal macronutrient ratios.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-pink-200">
@@ -362,7 +365,7 @@ export default function PCOSDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">PCOS Diet: Foods to Eat vs Avoid</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Foods to Eat Regularly:</h4>
@@ -376,7 +379,7 @@ export default function PCOSDietPage() {
                       <li>• Legumes (lentils, chickpeas)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Lean Proteins:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -386,7 +389,7 @@ export default function PCOSDietPage() {
                       <li>• Eggs, Greek yogurt, cottage cheese</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Fats:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -398,7 +401,7 @@ export default function PCOSDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Foods to Avoid or Limit:</h4>
                 <div className="space-y-4">
@@ -411,7 +414,7 @@ export default function PCOSDietPage() {
                       <li>• Processed baked goods</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Added Sugars:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -421,7 +424,7 @@ export default function PCOSDietPage() {
                       <li>• Syrups, honey (excessive amounts)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Inflammatory Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -443,7 +446,7 @@ export default function PCOSDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Evidence-Based PCOS Supplements</h2>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-blue-200">
                 <CardContent className="pt-6">
@@ -453,7 +456,7 @@ export default function PCOSDietPage() {
                   <p className="text-xs text-blue-600 font-semibold">Dose: 2-4g daily (Myo-inositol)</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-green-200">
                 <CardContent className="pt-6">
                   <Heart className="w-8 h-8 text-green-600 mb-3" />
@@ -462,7 +465,7 @@ export default function PCOSDietPage() {
                   <p className="text-xs text-green-600 font-semibold">Dose: 1-2g EPA+DHA daily</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-purple-200">
                 <CardContent className="pt-6">
                   <TrendingUp className="w-8 h-8 text-purple-600 mb-3" />
@@ -472,10 +475,10 @@ export default function PCOSDietPage() {
                 </CardContent>
               </Card>
             </div>
-            
+
             <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
               <p className="text-sm text-gray-700">
-                <strong>Note:</strong> Always consult with your healthcare provider before starting any supplement regimen, 
+                <strong>Note:</strong> Always consult with your healthcare provider before starting any supplement regimen,
                 especially if you're taking medications or have other health conditions.
               </p>
             </div>
@@ -488,7 +491,7 @@ export default function PCOSDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">PCOS Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Do This for Better Results:</h4>
@@ -515,7 +518,7 @@ export default function PCOSDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Avoid These Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -554,10 +557,10 @@ export default function PCOSDietPage() {
               Complete Your PCOS Weight Loss Journey
             </h2>
             <p className="text-xl text-pink-100 mb-8">
-              Diet is just one piece of the puzzle. Combine proper nutrition with targeted exercise 
+              Diet is just one piece of the puzzle. Combine proper nutrition with targeted exercise
               for optimal PCOS symptom management and sustainable weight loss.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA - Links to /workouts/pcos */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -587,7 +590,7 @@ export default function PCOSDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-pink-200 text-sm mt-6">
               ✨ Join 10,000+ women managing PCOS naturally through diet and exercise
             </p>

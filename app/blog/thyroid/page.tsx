@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed thyroid diet with meal plans, symptom management, and thyroid-friendly foods.",
     url: "https://fitplanindia.com/blog/thyroid",
   },
+  alternates: {
+    canonical: "/plans/thyroid",
+  },
 }
 
 export default function ThyroidDietPage() {
@@ -30,7 +33,7 @@ export default function ThyroidDietPage() {
               Thyroid Diet Plan: Nutrition for Optimal Thyroid Function
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover evidence-based nutrition strategies to support thyroid health, manage hypothyroidism and 
+              Discover evidence-based nutrition strategies to support thyroid health, manage hypothyroidism and
               hyperthyroidism symptoms, optimize medication effectiveness, and achieve healthy weight management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,14 +79,14 @@ export default function ThyroidDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Thyroid Disorders and Diet</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The thyroid gland is a small butterfly-shaped organ in your neck that produces hormones regulating 
-                metabolism, energy, body temperature, and weight. Thyroid disorders affect millions worldwide, with 
-                hypothyroidism (underactive thyroid) being most common, causing fatigue, weight gain, cold sensitivity, 
-                and sluggish metabolism. Hyperthyroidism (overactive thyroid) causes rapid metabolism, weight loss, anxiety, 
-                and heat intolerance. While diet cannot cure thyroid disease, proper nutrition significantly impacts thyroid 
+                The thyroid gland is a small butterfly-shaped organ in your neck that produces hormones regulating
+                metabolism, energy, body temperature, and weight. Thyroid disorders affect millions worldwide, with
+                hypothyroidism (underactive thyroid) being most common, causing fatigue, weight gain, cold sensitivity,
+                and sluggish metabolism. Hyperthyroidism (overactive thyroid) causes rapid metabolism, weight loss, anxiety,
+                and heat intolerance. While diet cannot cure thyroid disease, proper nutrition significantly impacts thyroid
                 function, medication effectiveness, symptom management, and overall quality of life.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-teal-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-teal-800">Hypothyroidism (Underactive) Symptoms</h4>
@@ -96,7 +99,7 @@ export default function ThyroidDietPage() {
                     <li>• Constipation and digestive issues</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-cyan-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-cyan-800">How Diet Supports Thyroid Health</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -119,7 +122,7 @@ export default function ThyroidDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Thyroid Diet Principles for Optimal Function</h2>
-            
+
             <div className="space-y-8">
               {/* Essential Nutrients */}
               <Card className="border-teal-200">
@@ -145,8 +148,8 @@ export default function ThyroidDietPage() {
                     </div>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Your thyroid needs specific nutrients to produce and convert hormones. Iodine is the raw material 
-                    for thyroid hormone production. Selenium helps convert inactive T4 to active T3. Zinc, iron, and 
+                    Your thyroid needs specific nutrients to produce and convert hormones. Iodine is the raw material
+                    for thyroid hormone production. Selenium helps convert inactive T4 to active T3. Zinc, iron, and
                     vitamins B and D support thyroid function and metabolism.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -193,9 +196,9 @@ export default function ThyroidDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Goitrogens are compounds that can interfere with thyroid function by blocking iodine uptake. However, 
-                    the truth is: <strong>cooking largely deactivates goitrogens</strong>, and these foods are extremely 
-                    nutritious. Most people with hypothyroidism can eat them in moderation, especially when cooked. Only 
+                    Goitrogens are compounds that can interfere with thyroid function by blocking iodine uptake. However,
+                    the truth is: <strong>cooking largely deactivates goitrogens</strong>, and these foods are extremely
+                    nutritious. Most people with hypothyroidism can eat them in moderation, especially when cooked. Only
                     avoid if you have severe iodine deficiency or your doctor specifically advises against them.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -233,8 +236,8 @@ export default function ThyroidDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Hashimoto's thyroiditis (autoimmune hypothyroidism) involves inflammation. An anti-inflammatory diet 
-                    can reduce antibodies, improve symptoms, and potentially reduce medication needs. Focus on whole foods, 
+                    Hashimoto's thyroiditis (autoimmune hypothyroidism) involves inflammation. An anti-inflammatory diet
+                    can reduce antibodies, improve symptoms, and potentially reduce medication needs. Focus on whole foods,
                     omega-3s, antioxidants, and gut health while eliminating processed foods and common triggers.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -276,7 +279,7 @@ export default function ThyroidDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This meal plan supports thyroid health with nutrient-dense foods while managing weight with hypothyroidism.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-teal-200">
@@ -373,7 +376,7 @@ export default function ThyroidDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Thyroid Diet: Foods to Eat vs Avoid</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Foods for Thyroid:</h4>
@@ -388,7 +391,7 @@ export default function ThyroidDietPage() {
                       <li>• Greek yogurt (protein, probiotics, iodine)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Nutrient-Dense Vegetables:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -398,7 +401,7 @@ export default function ThyroidDietPage() {
                       <li>• Seaweed (small amounts for iodine)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Fats & Grains:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -409,7 +412,7 @@ export default function ThyroidDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Foods to Avoid or Limit:</h4>
                 <div className="space-y-4">
@@ -422,7 +425,7 @@ export default function ThyroidDietPage() {
                       <li>• Coffee (wait 1 hour after medication)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Inflammatory Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -432,7 +435,7 @@ export default function ThyroidDietPage() {
                       <li>• Excessive alcohol</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Individual Triggers (Test):</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -454,7 +457,7 @@ export default function ThyroidDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Thyroid Medication & Diet Timing</h2>
-            
+
             <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 mb-8">
               <h4 className="font-bold text-xl text-blue-900 mb-4">⏰ Critical Timing Rules for Medication:</h4>
               <ul className="text-gray-800 space-y-2">
@@ -476,7 +479,7 @@ export default function ThyroidDietPage() {
                   <p className="text-xs text-teal-600 font-semibold">Optimal absorption</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-blue-200">
                 <CardContent className="pt-6">
                   <Shield className="w-8 h-8 text-blue-600 mb-3" />
@@ -485,7 +488,7 @@ export default function ThyroidDietPage() {
                   <p className="text-xs text-blue-600 font-semibold">Prevents interaction</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-purple-200">
                 <CardContent className="pt-6">
                   <TrendingUp className="w-8 h-8 text-purple-600 mb-3" />
@@ -504,7 +507,7 @@ export default function ThyroidDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Thyroid Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -531,7 +534,7 @@ export default function ThyroidDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -570,10 +573,10 @@ export default function ThyroidDietPage() {
               Complete Your Thyroid Management Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Diet is essential, but exercise significantly improves thyroid symptoms, metabolism, and weight management. 
+              Diet is essential, but exercise significantly improves thyroid symptoms, metabolism, and weight management.
               Get your complete thyroid fitness plan today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -603,7 +606,7 @@ export default function ThyroidDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands managing thyroid health naturally through proper nutrition and exercise
             </p>

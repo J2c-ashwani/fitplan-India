@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed diabetes diet plan with meal examples, blood sugar management, and proven weight loss methods.",
     url: "https://fitplanindia.com/blog/diabetes",
   },
+  alternates: {
+    canonical: "/plans/diabetes",
+  },
 }
 
 export default function DiabetesDietPage() {
@@ -30,7 +33,7 @@ export default function DiabetesDietPage() {
               Diabetes Diet Plan for Weight Loss: Complete Blood Sugar Control Guide
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover proven diabetes diet strategies to control blood sugar levels, achieve healthy weight loss, 
+              Discover proven diabetes diet strategies to control blood sugar levels, achieve healthy weight loss,
               and reduce medication dependency through evidence-based nutrition and lifestyle changes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,12 +79,12 @@ export default function DiabetesDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Diabetes and Diet</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Diabetes affects over 463 million adults worldwide, with type 2 diabetes accounting for 90-95% of cases. 
-                Diet plays a crucial role in managing blood sugar levels, preventing complications, and achieving healthy 
-                weight loss. The right diabetes diet plan can help stabilize glucose levels, improve insulin sensitivity, 
+                Diabetes affects over 463 million adults worldwide, with type 2 diabetes accounting for 90-95% of cases.
+                Diet plays a crucial role in managing blood sugar levels, preventing complications, and achieving healthy
+                weight loss. The right diabetes diet plan can help stabilize glucose levels, improve insulin sensitivity,
                 reduce medication needs, and significantly improve quality of life.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">How Diabetes Affects Weight</h4>
@@ -93,7 +96,7 @@ export default function DiabetesDietPage() {
                     <li>• Energy fluctuations reduce activity levels</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-green-800">Diet Benefits for Diabetes</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -115,7 +118,7 @@ export default function DiabetesDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Diabetes Diet Principles for Blood Sugar Control</h2>
-            
+
             <div className="space-y-8">
               {/* Carbohydrate Management */}
               <Card className="border-blue-200">
@@ -141,7 +144,7 @@ export default function DiabetesDietPage() {
                     </div>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Controlling carbohydrate intake is the most important dietary strategy for managing blood sugar. 
+                    Controlling carbohydrate intake is the most important dietary strategy for managing blood sugar.
                     Choose complex carbs with low glycemic index to prevent spikes and maintain stable glucose levels.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -179,7 +182,7 @@ export default function DiabetesDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Adequate protein and healthy fats help slow glucose absorption, keep you full longer, and support 
+                    Adequate protein and healthy fats help slow glucose absorption, keep you full longer, and support
                     stable blood sugar levels. Aim for 25-30g protein per meal and include healthy fats at each meal.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -227,8 +230,8 @@ export default function DiabetesDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Eating at consistent times helps regulate blood sugar and improves insulin response. The plate 
-                    method is an excellent tool for portion control: fill half your plate with non-starchy vegetables, 
+                    Eating at consistent times helps regulate blood sugar and improves insulin response. The plate
+                    method is an excellent tool for portion control: fill half your plate with non-starchy vegetables,
                     one quarter with lean protein, and one quarter with complex carbohydrates.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -270,7 +273,7 @@ export default function DiabetesDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This balanced meal plan focuses on blood sugar control, consistent carbohydrate intake, and optimal nutrient timing.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-blue-200">
@@ -367,7 +370,7 @@ export default function DiabetesDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Diabetes Diet: Foods to Eat vs Avoid</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Foods for Diabetics:</h4>
@@ -381,7 +384,7 @@ export default function DiabetesDietPage() {
                       <li>• Zucchini, eggplant, mushrooms</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Lean Proteins:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -391,7 +394,7 @@ export default function DiabetesDietPage() {
                       <li>• Low-fat Greek yogurt, cottage cheese</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Carbs:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -403,7 +406,7 @@ export default function DiabetesDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Foods to Avoid or Limit:</h4>
                 <div className="space-y-4">
@@ -416,7 +419,7 @@ export default function DiabetesDietPage() {
                       <li>• Sweetened coffee drinks</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Refined Carbohydrates:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -426,7 +429,7 @@ export default function DiabetesDietPage() {
                       <li>• Chips, pretzels</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Unhealthy Fats:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -448,7 +451,7 @@ export default function DiabetesDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Evidence-Based Diabetes Supplements</h2>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-blue-200">
                 <CardContent className="pt-6">
@@ -458,7 +461,7 @@ export default function DiabetesDietPage() {
                   <p className="text-xs text-blue-600 font-semibold">Dose: 200-1000 mcg daily</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-green-200">
                 <CardContent className="pt-6">
                   <Heart className="w-8 h-8 text-green-600 mb-3" />
@@ -467,7 +470,7 @@ export default function DiabetesDietPage() {
                   <p className="text-xs text-green-600 font-semibold">Dose: 300-400mg daily</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-purple-200">
                 <CardContent className="pt-6">
                   <TrendingUp className="w-8 h-8 text-purple-600 mb-3" />
@@ -477,11 +480,11 @@ export default function DiabetesDietPage() {
                 </CardContent>
               </Card>
             </div>
-            
+
             <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
               <p className="text-sm text-gray-700">
-                <strong>Important:</strong> Always consult your healthcare provider before starting supplements, 
-                especially if you're taking diabetes medications. Some supplements may interact with medications or 
+                <strong>Important:</strong> Always consult your healthcare provider before starting supplements,
+                especially if you're taking diabetes medications. Some supplements may interact with medications or
                 affect blood sugar levels.
               </p>
             </div>
@@ -494,7 +497,7 @@ export default function DiabetesDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Diabetes Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Do This for Better Control:</h4>
@@ -521,7 +524,7 @@ export default function DiabetesDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes to Avoid:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -560,10 +563,10 @@ export default function DiabetesDietPage() {
               Complete Your Diabetes Management Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Diet is essential, but combining it with regular exercise can dramatically improve blood sugar control 
+              Diet is essential, but combining it with regular exercise can dramatically improve blood sugar control
               and reduce medication needs. Get your complete diabetes management strategy.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -593,7 +596,7 @@ export default function DiabetesDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands managing diabetes naturally through diet and exercise
             </p>

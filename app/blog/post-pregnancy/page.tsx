@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed post-pregnancy diet with breastfeeding support, recovery nutrition, and safe weight loss methods.",
     url: "https://fitplanindia.com/blog/post-pregnancy",
   },
+  alternates: {
+    canonical: "/plans/post-pregnancy",
+  },
 }
 
 export default function PostPregnancyDietPage() {
@@ -30,7 +33,7 @@ export default function PostPregnancyDietPage() {
               Post-Pregnancy Diet Plan: Safe Nutrition for Recovery & Weight Loss
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective postpartum nutrition strategies to support recovery, boost breastfeeding, 
+              Discover safe, effective postpartum nutrition strategies to support recovery, boost breastfeeding,
               regain energy, and achieve healthy weight loss after childbirth without compromising your health or milk supply.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,13 +79,13 @@ export default function PostPregnancyDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Post-Pregnancy Nutrition</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The postpartum period is a critical time for recovery and adjustment. Your body has undergone tremendous 
-                changes during pregnancy and delivery, and proper nutrition is essential for healing, energy restoration, 
-                hormone balance, and milk production if breastfeeding. Post-pregnancy weight loss should be gradual and safe - 
-                typically starting 6-8 weeks after delivery for vaginal birth or 8-12 weeks after C-section. Focus first on 
+                The postpartum period is a critical time for recovery and adjustment. Your body has undergone tremendous
+                changes during pregnancy and delivery, and proper nutrition is essential for healing, energy restoration,
+                hormone balance, and milk production if breastfeeding. Post-pregnancy weight loss should be gradual and safe -
+                typically starting 6-8 weeks after delivery for vaginal birth or 8-12 weeks after C-section. Focus first on
                 recovery and nourishment, then gentle weight loss through balanced nutrition and gradual activity.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-pink-800">Postpartum Nutritional Needs</h4>
@@ -95,7 +98,7 @@ export default function PostPregnancyDietPage() {
                     <li>• Adequate hydration for milk production</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Benefits of Proper Nutrition</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -118,7 +121,7 @@ export default function PostPregnancyDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Post-Pregnancy Diet Principles for Safe Recovery</h2>
-            
+
             <div className="space-y-8">
               {/* Calorie Needs */}
               <Card className="border-pink-200">
@@ -144,7 +147,7 @@ export default function PostPregnancyDietPage() {
                     </div>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Your body needs adequate calories for recovery and milk production. Never go below 1,800 calories if breastfeeding. 
+                    Your body needs adequate calories for recovery and milk production. Never go below 1,800 calories if breastfeeding.
                     Weight loss will happen naturally through breastfeeding (burns 300-500 calories daily) and gentle activity.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -182,7 +185,7 @@ export default function PostPregnancyDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Protein is crucial for postpartum recovery - it repairs tissues, produces breast milk, maintains muscle 
+                    Protein is crucial for postpartum recovery - it repairs tissues, produces breast milk, maintains muscle
                     mass, and keeps you satisfied. Breastfeeding mothers need 65-75g daily, while non-breastfeeding moms need 55-65g.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -231,7 +234,7 @@ export default function PostPregnancyDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Breastfeeding mothers need significantly more water - at least 12-16 cups (3-4 liters) daily. 
+                    Breastfeeding mothers need significantly more water - at least 12-16 cups (3-4 liters) daily.
                     Dehydration directly reduces milk supply and causes fatigue, constipation, and poor recovery.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -273,7 +276,7 @@ export default function PostPregnancyDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This nutrient-dense meal plan supports recovery, milk production, and gradual weight loss while maintaining energy levels.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-pink-200">
@@ -375,7 +378,7 @@ export default function PostPregnancyDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Post-Pregnancy Diet: Foods to Eat vs Avoid</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Foods for Postpartum:</h4>
@@ -389,7 +392,7 @@ export default function PostPregnancyDietPage() {
                       <li>• Nuts, seeds (almonds, walnuts, chia)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Iron-Rich Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -399,7 +402,7 @@ export default function PostPregnancyDietPage() {
                       <li>• Dried fruits (dates, apricots, raisins)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Lactation-Boosting Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -411,7 +414,7 @@ export default function PostPregnancyDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Foods to Avoid or Limit:</h4>
                 <div className="space-y-4">
@@ -424,7 +427,7 @@ export default function PostPregnancyDietPage() {
                       <li>• Gassy foods if baby is colicky</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Unhealthy Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -434,7 +437,7 @@ export default function PostPregnancyDietPage() {
                       <li>• Artificial sweeteners (check labels)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Potentially Problematic:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -456,7 +459,7 @@ export default function PostPregnancyDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Essential Postpartum Supplements</h2>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-pink-200">
                 <CardContent className="pt-6">
@@ -466,7 +469,7 @@ export default function PostPregnancyDietPage() {
                   <p className="text-xs text-pink-600 font-semibold">Continue prenatal formula</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-blue-200">
                 <CardContent className="pt-6">
                   <Heart className="w-8 h-8 text-blue-600 mb-3" />
@@ -475,7 +478,7 @@ export default function PostPregnancyDietPage() {
                   <p className="text-xs text-blue-600 font-semibold">Dose: As prescribed by doctor</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-purple-200">
                 <CardContent className="pt-6">
                   <TrendingUp className="w-8 h-8 text-purple-600 mb-3" />
@@ -485,10 +488,10 @@ export default function PostPregnancyDietPage() {
                 </CardContent>
               </Card>
             </div>
-            
+
             <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
               <p className="text-sm text-gray-700">
-                <strong>Important:</strong> Always consult your healthcare provider before taking supplements postpartum, 
+                <strong>Important:</strong> Always consult your healthcare provider before taking supplements postpartum,
                 especially if breastfeeding. Some herbs and supplements can affect milk supply or pass through breast milk.
               </p>
             </div>
@@ -501,7 +504,7 @@ export default function PostPregnancyDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Post-Pregnancy Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -528,7 +531,7 @@ export default function PostPregnancyDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -567,10 +570,10 @@ export default function PostPregnancyDietPage() {
               Complete Your Postpartum Recovery Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Proper nutrition is essential, but adding safe postpartum exercises can accelerate recovery, improve 
+              Proper nutrition is essential, but adding safe postpartum exercises can accelerate recovery, improve
               mood, and support healthy weight loss. Get your complete plan today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -600,7 +603,7 @@ export default function PostPregnancyDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands of new moms recovering safely and regaining strength through proper nutrition
             </p>

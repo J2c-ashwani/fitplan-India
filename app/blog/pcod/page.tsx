@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Evidence-based PCOD diet with meal plans, hormonal balance, and symptom management strategies.",
     url: "https://fitplanindia.com/blog/pcod",
   },
+  alternates: {
+    canonical: "/plans/pcod",
+  },
 }
 
 export default function PCODDietPage() {
@@ -30,7 +33,7 @@ export default function PCODDietPage() {
               PCOD Diet Plan: Manage Hormones & Symptoms Naturally
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover evidence-based nutrition strategies for PCOD/PCOS including insulin resistance management, 
+              Discover evidence-based nutrition strategies for PCOD/PCOS including insulin resistance management,
               hormonal balance, weight loss, symptom reduction, and complete meal plans for women's health.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,14 +79,14 @@ export default function PCODDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding PCOD/PCOS and Diet</h2>
               <p className="text-lg text-gray-700 mb-6">
-                PCOD (Polycystic Ovarian Disease) or PCOS (Polycystic Ovary Syndrome) affects millions of women worldwide, 
-                causing hormonal imbalances, irregular periods, weight gain, acne, excess hair growth, and fertility challenges. 
-                The root cause often involves insulin resistance - when cells don't respond properly to insulin, causing high 
-                blood sugar and triggering excess androgen (male hormone) production. Diet is the most powerful tool to manage 
-                PCOD naturally. A low glycemic index (GI) diet improves insulin sensitivity, reduces inflammation, promotes 
+                PCOD (Polycystic Ovarian Disease) or PCOS (Polycystic Ovary Syndrome) affects millions of women worldwide,
+                causing hormonal imbalances, irregular periods, weight gain, acne, excess hair growth, and fertility challenges.
+                The root cause often involves insulin resistance - when cells don't respond properly to insulin, causing high
+                blood sugar and triggering excess androgen (male hormone) production. Diet is the most powerful tool to manage
+                PCOD naturally. A low glycemic index (GI) diet improves insulin sensitivity, reduces inflammation, promotes
                 hormonal balance, supports weight loss, and significantly reduces symptoms - all without medication side effects.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-pink-800">Common PCOD Symptoms</h4>
@@ -96,7 +99,7 @@ export default function PCODDietPage() {
                     <li>• Darkening skin patches (acanthosis nigricans)</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-purple-800">How Diet Helps PCOD</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -119,7 +122,7 @@ export default function PCODDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">PCOD Diet Principles for Hormonal Balance</h2>
-            
+
             <div className="space-y-8">
               {/* Low GI Carbs */}
               <Card className="border-pink-200">
@@ -132,7 +135,7 @@ export default function PCODDietPage() {
                 <CardContent>
                   <div className="bg-pink-100 border-2 border-pink-300 rounded-lg p-4 mb-4">
                     <p className="text-sm text-gray-800 font-semibold">
-                      🎯 The glycemic index measures how quickly foods raise blood sugar. Low GI foods (under 55) are 
+                      🎯 The glycemic index measures how quickly foods raise blood sugar. Low GI foods (under 55) are
                       CRUCIAL for PCOD as they prevent insulin spikes and improve insulin sensitivity.
                     </p>
                   </div>
@@ -184,7 +187,7 @@ export default function PCODDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    PCOD involves chronic low-grade inflammation that worsens insulin resistance and hormonal imbalances. 
+                    PCOD involves chronic low-grade inflammation that worsens insulin resistance and hormonal imbalances.
                     Anti-inflammatory foods reduce inflammation, improve ovarian function, and support overall health.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -260,7 +263,7 @@ export default function PCODDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This plan focuses on low GI foods, balanced macros, and anti-inflammatory nutrition for hormonal balance.
             </p>
-            
+
             <Card className="border-pink-200 mb-8">
               <CardHeader className="bg-pink-50">
                 <CardTitle className="text-pink-800">Sample Day - PCOD Diet</CardTitle>
@@ -363,7 +366,7 @@ export default function PCODDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">PCOD Diet: Foods to Eat vs Avoid</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Foods for PCOD:</h4>
@@ -377,7 +380,7 @@ export default function PCODDietPage() {
                       <li>• Non-starchy vegetables (unlimited)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Quality Proteins:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -387,7 +390,7 @@ export default function PCODDietPage() {
                       <li>• Tofu, tempeh, legumes</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Fats & Superfoods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -399,7 +402,7 @@ export default function PCODDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Foods to Strictly Avoid:</h4>
                 <div className="space-y-4">
@@ -412,7 +415,7 @@ export default function PCODDietPage() {
                       <li>• White potatoes (especially fried)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Inflammatory Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -422,7 +425,7 @@ export default function PCODDietPage() {
                       <li>• Excessive dairy (some women react)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Hormone Disruptors:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -444,7 +447,7 @@ export default function PCODDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">PCOD Management Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -471,7 +474,7 @@ export default function PCODDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -510,10 +513,10 @@ export default function PCODDietPage() {
               Complete Your PCOD Management Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Diet is crucial, but exercise significantly improves insulin sensitivity, hormone balance, and weight 
+              Diet is crucial, but exercise significantly improves insulin sensitivity, hormone balance, and weight
               management. Get your complete PCOD workout plan today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -543,7 +546,7 @@ export default function PCODDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands managing PCOD naturally through nutrition and lifestyle changes
             </p>

@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed obesity diet plan with meal examples, calorie strategies, and proven weight loss methods.",
     url: "https://fitplanindia.com/blog/obesity",
   },
+  alternates: {
+    canonical: "/plans/obesity",
+  },
 }
 
 export default function ObesityDietPage() {
@@ -30,7 +33,7 @@ export default function ObesityDietPage() {
               Obesity Diet Plan for Weight Loss: Complete Evidence-Based Guide
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover proven diet strategies for sustainable weight loss with obesity, including meal plans, 
+              Discover proven diet strategies for sustainable weight loss with obesity, including meal plans,
               calorie management, portion control, and lifestyle changes for long-term health improvement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,13 +79,13 @@ export default function ObesityDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Obesity and Weight Loss</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Obesity is defined as having a BMI of 30 or higher and affects over 650 million adults worldwide. 
-                It's a complex condition influenced by genetics, environment, lifestyle, and metabolic factors. 
-                Successful weight loss with obesity requires a comprehensive approach including proper nutrition, 
-                portion control, regular physical activity, behavioral changes, and often medical support. Even a 
+                Obesity is defined as having a BMI of 30 or higher and affects over 650 million adults worldwide.
+                It's a complex condition influenced by genetics, environment, lifestyle, and metabolic factors.
+                Successful weight loss with obesity requires a comprehensive approach including proper nutrition,
+                portion control, regular physical activity, behavioral changes, and often medical support. Even a
                 5-10% weight loss can significantly improve health outcomes and reduce disease risk.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-orange-800">Health Risks of Obesity</h4>
@@ -95,7 +98,7 @@ export default function ObesityDietPage() {
                     <li>• Mental health challenges</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-green-800">Benefits of Weight Loss</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -118,7 +121,7 @@ export default function ObesityDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Obesity Diet Principles for Sustainable Weight Loss</h2>
-            
+
             <div className="space-y-8">
               {/* Calorie Deficit */}
               <Card className="border-red-200">
@@ -144,7 +147,7 @@ export default function ObesityDietPage() {
                     </div>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Weight loss requires consuming fewer calories than you burn. For obesity, a deficit of 500-1000 
+                    Weight loss requires consuming fewer calories than you burn. For obesity, a deficit of 500-1000
                     calories per day is safe and sustainable, leading to 1-2 pounds of fat loss per week.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -182,7 +185,7 @@ export default function ObesityDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    The right balance of protein, carbs, and fats helps preserve muscle mass, control hunger, and 
+                    The right balance of protein, carbs, and fats helps preserve muscle mass, control hunger, and
                     maintain energy during weight loss. Higher protein intake is especially important with obesity.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -227,7 +230,7 @@ export default function ObesityDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Portion control is crucial for weight loss with obesity. Using the plate method and eating at 
+                    Portion control is crucial for weight loss with obesity. Using the plate method and eating at
                     regular intervals helps manage hunger, prevent overeating, and maintain steady energy levels.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -267,7 +270,7 @@ export default function ObesityDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This balanced meal plan focuses on high protein, nutrient density, and sustainable portion sizes for steady weight loss.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-orange-200">
@@ -364,7 +367,7 @@ export default function ObesityDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Obesity Diet: Foods to Eat vs Avoid</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Foods for Weight Loss:</h4>
@@ -379,7 +382,7 @@ export default function ObesityDietPage() {
                       <li>• Plant proteins (tofu, tempeh, legumes)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Vegetables (Unlimited):</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -389,7 +392,7 @@ export default function ObesityDietPage() {
                       <li>• Mushrooms, asparagus, green beans</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Smart Carbs (Moderate):</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -401,7 +404,7 @@ export default function ObesityDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Foods to Completely Avoid:</h4>
                 <div className="space-y-4">
@@ -414,7 +417,7 @@ export default function ObesityDietPage() {
                       <li>• Candy, chocolate bars, cookies</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Liquid Calories:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -424,7 +427,7 @@ export default function ObesityDietPage() {
                       <li>• Alcohol (beer, wine, cocktails)</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Refined Carbs:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -446,7 +449,7 @@ export default function ObesityDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Supplements That May Support Weight Loss</h2>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-blue-200">
                 <CardContent className="pt-6">
@@ -456,7 +459,7 @@ export default function ObesityDietPage() {
                   <p className="text-xs text-blue-600 font-semibold">Dose: 20-30g per serving</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-green-200">
                 <CardContent className="pt-6">
                   <Heart className="w-8 h-8 text-green-600 mb-3" />
@@ -465,7 +468,7 @@ export default function ObesityDietPage() {
                   <p className="text-xs text-green-600 font-semibold">Dose: 10-15g daily</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-purple-200">
                 <CardContent className="pt-6">
                   <TrendingUp className="w-8 h-8 text-purple-600 mb-3" />
@@ -475,10 +478,10 @@ export default function ObesityDietPage() {
                 </CardContent>
               </Card>
             </div>
-            
+
             <div className="mt-6 bg-yellow-50 border border-yellow-200 rounded-lg p-4">
               <p className="text-sm text-gray-700">
-                <strong>Important:</strong> Supplements are not magic pills. They work best alongside proper diet and exercise. 
+                <strong>Important:</strong> Supplements are not magic pills. They work best alongside proper diet and exercise.
                 Consult with your healthcare provider before starting any supplement regimen, especially if taking medications.
               </p>
             </div>
@@ -491,7 +494,7 @@ export default function ObesityDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Obesity Weight Loss Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Strategies for Success:</h4>
@@ -518,7 +521,7 @@ export default function ObesityDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Pitfalls to Avoid:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -557,10 +560,10 @@ export default function ObesityDietPage() {
               Complete Your Weight Loss Journey
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Diet is essential, but adding safe, effective exercise accelerates weight loss and improves overall 
+              Diet is essential, but adding safe, effective exercise accelerates weight loss and improves overall
               health. Get your complete obesity management plan today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -590,7 +593,7 @@ export default function ObesityDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands achieving sustainable weight loss through evidence-based methods
             </p>

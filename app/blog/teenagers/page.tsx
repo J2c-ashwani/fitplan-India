@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed teen diet with meal plans, growth nutrition, and healthy eating strategies.",
     url: "https://fitplanindia.com/blog/teenagers",
   },
+  alternates: {
+    canonical: "/plans/teenagers",
+  },
 }
 
 export default function TeenagerDietPage() {
@@ -30,7 +33,7 @@ export default function TeenagerDietPage() {
               Teen Diet Plan: Healthy Nutrition for Growth & Performance
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover balanced nutrition strategies for teenage years - supporting growth, athletic performance, 
+              Discover balanced nutrition strategies for teenage years - supporting growth, athletic performance,
               academic success, healthy weight management, and establishing lifelong healthy eating habits.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,14 +79,14 @@ export default function TeenagerDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Teen Nutrition Needs</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Teenage years (ages 13-19) are a critical period of rapid growth, hormonal changes, and development. 
-                Teens need adequate nutrition to support growth spurts, bone development, brain function, athletic 
-                performance, and hormonal balance. Proper nutrition during adolescence establishes healthy habits for life, 
-                supports mental health and mood, enhances academic performance, maintains healthy skin, and provides energy 
-                for school, sports, and social activities. Teens have higher calorie and nutrient needs than adults relative 
+                Teenage years (ages 13-19) are a critical period of rapid growth, hormonal changes, and development.
+                Teens need adequate nutrition to support growth spurts, bone development, brain function, athletic
+                performance, and hormonal balance. Proper nutrition during adolescence establishes healthy habits for life,
+                supports mental health and mood, enhances academic performance, maintains healthy skin, and provides energy
+                for school, sports, and social activities. Teens have higher calorie and nutrient needs than adults relative
                 to their body size.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">Unique Teen Nutrition Challenges</h4>
@@ -96,7 +99,7 @@ export default function TeenagerDietPage() {
                     <li>• Irregular eating patterns and late-night snacking</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-purple-800">Benefits of Healthy Teen Nutrition</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -119,7 +122,7 @@ export default function TeenagerDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Teen Diet Principles for Healthy Growth</h2>
-            
+
             <div className="space-y-8">
               {/* Balanced Macros */}
               <Card className="border-indigo-200">
@@ -145,7 +148,7 @@ export default function TeenagerDietPage() {
                     </div>
                   </div>
                   <p className="text-gray-700 mb-4">
-                    Teens need a balanced intake of all three macronutrients. Carbs provide energy for school and activities, 
+                    Teens need a balanced intake of all three macronutrients. Carbs provide energy for school and activities,
                     protein supports muscle growth and development, and healthy fats are crucial for hormone production and brain health.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -193,8 +196,8 @@ export default function TeenagerDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Teen years are the last chance to maximize bone density (90% is built by age 18). Calcium and vitamin D 
-                    are critical. Teen girls need extra iron due to menstruation. Brain development continues through early 
+                    Teen years are the last chance to maximize bone density (90% is built by age 18). Calcium and vitamin D
+                    are critical. Teen girls need extra iron due to menstruation. Brain development continues through early
                     20s, requiring omega-3s and B vitamins for optimal cognitive function and mental health.
                   </p>
                   <div className="grid md:grid-cols-3 gap-4">
@@ -242,8 +245,8 @@ export default function TeenagerDietPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 mb-4">
-                    Acne is a major concern for teens due to hormonal changes. Diet plays a significant role - high glycemic 
-                    foods and dairy can worsen acne. Hydration is crucial for skin health, athletic performance, and concentration. 
+                    Acne is a major concern for teens due to hormonal changes. Diet plays a significant role - high glycemic
+                    foods and dairy can worsen acne. Hydration is crucial for skin health, athletic performance, and concentration.
                     Teens need 8-12 glasses of water daily, more if active or in hot weather.
                   </p>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -285,7 +288,7 @@ export default function TeenagerDietPage() {
             <p className="text-center text-gray-600 mb-12">
               This balanced meal plan supports growth, energy, and athletic performance for active teenagers.
             </p>
-            
+
             <div className="space-y-6">
               {/* Day 1 */}
               <Card className="border-indigo-200">
@@ -387,7 +390,7 @@ export default function TeenagerDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Teen Diet: Foods to Eat vs Avoid</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Foods for Teens:</h4>
@@ -402,7 +405,7 @@ export default function TeenagerDietPage() {
                       <li>• Nuts, seeds, nut butters</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Athletic Performance Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -412,7 +415,7 @@ export default function TeenagerDietPage() {
                       <li>• Recovery: Chicken with sweet potato</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Brain-Boosting Foods:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -424,7 +427,7 @@ export default function TeenagerDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Foods to Limit or Avoid:</h4>
                 <div className="space-y-4">
@@ -437,7 +440,7 @@ export default function TeenagerDietPage() {
                       <li>• Soda and sweetened beverages</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Unhealthy Habits:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -447,7 +450,7 @@ export default function TeenagerDietPage() {
                       <li>• Meal replacement with snacks only</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Diet Dangers:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -469,7 +472,7 @@ export default function TeenagerDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Sports Nutrition for Teen Athletes</h2>
-            
+
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="border-blue-200">
                 <CardContent className="pt-6">
@@ -479,7 +482,7 @@ export default function TeenagerDietPage() {
                   <p className="text-xs text-blue-600 font-semibold">Examples: Oatmeal, banana + PB, pasta</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-green-200">
                 <CardContent className="pt-6">
                   <Heart className="w-8 h-8 text-green-600 mb-3" />
@@ -488,7 +491,7 @@ export default function TeenagerDietPage() {
                   <p className="text-xs text-green-600 font-semibold">Hydrate: 7-10 oz every 10-20 min</p>
                 </CardContent>
               </Card>
-              
+
               <Card className="border-purple-200">
                 <CardContent className="pt-6">
                   <TrendingUp className="w-8 h-8 text-purple-600 mb-3" />
@@ -507,7 +510,7 @@ export default function TeenagerDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Teen Nutrition Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Healthy Habits:</h4>
@@ -534,7 +537,7 @@ export default function TeenagerDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Habits to Avoid:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -573,10 +576,10 @@ export default function TeenagerDietPage() {
               Complete Your Teen Wellness Plan
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Proper nutrition works best when combined with regular exercise. Get your complete teen fitness plan 
+              Proper nutrition works best when combined with regular exercise. Get your complete teen fitness plan
               to maximize athletic performance, build strength, and support healthy development.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -606,7 +609,7 @@ export default function TeenagerDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands of teens building healthy habits for life through proper nutrition
             </p>

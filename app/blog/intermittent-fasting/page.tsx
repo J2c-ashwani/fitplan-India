@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Science-backed intermittent fasting with meal plans, schedules, and strategies for fat loss.",
     url: "https://fitplanindia.com/blog/intermittent-fasting",
   },
+  alternates: {
+    canonical: "/plans/intermittent-fasting",
+  },
 }
 
 export default function IntermittentFastingPage() {
@@ -30,7 +33,7 @@ export default function IntermittentFastingPage() {
               Intermittent Fasting Diet Plan: Complete Guide to IF Weight Loss
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the complete intermittent fasting strategy for rapid fat loss, improved metabolism, cellular 
+              Discover the complete intermittent fasting strategy for rapid fat loss, improved metabolism, cellular
               health, mental clarity, and sustainable weight management through time-restricted eating.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,14 +79,14 @@ export default function IntermittentFastingPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Intermittent Fasting</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Intermittent Fasting (IF) is not a diet - it's an eating pattern that cycles between periods of fasting 
-                and eating. Instead of focusing on WHAT you eat, IF focuses on WHEN you eat. During fasting periods, you 
-                consume zero or minimal calories, allowing your body to shift from burning glucose (food energy) to burning 
-                stored fat. This metabolic switch triggers numerous health benefits including fat loss, improved insulin 
-                sensitivity, cellular repair (autophagy), reduced inflammation, enhanced brain function, and potential 
+                Intermittent Fasting (IF) is not a diet - it's an eating pattern that cycles between periods of fasting
+                and eating. Instead of focusing on WHAT you eat, IF focuses on WHEN you eat. During fasting periods, you
+                consume zero or minimal calories, allowing your body to shift from burning glucose (food energy) to burning
+                stored fat. This metabolic switch triggers numerous health benefits including fat loss, improved insulin
+                sensitivity, cellular repair (autophagy), reduced inflammation, enhanced brain function, and potential
                 longevity benefits. IF is simple, flexible, and doesn't require special foods or calorie counting.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Benefits of Intermittent Fasting</h4>
@@ -96,7 +99,7 @@ export default function IntermittentFastingPage() {
                     <li>• Mental clarity and focus during fasting</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">How Intermittent Fasting Works</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -118,7 +121,7 @@ export default function IntermittentFastingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Popular Intermittent Fasting Methods</h2>
-            
+
             <div className="space-y-8">
               {/* 16:8 Method */}
               <Card className="border-blue-200">
@@ -272,11 +275,11 @@ export default function IntermittentFastingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">What to Eat During Eating Window</h2>
-            
+
             <div className="bg-blue-50 border-2 border-blue-200 rounded-lg p-6 mb-8">
               <h4 className="font-bold text-xl text-blue-900 mb-4">💡 Key Principle: Quality Over Quantity</h4>
               <p className="text-gray-800">
-                Intermittent fasting is NOT a license to eat junk food during your eating window. For best results, 
+                Intermittent fasting is NOT a license to eat junk food during your eating window. For best results,
                 focus on whole, nutrient-dense foods. IF naturally reduces appetite, making it easier to eat less overall.
               </p>
             </div>
@@ -296,7 +299,7 @@ export default function IntermittentFastingPage() {
                       <li>• Protein keeps you full longer</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Fats:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -307,7 +310,7 @@ export default function IntermittentFastingPage() {
                       <li>• Fats provide satiety and energy</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Complex Carbs & Fiber:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -320,7 +323,7 @@ export default function IntermittentFastingPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Foods to Limit or Avoid:</h4>
                 <div className="space-y-4">
@@ -334,7 +337,7 @@ export default function IntermittentFastingPage() {
                       <li>• Start with something light and protein-rich</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Minimize During Eating Window:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -345,7 +348,7 @@ export default function IntermittentFastingPage() {
                       <li>• These undermine IF benefits</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-300">
                     <h5 className="font-semibold mb-2 text-yellow-800">⚠️ During Fasting Window (ZERO Calories):</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -372,7 +375,7 @@ export default function IntermittentFastingPage() {
             <p className="text-center text-gray-600 mb-12">
               This plan provides ~2,000 calories during the 8-hour eating window for sustainable fat loss.
             </p>
-            
+
             <Card className="border-blue-200 mb-8">
               <CardHeader className="bg-blue-50">
                 <CardTitle className="text-blue-800">Typical Day on 16:8 Intermittent Fasting</CardTitle>
@@ -429,7 +432,7 @@ export default function IntermittentFastingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Intermittent Fasting Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Keys to IF Success:</h4>
@@ -456,7 +459,7 @@ export default function IntermittentFastingPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common IF Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -495,10 +498,10 @@ export default function IntermittentFastingPage() {
               Complete Your IF Transformation
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Intermittent fasting works best when combined with proper exercise. Get your complete IF workout plan 
+              Intermittent fasting works best when combined with proper exercise. Get your complete IF workout plan
               to maximize fat loss and maintain muscle during fasting periods.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -528,7 +531,7 @@ export default function IntermittentFastingPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands achieving sustainable weight loss through intermittent fasting
             </p>
