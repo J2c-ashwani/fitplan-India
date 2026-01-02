@@ -116,6 +116,17 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Registered Office */}
+          <div className="lg:col-span-2 text-sm text-gray-400 border-t border-gray-800 pt-8 mt-8 md:col-span-2 lg:col-span-5 lg:border-none lg:pt-0 lg:mt-0">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+              <div>
+                <h4 className="text-white font-semibold mb-2">Registered Office:</h4>
+                <p>1102, Serene 53, Vaishnodevi Circle, Ahmedabad, Gujarat - 380060</p>
+              </div>
+              {/* Socials or other info could go here */}
+            </div>
+          </div>
         </div>
 
         {/* Bottom bar */}

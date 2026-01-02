@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/next"
 import FloatingAIButton from "@/components/FloatingAIButton"
 import Script from "next/script"  // ✅ Added for AdSense
 import { CurrencyProvider } from "@/components/CurrencyProvider"
+import CookieConsent from "@/components/CookieConsent"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -143,10 +144,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             logo: "https://fitplanindia.com/logo.png",
             contactPoint: {
               "@type": "ContactPoint",
-              telephone: "+91-98765-43210",
               contactType: "customer service",
               areaServed: ["US", "GB", "CA", "AU", "IN", "AE"],
               availableLanguage: ["English", "Hindi"],
+              email: "support@fitplanindia.com"
             },
             sameAs: [
               "https://facebook.com/fitplanindia",
@@ -182,6 +183,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="min-h-screen">{children}</main>
           <Footer />
           <FloatingAIButton />
+          <CookieConsent />
           <Analytics />
         </CurrencyProvider>
       </body>

@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Clock, CheckCircle, CreditCard, Users, Award, Globe, Shield, X } from "lucide-react"
+import { Mail, Clock, CheckCircle, CreditCard, Users, Award, Globe, Shield, X, MapPin } from "lucide-react"
 import Link from "next/link"
 import { submitConsultationForm } from "./actions"
 import PriceDisplay from "@/components/PriceDisplay"
@@ -474,6 +474,17 @@ export default function ContactPage() {
                   <CardTitle className="text-lg">Contact Information</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 pt-6">
+
+                  <div className="flex items-start gap-3">
+                    <MapPin className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-medium">Registered Office</p>
+                      <p className="text-sm text-gray-600">
+                        1102, Serene 53, Vaishnodevi Circle,<br />
+                        Ahmedabad, Gujarat - 380060
+                      </p>
+                    </div>
+                  </div>
 
                   <div className="flex items-start gap-3">
                     <Mail className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
