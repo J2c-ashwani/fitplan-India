@@ -1,91 +1,149 @@
 import { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
-import { Moon, Eye } from "lucide-react"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Eye, Moon, Sparkles, Droplet, Clock, Coffee } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
 
 export const metadata: Metadata = {
-    title: "Remove Dark Circles Naturally | Ayurvedic Under-Eye Care",
-    description: "Ayurvedic home remedies for dark circles. Treat the root cause of under-eye bags with Saffron, Aloe Vera, and proper sleep hygiene.",
-    keywords: ["Ayurveda for dark circles", "Under eye home remedies", "Kumkumadi oil benefits", "Remove dark circles permanently"],
+    title: "Ayurveda for Dark Circles: Kumkumadi & Eye Care | FitPlan India",
+    description: "Dark circles are a sign of Vata imbalance and stress. Learn how to erase them using Kumkumadi Tailam, Aloe Vera, and Ayurvedic eye exercises (Trataka).",
+    keywords: ["Ayurveda for dark circles", "Kumkumadi tailam benefits", "Under eye home remedies", "Vata dosha eyes", "Trataka eye exercise"],
 }
 
 export default function DarkCirclesPage() {
     const tocItems = [
-        { id: "cause", label: "The Root Cause" },
-        { id: "remedies", label: "Magical Lepas" },
-        { id: "lifestyle", label: "Eye Habits" },
+        { id: "intro", label: "The Vata-Pitta Link" },
+        { id: "kumkumadi", label: "Kumkumadi Tailam" },
+        { id: "remedies", label: "Quick Fixes" },
+        { id: "exercises", label: "Eye Yoga" },
+        { id: "faq", label: "FAQs" },
     ]
 
     return (
         <div className="min-h-screen bg-stone-50">
             <StickyTOC items={tocItems} />
 
-            <div className="relative bg-[#064e3b] text-white py-20">
+            {/* Hero Section */}
+            <div className="relative bg-[#064e3b] text-white py-24">
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
-                    <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Brighten Your Eyes: The Natural Way
+                    <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
+                        Windows to the Soul
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Dark circles are not just cosmetic; they signal **Rasa Dhatu Kshaya** (Depletion of nutrient plasma) or deep-seated stress and dehydration.
+                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
+                        Dark circles are not just cosmetic. In Ayurveda, they indicate <strong>Rasa Dhatu Kshaya</strong> (dehydration of nutritional plasma) and high Vata (stress/dryness).
                     </p>
                 </div>
-                <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
+                <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
             </div>
 
-            <div className="container mx-auto px-4 py-12 max-w-4xl">
-                <div className="bg-white rounded-2xl shadow-sm border border-stone-100 p-8 md:p-12">
+            <div className="container mx-auto px-4 py-16 max-w-4xl">
 
-                    <section id="cause" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">It's Not Just Lack of Sleep</h2>
-                        <p className="text-gray-700">
-                            While sleep is key, dark circles also come from:
-                        </p>
-                        <ul className="list-disc ml-5 mt-2 text-gray-700">
-                            <li><strong>Anemia:</strong> Low iron means less oxygen to the thin skin under eyes.</li>
-                            <li><strong>Dehydration:</strong> Makes skin sink, revealing blood vessels.</li>
-                            <li><strong>Digital Strain:</strong> Constant staring causes blood pooling around eyes.</li>
-                        </ul>
-                    </section>
-
-                    <section id="remedies" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Under-Eye Elixirs</h2>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            <Card className="bg-stone-50">
-                                <CardContent className="p-6">
-                                    <h3 className="font-bold text-emerald-900 mb-2">1. Kumkumadi Tailam</h3>
-                                    <p className="text-gray-700 text-sm">The "Gold Oil". Contains Saffron (Kesar). Gently massaging 1 drop under each eye before bed lightens pigmentation miraculously.</p>
-                                </CardContent>
-                            </Card>
-                            <Card className="bg-stone-50">
-                                <CardContent className="p-6">
-                                    <h3 className="font-bold text-emerald-900 mb-2">2. Cooling Packs</h3>
-                                    <p className="text-gray-700 text-sm">Place slices of **Cucumber** or cotton pads soaked in **Rose Water** for 10 mins. It constricts blood vessels and reduces puffiness.</p>
-                                </CardContent>
-                            </Card>
-                            <Card className="bg-stone-50">
-                                <CardContent className="p-6">
-                                    <h3 className="font-bold text-emerald-900 mb-2">3. Badam Rogan (Almond Oil)</h3>
-                                    <p className="text-gray-700 text-sm">Rich in Vitamin E. Regular massage improves blood circulation and skin elasticity.</p>
-                                </CardContent>
-                            </Card>
+                {/* Introduction */}
+                <section id="intro" className="mb-20">
+                    <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Do They Appear?</h2>
+                        <div className="prose prose-lg text-gray-700">
+                            <p>
+                                The skin under the eyes is the thinnest in the body. When you are stressed or sleep-deprived, the body enters "survival mode", diverting blood to vital organs. The blood vessels under the eyes constrict and become visible as dark shadows.
+                            </p>
+                            <p className="mt-4">
+                                <strong>Vata types</strong> get grayish/brown circles (dryness). <strong>Pitta types</strong> get yellowish/purple circles (heat).
+                            </p>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <section id="lifestyle" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Netra Tarpana (Eye Care)</h2>
-                        <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">
-                            <ul className="space-y-4 text-gray-800">
-                                <li><strong>The 20-20-20 Rule:</strong> Every 20 mins, look 20 feet away for 20 seconds. Breaks the strain.</li>
-                                <li><strong>Hydrate:</strong> Drink 3L water. Plump skin hides dark circles.</li>
-                                <li><strong>Sleep by 10 PM:</strong> The hours before midnight are double the value for recovery.</li>
+                {/* Kumkumadi Section */}
+                <section id="kumkumadi" className="mb-20 scroll-mt-24">
+                    <div className="bg-amber-50 rounded-3xl p-8 md:p-12 border border-amber-100">
+                        <div className="flex items-center gap-4 mb-6">
+                            <div className="p-4 bg-amber-100 rounded-2xl">
+                                <Sparkles className="w-10 h-10 text-amber-600" />
+                            </div>
+                            <h2 className="text-3xl font-serif font-bold text-gray-900">Kumkumadi Tailam: The Golden Elixir</h2>
+                        </div>
+                        <p className="text-gray-700 mb-8 text-lg">
+                            This is the gold standard in Ayurveda for eye care. It is a blend of <strong>Saffron (Kesar)</strong>, Sandalwood, and 16 other herbs cooked in goat milk and sesame oil.
+                        </p>
+
+                        <div className="bg-white p-6 rounded-xl shadow-sm">
+                            <h3 className="font-bold text-amber-900 text-lg mb-3">How to Use</h3>
+                            <ol className="list-decimal ml-5 space-y-2 text-gray-700">
+                                <li>Take just <strong>1 drop</strong> on your ring finger (the weakest finger).</li>
+                                <li>Gently massage under the eye in a circular motion for 1 minute before bed.</li>
+                                <li><strong>Do not wash off.</strong> Let the saffron work overnight to lighten pigmentation.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Remedies Section */}
+                <section id="remedies" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">Kitchen Remedies</h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                            <h3 className="font-bold text-gray-900 text-lg mb-3">1. Cucumber & Rose Water</h3>
+                            <p className="text-gray-600">The classic remedy works because it is <strong>Cooling (Sheeta)</strong>. It constricts dilated blood vessels, reducing puffiness instantly.</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                            <h3 className="font-bold text-gray-900 text-lg mb-3">2. Almond Oil</h3>
+                            <p className="text-gray-600">Rich in Vitamin E. It nourishes the Vata dryness. Apply a drop if you don't have Kumkumadi oil.</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                            <h3 className="font-bold text-gray-900 text-lg mb-3">3. Cold Milk Pads</h3>
+                            <p className="text-gray-600">Dip cotton pads in cold raw milk and place on eyes for 10 mins. Lactic acid lightens skin while fat moisturizes it.</p>
+                        </div>
+                        <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-100">
+                            <h3 className="font-bold text-gray-900 text-lg mb-3">4. Aloe Vera</h3>
+                            <p className="text-gray-600">Anti-inflammatory. Soothes tired eyes from screen strain.</p>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Exercises/Yoga Section */}
+                <section id="exercises" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">Trataka: Yoga for Eyes</h2>
+                    <div className="flex gap-6 items-start p-8 bg-sky-50 rounded-3xl shadow-sm border border-sky-100">
+                        <div className="hidden md:block bg-sky-100 p-4 rounded-full">
+                            <Eye className="w-8 h-8 text-sky-700" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-bold text-gray-900 mb-4">Candle Gazing (Trataka)</h3>
+                            <p className="text-gray-700 mb-4">
+                                Staring at a computer screen freezes the eye muscles, reducing blood flow. Trataka improves circulation and vision.
+                            </p>
+                            <ul className="space-y-2 text-gray-700 text-sm">
+                                <li>1. Light a ghee lamp/candle at eye level in a dark room.</li>
+                                <li>2. Gaze at the flame without blinking until tears come out.</li>
+                                <li>3. Close your eyes and visualize the flame.</li>
+                                <li>4. This "tear cleansing" washes out toxins and stress from the eyes.</li>
                             </ul>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                </div>
+                {/* FAQ Section */}
+                <section id="faq" className="mb-20 scroll-mt-24">
+                    <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
+                    <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger className="text-lg font-medium text-gray-900">Do eye creams really work?</AccordionTrigger>
+                            <AccordionContent className="text-gray-600 leading-relaxed">
+                                Chemical creams only work on the surface. Ayurveda believes eyes are a "Pitta" organ. Unless you cool the body (liver) and get proper sleep (Ratricharya), surface creams will have limited effect.
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="item-2">
+                            <AccordionTrigger className="text-lg font-medium text-gray-900">Does water intake affect dark circles?</AccordionTrigger>
+                            <AccordionContent className="text-gray-600 leading-relaxed">
+                                Yes. Dehydration makes the skin thinner, making blood vessels show through more. Drinking warm water keeps the Rasa Dhatu (plasma) plump and healthy.
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </section>
+
             </div>
         </div>
     )
