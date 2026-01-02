@@ -89,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'liver-care',
     'immunity',
     'diet-rules',
+    'oil-pulling',
     'heart-health',
     'seasonal-guide',
     'migraine',

@@ -37,8 +37,9 @@ export default function AyurvedaHub() {
                 { title: "Sleep Hygiene", href: "/ayurveda/sleep-hygiene", desc: "Night Rituals for Deep Sleep" },
                 { title: "Stress & Anxiety", href: "/ayurveda/stress-anxiety", desc: "Calming Herbs for the Mind" },
                 { title: "Immunity Boosting", href: "/ayurveda/immunity", desc: "Build Ojas & Resilience" },
-                { title: "Ayurvedic Diet Rules", href: "/ayurveda/diet-rules", desc: "The Art of Mindful Eating" },
-                { title: "Seasonal Guide", href: "/ayurveda/seasonal-guide", desc: "Ritucharya: Living with Seasons" },
+                { title: "Diet Rules", href: "/ayurveda/diet-rules", desc: "Eating Etiquette" },
+                { title: "Seasonal Guide", href: "/ayurveda/seasonal-guide", desc: "Ritucharya" },
+                { title: "Oil Pulling", href: "/ayurveda/oil-pulling", desc: "Gandusha Detox" },
             ],
         },
         {
