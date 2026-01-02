@@ -49,6 +49,10 @@ export default function AyurvedaHub() {
                 { title: "Skin Glow", href: "/ayurveda/skin-glow", desc: "Natural Solutions for Radiant Skin" },
                 { title: "Anti-Aging", href: "/ayurveda/anti-aging", desc: "Rasayana for Youthful Aging" },
                 { title: "Eye Care", href: "/ayurveda/eye-care", desc: "Relief for Digital Eye Strain & Dark Circles" },
+                { title: "Acne Free", href: "/ayurveda/acne", desc: "Cure Pimples from Within" },
+                { title: "Gray Hair Reversal", href: "/ayurveda/gray-hair", desc: "Prevent Premature Graying" },
+                { title: "Dark Circles", href: "/ayurveda/dark-circles", desc: "Brighten Under-Eye Naturally" },
+                { title: "Body Polishing", href: "/ayurveda/body-polishing", desc: "Udvartana for Glowing Skin" },
             ],
         },
         {
