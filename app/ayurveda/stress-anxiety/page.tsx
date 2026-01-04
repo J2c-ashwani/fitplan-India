@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Leaf, Eye, Heart, Brain, Wind } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Natural Herbs & Techniques for Stress & Anxiety | Ayurveda",
@@ -72,6 +75,13 @@ export default function StressPage() {
                         </div>
                     </section>
 
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="The Vata-Anxiety Loop"
+                            content="Anxiety is NOT just in your head; it's in your gut. High Vata (air) dries up the nervous system, leading to racing thoughts. We don't just sedate the brain; we 'oleate' (lubricate) the nerves with Ghee, warm oil messages, and heavy foods."
+                        />
+                    </div>
+
                     {/* Herbs */}
                     <section id="herbs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Top 4 Brain Tonics (Medhya Rasayana)</h2>
@@ -120,6 +130,17 @@ export default function StressPage() {
                             </Card>
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Priya M."
+                            age={29}
+                            condition="Panic Attacks"
+                            result="Calm & Focused"
+                            quote="I was having panic attacks before every meeting. The doctor suggested 'Shirodhara' and Brahmi pearls. The racing heart beat stopped within 10 days. I feel grounded now."
+                            duration="1 Month"
+                        />
+                    </div>
 
                     {/* Therapies */}
                     <section id="therapy" className="mb-12 scroll-mt-24">
@@ -186,6 +207,14 @@ export default function StressPage() {
                     </section>
 
                 </div>
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Efficacy of Brahmi in memory and anxiety", url: "https://pubmed.ncbi.nlm.nih.gov/22747190/" },
+                        { text: "Withania somnifera (Ashwagandha) in stress management", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3573577/" }
+                    ]}
+                />
             </div>
         </div>
     )

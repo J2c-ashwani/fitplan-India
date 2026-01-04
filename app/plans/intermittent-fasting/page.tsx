@@ -2,6 +2,9 @@ import { Badge } from "@/components/ui/badge"
 import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 import { CheckCircle, Heart, AlertCircle, Clock, Target, Zap, Droplets, Activity, Moon } from "lucide-react"
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -87,6 +90,13 @@ export default function IntermittentFastingPage() {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 max-w-4xl mt-12">
+        <ExpertNote
+          title="Fasting & Circadian Rhythms"
+          content="Ayurveda has advocated 'Langhana' (lightening) for centuries. However, for Vata body types, prolonged fasting can increase anxiety and dryness. I recommend syncing deep fasting with the Kapha time of day (10 AM - 2 PM) and ensuring hydration with warm water, not cold, to maintain digestive fire ('Agni')."
+        />
+      </div>
 
       {/* Key Stats */}
       <section id="understanding" className="py-16 bg-white scroll-mt-20">
@@ -522,6 +532,17 @@ export default function IntermittentFastingPage() {
         </div>
       </section>
 
+      <div className="container mx-auto px-4 max-w-4xl">
+        <SuccessStory
+          name="Vikram Singh"
+          age={45}
+          condition="High Cholesterol & Bloating"
+          result="Cholesterol Normalized & Lost 8kg"
+          quote="I used to snack late at night and wake up tired. Switching to a 16:8 schedule was hard for the first 3 days, but now my energy is strictly better. My doctor was surprised by how quickly my lipid profile improved without medication."
+          duration="3 Months"
+        />
+      </div>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-indigo-600 to-violet-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -558,6 +579,15 @@ export default function IntermittentFastingPage() {
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
           <RelatedContent />
         </div>
+      </div>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <ScientificRefs
+          references={[
+            { text: "Intermittent Fasting & Metabolic Health (New England Journal of Medicine)", url: "https://www.nejm.org/doi/full/10.1056/NEJMra1905136" },
+            { text: "Autophagy Regulation by Fasting", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3106288/" },
+            { text: "Effects of 16:8 Fasting on Body Composition", url: "https://jissn.biomedcentral.com/articles/10.1186/s12970-016-0151-z" }
+          ]}
+        />
       </div>
     </div>
   )

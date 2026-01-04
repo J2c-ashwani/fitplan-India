@@ -1,8 +1,11 @@
 import { Badge } from "@/components/ui/badge"
-import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle, Heart, AlertCircle, Dumbbell, Target, Zap, Apple, TrendingUp, Activity } from "lucide-react"
+import PriceDisplay from "@/components/PriceDisplay"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
+import { CheckCircle, AlertCircle, Dumbbell, Clock, Apple, XCircle, Droplet, Zap, TrendingUp, Info, Activity, Target, Heart } from "lucide-react"
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
@@ -61,7 +64,18 @@ export default function GymDietComboPage() {
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       <StickyTOC items={tocItems} />
-      {/* Hero Section */}
+      <div className="container mx-auto px-4 max-w-4xl">
+        <SuccessStory
+          name="Rahul Sharma"
+          age={28}
+          condition="Skinny Fat / Hardgainer"
+          result="Gained 5kg Muscle in 3 Months"
+          quote="I was lifting weights but not growing. Dr. Arti's plan showed me I wasn't eating enough protein. Increasing my intake with natural foods like paneer and eggs, along with the right timing, finally helped me fill out my shirts."
+          duration="3 Months"
+        />
+      </div>
+
+      {/* Dual CTA Section */}
       <section className="bg-gradient-to-br from-orange-600 to-red-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
@@ -88,6 +102,13 @@ export default function GymDietComboPage() {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 max-w-4xl mt-12">
+        <ExpertNote
+          title="Protein & Digestion (Agni)"
+          content="High protein intake builds muscle, but it can be heavy to digest ('Guru'). I advise my patients to add ginger and cumin to their protein meals to stimulate digestive fire. Also, plant-based proteins like Moong Dal are easier on the gut than heavy meats for daily consumption."
+        />
+      </div>
 
       {/* Key Stats */}
       <section id="understanding" className="py-16 bg-white scroll-mt-20">
@@ -493,6 +514,15 @@ export default function GymDietComboPage() {
           <RelatedContent />
         </div>
       </div>
-    </div >
+      <div className="container mx-auto px-4 max-w-4xl">
+        <ScientificRefs
+          references={[
+            { text: "Protein Timing for Hypertrophy (JISSN)", url: "https://jissn.biomedcentral.com/articles/10.1186/1550-2783-10-53" },
+            { text: "Protein Requirements for Active Individuals", url: "https://journals.lww.com/acsm-msse/Fulltext/2009/03000/Nutrition_and_Athletic_Performance.27.aspx" },
+            { text: "Impact of High Protein Diet on Weight Loss", url: "https://academic.oup.com/ajcn/article/101/6/1320S/4564492" }
+          ]}
+        />
+      </div>
+    </div>
   )
 }

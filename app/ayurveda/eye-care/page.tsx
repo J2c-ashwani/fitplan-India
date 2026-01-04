@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Eye, Monitor, Droplet, Sun } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Eye Care (Netra Chikitsa) | Natural Vision Improvement",
@@ -56,6 +59,13 @@ export default function EyeCarePage() {
                             </p>
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="The Screen Heat Trap"
+                            content="Screens emit 'Tejas' (Heat/Light). When you stare at a screen for 8 hours, you are essentially cooking your eyes. The first sign is not bad vision; it's dryness and irritability. Simple cooling rituals like Rose Water drops can prevent permanent damage."
+                        />
+                    </div>
 
                     {/* Digital Strain */}
                     <section id="digital" className="mb-12 scroll-mt-24">
@@ -156,6 +166,17 @@ export default function EyeCarePage() {
                         </div>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Rohan V."
+                            age={28}
+                            condition="Dry Eye Syndrome"
+                            result="No More Eye Drops"
+                            quote="I was using artificial tears every hour due to my IT job. I started the daily 'Mouth Fill with Water' splash routine and weekly Trataka. In 3 months, my dryness is gone."
+                            duration="3 Months"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#0f766e] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -192,6 +213,14 @@ export default function EyeCarePage() {
                     </section>
 
                 </div>
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Therapeutic efficacy of Triphala in eye diseases", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3157106/" },
+                        { text: "Effect of Trataka on cognitive function", url: "https://pubmed.ncbi.nlm.nih.gov/23015336/" }
+                    ]}
+                />
             </div>
         </div>
     )

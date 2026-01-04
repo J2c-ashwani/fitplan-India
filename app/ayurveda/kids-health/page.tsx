@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Baby, Brain, Shield, Utensils, AlertCircle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurveda for Kids: Natural Immunity & Brain Power | Bala Roga",
@@ -55,6 +58,13 @@ export default function KidsPage() {
                         </div>
                     </div>
                 </section>
+
+                <div className="mb-20">
+                    <ExpertNote
+                        title="Don't Suppress the Fever"
+                        content="Parents panic at the first sign of fever. In Ayurveda, fever (Jwara) is the body's way of cooking (digesting) toxins. Managing it with light food and rest builds lifelong immunity. Suppressing it with heavy meds every time creates chronic weakness."
+                    />
+                </div>
 
                 {/* Immunity/Swarnaprashana Section */}
                 <section id="immunity" className="mb-20 scroll-mt-24">
@@ -150,6 +160,17 @@ export default function KidsPage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Aarav's Mom"
+                        age={7}
+                        condition="Recurrent Cough & Cold"
+                        result="Zero Antibiotics in 6 Months"
+                        quote="Aarav was on nebulizers every month in winter. Ayurvedic doctor suggested stopping cold milk and yogurt, and starting Swarnaprashana. His immunity has transformed completely."
+                        duration="6 Months"
+                    />
+                </div>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
@@ -169,6 +190,14 @@ export default function KidsPage() {
                     </Accordion>
                 </section>
 
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Immunomodulatory effects of Swarnaprashan", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3960790/" },
+                        { text: "Bacopa monnieri (Brahmi) in cognitive deficit", url: "https://pubmed.ncbi.nlm.nih.gov/18611150/" }
+                    ]}
+                />
             </div>
         </div>
     )

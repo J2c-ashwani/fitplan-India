@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Activity, Droplet, Zap, Check, X, Beaker, Leaf } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Liver Detox: Complete Yakrit Care Guide | FitPlan India",
@@ -172,6 +175,18 @@ export default function LiverPage() {
                 </section>
 
 
+
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Rohan K."
+                        age={38}
+                        condition="Grade 2 Fatty Liver"
+                        result="Reversed to Normal"
+                        quote="I drank alcohol every weekend for 10 years. My SGOT/SGPT levels were sky high. I followed Dr. Arti's 3 month Kutki protocol and stopped alcohol. My latest scan shows a perfectly healthy liver."
+                        duration="3 Months"
+                    />
+                </div>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
@@ -192,6 +207,14 @@ export default function LiverPage() {
                 </section>
 
             </div>
-        </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Hepatoprotective potential of Kutki (Picrorhiza kurroa)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3336365/" },
+                        { text: "Phyllanthus niruri (Bhumi Amla) in hepatitis B", url: "https://pubmed.ncbi.nlm.nih.gov/3065666/" }
+                    ]}
+                />
+            </div>
+        </div >
     )
 }

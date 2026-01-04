@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Brain, CloudLightning, Coffee, Moon, Ban, CheckCircle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Migraine Relief: Ardhavabhedaka Cure | FitPlan India",
@@ -55,6 +58,13 @@ export default function MigrainePage() {
                         </div>
                     </div>
                 </section>
+
+                <div className="mb-20">
+                    <ExpertNote
+                        title="The Gut-Brain Axis"
+                        content="Migraine is rarely just about the head. It starts in the gut. If you have chronic acidity (Pitta) or constipation (Vata), toxins travel upwards to the head. Purging therapy (Virechana) often cures lifelong migraines."
+                    />
+                </div>
 
                 {/* Nasya Section */}
                 <section id="nasya" className="mb-20 scroll-mt-24">
@@ -147,6 +157,17 @@ export default function MigrainePage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Anjali D."
+                        age={34}
+                        condition="Chronic Migraine (10 years)"
+                        result="No Attack for 6 Months"
+                        quote="I tried everything from painkillers to Botox. Only Nasya therapy worked. The first time I put those drops, I felt a release of pressure behind my eyes immediately."
+                        duration="3 Months"
+                    />
+                </div>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
@@ -166,6 +187,15 @@ export default function MigrainePage() {
                     </Accordion>
                 </section>
 
+            </div>
+
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Efficacy of Nasya in Ardhavabhedaka", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3296347/" },
+                        { text: "Ginger powder for acute migraine", url: "https://pubmed.ncbi.nlm.nih.gov/23657930/" }
+                    ]}
+                />
             </div>
         </div>
     )

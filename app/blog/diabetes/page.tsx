@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Activity, Droplet } from "lucide-react"
 import Link from "next/link"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -52,6 +56,13 @@ export default function DiabetesDietPage() {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 max-w-4xl mt-12">
+        <ExpertNote
+          title="Ayurvedic View on Diabetes (Madhumeha)"
+          content="We often call Diabetes 'the disease of abundance.' In my clinic, I see patients who over-consume sweet, heavy foods. The cure starts with 'Tikta' (bitter) tastes like Methi (fenugreek) and Karela (bitter gourd), which naturally curb sugar cravings and improve insulin sensitivity."
+        />
+      </div>
 
       {/* Key Stats */}
       <section className="py-16 bg-white">
@@ -603,6 +614,15 @@ export default function DiabetesDietPage() {
           </div>
         </div>
       </section>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <ScientificRefs
+          references={[
+            { text: "Low-Carb Diet for Type 2 Diabetes Management (ADA)", url: "https://diabetesjournals.org/care/article/42/5/731/40480/Nutrition-Therapy-for-Adults-With-Diabetes-or" },
+            { text: "Intermittent Fasting and Insulin Sensitivity (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/30308988/" },
+            { text: "Benefits of Walking for Blood Sugar Control", url: "https://pubmed.ncbi.nlm.nih.gov/27293521/" }
+          ]}
+        />
+      </div>
     </div>
   )
 }

@@ -2,7 +2,10 @@ import { Badge } from "@/components/ui/badge"
 import PriceDisplay from "@/components/PriceDisplay"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { CheckCircle, Heart, AlertCircle, Flame, Target, Zap, Droplets, Activity, Info } from "lucide-react"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
+import { CheckCircle, AlertCircle, Flame, Clock, Apple, XCircle, Droplets, Zap, TrendingUp, Info, Heart } from "lucide-react"
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
@@ -88,6 +91,13 @@ export default function KetoIndianDietPage() {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4 max-w-4xl mt-12">
+        <ExpertNote
+          title="Ayurvedic Perspective on Keto"
+          content="While Keto is effective for weight loss, it increases 'Pitta' (heat) in the body due to high fat intake. I recommend an 'Ayurvedic Keto' approach: focus on cooling fats like Ghee and Coconut oil, and avoid excessive red meat or spicy cheeses. Drink coriander water to balance the heat."
+        />
+      </div>
 
       {/* Key Stats */}
       <section id="understanding" className="py-16 bg-white scroll-mt-20">
@@ -532,6 +542,15 @@ export default function KetoIndianDietPage() {
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
           <RelatedContent />
         </div>
+      </div>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <ScientificRefs
+          references={[
+            { text: "Ketogenic Diet for Weight Loss (NIH)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945587/" },
+            { text: "Impact of Keto on Insulin Sensitivity", url: "https://pubmed.ncbi.nlm.nih.gov/15767618/" },
+            { text: "Long-term Effects of Ketogenic Diet", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2716748/" }
+          ]}
+        />
       </div>
     </div >
   )

@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Flame, Ban, Activity, Utensils } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Improve Gut Health & Digestion (Agni) | Ayurveda Guide",
@@ -156,6 +159,18 @@ export default function GutHealthPage() {
                         </div>
                     </section>
 
+
+                    <div className="mb-12">
+                        <SuccessStory
+                            name="Priya D."
+                            age={31}
+                            condition="IBS-Mixed Type"
+                            result="Regular Bowel Movements"
+                            quote="I tried every probiotic on the market. Nothing worked like CCF Tea and removing 'Viruddha Ahar' (bad food combos). My bloating vanished in 10 days."
+                            duration="10 Days"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -191,6 +206,14 @@ export default function GutHealthPage() {
                         </div>
                     </section>
 
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Concept of Agni and its clinical importance", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4687235/" },
+                            { text: "Anti-inflammatory properties of Curcumin (Turmeric) and Ginger", url: "https://pubmed.ncbi.nlm.nih.gov/16117603/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

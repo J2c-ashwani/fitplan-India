@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Wind, Coffee, Droplet, ArrowRight, Ban, CheckCircle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Constipation Relief: Vibandha Cure | FitPlan India",
@@ -179,6 +182,14 @@ export default function ConstipationPage() {
                     </Accordion>
                 </section>
 
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Efficacy of Castor Oil for laxation", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3384204/" },
+                        { text: "Dietary fiber and constipation", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3544045/" }
+                    ]}
+                />
             </div>
         </div>
     )

@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Trash2, Calendar, Coffee, AlertTriangle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Weekend Ayurvedic Detox Plan (Home Cleanse) | FitPlan India",
@@ -158,6 +161,17 @@ export default function HomeDetoxPage() {
                     </section>
 
                     {/* Conclusion & CTA */}
+                    <div className="mb-12">
+                        <SuccessStory
+                            name="Rahul T."
+                            age={45}
+                            condition="Brain Fog & Lethargy"
+                            result="Mental Clarity Restored"
+                            quote="I was skeptical about the Castor Oil purge. But on Sunday evening, I felt like a light was switched on in my brain. The 2 days of Kitchari gave my gut the break it desperately needed."
+                            duration="48 Hours"
+                        />
+                    </div>
+
                     <section id="conclusion" className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl p-8 text-center border border-teal-200">
                         <h3 className="text-2xl font-bold text-teal-900 mb-4">A Fresh Start</h3>
                         <p className="text-teal-800 mb-8 max-w-2xl mx-auto">
@@ -174,6 +188,14 @@ export default function HomeDetoxPage() {
                     </section>
 
                 </div>
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Concept of Ama in Ayurveda", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3336336/" },
+                        { text: "Efficacy of Virechana Karma (Therapeutic Purgation)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3215320/" }
+                    ]}
+                />
             </div>
         </div>
     )

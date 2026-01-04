@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Hourglass, Shield, Zap, Sparkles } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Rasayana Therapy: Ayurvedic Anti-Aging Secrets | FitPlan India",
@@ -142,6 +145,17 @@ export default function AntiAgingPage() {
                         </div>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Col. Verma (Retd.)"
+                            age={72}
+                            condition="Low Energy & Joint Stiffness"
+                            result="Running Marathons Again"
+                            quote="I felt my age catching up. Taking pure Shilajit and following the 'Achara Rasayana' reset my biological clock. I have more energy now than I did at 50."
+                            duration="6 Months"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -177,6 +191,14 @@ export default function AntiAgingPage() {
                         </div>
                     </section>
 
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Rasayana therapy: The science of rejuvenation", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3215408/" },
+                            { text: "Clinical evaluation of Shilajit (Fulvic Acid)", url: "https://pubmed.ncbi.nlm.nih.gov/23733436/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

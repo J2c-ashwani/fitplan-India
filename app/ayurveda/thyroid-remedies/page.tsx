@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Ban, Activity, Utensils } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Natural Remedies for Hypothyroidism & TSH Control | FitPlan India",
@@ -59,6 +62,13 @@ export default function ThyroidPage() {
                             </p>
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="The Emotional Weight"
+                            content="The thyroid (Vishuddhi Chakra) is connected to 'speaking your truth'. Many patients, especially women, suppress their voice or emotions, which manifests as a blockage in the throat chakra. Healing involves expression as much as medication."
+                        />
+                    </div>
 
                     {/* Remedies */}
                     <section id="remedies" className="mb-12 scroll-mt-24">
@@ -177,6 +187,17 @@ export default function ThyroidPage() {
                         </div>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Sunita K."
+                            age={42}
+                            condition="Hypothyroidism (TSH 14)"
+                            result="TSH Reduced to 4.2"
+                            quote="I was tired all the time. The Coriander water and Ujjayi breathing were simple changes, but they brought my energy back. My hairfall has stopped too."
+                            duration="5 Months"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -212,6 +233,14 @@ export default function ThyroidPage() {
                         </div>
                     </section>
 
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Coriander seeds and thyroid function", url: "https://pubmed.ncbi.nlm.nih.gov/22409893/" },
+                            { text: "Effect of Selenium supplementation on TSH", url: "https://pubmed.ncbi.nlm.nih.gov/17696828/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

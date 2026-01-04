@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Flame, AlertOctagon, Utensils } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Natural Home Remedies for Acidity & Gas (Amla Pitta) | Ayurveda",
@@ -134,6 +137,18 @@ export default function AcidityPage() {
                         </ul>
                     </section>
 
+
+                    <div className="mb-12">
+                        <SuccessStory
+                            name="Suresh M."
+                            age={52}
+                            condition="Severe GERD & Heartburn"
+                            result="Off Antacids in 21 Days"
+                            quote="I was popping antacids like candy. Dr. Arti's simple hack of 'Black Raisins' water and sleeping on the left side changed everything. I haven't had heartburn in 3 months."
+                            duration="3 Weeks"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#c2410c] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -169,6 +184,14 @@ export default function AcidityPage() {
                         </div>
                     </section>
 
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Management of Amlapitta (Hyperacidity) in Ayurveda", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3665191/" },
+                            { text: "Evaluation of Aloe Vera in treatment of GERD", url: "https://pubmed.ncbi.nlm.nih.gov/26742306/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

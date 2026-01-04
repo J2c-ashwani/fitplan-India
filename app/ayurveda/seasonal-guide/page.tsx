@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Sun, CloudRain, Snowflake, Flower2, ThermometerSun } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ritucharya: The Ayurvedic Seasonal Guide | FitPlan India",
@@ -205,6 +208,17 @@ export default function SeasonalPage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Ananya P."
+                        age={26}
+                        condition="Chronic Sinusitis"
+                        result="Symptom-Free Spring"
+                        quote="Every Spring, I would get terrible sinus infections. Dr. Arti explained that this is 'Kapha Melting'. By cutting out dairy in March and doing Nasya, I survived my first allergy-free Spring!"
+                        duration="1 Spring Season"
+                    />
+                </div>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
@@ -224,6 +238,14 @@ export default function SeasonalPage() {
                     </Accordion>
                 </section>
 
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Ritucharya: Answer to the lifestyle disorders", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3361921/" },
+                        { text: "Seasonal variation in physiological processes", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3734635/" }
+                    ]}
+                />
             </div>
         </div>
     )

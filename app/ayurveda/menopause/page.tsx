@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Flower2, Flame, Heart, Smile, Sun, UserCheck } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurveda for Menopause: Natural Relief from Hot Flashes | FitPlan India",
@@ -55,6 +58,13 @@ export default function MenopausePage() {
                         </div>
                     </div>
                 </section>
+
+                <div className="mb-20">
+                    <ExpertNote
+                        title="Vata Phase Explained"
+                        content="When your reproductive period ends, your body conserves energy. This energy can either turn into Vata (anxiety, osteoporosis) if you work too hard, or Ojas (radiance/wisdom) if you slow down. The choice is yours."
+                    />
+                </div>
 
                 {/* Herbs Section */}
                 <section id="herbs" className="mb-20 scroll-mt-24">
@@ -135,6 +145,17 @@ export default function MenopausePage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Kavita M."
+                        age={51}
+                        condition="Hot Flashes & Insomnia"
+                        result="Sleeping 7 Hours Straight"
+                        quote="I would wake up 5 times a night soaking in sweat. My doctor suggested HRT but I was scared. Shatavari Kalpa and cooling Pranayama changed my life in 3 weeks."
+                        duration="2 Months"
+                    />
+                </div>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
@@ -154,6 +175,14 @@ export default function MenopausePage() {
                     </Accordion>
                 </section>
 
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Asparagus racemosus (Shatavari) clinical update", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4027291/" },
+                        { text: "Effectiveness of Yoga for Menopausal Symptoms", url: "https://pubmed.ncbi.nlm.nih.gov/22869762/" }
+                    ]}
+                />
             </div>
         </div>
     )

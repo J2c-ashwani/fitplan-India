@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Droplet, Activity, HeartPulse, Moon } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Natural Ayurveda Treatments for Diabetes (Madhumeha) | FitPlan India",
@@ -62,6 +65,13 @@ export default function DiabetesPage() {
                             </div>
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="The Silent Sugar Spike"
+                            content="Most patients treat sugar levels, but ignore the root cause: Insulin Resistance (Kapha). Taking chemicals to force sugar down often leads to weight gain. First, fix the metabolism (Agni)."
+                        />
+                    </div>
 
                     {/* Expanded Herbs Section */}
                     <section id="herbs" className="mb-12 scroll-mt-24">
@@ -171,6 +181,16 @@ export default function DiabetesPage() {
                         </ul>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Mr. Sharma"
+                            age={52}
+                            condition="Type-2 Diabetes (HBA1C 8.2)"
+                            result="Reduced to 6.4 (No Meds)"
+                            quote="I was told I'd be on pills forever. I started Nisha-Amalaki and walked 5000 steps daily. My doctor was shocked at my 3-month report."
+                            duration="3 Months"
+                        />
+                    </div>
 
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
@@ -207,6 +227,14 @@ export default function DiabetesPage() {
                         </div>
                     </section>
 
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Hypoglycemic effect of Fenugreek", url: "https://pubmed.ncbi.nlm.nih.gov/11868855/" },
+                            { text: "Momordica charantia (Karela) in diabetes", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4027280/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

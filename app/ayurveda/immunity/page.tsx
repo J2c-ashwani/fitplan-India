@@ -2,9 +2,12 @@ import { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ShieldCheck, Sun, Moon, Battery, Zap, AlertTriangle } from "lucide-react"
+import { ShieldCheck, Sun, Moon, Battery, Zap, AlertTriangle, Droplet } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Immunity Booster: Build Ojas Naturally | FitPlan India",
@@ -55,6 +58,13 @@ export default function ImmunityPage() {
                         </div>
                     </div>
                 </section>
+
+                <div className="mb-20">
+                    <ExpertNote
+                        title="Ojas Calculation"
+                        content="When I check a patient's Ojas level, I look at the whites of their eyes and the luster (Tejas) of their skin. Low Ojas looks like dullness, anxiety, and constant infections. High Ojas is magnetic energy."
+                    />
+                </div>
 
                 {/* Boosters Section */}
                 <section id="boosters" className="mb-20 scroll-mt-24">
@@ -143,6 +153,17 @@ export default function ImmunityPage() {
                 </section>
 
                 {/* Routine Section */}
+                <section className="mb-20">
+                    <SuccessStory
+                        name="Vikram Singh"
+                        age={35}
+                        condition="Frequent Flu & Low Energy"
+                        result="Immunity Restored"
+                        quote="I used to catch a cold every month. Dr. Arti suggested 'Nasyam' and daily Chyawanprash. It's been 6 months, and I haven't fallen sick once, even when my whole office had the flu."
+                        duration="6 Months"
+                    />
+                </section>
+
                 <section id="routine" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">The Immunity Morning Routine</h2>
                     <div className="bg-sky-50 p-8 rounded-3xl border border-sky-100">
@@ -172,6 +193,14 @@ export default function ImmunityPage() {
                     </div>
                 </section>
 
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Immunomodulatory effects of Tinospora cordifolia (Giloy)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3644751/" },
+                        { text: "Ashwagandha in stress management", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3573577/" }
+                    ]}
+                />
             </div>
         </div>
     )

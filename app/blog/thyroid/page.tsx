@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Shield, Zap } from "lucide-react"
 import Link from "next/link"
+import ScientificRefs from "@/components/ScientificRefs"
+import ExpertNote from "@/components/ExpertNote"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -613,6 +615,15 @@ export default function ThyroidDietPage() {
           </div>
         </div>
       </section>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <ScientificRefs
+          references={[
+            { text: "Impact of Selenium on Thyroid Function (NIH)", url: "https://pubmed.ncbi.nlm.nih.gov/26361258/" },
+            { text: "Goitrogens and Thyroid Health (Mayo Clinic)", url: "https://www.mayoclinic.org/diseases-conditions/hypothyroidism/expert-answers/hypothyroidism-diet/faq-20058554" },
+            { text: "Effect of Ashwagandha on TSH Levels", url: "https://pubmed.ncbi.nlm.nih.gov/28829155/" }
+          ]}
+        />
+      </div>
     </div>
   )
 }

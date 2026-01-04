@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Calendar, Coffee, Utensils, Moon } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "5 Best Ayurvedic Herbs to Cure PCOS/PCOD Permanently | FitPlan India",
@@ -68,6 +71,13 @@ export default function PCOSPage() {
                             </div>
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="The Pill Trap"
+                            content="Taking contraceptive pills to regulate periods in PCOS is like painting over a crack in the wall. It hides the problem but the wall (your metabolism) keeps weakening. You must fix the metabolism first."
+                        />
+                    </div>
 
                     {/* Expanded Herbs Section */}
                     <section id="herbs" className="mb-12 scroll-mt-24">
@@ -212,6 +222,17 @@ export default function PCOSPage() {
                         </div>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Priya S."
+                            age={24}
+                            condition="PCOS & Cystic Acne"
+                            result="Periods Regularized, Skin Cleared"
+                            quote="I had periods once every 3 months. After 4 months of Kanchanar Guggulu and giving up sugar, my cycle is perfectly 28 days. My skin cleared up as a bonus."
+                            duration="4 Months"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -252,7 +273,15 @@ export default function PCOSPage() {
                             </Link>
                         </div>
                     </section>
-
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Withania somnifera (Ashwagandha) in stress-related female reproductive disorders", url: "https://pubmed.ncbi.nlm.nih.gov/23439798/" },
+                            { text: "Effects of Cinnamon on Insulin Resistance in PCOS", url: "https://pubmed.ncbi.nlm.nih.gov/17296187/" },
+                            { text: "Curcumin/Turmeric clinical effects in PCOS", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7356885/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

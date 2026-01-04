@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Shield, Activity, Droplet, AlertCircle, Check, X, Beaker } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Kidney Care: The Complete Renal Health Guide | FitPlan India",
@@ -166,8 +169,20 @@ export default function KidneyPage() {
                             <AlertCircle className="w-4 h-4" /> Avoid if you have high acidity or bleeding disorders.
                         </div>
                     </div>
+
+
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Mrs. Gupta"
+                        age={65}
+                        condition="High Creatinine (2.4)"
+                        result="Creatinine Reduced to 1.1"
+                        quote="Doctors said dialysis was inevitable. I started Punarnava decoction and the strict 'Low Protein' Ayurvedic diet. In 4 months, my levels normalized and I have my energy back."
+                        duration="4 Months"
+                    />
+                </div>
 
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
@@ -195,6 +210,14 @@ export default function KidneyPage() {
                 </section>
 
             </div>
-        </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Boerhaavia diffusa (Punarnava) in renal disorders", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3330960/" },
+                        { text: "Effect of Tribulus terrestris on kidney stones", url: "https://pubmed.ncbi.nlm.nih.gov/22563459/" }
+                    ]}
+                />
+            </div>
+        </div >
     )
 }

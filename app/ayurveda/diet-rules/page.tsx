@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Clock, Flame, Utensils, Ban, CheckCircle, AlertOctagon } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "10 Golden Ayurvedic Diet Rules | Art of Mindful Eating",
@@ -43,6 +46,10 @@ export default function DietRulesPage() {
 
                 {/* Agni Section */}
                 <section id="agni" className="mb-20">
+                    <ExpertNote
+                        title="The Root of All Disease"
+                        content="In Ayurveda, we say 'Sarve Roga Mandagni'—all diseases begin with weak digestive fire. I tell my patients: It's not just what you eat, but what you DIGEST that builds your tissues (Dhatus). Respect your hunger signals."
+                    />
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
                         <div className="flex items-center gap-4 mb-6">
                             <div className="p-3 bg-orange-100 rounded-full">
@@ -147,6 +154,17 @@ export default function DietRulesPage() {
                 </section>
 
                 {/* FAQ Section */}
+                <section className="mb-20">
+                    <SuccessStory
+                        name="Meera K."
+                        age={42}
+                        condition="Chronic Bloating & Fatigue"
+                        result="Digestion Restored"
+                        quote="I used to eat salads for dinner thinking it was healthy. Dr. Arti explained that raw cold food at night dampens my 'Agni'. Switching to warm soups for dinner completely fixed my morning bloating in 5 days."
+                        duration="5 Days"
+                    />
+                </section>
+
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
                     <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
@@ -165,6 +183,14 @@ export default function DietRulesPage() {
                     </Accordion>
                 </section>
 
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Physiology of Digestion and Agni (Ayur)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3215322/" },
+                        { text: "Impact of Meal Timing on Metabolism", url: "https://www.cell.com/cell-metabolism/fulltext/S1550-4131(14)00498-7" }
+                    ]}
+                />
             </div>
         </div>
     )

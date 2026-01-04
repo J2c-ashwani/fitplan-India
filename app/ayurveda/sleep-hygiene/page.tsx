@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Moon, Coffee, AlertCircle, Smartphone } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ancient Sleep Remedies & Digital Detox | Ayurveda for Insomnia",
@@ -57,6 +60,13 @@ export default function SleepPage() {
                             </p>
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="The 10 PM to 2 AM Myth"
+                            content="Ayurveda says '10 PM to 2 AM' is Pitta time. If you are awake at this time, you get a 'second wind' of hunger or energy. This is false energy. True deep repair happens only if you are asleep BEFORE this Pitta cycle starts."
+                        />
+                    </div>
 
                     {/* Remedies */}
                     <section id="remedies" className="mb-12 scroll-mt-24">
@@ -118,6 +128,17 @@ export default function SleepPage() {
                         </div>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Vikram S."
+                            age={40}
+                            condition="Chronic Insomnia"
+                            result="Sleeps 7 Hours Daily"
+                            quote="I was popping sleeping pills for 3 years. The withdrawal was hard. Dr. Arti prescribed Padabhyanga (Foot Massage) and Nutmeg milk. It took 3 weeks, but now I fall asleep naturally."
+                            duration="1 Month"
+                        />
+                    </div>
+
                     {/* Environment / Digital Detox */}
                     <section id="env" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#1e1b4b] mb-6 border-b pb-2">Digital Hygiene</h2>
@@ -166,6 +187,14 @@ export default function SleepPage() {
                     </section>
 
                 </div>
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Effect of warm milk and nutmeg on sleep induction", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3252722/" },
+                        { text: "Ayurvedic management of Anidra (Insomnia)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4687243/" }
+                    ]}
+                />
             </div>
         </div>
     )

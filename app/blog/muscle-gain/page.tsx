@@ -4,6 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Zap, Sparkles } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
   title: "Muscle Gain Diet Plan | Complete Bulking Guide to Build Muscle Mass",
@@ -30,7 +33,7 @@ export default function MuscleGainDietPage() {
               Muscle Gain Diet Plan: Build Mass & Strength Effectively
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover evidence-based muscle building nutrition including calorie surplus strategies, high-protein 
+              Discover evidence-based muscle building nutrition including calorie surplus strategies, high-protein
               meal plans, optimal nutrient timing, mass gain foods, and complete bulking guide for maximum muscle growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,15 +79,15 @@ export default function MuscleGainDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Muscle Gain Nutrition</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Building muscle requires eating in a calorie surplus - consuming more calories than you burn - to provide 
-                energy for intense training and raw materials for muscle growth. Natural muscle gain is slow: beginners can 
-                build 1-2 lbs of muscle monthly, intermediates 0.5-1 lb monthly, and advanced lifters even less. A moderate 
-                300-500 calorie surplus maximizes muscle gain while minimizing fat accumulation. Protein is critical (2.0-2.6g 
-                per kg body weight) for muscle protein synthesis - the process of building new muscle tissue. Carbohydrates 
-                fuel intense workouts and replenish glycogen stores, while healthy fats support hormone production (testosterone, 
+                Building muscle requires eating in a calorie surplus - consuming more calories than you burn - to provide
+                energy for intense training and raw materials for muscle growth. Natural muscle gain is slow: beginners can
+                build 1-2 lbs of muscle monthly, intermediates 0.5-1 lb monthly, and advanced lifters even less. A moderate
+                300-500 calorie surplus maximizes muscle gain while minimizing fat accumulation. Protein is critical (2.0-2.6g
+                per kg body weight) for muscle protein synthesis - the process of building new muscle tissue. Carbohydrates
+                fuel intense workouts and replenish glycogen stores, while healthy fats support hormone production (testosterone,
                 growth hormone) essential for muscle growth. Strategic nutrient timing around workouts enhances results.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-blue-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-blue-800">Benefits of Lean Bulking</h4>
@@ -97,7 +100,7 @@ export default function MuscleGainDietPage() {
                     <li>• Increased confidence and physique goals</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">Realistic Muscle Gain Expectations</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -119,7 +122,7 @@ export default function MuscleGainDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Creating Your Muscle Building Calorie Surplus</h2>
-            
+
             <Card className="border-blue-200 mb-8">
               <CardHeader>
                 <div className="flex items-center mb-2">
@@ -158,9 +161,9 @@ export default function MuscleGainDietPage() {
                   <div className="bg-green-50 p-4 rounded-lg border border-green-300">
                     <h5 className="font-semibold mb-2 text-green-800">Example Calculation:</h5>
                     <p className="text-sm text-gray-700">
-                      Man, 170 lbs, lifts 4-5x weekly: <br/>
-                      TDEE = 170 × 17 = 2,890 calories <br/>
-                      Muscle Gain = 2,890 + 400 = <strong>3,290 calories per day</strong> <br/>
+                      Man, 170 lbs, lifts 4-5x weekly: <br />
+                      TDEE = 170 × 17 = 2,890 calories <br />
+                      Muscle Gain = 2,890 + 400 = <strong>3,290 calories per day</strong> <br />
                       Expected gain: 0.5-1 lb per week = 2-4 lbs per month
                     </p>
                   </div>
@@ -174,7 +177,7 @@ export default function MuscleGainDietPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-4">
-                  Macronutrient balance is crucial for muscle building. High protein is mandatory, carbs fuel intense 
+                  Macronutrient balance is crucial for muscle building. High protein is mandatory, carbs fuel intense
                   training and glycogen replenishment, and fats support hormone production for growth.
                 </p>
                 <div className="grid md:grid-cols-3 gap-4">
@@ -212,7 +215,7 @@ export default function MuscleGainDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Best Foods for Muscle Gain</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Muscle Building Power Foods:</h4>
@@ -228,7 +231,7 @@ export default function MuscleGainDietPage() {
                       <li>• <strong>Whey protein:</strong> Post-workout shakes</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Complex Carbohydrates:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -239,7 +242,7 @@ export default function MuscleGainDietPage() {
                       <li>• Provides sustained energy for intense training</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Fats:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -252,7 +255,7 @@ export default function MuscleGainDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-blue-700">📊 Mass Gainer Foods (Calorie-Dense):</h4>
                 <div className="space-y-4">
@@ -267,7 +270,7 @@ export default function MuscleGainDietPage() {
                       <li>• <strong>Mass gainer shakes:</strong> 500-1000 calories</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-300">
                     <h5 className="font-semibold mb-2 text-yellow-800">⚠️ Foods to Minimize:</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -304,7 +307,7 @@ export default function MuscleGainDietPage() {
             <p className="text-center text-gray-600 mb-12">
               High-protein, high-carb bulking plan for a 170 lb individual training 4-5x per week.
             </p>
-            
+
             <Card className="border-blue-200 mb-8">
               <CardHeader className="bg-blue-50">
                 <CardTitle className="text-blue-800">Sample Day - Muscle Building Diet</CardTitle>
@@ -413,7 +416,7 @@ export default function MuscleGainDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Muscle Gain Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -440,7 +443,7 @@ export default function MuscleGainDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -479,10 +482,10 @@ export default function MuscleGainDietPage() {
               Complete Your Muscle Building Journey
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Nutrition provides the raw materials, but intense training triggers muscle growth. Get your complete 
+              Nutrition provides the raw materials, but intense training triggers muscle growth. Get your complete
               muscle building workout plan to maximize hypertrophy and strength gains.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -512,13 +515,22 @@ export default function MuscleGainDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands building lean muscle through smart nutrition and progressive training
             </p>
           </div>
         </div>
       </section>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <ScientificRefs
+          references={[
+            { text: "Protein Timing and Muscle Protein Synthesis (JISSN)", url: "https://jissn.biomedcentral.com/articles/10.1186/s12970-017-0177-8" },
+            { text: "Hypertrophy Training Guidelines (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/30308988/" },
+            { text: "Sleep and Muscle Recovery", url: "https://pubmed.ncbi.nlm.nih.gov/26567190/" }
+          ]}
+        />
+      </div>
     </div>
   )
 }

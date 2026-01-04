@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Sparkles, Droplet, Sun, AlertCircle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Secrets for Glowing Skin (Varnya) | FitPlan India",
@@ -147,6 +150,17 @@ export default function SkinGlowPage() {
                         </div>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Meera K."
+                            age={27}
+                            condition="Dull & Uneven Skin Tone"
+                            result="Radiant 'Bridal' Glow"
+                            quote="I followed the 'Glow Diet' for 1 month before my wedding. The results were better than any facial. My makeup artist asked what I was using!"
+                            duration="4 Weeks"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -183,7 +197,15 @@ export default function SkinGlowPage() {
                     </section>
 
                 </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Curcuma longa (Turmeric) for skin health", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5664031/" },
+                            { text: "Anti-acne activity of Neem", url: "https://pubmed.ncbi.nlm.nih.gov/24128527/" }
+                        ]}
+                    />
+                </div>
             </div>
-        </div>
+        </div >
     )
 }

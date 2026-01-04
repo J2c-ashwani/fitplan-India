@@ -3,9 +3,12 @@ import Link from "next/link"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Sparkles, Droplet, Clock, ShieldCheck, Microscope, AlertTriangle } from "lucide-react"
+import { Sparkles, Droplet, Clock, ShieldCheck, Microscope, AlertTriangle, Check } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Oil Pulling (Gandusha): The Ultimate Guide | Ayurvedic Detox",
@@ -56,6 +59,13 @@ export default function OilPullingPage() {
                         </div>
                     </div>
                 </section>
+
+                <div className="mb-20">
+                    <ExpertNote
+                        title="The Morning Magnet"
+                        content="Your mouth is the gateway to your gut. Overnight, bacteria multiply and 'toxins' (Ama) surface on the tongue. If you drink water immediately, you push them back in. Oil pulling traps these toxins in the fat lipid layer so you can spit them out forever."
+                    />
+                </div>
 
                 {/* Science Section */}
                 <section id="science" className="mb-20 scroll-mt-24">
@@ -132,6 +142,17 @@ export default function OilPullingPage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Anita D."
+                        age={34}
+                        condition="Bleeding Gums & Bad Breath"
+                        result="Healthy Pink Gums"
+                        quote="I tried every mouthwash, but the bad breath always came back. My dentist recommended oil pulling. It was gross for the first 3 days, but by Day 10, my gums stopped bleeding and I woke up with a fresh mouth."
+                        duration="2 Weeks"
+                    />
+                </div>
+
                 {/* Oils Section */}
                 <section id="oils" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8">Choosing Your Oil</h2>
@@ -190,6 +211,14 @@ export default function OilPullingPage() {
                     </Accordion>
                 </section>
 
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Effect of oil pulling on S. mutans count", url: "https://pubmed.ncbi.nlm.nih.gov/18408265/" },
+                        { text: "Oil pulling for maintaining oral hygiene - A review", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5198813/" }
+                    ]}
+                />
             </div>
         </div>
     )

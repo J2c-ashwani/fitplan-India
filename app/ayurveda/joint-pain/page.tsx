@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, AlertCircle, Bone, ThermometerSun, Activity } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Treatment for Joint Pain & Arthritis (Sandhivata) | FitPlan India",
@@ -64,6 +67,13 @@ export default function JointPainPage() {
                             *Identifying this difference is crucial because putting oil on Amavata will make it WORSE.
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="Oil vs. Heat"
+                            content="The biggest mistake patients make is applying oil on a swollen, red joint (Amavata). This traps the heat and worsens pain. Use Dry Heat (Sand bag) for swelling, and Oil only for dry, cracking joints."
+                        />
+                    </div>
 
                     {/* Remedies */}
                     <section id="remedies" className="mb-12 scroll-mt-24">
@@ -145,6 +155,17 @@ export default function JointPainPage() {
                         </ul>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Mrs. Iyer"
+                            age={65}
+                            condition="Knee Osteoarthritis"
+                            result="Climbing Stairs Pain-Free"
+                            quote="I was scheduled for knee replacement. My Vaidya suggested 'Janu Basti' (Oil pooling) and castor oil detox. The dryness is gone, and so is the pain."
+                            duration="4 Months"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -180,6 +201,14 @@ export default function JointPainPage() {
                         </div>
                     </section>
 
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Efficacy of Curcumin in osteoarthritis", url: "https://pubmed.ncbi.nlm.nih.gov/24672232/" },
+                            { text: "Mahanarayan Taila in Sandhigata Vata", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3665196/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

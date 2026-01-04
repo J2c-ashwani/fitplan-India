@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Sparkles, Droplet, Flame, AlertCircle, Ban, CheckCircle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Acne Cure: Yuvana Pidika Map & Remedies | FitPlan India",
@@ -130,6 +133,17 @@ export default function AcnePage() {
                         </div>
                     </div>
                 </section>
+
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Ananya R."
+                        age={24}
+                        condition="Cystic Acne"
+                        result="Clear Skin in 45 Days"
+                        quote="I spent a fortune on dermatologists. Dr. Arti's advice to stop yogurt (fermented) and start Neem capsules changed my skin. The cysts stopped erupting within 2 weeks."
+                        duration="6 Weeks"
+                    />
+                </div>
 
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">

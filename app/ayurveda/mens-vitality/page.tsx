@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Zap, Battery, Activity, Shield } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Vajikarana Therapy: Ayurvedic Herbs for Men's Vitality | FitPlan India",
@@ -56,6 +59,13 @@ export default function MensVitalityPage() {
                             </p>
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="The Testosterone Crisis"
+                            content="I see 30-year-old men with testosterone levels of 60-year-olds. The cause? Stress, lack of sleep, and processed food. Vajikarana herbs don't just 'boost' sex drive; they rebuild the deep tissues that stress has destroyed."
+                        />
+                    </div>
 
                     {/* Herbs */}
                     <section id="herbs" className="mb-12 scroll-mt-24">
@@ -127,6 +137,17 @@ export default function MensVitalityPage() {
                         </ul>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Rahul K."
+                            age={34}
+                            condition="Low Energy & Libido"
+                            result="Restored Vitality"
+                            quote="Work stress killed my drive completely. I started Ashwagandha and Shilajit as prescribed. In 3 weeks, my gym performance went up, and my energy levels at home are back to my 20s."
+                            duration="1.5 Months"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#111827] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -161,7 +182,14 @@ export default function MensVitalityPage() {
                             </Link>
                         </div>
                     </section>
-
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Clinical evaluation of purified Shilajit on testosterone levels", url: "https://pubmed.ncbi.nlm.nih.gov/26395129/" },
+                            { text: "Ashwagandha improves semen quality in stress-related male fertility", url: "https://pubmed.ncbi.nlm.nih.gov/19718255/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

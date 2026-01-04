@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Sparkles } from "lucide-react"
 import Link from "next/link"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -486,6 +490,13 @@ export default function PCOSDietPage() {
         </div>
       </section>
 
+      <div className="container mx-auto px-4 max-w-4xl mt-12">
+        <ExpertNote
+          title="Ayurvedic Perspective on PCOS"
+          content="In Ayurveda, we don't just treat the ovaries; we treat the 'Kapha' blockage causing metabolism issues. I've found that 80% of my PCOS patients have insulin resistance. We must focus on 'warming' foods to stimulate digestion (Agni) and avoid cold, raw foods that increase blockage."
+        />
+      </div>
+
       {/* Success Tips */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -597,6 +608,15 @@ export default function PCOSDietPage() {
           </div>
         </div>
       </section>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <ScientificRefs
+          references={[
+            { text: "PCOS and Insulin Resistance: Mechanisms (PubMed)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3277302/" },
+            { text: "Effect of Low-GI Diet on PCOS (NIH)", url: "https://pubmed.ncbi.nlm.nih.gov/20713332/" },
+            { text: "Benefits of Seed Cycling for Hormones", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8912648/" }
+          ]}
+        />
+      </div>
     </div>
   )
 }

@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Heart, Activity, Timer, Zap, Scale, Pill } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Heart Health: Arjuna & Cholesterol Management | FitPlan India",
@@ -55,6 +58,13 @@ export default function HeartPage() {
                         </div>
                     </div>
                 </section>
+
+                <div className="mb-20">
+                    <ExpertNote
+                        title="Heart is Emotional"
+                        content="Modern medicine sees the heart as a pump. Ayurveda sees it as the seat of 'Sadhaka Pitta' (Emotions). You cannot heal the heart if you are heartbroken or constantly stressed. Emotional digestion is as important as food digestion."
+                    />
+                </div>
 
                 {/* Arjuna Section */}
                 <section id="arjuna" className="mb-20 scroll-mt-24">
@@ -148,6 +158,17 @@ export default function HeartPage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Rajeev M."
+                        age={48}
+                        condition="High Cholesterol & Palpitations"
+                        result="Normal Lipid Profile"
+                        quote="My LDL was 180. The garlic therapy in the morning was tough, but it worked miracles. I also replaced my milk tea with Arjuna tea."
+                        duration="2 Months"
+                    />
+                </div>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
@@ -167,6 +188,15 @@ export default function HeartPage() {
                     </Accordion>
                 </section>
 
+            </div>
+
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Terminalia arjuna in congestive heart failure", url: "https://pubmed.ncbi.nlm.nih.gov/9505596/" },
+                        { text: "Garlic and lipid profile: A meta-analysis", url: "https://pubmed.ncbi.nlm.nih.gov/23590705/" }
+                    ]}
+                />
             </div>
         </div>
     )

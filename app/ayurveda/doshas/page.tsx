@@ -7,6 +7,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Wind, Flame, Droplet, ArrowRight, Check, X, Info } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Understanding Tridosha: The Ultimate Guide to Vata, Pitta, Kapha | FitPlan India",
@@ -258,6 +261,18 @@ export default function DoshasPage() {
                     </Accordion>
                 </section>
 
+
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Rohan Mehta"
+                        age={29}
+                        condition="High Pitta (Acidity & Anger)"
+                        result="Cooler Temperament & No Acid Reflux"
+                        quote="I was always angry and had terrible heartburn. Dr. Arti diagnosed me as Pitta-aggravated and put me on a cooling diet (no chilies, more melon). Within 2 weeks, my 'fire' calmed down significantly."
+                        duration="2 Weeks"
+                    />
+                </div>
+
                 {/* CTA */}
                 <div className="bg-[#064e3b] rounded-3xl p-8 md:p-16 text-center text-white">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">Don't Know Your Dosha?</h2>
@@ -269,7 +284,15 @@ export default function DoshasPage() {
                     </Button>
                 </div>
 
+            </div >
+            <div className="container mx-auto px-4 max-w-5xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Genomic insights into Ayurveda (Nature - Scientific Reports)", url: "https://www.nature.com/articles/srep15786" },
+                        { text: "Tridosha theory and physiological variability", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3151381/" }
+                    ]}
+                />
             </div>
-        </div>
+        </div >
     )
 }

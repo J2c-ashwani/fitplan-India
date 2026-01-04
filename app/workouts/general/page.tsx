@@ -1,6 +1,10 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CheckCircle, AlertCircle, Home, Dumbbell, Heart, Activity, Clock, Target, Zap, Apple, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -62,7 +66,18 @@ export default function GeneralWorkoutPage() {
     <div className="min-h-screen bg-gray-50 pb-20">
       <StickyTOC items={tocItems} />
 
-      {/* Hero Section */}
+      <div className="container mx-auto px-4 max-w-4xl">
+        <SuccessStory
+          name="Anjali Desai"
+          age={41}
+          condition="Sedentary Lifestyle"
+          result="Lost 6kg & Eliminated Back Pain"
+          quote="I thought I needed a gym membership to get fit. But just doing these 30-minute home workouts consistently has changed my body more than years of paying for a gym I never used. My back pain from sitting all day is completely gone."
+          duration="3 Months"
+        />
+      </div>
+
+      {/* CTA Section */}
       <section className="bg-gradient-to-br from-orange-600 to-red-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
@@ -471,6 +486,13 @@ export default function GeneralWorkoutPage() {
         </div>
       </section>
 
+      <div className="container mx-auto px-4 max-w-4xl mt-12">
+        <ExpertNote
+          title="Exercise for Longevity"
+          content="In Ayurveda, we believe movement should build energy, not deplete it. This balanced home routine is perfect because it uses your own body weight to build functional strength without the stress of heavy lifting. It improves 'Ojas' (vitality) rather than just burning calories."
+        />
+      </div>
+
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-orange-600 to-red-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -523,6 +545,15 @@ export default function GeneralWorkoutPage() {
           </div>
         </div>
       </section>
+      <div className="container mx-auto px-4 max-w-4xl">
+        <ScientificRefs
+          references={[
+            { text: "Effectiveness of Home-Based Exercise (PubMed)", url: "https://pubmed.ncbi.nlm.nih.gov/27531718/" },
+            { text: "Bodyweight Training for Muscle Strength", url: "https://journals.lww.com/acsm-healthfitness/fulltext/2013/05000/high_intensity_circuit_training_using_body_weight_.5.aspx" },
+            { text: "Benefits of 150 Minutes of Moderate Activity (WHO)", url: "https://www.who.int/news-room/fact-sheets/detail/physical-activity" }
+          ]}
+        />
+      </div>
     </div>
   )
 }

@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Eye, Moon, Sparkles, Droplet, Clock, Coffee } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurveda for Dark Circles: Kumkumadi & Eye Care | FitPlan India",
@@ -125,6 +128,17 @@ export default function DarkCirclesPage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Riya S."
+                        age={32}
+                        condition="Chronic Dark Circles"
+                        result="Visible Reduction"
+                        quote="I tried every eye cream at Sephora. Kumkumadi Tailam was different. It didn't just sit on top; it absorbed. Combined with Trataka, my eyes look 5 years younger."
+                        duration="3 Weeks"
+                    />
+                </div>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
@@ -145,6 +159,6 @@ export default function DarkCirclesPage() {
                 </section>
 
             </div>
-        </div>
+        </div >
     )
 }

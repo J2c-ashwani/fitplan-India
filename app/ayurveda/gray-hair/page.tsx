@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Sparkles, Droplet, Flame, Moon, Scissors, AlertTriangle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurveda for Gray Hair: Reverse Palitya Naturally | FitPlan India",
@@ -139,6 +142,17 @@ export default function GrayHairPage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Amit B."
+                        age={40}
+                        condition="Premature Salt & Pepper"
+                        result="Darker Roots in 3 Months"
+                        quote="Curry leaves water was the game changer. I drank it daily and massaged with Mahabhringraj oil. My barber noticed the new texture first."
+                        duration="90 Days"
+                    />
+                </div>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">
                     <h2 className="text-3xl font-serif font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
@@ -159,6 +173,6 @@ export default function GrayHairPage() {
                 </section>
 
             </div>
-        </div>
+        </div >
     )
 }

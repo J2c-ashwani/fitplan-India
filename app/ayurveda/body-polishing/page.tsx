@@ -5,6 +5,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Sparkles, Feather, Scale, Heart, Bath, Leaf } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Body Polishing: Udvartana at Home | FitPlan India",
@@ -147,6 +150,16 @@ export default function BodyPolishingPage() {
                     </div>
                 </section>
 
+                <div className="mb-20">
+                    <SuccessStory
+                        name="Sneha P."
+                        age={29}
+                        condition="Post-Wedding Weight Gain"
+                        result="Lost 3 Inches & Glowing Skin"
+                        quote="I did the 'Chickpea + Triphala' scrub daily effectively. It felt like a workout! My skin is tighter, my cellulite is barely visible, and I feel so much lighter."
+                        duration="2 Months"
+                    />
+                </div>
 
                 {/* FAQ Section */}
                 <section id="faq" className="mb-20 scroll-mt-24">

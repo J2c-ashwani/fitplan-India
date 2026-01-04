@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Scissors, Droplet, Sparkles, AlertCircle } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Best Ayurvedic Hair Oil & Herbs for Growth | Keshya",
@@ -161,6 +164,17 @@ export default function HairHealthPage() {
                         </ul>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Vikram S."
+                            age={35}
+                            condition="Receding Hairline & Hair Fall"
+                            result="Stopped Hair Fall Completely"
+                            quote="I was skeptical about putting oil in my nose (Nasya). But after 2 weeks of Anu Taila + Bhringraj oiling, the drain clogging stopped. It really cools the head."
+                            duration="2 Months"
+                        />
+                    </div>
+
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Frequently Asked Questions</h2>
@@ -197,8 +211,16 @@ export default function HairHealthPage() {
                     </section>
 
                 </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Eclipta alba (Bhringraj) for hair growth", url: "https://pubmed.ncbi.nlm.nih.gov/19481595/" },
+                            { text: "Role of Nasya in Khalitya (Hair Fall)", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3665213/" }
+                        ]}
+                    />
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 

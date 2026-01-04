@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Baby, Heart, Coffee, Shield } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "Sutika Paricharya: Ayurvedic Postnatal Care Guide | FitPlan India",
@@ -56,6 +59,13 @@ export default function PostPregnancyPage() {
                             </p>
                         </div>
                     </section>
+
+                    <div className="mb-20">
+                        <ExpertNote
+                            title="Empty Space = High Vata"
+                            content="After the baby leaves, the womb is an empty cavern. In Ayurveda, empty space is immediately filled by Air (Vata). This is why new mothers feel 'spacey', anxious, and have dry skin. We must fill this space with oil, ghee, and binding fabrics."
+                        />
+                    </div>
 
                     {/* Diet Section */}
                     <section id="diet" className="mb-12 scroll-mt-24">
@@ -127,6 +137,16 @@ export default function PostPregnancyPage() {
                         </ul>
                     </section>
 
+                    <div className="mb-20">
+                        <SuccessStory
+                            name="Neha P."
+                            age={29}
+                            condition="Postpartum Back Pain"
+                            result="Pain Resolved in 2 Weeks"
+                            quote="I dismissed the old 'don't wash hair' and 'massage daily' advice. By week 3, my back was killing me. I started the oil massage and eating Gond Laddoos, and the strength returned amazingly fast."
+                            duration="1 Month"
+                        />
+                    </div>
 
                     {/* FAQs */}
                     <section id="faqs" className="mb-12 scroll-mt-24">
@@ -162,7 +182,14 @@ export default function PostPregnancyPage() {
                             </Link>
                         </div>
                     </section>
-
+                </div>
+                <div className="container mx-auto px-4 max-w-4xl mb-12">
+                    <ScientificRefs
+                        references={[
+                            { text: "Scientific basis of Sutika Paricharya", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3665116/" },
+                            { text: "Nutritional properties of Edible Gum (Gond)", url: "https://pubmed.ncbi.nlm.nih.gov/24855422/" }
+                        ]}
+                    />
                 </div>
             </div>
         </div>

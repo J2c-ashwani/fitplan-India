@@ -4,6 +4,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, ArrowRight, Leaf, Sun, Moon, Clock, Utensils } from "lucide-react"
 import MedicalBadge from "@/components/MedicalBadge"
 import StickyTOC from "@/components/StickyTOC"
+import ExpertNote from "@/components/ExpertNote"
+import SuccessStory from "@/components/SuccessStory"
+import ScientificRefs from "@/components/ScientificRefs"
 
 export const metadata: Metadata = {
     title: "The Dinacharya: Daily Ayurvedic Routine for Weight Loss | FitPlan India",
@@ -165,6 +168,17 @@ export default function WeightLossRoutinePage() {
                     </section>
 
                     {/* Conclusion & CTA */}
+                    <div className="mb-12">
+                        <SuccessStory
+                            name="Kavita R."
+                            age={38}
+                            condition="Post-Partum Weight"
+                            result="Lost 12kg"
+                            quote="I stopped counting calories and started following the sun. Just by shifting my dinner to 6:30 PM and drinking warm water, the weight started falling off. It's not a diet, it's a lifestyle."
+                            duration="4 Months"
+                        />
+                    </div>
+
                     <section id="conclusion" className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 text-center border border-emerald-200">
                         <h3 className="text-2xl font-bold text-emerald-900 mb-4">Routine is Medicine</h3>
                         <p className="text-emerald-800 mb-8 max-w-2xl mx-auto">
@@ -181,6 +195,14 @@ export default function WeightLossRoutinePage() {
                     </section>
 
                 </div>
+            </div>
+            <div className="container mx-auto px-4 max-w-4xl mb-12">
+                <ScientificRefs
+                    references={[
+                        { text: "Timing of food intake predicts weight loss effectiveness (Intl Journal of Obesity)", url: "https://www.nature.com/articles/ijo2012229" },
+                        { text: "Circadian rhythms and metabolism", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3753381/" }
+                    ]}
+                />
             </div>
         </div>
     )
