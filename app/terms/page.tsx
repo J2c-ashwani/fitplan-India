@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Terms & Conditions | FitPlan India',
   description: 'Terms and Conditions for FitPlan India usage.',
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
 }
@@ -50,7 +50,7 @@ export default function TermsPage() {
             India
           </p>
           <p className="text-gray-600 mt-4">
-            Email: <a href="mailto:support@fitplanindia.com" className="text-emerald-600 hover:underline">support@fitplanindia.com</a>
+            Email: <a href="mailto:hello@fitplanindia.com" className="text-emerald-600 hover:underline">hello@fitplanindia.com</a>
           </p>
         </div>
       </div>

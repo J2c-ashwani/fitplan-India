@@ -147,7 +147,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               contactType: "customer service",
               areaServed: ["US", "GB", "CA", "AU", "IN", "AE"],
               availableLanguage: ["English", "Hindi"],
-              email: "support@fitplanindia.com"
+              email: "hello@fitplanindia.com"
             },
             sameAs: [
               "https://facebook.com/fitplanindia",

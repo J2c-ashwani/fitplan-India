@@ -490,7 +490,7 @@ export default function ContactPage() {
                     <Mail className="h-5 w-5 text-emerald-600 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <p className="text-sm text-gray-600">hello@fitplan.com</p>
+                      <p className="text-sm text-gray-600">hello@fitplanindia.com</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">

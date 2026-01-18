@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | FitPlan India',
   description: 'Privacy Policy for FitPlan India. Learn how we collect, use, and protect your personal information.',
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
 }
@@ -64,7 +64,7 @@ export default function PrivacyPolicy() {
             India
           </p>
           <p className="text-gray-600 mt-4">
-            Email: <a href="mailto:support@fitplanindia.com" className="text-emerald-600 hover:underline">support@fitplanindia.com</a>
+            Email: <a href="mailto:hello@fitplanindia.com" className="text-emerald-600 hover:underline">hello@fitplanindia.com</a>
           </p>
         </div>
       </div>

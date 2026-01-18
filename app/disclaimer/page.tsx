@@ -144,7 +144,7 @@ export default function DisclaimerPage() {
                   Ahmedabad, Gujarat - 380060
                 </p>
                 <p className="text-muted-foreground mt-2">
-                  Email: <a href="mailto:support@fitplanindia.com" className="hover:underline text-primary">support@fitplanindia.com</a>
+                  Email: <a href="mailto:hello@fitplanindia.com" className="hover:underline text-primary">hello@fitplanindia.com</a>
                 </p>
               </div>
             </CardContent>

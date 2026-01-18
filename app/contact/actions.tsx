@@ -255,7 +255,7 @@ export async function submitConsultationForm(formData: ConsultationFormData) {
 
     return {
       success: false,
-      error: "Failed to process request. Please try again or contact hello@fitplan.com",
+      error: "Failed to process request. Please try again or contact hello@fitplanindia.com",
     }
   }
 }
