@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Diabetes Workout Plan 2025 | Best Exercises for Blood Sugar Control",
   description: "Complete diabetes workout guide with proven home and gym exercises to lower blood sugar, improve insulin sensitivity, and achieve healthy weight loss safely.",
-  keywords: "diabetes workout, diabetic exercise plan, diabetes weight loss workout, best exercises for diabetes, blood sugar control exercises, type 2 diabetes workout",
+  keywords: "diabetes workout, diabetic exercise plan, diabetes weight loss workout, best exercises for diabetes, blood sugar control exercises, type 2 diabetes workout, insulin sensitivity exercises",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/diabetes",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Diabetes Workout Plan 2025 | Safe & Effective Exercise Guide",
     description: "Evidence-based diabetes workout routines for home and gym to control blood sugar and support weight loss.",
-    url: "https://fitplanindia.com/workouts/diabetes",
+    url: "https://www.fitplanindia.com/workouts/diabetes",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function DiabetesWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Diabetes Workout Plan 2025 | Best Exercises for Blood Sugar Control"
+        description="Complete diabetes workout guide with proven home and gym exercises to lower blood sugar, improve insulin sensitivity, and achieve healthy weight loss."
+        keywords={["diabetes workout", "diabetic exercises", "blood sugar control", "insulin sensitivity", "diabetic weight loss"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     "personalized indian diet plan",
     "fitplan india",
   ],
-  authors: [{ name: "FitPlan India", url: "https://fitplanindia.com" }, { name: "Dr. Arti Kumari", url: "https://fitplanindia.com/about" }],
+  authors: [{ name: "FitPlan India", url: "https://www.fitplanindia.com" }, { name: "Dr. Arti Kumari", url: "https://www.fitplanindia.com/about" }],
   creator: "FitPlan India",
   publisher: "FitPlan India",
   robots: {
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     title: "FitPlan India - Authentic Indian Diet Plans for Global Weight Loss",
     description:
       "#1 Rated Indian Diet Plans for weight loss, PCOS, and Thyroid. Trusted by 20,000+ clients across USA, UK, Canada, Australia & India.",
-    url: "https://fitplanindia.com",
+    url: "https://www.fitplanindia.com",
     siteName: "FitPlan India",
     locale: "en_US",
     type: "website",
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
     creator: "@fitplanindia",
     images: ["/og-image.jpg"],
   },
-  metadataBase: new URL("https://fitplanindia.com"),
+  metadataBase: new URL("https://www.fitplanindia.com"),
   alternates: {
     canonical: "./",
   },
@@ -127,10 +127,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "FitPlan India",
-            url: "https://fitplanindia.com",
+            url: "https://www.fitplanindia.com",
             potentialAction: {
               "@type": "SearchAction",
-              target: "https://fitplanindia.com/search?q={search_term_string}",
+              target: "https://www.fitplanindia.com/search?q={search_term_string}",
               "query-input": "required name=search_term_string",
             },
           }}
@@ -140,8 +140,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "FitPlan India",
-            url: "https://fitplanindia.com",
-            logo: "https://fitplanindia.com/logo.png",
+            url: "https://www.fitplanindia.com",
+            logo: "https://www.fitplanindia.com/logo.png",
             contactPoint: {
               "@type": "ContactPoint",
               contactType: "customer service",

@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Mediterranean Lifestyle Workout | Active Living for Longevity & Health",
   description: "Complete Mediterranean lifestyle exercise guide with walking routines, active living principles, longevity workouts, and balanced fitness for heart health and vitality.",
   keywords: "mediterranean lifestyle, active living, longevity workouts, walking routine, mediterranean fitness, healthy aging exercise, lifestyle fitness",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/mediterranean",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Mediterranean Lifestyle Workout | Active Living Guide",
     description: "Exercise and active living principles from the world's healthiest lifestyle.",
-    url: "https://fitplanindia.com/workouts/mediterranean",
+    url: "https://www.fitplanindia.com/workouts/mediterranean",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function MediterraneanWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Mediterranean Lifestyle Workout | Active Living for Longevity"
+        description="Complete Mediterranean lifestyle exercise guide with walking routines, active living principles, longevity workouts, and balanced fitness."
+        keywords={["mediterranean diet workout", "longevity exercises", "active lifestyle", "walking for health", "gentle fitness"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

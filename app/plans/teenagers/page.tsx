@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Teenage Weight Management Plan 2025 | Healthy Diet for Teens 13-19 USA, UK, Australia",
   description: "Complete teenage weight management plan with healthy diet for teens, growth-supporting nutrition, and safe weight loss strategies. Expert-designed for teens 13-19 in USA, UK, Canada, Australia.",
   keywords: "teenage diet plan, teen weight loss, healthy diet for teenagers, teen nutrition, weight loss for teens, teenage meal plan, adolescent diet, teen fitness plan",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/teenagers",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Teenage Weight Management Plan 2025 | Complete Guide",
     description: "Expert-designed nutrition and fitness plan for teenagers focusing on healthy growth, development, and sustainable weight management.",
-    url: "https://fitplanindia.com/plans/teenagers",
+    url: "https://www.fitplanindia.com/plans/teenagers",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function TeenagersWeightManagementPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Teenage Weight Management Plan 2025 | Healthy Diet for Teens (13-19)"
+        description="Complete teenage weight management plan with healthy diet for teens, growth-supporting nutrition, and safe weight loss strategies."
+        keywords={["teen diet", "teenage weight loss", "healthy food for teens", "adolescent nutrition", "teen fitness"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-cyan-600 to-blue-700 text-white pt-24 pb-16">

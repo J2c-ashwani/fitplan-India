@@ -9,10 +9,27 @@ export const metadata: Metadata = {
   title: "Paleo Diet Plan | Complete Guide to Caveman Diet & Primal Eating",
   description: "Complete Paleo diet guide with meal plans, whole foods eating, grain-free nutrition, weight loss strategies, CrossFit paleo, and ancestral health principles.",
   keywords: "paleo diet, paleo meal plan, caveman diet, primal eating, grain free diet, paleo weight loss, paleo foods, paleo crossfit diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/paleo",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Paleo Diet Plan | Complete Guide to Primal Eating",
     description: "Evidence-based Paleo diet with meal plans and ancestral health principles.",
-    url: "https://fitplanindia.com/blog/paleo",
+    url: "https://www.fitplanindia.com/blog/paleo",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -30,7 +47,7 @@ export default function PaleoDietPage() {
               Paleo Diet Plan: Eat Like Our Ancestors for Modern Health
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the Paleo diet - eating whole, unprocessed foods like our Paleolithic ancestors. Learn meat, 
+              Discover the Paleo diet - eating whole, unprocessed foods like our Paleolithic ancestors. Learn meat,
               vegetables, fruits, nuts approach with complete meal plans for weight loss, inflammation reduction, and optimal health.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,16 +92,16 @@ export default function PaleoDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Paleo Diet Philosophy</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The Paleo diet (Paleolithic diet, Caveman diet, Primal eating) is based on eating foods available to our 
-                hunter-gatherer ancestors before agriculture developed 10,000 years ago. The premise: our bodies are genetically 
-                adapted to pre-agricultural foods, and modern processed foods, grains, dairy, and legumes cause inflammation, 
-                weight gain, and chronic disease. Paleo emphasizes meat, fish, eggs, vegetables, fruits, nuts, and seeds while 
-                eliminating grains (wheat, rice, corn), legumes (beans, peanuts, soy), dairy, refined sugar, and processed foods. 
-                Proponents report weight loss, reduced inflammation, improved digestion, clearer skin, more stable energy, better 
-                blood sugar control, and enhanced athletic performance. Popular in CrossFit communities, Paleo focuses on food 
+                The Paleo diet (Paleolithic diet, Caveman diet, Primal eating) is based on eating foods available to our
+                hunter-gatherer ancestors before agriculture developed 10,000 years ago. The premise: our bodies are genetically
+                adapted to pre-agricultural foods, and modern processed foods, grains, dairy, and legumes cause inflammation,
+                weight gain, and chronic disease. Paleo emphasizes meat, fish, eggs, vegetables, fruits, nuts, and seeds while
+                eliminating grains (wheat, rice, corn), legumes (beans, peanuts, soy), dairy, refined sugar, and processed foods.
+                Proponents report weight loss, reduced inflammation, improved digestion, clearer skin, more stable energy, better
+                blood sugar control, and enhanced athletic performance. Popular in CrossFit communities, Paleo focuses on food
                 quality - grass-fed meat, wild-caught fish, organic produce when possible.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-amber-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-amber-800">Core Paleo Principles</h4>
@@ -97,7 +114,7 @@ export default function PaleoDietPage() {
                     <li>• <strong>No dairy:</strong> Milk, cheese, yogurt excluded</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-orange-800">Why People Choose Paleo</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -120,7 +137,7 @@ export default function PaleoDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Paleo Diet Food List: Eat vs Avoid</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Paleo-Approved Foods (Eat Freely):</h4>
@@ -128,18 +145,18 @@ export default function PaleoDietPage() {
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Meat & Poultry (Grass-Fed Best):</h5>
                     <p className="text-sm text-gray-700">
-                      Beef, pork, lamb, chicken, turkey, bison, venison, duck. All cuts. Prioritize grass-fed and 
+                      Beef, pork, lamb, chicken, turkey, bison, venison, duck. All cuts. Prioritize grass-fed and
                       pasture-raised for better omega-3 ratio.
                     </p>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Fish & Seafood (Wild-Caught Best):</h5>
                     <p className="text-sm text-gray-700">
                       Salmon, tuna, mackerel, sardines, trout, shrimp, crab, lobster, mussels, oysters. Omega-3 rich.
                     </p>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Eggs (Pasture-Raised Best):</h5>
                     <p className="text-sm text-gray-700">
@@ -150,7 +167,7 @@ export default function PaleoDietPage() {
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Vegetables (All Non-Starchy):</h5>
                     <p className="text-sm text-gray-700">
-                      Broccoli, spinach, kale, peppers, tomatoes, cucumber, zucchini, cauliflower, Brussels sprouts, 
+                      Broccoli, spinach, kale, peppers, tomatoes, cucumber, zucchini, cauliflower, Brussels sprouts,
                       asparagus, mushrooms, onions, garlic. Unlimited!
                     </p>
                   </div>
@@ -165,7 +182,7 @@ export default function PaleoDietPage() {
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Nuts & Seeds (Unsalted):</h5>
                     <p className="text-sm text-gray-700">
-                      Almonds, walnuts, cashews, pecans, macadamia, sunflower seeds, pumpkin seeds, chia, flax. 
+                      Almonds, walnuts, cashews, pecans, macadamia, sunflower seeds, pumpkin seeds, chia, flax.
                       Not peanuts (legume)!
                     </p>
                   </div>
@@ -173,7 +190,7 @@ export default function PaleoDietPage() {
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Fats & Oils:</h5>
                     <p className="text-sm text-gray-700">
-                      Olive oil, coconut oil, avocado oil, ghee (clarified butter), animal fats (tallow, lard). 
+                      Olive oil, coconut oil, avocado oil, ghee (clarified butter), animal fats (tallow, lard).
                       Avocados excellent source.
                     </p>
                   </div>
@@ -186,30 +203,30 @@ export default function PaleoDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ NOT Paleo (Strictly Avoid):</h4>
                 <div className="space-y-4">
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">All Grains & Cereals:</h5>
                     <p className="text-sm text-gray-700">
-                      Wheat, rice (white/brown), oats, corn, quinoa, barley, rye, millet. Includes bread, pasta, 
+                      Wheat, rice (white/brown), oats, corn, quinoa, barley, rye, millet. Includes bread, pasta,
                       cereals, tortillas, crackers. NO EXCEPTIONS.
                     </p>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">All Legumes (Beans, Lentils, Peanuts):</h5>
                     <p className="text-sm text-gray-700">
-                      Black beans, kidney beans, chickpeas, lentils, soybeans, tofu, peanuts, peanut butter, soy sauce. 
+                      Black beans, kidney beans, chickpeas, lentils, soybeans, tofu, peanuts, peanut butter, soy sauce.
                       Contain anti-nutrients and lectins.
                     </p>
                   </div>
-                  
+
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">All Dairy Products:</h5>
                     <p className="text-sm text-gray-700">
-                      Milk, cheese, yogurt, ice cream, butter (except ghee). Lactose and casein not Paleo. 
+                      Milk, cheese, yogurt, ice cream, butter (except ghee). Lactose and casein not Paleo.
                       Some allow grass-fed butter.
                     </p>
                   </div>
@@ -224,7 +241,7 @@ export default function PaleoDietPage() {
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Processed Foods & Vegetable Oils:</h5>
                     <p className="text-sm text-gray-700">
-                      Anything in package with long ingredient list, fast food, chips, candy. Soybean oil, canola oil, 
+                      Anything in package with long ingredient list, fast food, chips, candy. Soybean oil, canola oil,
                       corn oil (inflammatory).
                     </p>
                   </div>
@@ -232,7 +249,7 @@ export default function PaleoDietPage() {
                   <div className="bg-red-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Potatoes (Debated):</h5>
                     <p className="text-sm text-gray-700">
-                      White potatoes not strictly Paleo (high glycemic). Sweet potatoes generally allowed. Some strict 
+                      White potatoes not strictly Paleo (high glycemic). Sweet potatoes generally allowed. Some strict
                       Paleo excludes both.
                     </p>
                   </div>
@@ -271,7 +288,7 @@ export default function PaleoDietPage() {
             <p className="text-center text-gray-600 mb-12">
               Complete Paleo eating with whole foods, no grains, no dairy, no legumes.
             </p>
-            
+
             <Card className="border-amber-200 mb-8">
               <CardHeader className="bg-amber-50">
                 <CardTitle className="text-amber-800">Sample Day - Paleo Diet</CardTitle>
@@ -374,7 +391,7 @@ export default function PaleoDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Paleo Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -401,7 +418,7 @@ export default function PaleoDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -440,10 +457,10 @@ export default function PaleoDietPage() {
               Complete Your Paleo Lifestyle
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              The Paleo diet pairs perfectly with functional fitness training like CrossFit. Combine ancestral eating 
+              The Paleo diet pairs perfectly with functional fitness training like CrossFit. Combine ancestral eating
               with natural movement patterns for complete health.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Dumbbell className="w-12 h-12 text-white mx-auto mb-4" />
@@ -471,7 +488,7 @@ export default function PaleoDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join the Paleo community eating whole foods for modern health and performance
             </p>

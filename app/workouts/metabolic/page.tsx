@@ -10,15 +10,33 @@ import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import PriceDisplay from "@/components/PriceDisplay"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Metabolic Workouts 2025 | HIIT & Strength Training to Boost Metabolism",
   description: "Complete metabolic workout program with HIIT, strength training, and exercises to boost metabolism and maximize fat burn. Designed for USA, UK, Canada, Australia.",
   keywords: "metabolic workouts, HIIT workouts, metabolism boosting exercises, fat burning workouts, metabolic conditioning, afterburn effect, EPOC training",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/metabolic",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Metabolic Workouts 2025 | Boost Metabolism with HIIT",
     description: "Expert-designed metabolic workout program to maximize calorie burn and boost metabolic rate.",
-    url: "https://fitplanindia.com/workouts/metabolic",
+    url: "https://www.fitplanindia.com/workouts/metabolic",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function MetabolicWorkoutsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Metabolic Workouts 2025 | HIIT & Strength Training to Boost Metabolism"
+        description="Complete metabolic workout program with HIIT, strength training, and exercises to boost metabolism and maximize fat burn."
+        keywords={["metabolic workouts", "HIIT workouts", "metabolism boosting", "fat burning", "afterburn effect"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Thyroid Diet Plan 2025 | Complete Guide for Hypothyroidism & Hyperthyroidism USA, UK, Australia",
   description: "Complete thyroid diet guide covering hypothyroidism, hyperthyroidism, Hashimoto's, and Graves' disease. Expert nutrition plans for thyroid health in USA, UK, Canada, Australia.",
   keywords: "thyroid diet plan, thyroid disease diet, hypothyroidism diet, hyperthyroidism diet, thyroid weight loss, thyroid weight gain, Hashimoto's diet, Graves disease diet, thyroid food list",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/thyroid",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Thyroid Diet Plan 2025 | Complete Nutrition Guide",
     description: "Expert thyroid diet plans for all thyroid conditions with proven strategies for optimal thyroid health and weight management.",
-    url: "https://fitplanindia.com/plans/thyroid",
+    url: "https://www.fitplanindia.com/plans/thyroid",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function ThyroidDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Thyroid Diet Plan 2025 | Guide for Hypothyroidism & Hyperthyroidism"
+        description="Complete thyroid diet guide covering hypothyroidism, hyperthyroidism, Hashimoto's, and Graves' disease."
+        keywords={["thyroid diet", "hypothyroidism food", "hyperthyroidism diet", "thyroid weight loss", "thyroid health"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-600 to-emerald-700 text-white pt-24 pb-16">

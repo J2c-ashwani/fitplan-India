@@ -11,13 +11,30 @@ import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Metabolic Weight Loss Plan 2025 | Boost Metabolism for Fast Fat Loss USA, UK, Australia",
+  title: "Metabolic Weight Loss Diet Plan 2025 | Boost Metabolism | FitPlan India",
   description: "Complete metabolic weight loss plan to fix slow metabolism, boost metabolic rate, and achieve fast sustainable fat loss. Expert-designed for USA, UK, Canada, Australia.",
-  keywords: "metabolic weight loss, boost metabolism, slow metabolism weight loss, metabolic diet plan, increase metabolism, metabolic rate, metabolism boosting foods",
+  keywords: "metabolic weight loss, boost metabolism, slow metabolism weight loss, metabolic diet plan, increase metabolism, metabolic rate, metabolism boosting foods, fix slow metabolism",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/metabolic", // Note: The folder is 'metabolic' but original OG URL said 'metabolic-weight-loss'. I will stick to folder name for canonical unless I know otherwise. Folder is 'metabolic'.
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Metabolic Weight Loss Plan 2025 | Complete Guide",
     description: "Expert-designed metabolic weight loss plan with proven strategies to boost metabolism and achieve sustainable fat loss.",
-    url: "https://fitplanindia.com/plans/metabolic-weight-loss",
+    url: "https://www.fitplanindia.com/plans/metabolic",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

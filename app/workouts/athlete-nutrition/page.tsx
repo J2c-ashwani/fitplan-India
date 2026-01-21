@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Athlete Training Program | Sports Performance Workouts for Competitive Athletes",
   description: "Complete athlete training program with sport-specific workouts, strength training, speed/agility drills, endurance conditioning, and performance optimization for competitive athletes.",
-  keywords: "athlete training, sports workouts, performance training, athletic conditioning, sports training program, athlete workout plan, competitive sports training",
+  keywords: "athlete training, sports workouts, performance training, athletic conditioning, sports training program, athlete workout plan, competitive sports training, plyometrics",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/athlete-nutrition",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Athlete Training Program | Sports Performance Workouts",
     description: "Complete training programs for competitive athletes to maximize performance.",
-    url: "https://fitplanindia.com/workouts/athlete-nutrition",
+    url: "https://www.fitplanindia.com/workouts/athlete-nutrition",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function AthleteWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Athlete Training Program | Sports Performance Workouts"
+        description="Complete athlete training program with sport-specific workouts, strength training, speed/agility drills, and performance optimization."
+        keywords={["athlete training", "sports performance", "athletic conditioning", "speed agility", "power training"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

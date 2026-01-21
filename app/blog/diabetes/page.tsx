@@ -13,13 +13,27 @@ export const metadata: Metadata = {
   title: "Diabetes Diet Plan for Weight Loss 2025 | Best Foods & Meal Plans",
   description: "Complete diabetes diet guide with proven meal plans, blood sugar control strategies, foods to eat and avoid, and expert tips for sustainable weight loss with diabetes.",
   keywords: "diabetes diet plan, diabetic weight loss, type 2 diabetes diet, blood sugar diet, diabetic meal plan, diabetes foods to avoid, diabetic diet chart, diabetes management",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/diabetes",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Diabetes Diet Plan for Weight Loss 2025 | Evidence-Based Guide",
     description: "Science-backed diabetes diet plan with meal examples, blood sugar management, and proven weight loss methods.",
-    url: "https://fitplanindia.com/blog/diabetes",
-  },
-  alternates: {
-    canonical: "/plans/diabetes",
+    url: "https://www.fitplanindia.com/blog/diabetes",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

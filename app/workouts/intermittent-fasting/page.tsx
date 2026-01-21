@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Intermittent Fasting Workout Plan | Exercise Timing for IF",
   description: "Complete IF workout guide with optimal exercise timing, fasted training strategies, fed state workouts, and performance optimization during intermittent fasting.",
-  keywords: "intermittent fasting workout, fasted cardio, IF exercise timing, workout during fasting, fed state training, 16:8 workout schedule",
+  keywords: "intermittent fasting workout, fasted cardio, IF exercise timing, workout during fasting, fed state training, 16:8 workout schedule, fasted weight training",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/intermittent-fasting",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Intermittent Fasting Workout Plan | Exercise Guide for IF",
     description: "Evidence-based IF workouts with optimal timing strategies for fat loss and muscle preservation.",
-    url: "https://fitplanindia.com/workouts/intermittent-fasting",
+    url: "https://www.fitplanindia.com/workouts/intermittent-fasting",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function IntermittentFastingWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Intermittent Fasting Workout Plan | Exercise Timing for IF"
+        description="Complete IF workout guide with optimal exercise timing, fasted training strategies, fed state workouts, and performance optimization."
+        keywords={["fasted workout", "intermittent fasting exercise", "training while fasting", "16:8 workout", "fasted cardio"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

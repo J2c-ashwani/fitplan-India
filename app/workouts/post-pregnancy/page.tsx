@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Post-Pregnancy Workout Plan 2025 | Safe Postpartum Exercises & Recovery",
   description: "Complete post-pregnancy workout guide with safe exercises for postpartum recovery, core healing, pelvic floor strengthening, and gradual fitness restoration after childbirth.",
   keywords: "post-pregnancy workout, postpartum exercise, after pregnancy workout, postnatal fitness, diastasis recti exercises, pelvic floor exercises, c-section recovery workout",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/post-pregnancy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Post-Pregnancy Workout Plan 2025 | Safe Postpartum Exercise Guide",
     description: "Evidence-based post-pregnancy workout routines for safe recovery and gradual fitness restoration.",
-    url: "https://fitplanindia.com/workouts/post-pregnancy",
+    url: "https://www.fitplanindia.com/workouts/post-pregnancy",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function PostPregnancyWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Post-Pregnancy Workout Plan 2025 | Safe Postpartum Exercises"
+        description="Complete post-pregnancy workout guide with safe exercises for postpartum recovery, core healing, and pelvic floor strengthening."
+        keywords={["postpartum workout", "post natal exercises", "pelvic floor", "diastasis recti", "core recovery"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

@@ -9,11 +9,35 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
+
 
 export const metadata: Metadata = {
   title: "Hypothyroidism Exercise Plan 2025 | Best Workouts for Underactive Thyroid Weight Loss",
   description: "Complete hypothyroidism workout plan with strength training, cardio, and metabolism-boosting exercises for underactive thyroid. Expert-designed for USA, UK, Canada, Australia.",
-  keywords: "hypothyroidism exercise, underactive thyroid workout, thyroid weight loss exercise, best exercise for hypothyroidism, Hashimoto's workout plan",
+  keywords: "hypothyroidism exercise, underactive thyroid workout, thyroid weight loss exercise, best exercise for hypothyroidism, Hashimoto's workout plan, metabolism boosting workout",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/hypothyroidism",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Hypothyroidism Exercise Plan 2025 | Metabolism Boosting Workout",
+    description: "Effective workout routine for hypothyroidism to boost metabolism and validation weight loss.",
+    url: "https://www.fitplanindia.com/workouts/hypothyroidism",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
+  },
 }
 
 export default function HypothyroidismWorkoutPage() {
@@ -50,6 +74,13 @@ export default function HypothyroidismWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Hypothyroidism Exercise Plan 2025 | Workouts for Underactive Thyroid"
+        description="Complete hypothyroidism workout plan with strength training, cardio, and metabolism-boosting exercises for underactive thyroid."
+        keywords={["hypothyroidism workout", "underactive thyroid exercises", "metabolism boosting", "thyroid weight loss", "hashimotos fitness"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

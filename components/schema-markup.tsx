@@ -14,10 +14,10 @@ export function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           "@type": "WebSite",
           name: "FitPlan India",
           description: "Personalized weight loss plans for every health condition in India",
-          url: "https://fitplanindia.com",
+          url: "https://www.fitplanindia.com",
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://fitplanindia.com/search?q={search_term_string}",
+            target: "https://www.fitplanindia.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
           },
           publisher: {
@@ -25,7 +25,7 @@ export function SchemaMarkup({ type, data }: SchemaMarkupProps) {
             name: "FitPlan India",
             logo: {
               "@type": "ImageObject",
-              url: "https://fitplanindia.com/logo.png",
+              url: "https://www.fitplanindia.com/logo.png",
             },
           },
         }
@@ -37,8 +37,8 @@ export function SchemaMarkup({ type, data }: SchemaMarkupProps) {
           name: "FitPlan India",
           description:
             "Leading nutrition consultation service in India specializing in weight loss plans for various health conditions",
-          url: "https://fitplanindia.com",
-          logo: "https://fitplanindia.com/logo.png",
+          url: "https://www.fitplanindia.com",
+          logo: "https://www.fitplanindia.com/logo.png",
           contactPoint: {
             "@type": "ContactPoint",
             telephone: "+91-98765-43210",
@@ -122,14 +122,14 @@ export function SchemaMarkup({ type, data }: SchemaMarkupProps) {
             name: "FitPlan India",
             logo: {
               "@type": "ImageObject",
-              url: "https://fitplanindia.com/logo.png",
+              url: "https://www.fitplanindia.com/logo.png",
             },
           },
           datePublished: data?.datePublished || "2024-01-01",
           dateModified: data?.dateModified || "2024-01-01",
           mainEntityOfPage: {
             "@type": "WebPage",
-            "@id": data?.url || "https://fitplanindia.com",
+            "@id": data?.url || "https://www.fitplanindia.com",
           },
         }
 

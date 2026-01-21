@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "PCOS Weight Loss Diet Plan 2025 | Best Diet for PCOS Management USA, UK, Australia",
   description: "Complete PCOS diet plan with 7-day meal plan, insulin-resistant foods, supplements, and proven weight loss strategies. Expert-designed for PCOS women in USA, UK, Canada, Australia.",
   keywords: "PCOS diet plan, PCOS weight loss, best diet for PCOS, insulin resistance diet, PCOS meal plan, polycystic ovary syndrome diet, PCOS foods to eat, PCOS diet chart, low glycemic diet PCOS, PCOS treatment diet, PCOS weight loss tips, how to lose weight with PCOS",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/pcos",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "PCOS Weight Loss Diet Plan 2025 | Complete Guide",
     description: "Expert-designed PCOS diet plan with meal plans, supplements, and proven strategies for hormone balance and weight loss.",
-    url: "https://fitplanindia.com/plans/pcos",
+    url: "https://www.fitplanindia.com/plans/pcos",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -62,6 +80,13 @@ export default function PCOSDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="PCOS Weight Loss Diet Plan 2025 | Complete Guide for PCOS Management"
+        description="Complete PCOS diet plan with 7-day meal plan, insulin-resistant foods, and proven weight loss strategies."
+        keywords={["PCOS diet", "PCOS weight loss", "insulin resistance", "hormone balance", "PCOS meal plan"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-600 to-rose-700 text-white pt-24 pb-16">

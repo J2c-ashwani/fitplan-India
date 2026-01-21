@@ -11,13 +11,30 @@ import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Skin Detox Diet Plan | Ayurvedic Blood Purification for Acne & Glow | FitPlan India",
+    title: "Skin Detox Diet Plan | Best Foods for Glowing Acne-Free Skin | FitPlan India",
     description: "Natural diet plan for clear, glowing skin. Detoxify your blood (Rakta Shodhana) with Neem, Turmeric, and Pitta-pacifying foods. Expert guide for acne and pigmentation.",
-    keywords: "skin detox diet plan, diet for glowing skin, ayurvedic blood purifier foods, diet for acne free skin, pitta dosha skin diet, indian diet for skin whitening",
+    keywords: "skin detox diet plan, diet for glowing skin, ayurvedic blood purifier foods, diet for acne free skin, pitta dosha skin diet, indian diet for skin whitening, foods for clear skin",
+    alternates: {
+        canonical: "https://www.fitplanindia.com/plans/skin-detox",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
     openGraph: {
         title: "Skin Detox Diet Plan | Nutrition for Radiant, Acne-Free Skin",
         description: "Clear acne and get natural glow with this expert-designed diet plan focusing on blood purification and anti-inflammatory foods.",
-        url: "https://fitplanindia.com/plans/skin-detox",
+        url: "https://www.fitplanindia.com/plans/skin-detox",
+        siteName: "FitPlan India",
+        locale: "en_IN",
+        type: "article",
     },
 }
 

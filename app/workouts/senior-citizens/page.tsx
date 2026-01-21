@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Senior Citizen Exercise Plan 2025 | Safe Workouts for Elderly & Aging",
   description: "Complete senior exercise guide with safe, gentle workouts for balance, strength, flexibility, and fall prevention. Age-appropriate exercises for healthy aging after 60.",
   keywords: "senior exercise, elderly workout, exercises for seniors, balance exercises for elderly, strength training for seniors, chair exercises for elderly, fall prevention exercises",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/senior-citizens",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Senior Citizen Exercise Plan 2025 | Safe Workouts for Healthy Aging",
     description: "Evidence-based senior workout routines focusing on balance, strength, and fall prevention.",
-    url: "https://fitplanindia.com/workouts/senior-citizens",
+    url: "https://www.fitplanindia.com/workouts/senior-citizens",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -62,6 +80,13 @@ export default function SeniorCitizenWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Senior Citizen Exercise Plan 2025 | Safe Workouts for Elderly & Aging"
+        description="Complete senior exercise guide with safe, gentle workouts for balance, strength, flexibility, and fall prevention."
+        keywords={["senior exercises", "elderly workout", "balance training", "fall prevention", "healthy aging fitness"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

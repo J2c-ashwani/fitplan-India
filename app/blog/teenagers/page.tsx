@@ -9,13 +9,27 @@ export const metadata: Metadata = {
   title: "Teen Diet Plan | Healthy Nutrition for Teenagers & Adolescents",
   description: "Complete teenager diet guide with balanced meal plans, sports nutrition, acne management foods, growth support, and healthy eating habits for teens aged 13-19.",
   keywords: "teen diet plan, teenager nutrition, healthy eating for teens, adolescent diet, teen meal plan, nutrition for teenagers, diet for teenage athletes, teen weight management",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/teenagers",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Teen Diet Plan | Complete Nutrition Guide for Teenagers",
     description: "Science-backed teen diet with meal plans, growth nutrition, and healthy eating strategies.",
-    url: "https://fitplanindia.com/blog/teenagers",
-  },
-  alternates: {
-    canonical: "/plans/teenagers",
+    url: "https://www.fitplanindia.com/blog/teenagers",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

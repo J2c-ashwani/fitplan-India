@@ -1,0 +1,15 @@
+{
+    "redirects": [
+        {
+            "source": "/(.*)",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "fitplanindia.com"
+                }
+            ],
+            "destination": "https://www.fitplanindia.com/$1",
+            "permanent": true
+        }
+    ]
+}

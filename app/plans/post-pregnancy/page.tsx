@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Post-Pregnancy Weight Loss Plan 2025 | Best Diet for Postpartum Weight Loss USA, UK, Australia",
   description: "Complete post-pregnancy weight loss plan with breastfeeding-safe diet, postpartum meal plans, and proven strategies for new moms. Expert-designed for USA, UK, Canada, Australia.",
   keywords: "post pregnancy weight loss, postpartum weight loss, weight loss after pregnancy, breastfeeding weight loss diet, postnatal weight loss, lose baby weight, postpartum diet plan",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/post-pregnancy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Post-Pregnancy Weight Loss Plan 2025 | Complete Guide for New Moms",
     description: "Expert-designed post-pregnancy diet with safe, proven strategies for weight loss while breastfeeding and caring for your newborn.",
-    url: "https://fitplanindia.com/plans/post-pregnancy",
+    url: "https://www.fitplanindia.com/plans/post-pregnancy",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function PostPregnancyWeightLossPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Post-Pregnancy Weight Loss Plan 2025 | Safe Diet for New Moms"
+        description="Complete post-pregnancy weight loss plan with breastfeeding-safe diet, postpartum meal plans, and safe strategies."
+        keywords={["postpartum weight loss", "breastfeeding diet", "lose baby weight", "post pregnancy diet", "new mom nutrition"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-600 to-rose-700 text-white pt-24 pb-16">

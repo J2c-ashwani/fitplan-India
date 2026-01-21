@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Senior Citizens Diet Plan 2025 | Best Nutrition for Elderly 60+ USA, UK, Australia",
   description: "Complete senior citizens diet plan with nutrition for elderly, healthy aging strategies, and meal plans for adults 60+. Expert-designed for USA, UK, Canada, Australia.",
   keywords: "senior citizens diet, elderly nutrition, diet for seniors 60+, healthy aging diet, nutrition for older adults, senior meal plan, elderly weight management",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/senior-citizens",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Senior Citizens Diet Plan 2025 | Complete Guide for Healthy Aging",
     description: "Expert-designed nutrition plan for seniors focusing on healthy aging, disease prevention, and maintaining independence.",
-    url: "https://fitplanindia.com/plans/senior-citizens",
+    url: "https://www.fitplanindia.com/plans/senior-citizens",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function SeniorCitizensDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Senior Citizens Diet Plan 2025 | Healthy Aging Nutrition Guide (60+)"
+        description="Complete senior citizens diet plan with nutrition for elderly, healthy aging strategies, and meal plans for adults 60+."
+        keywords={["senior diet", "elderly nutrition", "healthy aging", "diet for 60+", "senior meal plan"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white pt-24 pb-16">

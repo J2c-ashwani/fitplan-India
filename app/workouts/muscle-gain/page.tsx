@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Muscle Gain Workout Plan | Best Exercises to Build Mass & Strength",
   description: "Complete muscle building workout guide with hypertrophy training, strength programs, progressive overload, split routines, and exercises to maximize muscle growth.",
-  keywords: "muscle gain workout, hypertrophy training, bodybuilding workout, mass building exercises, strength training program, muscle growth routine",
+  keywords: "muscle gain workout, hypertrophy training, bodybuilding workout, mass building exercises, strength training program, muscle growth routine, gym workout plan, fitness routine",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/muscle-gain",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Muscle Gain Workout Plan | Complete Hypertrophy Training Guide",
     description: "Evidence-based muscle building workouts for maximum mass and strength gains.",
-    url: "https://fitplanindia.com/workouts/muscle-gain",
+    url: "https://www.fitplanindia.com/workouts/muscle-gain",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function MuscleGainWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Muscle Gain Workout Plan | Best Exercises to Build Mass & Strength"
+        description="Complete muscle building workout guide with hypertrophy training, strength programs, progressive overload, and split routines."
+        keywords={["muscle gain", "hypertrophy training", "build muscle", "strength training", "bodybuilding split"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

@@ -9,13 +9,27 @@ export const metadata: Metadata = {
   title: "Keto Diet Plan | Low-Carb Indian Diet Guide for Weight Loss",
   description: "Complete keto diet guide adapted for Indian cuisine with low-carb meal plans, ketogenic recipes, and strategies for fat loss.",
   keywords: "keto diet, ketogenic diet, low carb diet India, keto meal plan, keto weight loss, Indian keto diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/keto",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Keto Diet Plan | Indian Low-Carb Guide",
     description: "Complete ketogenic diet adapted for Indian cuisine.",
-    url: "https://fitplanindia.com/blog/keto",
-  },
-  alternates: {
-    canonical: "/plans/keto-diet",
+    url: "https://www.fitplanindia.com/blog/keto",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

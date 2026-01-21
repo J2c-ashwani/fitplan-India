@@ -19,7 +19,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
             "@type": "ListItem",
             "position": index + 2, // +2 because Home is usually #1 implicit or explicit
             "name": item.label,
-            "item": item.href.startsWith("http") ? item.href : `https://fitplanindia.com${item.href}`
+            "item": item.href.startsWith("http") ? item.href : `https://www.fitplanindia.com${item.href}`
         }))
     }
 
@@ -31,7 +31,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://fitplanindia.com"
+                "item": "https://www.fitplanindia.com"
             },
             ...breadcrumbSchema.itemListElement
         ]

@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Thyroid Workout Plan | Best Exercises for Hypothyroidism & Weight Loss",
   description: "Complete thyroid workout guide with metabolism-boosting exercises for hypothyroidism, safe routines for thyroid patients, energy management, and weight loss strategies.",
   keywords: "thyroid workout, hypothyroidism exercise, thyroid weight loss workout, exercises for underactive thyroid, metabolism boosting exercises, low energy workouts",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/thyroid",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Thyroid Workout Plan | Exercise Guide for Hypothyroidism",
     description: "Evidence-based thyroid workouts to boost metabolism, manage weight, and improve energy levels.",
-    url: "https://fitplanindia.com/workouts/thyroid",
+    url: "https://www.fitplanindia.com/workouts/thyroid",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function ThyroidWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Thyroid Workout Plan | Best Exercises for Hypothyroidism"
+        description="Complete thyroid workout guide with metabolism-boosting exercises for hypothyroidism and weight management."
+        keywords={["thyroid workout", "hypothyroidism exercises", "metabolism boost", "weight loss thyroid", "low energy fitness"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

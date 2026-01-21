@@ -9,10 +9,27 @@ export const metadata: Metadata = {
   title: "Heart Health Diet Plan | DASH Diet for Blood Pressure & Cholesterol",
   description: "Complete heart health diet guide with DASH diet principles, cholesterol-lowering foods, blood pressure control, cardiovascular disease prevention, and heart-healthy meal plans.",
   keywords: "heart health diet, DASH diet, lower blood pressure diet, cholesterol lowering diet, heart disease prevention, cardiovascular health, heart healthy foods",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/heart-health",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Heart Health Diet Plan | DASH Diet Complete Guide",
     description: "Evidence-based heart health diet with DASH principles and cardiovascular disease prevention.",
-    url: "https://fitplanindia.com/blog/heart-health",
+    url: "https://www.fitplanindia.com/blog/heart-health",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -30,7 +47,7 @@ export default function HeartHealthDietPage() {
               Heart Health Diet: DASH Plan for Blood Pressure & Cholesterol
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the DASH diet (Dietary Approaches to Stop Hypertension) - proven to lower blood pressure, 
+              Discover the DASH diet (Dietary Approaches to Stop Hypertension) - proven to lower blood pressure,
               reduce cholesterol, prevent heart disease, and protect cardiovascular health with delicious, practical meal plans.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,16 +92,16 @@ export default function HeartHealthDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the DASH Diet for Heart Health</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The DASH diet (Dietary Approaches to Stop Hypertension) was specifically developed by the National Heart, 
-                Lung, and Blood Institute to combat high blood pressure - the leading risk factor for heart disease and stroke. 
-                Clinical studies prove DASH lowers blood pressure by 10-14 mmHg (as effective as some medications), reduces 
-                LDL cholesterol by 10-15%, decreases heart disease risk by 20%, and prevents stroke. The DASH diet emphasizes 
-                vegetables, fruits, whole grains, lean proteins, and low-fat dairy while limiting sodium (salt), saturated fats, 
-                added sugars, and red meat. It's rich in potassium, calcium, magnesium, and fiber - nutrients that naturally 
-                lower blood pressure and protect heart health. Unlike fad diets, DASH is endorsed by the American Heart 
+                The DASH diet (Dietary Approaches to Stop Hypertension) was specifically developed by the National Heart,
+                Lung, and Blood Institute to combat high blood pressure - the leading risk factor for heart disease and stroke.
+                Clinical studies prove DASH lowers blood pressure by 10-14 mmHg (as effective as some medications), reduces
+                LDL cholesterol by 10-15%, decreases heart disease risk by 20%, and prevents stroke. The DASH diet emphasizes
+                vegetables, fruits, whole grains, lean proteins, and low-fat dairy while limiting sodium (salt), saturated fats,
+                added sugars, and red meat. It's rich in potassium, calcium, magnesium, and fiber - nutrients that naturally
+                lower blood pressure and protect heart health. Unlike fad diets, DASH is endorsed by the American Heart
                 Association and ranked as one of the healthiest diets by medical professionals worldwide.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-red-800">DASH Diet Core Principles</h4>
@@ -97,7 +114,7 @@ export default function HeartHealthDietPage() {
                     <li>• <strong>Healthy fats:</strong> Nuts, seeds, olive oil (limited)</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-pink-800">How DASH Protects Your Heart</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -120,7 +137,7 @@ export default function HeartHealthDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Proven Heart Health Benefits</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-red-200">
                 <CardHeader>
@@ -207,7 +224,7 @@ export default function HeartHealthDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">DASH Diet Food Servings Guide (2,000 Calorie Plan)</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Foods to Emphasize:</h4>
@@ -219,7 +236,7 @@ export default function HeartHealthDietPage() {
                     </p>
                     <p className="text-xs text-gray-600">Rich in potassium, magnesium, fiber - all lower BP</p>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Fruits (4-5 servings daily):</h5>
                     <p className="text-sm text-gray-700 mb-1">
@@ -227,7 +244,7 @@ export default function HeartHealthDietPage() {
                     </p>
                     <p className="text-xs text-gray-600">Potassium powerhouses for blood pressure control</p>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Whole Grains (6-8 servings daily):</h5>
                     <p className="text-sm text-gray-700 mb-1">
@@ -253,7 +270,7 @@ export default function HeartHealthDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-blue-700">📊 Moderate Amounts:</h4>
                 <div className="space-y-4">
@@ -263,14 +280,14 @@ export default function HeartHealthDietPage() {
                       Almonds, walnuts, sunflower seeds, lentils, kidney beans, chickpeas. Heart-healthy fats and protein.
                     </p>
                   </div>
-                  
+
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Healthy Fats (2-3 servings daily):</h5>
                     <p className="text-sm text-gray-700">
                       Olive oil, avocado, nuts. Small amounts - these are calorie-dense.
                     </p>
                   </div>
-                  
+
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Sweets (5 or fewer servings weekly):</h5>
                     <p className="text-sm text-gray-700">
@@ -353,7 +370,7 @@ export default function HeartHealthDietPage() {
             <p className="text-center text-gray-600 mb-12">
               Heart-healthy, low-sodium meals designed to lower blood pressure and cholesterol.
             </p>
-            
+
             <Card className="border-red-200 mb-8">
               <CardHeader className="bg-red-50">
                 <CardTitle className="text-red-800">Sample Day - DASH Diet</CardTitle>
@@ -456,7 +473,7 @@ export default function HeartHealthDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">DASH Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -483,7 +500,7 @@ export default function HeartHealthDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -522,10 +539,10 @@ export default function HeartHealthDietPage() {
               Protect Your Heart Health Today
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              The DASH diet is most effective when combined with regular physical activity. Exercise further 
+              The DASH diet is most effective when combined with regular physical activity. Exercise further
               lowers blood pressure and strengthens your cardiovascular system.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Dumbbell className="w-12 h-12 text-white mx-auto mb-4" />
@@ -553,7 +570,7 @@ export default function HeartHealthDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands protecting their heart health through the proven DASH diet
             </p>

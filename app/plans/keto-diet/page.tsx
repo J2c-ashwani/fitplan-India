@@ -12,15 +12,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Keto Diet Plan for Indians 2025 | Indian Ketogenic Diet Weight Loss Guide",
   description: "Complete keto diet plan for Indians with vegetarian and non-vegetarian options, Indian keto foods, meal plans, and proven weight loss strategies. Expert-designed for India.",
   keywords: "keto diet plan India, Indian keto diet, ketogenic diet for Indians, keto Indian food, keto vegetarian Indian, low carb diet India, keto meal plan India, Indian keto recipes",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/keto-diet",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Keto Diet Plan for Indians 2025 | Complete Guide",
     description: "Expert-designed ketogenic diet for Indians with authentic Indian foods, vegetarian options, and proven fat loss strategies.",
-    url: "https://fitplanindia.com/plans/keto",
+    url: "https://www.fitplanindia.com/plans/keto-diet",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -63,6 +81,13 @@ export default function KetoIndianDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Keto Diet Plan for Indians 2025 | Complete Ketogenic Guide"
+        description="Complete keto diet plan for Indians with vegetarian and non-vegetarian options, Indian keto foods, and meal plans."
+        keywords={["keto diet india", "indian keto plan", "ketogenic diet", "low carb indian food", "fat loss"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-600 to-fuchsia-700 text-white pt-24 pb-16">

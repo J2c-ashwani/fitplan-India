@@ -9,13 +9,27 @@ export const metadata: Metadata = {
   title: "PCOD Diet Plan | Complete Nutrition for Polycystic Ovarian Disease",
   description: "Complete PCOD diet guide with meal plans, insulin resistance management, hormonal balance strategies, weight loss tips, and foods to manage PCOS/PCOD symptoms naturally.",
   keywords: "PCOD diet, PCOS diet plan, polycystic ovary diet, PCOD weight loss, insulin resistance diet, hormonal balance nutrition, PCOS meal plan, PCOD foods",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/pcod",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "PCOD Diet Plan | Complete Nutrition Guide for PCOS",
     description: "Evidence-based PCOD diet with meal plans, hormonal balance, and symptom management strategies.",
-    url: "https://fitplanindia.com/blog/pcod",
-  },
-  alternates: {
-    canonical: "/plans/pcod",
+    url: "https://www.fitplanindia.com/blog/pcod",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

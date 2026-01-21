@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "PCOD Workout Plan | Exercise for Polycystic Ovary Syndrome",
   description: "Complete PCOD workout guide with exercises to improve insulin sensitivity, balance hormones, manage weight, and reduce PCOS symptoms naturally through fitness.",
   keywords: "PCOD workout, PCOS exercise, insulin resistance workout, hormonal balance exercises, PCOD weight loss workout, polycystic ovary exercise",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/pcod",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "PCOD Workout Plan | Exercise Guide for PCOS",
     description: "Evidence-based PCOD workouts for hormonal balance and symptom management.",
-    url: "https://fitplanindia.com/workouts/pcod",
+    url: "https://www.fitplanindia.com/workouts/pcod",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function PCODWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="PCOD Workout Plan | Exercise for Polycystic Ovary Syndrome"
+        description="Complete PCOD workout guide with exercises to improve insulin sensitivity, balance hormones, and manage weight."
+        keywords={["PCOD workout", "PCOS exercises", "hormone balance", "insulin resistance", "weight loss for pcod"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

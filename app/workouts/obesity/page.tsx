@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Obesity Workout Plan 2025 | Safe Low-Impact Exercises for Weight Loss",
   description: "Complete obesity workout guide with safe, effective home and gym exercises designed for individuals with obesity. Low-impact routines to support weight loss and improve fitness.",
   keywords: "obesity workout, obese exercise plan, weight loss exercises for obesity, low impact workout, safe exercises for obesity, morbidly obese workout",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/obesity",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Obesity Workout Plan 2025 | Safe Exercise Guide for Weight Loss",
     description: "Evidence-based obesity workout routines with low-impact exercises for safe, effective weight loss.",
-    url: "https://fitplanindia.com/workouts/obesity",
+    url: "https://www.fitplanindia.com/workouts/obesity",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function ObesityWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Obesity Workout Plan 2025 | Safe Low-Impact Exercises"
+        description="Complete obesity workout guide with safe, effective home and gym exercises designed for individuals with obesity."
+        keywords={["obesity workout", "low impact exercises", "weight loss exercises", "safe workouts for obese", "beginner fitness"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

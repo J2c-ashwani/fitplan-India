@@ -12,10 +12,27 @@ export const metadata: Metadata = {
   title: "Muscle Gain Diet Plan | Complete Bulking Guide to Build Muscle Mass",
   description: "Complete muscle gain diet guide with bulking meal plans, calorie surplus strategies, high-protein nutrition, muscle building foods, and mass gain for bodybuilding.",
   keywords: "muscle gain diet, bulking diet plan, build muscle mass, bodybuilding nutrition, high protein diet, calorie surplus, mass gainer meal plan, muscle building foods",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/muscle-gain",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Muscle Gain Diet Plan | Complete Guide to Bulking",
     description: "Evidence-based muscle gain diet with meal plans, calorie surplus, and mass building strategies.",
-    url: "https://fitplanindia.com/blog/muscle-gain",
+    url: "https://www.fitplanindia.com/blog/muscle-gain",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

@@ -11,13 +11,30 @@ import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Hyperthyroidism Weight Gain Diet Plan 2025 | Best Diet for Overactive Thyroid USA, UK, Australia",
+  title: "Hyperthyroidism Weight Gain Diet Plan 2025 | FitPlan India",
   description: "Complete hyperthyroidism diet plan with high-calorie nutrient-dense foods, metabolism-slowing strategies, and healthy weight gain guide for overactive thyroid in USA, UK, Canada, Australia.",
-  keywords: "hyperthyroidism diet plan, overactive thyroid weight gain, hyperthyroidism meal plan, how to gain weight with hyperthyroidism, Graves disease diet, thyroid weight gain tips",
+  keywords: "hyperthyroidism diet plan, overactive thyroid weight gain, hyperthyroidism meal plan, how to gain weight with hyperthyroidism, Graves disease diet, thyroid weight gain tips, high calorie diet for hyperthyroidism",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/hyperthyroidism",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Hyperthyroidism Weight Gain Diet Plan 2025 | Complete Guide",
     description: "Expert-designed hyperthyroidism diet with calorie-dense foods and proven strategies for healthy weight gain with overactive thyroid.",
-    url: "https://fitplanindia.com/plans/hyperthyroidism",
+    url: "https://www.fitplanindia.com/plans/hyperthyroidism",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

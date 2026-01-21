@@ -9,15 +9,34 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
+
 
 export const metadata: Metadata = {
   title: "Heart Health Exercise Program | Cardio Workouts for Cardiovascular Health",
   description: "Complete heart health exercise guide with safe cardio workouts, blood pressure lowering exercises, aerobic training, and cardiovascular fitness for heart disease prevention.",
-  keywords: "heart health exercise, cardio workouts, heart disease prevention, blood pressure exercise, cardiovascular fitness, aerobic exercise, heart healthy workout",
+  keywords: "heart health exercise, cardio workouts, heart disease prevention, blood pressure exercise, cardiovascular fitness, aerobic exercise, heart healthy workout, dash diet exercise",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/heart-health",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Heart Health Exercise Program | Cardiovascular Fitness Guide",
     description: "Safe, effective exercises to strengthen your heart and improve cardiovascular health.",
-    url: "https://fitplanindia.com/workouts/heart-health",
+    url: "https://www.fitplanindia.com/workouts/heart-health",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +80,13 @@ export default function HeartHealthWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Heart Health Exercise Program | Cardio Workouts for Health"
+        description="Complete heart health exercise guide with safe cardio workouts, blood pressure lowering exercises, and cardiovascular fitness for prevention."
+        keywords={["heart health", "cardio exercises", "blood pressure workout", "cardiovascular fitness", "heart disease prevention"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

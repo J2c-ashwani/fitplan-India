@@ -11,13 +11,30 @@ import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Hypothyroidism Weight Loss Diet Plan 2025 | Best Diet for Underactive Thyroid USA, UK, Australia",
+  title: "Hypothyroidism Weight Loss Diet Plan 2025 | FitPlan India",
   description: "Complete hypothyroidism diet plan with metabolism-boosting foods, thyroid-supporting nutrients, supplements, and proven weight loss strategies for underactive thyroid in USA, UK, Canada, Australia.",
   keywords: "hypothyroidism diet plan, underactive thyroid weight loss, thyroid diet, how to lose weight with hypothyroidism, hypothyroidism meal plan, best foods for hypothyroidism, thyroid weight loss tips, Hashimoto's diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/hypothyroidism",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Hypothyroidism Weight Loss Diet Plan 2025 | Complete Guide",
     description: "Expert-designed hypothyroidism diet with metabolism-boosting foods, supplements, and proven strategies for weight loss with underactive thyroid.",
-    url: "https://fitplanindia.com/plans/hypothyroidism",
+    url: "https://www.fitplanindia.com/plans/hypothyroidism",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

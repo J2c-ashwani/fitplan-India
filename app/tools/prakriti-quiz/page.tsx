@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Free Ayurvedic Body Type Test | Medically Reviewed",
         description: "Discover your dominant Dosha and get personalized wellness tips from Dr. Arti.",
-        url: "https://fitplanindia.com/tools/prakriti-quiz",
+        url: "https://www.fitplanindia.com/tools/prakriti-quiz",
     },
 }
 

@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://fitplanindia.com'
+  const baseUrl = 'https://www.fitplanindia.com'
   const currentDate = new Date().toISOString()
 
   // Main pages

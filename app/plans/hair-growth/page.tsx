@@ -11,13 +11,30 @@ import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Hair Growth Diet Plan | Best Foods for Hair Fall & Regrowth | FitPlan India",
+    title: "Hair Growth Diet Plan | Best Foods to Stop Hair Fall | FitPlan India",
     description: "Ayurvedic and scientific diet plan for hair growth. Foods to stop hair fall, prevent premature graying, and boost volume. Expert nutrition guide for strong hair.",
-    keywords: "hair growth diet, best food for hair growth, diet for hair fall, ayurvedic hair diet, foods for strong hair, indian diet for hair regrowth, biotin rich foods india",
+    keywords: "hair growth diet, best food for hair growth, diet for hair fall, ayurvedic hair diet, foods for strong hair, indian diet for hair regrowth, biotin rich foods india, prevent gray hair diet",
+    alternates: {
+        canonical: "https://www.fitplanindia.com/plans/hair-growth",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
     openGraph: {
         title: "Hair Growth Diet Plan | Nutrition for Strong, Lustrous Hair",
         description: "Stop hair fall and boost growth with this expert-designed diet plan focusing on proteins, iron, and Pitta-pacifying foods.",
-        url: "https://fitplanindia.com/plans/hair-growth",
+        url: "https://www.fitplanindia.com/plans/hair-growth",
+        siteName: "FitPlan India",
+        locale: "en_IN",
+        type: "article",
     },
 }
 

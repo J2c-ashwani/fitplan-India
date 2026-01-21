@@ -17,11 +17,28 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "General Workout Plan | Complete Exercise & Fitness Training Guide",
   description: "Complete general workout plan with beginner to advanced routines, strength training, cardio, flexibility, home and gym workouts for all fitness levels and goals.",
-  keywords: "workout plan, fitness routine, general exercise program, strength training, cardio workout, beginner workout, gym routine, home workout",
+  keywords: "workout plan, fitness routine, general exercise program, strength training, cardio workout, beginner workout, gym routine, home workout, full body workout",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/general",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "General Workout Plan | Complete Exercise & Fitness Guide",
     description: "Evidence-based workout programs for all fitness levels - beginner to advanced.",
-    url: "https://fitplanindia.com/workouts/general",
+    url: "https://www.fitplanindia.com/workouts/general",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

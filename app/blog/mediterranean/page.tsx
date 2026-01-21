@@ -9,10 +9,27 @@ export const metadata: Metadata = {
   title: "Mediterranean Diet Plan | Complete Guide to Heart-Healthy Eating",
   description: "Complete Mediterranean diet guide with meal plans, health benefits, heart disease prevention, weight loss strategies, and authentic Mediterranean cuisine for longevity.",
   keywords: "mediterranean diet, mediterranean meal plan, heart healthy diet, mediterranean diet benefits, mediterranean diet recipes, longevity diet, olive oil diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/mediterranean",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Mediterranean Diet Plan | Complete Heart-Healthy Guide",
     description: "Evidence-based Mediterranean diet with meal plans and longevity benefits.",
-    url: "https://fitplanindia.com/blog/mediterranean",
+    url: "https://www.fitplanindia.com/blog/mediterranean",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -30,7 +47,7 @@ export default function MediterraneanDietPage() {
               Mediterranean Diet Plan: Heart Health & Longevity
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the Mediterranean diet - ranked #1 healthiest diet by experts worldwide. Learn heart-healthy 
+              Discover the Mediterranean diet - ranked #1 healthiest diet by experts worldwide. Learn heart-healthy
               eating with olive oil, fish, vegetables, whole grains, and complete meal plans for disease prevention and longevity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,15 +92,15 @@ export default function MediterraneanDietPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Mediterranean Diet</h2>
               <p className="text-lg text-gray-700 mb-6">
-                The Mediterranean diet is inspired by traditional eating patterns of countries bordering the Mediterranean 
-                Sea (Greece, Italy, Spain, southern France). It's not a "diet" in the restrictive sense - it's a lifestyle 
-                emphasizing whole, plant-based foods, healthy fats (especially olive oil), seafood, moderate wine consumption, 
-                and minimal processed foods. Decades of research prove it reduces heart disease by 30%, lowers diabetes risk 
-                by 25%, supports healthy weight loss, prevents cognitive decline, reduces inflammation, and promotes longevity. 
-                Unlike fad diets, the Mediterranean diet is sustainable, delicious, and supported by the world's leading health 
+                The Mediterranean diet is inspired by traditional eating patterns of countries bordering the Mediterranean
+                Sea (Greece, Italy, Spain, southern France). It's not a "diet" in the restrictive sense - it's a lifestyle
+                emphasizing whole, plant-based foods, healthy fats (especially olive oil), seafood, moderate wine consumption,
+                and minimal processed foods. Decades of research prove it reduces heart disease by 30%, lowers diabetes risk
+                by 25%, supports healthy weight loss, prevents cognitive decline, reduces inflammation, and promotes longevity.
+                Unlike fad diets, the Mediterranean diet is sustainable, delicious, and supported by the world's leading health
                 organizations including the American Heart Association and World Health Organization.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-emerald-800">Core Mediterranean Diet Principles</h4>
@@ -96,7 +113,7 @@ export default function MediterraneanDietPage() {
                     <li>• <strong>Moderate wine:</strong> 1 glass daily (optional)</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-teal-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-teal-800">What Makes It So Healthy</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -119,7 +136,7 @@ export default function MediterraneanDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Proven Health Benefits of Mediterranean Diet</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-red-200">
                 <CardHeader>
@@ -206,7 +223,7 @@ export default function MediterraneanDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Mediterranean Diet Food Guide</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Eat Daily or Most Meals:</h4>
@@ -214,18 +231,18 @@ export default function MediterraneanDietPage() {
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Vegetables (Unlimited):</h5>
                     <p className="text-sm text-gray-700">
-                      Tomatoes, leafy greens, broccoli, peppers, eggplant, zucchini, cucumbers, onions, garlic. 
+                      Tomatoes, leafy greens, broccoli, peppers, eggplant, zucchini, cucumbers, onions, garlic.
                       Aim for 7-10 servings daily, all colors.
                     </p>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Fruits (2-3 servings daily):</h5>
                     <p className="text-sm text-gray-700">
                       Apples, oranges, berries, grapes, figs, dates, melons. Preferably whole, not juice.
                     </p>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Whole Grains (3-4 servings):</h5>
                     <p className="text-sm text-gray-700">
@@ -248,7 +265,7 @@ export default function MediterraneanDietPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-blue-700">📊 Eat Regularly (Weekly):</h4>
                 <div className="space-y-4">
@@ -258,14 +275,14 @@ export default function MediterraneanDietPage() {
                       Salmon, sardines, mackerel, tuna, sea bass, shrimp, mussels. Omega-3 fatty acids for heart and brain.
                     </p>
                   </div>
-                  
+
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Poultry (2-3x weekly):</h5>
                     <p className="text-sm text-gray-700">
                       Chicken, turkey. Moderate portions, not daily.
                     </p>
                   </div>
-                  
+
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Eggs (2-4x weekly):</h5>
                     <p className="text-sm text-gray-700">
@@ -314,7 +331,7 @@ export default function MediterraneanDietPage() {
             <p className="text-center text-gray-600 mb-12">
               Authentic Mediterranean eating with delicious, heart-healthy meals.
             </p>
-            
+
             <Card className="border-emerald-200 mb-8">
               <CardHeader className="bg-emerald-50">
                 <CardTitle className="text-emerald-800">Sample Day - Mediterranean Diet</CardTitle>
@@ -417,7 +434,7 @@ export default function MediterraneanDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Mediterranean Diet Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -444,7 +461,7 @@ export default function MediterraneanDietPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -483,10 +500,10 @@ export default function MediterraneanDietPage() {
               Start Your Mediterranean Lifestyle Today
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              The Mediterranean diet is a complete lifestyle. Pair your heart-healthy nutrition with regular 
+              The Mediterranean diet is a complete lifestyle. Pair your heart-healthy nutrition with regular
               physical activity for maximum health benefits and longevity.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Dumbbell className="w-12 h-12 text-white mx-auto mb-4" />
@@ -514,7 +531,7 @@ export default function MediterraneanDietPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join millions worldwide enjoying the world's healthiest diet for longevity and vitality
             </p>

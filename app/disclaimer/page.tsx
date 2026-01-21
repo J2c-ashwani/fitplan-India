@@ -2,11 +2,26 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Heart, AlertTriangle } from "lucide-react"
 import Link from "next/link"
+import type { Metadata } from "next"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Medical Disclaimer - FitPlan India",
   description:
     "Important medical disclaimer for FitPlan India nutrition consultation services. Not a substitute for professional medical advice.",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/disclaimer",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default function DisclaimerPage() {

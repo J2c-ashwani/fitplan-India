@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Weight Loss Workout Plan | Best Exercises to Burn Fat Fast",
   description: "Complete weight loss workout guide with fat-burning exercises, cardio routines, strength training, HIIT workouts, and complete programs to maximize calorie burn and fat loss.",
   keywords: "weight loss workout, fat burning exercises, cardio for weight loss, HIIT fat loss, best exercises to lose weight, gym workout for weight loss",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/weight-loss",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Weight Loss Workout Plan | Complete Fat Burning Exercise Guide",
     description: "Evidence-based weight loss workouts for maximum fat burning and sustainable results.",
-    url: "https://fitplanindia.com/workouts/weight-loss",
+    url: "https://www.fitplanindia.com/workouts/weight-loss",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function WeightLossWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Weight Loss Workout Plan | Best Exercises to Burn Fat"
+        description="Complete weight loss workout guide with fat-burning exercises, cardio routines, strength training, and HIIT workouts."
+        keywords={["weight loss workout", "fat burn exercises", "cardio for weight loss", "HIIT workout", "burn calories"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

@@ -12,15 +12,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Intermittent Fasting Plan 2025 | 16:8 Fasting Guide for Weight Loss USA, UK, India",
   description: "Complete intermittent fasting plan with 16:8, 18:6 fasting schedules, meal timing, and proven weight loss strategies. Expert-designed for USA, UK, Canada, Australia, India.",
   keywords: "intermittent fasting plan, 16:8 fasting, intermittent fasting for weight loss, IF diet plan, fasting schedule, time restricted eating, intermittent fasting India",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/intermittent-fasting",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Intermittent Fasting Plan 2025 | Complete Guide",
     description: "Expert-designed intermittent fasting plan with proven strategies for fat loss, autophagy, and metabolic health.",
-    url: "https://fitplanindia.com/plans/intermittent-fasting",
+    url: "https://www.fitplanindia.com/plans/intermittent-fasting",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -62,6 +80,13 @@ export default function IntermittentFastingPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Intermittent Fasting Plan 2025 | 16:8 Fasting Guide for Indians"
+        description="Complete intermittent fasting plan with 16:8 fasting schedules, meal timing, and proven weight loss strategies."
+        keywords={["intermittent fasting", "16:8 diet", "fasting for weight loss", "time restricted eating", "IF plan"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-600 to-violet-700 text-white pt-24 pb-16">

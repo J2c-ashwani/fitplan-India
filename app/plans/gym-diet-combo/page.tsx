@@ -14,13 +14,30 @@ import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Gym Diet Plan 2025 | Complete Workout + Nutrition for Muscle Gain & Fat Loss USA, UK, India",
+  title: "Gym Diet Plan 2025 | Muscle Gain & Fat Loss Nutrition | FitPlan India",
   description: "Complete gym diet plan combining workout routines with nutrition for muscle building, fat loss, and body transformation. Expert-designed for USA, UK, Canada, Australia, India.",
-  keywords: "gym diet plan, workout nutrition, muscle building diet, bodybuilding meal plan, gym food plan, pre workout nutrition, post workout meal, fitness diet India",
+  keywords: "gym diet plan, workout nutrition, muscle building diet, bodybuilding meal plan, gym food plan, pre workout nutrition, post workout meal, fitness diet India, high protein vegetarian diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/gym-diet-combo",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Gym Diet Plan 2025 | Complete Workout + Nutrition Guide",
     description: "Expert-designed gym diet combining optimal workout nutrition, meal timing, and proven strategies for maximum gains.",
-    url: "https://fitplanindia.com/plans/gym-diet-combo",
+    url: "https://www.fitplanindia.com/plans/gym-diet-combo",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

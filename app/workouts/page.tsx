@@ -13,10 +13,27 @@ export const metadata: Metadata = {
   title: "Workout Programs | Expert Fitness & Exercise Guides - FitPlan India",
   description: "Complete workout programs and exercise guides for weight loss, muscle building, PCOS, diabetes, seniors, athletes, and specialized fitness goals.",
   keywords: "workout programs, exercise guides, fitness plans, weight loss workouts, muscle building, home workouts, gym routines India",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Workout Programs & Exercise Guides - FitPlan India",
     description: "Expert workout programs and exercise routines for every fitness goal.",
-    url: "https://fitplanindia.com/workouts",
+    url: "https://www.fitplanindia.com/workouts",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

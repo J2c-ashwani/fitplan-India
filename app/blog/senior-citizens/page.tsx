@@ -9,13 +9,27 @@ export const metadata: Metadata = {
   title: "Senior Citizen Diet Plan | Healthy Nutrition for Elderly & Aging",
   description: "Complete senior citizen diet guide with age-appropriate meal plans, bone health nutrition, heart-healthy foods, and strategies to maintain muscle mass and vitality after 60.",
   keywords: "senior citizen diet, elderly nutrition, diet for seniors, healthy eating for elderly, senior meal plan, nutrition for aging, diet for 60 plus, elderly weight management",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/senior-citizens",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Senior Citizen Diet Plan | Nutrition Guide for Healthy Aging",
     description: "Science-backed senior diet with meal plans, bone health strategies, and nutrition for optimal aging.",
-    url: "https://fitplanindia.com/blog/senior-citizens",
-  },
-  alternates: {
-    canonical: "/plans/senior-citizens",
+    url: "https://www.fitplanindia.com/blog/senior-citizens",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

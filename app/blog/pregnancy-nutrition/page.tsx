@@ -9,10 +9,27 @@ export const metadata: Metadata = {
   title: "Pregnancy Nutrition Plan | Complete Diet Guide for Healthy Baby",
   description: "Complete pregnancy nutrition guide with trimester-specific meal plans, prenatal vitamins, foods to avoid, weight gain, morning sickness remedies, and healthy pregnancy diet.",
   keywords: "pregnancy nutrition, pregnancy diet, prenatal nutrition, pregnancy meal plan, foods to avoid pregnancy, pregnancy weight gain, morning sickness diet, healthy pregnancy",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/pregnancy-nutrition",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Pregnancy Nutrition Plan | Complete Guide for Expecting Mothers",
     description: "Evidence-based pregnancy nutrition with meal plans for healthy baby development.",
-    url: "https://fitplanindia.com/blog/pregnancy-nutrition",
+    url: "https://www.fitplanindia.com/blog/pregnancy-nutrition",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -30,7 +47,7 @@ export default function PregnancyNutritionPage() {
               Pregnancy Nutrition: Complete Guide for Healthy Baby
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover complete pregnancy nutrition with trimester-specific guidance, essential nutrients for baby 
+              Discover complete pregnancy nutrition with trimester-specific guidance, essential nutrients for baby
               development, safe foods vs foods to avoid, weight gain recommendations, and meal plans for a healthy pregnancy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,16 +92,16 @@ export default function PregnancyNutritionPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Pregnancy Nutrition Needs</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Pregnancy nutrition is critical for baby's healthy development and mother's well-being. During pregnancy, 
-                nutrient needs dramatically increase - your body is building an entire human being! Key nutrients include 
-                folic acid (prevents neural tube defects), iron (supports increased blood volume and prevents anemia), calcium 
-                (builds baby's bones and teeth), protein (tissue growth), DHA omega-3 (brain and eye development), and vitamin D 
-                (bone health and immune function). Contrary to myth, you're not "eating for two" in terms of doubling calories - 
-                you need only 300-450 extra calories in 2nd and 3rd trimesters (equivalent to a yogurt and fruit). Quality matters 
-                far more than quantity. Proper pregnancy nutrition reduces risks of birth defects, preterm birth, low birth weight, 
+                Pregnancy nutrition is critical for baby's healthy development and mother's well-being. During pregnancy,
+                nutrient needs dramatically increase - your body is building an entire human being! Key nutrients include
+                folic acid (prevents neural tube defects), iron (supports increased blood volume and prevents anemia), calcium
+                (builds baby's bones and teeth), protein (tissue growth), DHA omega-3 (brain and eye development), and vitamin D
+                (bone health and immune function). Contrary to myth, you're not "eating for two" in terms of doubling calories -
+                you need only 300-450 extra calories in 2nd and 3rd trimesters (equivalent to a yogurt and fruit). Quality matters
+                far more than quantity. Proper pregnancy nutrition reduces risks of birth defects, preterm birth, low birth weight,
                 gestational diabetes, and pre-eclampsia while supporting healthy weight gain, energy levels, and postpartum recovery.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-pink-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-pink-800">Why Pregnancy Nutrition Matters</h4>
@@ -97,7 +114,7 @@ export default function PregnancyNutritionPage() {
                     <li>• Aids postpartum recovery and breastfeeding</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-rose-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-rose-800">Healthy Pregnancy Weight Gain</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -119,7 +136,7 @@ export default function PregnancyNutritionPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Essential Nutrients During Pregnancy</h2>
-            
+
             <div className="space-y-6">
               <Card className="border-red-200">
                 <CardHeader>
@@ -299,7 +316,7 @@ export default function PregnancyNutritionPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Trimester-by-Trimester Nutrition Guide</h2>
-            
+
             <div className="space-y-8">
               <Card className="border-pink-200">
                 <CardHeader className="bg-pink-50">
@@ -403,7 +420,7 @@ export default function PregnancyNutritionPage() {
             <p className="text-center text-gray-600 mb-12">
               Nutrient-dense meals covering all essential pregnancy needs with folic acid, iron, calcium, and protein.
             </p>
-            
+
             <Card className="border-pink-200 mb-8">
               <CardHeader className="bg-pink-50">
                 <CardTitle className="text-pink-800">Sample Day - Pregnancy Nutrition</CardTitle>
@@ -506,7 +523,7 @@ export default function PregnancyNutritionPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pregnancy Nutrition Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -533,7 +550,7 @@ export default function PregnancyNutritionPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -572,10 +589,10 @@ export default function PregnancyNutritionPage() {
               Healthy Pregnancy, Healthy Baby
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Proper nutrition is foundation of healthy pregnancy. Combine with gentle, doctor-approved exercise 
+              Proper nutrition is foundation of healthy pregnancy. Combine with gentle, doctor-approved exercise
               for optimal maternal health and baby development.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Activity className="w-12 h-12 text-white mx-auto mb-4" />
@@ -603,7 +620,7 @@ export default function PregnancyNutritionPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Consult your healthcare provider before making any dietary changes during pregnancy
             </p>

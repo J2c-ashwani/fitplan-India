@@ -9,13 +9,27 @@ export const metadata: Metadata = {
   title: "Post-Pregnancy Diet Plan 2025 | Safe Postpartum Weight Loss & Nutrition",
   description: "Complete post-pregnancy diet guide with safe meal plans for breastfeeding mothers, nutrient-rich foods, postpartum recovery nutrition, and healthy weight loss strategies after childbirth.",
   keywords: "post-pregnancy diet, postpartum weight loss, breastfeeding diet plan, after pregnancy diet, postnatal nutrition, lactation diet, post delivery weight loss, new mom diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/post-pregnancy",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Post-Pregnancy Diet Plan 2025 | Safe Postpartum Nutrition Guide",
     description: "Science-backed post-pregnancy diet with breastfeeding support, recovery nutrition, and safe weight loss methods.",
-    url: "https://fitplanindia.com/blog/post-pregnancy",
-  },
-  alternates: {
-    canonical: "/plans/post-pregnancy",
+    url: "https://www.fitplanindia.com/blog/post-pregnancy",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "PCOD Weight Loss Diet Plan 2025 | Best Diet for PCOD Management USA, UK, Australia",
   description: "Complete PCOD diet plan with 7-day meal plan, hormone-balancing foods, supplements, and proven weight loss strategies. Expert-designed for PCOD women in USA, UK, Canada, Australia.",
   keywords: "PCOD diet plan, PCOD weight loss, best diet for PCOD, polycystic ovarian disease diet, PCOD meal plan, PCOD foods to eat, PCOD diet chart, PCOD treatment diet, how to lose weight with PCOD, PCOD weight loss tips",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/pcod",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "PCOD Weight Loss Diet Plan 2025 | Complete Guide",
     description: "Expert-designed PCOD diet plan with meal plans, supplements, and proven strategies for hormone balance and weight loss.",
-    url: "https://fitplanindia.com/plans/pcod",
+    url: "https://www.fitplanindia.com/plans/pcod",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function PCODDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="PCOD Weight Loss Diet Plan 2025 | Complete Guide for PCOD Management"
+        description="Complete PCOD diet plan with 7-day meal plan, hormone-balancing foods, supplements, and proven weight loss strategies."
+        keywords={["PCOD diet", "PCOD weight loss", "polycystic ovarian disease", "hormone balance diet", "PCOD meal plan"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white pt-24 pb-16">

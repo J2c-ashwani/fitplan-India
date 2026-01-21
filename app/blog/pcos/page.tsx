@@ -13,13 +13,27 @@ export const metadata: Metadata = {
   title: "PCOS Diet Plan for Weight Loss 2025 | Proven Meal Plans & Foods to Eat",
   description: "Complete PCOS diet guide with proven meal plans, foods to eat and avoid, insulin resistance management, and natural hormone-balancing strategies for sustainable weight loss.",
   keywords: "PCOS diet plan, PCOS weight loss, polycystic ovary syndrome diet, PCOS meal plan, insulin resistance diet, PCOS foods to avoid, hormone balancing diet, PCOS treatment",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/pcos",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "PCOS Diet Plan for Weight Loss 2025 | Evidence-Based Guide",
     description: "Science-backed PCOS diet plan with meal examples, hormonal balance strategies, and proven weight loss methods.",
-    url: "https://fitplanindia.com/blog/pcos",
-  },
-  alternates: {
-    canonical: "/plans/pcos",
+    url: "https://www.fitplanindia.com/blog/pcos",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Keto Workout Plan | Best Exercises for Ketogenic Diet & Fat Loss",
   description: "Complete keto workout guide with fat-burning exercises, strength training for ketosis, energy management, and performance optimization on low-carb high-fat diet.",
   keywords: "keto workout, ketogenic exercise, low carb workout, keto fat burning exercises, keto gym routine, keto bodybuilding",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/keto",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Keto Workout Plan | Exercise Guide for Ketogenic Diet",
     description: "Evidence-based keto workouts for maximum fat burning and muscle preservation.",
-    url: "https://fitplanindia.com/workouts/keto",
+    url: "https://www.fitplanindia.com/workouts/keto",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function KetoWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Keto Workout Plan | Best Exercises for Ketogenic Diet & Fat Loss"
+        description="Complete keto workout guide with fat-burning exercises, strength training for ketosis, energy management, and performance optimization."
+        keywords={["keto workout", "ketogenic diet exercise", "fat burning workout", "low carb high fat", "ketosis performance"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

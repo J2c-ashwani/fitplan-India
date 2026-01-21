@@ -24,7 +24,7 @@ export default function ArticleSchema({
         "@type": "Article",
         "headline": headline,
         "description": description,
-        "image": `https://fitplanindia.com${image}`,
+        "image": `https://www.fitplanindia.com${image}`,
         "author": {
             "@type": "Person",
             "name": author
@@ -34,7 +34,7 @@ export default function ArticleSchema({
             "name": "FitPlan India",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://fitplanindia.com/logo.png"
+                "url": "https://www.fitplanindia.com/logo.png"
             }
         },
         "datePublished": datePublished || new Date().toISOString().split('T')[0],

@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Teen Workout Plan | Best Exercises for Teenagers & Adolescents",
   description: "Complete teen workout guide with safe, effective exercises for strength building, sports performance, fitness, and healthy development for teenagers aged 13-19.",
   keywords: "teen workout, teenager exercise, adolescent fitness, workout for teens, teenage strength training, teen gym routine, sports training for teens",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/teenagers",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Teen Workout Plan | Complete Exercise Guide for Teenagers",
     description: "Evidence-based teen workout routines for strength, sports performance, and healthy development.",
-    url: "https://fitplanindia.com/workouts/teenagers",
+    url: "https://www.fitplanindia.com/workouts/teenagers",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function TeenagerWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Teen Workout Plan | Best Exercises for Teenagers"
+        description="Complete teen workout guide with safe exercises for strength building, sports performance, and healthy development."
+        keywords={["teen workout", "exercises for teenagers", "youth fitness", "athlete training", "strength training for teens"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

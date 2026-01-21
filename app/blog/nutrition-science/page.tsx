@@ -9,10 +9,27 @@ export const metadata: Metadata = {
   title: "Nutrition Science Guide | Understanding Macros, Calories & Metabolism",
   description: "Complete nutrition science guide explaining macronutrients, micronutrients, calories, metabolism, energy balance, and evidence-based nutrition principles for health and fitness.",
   keywords: "nutrition science, macronutrients, micronutrients, calorie deficit, metabolism, TDEE, protein intake, carbohydrates, fats, nutrition basics",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/nutrition-science",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Nutrition Science Guide | Complete Nutrition Fundamentals",
     description: "Evidence-based nutrition science explaining macros, calories, metabolism, and dietary principles.",
-    url: "https://fitplanindia.com/blog/nutrition-science",
+    url: "https://www.fitplanindia.com/blog/nutrition-science",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -30,7 +47,7 @@ export default function NutritionSciencePage() {
               Nutrition Science: Understanding Macros, Calories & Metabolism
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Master the fundamentals of nutrition science including macronutrients, micronutrients, energy balance, 
+              Master the fundamentals of nutrition science including macronutrients, micronutrients, energy balance,
               metabolism, and evidence-based dietary principles for optimal health and fitness.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,15 +92,15 @@ export default function NutritionSciencePage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Nutrition Science Fundamentals</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Nutrition science is the study of how food affects the human body - from cellular function to athletic 
-                performance to disease prevention. At its core, nutrition involves understanding macronutrients (protein, 
-                carbohydrates, fats), micronutrients (vitamins, minerals), and energy balance (calories in vs. calories out). 
-                Your body requires specific nutrients to function optimally - protein for muscle repair and building, 
-                carbohydrates for energy, fats for hormone production and cell membranes, plus vitamins and minerals for 
-                countless biochemical reactions. Understanding these fundamentals empowers you to make informed dietary 
+                Nutrition science is the study of how food affects the human body - from cellular function to athletic
+                performance to disease prevention. At its core, nutrition involves understanding macronutrients (protein,
+                carbohydrates, fats), micronutrients (vitamins, minerals), and energy balance (calories in vs. calories out).
+                Your body requires specific nutrients to function optimally - protein for muscle repair and building,
+                carbohydrates for energy, fats for hormone production and cell membranes, plus vitamins and minerals for
+                countless biochemical reactions. Understanding these fundamentals empowers you to make informed dietary
                 choices for your health, fitness, and performance goals.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-emerald-800">Why Nutrition Science Matters</h4>
@@ -96,7 +113,7 @@ export default function NutritionSciencePage() {
                     <li>• Enables personalized nutrition strategies</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-teal-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-teal-800">Key Nutrition Principles</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -118,7 +135,7 @@ export default function NutritionSciencePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Macronutrients: The Big Three</h2>
-            
+
             <div className="space-y-8">
               {/* Protein */}
               <Card className="border-red-200">
@@ -156,7 +173,7 @@ export default function NutritionSciencePage() {
                   <div className="bg-red-100 border border-red-300 rounded-lg p-4">
                     <h5 className="font-semibold mb-2 text-red-800">Best Protein Sources:</h5>
                     <p className="text-sm text-gray-700">
-                      <strong>Animal:</strong> Chicken, turkey, lean beef, fish, eggs, Greek yogurt, cottage cheese. 
+                      <strong>Animal:</strong> Chicken, turkey, lean beef, fish, eggs, Greek yogurt, cottage cheese.
                       <strong>Plant:</strong> Lentils, chickpeas, tofu, tempeh, quinoa, beans, nuts, seeds.
                       <strong>Complete proteins</strong> contain all 9 essential amino acids (animal sources, soy, quinoa).
                     </p>
@@ -200,8 +217,8 @@ export default function NutritionSciencePage() {
                   <div className="bg-blue-100 border border-blue-300 rounded-lg p-4">
                     <h5 className="font-semibold mb-2 text-blue-800">Carb Sources Quality Matters:</h5>
                     <p className="text-sm text-gray-700">
-                      <strong>✅ Choose:</strong> Whole grains (oats, brown rice, quinoa), fruits, vegetables, legumes, sweet potatoes. 
-                      <strong>❌ Limit:</strong> Refined sugars, white bread, pastries, sugary drinks, processed snacks. 
+                      <strong>✅ Choose:</strong> Whole grains (oats, brown rice, quinoa), fruits, vegetables, legumes, sweet potatoes.
+                      <strong>❌ Limit:</strong> Refined sugars, white bread, pastries, sugary drinks, processed snacks.
                       The <strong>glycemic index</strong> measures how quickly carbs raise blood sugar - lower GI is generally better.
                     </p>
                   </div>
@@ -244,8 +261,8 @@ export default function NutritionSciencePage() {
                   <div className="bg-yellow-100 border border-yellow-300 rounded-lg p-4">
                     <h5 className="font-semibold mb-2 text-yellow-800">Optimal Fat Intake:</h5>
                     <p className="text-sm text-gray-700">
-                      <strong>20-35% of daily calories</strong> should come from fat. Don't fear fat - it's essential for health! 
-                      <strong>Sources:</strong> Avocados, nuts (almonds, walnuts), seeds (chia, flax), fatty fish (salmon), olive oil, 
+                      <strong>20-35% of daily calories</strong> should come from fat. Don't fear fat - it's essential for health!
+                      <strong>Sources:</strong> Avocados, nuts (almonds, walnuts), seeds (chia, flax), fatty fish (salmon), olive oil,
                       coconut oil, nut butters. Balance omega-6 to omega-3 ratio (aim for 4:1 or lower).
                     </p>
                   </div>
@@ -261,7 +278,7 @@ export default function NutritionSciencePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Calories & Energy Balance: The Foundation</h2>
-            
+
             <Card className="border-emerald-200 mb-8">
               <CardHeader>
                 <div className="flex items-center mb-2">
@@ -271,8 +288,8 @@ export default function NutritionSciencePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-700 mb-4">
-                  A <strong>calorie</strong> is a unit of energy. Your body burns calories continuously for basic functions 
-                  (breathing, heartbeat, digestion) plus physical activity. <strong>TDEE (Total Daily Energy Expenditure)</strong> 
+                  A <strong>calorie</strong> is a unit of energy. Your body burns calories continuously for basic functions
+                  (breathing, heartbeat, digestion) plus physical activity. <strong>TDEE (Total Daily Energy Expenditure)</strong>
                   is the total calories you burn per day.
                 </p>
 
@@ -307,7 +324,7 @@ export default function NutritionSciencePage() {
                 <div className="mt-6 bg-blue-100 border border-blue-300 rounded-lg p-4">
                   <h5 className="font-semibold mb-2 text-blue-800">📊 The 3,500 Calorie Rule:</h5>
                   <p className="text-sm text-gray-700">
-                    1 pound of body fat = approximately 3,500 calories. To lose 1 lb per week, create a 500-calorie daily 
+                    1 pound of body fat = approximately 3,500 calories. To lose 1 lb per week, create a 500-calorie daily
                     deficit (500 cal × 7 days = 3,500 cal). This is a simplified model - metabolism adapts over time.
                   </p>
                 </div>
@@ -322,7 +339,7 @@ export default function NutritionSciencePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Micronutrients: Vitamins & Minerals</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-purple-200">
                 <CardHeader>
@@ -382,7 +399,7 @@ export default function NutritionSciencePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Applying Nutrition Science to Your Life</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Evidence-Based Principles:</h4>
@@ -409,7 +426,7 @@ export default function NutritionSciencePage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Nutrition Myths:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -448,10 +465,10 @@ export default function NutritionSciencePage() {
               Apply Nutrition Science to Your Goals
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Now that you understand nutrition fundamentals, explore specific diet plans optimized for your goals - 
+              Now that you understand nutrition fundamentals, explore specific diet plans optimized for your goals -
               weight loss, muscle building, athletic performance, or health management.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <Button size="lg" className="bg-white text-emerald-700 hover:bg-gray-100 font-semibold" asChild>
                 <Link href="/blog/weight-loss">
@@ -469,7 +486,7 @@ export default function NutritionSciencePage() {
                 </Link>
               </Button>
             </div>
-            
+
             <p className="text-white text-sm">
               ✨ Master nutrition science to make informed decisions for lifelong health
             </p>

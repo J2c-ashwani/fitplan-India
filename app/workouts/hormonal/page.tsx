@@ -10,15 +10,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Hormone-Balancing Workouts 2025 | PCOS, Thyroid, Menopause Exercise Plan",
   description: "Complete hormone-friendly workout program for PCOS, thyroid, menopause. Gentle, effective exercises that balance hormones without increasing cortisol.",
-  keywords: "PCOS workouts, thyroid exercise, menopause exercise, hormone balancing workouts, cortisol lowering exercise, gentle strength training",
+  keywords: "PCOS workouts, thyroid exercise, menopause exercise, hormone balancing workouts, cortisol lowering exercise, gentle strength training, hormone friendly workout",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/hormonal",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Hormone-Balancing Workouts 2025 | Gentle Effective Exercise",
     description: "Expert-designed workout program that balances hormones naturally without overtraining stress.",
-    url: "https://fitplanindia.com/workouts/hormonal",
+    url: "https://www.fitplanindia.com/workouts/hormonal",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function HormonalWorkoutsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Hormone-Balancing Workouts 2025 | PCOS, Thyroid, Menopause"
+        description="Complete hormone-friendly workout program for PCOS, thyroid, menopause. Gentle, effective exercises that balance hormones."
+        keywords={["hormone balancing", "pcos workout", "menopause exercise", "cortisol management", "hormonal health fitness"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

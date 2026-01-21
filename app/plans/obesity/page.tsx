@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Obesity Weight Loss Plan 2025 | Best Diet for Obesity & Extreme Weight Loss USA, UK, Australia",
   description: "Complete obesity weight loss plan with proven diet strategies, meal plans, exercise guidance for BMI 30+ and severe obesity. Expert-designed for USA, UK, Canada, Australia.",
   keywords: "obesity weight loss, obesity diet plan, extreme weight loss, weight loss for obese, obesity meal plan, lose 50 pounds, lose 100 pounds, BMI over 30, morbid obesity weight loss",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/obesity",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Obesity Weight Loss Plan 2025 | Complete Guide",
     description: "Expert-designed obesity weight loss plan with sustainable strategies for significant weight loss and improved health.",
-    url: "https://fitplanindia.com/plans/obesity",
+    url: "https://www.fitplanindia.com/plans/obesity",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function ObesityWeightLossPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Obesity Weight Loss Plan 2025 | Best Diet for Extreme Weight Loss"
+        description="Complete obesity weight loss plan with proven diet strategies, meal plans, and exercise guidance for BMI 30+."
+        keywords={["obesity diet", "extreme weight loss", "morbid obesity", "BMI 30+", "weight loss plan"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-600 to-purple-700 text-white pt-24 pb-16">

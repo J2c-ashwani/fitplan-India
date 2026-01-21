@@ -13,13 +13,27 @@ export const metadata: Metadata = {
   title: "Weight Loss Diet Plan | Complete Guide to Lose Weight Safely & Fast",
   description: "Complete weight loss diet guide with meal plans, calorie deficit strategies, fat loss nutrition, metabolism boosting, and sustainable weight loss for long-term results.",
   keywords: "weight loss diet, fat loss diet plan, calorie deficit diet, how to lose weight, weight loss meal plan, lose belly fat, fast weight loss diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/weight-loss",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Weight Loss Diet Plan | Complete Guide to Fat Loss",
     description: "Science-backed weight loss diet plan with meal examples, calorie deficit strategies, and proven fat loss methods.",
-    url: "https://fitplanindia.com/blog/weight-loss",
-  },
-  alternates: {
-    canonical: "/plans/weight-loss",
+    url: "https://www.fitplanindia.com/blog/weight-loss",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

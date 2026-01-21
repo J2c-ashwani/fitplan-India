@@ -3,9 +3,19 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Privacy Policy | FitPlan India',
   description: 'Privacy Policy for FitPlan India. Learn how we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: 'https://www.fitplanindia.com/privacy',
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
@@ -16,7 +26,7 @@ export default function PrivacyPolicy() {
       <div className="prose max-w-none text-gray-700 space-y-6">
         <p className="text-sm text-gray-500">Last Updated: December 2025</p>
 
-        <p>At FitPlan India, accessible from https://fitplanindia.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by FitPlan India and how we use it.</p>
+        <p>At FitPlan India, accessible from https://www.fitplanindia.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by FitPlan India and how we use it.</p>
 
         <h2 className="text-2xl font-bold text-gray-900 pt-4">Consent</h2>
         <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>

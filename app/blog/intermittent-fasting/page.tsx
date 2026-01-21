@@ -9,13 +9,27 @@ export const metadata: Metadata = {
   title: "Intermittent Fasting Diet Plan | Complete IF Guide for Weight Loss",
   description: "Complete intermittent fasting guide with meal plans, fasting schedules (16:8, 18:6, OMAD), what to eat, breaking fast strategies, and maximizing fat loss with IF.",
   keywords: "intermittent fasting diet, IF meal plan, 16:8 fasting, intermittent fasting weight loss, fasting schedule, what to eat during intermittent fasting, breaking fast",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/intermittent-fasting",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Intermittent Fasting Diet Plan | Complete IF Guide",
     description: "Science-backed intermittent fasting with meal plans, schedules, and strategies for fat loss.",
-    url: "https://fitplanindia.com/blog/intermittent-fasting",
-  },
-  alternates: {
-    canonical: "/plans/intermittent-fasting",
+    url: "https://www.fitplanindia.com/blog/intermittent-fasting",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

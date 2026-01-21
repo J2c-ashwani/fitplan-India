@@ -11,13 +11,27 @@ export const metadata: Metadata = {
   title: "Thyroid Diet Plan | Best Foods for Hypothyroidism & Hyperthyroidism",
   description: "Complete thyroid diet guide with meal plans for hypothyroidism and hyperthyroidism, foods to eat and avoid, iodine balance, and strategies to manage thyroid symptoms naturally.",
   keywords: "thyroid diet, hypothyroidism diet, hyperthyroidism diet, thyroid weight loss, foods for thyroid, thyroid meal plan, underactive thyroid diet, overactive thyroid diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/thyroid",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Thyroid Diet Plan | Complete Nutrition Guide for Thyroid Health",
     description: "Science-backed thyroid diet with meal plans, symptom management, and thyroid-friendly foods.",
-    url: "https://fitplanindia.com/blog/thyroid",
-  },
-  alternates: {
-    canonical: "/plans/thyroid",
+    url: "https://www.fitplanindia.com/blog/thyroid",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

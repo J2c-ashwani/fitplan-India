@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Vegan Bodybuilding Workout | Plant-Based Muscle Building Program",
   description: "Complete vegan bodybuilding workout guide with muscle building routines, strength training for plant-based athletes, and effective programs to build muscle on a vegan diet.",
   keywords: "vegan bodybuilding, plant based muscle building, vegan workout, vegan strength training, build muscle vegan, plant based fitness, vegan athlete training",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/vegan-bodybuilding",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Vegan Bodybuilding Workout | Plant-Based Muscle Building",
     description: "Proven muscle building workouts for vegan and plant-based athletes.",
-    url: "https://fitplanindia.com/workouts/vegan-bodybuilding",
+    url: "https://www.fitplanindia.com/workouts/vegan-bodybuilding",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function VeganBodybuildingWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Vegan Bodybuilding Workout | Plant-Based Muscle Building Program"
+        description="Complete vegan bodybuilding workout guide with muscle building routines, strength training for plant-based athletes, and effective programs."
+        keywords={["vegan bodybuilding", "plant based muscle", "vegan athlete workout", "muscle building without meat", "vegan strength training"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

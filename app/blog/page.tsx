@@ -10,10 +10,27 @@ export const metadata: Metadata = {
   title: "Health & Fitness Blog | Expert Diet Plans & Workout Guides - FitPlan India",
   description: "Expert health and fitness blog with comprehensive diet plans, workout routines, and nutrition guides for weight loss, muscle gain, PCOS, diabetes, heart health, and more.",
   keywords: "health blog, fitness blog, diet plans, workout guides, weight loss tips, muscle building, nutrition advice, wellness blog India",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Health & Fitness Blog - FitPlan India",
     description: "Expert diet plans, workout guides, and health tips for your fitness journey.",
-    url: "https://fitplanindia.com/blog",
+    url: "https://www.fitplanindia.com/blog",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "website",
   },
 }
 

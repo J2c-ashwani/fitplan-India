@@ -3,9 +3,19 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Terms & Conditions | FitPlan India',
   description: 'Terms and Conditions for FitPlan India usage.',
+  alternates: {
+    canonical: 'https://www.fitplanindia.com/terms',
+  },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 }
 
@@ -17,7 +27,7 @@ export default function TermsPage() {
         <p className="text-sm text-gray-500">Last Updated: December 2025</p>
 
         <h2 className="text-2xl font-bold text-gray-900 pt-4">1. Introduction</h2>
-        <p>Welcome to FitPlan India! These terms and conditions outline the rules and regulations for the use of FitPlan India's Website, located at https://fitplanindia.com.</p>
+        <p>Welcome to FitPlan India! These terms and conditions outline the rules and regulations for the use of FitPlan India's Website, located at https://www.fitplanindia.com.</p>
         <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use FitPlan India if you do not agree to take all of the terms and conditions stated on this page.</p>
 
         <h2 className="text-2xl font-bold text-gray-900 pt-4">2. Medical Disclaimer</h2>

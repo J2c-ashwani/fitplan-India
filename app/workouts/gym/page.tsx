@@ -8,11 +8,34 @@ import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Gym Workout Plan for Beginners | 4-Day Split Routine",
     description: "Complete 4-day gym workout split for beginners. Focus on compound movements, muscle building, and proper form. Includes upper/lower body split.",
     keywords: "gym workout plan, beginner gym routine, 4 day gym split, upper lower split, muscle building workout, gym exercises for beginners",
+    alternates: {
+        canonical: "https://www.fitplanindia.com/workouts/gym",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
+    openGraph: {
+        title: "Gym Workout Plan for Beginners | 4-Day Split Routine",
+        description: "Complete 4-day gym workout split for beginners. Focus on compound movements, muscle building, and proper form.",
+        url: "https://www.fitplanindia.com/workouts/gym",
+        siteName: "FitPlan India",
+        locale: "en_IN",
+        type: "article",
+    },
 }
 
 export default function GymWorkoutPage() {

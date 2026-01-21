@@ -9,10 +9,27 @@ export const metadata: Metadata = {
   title: "Athlete Nutrition Plan | Complete Sports Performance Diet Guide",
   description: "Complete athlete nutrition guide with sports performance meal plans, pre/post-workout fueling, endurance nutrition, strength athlete diet, hydration strategies, and recovery nutrition.",
   keywords: "athlete nutrition, sports nutrition, performance diet, endurance athlete diet, strength athlete nutrition, sports performance nutrition, pre workout meal",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/athlete-nutrition",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Athlete Nutrition Plan | Complete Sports Performance Guide",
     description: "Evidence-based athlete nutrition with meal plans for peak performance.",
-    url: "https://fitplanindia.com/blog/athlete-nutrition",
+    url: "https://www.fitplanindia.com/blog/athlete-nutrition",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -30,7 +47,7 @@ export default function AthleteNutritionPage() {
               Athlete Nutrition: Fuel Peak Performance & Recovery
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover advanced sports nutrition strategies for athletes including performance fueling, recovery optimization, 
+              Discover advanced sports nutrition strategies for athletes including performance fueling, recovery optimization,
               endurance vs strength nutrition, hydration protocols, and complete meal plans for competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,18 +92,18 @@ export default function AthleteNutritionPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Sports Nutrition for Athletes</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Athletic performance nutrition goes beyond basic healthy eating - it's about strategic fueling for training, 
-                competition, and recovery. Athletes have significantly higher energy and nutrient demands than the general 
-                population due to intense training volumes, muscle tissue breakdown, glycogen depletion, increased protein 
-                turnover, and elevated metabolic demands. Proper sports nutrition enhances endurance performance, maximizes 
-                strength and power output, accelerates recovery between sessions, reduces injury risk, maintains immune function, 
-                optimizes body composition, and provides competitive advantage. Key principles include periodized nutrition 
-                (matching intake to training load), precise nutrient timing around workouts, adequate carbohydrate for glycogen 
-                replenishment, high protein for muscle repair, strategic hydration with electrolytes, and recovery-focused meals 
-                post-training. Different sports require different approaches - endurance athletes need more carbohydrates, 
+                Athletic performance nutrition goes beyond basic healthy eating - it's about strategic fueling for training,
+                competition, and recovery. Athletes have significantly higher energy and nutrient demands than the general
+                population due to intense training volumes, muscle tissue breakdown, glycogen depletion, increased protein
+                turnover, and elevated metabolic demands. Proper sports nutrition enhances endurance performance, maximizes
+                strength and power output, accelerates recovery between sessions, reduces injury risk, maintains immune function,
+                optimizes body composition, and provides competitive advantage. Key principles include periodized nutrition
+                (matching intake to training load), precise nutrient timing around workouts, adequate carbohydrate for glycogen
+                replenishment, high protein for muscle repair, strategic hydration with electrolytes, and recovery-focused meals
+                post-training. Different sports require different approaches - endurance athletes need more carbohydrates,
                 strength athletes prioritize protein, while mixed-sport athletes balance both.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-indigo-800">Why Athletes Need Special Nutrition</h4>
@@ -99,7 +116,7 @@ export default function AthleteNutritionPage() {
                     <li>• Recovery determines next workout quality</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-purple-800">Performance Nutrition Goals</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -122,7 +139,7 @@ export default function AthleteNutritionPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Nutrition by Sport Type</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="border-blue-200">
                 <CardHeader>
@@ -157,7 +174,7 @@ export default function AthleteNutritionPage() {
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Performance Foods:</h5>
                       <p className="text-sm text-gray-700">
-                        Oats, rice, pasta, sweet potatoes, bananas, sports drinks, gels, lean proteins, 
+                        Oats, rice, pasta, sweet potatoes, bananas, sports drinks, gels, lean proteins,
                         omega-3 fish for inflammation.
                       </p>
                     </div>
@@ -198,7 +215,7 @@ export default function AthleteNutritionPage() {
                     <div className="bg-purple-50 p-4 rounded-lg">
                       <h5 className="font-semibold mb-2">Performance Foods:</h5>
                       <p className="text-sm text-gray-700">
-                        Chicken, fish, lean beef, eggs, Greek yogurt, cottage cheese, protein powder, 
+                        Chicken, fish, lean beef, eggs, Greek yogurt, cottage cheese, protein powder,
                         rice, oats, sweet potatoes for carb needs.
                       </p>
                     </div>
@@ -227,7 +244,7 @@ export default function AthleteNutritionPage() {
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Focus:</h5>
                     <p className="text-sm text-gray-700">
-                      Balance carbs for repeated sprints/endurance with protein for recovery. Hydration critical 
+                      Balance carbs for repeated sprints/endurance with protein for recovery. Hydration critical
                       for stop-and-go sports.
                     </p>
                   </div>
@@ -243,7 +260,7 @@ export default function AthleteNutritionPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Performance Nutrition Timing</h2>
-            
+
             <div className="space-y-8">
               <Card className="border-orange-200">
                 <CardHeader>
@@ -326,7 +343,7 @@ export default function AthleteNutritionPage() {
                 <CardContent>
                   <div className="bg-purple-100 border-2 border-purple-300 rounded-lg p-4 mb-4">
                     <p className="text-sm text-gray-800 font-semibold">
-                      🎯 Golden Hour: First 30-60 minutes post-exercise is CRITICAL for glycogen replenishment and 
+                      🎯 Golden Hour: First 30-60 minutes post-exercise is CRITICAL for glycogen replenishment and
                       muscle protein synthesis. Don't miss this window!
                     </p>
                   </div>
@@ -368,7 +385,7 @@ export default function AthleteNutritionPage() {
             <p className="text-center text-gray-600 mb-12">
               High-performance nutrition for a 170 lb athlete training 5-6x per week (mixed endurance/strength).
             </p>
-            
+
             <Card className="border-indigo-200 mb-8">
               <CardHeader className="bg-indigo-50">
                 <CardTitle className="text-indigo-800">Training Day - Athlete Nutrition</CardTitle>
@@ -435,13 +452,13 @@ export default function AthleteNutritionPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  On rest/recovery days, reduce carbs by 30-40% (lower glycogen needs) and total calories by 400-500. 
+                  On rest/recovery days, reduce carbs by 30-40% (lower glycogen needs) and total calories by 400-500.
                   Keep protein high for muscle repair. Skip pre/post-workout nutrition.
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h5 className="font-semibold mb-2">Rest Day Example:</h5>
                   <p className="text-sm text-gray-700">
-                    Same protein amounts, reduce rice/grain portions, add more vegetables and healthy fats. 
+                    Same protein amounts, reduce rice/grain portions, add more vegetables and healthy fats.
                     Total: ~2,700-2,900 calories with continued recovery focus.
                   </p>
                 </div>
@@ -456,7 +473,7 @@ export default function AthleteNutritionPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Athlete Hydration Protocol</h2>
-            
+
             <Card className="border-blue-200">
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-3 gap-6 mb-6">
@@ -498,7 +515,7 @@ export default function AthleteNutritionPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Athlete Nutrition Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -525,7 +542,7 @@ export default function AthleteNutritionPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -564,10 +581,10 @@ export default function AthleteNutritionPage() {
               Maximize Your Athletic Performance
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Nutrition provides the fuel, but proper training creates the adaptations. Get sport-specific training 
+              Nutrition provides the fuel, but proper training creates the adaptations. Get sport-specific training
               programs designed for competitive athletes.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Dumbbell className="w-12 h-12 text-white mx-auto mb-4" />
@@ -595,7 +612,7 @@ export default function AthleteNutritionPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Used by competitive athletes worldwide for peak performance nutrition
             </p>

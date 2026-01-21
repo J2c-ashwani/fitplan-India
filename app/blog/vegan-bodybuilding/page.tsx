@@ -9,10 +9,27 @@ export const metadata: Metadata = {
   title: "Vegan Bodybuilding Diet | Complete Plant-Based Muscle Building Guide",
   description: "Complete vegan bodybuilding guide with plant-based muscle building meal plans, protein strategies, supplements, vegan athlete nutrition, and mass gain on plants.",
   keywords: "vegan bodybuilding, plant based bodybuilding, vegan muscle building, vegan protein, plant based athlete, vegan diet for muscle gain, vegan bodybuilding meal plan",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/vegan-bodybuilding",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Vegan Bodybuilding Diet | Plant-Based Muscle Building Guide",
     description: "Evidence-based vegan bodybuilding with plant-based meal plans for muscle growth.",
-    url: "https://fitplanindia.com/blog/vegan-bodybuilding",
+    url: "https://www.fitplanindia.com/blog/vegan-bodybuilding",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -30,7 +47,7 @@ export default function VeganBodybuildingPage() {
               Vegan Bodybuilding: Build Serious Muscle on Plants
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover complete vegan bodybuilding nutrition with plant-based muscle building strategies, high-protein 
+              Discover complete vegan bodybuilding nutrition with plant-based muscle building strategies, high-protein
               vegan meal plans, supplement guidance, and proven approaches to gain mass without animal products.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,16 +92,16 @@ export default function VeganBodybuildingPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Vegan Bodybuilding: Yes, It's Absolutely Possible!</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Building muscle on a vegan diet is not only possible - elite vegan bodybuilders and athletes prove it works at 
-                the highest levels. The key is understanding plant-based protein sources, combining foods for complete amino acid 
-                profiles, consuming adequate calories (often challenging on high-fiber plants), strategic supplementation (B12, 
-                creatine, potentially protein powder), and timing nutrients around workouts. Vegan bodybuilding requires slightly 
-                higher protein intake (2.2-2.6g per kg vs 2.0-2.4g for omnivores) because plant proteins have lower digestibility 
-                and sometimes incomplete amino acid profiles. However, combining legumes with grains, using diverse protein sources, 
-                and proper meal planning easily overcomes these challenges. Benefits include faster recovery (anti-inflammatory 
+                Building muscle on a vegan diet is not only possible - elite vegan bodybuilders and athletes prove it works at
+                the highest levels. The key is understanding plant-based protein sources, combining foods for complete amino acid
+                profiles, consuming adequate calories (often challenging on high-fiber plants), strategic supplementation (B12,
+                creatine, potentially protein powder), and timing nutrients around workouts. Vegan bodybuilding requires slightly
+                higher protein intake (2.2-2.6g per kg vs 2.0-2.4g for omnivores) because plant proteins have lower digestibility
+                and sometimes incomplete amino acid profiles. However, combining legumes with grains, using diverse protein sources,
+                and proper meal planning easily overcomes these challenges. Benefits include faster recovery (anti-inflammatory
                 plants), better cardiovascular health, ethical alignment, and proving that compassion and strength coexist.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-green-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-green-800">Vegan Bodybuilding Advantages</h4>
@@ -97,7 +114,7 @@ export default function VeganBodybuildingPage() {
                     <li>• Proving plants build muscle inspires others</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-emerald-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-emerald-800">Vegan Bodybuilding Challenges</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -120,7 +137,7 @@ export default function VeganBodybuildingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Complete Vegan Protein Sources for Muscle Building</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ High-Protein Vegan Foods:</h4>
@@ -136,7 +153,7 @@ export default function VeganBodybuildingPage() {
                       <li>• Foundation of vegan muscle building</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Soy Products (Complete Proteins):</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -147,7 +164,7 @@ export default function VeganBodybuildingPage() {
                       <li>• Complete amino acid profile - gold standard</li>
                     </ul>
                   </div>
-                  
+
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2">Seitan (Wheat Protein):</h5>
                     <ul className="text-sm text-gray-700 space-y-1">
@@ -193,14 +210,14 @@ export default function VeganBodybuildingPage() {
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-blue-700">📊 Protein Combining Strategy:</h4>
                 <div className="space-y-4">
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h5 className="font-semibold mb-2 text-blue-800">Complete vs Incomplete Proteins:</h5>
                     <p className="text-sm text-gray-700 mb-2">
-                      <strong>Complete proteins</strong> have all 9 essential amino acids: soy products, quinoa, buckwheat, 
+                      <strong>Complete proteins</strong> have all 9 essential amino acids: soy products, quinoa, buckwheat,
                       hemp seeds, chia seeds.
                     </p>
                     <p className="text-sm text-gray-700">
@@ -286,7 +303,7 @@ export default function VeganBodybuildingPage() {
             <p className="text-center text-gray-600 mb-12">
               High-protein, plant-based bulking plan for a 170 lb vegan bodybuilder training 4-5x per week.
             </p>
-            
+
             <Card className="border-green-200 mb-8">
               <CardHeader className="bg-green-50">
                 <CardTitle className="text-green-800">Sample Day - Vegan Bodybuilding Diet</CardTitle>
@@ -395,7 +412,7 @@ export default function VeganBodybuildingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Vegan Bodybuilding Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -422,7 +439,7 @@ export default function VeganBodybuildingPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -461,10 +478,10 @@ export default function VeganBodybuildingPage() {
               Build Muscle on Plants
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Plant-based nutrition provides the fuel, but proper training triggers muscle growth. Get vegan-friendly 
+              Plant-based nutrition provides the fuel, but proper training triggers muscle growth. Get vegan-friendly
               workout programs designed for natural muscle building.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Dumbbell className="w-12 h-12 text-white mx-auto mb-4" />
@@ -492,7 +509,7 @@ export default function VeganBodybuildingPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join the growing vegan bodybuilding community proving plants build muscle
             </p>

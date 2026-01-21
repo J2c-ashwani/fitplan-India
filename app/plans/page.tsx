@@ -32,10 +32,27 @@ export const metadata: Metadata = {
     "Expert-designed diet plans for PCOS, thyroid, diabetes, post-pregnancy, weight loss, and more. Tailored Indian meal plans with proven results.",
   keywords:
     "diet plans India, PCOS diet, thyroid diet, diabetes diet, weight loss plans, specialized meal plans, health condition diets",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Specialized Diet Plans - FitPlan India",
     description: "Expert-designed plans for every health condition and goal.",
-    url: "https://fitplanindia.com/plans",
+    url: "https://www.fitplanindia.com/plans",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "website",
   },
 }
 

@@ -8,15 +8,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Vegetarian Workout Plan | Build Muscle on Plant-Based Diet",
   description: "Complete vegetarian workout guide with muscle-building exercises, strength training for plant-based athletes, recovery strategies, and performance optimization without meat.",
   keywords: "vegetarian workout, plant-based fitness, vegetarian muscle building, vegetarian bodybuilding, vegan workout, plant-based athlete training",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/vegetarian",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Vegetarian Workout Plan | Build Muscle on Plant-Based Diet",
     description: "Evidence-based vegetarian workouts for muscle growth, strength, and athletic performance.",
-    url: "https://fitplanindia.com/workouts/vegetarian",
+    url: "https://www.fitplanindia.com/workouts/vegetarian",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -59,6 +77,13 @@ export default function VegetarianWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Vegetarian Workout Plan | Build Muscle on Plant-Based Diet"
+        description="Complete vegetarian workout guide with muscle-building exercises and recovery strategies for plant-based athletes."
+        keywords={["vegetarian workout", "plant based fitness", "vegetarian muscle building", "vegan bodybuilding", "meat free athlete"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

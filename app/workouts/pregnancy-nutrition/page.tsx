@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Prenatal Exercise Program | Safe Pregnancy Workouts for Expecting Mothers",
   description: "Complete prenatal exercise guide with safe pregnancy workouts, trimester-specific exercises, pelvic floor strengthening, and fitness routines for healthy pregnancy and easier delivery.",
   keywords: "prenatal exercise, pregnancy workouts, pregnancy fitness, prenatal yoga, safe exercises pregnancy, pregnancy exercise by trimester, pelvic floor exercises",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/pregnancy-nutrition",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Prenatal Exercise Program | Safe Pregnancy Workouts",
     description: "Safe, effective exercises for healthy pregnancy and easier delivery.",
-    url: "https://fitplanindia.com/workouts/pregnancy-nutrition",
+    url: "https://www.fitplanindia.com/workouts/pregnancy-nutrition",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function PrenatalWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Prenatal Exercise Program | Safe Workouts for Expecting Mothers"
+        description="Complete prenatal exercise guide with safe pregnancy workouts, trimester-specific exercises, and pelvic floor strengthening."
+        keywords={["prenatal workout", "pregnancy exercises", "safe workout for pregnant", "trimester fitness", "pelvic floor exercises"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

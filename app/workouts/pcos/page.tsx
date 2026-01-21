@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "PCOS Workout Plan 2025 | Best Home & Gym Exercises for Weight Loss",
   description: "Complete PCOS workout guide with proven home and gym exercises to improve insulin sensitivity, balance hormones, and achieve sustainable weight loss naturally.",
   keywords: "PCOS workout, PCOS exercise plan, PCOS weight loss workout, best exercises for PCOS, PCOS gym routine, home workout for PCOS, insulin resistance exercises",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/pcos",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "PCOS Workout Plan 2025 | Home & Gym Exercise Guide",
     description: "Evidence-based PCOS workout routines for home and gym to manage symptoms and boost weight loss.",
-    url: "https://fitplanindia.com/workouts/pcos",
+    url: "https://www.fitplanindia.com/workouts/pcos",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -61,6 +79,13 @@ export default function PCOSWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="PCOS Workout Plan 2025 | Best Home & Gym Exercises"
+        description="Complete PCOS workout guide with proven home and gym exercises to improve insulin sensitivity, balance hormones, and achieve naturally."
+        keywords={["PCOS workout", "insulin resistance exercises", "hormone balance fitness", "weight loss with pcos", "home workout pcos"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

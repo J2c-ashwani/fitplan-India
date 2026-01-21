@@ -9,11 +9,35 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
+
 
 export const metadata: Metadata = {
   title: "Hyperthyroidism Exercise Plan 2025 | Best Workouts for Overactive Thyroid Weight Gain",
   description: "Complete hyperthyroidism workout plan with gentle strength training, low-impact cardio, and muscle-building exercises for overactive thyroid. Expert-designed for USA, UK, Canada, Australia.",
-  keywords: "hyperthyroidism exercise, overactive thyroid workout, Graves disease exercise, hyperthyroidism weight gain workout, best exercise for hyperthyroidism",
+  keywords: "hyperthyroidism exercise, overactive thyroid workout, Graves disease exercise, hyperthyroidism weight gain workout, best exercise for hyperthyroidism, gentle strength training, thyroid friendly workout",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/hyperthyroidism",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    title: "Hyperthyroidism Exercise Plan 2025 | Gentle Muscle Building",
+    description: "Safe and effective workout routine for hyperthyroidism to build muscle and support healthy weight gain.",
+    url: "https://www.fitplanindia.com/workouts/hyperthyroidism",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
+  },
 }
 
 export default function HyperthyroidismWorkoutPage() {
@@ -54,6 +78,13 @@ export default function HyperthyroidismWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Hyperthyroidism Exercise Plan 2025 | Workouts for Overactive Thyroid"
+        description="Complete hyperthyroidism workout plan with gentle strength training, low-impact cardio, and muscle-building exercises for overactive thyroid."
+        keywords={["hyperthyroidism workout", "overactive thyroid exercises", "graves disease fitness", "weight gain for thyroid", "gentle strength training"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

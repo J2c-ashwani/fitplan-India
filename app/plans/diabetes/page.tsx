@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Diabetes Diet Plan 2025 | Best Diet for Type 2 Diabetes Weight Loss USA, UK, Australia",
   description: "Complete diabetes diet plan with low-GI foods, blood sugar control, weight loss strategies, and proven diabetic meal plans. Expert-designed for USA, UK, Canada, Australia.",
   keywords: "diabetes diet plan, diabetic diet, type 2 diabetes diet, diabetes weight loss, diabetic meal plan, low glycemic diet, blood sugar control diet, best foods for diabetes, diabetes food list",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/diabetes",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Diabetes Diet Plan 2025 | Complete Guide for Blood Sugar Control",
     description: "Expert-designed diabetes diet with proven strategies for blood sugar control, weight loss, and diabetes management.",
-    url: "https://fitplanindia.com/plans/diabetes",
+    url: "https://www.fitplanindia.com/plans/diabetes",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function DiabetesDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Diabetes Diet Plan 2025 | Best Diet for Type 2 Diabetes"
+        description="Complete diabetes diet plan with low-GI foods, blood sugar control, weight loss strategies, and proven diabetic meal plans."
+        keywords={["diabetes diet", "diabetic meal plan", "sugar control", "low GI diet", "type 2 diabetes"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-red-600 to-rose-700 text-white pt-24 pb-16">

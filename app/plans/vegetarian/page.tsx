@@ -9,15 +9,33 @@ import StickyTOC from "@/components/StickyTOC"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Vegetarian Diet Plan 2025 | Complete Vegetarian Weight Loss & Nutrition Guide USA, UK, India",
   description: "Complete vegetarian diet plan with plant-based protein sources, vegetarian meal plans, weight loss strategies, and nutrition guide. Expert-designed for USA, UK, Canada, Australia, India.",
   keywords: "vegetarian diet plan, vegetarian weight loss, vegetarian meal plan, plant based diet, vegetarian protein sources, vegetarian nutrition, Indian vegetarian diet, lacto-ovo vegetarian",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/vegetarian",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Vegetarian Diet Plan 2025 | Complete Plant-Based Guide",
     description: "Expert-designed vegetarian diet with proven strategies for weight loss, muscle building, and optimal health on a plant-based diet.",
-    url: "https://fitplanindia.com/plans/vegetarian",
+    url: "https://www.fitplanindia.com/plans/vegetarian",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function VegetarianDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Vegetarian Diet Plan 2025 | Complete Guide for Weight Loss & Muscle"
+        description="Complete vegetarian diet plan with plant-based protein sources, vegetarian meal plans, and nutrition strategies."
+        keywords={["vegetarian diet", "plant based nutrition", "veg weight loss", "vegetarian muscle building"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-600 to-lime-700 text-white pt-24 pb-16">

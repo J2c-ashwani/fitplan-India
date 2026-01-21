@@ -9,13 +9,27 @@ export const metadata: Metadata = {
   title: "Vegetarian Diet Plan | Complete Plant-Based Nutrition Guide",
   description: "Complete vegetarian diet guide with balanced meal plans, protein sources, nutrient optimization, weight loss strategies, and muscle building for vegetarians and plant-based eaters.",
   keywords: "vegetarian diet plan, vegetarian meal plan, vegetarian protein sources, plant-based diet, vegetarian weight loss, vegetarian nutrition, high protein vegetarian diet",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/vegetarian",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Vegetarian Diet Plan | Complete Plant-Based Nutrition Guide",
     description: "Science-backed vegetarian diet with meal plans, protein optimization, and complete nutrition strategies.",
-    url: "https://fitplanindia.com/blog/vegetarian",
-  },
-  alternates: {
-    canonical: "/plans/vegetarian",
+    url: "https://www.fitplanindia.com/blog/vegetarian",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 

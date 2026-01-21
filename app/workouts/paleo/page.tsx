@@ -9,15 +9,33 @@ import CalculatorWidget from "@/components/CalculatorWidget"
 import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Paleo Workout Program | Primal Fitness & Functional Training",
   description: "Complete paleo workout guide with primal movement patterns, functional fitness, CrossFit-style training, and natural bodyweight exercises for primal strength and athleticism.",
   keywords: "paleo workout, primal fitness, functional training, paleo exercise, CrossFit paleo, bodyweight training, primal movement, caveman workout",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/workouts/paleo",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Paleo Workout Program | Primal Fitness Training",
     description: "Train like our ancestors with functional, primal movement patterns.",
-    url: "https://fitplanindia.com/workouts/paleo",
+    url: "https://www.fitplanindia.com/workouts/paleo",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -60,6 +78,13 @@ export default function PaleoWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Paleo Workout Program | Primal Fitness & Functional Training"
+        description="Complete paleo workout guide with primal movement patterns, functional fitness, CrossFit-style training, and natural bodyweight exercises."
+        keywords={["paleo workout", "primal movement", "functional fitness", "crossfit training", "natural movement"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       {/* Hero Section */}

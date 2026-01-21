@@ -9,10 +9,27 @@ export const metadata: Metadata = {
   title: "Exercise & Fitness Diet Plan | Complete Nutrition for Active Lifestyle",
   description: "Complete exercise and fitness diet guide with meal plans for workouts, pre/post-workout nutrition, muscle recovery, performance optimization, and fueling active lifestyles.",
   keywords: "fitness diet, exercise nutrition, workout meal plan, pre workout nutrition, post workout meal, sports nutrition, active lifestyle diet, performance nutrition",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/blog/exercise-fitness",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Exercise & Fitness Diet Plan | Nutrition for Active People",
     description: "Science-backed fitness nutrition with workout meal plans and performance optimization strategies.",
-    url: "https://fitplanindia.com/blog/exercise-fitness",
+    url: "https://www.fitplanindia.com/blog/exercise-fitness",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
@@ -30,7 +47,7 @@ export default function ExerciseFitnessPage() {
               Exercise & Fitness Diet: Fuel Your Active Lifestyle
             </h1>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover optimal nutrition strategies for exercise and fitness including pre/post-workout meals, 
+              Discover optimal nutrition strategies for exercise and fitness including pre/post-workout meals,
               performance optimization, muscle recovery, energy management, and complete meal plans for active people.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,14 +93,14 @@ export default function ExerciseFitnessPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Nutrition for Exercise & Fitness</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Active individuals have different nutritional needs than sedentary people. Regular exercise increases 
-                calorie expenditure, depletes glycogen stores, breaks down muscle tissue, and stresses the body's systems. 
-                Proper fitness nutrition supports workout performance, enhances recovery, builds lean muscle, reduces injury 
-                risk, improves body composition, and maximizes training adaptations. Whether you're a gym enthusiast, runner, 
-                athlete, or simply exercise regularly, understanding pre-workout fueling, post-workout recovery nutrition, 
+                Active individuals have different nutritional needs than sedentary people. Regular exercise increases
+                calorie expenditure, depletes glycogen stores, breaks down muscle tissue, and stresses the body's systems.
+                Proper fitness nutrition supports workout performance, enhances recovery, builds lean muscle, reduces injury
+                risk, improves body composition, and maximizes training adaptations. Whether you're a gym enthusiast, runner,
+                athlete, or simply exercise regularly, understanding pre-workout fueling, post-workout recovery nutrition,
                 hydration strategies, and overall dietary balance is crucial for achieving your fitness goals.
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-orange-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-orange-800">Fitness Nutrition Goals</h4>
@@ -96,7 +113,7 @@ export default function ExerciseFitnessPage() {
                     <li>• Enhance performance and endurance</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-red-50 p-6 rounded-lg">
                   <h4 className="font-bold text-lg mb-3 text-red-800">Active Person Calorie Needs</h4>
                   <ul className="text-gray-700 space-y-2">
@@ -118,7 +135,7 @@ export default function ExerciseFitnessPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Workout Nutrition Timing Strategy</h2>
-            
+
             <div className="space-y-8">
               {/* Pre-Workout */}
               <Card className="border-blue-200">
@@ -154,8 +171,8 @@ export default function ExerciseFitnessPage() {
                   <div className="bg-blue-100 border border-blue-300 rounded-lg p-4">
                     <h5 className="font-semibold mb-2 text-blue-800">✅ Best Pre-Workout Foods:</h5>
                     <p className="text-sm text-gray-700">
-                      <strong>Carb Focus:</strong> Oatmeal, bananas, whole grain toast, rice cakes, sweet potato, pasta. 
-                      <strong>Protein:</strong> Greek yogurt, protein shake, eggs, chicken breast. 
+                      <strong>Carb Focus:</strong> Oatmeal, bananas, whole grain toast, rice cakes, sweet potato, pasta.
+                      <strong>Protein:</strong> Greek yogurt, protein shake, eggs, chicken breast.
                       <strong>Avoid:</strong> High fat/fiber foods (slow digestion, cause cramping). Stay hydrated - drink 16-20 oz water.
                     </p>
                   </div>
@@ -205,7 +222,7 @@ export default function ExerciseFitnessPage() {
                 <CardContent>
                   <div className="bg-purple-100 border-2 border-purple-300 rounded-lg p-4 mb-4">
                     <p className="text-sm text-gray-800 font-semibold">
-                      🎯 The "Anabolic Window": Within 30-60 minutes post-workout is optimal for nutrient absorption. 
+                      🎯 The "Anabolic Window": Within 30-60 minutes post-workout is optimal for nutrient absorption.
                       Muscles are primed to uptake protein and carbs for recovery and growth.
                     </p>
                   </div>
@@ -236,8 +253,8 @@ export default function ExerciseFitnessPage() {
                   <div className="bg-purple-100 border border-purple-300 rounded-lg p-4">
                     <h5 className="font-semibold mb-2 text-purple-800">✅ Best Post-Workout Options:</h5>
                     <p className="text-sm text-gray-700">
-                      <strong>Quick (liquid):</strong> Whey protein shake, chocolate milk, smoothie with protein powder. 
-                      <strong>Solid meals:</strong> Grilled chicken + sweet potato, salmon + quinoa, eggs + whole grain toast, 
+                      <strong>Quick (liquid):</strong> Whey protein shake, chocolate milk, smoothie with protein powder.
+                      <strong>Solid meals:</strong> Grilled chicken + sweet potato, salmon + quinoa, eggs + whole grain toast,
                       Greek yogurt + granola + fruit. <strong>Always rehydrate:</strong> 16-24 oz water per pound lost during exercise.
                     </p>
                   </div>
@@ -256,7 +273,7 @@ export default function ExerciseFitnessPage() {
             <p className="text-center text-gray-600 mb-12">
               This plan supports 4-5 workouts per week with 120-140g protein daily for muscle recovery and performance.
             </p>
-            
+
             <Card className="border-orange-200 mb-8">
               <CardHeader className="bg-orange-50">
                 <CardTitle className="text-orange-800">Sample Day - Training Day</CardTitle>
@@ -317,7 +334,7 @@ export default function ExerciseFitnessPage() {
               </CardHeader>
               <CardContent className="pt-6">
                 <p className="text-gray-700 mb-4">
-                  On rest days, reduce carbs slightly (50-100g less) and total calories by 200-300. Keep protein high for recovery. 
+                  On rest days, reduce carbs slightly (50-100g less) and total calories by 200-300. Keep protein high for recovery.
                   Skip pre/post-workout nutrition timing - just eat regular balanced meals.
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -340,7 +357,7 @@ export default function ExerciseFitnessPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Hydration for Active People</h2>
-            
+
             <Card className="border-blue-200">
               <CardContent className="pt-6">
                 <div className="grid md:grid-cols-3 gap-6">
@@ -381,7 +398,7 @@ export default function ExerciseFitnessPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Fitness Nutrition Success Tips</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="font-bold text-lg mb-4 text-green-700">✅ Best Practices:</h4>
@@ -408,7 +425,7 @@ export default function ExerciseFitnessPage() {
                   </li>
                 </ul>
               </div>
-              
+
               <div>
                 <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Mistakes:</h4>
                 <ul className="space-y-3 text-gray-700">
@@ -447,10 +464,10 @@ export default function ExerciseFitnessPage() {
               Complete Your Fitness Journey
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Proper nutrition fuels your workouts, but you need an effective training plan to maximize results. 
+              Proper nutrition fuels your workouts, but you need an effective training plan to maximize results.
               Get your complete workout program today.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               {/* Workout Guide CTA */}
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
@@ -480,7 +497,7 @@ export default function ExerciseFitnessPage() {
                 </Button>
               </div>
             </div>
-            
+
             <p className="text-white text-sm mt-6">
               ✨ Join thousands optimizing fitness through proper nutrition and training
             </p>

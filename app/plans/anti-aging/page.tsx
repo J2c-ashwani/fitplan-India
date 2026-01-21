@@ -11,13 +11,30 @@ import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "Anti-Aging & Eye Health Diet Plan | Rasayana Therapy | FitPlan India",
-    description: "Ayurvedic anti-aging diet (Rasayana) to reverse wrinkles, improve vision, and boost longevity. Collagen-rich foods and eye care nutrition guide.",
-    keywords: "anti aging diet plan, rasayana therapy ayurveda, diet for younger skin, foods for eye health, ayurvedic anti aging secrets, collagen rich indian food",
+    title: "Anti-Aging Diet Plan | Best Foods for Younger Skin & Eyes | FitPlan India",
+    description: "Ayurvedic anti-aging diet (Rasayana) to reverse wrinkles, improve vision, and boost longevity. Collagen-rich foods and eye care nutrition guide. Evidence-based plan for younger skin.",
+    keywords: "anti aging diet plan, rasayana therapy ayurveda, diet for younger skin, foods for eye health, ayurvedic anti aging secrets, collagen rich indian food, anti aging foods india, best diet for glowing skin",
+    alternates: {
+        canonical: "https://www.fitplanindia.com/plans/anti-aging",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
     openGraph: {
         title: "Anti-Aging & Eye Health Diet Plan | Turn Back the Clock Naturally",
         description: "Reverse signs of aging and protect your vision with this expert blend of Ayurvedic Rasayana herbs and modern collagen nutrition.",
-        url: "https://fitplanindia.com/plans/anti-aging",
+        url: "https://www.fitplanindia.com/plans/anti-aging",
+        siteName: "FitPlan India",
+        locale: "en_IN",
+        type: "article",
     },
 }
 

@@ -11,13 +11,30 @@ import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Hormonal Imbalance Diet Plan 2025 | PCOS, Thyroid, Menopause Weight Loss USA, UK",
+  title: "Hormonal Imbalance Diet Plan | PCOS, Thyroid & Menopause | FitPlan India",
   description: "Complete hormonal imbalance diet plan for PCOS, thyroid, menopause, and hormone-related weight gain. Expert-designed for women in USA, UK, Canada, Australia.",
-  keywords: "hormonal imbalance diet, PCOS diet plan, thyroid diet, menopause weight loss, hormone balance diet, PCOS weight loss, hypothyroidism diet, estrogen dominance",
+  keywords: "hormonal imbalance diet, PCOS diet plan, thyroid diet, menopause weight loss, hormone balance diet, PCOS weight loss, hypothyroidism diet, estrogen dominance, food for hormonal balance",
+  alternates: {
+    canonical: "https://www.fitplanindia.com/plans/hormonal-imbalance",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Hormonal Imbalance Diet Plan 2025 | Complete Guide",
     description: "Expert-designed diet plan to balance hormones naturally and achieve sustainable weight loss for PCOS, thyroid, and menopause.",
-    url: "https://fitplanindia.com/plans/hormonal-imbalance",
+    url: "https://www.fitplanindia.com/plans/hormonal-imbalance",
+    siteName: "FitPlan India",
+    locale: "en_IN",
+    type: "article",
   },
 }
 
