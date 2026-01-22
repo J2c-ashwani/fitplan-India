@@ -86,8 +86,8 @@ export default function HomePage() {
               Personalized Weight Loss Plans for Every Condition
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted by
-              clients across India & worldwide in USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.
+              Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Growing client base
+              in India, USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
@@ -109,15 +109,15 @@ export default function HomePage() {
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5" />
-                <span>Certified Professionals</span>
+                <span>Certified Nutritionists</span>
               </div>
               <div className="flex items-center gap-2">
                 <Star className="h-5 w-5 fill-white" />
-                <span>4.8/5 Rating</span>
+                <span>Science-Based Approach</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5" />
-                <span>100% Personalized</span>
+                <span>100% Customized</span>
               </div>
             </div>
           </div>

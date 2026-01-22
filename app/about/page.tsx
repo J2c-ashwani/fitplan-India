@@ -30,20 +30,20 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-6xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
             <div className="p-4">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">10k+</div>
-              <div className="text-sm text-gray-500 font-medium uppercase tracking-wider">Clients Helped</div>
+              <div className="text-4xl font-bold text-emerald-600 mb-2">100%</div>
+              <div className="text-sm text-gray-500 font-medium uppercase tracking-wider">Personalized Plans</div>
             </div>
             <div className="p-4">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">95%</div>
-              <div className="text-sm text-gray-500 font-medium uppercase tracking-wider">Success Rate</div>
+              <div className="text-4xl font-bold text-emerald-600 mb-2">BAMS</div>
+              <div className="text-sm text-gray-500 font-medium uppercase tracking-wider">Qualified Doctor</div>
             </div>
             <div className="p-4">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">15+</div>
-              <div className="text-sm text-gray-500 font-medium uppercase tracking-wider">Certified Experts</div>
+              <div className="text-4xl font-bold text-emerald-600 mb-2">2020</div>
+              <div className="text-sm text-gray-500 font-medium uppercase tracking-wider">Established</div>
             </div>
             <div className="p-4">
-              <div className="text-4xl font-bold text-emerald-600 mb-2">4.9</div>
-              <div className="text-sm text-gray-500 font-medium uppercase tracking-wider">Google Rating</div>
+              <div className="text-4xl font-bold text-emerald-600 mb-2">24/7</div>
+              <div className="text-sm text-gray-500 font-medium uppercase tracking-wider">Support Available</div>
             </div>
           </div>
         </div>
