@@ -517,7 +517,7 @@ export default function ContactPage() {
                 <CardContent className="space-y-3">
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-gray-700">10,000+ successful consultations worldwide</p>
+                    <p className="text-sm text-gray-700">Expert consultations by certified professionals</p>
                   </div>
                   <div className="flex items-start gap-2">
                     <CheckCircle className="h-5 w-5 text-emerald-600 mt-0.5 flex-shrink-0" />

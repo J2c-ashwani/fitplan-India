@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="text-2xl font-bold text-white group-hover:text-emerald-400 transition-colors">FitPlan</span>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-4 max-w-sm">
-              Personalized weight loss plans for PCOS, thyroid, diabetes, and more. Trusted by 10,000+ clients worldwide
+              Personalized weight loss plans for PCOS, thyroid, diabetes, and more. Trusted by clients across India & worldwide
               in USA, UK, Canada, Australia.
             </p>
             <div className="flex items-center gap-2 text-sm text-gray-400">
@@ -143,7 +143,7 @@ export default function Footer() {
               <span className="hidden md:inline">•</span>
               <span className="flex items-center gap-2">
                 <Heart className="w-4 h-4 text-red-500 fill-red-500" />
-                10,000+ Happy Clients
+                Happy Clients Worldwide
               </span>
             </div>
           </div>

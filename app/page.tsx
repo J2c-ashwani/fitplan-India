@@ -8,7 +8,7 @@ import PriceDisplay from "@/components/PriceDisplay"
 
 export const metadata: Metadata = {
   title: "FitPlan 2025 | Personalized Weight Loss Plans for PCOS, Thyroid, Diabetes - USA, UK, Australia",
-  description: "Get personalized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted fitness platform with 10,000+ successful transformations in USA, UK, Canada, Australia.",
+  description: "Get personalized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Science-based nutrition from certified Indian nutritionists. Plans tailored to your lifestyle and goals.",
   keywords: "weight loss plans, PCOS diet plan, thyroid weight loss, diabetes diet, personalized diet plan, online nutritionist, fitness coaching USA UK Australia Canada",
 }
 
@@ -80,14 +80,14 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
-              🏆 World's Leading Health & Fitness Platform
+              🇮🇳 Trusted Indian Health & Fitness Platform
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Personalized Weight Loss Plans for Every Condition
             </h1>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
               Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted by
-              10,000+ clients worldwide in USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.
+              clients across India & worldwide in USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
@@ -105,7 +105,7 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
               <div className="flex items-center gap-2">
                 <Users className="h-5 w-5" />
-                <span>10,000+ Transformations</span>
+                <span>Personalized Plans</span>
               </div>
               <div className="flex items-center gap-2">
                 <Award className="h-5 w-5" />
@@ -286,7 +286,7 @@ export default function HomePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 text-sm">
-                  10,000+ successful transformations worldwide with average 10-20 lbs loss in first month.
+                  Personalized plans designed by certified nutritionists for sustainable weight loss.
                 </p>
               </CardContent>
             </Card>
@@ -357,16 +357,16 @@ export default function HomePage() {
         <div className="container mx-auto max-w-5xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">10,000+</div>
-              <div className="text-emerald-100">Successful Clients</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">100%</div>
+              <div className="text-emerald-100">Personalized Plans</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">4.8/5</div>
-              <div className="text-emerald-100">Average Rating</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">15+</div>
+              <div className="text-emerald-100">Certified Experts</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">10-20 lbs</div>
-              <div className="text-emerald-100">Average Loss (Month 1)</div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">24/7</div>
+              <div className="text-emerald-100">Support Available</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-bold mb-2">12+</div>

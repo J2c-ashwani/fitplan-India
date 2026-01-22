@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: "%s | FitPlan India",
   },
   description:
-    "Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted by 10,000+ clients worldwide in USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.",
+    "Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Trusted by clients across India & worldwide in USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.",
   keywords: [
     "Indian diet plan for weight loss",
     "PCOS Indian diet plan",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FitPlan India - Authentic Indian Diet Plans for Global Weight Loss",
     description:
-      "#1 Rated Indian Diet Plans for weight loss, PCOS, and Thyroid. Trusted by 20,000+ clients across USA, UK, Canada, Australia & India.",
+      "Expert Indian Diet Plans for weight loss, PCOS, and Thyroid. Science-based nutrition from certified professionals.",
     url: "https://www.fitplanindia.com",
     siteName: "FitPlan India",
     locale: "en_US",
@@ -87,7 +87,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FitPlan India - Authentic Indian Diet Plans for Global Weight Loss",
     description:
-      "#1 Rated Indian Diet Plans for weight loss, PCOS, and Thyroid. Trusted by 20,000+ clients across USA, UK, Canada, Australia & India.",
+      "Expert Indian Diet Plans for weight loss, PCOS, and Thyroid. Science-based nutrition from certified professionals.",
     creator: "@fitplanindia",
     images: ["/og-image.jpg"],
   },

@@ -702,7 +702,7 @@ export default function PCOSWorkoutPage() {
             </div>
 
             <p className="text-purple-200 text-sm mt-6">
-              ✨ Join 10,000+ women managing PCOS naturally through diet and exercise
+              ✨ Join women managing PCOS naturally through diet and exercise
             </p>
           </div>
 
