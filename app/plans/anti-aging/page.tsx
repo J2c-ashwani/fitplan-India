@@ -309,7 +309,7 @@ export default function AntiAgingDietPage() {
                                 <Sparkles className="w-12 h-12 text-indigo-200 mx-auto mb-4" />
                                 <h4 className="font-semibold text-white mb-2 text-xl">Personalized Longevity Plan</h4>
                                 <p className="text-indigo-100 text-sm mb-4">
-                                    Custom Rasayana diet + Eye exercises + Lifestyle routine - <PriceDisplay amountIn={500} amountUs={50} />
+                                    Custom Rasayana diet + Eye exercises + Lifestyle routine - <PriceDisplay amountIn={300} amountUs={50} />
                                 </p>
                                 <Button size="lg" className="w-full bg-white text-indigo-900 hover:bg-stone-100 font-semibold" asChild>
                                     <Link href="/contact#contact-form">Book Consultation</Link>

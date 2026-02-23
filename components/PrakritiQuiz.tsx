@@ -223,7 +223,7 @@ export default function PrakritiQuiz() {
                                 </Button>
                                 <Button className="bg-emerald-600 hover:bg-emerald-700 text-white" asChild>
                                     <Link href="/contact#contact-form">
-                                        Get Full {result} Diet Plan - <PriceDisplay amountIn={500} amountUs={50} />
+                                        Get Full {result} Diet Plan - <PriceDisplay amountIn={300} amountUs={50} />
                                     </Link>
                                 </Button>
                             </div>

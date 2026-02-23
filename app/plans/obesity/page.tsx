@@ -497,9 +497,9 @@ export default function ObesityWeightLossPage() {
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Obesity Consultation</h4>
-                <p className="text-white text-sm mb-4">Personalized plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
+                <p className="text-white text-sm mb-4">Personalized plan - <PriceDisplay amountIn={300} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-indigo-600" asChild>
-                  <Link href="/contact#contact-form">Book Now - <PriceDisplay amountIn={500} amountUs={50} /></Link>
+                  <Link href="/contact#contact-form">Book Now - <PriceDisplay amountIn={300} amountUs={50} /></Link>
                 </Button>
               </div>
 

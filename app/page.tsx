@@ -98,7 +98,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
-                <Link href="/contact#contact-form">Book Consultation - <PriceDisplay amountIn={500} amountUs={50} /></Link>
+                <Link href="/contact#contact-form">Book Consultation - <PriceDisplay amountIn={300} amountUs={50} /></Link>
               </Button>
               <Button
                 size="lg"
@@ -329,7 +329,7 @@ export default function HomePage() {
                 1
               </div>
               <h3 className="font-bold text-lg mb-2 text-gray-900">Book Consultation</h3>
-              <div className="text-sm text-gray-600"><PriceDisplay amountIn={500} amountUs={50} /> one-time consultation fee. Get personalized assessment of your health and goals.</div>
+              <div className="text-sm text-gray-600"><PriceDisplay amountIn={300} amountUs={50} /> one-time consultation fee. Get personalized assessment of your health and goals.</div>
             </div>
 
             <div className="text-center">
@@ -389,11 +389,11 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Start Your Transformation?</h2>
           <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Join thousands worldwide who have successfully achieved their weight loss goals with our personalized plans.
-            Book your consultation today for just <PriceDisplay amountIn={500} amountUs={50} />!
+            Book your consultation today for just <PriceDisplay amountIn={300} amountUs={50} />!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
-              <Link href="/contact#contact-form">Book Consultation - <PriceDisplay amountIn={500} amountUs={50} /></Link>
+              <Link href="/contact#contact-form">Book Consultation - <PriceDisplay amountIn={300} amountUs={50} /></Link>
             </Button>
             <Button
               size="lg"

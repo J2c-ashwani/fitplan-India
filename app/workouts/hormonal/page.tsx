@@ -537,7 +537,7 @@ export default function HormonalWorkoutsPage() {
               <div className="bg-white/10 rounded-lg p-6 flex-1 max-w-md backdrop-blur-sm">
                 <Heart className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2">Personalized Program</h4>
-                <p className="text-white text-sm mb-4">Custom plan - <PriceDisplay amountIn={500} amountUs={50} /></p>
+                <p className="text-white text-sm mb-4">Custom plan - <PriceDisplay amountIn={300} amountUs={50} /></p>
                 <Button size="lg" className="w-full bg-white text-violet-600" asChild>
                   <Link href="/contact">Get Custom Plan</Link>
                 </Button>

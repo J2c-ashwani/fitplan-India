@@ -309,7 +309,7 @@ export default function SkinDetoxDietPage() {
                                 <Sparkles className="w-12 h-12 text-rose-200 mx-auto mb-4" />
                                 <h4 className="font-semibold text-white mb-2 text-xl">Personalized Detox Plan</h4>
                                 <p className="text-rose-100 text-sm mb-4">
-                                    Custom anti-acne meal plan + Herb guide + Lifestyle tips - <PriceDisplay amountIn={500} amountUs={50} />
+                                    Custom anti-acne meal plan + Herb guide + Lifestyle tips - <PriceDisplay amountIn={300} amountUs={50} />
                                 </p>
                                 <Button size="lg" className="w-full bg-white text-rose-900 hover:bg-stone-100 font-semibold" asChild>
                                     <Link href="/contact#contact-form">Book Consultation</Link>

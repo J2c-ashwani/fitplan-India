@@ -309,7 +309,7 @@ export default function HairGrowthDietPage() {
                                 <Scissors className="w-12 h-12 text-emerald-200 mx-auto mb-4" />
                                 <h4 className="font-semibold text-white mb-2 text-xl">Personalized Hair Plan</h4>
                                 <p className="text-emerald-100 text-sm mb-4">
-                                    Custom meal plan + Supplement guide + Natural remedies - <PriceDisplay amountIn={500} amountUs={50} />
+                                    Custom meal plan + Supplement guide + Natural remedies - <PriceDisplay amountIn={300} amountUs={50} />
                                 </p>
                                 <Button size="lg" className="w-full bg-white text-emerald-900 hover:bg-stone-100 font-semibold" asChild>
                                     <Link href="/contact#contact-form">Book Consultation</Link>

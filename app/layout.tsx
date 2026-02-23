@@ -6,7 +6,8 @@ import { JsonLd } from "@/components/json-ld"
 import Header from "@/components/Header"
 import Footer from "@/app/components/Footer"
 import { Analytics } from "@vercel/analytics/next"
-import FloatingAIButton from "@/components/FloatingAIButton"
+import dynamic from "next/dynamic"
+const FloatingAIButton = dynamic(() => import("@/components/FloatingAIButton"))
 import Script from "next/script"  // ✅ Added for AdSense
 import { CurrencyProvider } from "@/components/CurrencyProvider"
 import CookieConsent from "@/components/CookieConsent"
@@ -103,12 +104,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`} suppressHydrationWarning>
       <head>
-        {/* ✅ Google AdSense (Static tag for crawler verification) */}
-        <script
-          async
+        {/* ✅ Google AdSense (Lazy loaded to prevent render blocking) */}
+        <Script
+          id="adsense-init"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
           crossOrigin="anonymous"
-        ></script>
+          strategy="lazyOnload"
+        />
 
 
         {/* ✅ Theme color for mobile browsers */}

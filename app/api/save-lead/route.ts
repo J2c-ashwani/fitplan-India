@@ -13,6 +13,7 @@ export async function POST(req: Request) {
       status,
       leadSource,
       updateExisting,
+      leadId,
     } = body;
 
     if (!name || !email || !mobile || !status) {
@@ -44,8 +45,6 @@ export async function POST(req: Request) {
     const spreadsheetId = process.env.GOOGLE_SHEET_ID!;
     const range = "Leads!A:H";
 
-    let existingRowIndex: number | null = null;
-
     // 🟢 Step 1: Check if lead already exists (only if updateExisting is true)
     if (updateExisting) {
       try {
@@ -55,19 +54,19 @@ export async function POST(req: Request) {
         });
         const rows = readRes.data.values || [];
 
-        existingRowIndex = rows.findIndex(
-          (row) => row[2] === email && row[3] === mobile
-        );
+        /// Find the existing row index
+        let rowIndex = -1;
+        if (leadId && leadId > 0 && leadId <= rows.length) {
+          // leadId is the 1-based exact row number
+          rowIndex = leadId - 1;
+        } else {
+          rowIndex = rows.findIndex((row) => row[2] === email && row[3] === mobile);
+        }
 
-        if (existingRowIndex !== -1) {
-          console.log(
-            `🔄 Existing row found at index ${
-              existingRowIndex + 1
-            }, updating...`
-          );
+        if (rowIndex !== -1) {
+          console.log(`🔄 Existing row found at index ${rowIndex + 1}, updating...`);
 
-          const timestamp =
-            rows[existingRowIndex][0] || new Date().toLocaleString();
+          const timestamp = rows[rowIndex][0] || new Date().toLocaleString();
 
           const updatedRow = [
             timestamp,
@@ -80,9 +79,10 @@ export async function POST(req: Request) {
             status,
           ];
 
-          const updateRange = `Leads!A${existingRowIndex + 1}:H${
-            existingRowIndex + 1
-          }`;
+          // Use the absolute row index (+1 for 1-based, ignoring any header offsets because rows array includes header if range is A:H)
+          const actualRowNumber = rowIndex + 1;
+          const updateRange = `Leads!A${actualRowNumber}:H${actualRowNumber}`;
+
           await sheets.spreadsheets.values.update({
             spreadsheetId,
             range: updateRange,
@@ -90,7 +90,7 @@ export async function POST(req: Request) {
             requestBody: { values: [updatedRow] },
           });
 
-          return NextResponse.json({ success: true, updatedRow });
+          return NextResponse.json({ success: true, updatedRow, leadId: actualRowNumber });
         }
       } catch (err) {
         console.error(

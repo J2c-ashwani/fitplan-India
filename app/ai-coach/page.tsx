@@ -4,6 +4,7 @@ import ChatUi from "@/components/ChatUi"
 import { useCurrency } from "@/components/CurrencyProvider"
 import { useState, useEffect } from "react"
 import { Menu, X, Clock, Trash2, MessageSquare, Plus } from "lucide-react"
+import { load } from "@cashfreepayments/cashfree-js"
 
 interface ChatMessage {
   sender: string
@@ -31,7 +32,7 @@ interface Step {
 
 export default function AICoachPage() {
   const { currency, symbol } = useCurrency()
-  const price = currency === "INR" ? 149 : 29
+  const price = currency === "INR" ? 49 : 29
 
   const steps: Step[] = [
     // ... keep all your 25 steps
@@ -357,6 +358,7 @@ export default function AICoachPage() {
         leadSource: "AI Coach",
         timestamp: new Date().toISOString(),
         updateExisting: true,
+        leadId: leadId,
         ...additionalData
       }
 
@@ -378,10 +380,11 @@ export default function AICoachPage() {
   }
 
   useEffect(() => {
-    if (profile.name && profile.name.length > 0 && !leadId) {
+    // Only start the lead tracking once we have the required fields to perform a Google Sheet Auth UPSERT reliably
+    if (profile.name && profile.email && profile.phone && !leadId) {
       saveLeadToSheets("Started")
     }
-  }, [profile.name])
+  }, [profile.name, profile.email, profile.phone])
 
   const quickReplies = (() => {
     if (currentStep === -1 || !steps[currentStep]) return []
@@ -504,24 +507,109 @@ export default function AICoachPage() {
   }
 
   const handlePayment = async () => {
-    setShowPayment(false)
-    setLoadingPlan(true)
-    await saveLeadToSheets("Payment Success", { paymentAmount: price, paymentCurrency: currency, paymentDate: new Date().toISOString() })
-    setMessages((prev) => [...prev, { sender: "ai", text: "🎉 Payment successful!" }, { sender: "ai", text: "🤖 Generating...", type: "loader" }])
+    if (currency === "INR") {
+      // Cashfree flow for Indian payments
+      try {
+        setShowPayment(false)
+        setLoadingPlan(true)
+        setMessages((prev) => [...prev, { sender: "ai", text: "💳 Initiating secure payment..." }])
 
-    try {
-      const res = await fetch("/api/generate-plan", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) })
-      const data = await res.json()
-      await fetch("/api/send-plan-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: profile.email, name: profile.name, plan: data.plan, profile, currency }) })
-      await saveLeadToSheets("Success", { planGenerated: true, emailSent: true, completedDate: new Date().toISOString() })
-      setMessages((prev) => prev.filter(m => m.type !== "loader").concat({ sender: "ai", text: data.plan || "Plan generated!", type: "plan" }, { sender: "ai", text: `✅ Emailed to ${profile.email}` }))
-      setPaymentCompleted(true)
-      saveCurrentSession()
-    } catch (err) {
-      await saveLeadToSheets("Error")
-      setMessages((prev) => prev.filter(m => m.type !== "loader").concat({ sender: "ai", text: "⚠️ Error. Contact support." }))
-    } finally {
-      setLoadingPlan(false)
+        const cashfree = await load({ mode: "production" })
+
+        const orderResponse = await fetch("/api/payment/cashfree/create-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            amount: price,
+            customerName: profile.name,
+            customerPhone: profile.phone,
+            customerEmail: profile.email,
+            orderNote: "AI Diet Coach Plan",
+          })
+        })
+
+        const orderData = await orderResponse.json()
+
+        if (!orderData.success) {
+          throw new Error("Failed to create payment session")
+        }
+
+        setLoadingPlan(false)
+
+        const checkoutOptions = {
+          paymentSessionId: orderData.payment_session_id,
+          redirectTarget: "_modal" as const,
+        }
+
+        cashfree.checkout(checkoutOptions).then(async (result: any) => {
+          if (result.error) {
+            setMessages((prev) => [...prev, { sender: "ai", text: "❌ Payment was cancelled or failed. You can try again." }])
+            await saveLeadToSheets("Payment Abandoned")
+            setShowPayment(true)
+            return
+          }
+          if (result.paymentDetails) {
+            // Verify payment on server
+            const verifyResponse = await fetch("/api/payment/cashfree/verify", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ orderId: orderData.order_id })
+            })
+            const verifyData = await verifyResponse.json()
+
+            if (verifyData.success) {
+              setLoadingPlan(true)
+              await saveLeadToSheets("Payment Success", { paymentAmount: price, paymentCurrency: currency, paymentDate: new Date().toISOString() })
+              setMessages((prev) => [...prev, { sender: "ai", text: "🎉 Payment successful!" }, { sender: "ai", text: "🤖 Generating...", type: "loader" }])
+
+              try {
+                const res = await fetch("/api/generate-plan", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) })
+                const data = await res.json()
+                await fetch("/api/send-plan-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: profile.email, name: profile.name, plan: data.plan, profile, currency }) })
+                await saveLeadToSheets("Success", { planGenerated: true, emailSent: true, completedDate: new Date().toISOString() })
+                setMessages((prev) => prev.filter(m => m.type !== "loader").concat({ sender: "ai", text: data.plan || "Plan generated!", type: "plan" }, { sender: "ai", text: `✅ Emailed to ${profile.email}` }))
+                setPaymentCompleted(true)
+                saveCurrentSession()
+              } catch (err) {
+                await saveLeadToSheets("Error")
+                setMessages((prev) => prev.filter(m => m.type !== "loader").concat({ sender: "ai", text: "⚠️ Error. Contact support." }))
+              } finally {
+                setLoadingPlan(false)
+              }
+            } else {
+              setMessages((prev) => [...prev, { sender: "ai", text: "❌ Payment verification failed. Please contact support." }])
+              await saveLeadToSheets("Payment Abandoned")
+              setShowPayment(true)
+            }
+          }
+        })
+      } catch (err) {
+        console.error("Cashfree payment error:", err)
+        setMessages((prev) => [...prev, { sender: "ai", text: "❌ Payment failed. Please try again." }])
+        setLoadingPlan(false)
+        setShowPayment(true)
+      }
+    } else {
+      // Original USD/fallback flow
+      setShowPayment(false)
+      setLoadingPlan(true)
+      await saveLeadToSheets("Payment Success", { paymentAmount: price, paymentCurrency: currency, paymentDate: new Date().toISOString() })
+      setMessages((prev) => [...prev, { sender: "ai", text: "🎉 Payment successful!" }, { sender: "ai", text: "🤖 Generating...", type: "loader" }])
+
+      try {
+        const res = await fetch("/api/generate-plan", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(profile) })
+        const data = await res.json()
+        await fetch("/api/send-plan-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: profile.email, name: profile.name, plan: data.plan, profile, currency }) })
+        await saveLeadToSheets("Success", { planGenerated: true, emailSent: true, completedDate: new Date().toISOString() })
+        setMessages((prev) => prev.filter(m => m.type !== "loader").concat({ sender: "ai", text: data.plan || "Plan generated!", type: "plan" }, { sender: "ai", text: `✅ Emailed to ${profile.email}` }))
+        setPaymentCompleted(true)
+        saveCurrentSession()
+      } catch (err) {
+        await saveLeadToSheets("Error")
+        setMessages((prev) => prev.filter(m => m.type !== "loader").concat({ sender: "ai", text: "⚠️ Error. Contact support." }))
+      } finally {
+        setLoadingPlan(false)
+      }
     }
   }
 

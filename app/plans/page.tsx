@@ -329,7 +329,7 @@ export default function PlansPage() {
               </Button>
               <Button size="lg" className="bg-teal-500 hover:bg-teal-600 text-white border-2 border-white font-semibold" asChild>
                 <Link href="/contact#contact-form">
-                  Get Personalized Plan - <PriceDisplay amountIn={500} amountUs={50} />
+                  Get Personalized Plan - <PriceDisplay amountIn={300} amountUs={50} />
                 </Link>
               </Button>
             </div>
@@ -451,11 +451,11 @@ export default function PlansPage() {
                 <TrendingUp className="w-12 h-12 text-white mx-auto mb-4" />
                 <h4 className="font-semibold text-white mb-2 text-xl">Personalized Consultation</h4>
                 <p className="text-white text-sm mb-4 leading-relaxed">
-                  Get expert advice from certified nutritionists with customized diet plan - <PriceDisplay amountIn={500} amountUs={50} />.
+                  Get expert advice from certified nutritionists with customized diet plan - <PriceDisplay amountIn={300} amountUs={50} />.
                 </p>
                 <Button size="lg" className="w-full bg-white text-teal-700 hover:bg-gray-100 font-semibold" asChild>
                   <Link href="/contact#contact-form">
-                    Book Consultation - <PriceDisplay amountIn={500} amountUs={50} />
+                    Book Consultation - <PriceDisplay amountIn={300} amountUs={50} />
                   </Link>
                 </Button>
               </div>

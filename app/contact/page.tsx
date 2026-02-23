@@ -13,7 +13,7 @@ import Link from "next/link"
 import { submitConsultationForm } from "./actions"
 import PriceDisplay from "@/components/PriceDisplay"
 import { useCurrency } from "@/components/CurrencyProvider"
-
+import { load } from "@cashfreepayments/cashfree-js"
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,7 +23,7 @@ export default function ContactPage() {
     message: "",
   })
   const { currency, symbol } = useCurrency()
-  const price = currency === "INR" ? 500 : 50
+  const price = currency === "INR" ? 300 : 50
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showPaymentModal, setShowPaymentModal] = useState(false) // ✅ NEW
   const [isPaymentProcessing, setIsPaymentProcessing] = useState(false)
@@ -98,26 +98,99 @@ export default function ContactPage() {
     setSubmitError("")
 
     try {
-      const result = await submitConsultationForm({
-        ...formData,
-        paymentId: "stripe_payment_" + Date.now(), // Placeholder for Stripe payment ID
-        paymentAmount: price,
-        paymentCurrency: currency,
-      })
+      if (currency === "INR") {
+        const cashfree = await load({ mode: "production" })
 
-      if (result.success) {
-        await saveLead("Success")
-        setSubmitSuccess(true)
-        setShowPaymentModal(false)
-        setFormData({ name: "", email: "", mobile: "", healthCondition: "", message: "" })
+        // 1. Create order on server
+        const orderResponse = await fetch("/api/payment/cashfree/create-order", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            amount: price,
+            customerName: formData.name,
+            customerPhone: formData.mobile,
+            customerEmail: formData.email,
+            orderNote: "Consultation Booking",
+          })
+        })
+
+        const orderData = await orderResponse.json()
+
+        if (!orderData.success) {
+          throw new Error("Failed to create payment session")
+        }
+
+        // 2. Launch Cashfree Checkout
+        const checkoutOptions = {
+          paymentSessionId: orderData.payment_session_id,
+          redirectTarget: "_modal" as const,
+        }
+
+        cashfree.checkout(checkoutOptions).then(async (result: any) => {
+          if (result.error) {
+            console.log("Payment Error", result.error)
+            setSubmitError(result.error.message || "Payment closed or failed.")
+            await saveLead("Abandoned")
+            setIsPaymentProcessing(false)
+          }
+          if (result.redirect) {
+            console.log("Redirection required")
+          }
+          if (result.paymentDetails) {
+            // 3. Verify on server
+            const verifyResponse = await fetch("/api/payment/cashfree/verify", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ orderId: orderData.order_id })
+            })
+            const verifyData = await verifyResponse.json()
+
+            if (verifyData.success) {
+              const formSubmitResult = await submitConsultationForm({
+                ...formData,
+                paymentId: orderData.order_id,
+                paymentAmount: price,
+                paymentCurrency: currency,
+              })
+
+              if (formSubmitResult.success) {
+                await saveLead("Success")
+                setSubmitSuccess(true)
+                setShowPaymentModal(false)
+                setFormData({ name: "", email: "", mobile: "", healthCondition: "", message: "" })
+              } else {
+                setSubmitError(formSubmitResult.error || "Failed to submit consultation request")
+              }
+            } else {
+              setSubmitError("Payment verification failed.")
+              await saveLead("Abandoned")
+            }
+            setIsPaymentProcessing(false)
+          }
+        })
       } else {
-        setSubmitError(result.error || "Failed to submit consultation request")
+        // Stripe fallback for USD
+        const result = await submitConsultationForm({
+          ...formData,
+          paymentId: "stripe_payment_" + Date.now(),
+          paymentAmount: price,
+          paymentCurrency: currency,
+        })
+
+        if (result.success) {
+          await saveLead("Success")
+          setSubmitSuccess(true)
+          setShowPaymentModal(false)
+          setFormData({ name: "", email: "", mobile: "", healthCondition: "", message: "" })
+        } else {
+          setSubmitError(result.error || "Failed to submit consultation request")
+        }
+        setIsPaymentProcessing(false)
       }
     } catch (err) {
       console.error("Payment error:", err)
       setSubmitError("Payment processing failed. Please try again.")
       await saveLead("Abandoned")
-    } finally {
       setIsPaymentProcessing(false)
     }
   }
@@ -206,7 +279,7 @@ export default function ContactPage() {
             <div className="bg-emerald-50 rounded-xl p-5 mb-6 border-2 border-emerald-200">
               <div className="flex justify-between items-center mb-4">
                 <span className="text-gray-700 font-semibold text-lg">Consultation Fee</span>
-                <span className="text-4xl font-bold text-emerald-600"><PriceDisplay amountIn={500} amountUs={50} /></span>
+                <span className="text-4xl font-bold text-emerald-600"><PriceDisplay amountIn={300} amountUs={50} /></span>
               </div>
               <ul className="space-y-2 text-sm text-gray-700">
                 <li className="flex items-center gap-2">
@@ -411,7 +484,7 @@ export default function ContactPage() {
                     <div className="p-6 bg-gradient-to-r from-emerald-50 to-green-50 border-2 border-emerald-200 rounded-lg">
                       <div className="flex items-start justify-between mb-4">
                         <div>
-                          <h3 className="text-2xl font-bold text-emerald-700"><PriceDisplay amountIn={500} amountUs={50} /></h3>
+                          <h3 className="text-2xl font-bold text-emerald-700"><PriceDisplay amountIn={300} amountUs={50} /></h3>
                           <p className="text-sm text-gray-600 mt-1">One-time consultation fee</p>
                         </div>
                         <Shield className="h-8 w-8 text-emerald-600" />
