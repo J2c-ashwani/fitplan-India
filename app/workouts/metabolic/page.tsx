@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import PriceDisplay from "@/components/PriceDisplay"
 import type { Metadata } from "next"
@@ -92,16 +92,14 @@ export default function MetabolicWorkoutsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-rose-600 font-semibold">
-              🔥 Maximum Calorie Burn
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🔥 Metabolism Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Metabolic Workouts 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Can I Keep Burning Calories After My Workout Ends?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete metabolic workout program combining HIIT (High-Intensity Interval Training), strength training, and metabolic
-              conditioning to boost metabolism, maximize calorie burn, and create the "afterburn effect" (EPOC) burning calories for
-              24-48 hours post-workout. Designed for all fitness levels seeking maximum fat loss results.
+            <p className="text-xl text-white mb-8 border-l-4 border-rose-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The secret is EPOC (Excess Post-Exercise Oxygen Consumption), often called the "afterburn effect." By combining intense strength training with High-Intensity Interval Training (HIIT), you create an oxygen debt that forces your body to burn an extra 100-400 calories over the next 24-48 hours just to recover. Unlike steady-state walking, metabolic workouts elevate your resting metabolic rate long after you leave the gym.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-rose-600 hover:bg-gray-100 font-semibold" asChild>
@@ -119,7 +117,7 @@ export default function MetabolicWorkoutsPage() {
       <section id="benefits" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Metabolic Workouts Are Superior for Fat Loss</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center font-serif">Why Does High-Intensity Exercise Create an "Afterburn" Effect?</h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="border-rose-200">
@@ -467,7 +465,7 @@ export default function MetabolicWorkoutsPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="metabolic" />
           </div>
         </div>
       </section>

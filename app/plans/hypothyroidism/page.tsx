@@ -6,10 +6,11 @@ import { CheckCircle, Heart, AlertCircle, Apple, TrendingDown, Target, Clock, Fl
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
   title: "Hypothyroidism Weight Loss Diet Plan 2025 | FitPlan India",
   description: "Complete hypothyroidism diet plan with metabolism-boosting foods, thyroid-supporting nutrients, supplements, and proven weight loss strategies for underactive thyroid in USA, UK, Canada, Australia.",
@@ -79,22 +80,27 @@ export default function HypothyroidismDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Hypothyroidism Weight Loss Diet Plan 2025 | FitPlan India"
+        description="Complete hypothyroidism diet plan with metabolism-boosting foods, thyroid-supporting nutrients, supplements, and proven weight loss strategies for underactive thyroid in USA, UK, Canada, Australia."
+        keywords={["hypothyroidism diet plan", "underactive thyroid weight loss", "thyroid diet", "how to lose weight with hypothyroidism", "hypothyroidism meal plan", "best foods for hypothyroidism", "thyroid weight loss tips", "Hashimoto"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-cyan-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-blue-600 font-semibold">
-              🦋 Evidence-Based Thyroid Management
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🦋 Thyroid Management Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Hypothyroidism Weight Loss Diet Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Diet to Lose Weight with Hypothyroidism?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based diet plan for underactive thyroid (hypothyroidism) with metabolism-boosting foods,
-              thyroid-supporting nutrients, selenium and iodine guidance, supplements, and proven weight loss strategies.
-              Designed for thyroid patients in USA, UK, Canada, Australia, and worldwide including Hashimoto's thyroiditis.
+            <p className="text-xl text-white mb-8 border-l-4 border-blue-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> An underactive thyroid drops your metabolism by 20-40%, meaning you burn 200-600 fewer calories at rest. To lose weight, you must strictly optimize medication to hit a TSH of 1-2 mIU/L, and eat a high-protein diet (25-30g per meal) rich in Selenium and Zinc to support T4-to-T3 conversion, combined with strength training to rebuild your metabolic engine.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold" asChild>
@@ -132,7 +138,7 @@ export default function HypothyroidismDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Hypothyroidism and Weight Loss Challenges</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Can't I Lose Weight with an Underactive Thyroid?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Hypothyroidism (underactive thyroid) affects over 20 million Americans and millions more worldwide in the UK,
                 Canada, Australia, and Europe. It occurs when the thyroid gland doesn't produce enough thyroid hormones (T3 and T4),
@@ -779,7 +785,7 @@ export default function HypothyroidismDietPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="hypothyroidism" />
           </div>
         </div>
       </section>

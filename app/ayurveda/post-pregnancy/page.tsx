@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Sutika Paricharya: Ayurvedic Postnatal Care Guide | FitPlan India",
@@ -26,6 +27,13 @@ export default function PostPregnancyPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Sutika Paricharya: Ayurvedic Postnatal Care Guide | FitPlan India"
+                description="Recover quickly after delivery with Ayurvedic Sutika Paricharya. Diet chart, Gond Laddu recipe, and massage tips for nursing mothers to regain strength."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function PostPregnancyPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        The First 42 Days: A Rebirth for the Mother
+                        How Can You Recover Quickly and Regain Strength After Delivery Using Ayurveda?
                     </h1>
-                    <p className="text-lg md:text-xl text-rose-100 max-w-3xl mx-auto leading-relaxed">
-                        In Ayurveda, the first 6 weeks after delivery (Sutika Kala) determine a woman's health for the next 40 years. Neglecting this period invites back pain, depression, and hormonal issues.
+                    <p className="text-lg text-white mb-8 border-l-4 border-rose-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Delivery leaves a massive empty space in the abdomen, which Ayurveda says is instantly filled by cold, erratic Vata (Air) causing back pain, anxiety, and stiffness. To physically ground this Vata and rebuild strength, you must eat warm nourishing foods like Gond (Edible Gum) Laddus, bind your belly tightly with cloth, and perform a daily full-body oil massage (Abhyanga) before bathing.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function PostPregnancyPage() {
 
                     {/* Sutika Concept */}
                     <section id="sutika" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Baby className="w-6 h-6 text-rose-600 mr-2" />
-                            Sutika Paricharya: The Protocol
+                            Why Does the Empty Space Left by the Baby Cause Severe Postpartum Back Pain and Anxiety?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

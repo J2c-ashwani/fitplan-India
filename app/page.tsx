@@ -5,6 +5,7 @@ import { Star, Users, Award, Heart, Zap, Target, Activity, Dumbbell, Apple, Tren
 import Link from "next/link"
 import type { Metadata } from "next"
 import PriceDisplay from "@/components/PriceDisplay"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "FitPlan 2025 | Personalized Weight Loss Plans for PCOS, Thyroid, Diabetes - USA, UK, Australia",
@@ -75,6 +76,13 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="FitPlan 2025 | Personalized Weight Loss Plans for PCOS, Thyroid, Diabetes - USA, UK, Australia"
+        description="Get personalized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Science-based nutrition from certified Indian nutritionists. Plans tailored to your lifestyle and goals."
+        keywords={["weight loss plans", "PCOS diet plan", "thyroid weight loss", "diabetes diet", "personalized diet plan", "online nutritionist", "fitness coaching USA UK Australia Canada"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section - Health Green Theme */}
       <section className="bg-gradient-to-br from-emerald-600 to-green-700 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,12 +90,11 @@ export default function HomePage() {
             <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
               🇮🇳 Trusted Indian Health & Fitness Platform
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Personalized Weight Loss Plans for Every Condition
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-balance">
+              How Can Expert Clinical Nutrition Reverse Your Chronic Disease and Melt Stubborn Fat?
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get customized diet plans and expert guidance for PCOS, thyroid, diabetes, post-pregnancy, and more. Growing client base
-              in India, USA, UK, Canada, and Australia. Science-based nutrition tailored to your lifestyle and goals.
+            <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+              <strong>The Short Answer:</strong> Generic starvation diets destroy your metabolism. Whether you are battling PCOS, Hypothyroidism, or Diabetes, the only way to achieve permanent weight loss is through Medical Nutrition Therapy. FitPlan India's certified BAMS, MD doctors and clinical dietitians prescribe delicious, Indian-cuisine meal plans that heal your hormones from the inside out and force your body to burn fat effortlessly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold text-lg px-8 py-6" asChild>
@@ -177,7 +184,7 @@ export default function HomePage() {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Popular Weight Loss Plans</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Which Condition-Specific Diet Plan Will Finally Fix Your Broken Metabolism?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Expertly crafted plans designed for specific health conditions and lifestyle needs. Each plan includes personalized
               diet guidance, meal timing, and proven strategies backed by nutritional science.

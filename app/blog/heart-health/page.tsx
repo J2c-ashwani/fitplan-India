@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Shield, Activity } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Heart Health Diet Plan | DASH Diet for Blood Pressure & Cholesterol",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function HeartHealthDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Heart Health Diet Plan | DASH Diet for Blood Pressure & Cholesterol"
+        description="Complete heart health diet guide with DASH diet principles, cholesterol-lowering foods, blood pressure control, cardiovascular disease prevention, and heart-healthy meal plans."
+        keywords={["heart health diet", "DASH diet", "lower blood pressure diet", "cholesterol lowering diet", "heart disease prevention", "cardiovascular health", "heart healthy foods"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-red-600 to-pink-700 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-red-600 font-semibold">
-              ❤️ Complete Heart Health Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              ❤️ Heart Health Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Heart Health Diet: DASH Plan for Blood Pressure & Cholesterol
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Diet to Lower High Blood Pressure and Bad Cholesterol Naturally?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the DASH diet (Dietary Approaches to Stop Hypertension) - proven to lower blood pressure,
-              reduce cholesterol, prevent heart disease, and protect cardiovascular health with delicious, practical meal plans.
+            <p className="text-xl text-white mb-8 border-l-4 border-red-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The scientifically proven DASH (Dietary Approaches to Stop Hypertension) diet is the gold standard for cardiovascular health. By cutting sodium to under 1,500mg-2,300mg daily and increasing your intake of potassium, calcium, and magnesium through 4-5 servings of vegetables and fruits, patients routinely see a 10-14 mmHg drop in blood pressure and a 10-15% reduction in LDL (bad) cholesterol.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100 font-semibold" asChild>
@@ -90,7 +97,7 @@ export default function HeartHealthDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the DASH Diet for Heart Health</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Does the DASH Diet Actually Work to Lower Blood Pressure?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 The DASH diet (Dietary Approaches to Stop Hypertension) was specifically developed by the National Heart,
                 Lung, and Blood Institute to combat high blood pressure - the leading risk factor for heart disease and stroke.

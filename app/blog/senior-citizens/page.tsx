@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Users, Pill } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Senior Citizen Diet Plan | Healthy Nutrition for Elderly & Aging",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function SeniorCitizenDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Senior Citizen Diet Plan | Healthy Nutrition for Elderly & Aging"
+        description="Complete senior citizen diet guide with age-appropriate meal plans, bone health nutrition, heart-healthy foods, and strategies to maintain muscle mass and vitality after 60."
+        keywords={["senior citizen diet", "elderly nutrition", "diet for seniors", "healthy eating for elderly", "senior meal plan", "nutrition for aging", "diet for 60 plus", "elderly weight management"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-blue-600 font-semibold">
-              👴 Nutrition for Healthy Aging
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              👴 Senior Nutrition Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Senior Citizen Diet Plan: Nutrition for Vitality After 60
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Can Seniors Over 60 Prevent Muscle Atrophy and Bone Loss Through Diet?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover complete senior nutrition with age-appropriate meal plans, bone health strategies, heart-healthy
-              foods, muscle preservation, and dietary approaches for vibrant, independent living in golden years.
+            <p className="text-xl text-white mb-8 border-l-4 border-blue-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> After age 60, metabolic rates slow down meaning fewer calories are needed, but the demand for essential nutrients—especially protein and calcium—actually increases. To halt age-related muscle loss (sarcopenia), seniors must consume 1.0-1.2g of protein per kg of body weight daily, while simultaneously securing 1,200mg of calcium and adequate Vitamin D to prevent bone fractures and maintain independent mobility and strength.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold" asChild>
@@ -90,7 +97,7 @@ export default function SeniorCitizenDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Senior Nutrition Needs</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Does Nutrient Absorption Drastically Decline As We Age?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Nutritional needs change significantly after 60 due to decreased metabolism (need fewer calories), reduced
                 muscle mass (sarcopenia), changes in digestion and absorption, decreased appetite, medications affecting

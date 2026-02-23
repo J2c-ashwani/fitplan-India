@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | FitPlan India',
@@ -22,13 +23,22 @@ export const metadata: Metadata = {
 export default function PrivacyPolicy() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8 text-gray-900">Privacy Policy</h1>
+      <ArticleSchema
+        headline="Privacy Policy | FitPlan India"
+        description="Privacy Policy for FitPlan India. Learn how we collect, use, and protect your personal information."
+        keywords={[]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
+      <h1 className="text-4xl font-bold mb-8 text-gray-900">Privacy Policy: How Do We Protect Your Medical and Personal Data?</h1>
       <div className="prose max-w-none text-gray-700 space-y-6">
         <p className="text-sm text-gray-500">Last Updated: December 2025</p>
 
-        <p>At FitPlan India, accessible from https://www.fitplanindia.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by FitPlan India and how we use it.</p>
+        <p className="text-lg text-gray-800 mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-emerald-50 p-4 rounded-r-lg shadow-sm leading-relaxed text-balance">
+          <strong>The Short Answer:</strong> At FitPlan India, protecting your sensitive medical, dietary, and personal data is our absolute highest priority. We comply with stringent data protection standards to ensure your information is never misused, sold, or compromised. Read our full policy below to understand exactly how we secure your data.
+        </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 pt-4">Consent</h2>
+        <h2 className="text-2xl font-bold text-gray-900 pt-4">Why Is Your Explicit Consent Required?</h2>
         <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
 
         <h2 className="text-2xl font-bold text-gray-900 pt-4">Information We Collect</h2>

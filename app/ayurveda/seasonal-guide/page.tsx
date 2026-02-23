@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ritucharya: The Ayurvedic Seasonal Guide | FitPlan India",
@@ -27,6 +28,13 @@ export default function SeasonalPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ritucharya: The Ayurvedic Seasonal Guide | FitPlan India"
+                description="Align your diet with nature cycles. Comprehensive Ritucharya guide for Summer (Grishma), Monsoon (Varsha), and Winter (Hemanta) to prevent seasonal illness."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -34,10 +42,10 @@ export default function SeasonalPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Ritucharya: Living with the Seasons
+                        How Can You Prevent Yearly Flu and Allergies by Eating According to the Seasons?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Nature changes every few months, and so should your diet. Ignoring the season is the root cause of annual "flu seasons" and allergy flare-ups.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Nature's energy cycles shift every few months, and ignoring these changes (Ritucharya) is the root cause of seasonal flu and allergies. To stay immune year-round, you must avoid heavy, salty foods in Summer to protect weak digestion, avoid leafy greens in Monsoon to prevent water-borne infections, and eat rich, nourishing foods like ghee and nuts in Winter when your digestive fire is strongest.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -48,7 +56,7 @@ export default function SeasonalPage() {
                 {/* Intro Section */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Seasonal Eating?</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is Eating the Exact Same Diet Year-Round Slowly Destroying Your Immune System?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 <strong>Ritu</strong> means season, and <strong>Charya</strong> means regimen. Ayurveda divides the year into two periods: <strong>Adana Kala</strong> (taking away strength: Summer) and <strong>Visarga Kala</strong> (giving strength: Winter). Adapting your habits helps you ride the wave of nature rather than fighting against it.

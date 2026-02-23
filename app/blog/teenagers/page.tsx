@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Zap, Brain } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Teen Diet Plan | Healthy Nutrition for Teenagers & Adolescents",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function TeenagerDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Teen Diet Plan | Healthy Nutrition for Teenagers & Adolescents"
+        description="Complete teenager diet guide with balanced meal plans, sports nutrition, acne management foods, growth support, and healthy eating habits for teens aged 13-19."
+        keywords={["teen diet plan", "teenager nutrition", "healthy eating for teens", "adolescent diet", "teen meal plan", "nutrition for teenagers", "diet for teenage athletes", "teen weight management"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-700 to-purple-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-indigo-700 font-semibold">
-              🎯 Complete Teen Nutrition Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🎯 Teen Nutrition Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Teen Diet Plan: Healthy Nutrition for Growth & Performance
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What Nutrients Are Absolutely Essential for Teenage Growth Spurts and Cognitive Development?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover balanced nutrition strategies for teenage years - supporting growth, athletic performance,
-              academic success, healthy weight management, and establishing lifelong healthy eating habits.
+            <p className="text-xl text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The adolescent growth spurt requires the highest caloric and nutritional bandwidth of any life stage outside of infancy, demanding between 2,000-3,000 calories for active teens. Crucially, maintaining 1,300mg of daily calcium is mandatory since 90% of adult bone density is built before age 18, while adequate iron, omega-3s, and balanced macronutrients directly govern hormonal stability, athletic performance, and academic focus.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-indigo-700 hover:bg-gray-100 font-semibold" asChild>
@@ -91,7 +98,7 @@ export default function TeenagerDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Teen Nutrition Needs</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Are Teenage Years the Final Window to Maximize Lifelong Bone Density?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Teenage years (ages 13-19) are a critical period of rapid growth, hormonal changes, and development.
                 Teens need adequate nutrition to support growth spurts, bone development, brain function, athletic

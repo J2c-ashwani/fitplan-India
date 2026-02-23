@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Heart, Users, Clock, Target, Zap, Baby, Activity, Leaf, Dumbbell, TrendingUp, Apple, Trophy, BookOpen, GraduationCap, Scale, Sparkles, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Health & Fitness Blog | Expert Diet Plans & Workout Guides - FitPlan India",
@@ -87,6 +88,13 @@ const colorButtons: Record<string, string> = {
 export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Health & Fitness Blog | Expert Diet Plans & Workout Guides - FitPlan India"
+        description="Expert health and fitness blog with comprehensive diet plans, workout routines, and nutrition guides for weight loss, muscle gain, PCOS, diabetes, heart health, and more."
+        keywords={["health blog", "fitness blog", "diet plans", "workout guides", "weight loss tips", "muscle building", "nutrition advice", "wellness blog India"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-700 via-purple-700 to-pink-600 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -94,12 +102,11 @@ export default function BlogPage() {
             <Badge className="mb-4 bg-white text-indigo-700 font-semibold text-base">
               📚 Complete Health & Fitness Library
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Expert Diet Plans & Fitness Guides
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-balance">
+              Where Can You Find Free, Evidence-Based Clinical Protocols to Reverse Any Metabolic Disease?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              21 comprehensive, evidence-based guides covering weight loss, muscle building, PCOS, diabetes,
-              heart health, popular diets, and specialized nutrition for every life stage.
+            <p className="text-lg text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+              <strong>The Short Answer:</strong> The internet is full of dangerous, unqualified diet advice that will damage your metabolism. FitPlan India's Medical Review Board has published 21 comprehensive, clinical-grade nutrition protocols detailing exactly how to reverse PCOS, Thyroid, Diabetes, and Obesity using readily available Indian foods, absolutely free.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-indigo-700 hover:bg-gray-100 font-semibold" asChild>
@@ -148,7 +155,7 @@ export default function BlogPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Browse All Diet & Fitness Guides</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Why Must You Stop Following Influencer Diets and Start Reading Clinical Nutrition Protocols?</h2>
               <p className="text-gray-600">
                 Choose from our comprehensive collection of expert-written health resources
               </p>

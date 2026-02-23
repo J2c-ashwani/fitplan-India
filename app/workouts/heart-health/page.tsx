@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -94,15 +94,14 @@ export default function HeartHealthWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-red-600 font-semibold">
-              ❤️ Cardiovascular Health
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              ❤️ Cardiovascular Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Heart Health Exercise: Strengthen Your Cardiovascular System
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What Are the Safest Exercises to Lower Blood Pressure?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective cardiovascular exercises to lower blood pressure, reduce cholesterol, strengthen
-              your heart, and prevent heart disease with aerobic training and heart-healthy workouts.
+            <p className="text-xl text-white mb-8 border-l-4 border-red-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> For heart health, steady-state cardio (like brisk walking, cycling, or swimming) at 50-70% of your max heart rate is the gold standard. Just 150 minutes per week of moderate exercise is clinically proven to lower blood pressure by 5-10 mmHg, reduce LDL cholesterol, and decrease the risk of heart attack by up to 35%. Strength training 2x a week provides secondary metabolic benefits.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100 font-semibold" asChild>
@@ -144,7 +143,7 @@ export default function HeartHealthWorkoutPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise for Cardiovascular Health</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Does Exercise Physically Strengthen the Heart?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Regular aerobic exercise is one of the most powerful tools for heart health. Exercise strengthens the heart
                 muscle, lowers blood pressure (by 5-10 mmHg), reduces LDL cholesterol, increases HDL cholesterol, improves
@@ -503,6 +502,15 @@ export default function HeartHealthWorkoutPage() {
         </div>
       </section>
 
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-red-600 to-rose-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -532,7 +540,7 @@ export default function HeartHealthWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="heart-health" />
           </div>
         </div>
       </section>

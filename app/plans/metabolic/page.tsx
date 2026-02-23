@@ -6,10 +6,11 @@ import { CheckCircle, Heart, AlertCircle, Flame, Target, Zap, TrendingUp, Activi
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
   title: "Metabolic Weight Loss Diet Plan 2025 | Boost Metabolism | FitPlan India",
   description: "Complete metabolic weight loss plan to fix slow metabolism, boost metabolic rate, and achieve fast sustainable fat loss. Expert-designed for USA, UK, Canada, Australia.",
@@ -77,23 +78,27 @@ export default function MetabolicWeightLossPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Metabolic Weight Loss Diet Plan 2025 | Boost Metabolism | FitPlan India"
+        description="Complete metabolic weight loss plan to fix slow metabolism, boost metabolic rate, and achieve fast sustainable fat loss. Expert-designed for USA, UK, Canada, Australia."
+        keywords={["metabolic weight loss", "boost metabolism", "slow metabolism weight loss", "metabolic diet plan", "increase metabolism", "metabolic rate", "metabolism boosting foods", "fix slow metabolism"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-rose-600 to-pink-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-rose-600 font-semibold">
-              🔥 Rev Up Your Metabolism
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🔥 Metabolism Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Metabolic Weight Loss Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Can I Fix a Slow Metabolism to Lose Weight?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete metabolic weight loss plan designed to fix slow metabolism, boost metabolic rate, and achieve sustainable fat loss
-              without extreme dieting. Science-based strategies including metabolism-boosting foods, meal timing, strategic exercise, and
-              proven methods to overcome metabolic adaptation. Designed for adults in USA, UK, Canada, Australia struggling with stubborn
-              weight despite eating less.
+            <p className="text-xl text-white mb-8 border-l-4 border-rose-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> To reverse metabolic damage, you must stop extreme calorie restriction which suppresses your metabolism by 15-30%. Instead, systematically increase your food intake with high-protein meals (1.2g per lb of bodyweight to build calorie-burning muscle), and focus on strength training. This signals your body that it isn't starving, allowing your resting metabolic rate to recover and start burning fat efficiently again.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-rose-600 hover:bg-gray-100 font-semibold" asChild>
@@ -131,7 +136,7 @@ export default function MetabolicWeightLossPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Metabolism and Why It Slows Down</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Does Metabolism Slow Down?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Your metabolism (also called basal metabolic rate or BMR) is the number of calories your body burns at rest just to keep you
                 alive - breathing, circulating blood, producing hormones, growing and repairing cells. BMR accounts for 60-70% of your total
@@ -492,7 +497,7 @@ export default function MetabolicWeightLossPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="metabolic" />
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Leaf, TrendingUp, Sparkles, Dumbbell } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Vegan Bodybuilding Diet | Complete Plant-Based Muscle Building Guide",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function VeganBodybuildingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Vegan Bodybuilding Diet | Complete Plant-Based Muscle Building Guide"
+        description="Complete vegan bodybuilding guide with plant-based muscle building meal plans, protein strategies, supplements, vegan athlete nutrition, and mass gain on plants."
+        keywords={["vegan bodybuilding", "plant based bodybuilding", "vegan muscle building", "vegan protein", "plant based athlete", "vegan diet for muscle gain", "vegan bodybuilding meal plan"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-700 to-emerald-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-green-700 font-semibold">
-              🌱 Plant-Powered Muscle
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🌱 Vegan Bodybuilding Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Vegan Bodybuilding: Build Serious Muscle on Plants
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What Is the Exact Blueprint for Building Elite Muscle on a 100% Plant-Based Diet?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover complete vegan bodybuilding nutrition with plant-based muscle building strategies, high-protein
-              vegan meal plans, supplement guidance, and proven approaches to gain mass without animal products.
+            <p className="text-xl text-white mb-8 border-l-4 border-green-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Building serious muscle on a vegan diet requires a slightly higher, optimized protein intake of 2.2-2.6g per kilogram of body weight to compensate for the lower digestibility of plant sources. Success hinges on a 3,500+ calorie surplus, strategic combining of complete protein sources like legumes and grains (or soy products), and mandatory supplementation of B12, Creatine, and Omega-3s to bridge fundamental nutritional gaps.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-green-700 hover:bg-gray-100 font-semibold" asChild>
@@ -90,7 +97,7 @@ export default function VeganBodybuildingPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Vegan Bodybuilding: Yes, It's Absolutely Possible!</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Must Plant-Based Athletes Consume Slightly More Protein Than Omnivores?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Building muscle on a vegan diet is not only possible - elite vegan bodybuilders and athletes prove it works at
                 the highest levels. The key is understanding plant-based protein sources, combining foods for complete amino acid

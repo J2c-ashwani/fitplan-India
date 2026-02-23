@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Flame, Leaf } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Paleo Diet Plan | Complete Guide to Caveman Diet & Primal Eating",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function PaleoDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Paleo Diet Plan | Complete Guide to Caveman Diet & Primal Eating"
+        description="Complete Paleo diet guide with meal plans, whole foods eating, grain-free nutrition, weight loss strategies, CrossFit paleo, and ancestral health principles."
+        keywords={["paleo diet", "paleo meal plan", "caveman diet", "primal eating", "grain free diet", "paleo weight loss", "paleo foods", "paleo crossfit diet"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-amber-700 to-orange-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-amber-700 font-semibold">
-              🥩 Ancestral Eating Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🥩 Paleo Diet Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Paleo Diet Plan: Eat Like Our Ancestors for Modern Health
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Does Eliminating Modern Processed Foods Extinguish Systemic Inflammation?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the Paleo diet - eating whole, unprocessed foods like our Paleolithic ancestors. Learn meat,
-              vegetables, fruits, nuts approach with complete meal plans for weight loss, inflammation reduction, and optimal health.
+            <p className="text-xl text-white mb-8 border-l-4 border-amber-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The Paleo diet rapidly reduces systemic inflammation and promotes fat loss by strictly eliminating modern, inflammatory food groups—specifically refined sugars, grains, dairy, and legumes—which humans haven't genetically adapted to digest optimally. By reverting to our ancestral diet of whole meats, fish, eggs, vegetables, fruits, and nuts, you naturally regulate blood sugar, heal the gut lining, and eliminate the chemical additives that trigger metabolic dysfunction.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-amber-700 hover:bg-gray-100 font-semibold" asChild>
@@ -90,7 +97,7 @@ export default function PaleoDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Paleo Diet Philosophy</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Are Grains and Dairy Excluded From an Ancestral Nutritional Programming?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 The Paleo diet (Paleolithic diet, Caveman diet, Primal eating) is based on eating foods available to our
                 hunter-gatherer ancestors before agriculture developed 10,000 years ago. The premise: our bodies are genetically

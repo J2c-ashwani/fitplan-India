@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: 'Terms & Conditions | FitPlan India',
@@ -22,11 +23,20 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8 text-gray-900">Terms and Conditions</h1>
+      <ArticleSchema
+        headline="Terms & Conditions | FitPlan India"
+        description="Terms and Conditions for FitPlan India usage."
+        keywords={[]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
+      <h1 className="text-4xl font-bold mb-8 text-gray-900 text-balance">Terms and Conditions: What Are the Rules for Using Our Medical Nutrition Platform?</h1>
       <div className="prose max-w-none text-gray-700 space-y-6">
         <p className="text-sm text-gray-500">Last Updated: December 2025</p>
 
-        <h2 className="text-2xl font-bold text-gray-900 pt-4">1. Introduction</h2>
+        <p className="text-lg text-gray-800 mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-emerald-50 p-4 rounded-r-lg shadow-sm leading-relaxed text-balance">
+          <strong>The Short Answer:</strong> FitPlan India provides clinical nutrition and fitness guidance, but we require all users to understand and agree to our operational rules. These terms protect both you and our medical professionals, ensuring a safe, respectful, and effective environment for your health transformation. Read the full terms below.
+        </p>
         <p>Welcome to FitPlan India! These terms and conditions outline the rules and regulations for the use of FitPlan India's Website, located at https://www.fitplanindia.com.</p>
         <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use FitPlan India if you do not agree to take all of the terms and conditions stated on this page.</p>
 

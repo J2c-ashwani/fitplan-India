@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Vajikarana Therapy: Ayurvedic Herbs for Men's Vitality | FitPlan India",
@@ -26,6 +27,13 @@ export default function MensVitalityPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Vajikarana Therapy: Ayurvedic Herbs for Men"
+                description="Boost stamina and testosterone naturally with Vajikarana herbs. Learn about Shilajit, Ashwagandha, Safed Musli, and Gokshura for peak male health."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function MensVitalityPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Vajikarana: The Science of Virility
+                        What Are the Best Ayurvedic Herbs to Naturally Boost Men's Testosterone and Vitality?
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        Men's health is often ignored until it breaks. Ayurveda dedicates an entire branch called <strong>Vajikarana</strong> ensuring a man has the strength of a horse (Vaji) to produce healthy offspring and enjoy life.
+                    <p className="text-lg text-white mb-8 border-l-4 border-yellow-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Low testosterone and chronic fatigue are caused by severe stress and poor diet destroying your deepest tissue layer (Shukra Dhatu). Ayurveda's Vajikarana therapy repairs this by using Shilajit to boost cellular energy, Ashwagandha to drastically lower cortisol, and a diet rich in Ghee and Urad Dal to rebuild male vitality fast.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function MensVitalityPage() {
 
                     {/* Concept */}
                     <section id="vajikarana" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Zap className="w-6 h-6 text-yellow-600 mr-2" />
-                            More than just Aphrodisiacs
+                            Why Are Modern Stress and Processed Foods Destroying Your Natural Testosterone Levels?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

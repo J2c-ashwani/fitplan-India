@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Leaf, Moon, Sun, Wind, Droplet, Flame, Brain, Heart, Activity, Coffee, Smile, Star, ArrowRight } from "lucide-react"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurveda Hub - Ancient Wisdom for Modern Health | FitPlan India",
@@ -74,6 +75,13 @@ export default function AyurvedaHub() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurveda Hub - Ancient Wisdom for Modern Health | FitPlan India"
+                description="Explore our comprehensive Ayurveda guide. Learn about Prakriti, herbal remedies for PCOS, Thyroid, Diabetes, and daily routines for holistic wellness."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             {/* Hero Section */}
             <section className="relative bg-[#064e3b] text-white py-24 overflow-hidden">
                 <div className="absolute inset-0 opacity-10">
@@ -85,9 +93,9 @@ export default function AyurvedaHub() {
                     <Badge className="bg-amber-400 text-amber-900 hover:bg-amber-300 transition-colors mb-6 text-sm font-bold tracking-wide uppercase px-4 py-1">
                         Medically Reviewed by Dr. Arti (BAMS)
                     </Badge>
-                    <h1 className="text-4xl md:text-6xl font-serif mb-6">Ayurveda Hub</h1>
-                    <p className="text-xl md:text-2xl text-stone-200 max-w-3xl mx-auto font-light leading-relaxed">
-                        Discover ancient wisdom for modern living. Explore our expert-curated guides on diet, lifestyle, and natural healing.
+                    <h1 className="text-4xl md:text-6xl font-serif mb-6 text-balance">How Can Ancient Ayurvedic Medicine Reverse Your Modern Metabolic Diseases?</h1>
+                    <p className="text-lg text-stone-200 mb-8 border-l-4 border-amber-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance max-w-3xl mx-auto">
+                        <strong>The Short Answer:</strong> Popping pills only masks the symptoms of chronic diseases. Ayurveda targets the root cause of your illness by balancing your unique Dosha (Vata, Pitta, Kapha). Our certified BAMS doctors have curated these clinical Ayurvedic protocols to naturally heal PCOS, Thyroid issues, and digestive disorders using time-tested herbs and lifestyle modifications.
                     </p>
                 </div>
             </section>
@@ -99,7 +107,7 @@ export default function AyurvedaHub() {
                         <div className="absolute -top-12 -right-12 w-24 h-24 bg-emerald-100 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
                         <div className="absolute -bottom-12 -left-12 w-32 h-32 bg-amber-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
 
-                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Unsure about your Body Type?</h2>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Is Knowing Your Unique Dosha (Prakriti) the Secret to Effortless Weight Loss?</h2>
                         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                             According to Ayurveda, health is not one-size-fits-all. Knowing your **Prakriti** (Vata, Pitta, or Kapha) is the key to personalized wellness.
                         </p>

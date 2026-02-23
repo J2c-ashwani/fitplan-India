@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Natural Remedies for Hypothyroidism & TSH Control | FitPlan India",
@@ -27,6 +28,13 @@ export default function ThyroidPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Natural Remedies for Hypothyroidism & TSH Control | FitPlan India"
+                description="Manage Hypothyroidism (Galaganda) with Ayurveda. Learn about Kanchanar Guggulu, Coriander water, Selenium rich diet, and Ujjayi Pranayama for thyroid health."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -34,10 +42,10 @@ export default function ThyroidPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Natural Support for Hypothyroidism (Galaganda)
+                        How Can You Naturally Cure Hypothyroidism and Lower TSH Using Ayurveda?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Thyroid issues are rapidly increasing due to stress and processed salts. In Ayurveda, this condition correlates with <strong>Galaganda</strong> (Enlargement of neck glands) caused by low <strong>Agar (Metabolic Fire)</strong>.
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Hypothyroidism happens when your digestive fire (Jatharagni) is too weak to stimulate your thyroid gland, leading to excess Kapha (weight gain). To ignite your metabolism and naturally lower TSH, you must drink boiled Coriander seed water every morning, eat 2 Selenium-rich Brazil nuts daily, and take Kanchanar Guggulu to scrape away thyroid blockages.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -48,7 +56,7 @@ export default function ThyroidPage() {
 
                     {/* Detailed Introduction */}
                     <section id="ayurveda-view" className="mb-12">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">The Agni Connection</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is a Weak Digestive Fire (Agni) the Real Reason Your Thyroid Has Slowed Down?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 The thyroid gland controls metabolism. When your metabolism slows down (Hypothyroidism), it means your <strong>Jatharagni</strong> (Digestive Fire) is weak. This leads to:

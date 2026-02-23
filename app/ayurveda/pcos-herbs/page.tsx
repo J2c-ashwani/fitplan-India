@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "5 Best Ayurvedic Herbs to Cure PCOS/PCOD Permanently | FitPlan India",
@@ -26,6 +27,13 @@ export default function PCOSPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="5 Best Ayurvedic Herbs to Cure PCOS/PCOD Permanently | FitPlan India"
+                description="Reverse PCOS naturally with Ayurveda. A comprehensive guide on Ashwagandha, Shatavari, and Cinnamon for hormonal balance, weight loss, and irregular periods."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function PCOSPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        PCOS & Ayurveda: A Holistic Guide to Hormonal Balance
+                        What Are the Most Powerful Ayurvedic Herbs to Cure PCOS and Regulate Your Periods?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        PCOS (Polycystic Ovary Syndrome) is not just a reproductive issue; it is a metabolic disaster. In Ayurveda, we treat the root cause: a <strong>Vata-Kapha</strong> imbalance blocking the flow of nutrients to the ovaries.
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> PCOS is a metabolic disorder where excess sticky Kapha and blocked Vata stop nutrients from reaching the ovaries, preventing ovulation. To clear the blockages and reverse insulin resistance naturally, take Ashwagandha to lower stress hormones, use Shatavari to promote follicular growth, and drink Methi (Fenugreek) water every morning to scrape away stubborn belly fat.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,7 +55,7 @@ export default function PCOSPage() {
 
                     {/* Detailed Introduction */}
                     <section id="understanding" className="mb-12">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">The Ayurvedic Physiology of PCOS (Granthi Roga)</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Does Excess Weight (Kapha) and Blocked Energy (Vata) Completely Stop Your Ovulation?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 In modern medicine, PCOS is treated with birth control pills that force a bleed but do not fix the underlying issue. Ayurveda views PCOS as a complex interplay of three factors:

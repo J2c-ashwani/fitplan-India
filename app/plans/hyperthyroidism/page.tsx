@@ -6,10 +6,11 @@ import { CheckCircle, Heart, AlertCircle, TrendingUp, Target, Clock, Flame, Spar
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
   title: "Hyperthyroidism Weight Gain Diet Plan 2025 | FitPlan India",
   description: "Complete hyperthyroidism diet plan with high-calorie nutrient-dense foods, metabolism-slowing strategies, and healthy weight gain guide for overactive thyroid in USA, UK, Canada, Australia.",
@@ -79,22 +80,27 @@ export default function HyperthyroidismDietPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Hyperthyroidism Weight Gain Diet Plan 2025 | FitPlan India"
+        description="Complete hyperthyroidism diet plan with high-calorie nutrient-dense foods, metabolism-slowing strategies, and healthy weight gain guide for overactive thyroid in USA, UK, Canada, Australia."
+        keywords={["hyperthyroidism diet plan", "overactive thyroid weight gain", "hyperthyroidism meal plan", "how to gain weight with hyperthyroidism", "Graves disease diet", "thyroid weight gain tips", "high calorie diet for hyperthyroidism"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-600 to-amber-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-orange-600 font-semibold">
-              🔥 Evidence-Based Thyroid Management
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🔥 Thyroid Management Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Hyperthyroidism Weight Gain Diet Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Diet to Stop Weight Loss from Hyperthyroidism?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based diet plan for overactive thyroid (hyperthyroidism) with high-calorie nutrient-dense foods,
-              metabolism-slowing strategies, supplements, and proven healthy weight gain methods. Designed for thyroid patients in
-              USA, UK, Canada, Australia including Graves' disease and thyrotoxicosis.
+            <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> An overactive thyroid increases your metabolism by 30-60%, making weight gain nearly impossible without a strategy. You must first optimize medication with an endocrinologist to normalize hormone levels, and then consume a consistent 500-750 calorie surplus using high-calorie, nutrient-dense foods (like nuts, avocados, and full-fat dairy) spreading 5-7 meals throughout the day to outpace your rapid burn rate.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold" asChild>
@@ -132,7 +138,7 @@ export default function HyperthyroidismDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Hyperthyroidism and Unintentional Weight Loss</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why am I Losing Weight So Fast and How Can I Stop It?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Hyperthyroidism (overactive thyroid) affects approximately 1-3% of the population in USA, UK, Canada, Australia,
                 and Europe, with women being 5-10 times more likely to develop it than men. It occurs when the thyroid gland produces
@@ -768,7 +774,7 @@ export default function HyperthyroidismDietPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="hyperthyroidism" />
           </div>
         </div>
       </section>

@@ -9,6 +9,7 @@ import RelatedContent from "@/components/RelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
   title: "Workout Programs | Expert Fitness & Exercise Guides - FitPlan India",
   description: "Complete workout programs and exercise guides for weight loss, muscle building, PCOS, diabetes, seniors, athletes, and specialized fitness goals.",
@@ -117,6 +118,13 @@ export default function WorkoutsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Workout Programs | Expert Fitness & Exercise Guides - FitPlan India"
+        description="Complete workout programs and exercise guides for weight loss, muscle building, PCOS, diabetes, seniors, athletes, and specialized fitness goals."
+        keywords={["workout programs", "exercise guides", "fitness plans", "weight loss workouts", "muscle building", "home workouts", "gym routines India"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-700 via-indigo-700 to-blue-600 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,12 +133,11 @@ export default function WorkoutsPage() {
             <Badge className="mb-4 bg-white text-purple-700 font-semibold text-base">
               💪 Complete Workout Library
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Expert Workout Programs & Exercise Guides
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-balance">
+              How Can You Force Muscle Growth and Accelerate Fat Loss With Clinical Workout Protocols?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              20 comprehensive, expert-designed workout programs covering weight loss, muscle building, specialized
-              conditions, and fitness for every life stage and goal.
+            <p className="text-lg text-white mb-8 border-l-4 border-purple-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+              <strong>The Short Answer:</strong> Random Instagram workouts lead to injury and zero results. To actually change your body composition, you need structured, progressive training. Our Medical Review Board has approved 20 specialized workout protocols that use progressive overload and metabolic conditioning to guarantee muscle growth, torch belly fat, and manage medical conditions safely.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-purple-700 hover:bg-gray-100 font-semibold" asChild>
@@ -179,7 +186,7 @@ export default function WorkoutsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Browse All Workout Programs</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Why Are Scientifically Structured Workout Programs the Only Way to Transform Your Body?</h2>
               <p className="text-gray-600">
                 Choose from our comprehensive collection of expert-designed fitness programs
               </p>

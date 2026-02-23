@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Treatment for Joint Pain & Arthritis (Sandhivata) | FitPlan India",
@@ -26,6 +27,13 @@ export default function JointPainPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Treatment for Joint Pain & Arthritis (Sandhivata) | FitPlan India"
+                description="Relieve knee pain, back pain, and arthritis naturally. Discover Mahanarayan Oil, Golden Milk, and dietary changes to lubricate dry joints."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function JointPainPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Banish Joint Pain: Ayurvedic Solutions for Arthritis
+                        What Is the Best Ayurvedic Treatment for Severe Joint Pain and Arthritis?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Pain is the cry of a starving nerve. In Ayurveda, joint pain is rarely just "old age"; it is either <strong>Vata</strong> (Dryness/Air) drying out the lubrication or <strong>Ama</strong> (Toxins) clogging the joint space.
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Joint pain is caused either by severe dryness (Vata) wearing away your cartilage or toxic sticky sludge (Ama) causing deep inflammation. If your joints physically crack and feel worse in cold weather, warm them by massaging Mahanarayan Oil daily and drinking Golden milk. If they are red, swollen, and stiff in the morning, stop oil massage immediately and use dry heat (potli) to burn away the toxic Ama.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function JointPainPage() {
 
                     {/* Introduction */}
                     <section id="intro" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Bone className="w-6 h-6 text-emerald-600 mr-2" />
-                            Know Your Pain Type
+                            Why Must You Know the Difference Between Dry Air Pain (Vata) and Toxic Inflammation Pain (Ama)?
                         </h2>
                         <div className="grid md:grid-cols-2 gap-6">
                             <div className="bg-blue-50 p-6 rounded-xl border border-blue-100">

@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurveda for Gray Hair: Reverse Palitya Naturally | FitPlan India",
@@ -26,6 +27,13 @@ export default function GrayHairPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurveda for Gray Hair: Reverse Palitya Naturally | FitPlan India"
+                description="Premature graying (Palitya) is a sign of high Pitta. Learn how to reverse it with Bhringraj Oil, Nasya, and cooling Ayurvedic diets."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function GrayHairPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Palitya: Turning Back the Clock
+                        How Can You Reverse Premature Gray Hair (Palitya) Naturally?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        In Ayurveda, premature graying isn't about age; it's about <strong>Heat</strong>. When the body gets too hot (High Pitta), it literally "burns out" the melanin in your hair follicles.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Premature graying (Palitya) isn't about age; it's about excess heat (Pitta) 'burning out' the melanin in your hair follicles. To darken roots naturally, you must cool the scalp and liver by drinking Amla juice daily, chewing fresh Curry leaves, and massaging your scalp nightly with Bhringraj Oil—the king of Ayurvedic hair rejuvenation.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function GrayHairPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Hair Turns Gray</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Does Excess Liver Heat and Stress Destroy Your Hair's Melanin?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 Hair color comes from a pigment called melanin. The fire element (<strong>Pitta Dosha</strong>) governs metabolism and transformation, including hair color.

@@ -6,7 +6,7 @@ import { CheckCircle, Heart, AlertCircle, Users, Target, Shield, Bone, Brain, In
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -91,16 +91,14 @@ export default function SeniorCitizensDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
-              🌿 Healthy Aging & Vitality
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🌿 Healthy Aging Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Senior Citizens Nutrition Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Diet Plan for Seniors Over 60?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based nutrition plan for seniors (ages 60+) focusing on healthy aging, disease prevention, maintaining
-              muscle mass, bone health, and cognitive function. Designed for older adults in USA, UK, Canada, Australia seeking to
-              maintain independence, vitality, and quality of life through proper nutrition.
+            <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> As we age, our calorie needs decrease while our nutrient needs—especially for protein, calcium, and vitamin D—increase. The best diet for seniors prioritizes nutrient-dense foods with at least 25-30g of high-quality protein per meal to prevent age-related muscle loss (sarcopenia), alongside easily digestible fiber and healthy fats to support cognitive health and maintain independence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold" asChild>
@@ -138,7 +136,7 @@ export default function SeniorCitizensDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Senior Nutrition and Healthy Aging</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Do Nutritional Needs Change After 60?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Aging is a natural biological process that brings significant changes in nutritional needs, metabolism, body composition,
                 and disease risk. After age 60, adults experience gradual decrease in metabolic rate (3-5% per decade), progressive loss
@@ -534,7 +532,7 @@ export default function SeniorCitizensDietPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="senior-citizens" />
         </div>
       </div>
     </div >

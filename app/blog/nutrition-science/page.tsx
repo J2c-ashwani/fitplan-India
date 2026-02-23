@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, BookOpen, TrendingUp, Sparkles, Brain, Zap } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Nutrition Science Guide | Understanding Macros, Calories & Metabolism",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function NutritionSciencePage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Nutrition Science Guide | Understanding Macros, Calories & Metabolism"
+        description="Complete nutrition science guide explaining macronutrients, micronutrients, calories, metabolism, energy balance, and evidence-based nutrition principles for health and fitness."
+        keywords={["nutrition science", "macronutrients", "micronutrients", "calorie deficit", "metabolism", "TDEE", "protein intake", "carbohydrates", "fats", "nutrition basics"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-emerald-700 to-teal-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-emerald-700 font-semibold">
-              🧬 Complete Nutrition Science Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🧬 Nutrition Science Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Nutrition Science: Understanding Macros, Calories & Metabolism
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Exactly Do Macronutrients and Calories Dictate Your Body Composition?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Master the fundamentals of nutrition science including macronutrients, micronutrients, energy balance,
-              metabolism, and evidence-based dietary principles for optimal health and fitness.
+            <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Your body composition is strictly governed by energy balance and macronutrient ratios. To lose weight, you must sustain a calorie deficit where you burn more energy than you consume (Energy Out &gt; Energy In). Concurrently, consuming adequate protein (1.6-2.2g/kg) while in a deficit forces the body to burn stored fat for fuel instead of breaking down muscle tissue, while carbohydrates and fats provide the necessary energy and hormonal support to keep your metabolism functioning optimally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-emerald-700 hover:bg-gray-100 font-semibold" asChild>
@@ -90,7 +97,7 @@ export default function NutritionSciencePage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Nutrition Science Fundamentals</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Are Calories and Protein the Only Non-Negotiables for Transforming Your Physique?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Nutrition science is the study of how food affects the human body - from cellular function to athletic
                 performance to disease prevention. At its core, nutrition involves understanding macronutrients (protein,

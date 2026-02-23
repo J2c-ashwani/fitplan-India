@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Shield, Sparkles } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "PCOD Diet Plan | Complete Nutrition for Polycystic Ovarian Disease",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function PCODDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="PCOD Diet Plan | Complete Nutrition for Polycystic Ovarian Disease"
+        description="Complete PCOD diet guide with meal plans, insulin resistance management, hormonal balance strategies, weight loss tips, and foods to manage PCOS/PCOD symptoms naturally."
+        keywords={["PCOD diet", "PCOS diet plan", "polycystic ovary diet", "PCOD weight loss", "insulin resistance diet", "hormonal balance nutrition", "PCOS meal plan", "PCOD foods"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-600 to-purple-800 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-pink-600 font-semibold">
-              💖 Complete PCOD/PCOS Nutrition Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💖 PCOD Nutrition Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              PCOD Diet Plan: Manage Hormones & Symptoms Naturally
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Which Specific Dietary Changes Actually Reverse PCOD Symptoms and Balance Hormones?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover evidence-based nutrition strategies for PCOD/PCOS including insulin resistance management,
-              hormonal balance, weight loss, symptom reduction, and complete meal plans for women's health.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Because 70% of women with PCOD suffer from underlying insulin resistance, the most effective dietary intervention is strictly consuming Low-Glycemic Index (GI) carbohydrates paired with lean proteins and healthy fats. This nutritional strategy stops the drastic blood sugar spikes that trigger excess insulin release, thereby breaking the cycle of insulin overproduction that directly causes the ovaries to overproduce male hormones (androgens) leading to weight gain, acne, and irregular periods.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -91,7 +98,7 @@ export default function PCODDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding PCOD/PCOS and Diet</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Does Insulin Resistance Directly Fuel PCOD Hormonal Imbalances?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 PCOD (Polycystic Ovarian Disease) or PCOS (Polycystic Ovary Syndrome) affects millions of women worldwide,
                 causing hormonal imbalances, irregular periods, weight gain, acne, excess hair growth, and fertility challenges.

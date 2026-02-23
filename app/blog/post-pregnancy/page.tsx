@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Baby, Droplet } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Post-Pregnancy Diet Plan 2025 | Safe Postpartum Weight Loss & Nutrition",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function PostPregnancyDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Post-Pregnancy Diet Plan 2025 | Safe Postpartum Weight Loss & Nutrition"
+        description="Complete post-pregnancy diet guide with safe meal plans for breastfeeding mothers, nutrient-rich foods, postpartum recovery nutrition, and healthy weight loss strategies after childbirth."
+        keywords={["post-pregnancy diet", "postpartum weight loss", "breastfeeding diet plan", "after pregnancy diet", "postnatal nutrition", "lactation diet", "post delivery weight loss", "new mom diet"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-700 to-rose-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-pink-700 font-semibold">
-              👶 Complete Post-Pregnancy Diet Guide 2025
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              👶 Postpartum Nutrition Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Post-Pregnancy Diet Plan: Safe Nutrition for Recovery & Weight Loss
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Fast Can I Safely Lose Post-Pregnancy Weight While Breastfeeding?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective postpartum nutrition strategies to support recovery, boost breastfeeding,
-              regain energy, and achieve healthy weight loss after childbirth without compromising your health or milk supply.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Safe postpartum weight loss begins 6-8 weeks after delivery with a gradual reduction of calories, aiming for no more than 1-2 pounds lost per week. If you are exclusively breastfeeding, you must consume at least 1,800 to 2,200 calories daily to maintain your milk supply. Focus on high-protein foods, calcium-rich dairy, and serious hydration rather than extreme crash dieting, which can jeopardize both your recovery and milk production.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-700 hover:bg-gray-100 font-semibold" asChild>
@@ -91,7 +98,7 @@ export default function PostPregnancyDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Post-Pregnancy Nutrition</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Are Extreme Calorie Deficits Dangerous During Postpartum Recovery?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 The postpartum period is a critical time for recovery and adjustment. Your body has undergone tremendous
                 changes during pregnancy and delivery, and proper nutrition is essential for healing, energy restoration,

@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -93,15 +93,14 @@ export default function KetoWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-orange-700 font-semibold">
-              🔥 Complete Keto Workout Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🔥 Keto Exercise Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Keto Workout Plan: Maximize Fat Burning on Ketogenic Diet
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Does the Keto Diet Affect Your Workouts?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover effective workout strategies designed for keto dieters to accelerate fat loss, preserve muscle
-              mass, optimize performance in ketosis, and achieve maximum results on low-carb nutrition.
+            <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> During the first 2-4 weeks of keto (fat adaptation), your workout performance will temporarily drop as your body switches from burning carbs to burning fat. Once adapted, low-intensity steady-state (LISS) cardio becomes incredibly effective, burning pure fat. However, high-intensity workouts (HIIT) can still be challenging without carbs. Prioritizing strength training is the best way to preserve muscle mass while burning fat on a ketogenic diet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-700 hover:bg-gray-100 font-semibold" asChild>
@@ -143,7 +142,7 @@ export default function KetoWorkoutPage() {
             </div>
 
             <div id="why-keto" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise on Keto: What You Need to Know</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Do I Feel Weak During the First Few Weeks of Keto?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Working out on a ketogenic diet requires understanding how your body uses fuel. During the first 2-4 weeks
                 (fat adaptation period), you may experience reduced performance, especially in high-intensity activities.
@@ -651,7 +650,7 @@ export default function KetoWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="keto" />
           </div>
         </div>
       </section>

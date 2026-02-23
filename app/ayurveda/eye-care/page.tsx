@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Eye Care (Netra Chikitsa) | Natural Vision Improvement",
@@ -26,6 +27,13 @@ export default function EyeCarePage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Eye Care (Netra Chikitsa) | Natural Vision Improvement"
+                description="Cure digital eye strain and dark circles with Ayurveda. Learn about Triphala eye wash, Netra Basti, and Trataka exercises for better vision."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function EyeCarePage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        The Windows to the Soul: Ayurvedic Eye Care
+                        What Are the Best Ayurvedic Remedies to Naturally Improve Eyesight and Cure Dry Eyes?
                     </h1>
-                    <p className="text-lg md:text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
-                        Eyes are the seat of <strong>Alochaka Pitta</strong> (Fire). Excessive screen time increases this heat, leading to redness, dryness, and weak vision. Cool them down naturally.
+                    <p className="text-lg text-white mb-8 border-l-4 border-teal-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Digital eye strain is caused by staring at screens, which dries up the lubricating Kapha in your eyes and inflames Alochaka Pitta (heat). To naturally restore vision and cure dry eyes, follow the 20-20-20 rule, wash your eyes daily with cooled Triphala water, and apply a drop of Castor Oil to your lashes before sleep to deeply hydrate and cool the eyes.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function EyeCarePage() {
 
                     {/* Root Cause */}
                     <section id="root" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Eye className="w-6 h-6 text-teal-600 mr-2" />
-                            Why is vision deteriorating?
+                            Why Are Digital Screens Literally \"Burning\" Your Eyesight?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

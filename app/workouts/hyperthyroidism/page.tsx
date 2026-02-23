@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -92,16 +92,14 @@ export default function HyperthyroidismWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-orange-600 font-semibold">
-              💪 Gentle, Restorative Exercise
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💪 Hyperthyroidism Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Hyperthyroidism Exercise Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Should I Exercise with an Overactive Thyroid?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete workout program designed specifically for overactive thyroid (hyperthyroidism) with gentle strength
-              training, low-impact cardio, and muscle-building exercises that support weight gain and manage symptoms without
-              overexertion.
+            <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> With hyperthyroidism, your metabolism is already in "overdrive." High-intensity workouts or excessive cardio can dangerously spike your heart rate and worsen unwanted weight loss. The only safe approach is low-intensity, restorative strength training 2-3 times a week to rebuild lost muscle mass, paired with plenty of high-calorie nutrition and 3-4 full rest days to prioritize nervous system recovery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold" asChild>
@@ -119,7 +117,7 @@ export default function HyperthyroidismWorkoutPage() {
       <section id="why-exercise" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Important for Hyperthyroidism (But Different Approach Needed)</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Do You Need More Rest Than Exercise with Hyperthyroidism?</h2>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <p className="text-lg text-gray-700 mb-6">
@@ -507,7 +505,7 @@ export default function HyperthyroidismWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="hyperthyroidism" />
           </div>
         </div>
       </section>

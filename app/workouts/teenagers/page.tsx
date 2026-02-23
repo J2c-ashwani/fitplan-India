@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -93,15 +93,14 @@ export default function TeenagerWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-indigo-700 font-semibold">
-              💪 Complete Teen Workout Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💪 Youth Fitness Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Teen Workout Plan: Build Strength, Power & Athletic Performance
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Will Lifting Weights Stunt Growth During the Teenage Years?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective workouts designed specifically for teenagers to build muscle, improve sports
-              performance, boost confidence, and establish lifelong fitness habits during adolescent years.
+            <p className="text-xl text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> No, this is a long-debunked myth. Proper strength training actually <em>stimulates</em> bone density and growth hormone production. Growth plates are not damaged by lifting weights with proper form; they are far more commonly damaged in high-impact collision sports. As long as teens avoid "ego lifting" (attempting 1-rep maximums) and focus on form over heavy weight, lifting is incredibly safe and beneficial for adolescent development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-indigo-700 hover:bg-gray-100 font-semibold" asChild>
@@ -143,7 +142,7 @@ export default function TeenagerWorkoutPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Essential for Teens</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">What Workout Split is Best for Teen Muscle Growth?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 The teenage years are a crucial period for building strength, establishing healthy habits, and developing
                 athletic abilities. Regular exercise during adolescence builds bone density, develops muscle mass, improves
@@ -686,7 +685,7 @@ export default function TeenagerWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="teenagers" />
           </div>
         </div>
       </section>

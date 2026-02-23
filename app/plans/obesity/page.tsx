@@ -6,7 +6,7 @@ import { CheckCircle, Heart, AlertCircle, TrendingDown, Target, Clock, Scale, Ac
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -91,16 +91,14 @@ export default function ObesityWeightLossPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-indigo-600 font-semibold">
-              💪 Sustainable Transformation
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💪 Obesity Management Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Obesity Weight Loss Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Diet Plan for Extreme Weight Loss (Obesity)?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based weight loss plan for obesity (BMI 30+) with sustainable diet strategies, realistic meal plans,
-              exercise guidance, and proven methods to lose 50-100+ pounds safely. Designed for individuals with obesity in USA, UK,
-              Canada, Australia seeking permanent lifestyle transformation.
+            <p className="text-xl text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The most effective approach for significant weight loss (50-100+ lbs) is focusing on high-volume, low-calorie foods that provide maximum satiety. By filling up on unlimited non-starchy vegetables and lean proteins, you can maintain a moderate 500-750 calorie deficit without feeling starved, naturally reversing insulin resistance while gradually incorporating consistent daily movement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-indigo-600 hover:bg-gray-100 font-semibold" asChild>
@@ -138,7 +136,7 @@ export default function ObesityWeightLossPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Obesity and the Path to Sustainable Weight Loss</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">What Makes Obesity Weight Loss Different?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Obesity is defined as having a Body Mass Index (BMI) of 30 or higher and affects over 42% of American adults,
                 28% of UK adults, and similar rates in Canada and Australia. The condition occurs when energy intake consistently
@@ -520,7 +518,7 @@ export default function ObesityWeightLossPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="obesity" />
         </div>
       </div>
     </div>

@@ -9,10 +9,11 @@ import { CheckCircle, AlertCircle, Dumbbell, Clock, Apple, XCircle, Droplet, Zap
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
   title: "Gym Diet Plan 2025 | Muscle Gain & Fat Loss Nutrition | FitPlan India",
   description: "Complete gym diet plan combining workout routines with nutrition for muscle building, fat loss, and body transformation. Expert-designed for USA, UK, Canada, Australia, India.",
@@ -80,6 +81,13 @@ export default function GymDietComboPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Gym Diet Plan 2025 | Muscle Gain & Fat Loss Nutrition | FitPlan India"
+        description="Complete gym diet plan combining workout routines with nutrition for muscle building, fat loss, and body transformation. Expert-designed for USA, UK, Canada, Australia, India."
+        keywords={["gym diet plan", "workout nutrition", "muscle building diet", "bodybuilding meal plan", "gym food plan", "pre workout nutrition", "post workout meal", "fitness diet India", "high protein vegetarian diet"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       <div className="container mx-auto px-4 max-w-4xl">
         <SuccessStory
@@ -97,16 +105,14 @@ export default function GymDietComboPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-orange-600 font-semibold">
-              💪 Workout + Nutrition Combined
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💪 Workout + Nutrition Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Gym + Diet Combo Plan 2025
+              What is the Best Diet Plan for Gym Beginners in India?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete gym diet plan combining strategic workout routines with optimized nutrition for maximum muscle gain, fat loss,
-              and body transformation. Includes pre-workout nutrition, post-workout meals, protein timing, and meal plans designed
-              for gym-goers in USA, UK, Canada, Australia, and India seeking serious results.
+            <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The perfect Indian gym diet requires hitting <strong>1.6g to 2.2g of protein per kg of body weight</strong> daily while timing your carbohydrates precisely around your workout. For muscle gain, eat in a 300-calorie surplus with paneer, eggs, or whey. For fat loss, maintain a high-protein 300-calorie deficit. Training without this nutritional foundation yields zero results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold" asChild>
@@ -151,7 +157,9 @@ export default function GymDietComboPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Gym Nutrition: The Missing Piece for Results</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+                Why is Diet 70% of Your Gym Results?
+              </h2>
               <p className="text-lg text-gray-700 mb-6">
                 The hard truth about gym results: training is only 30% of the equation - diet accounts for 70% of your body transformation
                 success. You can train perfectly with the best workout program, but without proper nutrition to support muscle growth and
@@ -528,7 +536,7 @@ export default function GymDietComboPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="gym-diet-combo" />
         </div>
       </div>
       <div className="container mx-auto px-4 max-w-4xl">

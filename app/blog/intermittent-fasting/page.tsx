@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Clock, Zap } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Intermittent Fasting Diet Plan | Complete IF Guide for Weight Loss",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function IntermittentFastingPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Intermittent Fasting Diet Plan | Complete IF Guide for Weight Loss"
+        description="Complete intermittent fasting guide with meal plans, fasting schedules (16:8, 18:6, OMAD), what to eat, breaking fast strategies, and maximizing fat loss with IF."
+        keywords={["intermittent fasting diet", "IF meal plan", "16:8 fasting", "intermittent fasting weight loss", "fasting schedule", "what to eat during intermittent fasting", "breaking fast"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-700 to-indigo-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-blue-700 font-semibold">
-              ⏰ Complete Intermittent Fasting Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              ⏰ Intermittent Fasting Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Intermittent Fasting Diet Plan: Complete Guide to IF Weight Loss
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Much Weight Can You Really Lose with 16:8 Intermittent Fasting?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the complete intermittent fasting strategy for rapid fat loss, improved metabolism, cellular
-              health, mental clarity, and sustainable weight management through time-restricted eating.
+            <p className="text-xl text-white mb-8 border-l-4 border-blue-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> When combined with a moderate calorie deficit, research shows 16:8 intermittent fasting produces a 3-8% weight loss over 3-24 weeks. By restricting your eating window to 8 hours and fasting for 16, you naturally lower insulin levels and deplete glycogen stores, forcing your body to burn stored body fat for energy while simultaneously reducing your overall daily calorie intake without strict tracking.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100 font-semibold" asChild>
@@ -91,7 +98,7 @@ export default function IntermittentFastingPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Intermittent Fasting</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Does Fasting Trigger Faster Fat Loss Than Standard Calorie Restriction?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Intermittent Fasting (IF) is not a diet - it's an eating pattern that cycles between periods of fasting
                 and eating. Instead of focusing on WHAT you eat, IF focuses on WHEN you eat. During fasting periods, you

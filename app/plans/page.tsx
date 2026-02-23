@@ -26,6 +26,7 @@ import FAQSection from "@/components/FAQSection"
 import PriceDisplay from "@/components/PriceDisplay"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
   title: "Specialized Diet Plans for Every Health Condition | FitPlan India",
   description:
@@ -299,6 +300,13 @@ export default function PlansPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Specialized Diet Plans for Every Health Condition | FitPlan India"
+        description="Expert-designed diet plans for PCOS, thyroid, diabetes, post-pregnancy, weight loss, and more. Tailored Indian meal plans with proven results."
+        keywords={["diet plans India", "PCOS diet", "thyroid diet", "diabetes diet", "weight loss plans", "specialized meal plans", "health condition diets"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-600 text-white pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,12 +315,11 @@ export default function PlansPage() {
             <Badge className="mb-4 bg-white text-teal-700 font-semibold text-base">
               🎯 Specialized Diet Plans
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Expert Diet Plans for Every Health Condition
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-balance">
+              How Will Our Condition-Specific Medical Diet Plans Reverse Your Disease and Speed Up Fat Loss?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              16 specialized, expert-designed diet plans tailored for specific health conditions, age groups, and
-              dietary preferences. Indian cuisine-based with proven results.
+            <p className="text-lg text-white mb-8 border-l-4 border-teal-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+              <strong>The Short Answer:</strong> A diet plan for a healthy 20-year-old will actually worsen the symptoms of a 40-year-old with Hypothyroidism. Your meal plan MUST be biologically matched to your current metabolic state. We offer 16 highly specific, doctor-formulated clinical protocols that use delicious Indian meals to naturally balance your hormones and force sustainable weight loss.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-teal-700 hover:bg-gray-100 font-semibold" asChild>
@@ -361,7 +368,7 @@ export default function PlansPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="mb-12 text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-2">Browse All Diet Plans</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-2">Why Is a Condition-Specific Clinical Protocol the Only Proven Way to Achieve Permanent Health?</h2>
               <p className="text-gray-600">
                 Choose the perfect plan designed for your health condition and lifestyle
               </p>

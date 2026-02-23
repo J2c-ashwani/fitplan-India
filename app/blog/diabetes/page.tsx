@@ -8,6 +8,7 @@ import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Diabetes Diet Plan for Weight Loss 2025 | Best Foods & Meal Plans",
@@ -40,19 +41,25 @@ export const metadata: Metadata = {
 export default function DiabetesDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Diabetes Diet Plan for Weight Loss 2025 | Best Foods & Meal Plans"
+        description="Complete diabetes diet guide with proven meal plans, blood sugar control strategies, foods to eat and avoid, and expert tips for sustainable weight loss with diabetes."
+        keywords={["diabetes diet plan", "diabetic weight loss", "type 2 diabetes diet", "blood sugar diet", "diabetic meal plan", "diabetes foods to avoid", "diabetic diet chart", "diabetes management"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-700 to-cyan-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-blue-700 font-semibold">
-              🩺 Complete Diabetes Diet Guide 2025
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🩺 Diabetes Diet Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Diabetes Diet Plan for Weight Loss: Complete Blood Sugar Control Guide
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Diet Plan to Lower Blood Sugar and Lose Weight with Diabetes?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover proven diabetes diet strategies to control blood sugar levels, achieve healthy weight loss,
-              and reduce medication dependency through evidence-based nutrition and lifestyle changes.
+            <p className="text-xl text-white mb-8 border-l-4 border-blue-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The most effective diabetes diet focuses on eating 45-60g of low-glycemic, complex carbohydrates per meal paired with 25-30g of protein and healthy fats. This macronutrient pairing slows glucose absorption, preventing severe blood sugar spikes. Consistent meal timing and prioritizing fiber-rich vegetables (which digest slowly) significantly improve insulin sensitivity and promote sustainable weight loss without dangerous energy crashes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100 font-semibold" asChild>
@@ -102,7 +109,7 @@ export default function DiabetesDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Diabetes and Diet</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Does Losing Just 5-10% of Body Weight Improve Blood Sugar So Much?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Diabetes affects over 463 million adults worldwide, with type 2 diabetes accounting for 90-95% of cases.
                 Diet plays a crucial role in managing blood sugar levels, preventing complications, and achieving healthy

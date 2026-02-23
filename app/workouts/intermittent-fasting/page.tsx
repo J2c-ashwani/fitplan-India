@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -93,15 +93,14 @@ export default function IntermittentFastingWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-blue-700 font-semibold">
-              ⏰ Complete IF Workout Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              ⏰ Fasting & Fitness Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Intermittent Fasting Workout Plan: Optimize Exercise Timing
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Should I Work Out While Fasting or After Eating?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the best workout strategies for intermittent fasting including optimal exercise timing,
-              fasted training benefits, fed state workouts, and maximizing fat loss while preserving muscle.
+            <p className="text-xl text-white mb-8 border-l-4 border-blue-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Both have unique benefits, but timing is everything. Fasted cardio (like morning walking) burns up to 20% more pure fat because your glycogen is depleted. However, strength training and high-intensity interval training (HIIT) should almost always be done in the fed state (2-3 hours after a meal) when you have the energy to lift heavier, maintain muscle mass, and prevent stress hormone spikes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100 font-semibold" asChild>
@@ -143,7 +142,7 @@ export default function IntermittentFastingWorkoutPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise Timing with Intermittent Fasting</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Does Fasting Change the Way You Burn Calories?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 When you work out during intermittent fasting significantly impacts results. Fasted training (during
                 fasting window) maximizes fat burning and promotes autophagy, while fed state training (during eating
@@ -631,7 +630,7 @@ export default function IntermittentFastingWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="intermittent-fasting" />
           </div>
         </div>
       </section>

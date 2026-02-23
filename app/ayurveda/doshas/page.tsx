@@ -10,6 +10,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Understanding Tridosha: The Ultimate Guide to Vata, Pitta, Kapha | FitPlan India",
@@ -29,6 +30,13 @@ export default function DoshasPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Understanding Tridosha: The Ultimate Guide to Vata, Pitta, Kapha | FitPlan India"
+                description="Discover your Ayurvedic body type. Comprehensive guide to Vata, Pitta, and Kapha doshas, including detailed diet charts, symptoms of imbalance, and scientific perspectives on bio-energies."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -36,10 +44,10 @@ export default function DoshasPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        The Science of Tridosha
+                        How Can You Determine Your Ayurvedic Body Type (Vata, Pitta, Kapha)?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Everything in the universe is made of five elements. In your body, they combine to form three bio-energies: <strong>Vata, Pitta, and Kapha.</strong> Knowing yours is the key to perfect health.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Every individual has a unique genetic blueprint (Prakriti) made of three bio-energies: Vata (Air/Movement), Pitta (Fire/Transformation), and Kapha (Earth/Structure). Discovering your dominant dosha is the absolute key to lifelong health. Vatas need warm, grounding foods; Pittas need cooling, calming foods; and Kaphas need light, stimulating foods to remain perfectly balanced.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -50,7 +58,7 @@ export default function DoshasPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">The Blueprint of Life</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is the Tridosha Theory the Blueprint of Your Physical and Mental Health?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 Ayurveda is not just about herbs; it's about physics. The <strong>Tridosha Theory</strong> states that health is a dynamic balance of three forces. You are born with a unique combination (<strong>Prakriti</strong>) that stays with you for life.

@@ -6,7 +6,7 @@ import { CheckCircle, Heart, AlertCircle, Leaf, Target, Sparkles, Apple, Activit
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -91,16 +91,14 @@ export default function VegetarianDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-green-600 font-semibold">
-              🌱 Plant-Based Nutrition
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🌱 Plant-Based Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Vegetarian Diet Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Do I Get Enough Protein to Build Muscle and Lose Fat as a Vegetarian?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based vegetarian diet plan with plant-based protein sources, balanced nutrition, weight loss strategies,
-              and meal plans for lacto-ovo vegetarians. Designed for vegetarians in USA, UK, Canada, Australia, and India seeking
-              optimal health, weight management, and athletic performance without meat.
+            <p className="text-xl text-white mb-8 border-l-4 border-green-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> You must combine plant proteins properly and increase portion sizes of protein-dense foods. Make sure every meal contains a significant protein source like Greek yogurt, lentils, tofu, or tempeh to hit the daily goal of 1.2-1.5g of protein per kg of bodyweight. Because plant foods are less calorie-dense but highly filling, a high-protein vegetarian diet naturally creates a healthy calorie deficit while supporting muscle growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 font-semibold" asChild>
@@ -138,7 +136,7 @@ export default function VegetarianDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Vegetarian Nutrition: Complete Guide 2025</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">What Are the Risks and Benefits of a Vegetarian Diet?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 A vegetarian diet excludes meat, poultry, and fish/seafood but includes plant-based foods and may include dairy and eggs
                 depending on the type. The main vegetarian categories are: <strong>lacto-ovo vegetarian</strong> (includes dairy and eggs -
@@ -503,7 +501,7 @@ export default function VegetarianDietPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="vegetarian" />
         </div>
       </div>
     </div >

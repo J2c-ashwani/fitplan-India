@@ -9,6 +9,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Oil Pulling (Gandusha): The Ultimate Guide | Ayurvedic Detox",
@@ -27,6 +28,13 @@ export default function OilPullingPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Oil Pulling (Gandusha): The Ultimate Guide | Ayurvedic Detox"
+                description="Everything you need to know about Oil Pulling. Scientific benefits for teeth whitening, bad breath, and gut health. Step-by-step 20-minute protocol."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -34,10 +42,10 @@ export default function OilPullingPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        The Master Detox: Oil Pulling
+                        How Do You Perform Ayurvedic Oil Pulling (Gandusha) Correctly for Whiter Teeth?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Known in Sanskrit as <strong>Gandusha</strong> or <strong>Kavala</strong>, this 3,000-year-old practice acts as a magnet for toxins, purifying not just your mouth, but your entire system.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Oil pulling (Gandusha) uses the scientific principle of 'like attracts like'—the fats in oil act like a magnet to pull out lipid-coated bacteria hiding between your teeth. To perform it correctly, swish 1 tablespoon of sesame or coconut oil for 15-20 minutes first thing in the morning on an empty stomach, then spit it in the trash to reveal whiter teeth and drastically reduce bad breath.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -48,7 +56,7 @@ export default function OilPullingPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">More Than Just a Trend</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is Swishing Oil for 20 Minutes the Most Powerful Way to Detoxify Your Entire Body?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 While Oil Pulling has become a modern wellness trend, it is described in the ancient Ayurvedic text <em>Charaka Samhita</em> as a daily ritual for strengthening teeth, improving voice, and enhancing taste.

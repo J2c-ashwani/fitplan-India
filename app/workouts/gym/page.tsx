@@ -9,6 +9,7 @@ import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
+import Breadcrumbs from "@/components/Breadcrumbs"
 
 export const metadata: Metadata = {
     title: "Gym Workout Plan for Beginners | 4-Day Split Routine",
@@ -41,22 +42,35 @@ export const metadata: Metadata = {
 export default function GymWorkoutPage() {
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Gym Workout Plan for Beginners | 4-Day Split Routine"
+                description="Complete 4-day gym workout split for beginners. Focus on compound movements, muscle building, and proper form. Includes upper/lower body split."
+                keywords={["gym workout plan", "beginner gym routine", "4 day gym split", "upper lower split", "muscle building workout", "gym exercises for beginners"]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-20">
-                <div className="container mx-auto px-4 text-center">
-                    <Badge className="mb-4 bg-blue-500 hover:bg-blue-600 text-white border-none">
-                        Beginner to Intermediate
-                    </Badge>
-                    <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
-                        The Foundation Protocol
-                    </h1>
-                    <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-                        Stop guessing. This 4-day Upper/Lower split is the most scientifically proven way to build muscle and strength efficiently.
-                    </p>
-                    <div className="flex justify-center gap-4 text-sm font-semibold text-slate-400">
-                        <span className="flex items-center"><Calendar className="w-4 h-4 mr-2" /> 4 Days/Week</span>
-                        <span className="flex items-center"><Clock className="w-4 h-4 mr-2" /> 60 Mins</span>
-                        <span className="flex items-center"><Dumbbell className="w-4 h-4 mr-2" /> Hypertrophy</span>
+            <section className="bg-gradient-to-br from-slate-900 to-slate-800 text-white pt-24 pb-16">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <Breadcrumbs items={[
+                        { label: "Workouts", href: "/workouts" },
+                        { label: "Gym Routine", href: "/workouts/gym" }
+                    ]} />
+                    <div className="max-w-4xl mx-auto text-center mt-8">
+                        <Badge className="mb-4 bg-white/20 text-white border-slate-600 hover:bg-white/30">
+                            🏋️‍♂️ Muscle Building Answer Engine
+                        </Badge>
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+                            What is the Best 4-Day Gym Workout Split for Muscle Growth?
+                        </h1>
+                        <p className="text-xl text-slate-200 mb-8 border-l-4 border-slate-400 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                            <strong>The Short Answer:</strong> The "Upper/Lower" split is the most scientifically proven 4-day gym routine for beginners and intermediates. By training your upper body and lower body twice per week each, you perfectly balance muscle protein synthesis (which lasts 48 hours after lifting) with adequate recovery time. This drastically outperforms traditional "bro-splits" (like training chest only once a week).
+                        </p>
+                        <div className="flex justify-center flex-wrap gap-4 text-sm font-semibold text-slate-300 bg-white/5 inline-flex p-3 rounded-lg border border-white/10">
+                            <span className="flex items-center"><Calendar className="w-4 h-4 mr-2" /> 4 Days/Week</span>
+                            <span className="flex items-center"><Clock className="w-4 h-4 mr-2" /> 60 Mins</span>
+                            <span className="flex items-center"><Dumbbell className="w-4 h-4 mr-2" /> Hypertrophy</span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -71,9 +85,9 @@ export default function GymWorkoutPage() {
             {/* Schedule Overview */}
             <section className="py-12">
                 <div className="container mx-auto px-4 max-w-4xl">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center">
+                    <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center font-serif">
                         <Repeat className="w-8 h-8 text-blue-600 mr-3" />
-                        Weekly Schedule
+                        How Should I Structure My Weekly Gym Schedule?
                     </h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[

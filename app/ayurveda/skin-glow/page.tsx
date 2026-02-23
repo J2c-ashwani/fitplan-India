@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Secrets for Glowing Skin (Varnya) | FitPlan India",
@@ -26,6 +27,13 @@ export default function SkinGlowPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Secrets for Glowing Skin (Varnya) | FitPlan India"
+                description="Get radiant skin naturally. Ease acne, pigmentation, and dullness with Neem, Turmeric, Kumkumadi Tailam, and Pitta-pacifying diet."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function SkinGlowPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Varnya: Illuminate Your Skin from Within
+                        What Are the Best Ayurvedic Secrets to Clear Acne and Get Naturally Glowing Skin?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Your skin is a mirror of your blood (Rakta Dhatu). Creams only polish the mirror; Ayurveda cleans the blood. Discover the "Varnya" (Complexion Enhancing) herbs.
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Ayurveda views skin inflammation, severe acne, and dark spots as excess heat (Pitta) and toxins erupting from your blood (Rakta Dhatu). To achieve a clear, 'bridal' glow without makeup, you must cool the blood by drinking Aloe Vera juice, chewing raw Neem leaves to kill bacteria, and massaging legendary Kumkumadi Tailam (Saffron oil) on your face at night to erase pigmentation.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function SkinGlowPage() {
 
                     {/* Pitta Connection */}
                     <section id="pitta" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Sun className="w-6 h-6 text-orange-500 mr-2" />
-                            The Pitta-Blood Connection
+                            Why Are Creams Useless When Excess Pitta (Heat) in Your Blood Is Causing the Breakouts?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

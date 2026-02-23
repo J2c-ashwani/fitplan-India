@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "10 Golden Ayurvedic Diet Rules | Art of Mindful Eating",
@@ -26,6 +27,13 @@ export default function DietRulesPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="10 Golden Ayurvedic Diet Rules | Art of Mindful Eating"
+                description="Ayurveda is not just about what you eat, but HOW you eat. Master the 10 rules of Ahara, the concept of Viruddha Ahar (Incompatible Foods), and the ideal daily eating schedule."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function DietRulesPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        The Art of Eating
+                        What Are the 10 Golden Ayurvedic Rules for Perfect Digestion?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        In Ayurveda, food is medicine. But even the healthiest food can become poison (Ama) if eaten at the wrong time, in the wrong quantity, or with the wrong combination.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> In Ayurveda, health is determined by 'Agni' (digestive fire)—what you can digest, not just what you eat. To prevent bloating and toxins (Ama), you must follow Ahara Vidhi: eat warm, cooked meals, consume food only when genuinely hungry, avoid incompatible combinations (like milk with banana), and align your heaviest meal with the peak sun at noon.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -55,7 +63,7 @@ export default function DietRulesPage() {
                             <div className="p-3 bg-orange-100 rounded-full">
                                 <Flame className="w-8 h-8 text-orange-600" />
                             </div>
-                            <h2 className="text-3xl font-serif font-bold text-gray-900">Respect Your Agni</h2>
+                            <h2 className="text-3xl font-serif font-bold text-gray-900">Why Is Protecting Your Agni (Digestive Fire) the Secret to All Health?</h2>
                         </div>
                         <div className="prose prose-lg text-gray-700">
                             <p>

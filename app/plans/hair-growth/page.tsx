@@ -6,10 +6,11 @@ import { CheckCircle, Heart, AlertCircle, TrendingUp, ArrowRight, Info, Scissors
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
     title: "Hair Growth Diet Plan | Best Foods to Stop Hair Fall | FitPlan India",
     description: "Ayurvedic and scientific diet plan for hair growth. Foods to stop hair fall, prevent premature graying, and boost volume. Expert nutrition guide for strong hair.",
@@ -78,20 +79,27 @@ export default function HairGrowthDietPage() {
 
     return (
         <div className="min-h-screen bg-stone-50 pb-20">
+            <ArticleSchema
+                headline="Hair Growth Diet Plan | Best Foods to Stop Hair Fall | FitPlan India"
+                description="Ayurvedic and scientific diet plan for hair growth. Foods to stop hair fall, prevent premature graying, and boost volume. Expert nutrition guide for strong hair."
+                keywords={["hair growth diet", "best food for hair growth", "diet for hair fall", "ayurvedic hair diet", "foods for strong hair", "indian diet for hair regrowth", "biotin rich foods india", "prevent gray hair diet"]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-emerald-800 to-teal-900 text-white pt-24 pb-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <Breadcrumbs items={breadcrumbItems} />
                     <div className="max-w-4xl mx-auto text-center">
-                        <Badge className="mb-4 bg-white text-emerald-800 font-semibold">
-                            💇‍♀️ Ultimate Hair Nutrition Guide
+                        <Badge className="mb-4 bg-white/20 text-white border-white/30">
+                            💇‍♀️ Hair Growth Answer Engine
                         </Badge>
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
-                            Hair Growth Diet Plan
+                            What is the Best Diet to Stop Hair Fall & Regrow Hair?
                         </h1>
-                        <p className="text-xl text-emerald-100 mb-8 leading-relaxed max-w-2xl mx-auto">
-                            Stop hair fall, reverse early graying, and boost volume with a precise blend of Modern Nutrition (Protein & Iron) and Ancient Ayurveda (Pitta Pacification).
+                        <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                            <strong>The Short Answer:</strong> Hair fall is primarily caused by deficiencies in <strong>Protein and Iron (Ferritin)</strong>, along with excess body heat (Pitta). The fastest way to stop shedding and stimulate regrowth is eating a high-protein diet (paneer, eggs, lentils), increasing iron intake, and consuming Amla daily to blocks hair-loss hormones (DHT).
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-white text-emerald-900 hover:bg-stone-100 font-semibold" asChild>
@@ -109,10 +117,10 @@ export default function HairGrowthDietPage() {
             <section id="science" className="py-16 bg-white scroll-mt-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl font-bold text-stone-900 mb-6 font-serif">The Biology of Hair Growth</h2>
+                        <h2 className="text-3xl font-bold text-stone-900 mb-6 font-serif">Why Does Hair Fall Out and How Can Diet Stop It?</h2>
                         <div className="bg-stone-50 rounded-xl p-8 border border-stone-200 shadow-sm">
                             <p className="text-lg text-stone-700 mb-6 leading-relaxed">
-                                Your hair is a barometer of your internal health. It is not a vital organ, so when your body is under stress or lacks nutrients, <strong>hair is the first thing it abandons.</strong>
+                                Your hair is a barometer of your internal health. It is not a vital organ, so when your body is under stress or lacks nutrients, <strong>hair is the first thing it abandons.</strong> Understanding the growth phases shows us how to fix it:
                             </p>
                             <div className="grid md:grid-cols-3 gap-6 text-center">
                                 <div className="bg-white p-4 rounded-lg shadow-sm border border-stone-100">
@@ -326,7 +334,7 @@ export default function HairGrowthDietPage() {
                     </div>
 
                     <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-                        <RelatedContent />
+                        <DynamicRelatedContent topic="hair-growth" />
                     </div>
                 </div>
             </section>

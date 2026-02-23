@@ -102,8 +102,10 @@ export default function WaterCalculatorPage() {
                     </div>
                     <div className="max-w-4xl mx-auto text-center">
                         <Badge className="mb-4 bg-white text-cyan-600 font-semibold">Free Health Tool</Badge>
-                        <h1 className="text-4xl font-bold mb-4">Daily Water Intake Calculator</h1>
-                        <p className="text-xl opacity-90">Find out exactly how much water you should drink daily based on your body weight, activity level, and climate.</p>
+                        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Exactly How Much Water Should You Drink Daily in a Hot Indian Climate to Flush Out Toxins?</h1>
+                        <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+                            <strong>The Short Answer:</strong> The '8 glasses a day' myth leads to chronic dehydration in hot Indian summers, stalling your metabolism and causing severe water retention. To effectively flush out metabolic waste and suppress false hunger cues, you must calculate your true baseline requirement at 35ml per kg of body weight, plus an additional 1 liter during peak summer heat or intense exercise.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -190,7 +192,7 @@ export default function WaterCalculatorPage() {
 
                             {/* Rich Content for SEO */}
                             <div className="mt-12 prose max-w-none text-gray-700">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Complete Guide to Hydration for Indians</h2>
+                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Is Chronic Dehydration the Hidden Reason Your Metabolism Has Slowed to a Crawl?</h2>
 
                                 <p>
                                     In a tropical country like India, hydration isn't just about quenching thirst—it's about survival and optimal health. With temperatures soaring above 40°C in many parts of the country, the standard "8 glasses a day" rule might not be enough for everyone.

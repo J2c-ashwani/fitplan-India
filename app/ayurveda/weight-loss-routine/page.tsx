@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "The Dinacharya: Daily Ayurvedic Routine for Weight Loss | FitPlan India",
@@ -27,6 +28,13 @@ export default function WeightLossRoutinePage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="The Dinacharya: Daily Ayurvedic Routine for Weight Loss | FitPlan India"
+                description="Lose weight naturally by following the Ayurvedic Dinacharya (Daily Routine). Learn when to wake up, what to drink, and how to eat for maximum metabolism."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -34,10 +42,10 @@ export default function WeightLossRoutinePage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        The Ayurveda Clock: Aligning with Nature for Effortless Weight Loss
+                        What Is the Perfect Ayurvedic Daily Routine (Dinacharya) for Fast Weight Loss?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        You don't need a gym membership; you need a clock. In Ayurveda, <strong>when</strong> you eat is as important as <strong>what</strong> you eat. This daily routine (Dinacharya) aligns your metabolism with the sun.
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Weight loss is impossible if you eat heavy meals when your metabolism is asleep. To lose belly fat effortlessly, you must align your eating with the sun—eat your heaviest meal at Noon when your digestive fire (Agni) is strongest, finish a light dinner before 7 PM to prevent night-time fat storage (Kapha), and drink warm water with lemon every morning to flush out toxins.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -48,9 +56,9 @@ export default function WeightLossRoutinePage() {
 
                     {/* Introduction */}
                     <section id="intro" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Clock className="w-6 h-6 text-emerald-600 mr-2" />
-                            Why Timings Matter?
+                            Why Does Eating Dinner After 8 PM Guarantee That Your Food Will Turn Into Visceral Belly Fat?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

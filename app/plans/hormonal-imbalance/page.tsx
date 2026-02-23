@@ -6,10 +6,11 @@ import { CheckCircle, Heart, AlertCircle, Moon, Target, Sparkles, Activity, Tren
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
   title: "Hormonal Imbalance Diet Plan | PCOS, Thyroid & Menopause | FitPlan India",
   description: "Complete hormonal imbalance diet plan for PCOS, thyroid, menopause, and hormone-related weight gain. Expert-designed for women in USA, UK, Canada, Australia.",
@@ -77,23 +78,27 @@ export default function HormonalImbalancePage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="Hormonal Imbalance Diet Plan | PCOS, Thyroid & Menopause | FitPlan India"
+        description="Complete hormonal imbalance diet plan for PCOS, thyroid, menopause, and hormone-related weight gain. Expert-designed for women in USA, UK, Canada, Australia."
+        keywords={["hormonal imbalance diet", "PCOS diet plan", "thyroid diet", "menopause weight loss", "hormone balance diet", "PCOS weight loss", "hypothyroidism diet", "estrogen dominance", "food for hormonal balance"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-violet-600 to-purple-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-violet-600 font-semibold">
-              ⚖️ Balance Your Hormones Naturally
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              ⚖️ Hormone Balance Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Hormonal Imbalance Diet Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Diet for Hormonal Imbalance and Weight Gain?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete hormone-balancing diet plan for women struggling with PCOS, thyroid disorders (hypothyroidism/hyperthyroidism),
-              menopause, estrogen dominance, insulin resistance, and hormone-related weight gain. Science-based nutrition strategies to
-              naturally regulate hormones, reduce symptoms, and achieve sustainable weight loss. Designed for women in USA, UK, Canada,
-              Australia dealing with stubborn weight despite healthy eating.
+            <p className="text-xl text-white mb-8 border-l-4 border-violet-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> True hormonal balance requires stabilizing blood sugar to drop insulin spikes (which cause PCOS/testosterone issues) and boosting liver detox to clear excess estrogen. A successful hormone diet removes refined carbs, loads up on cruciferous vegetables (broccoli/cauliflower) to clear estrogen, and includes a minimum of 35g of fiber daily.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-violet-600 hover:bg-gray-100 font-semibold" asChild>
@@ -131,8 +136,8 @@ export default function HormonalImbalancePage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Hormonal Imbalance and Weight Gain</h2>
-              <p className="text-lg text-gray-700 mb-6">
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why is it So Hard to Lose Weight with a Hormonal Imbalance?</h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Hormonal imbalance occurs when your body produces too much or too little of key hormones (insulin, estrogen, progesterone,
                 testosterone, thyroid hormones, cortisol, leptin) that regulate metabolism, appetite, fat storage, and body composition.
                 Approximately 30-40% of women experience hormonal imbalances at some point in their lives, with symptoms including unexplained
@@ -145,7 +150,7 @@ export default function HormonalImbalancePage() {
                 and chronic stress elevating cortisol continuously.
               </p>
 
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 The critical truth about hormonal weight gain is that <strong>traditional calorie restriction and excessive exercise often
                   WORSEN hormonal imbalances</strong> rather than fixing them. Extreme dieting and overtraining increase cortisol (stress hormone),
                 suppress thyroid function, disrupt menstrual cycles, and create further metabolic dysfunction. Instead, hormonal weight loss
@@ -546,7 +551,7 @@ export default function HormonalImbalancePage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="hormonal-imbalance" />
         </div>
       </div>
     </div>

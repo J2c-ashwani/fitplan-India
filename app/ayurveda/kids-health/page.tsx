@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurveda for Kids: Natural Immunity & Brain Power | Bala Roga",
@@ -26,6 +27,13 @@ export default function KidsPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurveda for Kids: Natural Immunity & Brain Power | Bala Roga"
+                description="Raise strong, smart kids with Ayurveda. Guide to Swarnaprashana (Gold drops), memory boosting herbs like Brahmi, and natural remedies for cough & cold."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function KidsPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Kaumarbhritya: Ayurveda for Kids
+                        How Can You Boost Your Child's Brain Power and Immunity According to Ayurveda?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Children are in the <strong>Kapha</strong> stage of life—growing, building tissue, but also prone to mucus, colds, and congestion. The goal is to build immunity without suppressing their natural growth.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Children are naturally in the 'Kapha' phase of life, which is why they produce so much mucus and catch frequent colds. To build unbreakable immunity without suppressing their natural growth, replace cold dairy with warm spiced milk, give them Brahmi syrup to drastically improve memory and focus, and consider 'Swarnaprashana' (gold drop therapy) for lifelong viral resistance.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function KidsPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Kids Get Sick Often</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Does Excessive Cold Dairy and Sugar Trap Your Child in a Cycle of Sickness?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 Since childhood is dominated by the Earth & Water elements (Kapha), kids naturally have more mucus. This is necessary for lubrication and growth!

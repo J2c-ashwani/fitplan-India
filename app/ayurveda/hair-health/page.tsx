@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Best Ayurvedic Hair Oil & Herbs for Growth | Keshya",
@@ -26,6 +27,13 @@ export default function HairHealthPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Best Ayurvedic Hair Oil & Herbs for Growth | Keshya"
+                description="Stop hair fall and premature graying naturally. Ayurvedic guide to Bhringraj, Amla, and Nasya therapy for thick, lustrous hair."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function HairHealthPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Keshya: The Ancient Secret to Lustrous Hair
+                        How Can You Fast-Track Hair Growth and Stop Hair Fall Using Ayurveda?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Hair is a byproduct of bone tissue (Asthi Dhatu). When your bones are well-nourished, your hair shines. Hair fall, however, is a result of <strong>excess Pitta</strong> (Heat) frying the follicles.
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Hair (Kesha) is a byproduct of bone tissue (Asthi Dhatu). Hair fall happens when excess Pitta (Heat) fries the follicles or poor nutrition weakens the bones down to the roots. To trigger new growth instantly, perform weekly warm oil Champi (head massages) using herbal oils like Bhringraj, and practice 'Nasya'—putting 2 drops of Anu Taila in each nostril to nourish the cranial nerves directly.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function HairHealthPage() {
 
                     {/* Root Cause */}
                     <section id="root-cause" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Flame className="w-6 h-6 text-red-600 mr-2" />
-                            Why is my hair falling?
+                            Why Does Excess Pitta (Body Heat) Literally 'Fry' Your Hair Follicles?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

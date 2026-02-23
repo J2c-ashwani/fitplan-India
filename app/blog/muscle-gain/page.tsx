@@ -7,6 +7,7 @@ import type { Metadata } from "next"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Muscle Gain Diet Plan | Complete Bulking Guide to Build Muscle Mass",
@@ -39,19 +40,25 @@ export const metadata: Metadata = {
 export default function MuscleGainDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Muscle Gain Diet Plan | Complete Bulking Guide to Build Muscle Mass"
+        description="Complete muscle gain diet guide with bulking meal plans, calorie surplus strategies, high-protein nutrition, muscle building foods, and mass gain for bodybuilding."
+        keywords={["muscle gain diet", "bulking diet plan", "build muscle mass", "bodybuilding nutrition", "high protein diet", "calorie surplus", "mass gainer meal plan", "muscle building foods"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-700 to-indigo-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-blue-700 font-semibold">
-              💪 Complete Muscle Building Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💪 Muscle Gain Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Muscle Gain Diet Plan: Build Mass & Strength Effectively
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Many Calories and Grams of Protein Do You Actually Need to Build Muscle Mass?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover evidence-based muscle building nutrition including calorie surplus strategies, high-protein
-              meal plans, optimal nutrient timing, mass gain foods, and complete bulking guide for maximum muscle growth.
+            <p className="text-xl text-white mb-8 border-l-4 border-blue-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> To optimize muscle hypertrophy without gaining excessive body fat, you need a daily calorie surplus of just 300-500 calories above your maintenance level. Equally critical is consuming 2.0-2.6 grams of high-quality protein per kilogram of your body weight every day. This exact combination of extra energy and structural protein gives your body both the fuel and the building blocks required to repair and grow new muscle tissue after resistance training.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100 font-semibold" asChild>
@@ -94,7 +101,7 @@ export default function MuscleGainDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Muscle Gain Nutrition</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why is a Calorie Surplus Mandatory for Building New Muscle Tissue?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Building muscle requires eating in a calorie surplus - consuming more calories than you burn - to provide
                 energy for intense training and raw materials for muscle growth. Natural muscle gain is slow: beginners can

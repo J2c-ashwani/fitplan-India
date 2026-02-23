@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Acne Cure: Yuvana Pidika Map & Remedies | FitPlan India",
@@ -26,6 +27,13 @@ export default function AcnePage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Acne Cure: Yuvana Pidika Map & Remedies | FitPlan India"
+                description="Map your acne to your internal organs. Complete Ayurvedic guide to curing Yuvana Pidika (Acne) using Neem, Manjistha, and the Pitta-pacifying diet."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function AcnePage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Yuvana Pidika: The Heat Within
+                        How Can You Cure Deep Cystic Acne Using Ayurvedic Blood Purifiers?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Creams only treat 10% of the problem. In Ayurveda, acne is <strong>not a skin problem</strong>; it is a blood (Rakta) and Pitta problem. The heat is trying to escape through your skin.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Acne (Yuvana Pidika) is rarely just a surface skin issue—it's excess Pitta (heat) trapped in the Rakta Dhatu (blood). Creams only treat 10% of the problem. To banish cystic breakouts, you must cool the blood internally by chewing 4-5 fresh Neem leaves daily or taking Manjistha powder, while strictly eliminating fermented dairy (like yogurt) that creates internal heat.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function AcnePage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why You Break Out</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Do Fermented Foods and Dairy Cause Massive Breakouts?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 Acne, or <em>Yuvana Pidika</em>, is primarily caused by the vitiation of <strong>Pitta Dosha</strong> (Heat) and <strong>Rakta Dhatu</strong> (Blood). When you eat spicy, sour, or fermented foods, toxins mix with the blood and erupt as pimples.

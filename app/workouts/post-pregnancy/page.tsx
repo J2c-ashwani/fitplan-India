@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -93,15 +93,14 @@ export default function PostPregnancyWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-pink-700 font-semibold">
-              👶 Complete Post-Pregnancy Workout Guide 2025
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              👶 Postpartum Recovery Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Post-Pregnancy Workout Plan: Safe Postpartum Exercise & Recovery
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Why Is My "Mommy Pooch" Still There After Doing Crunches?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective postpartum exercises to heal your core, strengthen your pelvic floor,
-              restore fitness, and regain strength after childbirth with doctor-approved routines.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Traditional crunches actually make a "mommy pooch" worse if you have <em>Diastasis Recti</em> (abdominal separation). Crunches push your organs outward against a weakened abdominal wall, widening the gap. To safely flatten your stomach post-pregnancy, you must first heal the deep core (transverse abdominis) using diaphragmatic breathing, pelvic tilts, and modified safe exercises.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-700 hover:bg-gray-100 font-semibold" asChild>
@@ -143,7 +142,7 @@ export default function PostPregnancyWorkoutPage() {
             </div>
 
             <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Postpartum Exercise is Important</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">When Exactly Is It Safe to Start Exercising Again?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Exercise after pregnancy is crucial for physical recovery, mental health, and overall wellbeing. However,
                 your body has undergone significant changes and needs time to heal before resuming activity. Starting with
@@ -641,7 +640,7 @@ export default function PostPregnancyWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="post-pregnancy" />
           </div>
         </div>
       </section>

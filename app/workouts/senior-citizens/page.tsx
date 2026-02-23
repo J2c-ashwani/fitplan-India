@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -94,15 +94,14 @@ export default function SeniorCitizenWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-emerald-700 font-semibold">
-              👴👵 Complete Senior Exercise Guide 2025
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              👴👵 Healthy Aging Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Senior Citizen Exercise Plan: Safe Workouts for Healthy Aging
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Can I Still Build Muscle and Prevent Falls After Age 65?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover safe, effective exercises designed specifically for seniors to improve balance, maintain
-              strength, enhance flexibility, prevent falls, and support independent living after 60.
+            <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Absolutely. Research proves that bodies in their 70s, 80s, and even 90s can still build significant new muscle tissue through light resistance training. To prevent falls (the leading cause of injury for seniors), focusing on specific daily balance exercises (like single-leg stands) combined with chair squats dramatically improves functional independence and bone density.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-emerald-700 hover:bg-gray-100 font-semibold" asChild>
@@ -144,7 +143,7 @@ export default function SeniorCitizenWorkoutPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Crucial for Seniors</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Is Balance Training More Critical Than Cardio for Seniors?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Regular exercise is one of the most important things seniors can do for health and independence. Physical
                 activity prevents muscle loss (sarcopenia), maintains bone density, improves balance and coordination to
@@ -670,7 +669,7 @@ export default function SeniorCitizenWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="senior-citizens" />
           </div>
         </div>
       </section>

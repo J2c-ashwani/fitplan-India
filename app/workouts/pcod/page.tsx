@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -93,15 +93,14 @@ export default function PCODWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-pink-600 font-semibold">
-              💪 Complete PCOD Exercise Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💡 PCOS/PCOD Fitness Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              PCOD Workout Plan: Balance Hormones Through Exercise
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Why Does Cardio Sometimes Make PCOS Symptoms Worse?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover effective workout strategies for PCOD/PCOS to improve insulin sensitivity, reduce inflammation,
-              support weight loss, balance hormones, and naturally manage symptoms through targeted exercise.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Excessive cardio can raise cortisol (your stress hormone), which signals your body to store belly fat and worsen insulin resistance—the exact opposite of what women with PCOS need. Instead, prioritizing strength training builds muscle mass that acts as a "sponge" for blood sugar, naturally improving insulin sensitivity by up to 50% while lowering male hormone (androgen) levels.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -143,7 +142,7 @@ export default function PCODWorkoutPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Exercise and PCOD: The Powerful Connection</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Does Building Muscle Improve Insulin Resistance?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Exercise is one of the most effective natural treatments for PCOD/PCOS. Regular physical activity improves
                 insulin sensitivity by up to 50%, helps balance hormones (reduces androgens), supports healthy weight loss,
@@ -599,6 +598,15 @@ export default function PCODWorkoutPage() {
         </div>
       </section>
 
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
       {/* Dual CTA Section */}
       <section className="py-16 bg-gradient-to-r from-pink-600 to-purple-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -647,7 +655,7 @@ export default function PCODWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="pcod" />
           </div>
         </div>
       </section>

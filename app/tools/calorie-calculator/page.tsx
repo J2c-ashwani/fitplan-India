@@ -127,8 +127,10 @@ export default function CalorieCalculatorPage() {
                     </div>
                     <div className="max-w-4xl mx-auto text-center">
                         <Badge className="mb-4 bg-white text-blue-600 font-semibold">Free Health Tool</Badge>
-                        <h1 className="text-4xl font-bold mb-4">Daily Calorie Calculator (BMR & TDEE)</h1>
-                        <p className="text-xl opacity-90">Calculate exactly how many calories you need to lose weight, gain muscle, or maintain your current physique.</p>
+                        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-balance">How Can You Calculate the Exact Daily Calories Needed to Lose Stubborn Indian Belly Fat?</h1>
+                        <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+                            <strong>The Short Answer:</strong> Traditional Indian diets are naturally carb-heavy, making standard global calorie calculators ineffective for sustainable weight loss. To lose belly fat without losing muscle, you must calculate your tailored BMR using the Mifflin-St Jeor equation, subtract exactly 500 calories for a safe deficit, and prioritize high-protein vegetarian sources like Soya and Paneer to stay full.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -259,7 +261,7 @@ export default function CalorieCalculatorPage() {
 
                             {/* Rich Content for SEO/AdSense */}
                             <div className="mt-12 prose max-w-none text-gray-700">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Complete Guide to Caloric Balance</h2>
+                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Is It Impossible to Lose Weight If You Don't Understand Your Basal Metabolic Rate (BMR)?</h2>
                                 <p>
                                     Weight management often feels complicated, but at its core, it's a game of energy balance. This calculator uses the Mifflin-St Jeor equation (considered the gold standard in clinical settings) to estimate your needs.
                                 </p>

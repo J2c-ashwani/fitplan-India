@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Body Polishing: Udvartana at Home | FitPlan India",
@@ -26,6 +27,13 @@ export default function BodyPolishingPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Body Polishing: Udvartana at Home | FitPlan India"
+                description="Udvartana is the Ayurvedic art of dry massage with herbal powders. Learn how to make Ubtan for glowing skin, cellulite reduction, and lymphatic drainage."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function BodyPolishingPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Udvartana: The Royal Scrub
+                        How Do You Perform Ayurvedic Udvartana at Home for Cellulite?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Abhyanga is oil massage; <strong>Udvartana</strong> is dry herbal powder massage. It is the secret to the radiant, firm skin of Indian royalty. It doesn't just clean; it sculpts.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Udvartana is an ancient Ayurvedic dry massage using herbal powders (Ubtan) rubbed vigorously in an upward direction against hair growth. This friction generates deep tissue heat, melting subcutaneous fat (Kapha) and stimulating lymphatic drainage. Doing this daily with a blend of Chickpea flour and Triphala is one of the most effective holistic treatments for cellulite reduction and instant skin polishing.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function BodyPolishingPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Friction is Medicine</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is Upward Friction Essential for Melting Stubborn Cellulite?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 Unlike spa scrubs that just exfoliate, Udvartana is a therapeutic procedure where herbal powders are rubbed <strong>upwards</strong> (against the direction of hair growth) with pressure.

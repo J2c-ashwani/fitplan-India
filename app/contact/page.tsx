@@ -287,12 +287,11 @@ export default function ContactPage() {
             <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
               💬 Expert Consultation
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Book Your Personalized Consultation
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-balance">
+              How Can You Instantly Book a 1-on-1 Video Consultation With a Certified Indian Medical Dietitian?
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get customized diet plans and expert guidance from certified nutritionists specializing in PCOS, thyroid,
-              diabetes, and other health conditions. Available worldwide via video call.
+            <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+              <strong>The Short Answer:</strong> Unlike scammy apps that sell generic PDFs, FitPlan India gives you direct access to real, certified medical professionals. By filling out the clinical assessment form below and paying the one-time consultation fee, you will instantly secure a 45-minute 1-on-1 video consultation where our doctors will diagnose your root cause and prescribe a highly customized healing protocol.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
               <div className="flex items-center gap-2">
@@ -324,8 +323,8 @@ export default function ContactPage() {
             <div className="lg:col-span-2">
               <Card className="border-2 hover:shadow-xl transition-shadow">
                 <CardHeader className="bg-gradient-to-r from-emerald-50 to-green-50">
-                  <CardTitle className="text-2xl">Consultation Request Form</CardTitle>
-                  <CardDescription className="text-base">
+                  <CardTitle className="text-2xl text-balance">Why Is a Certified Medical Consultation the Crucial First Step to Reversing Your Chronic Disease?</CardTitle>
+                  <CardDescription className="text-base text-balance">
                     Fill out the form below to book your personalized nutrition consultation.
                   </CardDescription>
                 </CardHeader>

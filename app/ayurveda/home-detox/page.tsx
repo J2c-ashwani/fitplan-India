@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Weekend Ayurvedic Detox Plan (Home Cleanse) | FitPlan India",
@@ -26,6 +27,13 @@ export default function HomeDetoxPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Weekend Ayurvedic Detox Plan (Home Cleanse) | FitPlan India"
+                description="Reset your digestion in 48 hours. A simple Kitchari Cleanse and Castor Oil detox (Virechana) to flush toxins and boost energy."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function HomeDetoxPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        The 48-Hour Weekend Reset
+                        How Do You Perform a Complete Ayurvedic 48-Hour Home Gut Detox?
                     </h1>
-                    <p className="text-lg md:text-xl text-teal-100 max-w-3xl mx-auto leading-relaxed">
-                        You service your car every 6 months. When was the last time you serviced your body? Flush out accumulated <strong>Ama</strong> (Toxins) with this gentle Ayurvedic Home Cleanse.
+                    <p className="text-lg text-white mb-8 border-l-4 border-teal-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> When you wake up tired with a white-coated tongue and constant bloating, your body is overflowing with sticky toxins (Ama). To flush them out over a weekend, you must first loosen the toxins by drinking pure ghee, eat only a simple Kitchari (rice and moong dal) mono-diet to rest digestion, and perform a Sunday morning purge (Virechana) using 2 tablespoons of medical-grade Castor Oil to sweep the colon clean.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function HomeDetoxPage() {
 
                     {/* Why Detox */}
                     <section id="why" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Trash2 className="w-6 h-6 text-teal-600 mr-2" />
-                            Understanding Ama
+                            Why Is Toxic 'Ama' the Root Cause of Your Absolute Exhaustion and Brain Fog?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

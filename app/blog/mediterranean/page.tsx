@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Sparkles, Leaf } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Mediterranean Diet Plan | Complete Guide to Heart-Healthy Eating",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function MediterraneanDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Mediterranean Diet Plan | Complete Guide to Heart-Healthy Eating"
+        description="Complete Mediterranean diet guide with meal plans, health benefits, heart disease prevention, weight loss strategies, and authentic Mediterranean cuisine for longevity."
+        keywords={["mediterranean diet", "mediterranean meal plan", "heart healthy diet", "mediterranean diet benefits", "mediterranean diet recipes", "longevity diet", "olive oil diet"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-emerald-600 to-teal-700 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
-              🌿 World's Healthiest Diet
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🌿 Mediterranean Diet Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Mediterranean Diet Plan: Heart Health & Longevity
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Why is the Mediterranean Diet Consistently Ranked the #1 Healthiest Diet in the World?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the Mediterranean diet - ranked #1 healthiest diet by experts worldwide. Learn heart-healthy
-              eating with olive oil, fish, vegetables, whole grains, and complete meal plans for disease prevention and longevity.
+            <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The Mediterranean Diet is ranked #1 because decades of clinical research prove it dramatically reduces the risk of heart disease (by 30%), type 2 diabetes, and cognitive decline, all without restrictive calorie counting. Its potent health benefits come from its high concentration of anti-inflammatory antioxidants, fiber, and heart-healthy monounsaturated fats found in its foundation of extra virgin olive oil, fresh vegetables, whole grains, and fatty fish.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-emerald-600 hover:bg-gray-100 font-semibold" asChild>
@@ -90,7 +97,7 @@ export default function MediterraneanDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Mediterranean Diet</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Do Olive Oil and Omega-3s Actually Protect Your Heart?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 The Mediterranean diet is inspired by traditional eating patterns of countries bordering the Mediterranean
                 Sea (Greece, Italy, Spain, southern France). It's not a "diet" in the restrictive sense - it's a lifestyle

@@ -6,7 +6,7 @@ import { CheckCircle, Heart, AlertCircle, Baby, Target, Clock, Milk, Activity, I
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -91,16 +91,14 @@ export default function PostPregnancyWeightLossPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-pink-600 font-semibold">
-              👶 Safe & Sustainable for New Moms
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              👶 Postpartum Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Post-Pregnancy Weight Loss Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Can I Lose Baby Weight Safely While Breastfeeding?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based postpartum weight loss plan with breastfeeding-safe nutrition, realistic meal plans for busy
-              moms, recovery-focused strategies, and proven methods to lose baby weight safely. Designed for new mothers in USA,
-              UK, Canada, Australia during the fourth trimester and beyond.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Postpartum weight loss requires patience and shouldn't begin until 6-8 weeks after birth. If breastfeeding, you need an extra 300-500 calories daily; restricting calories too severely will tank your milk supply. Focus instead on nutrient-dense recovery foods—like oats, salmon, and iron-rich proteins—which naturally support milk production while gradually burning off the remaining baby weight.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -138,7 +136,7 @@ export default function PostPregnancyWeightLossPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Post-Pregnancy Weight Loss: Complete Guide for New Moms</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why is Postpartum Weight Loss Different?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Pregnancy weight gain is normal, necessary, and healthy for growing a baby. The average woman gains 25-35 pounds during
                 pregnancy (recommended range: 25-35 lbs for normal weight, 28-40 lbs for underweight, 15-25 lbs for overweight, 11-20 lbs
@@ -551,7 +549,7 @@ export default function PostPregnancyWeightLossPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="post-pregnancy" />
         </div>
       </div>
     </div >

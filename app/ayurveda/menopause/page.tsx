@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurveda for Menopause: Natural Relief from Hot Flashes | FitPlan India",
@@ -26,6 +27,13 @@ export default function MenopausePage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurveda for Menopause: Natural Relief from Hot Flashes | FitPlan India"
+                description="Manage Rajonivritti (Menopause) naturally. Guide to Shatavari, cooling pranayama, and hormone-balancing diets to stop hot flashes and mood swings."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function MenopausePage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Rajonivritti: The Wise Woman Era
+                        How Can You Manage Menopause (Rajonivritti) and Stop Hot Flashes Naturally?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Menopause is not a disease; it is a natural transition. In Ayurveda, it marks the shift from the Pitta (productive) phase of life to the <strong>Vata</strong> (wisdom/spiritual) phase.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Menopause (Rajonivritti) is a natural transition from the Pitta (productive) phase to the Vata (wisdom) phase of life. When cycles stop, excess heat (Pitta) and dryness (Vata) cause severe hot flashes, anxiety, and weight gain. To cool the body instantly, drink Coriander water daily, practice left-nostril breathing (Chandra Bhedana), and take Shatavari to naturally balance hormones without HRT.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function MenopausePage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is It So Intense?</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Does the Sudden Drop in Hormones Trigger Such Intense Heat and Anxiety?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 As menstrual cycles stop, the body's cooling mechanism decreases, leading to a temporary rise in fire (<strong>Pitta</strong>) and air (<strong>Vata</strong>).

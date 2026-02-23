@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Scale, Flame } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Obesity Diet Plan for Weight Loss 2025 | Proven Meal Plans & Strategies",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function ObesityDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Obesity Diet Plan for Weight Loss 2025 | Proven Meal Plans & Strategies"
+        description="Complete obesity weight loss guide with proven meal plans, calorie deficit strategies, foods to eat and avoid, and expert tips for sustainable fat loss and health improvement."
+        keywords={["obesity diet plan", "obesity weight loss", "weight loss meal plan", "obesity diet chart", "how to lose weight with obesity", "extreme weight loss diet", "morbid obesity diet"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-700 to-red-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-orange-700 font-semibold">
-              🎯 Complete Obesity Diet Guide 2025
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🎯 Obesity Weight Loss Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Obesity Diet Plan for Weight Loss: Complete Evidence-Based Guide
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Can You Safely and Sustainably Lose Weight When Dealing with Obesity?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover proven diet strategies for sustainable weight loss with obesity, including meal plans,
-              calorie management, portion control, and lifestyle changes for long-term health improvement.
+            <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Sustainable weight loss for individuals with obesity begins with a consistent, moderate calorie deficit of 500-1000 calories per day to safely lose 1-2 pounds weekly. Success relies heavily on shifting from calorie-dense, highly processed foods to volume-eating lean proteins, fiber-rich vegetables, and whole grains, which naturally controls hunger hormones and stabilizes blood sugar without feeling starved or relying on extreme crash diets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-700 hover:bg-gray-100 font-semibold" asChild>
@@ -91,7 +98,7 @@ export default function ObesityDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Obesity and Weight Loss</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Do Small 5-10% Weight Reductions Dramatically Improve Health Markers?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Obesity is defined as having a BMI of 30 or higher and affects over 650 million adults worldwide.
                 It's a complex condition influenced by genetics, environment, lifestyle, and metabolic factors.

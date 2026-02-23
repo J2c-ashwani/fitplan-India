@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Constipation Relief: Vibandha Cure | FitPlan India",
@@ -26,6 +27,13 @@ export default function ConstipationPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Constipation Relief: Vibandha Cure | FitPlan India"
+                description="Chronic constipation (Vibandha) is the root of all disease. Learn how to cure it with Triphala, Castor Oil, and proper toilet posture."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function ConstipationPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Vibandha: Breaking the Blockage
+                        What Is the Fastest Ayurvedic Remedy to Clear Chronic Constipation?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        In Ayurveda, if your bowels don't clear in the morning, your day hasn't started. Constipation is a sign of high <strong>Vata</strong> (dryness), turning the gut into a desert.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Chronic constipation (Vibandha) is caused by excess Vata (dryness) absorbing all moisture in your colon. The fastest, non-habit-forming remedy is taking 1 teaspoon of Triphala Churna with warm water before bed to tone bowel muscles. For immediate relief of severe blockages, 1 tablespoon of Castor Oil in warm milk will stimulate a strong, hydrating cleanse.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function ConstipationPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why It Happens</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Does Vata Imbalance Dry Out Your Colon and Cause Blockages?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 The colon is the primary seat of <strong>Vata Dosha</strong>. When Vata increases due to stress, travel, or dry food, it sucks the moisture out of the stool, making it hard and rocky.

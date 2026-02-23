@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Immunity Booster: Build Ojas Naturally | FitPlan India",
@@ -26,6 +27,13 @@ export default function ImmunityPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Immunity Booster: Build Ojas Naturally | FitPlan India"
+                description="Ayurveda"
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function ImmunityPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Ojas: The Essence of Immunity
+                        How Can You Supercharge Your Immunity by Building 'Ojas' Naturally?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Modern medicine fights the germ. Ayurveda strengthens the host. Immunity isn't just a defense system; it's a glowing substance called <strong>Ojas</strong>.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> True immunity isn't fighting off a germ; it's building 'Ojas', the golden essence of vitality that remains after perfect digestion. To stop falling sick so often, you must rebuild Ojas by taking 1 spoon of Chyawanprash (rich in Vitamin C amla) daily, drinking Golden Milk (turmeric and ghee) at night, and avoiding late nights which directly drain your immune reserves.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function ImmunityPage() {
                 {/* Intro Section */}
                 <section id="ojas" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">The Purest Essence</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">What Exactly Is Ojas and Why Is It the Ultimate Shield Against Viral Infections?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 <strong>Ojas</strong> (vigor) is the final byproduct of digestion. After food passes through the 7 tissues (plasma, blood, muscle, fat, bone, nerves, reproductive), the finest essence remaining is Ojas.

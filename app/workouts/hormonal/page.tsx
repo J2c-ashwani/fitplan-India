@@ -7,7 +7,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -92,16 +92,14 @@ export default function HormonalWorkoutsPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-violet-600 font-semibold">
-              ⚖️ Gentle & Effective
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              ⚖️ Hormone Balance Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Hormone-Balancing Workouts 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Can High-Intensity Exercise Worsen Hormonal Imbalances?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete hormone-friendly workout program designed specifically for women with PCOS, thyroid disorders, menopause, and
-              hormonal imbalances. Strategic exercises that improve insulin sensitivity, reduce cortisol, support thyroid function,
-              and balance hormones naturally WITHOUT excessive stress or overtraining. Gentle yet effective approach.
+            <p className="text-xl text-white mb-8 border-l-4 border-violet-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Yes. Excessive cardio and daily HIIT spike cortisol (the stress hormone), which can suppress thyroid function, worsen insulin resistance, and disrupt menstrual cycles. If you have PCOS, menopause, or thyroid issues, the most effective approach is moderate strength training (to improve insulin sensitivity by up to 50%) combined with daily gentle walking to actively lower cortisol.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-violet-600 hover:bg-gray-100 font-semibold" asChild>
@@ -119,7 +117,7 @@ export default function HormonalWorkoutsPage() {
       <section id="why-different" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Hormone-Friendly Exercise is Different</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center font-serif">Why Does Overtraining Disrupt Your Hormones?</h2>
 
             <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200 mb-8">
               <div className="flex items-start">
@@ -557,7 +555,7 @@ export default function HormonalWorkoutsPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="hormonal" />
           </div>
         </div>
       </section>

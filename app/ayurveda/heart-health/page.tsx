@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Heart Health: Arjuna & Cholesterol Management | FitPlan India",
@@ -26,6 +27,13 @@ export default function HeartPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Heart Health: Arjuna & Cholesterol Management | FitPlan India"
+                description="Strengthen your heart (Hridaya) with Ayurveda. Comprehensive guide to Arjuna Bark, Garlic therapy, and managing blood pressure naturally."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function HeartPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Hridaya: The Seat of Life
+                        How Can You Naturally Lower Cholesterol and Protect Your Heart with Ayurveda?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        In Ayurveda, the heart is not just a pump; it is the seat of <strong>Ojas</strong> (vitality), <strong>Prana</strong> (breath), and consciousness. Protecting it requires balancing emotional and physical health.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Heart disease (Hridaya Roga) occurs when sticky plaque (Kapha) blocks your arteries (Dhamani) while stress (Vata) hardens them. The most powerful Ayurvedic intervention is drinking Arjuna Bark tea (Ksheerapaka) nightly as a natural beta-blocker, swallowing raw garlic in the morning to actively scrape away LDL cholesterol, and never eating heavy meals after 7 PM.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function HeartPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Modern Hearts Are Breaking</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Are Modern Stress and Thickened Kapha (Plaque) Breaking Our Hearts?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 Heart disease is often called <strong>Hridaya Roga</strong>. It is primarily caused by the blockage of channels (Dhamani) by thickened Kapha (cholesterol/plaque) and hardening by Vata (stress/high BP).

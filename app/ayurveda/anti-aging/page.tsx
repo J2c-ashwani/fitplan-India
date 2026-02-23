@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Rasayana Therapy: Ayurvedic Anti-Aging Secrets | FitPlan India",
@@ -26,6 +27,13 @@ export default function AntiAgingPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Rasayana Therapy: Ayurvedic Anti-Aging Secrets | FitPlan India"
+                description="Reverse aging naturally with Rasayana Therapy. Learn about Ojas, Amla (Chavanprash), and Shilajit to restore youth and immunity."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function AntiAgingPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Rasayana: The Science of Age Reversal
+                        Can Ayurvedic Rasayana Therapy Actually Slow Down Cellular Aging?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Aging (Jara) is natural, but premature degeneration is not. <strong>Rasayana</strong> is the dedicated branch of Ayurveda focused on regenerating cells, boosting immunity, and extending youth.
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Yes. While aging (Jara) is inevitable, premature degeneration is not. Ayurveda's 'Rasayana' therapy focuses on rebuilding Ojas (your vital life force) through potent herbs. Taking 1 tsp of Chavanprash (rich in Amla) every morning or taking pure Shilajit resin can directly nourish your cells, rebuild immunity, and restore the radiant glow of youth.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -62,7 +70,7 @@ export default function AntiAgingPage() {
 
                     {/* Ojas */}
                     <section id="ojas" className="mb-12 scroll-mt-24">
-                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Ojas: The Glow of Youth</h2>
+                        <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">What Is Ojas and Why Is It the Ultimate Secret to Anti-Aging?</h2>
                         <div className="bg-amber-50 p-6 rounded-xl border border-amber-200">
                             <h3 className="text-xl font-bold text-amber-900 mb-3 flex items-center"><Sparkles className="w-5 h-5 mr-2" /> The 8th Tissue</h3>
                             <p className="text-gray-700 mb-4">

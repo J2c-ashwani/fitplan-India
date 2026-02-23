@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Zap, Flame } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Exercise & Fitness Diet Plan | Complete Nutrition for Active Lifestyle",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function ExerciseFitnessPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Exercise & Fitness Diet Plan | Complete Nutrition for Active Lifestyle"
+        description="Complete exercise and fitness diet guide with meal plans for workouts, pre/post-workout nutrition, muscle recovery, performance optimization, and fueling active lifestyles."
+        keywords={["fitness diet", "exercise nutrition", "workout meal plan", "pre workout nutrition", "post workout meal", "sports nutrition", "active lifestyle diet", "performance nutrition"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-600 to-red-700 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-orange-600 font-semibold">
-              💪 Complete Exercise & Fitness Nutrition
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💪 Fitness Nutrition Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Exercise & Fitness Diet: Fuel Your Active Lifestyle
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What Should You Eat Before and After a Workout to Maximize Results?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover optimal nutrition strategies for exercise and fitness including pre/post-workout meals,
-              performance optimization, muscle recovery, energy management, and complete meal plans for active people.
+            <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> To maximize workout results, fuel up 2-3 hours beforehand with complex carbs and moderate protein, or have a quick, easily digestible carb snack 30 minutes prior. Post-workout, it's critical to consume 20-30g of high-quality protein paired with fast-digesting carbs within the 30-60 minute recovery window to halt muscle breakdown, restock glycogen, and build lean mass.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold" asChild>
@@ -91,7 +98,7 @@ export default function ExerciseFitnessPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Nutrition for Exercise & Fitness</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Do Active People Really Need That Many More Calories and Protein?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Active individuals have different nutritional needs than sedentary people. Regular exercise increases
                 calorie expenditure, depletes glycogen stores, breaks down muscle tissue, and stresses the body's systems.

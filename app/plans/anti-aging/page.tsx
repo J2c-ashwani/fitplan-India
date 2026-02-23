@@ -6,10 +6,11 @@ import { CheckCircle, Heart, AlertCircle, Sparkles, ArrowRight, Info, Eye, Sun }
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
     title: "Anti-Aging Diet Plan | Best Foods for Younger Skin & Eyes | FitPlan India",
     description: "Ayurvedic anti-aging diet (Rasayana) to reverse wrinkles, improve vision, and boost longevity. Collagen-rich foods and eye care nutrition guide. Evidence-based plan for younger skin.",
@@ -78,20 +79,27 @@ export default function AntiAgingDietPage() {
 
     return (
         <div className="min-h-screen bg-stone-50 pb-20">
+            <ArticleSchema
+                headline="Anti-Aging Diet Plan | Best Foods for Younger Skin & Eyes | FitPlan India"
+                description="Ayurvedic anti-aging diet (Rasayana) to reverse wrinkles, improve vision, and boost longevity. Collagen-rich foods and eye care nutrition guide. Evidence-based plan for younger skin."
+                keywords={["anti aging diet plan", "rasayana therapy ayurveda", "diet for younger skin", "foods for eye health", "ayurvedic anti aging secrets", "collagen rich indian food", "anti aging foods india", "best diet for glowing skin"]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-indigo-800 to-purple-900 text-white pt-24 pb-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <Breadcrumbs items={breadcrumbItems} />
                     <div className="max-w-4xl mx-auto text-center">
-                        <Badge className="mb-4 bg-white text-indigo-800 font-semibold">
-                            ⏳ Rasayana: The Science of Longevity
+                        <Badge className="mb-4 bg-white/20 text-white border-white/30">
+                            ⏳ Anti-Aging Answer Engine
                         </Badge>
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
-                            Anti-Aging & Eye Health Plan
+                            What is the Best Diet to Reverse Skin Aging & Improve Vision?
                         </h1>
-                        <p className="text-xl text-indigo-100 mb-8 leading-relaxed max-w-2xl mx-auto">
-                            Restore youthful vitality, sharpen your vision, and protect your joints with the ancient wisdom of Rasayana and modern nutritional science.
+                        <p className="text-xl text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                            <strong>The Short Answer:</strong> True anti-aging (Rasayana) requires stopping <strong>Sugar Glycation</strong> (which snaps collagen) and increasing <strong>Vitamin C + Healthy Fats</strong>. The ideal Indian anti-aging diet completely removes refined sugars, relies on Amla (Vitamin C) for collagen production, and uses Desi Cow Ghee to lubricate drying joints and nourish the eyes (Triphala).
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-white text-indigo-900 hover:bg-stone-100 font-semibold" asChild>
@@ -105,30 +113,30 @@ export default function AntiAgingDietPage() {
                 </div>
             </section>
 
-            {/* Root Cause Section */}
+            {/* Q&A Section 1: Why We Age */}
             <section id="root-cause" className="py-16 bg-white scroll-mt-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-4xl mx-auto">
-                        <h2 className="text-3xl font-bold text-stone-900 mb-6 font-serif">The 3 Pillars of Aging</h2>
+                        <h2 className="text-3xl font-bold text-stone-900 mb-6 font-serif">Why Does Skin Wrinkle and Joints Creak as We Age?</h2>
                         <div className="bg-stone-50 rounded-xl p-8 border border-stone-200 shadow-sm">
                             <p className="text-lg text-stone-700 mb-6 leading-relaxed">
-                                Aging isn't just about time; it's about biological wear and tear. We target these three mechanisms to slow the clock.
+                                Aging isn't just about time; it's about cumulative biological wear and tear. You must target these three mechanisms to slow the clock:
                             </p>
                             <div className="grid md:grid-cols-3 gap-6 text-center">
                                 <div className="bg-white p-6 rounded-lg shadow-sm border border-stone-100">
                                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 text-red-600 font-bold text-xl"><Sparkles className="w-6 h-6" /></div>
-                                    <h3 className="font-bold text-stone-800 mb-2">Oxidation</h3>
-                                    <p className="text-sm text-stone-600">"Rusting" of cells. Free radicals attack DNA and collagen. Antidote: Antioxidants.</p>
+                                    <h3 className="font-bold text-stone-800 mb-2">Can Oxidative Stress Be Stopped?</h3>
+                                    <p className="text-sm text-stone-600">Yes. This is the "rusting" of cells where free radicals attack DNA and collagen. The antidote is eating high-antioxidant colored fruits.</p>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg shadow-sm border border-stone-100">
                                     <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3 text-yellow-600 font-bold text-xl"><Sun className="w-6 h-6" /></div>
-                                    <h3 className="font-bold text-stone-800 mb-2">Inflammation</h3>
-                                    <p className="text-sm text-stone-600">Chronic low-grade inflammation ("Inflammaging") damages tissues over time. Antidote: Turmeric & Omega-3.</p>
+                                    <h3 className="font-bold text-stone-800 mb-2">What is "Inflammaging"?</h3>
+                                    <p className="text-sm text-stone-600">Chronic low-grade inflammation damages tissues slowly over time. Antidotes include Turmeric and Omega-3s.</p>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg shadow-sm border border-stone-100">
                                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 text-blue-600 font-bold text-xl"><Eye className="w-6 h-6" /></div>
-                                    <h3 className="font-bold text-stone-800 mb-2">Drying (Vata)</h3>
-                                    <p className="text-sm text-stone-600">As we age, we lose moisture. Skin wrinkles, joints creak, eyes dry out. Antidote: Healthy Fats (Ghee).</p>
+                                    <h3 className="font-bold text-stone-800 mb-2">Why Do We Get Dry (Vata)?</h3>
+                                    <p className="text-sm text-stone-600">As we age, we naturally lose internal moisture. Skin wrinkles and joints creak. The antidote is eating healthy fats like Ghee and Avocado.</p>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +334,7 @@ export default function AntiAgingDietPage() {
                     </div>
 
                     <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-                        <RelatedContent />
+                        <DynamicRelatedContent topic="anti-aging" />
                     </div>
                 </div>
             </section>

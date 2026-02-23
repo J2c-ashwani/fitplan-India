@@ -6,6 +6,7 @@ import { Calculator, Scale, Heart, Apple, Activity, Flame, Ruler, TrendingUp, Gl
 import Link from "next/link"
 import type { Metadata } from "next"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Health & Fitness Calculators | Free BMI, BMR & Protein Tools | FitPlan India",
@@ -20,6 +21,13 @@ export default function ToolsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Health & Fitness Calculators | Free BMI, BMR & Protein Tools | FitPlan India"
+        description="Free scientifically accurate health calculators for Indian body types. Calculate BMI, BMR, Daily Calorie Needs, Water Intake, and Protein Requirements instantly."
+        keywords={["health calculators India", "BMI calculator", "BMR calculator", "calorie calculator India", "protein calculator", "free health tools"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-emerald-600 to-green-700 text-white py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,11 +38,11 @@ export default function ToolsPage() {
             <Badge className="mb-4 bg-white text-emerald-600 font-semibold">
               🧮 Free Health Tools
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Health & Fitness Calculators
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white text-balance">
+              What Are the Most Accurate Health and Fitness Calculators for Indians?
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Take the guesswork out of your health journey. Use our scientifically accurate tools designed specifically for the Indian lifestyle to understand your body better.
+            <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Indian bodies uniquely store visceral fat and process macronutrients differently than Western bodies. To get scientifically accurate baseline metrics for your health journey, you must use calculators specifically calibrated for the Indian physique, such as our specialized BMI, BMR, and plant-based Protein intake tools below.
             </p>
           </div>
         </div>
@@ -155,7 +163,7 @@ export default function ToolsPage() {
       {/* SEO Content Section */}
       <section className="py-16 px-4 bg-gray-50 border-t border-gray-200">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900">Why Use Our FitPlan Calculators?</h2>
+          <h2 className="text-3xl font-bold mb-6 text-gray-900">Why Do Global Health Calculators Often Give Inaccurate Results for Indian Body Types?</h2>
           <div className="prose max-w-none text-gray-600 leading-relaxed">
             <p>
               Achieving your fitness goals starts with knowing your numbers. Whether you are trying to combat <strong>PCOS weight gain</strong>, manage <strong>diabetes</strong>, or simply get fit, understanding your baseline metrics is crucial.

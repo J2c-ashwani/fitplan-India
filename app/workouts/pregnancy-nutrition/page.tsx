@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -93,15 +93,14 @@ export default function PrenatalWorkoutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-pink-600 font-semibold">
-              👶 Safe Prenatal Exercise
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              👶 Prenatal Fitness Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Prenatal Exercise: Safe Workouts for Healthy Pregnancy
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Can Exercising During Pregnancy Actually Make Labor Easier?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete prenatal exercise guide with safe, doctor-approved workouts for each trimester including
-              gentle cardio, strength training, pelvic floor work, and stretches for comfortable pregnancy and easier delivery.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Yes. Research shows that women who engage in safe, moderate exercise during pregnancy often experience shorter active labor phases and a lower rate of medical interventions (like C-sections). Exercise builds the stamina required for delivery, strengthens the pelvic floor (preventing incontinence), and reduces the risk of gestational diabetes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -143,7 +142,7 @@ export default function PrenatalWorkoutPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Benefits of Prenatal Exercise</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Will Exercise Harm the Baby? (Safety Myths Debunked)</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Regular, moderate exercise during pregnancy offers numerous benefits for both mother and baby. Exercise
                 reduces back pain and discomfort, improves mood and energy, helps manage weight gain, strengthens muscles
@@ -571,7 +570,7 @@ export default function PrenatalWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="pregnancy-nutrition" />
           </div>
         </div>
       </section>

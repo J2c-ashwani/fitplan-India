@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Heart, AlertTriangle } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Medical Disclaimer - FitPlan India",
@@ -27,6 +28,13 @@ export const metadata: Metadata = {
 export default function DisclaimerPage() {
   return (
     <div className="min-h-screen bg-background">
+      <ArticleSchema
+        headline="Medical Disclaimer - FitPlan India"
+        description="Important medical disclaimer for FitPlan India nutrition consultation services. Not a substitute for professional medical advice."
+        keywords={[]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Header */}
 
       <div className="container mx-auto px-4 py-16 max-w-4xl">

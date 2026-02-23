@@ -6,7 +6,7 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -46,360 +46,209 @@ export default function PCOSWorkoutPage() {
   ]
 
   const tocItems = [
-    { id: "stats", label: "Key Benefits" },
-    { id: "why-exercise", label: "Why Exercise?" },
-    { id: "home-workouts", label: "Home Routine" },
-    { id: "gym-workouts", label: "Gym Routine" },
-    { id: "guidelines", label: "Safety Guide" },
+    { id: "best-exercise", label: "Best Exercise for PCOS?" },
+    { id: "belly-fat", label: "How to Lose PCOS Belly Fat" },
+    { id: "home-workouts", label: "Home Workout Plan" },
+    { id: "gym-workouts", label: "Gym Workout Plan" },
+    { id: "yoga", label: "Yoga vs Cardio?" },
     { id: "faq", label: "FAQs" },
   ]
 
   const faqs = [
     {
       question: "Which exercise is best for PCOS belly fat?",
-      answer: "Strength training is most effective because it builds muscle mass, which improves insulin sensitivity—the root cause of PCOS belly fat. Combine it with steady-state cardio (like walking) to burn calories without spiking cortisol, which can store more belly fat."
+      answer: "Strength training is the absolute best. Muscle is metabolically active tissue. When you build muscle, it acts like a sponge, soaking up excess blood sugar and directly combating the insulin resistance that causes PCOS belly fat."
     },
     {
-      question: "Can I do HIIT with PCOS?",
-      answer: "Use caution. While HIIT burns calories, it also significantly raises cortisol (stress hormone). If you have adrenal PCOS or feel 'wired but tired' after HIIT, switch to strength training and walking. Limit HIIT to 1-2 times per week max, for no longer than 20 minutes."
+      question: "Can I do HIIT or running with PCOS?",
+      answer: "Use extreme caution. While HIIT burns calories, for many women with PCOS it significantly raises cortisol (the stress hormone). High cortisol triggers your body to hold onto fat. If you feel 'wired but tired' after a workout, switch to strength training and slow walking."
     },
     {
       question: "How many days should I workout with PCOS?",
-      answer: "Consistency beats intensity. Aim for 4-5 days per week. Example: 3 days strength training + 2 days moderate cardio/yoga. Rest days are crucial for hormone balancing—don't skip them!"
+      answer: "Consistency beats intensity. Aim for 3-4 days of strength training (30-45 minutes) and 2 days of LISS (Low-Intensity Steady State cardio, like brisk walking or cycling). Rest days are mandatory for hormone balancing."
     },
     {
-      question: "Will lifting weights make me bulky with PCOS?",
-      answer: "No. Women with PCOS often have higher testosterone, but not enough to become 'bulky' without extreme training/supplements. Lifting weights will just make you look 'toned' and leaner because muscle is denser than fat and boosts your metabolism."
+      question: "Is Yoga enough for weight loss with PCOS?",
+      answer: "Yoga is incredible for lowering cortisol and stress, making it a critical component of PCOS management. However, for significant weight loss, you must pair it with strength training to build the muscle needed to reverse insulin resistance."
     },
     {
-      question: "How long does it take to see results?",
-      answer: "With consistent strength training and proper nutrition, you can feel energy improvements in 2 weeks. Visible body composition changes typically take 8-12 weeks. Focus on how your clothes fit rather than just the scale."
+      question: "Will lifting weights make me bulky?",
+      answer: "No. Women simply do not have enough testosterone to get 'bulky' by accident. Lifting weights will just make you look 'toned', leaner, and give you a faster metabolism."
     }
   ]
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       <ArticleSchema
-        headline="PCOS Workout Plan 2025 | Best Home & Gym Exercises"
-        description="Complete PCOS workout guide with proven home and gym exercises to improve insulin sensitivity, balance hormones, and achieve naturally."
-        keywords={["PCOS workout", "insulin resistance exercises", "hormone balance fitness", "weight loss with pcos", "home workout pcos"]}
+        headline="What is the Best Workout for PCOS Weight Loss? (2025 Guide)"
+        description="Discover the exact workouts to reverse PCOS insulin resistance, lose belly fat, and balance hormones. Featuring Yoga, Home, and Gym plans."
+        keywords={["PCOS workout", "insulin resistance exercises", "how to lose PCOS belly fat", "PCOS yoga", "home workout pcos weight loss"]}
         datePublished="2024-01-01"
         dateModified={new Date().toISOString()}
       />
       <StickyTOC items={tocItems} />
 
-      {/* Hero Section */}
+      {/* Hero Answer Section */}
       <section className="bg-gradient-to-br from-purple-600 to-indigo-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              💪 Complete PCOS Workout Guide 2025
+              💪 PCOS Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              PCOS Workout Plan: Best Home & Gym Exercises for Weight Loss
+              What is the Best Workout for PCOS Weight Loss?
             </h1>
-            <p className="text-xl text-purple-100 mb-8">
-              Discover evidence-based workout routines specifically designed for women with PCOS to improve insulin
-              sensitivity, reduce inflammation, balance hormones, and achieve sustainable weight loss.
+            <p className="text-xl text-purple-100 mb-8 border-l-4 border-purple-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg">
+              <strong>The Short Answer:</strong> The best workout for PCOS combines <strong>progressive strength training</strong> (to build muscle and reverse insulin resistance) with <strong>LISS (Low-Intensity Steady State cardio like walking)</strong> and <strong>Yoga</strong> (to lower cortisol and stress). Avoid excessive high-intensity cardio (HIIT) which can worsen hormonal imbalances.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-purple-700 hover:bg-gray-100" asChild>
-                <Link href="#home-workouts">
-                  Home Workouts
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 bg-white/10" asChild>
-                <Link href="#gym-workouts">
-                  Gym Workouts
-                </Link>
+              <Button size="lg" className="bg-white text-purple-700 hover:bg-gray-100 font-semibold" asChild>
+                <Link href="#home-workouts">Skip to Home Workout</Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Key Stats */}
-      <section id="stats" className="py-16 bg-white scroll-mt-20">
+      {/* Q1: Deep Dive on Best Exercise */}
+      <section id="best-exercise" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8 text-center mb-12">
-              <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">30-50%</div>
-                <div className="text-gray-600">Improved Insulin Sensitivity</div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              Why is Strength Training the "Holy Grail" for PCOS?
+            </h2>
+            <p className="text-lg text-gray-700 mb-6">
+              Most women with PCOS are told to "just do more cardio to burn calories." This is outdated advice that often fails. PCOS is primarily an issue of <strong>Insulin Resistance</strong>.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-purple-50 p-6 rounded-lg border border-purple-100">
+                <h3 className="font-bold text-lg mb-3 text-purple-800">The Problem with Only Cardio</h3>
+                <p className="text-gray-700">Endless hours on the treadmill spike your Cortisol (stress hormone). High cortisol tells your body, "We are in danger, store fat immediately!"—specifically around your abdomen.</p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-blue-600 mb-2">4-5x/Week</div>
-                <div className="text-gray-600">Recommended Frequency</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-green-600 mb-2">30-45min</div>
-                <div className="text-gray-600">Per Session</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-orange-600 mb-2">8-12 Weeks</div>
-                <div className="text-gray-600">To See Results</div>
+              <div className="bg-indigo-50 p-6 rounded-lg border border-indigo-100">
+                <h3 className="font-bold text-lg mb-3 text-indigo-800">The Strength Training Solution</h3>
+                <p className="text-gray-700">Muscle tissue uses glucose (sugar) for energy. The more muscle you have, the more sensitive your body becomes to insulin. You are literally building an engine that burns up the sugar causing your PCOS symptoms.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Exercise is Crucial for PCOS Management</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Exercise is one of the most effective non-pharmaceutical interventions for managing PCOS symptoms.
-                Regular physical activity improves insulin sensitivity, reduces testosterone levels, promotes weight loss,
-                decreases inflammation, and helps regulate menstrual cycles. Research shows that combining strength training
-                with moderate cardio produces the best results for women with PCOS.
-              </p>
+      {/* Q2: PCOS Belly Fat */}
+      <section id="belly-fat" className="py-16 bg-gray-50 scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
+              How Do I Specifically Target the "PCOS Belly"?
+            </h2>
+            <p className="text-lg text-gray-700 mb-8">
+              You cannot "spot reduce" fat from your stomach with crunches. PCOS belly fat is hormonally driven. To lose it, you must follow the <strong>PCOS Workout Hierarchy:</strong>
+            </p>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h4 className="font-bold text-lg mb-3 text-purple-800">Exercise Benefits for PCOS</h4>
-                  <ul className="text-gray-700 space-y-2">
-                    <li>• Improves insulin sensitivity by 30-50%</li>
-                    <li>• Reduces androgen (testosterone) levels</li>
-                    <li>• Promotes healthy weight loss and fat reduction</li>
-                    <li>• Regulates menstrual cycles naturally</li>
-                    <li>• Reduces inflammation and oxidative stress</li>
-                    <li>• Improves mood and reduces anxiety/depression</li>
-                  </ul>
-                </div>
+            <div className="space-y-4">
+              <Card className="border-l-4 border-l-purple-600">
+                <CardContent className="p-6 flex items-start">
+                  <div className="bg-purple-100 rounded-full w-10 h-10 flex items-center justify-center font-bold text-purple-700 mr-4 flex-shrink-0">1</div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-lg">Step 1: Lift Heavy Things (3x/Week)</h4>
+                    <p className="text-gray-600 mt-1">Focus on compound movements (Squats, Deadlifts, Push-ups) that use multiple large muscle groups at once for maximum metabolic impact.</p>
+                  </div>
+                </CardContent>
+              </Card>
 
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h4 className="font-bold text-lg mb-3 text-blue-800">Best Exercise Types for PCOS</h4>
-                  <ul className="text-gray-700 space-y-2">
-                    <li>• <strong>Resistance Training:</strong> 3x per week for muscle building</li>
-                    <li>• <strong>Moderate Cardio:</strong> 2-3x per week for heart health</li>
-                    <li>• <strong>HIIT:</strong> 1-2x per week (if tolerated)</li>
-                    <li>• <strong>Yoga/Pilates:</strong> 2-3x per week for stress reduction</li>
-                    <li>• <strong>Walking:</strong> Daily 30+ minutes for recovery</li>
-                  </ul>
-                </div>
-              </div>
+              <Card className="border-l-4 border-l-indigo-600">
+                <CardContent className="p-6 flex items-start">
+                  <div className="bg-indigo-100 rounded-full w-10 h-10 flex items-center justify-center font-bold text-indigo-700 mr-4 flex-shrink-0">2</div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-lg">Step 2: Get 8,000+ Steps Daily</h4>
+                    <p className="text-gray-600 mt-1">Walking is the ultimate PCOS cheat code. It burns fat without raising cortisol. Walk outside in the morning to also help regulate your circadian rhythm and sleep.</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-green-600">
+                <CardContent className="p-6 flex items-start">
+                  <div className="bg-green-100 rounded-full w-10 h-10 flex items-center justify-center font-bold text-green-700 mr-4 flex-shrink-0">3</div>
+                  <div>
+                    <h4 className="font-bold text-gray-900 text-lg">Step 3: Stress Management Yoga (2x/Week)</h4>
+                    <p className="text-gray-600 mt-1">Include restorative yoga or pilates to stretch, recover, and actively bring down systemic inflammation.</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-
-            {/* Engagement Hook: Calculator */}
-            <div className="mb-12">
-              <CalculatorWidget />
-            </div>
-
           </div>
         </div>
       </section>
 
       {/* Home Workouts Section */}
-      <section id="home-workouts" className="py-16 bg-gray-50 scroll-mt-20">
+      <section id="home-workouts" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Home className="w-16 h-16 text-purple-600 mx-auto mb-4" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">PCOS Home Workout Plan</h2>
-              <p className="text-lg text-gray-600">
-                No equipment needed! These bodyweight exercises can be done in the comfort of your home to improve
-                insulin sensitivity and promote weight loss.
-              </p>
-            </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center flex justify-center items-center">
+              <Home className="w-8 h-8 mr-3 text-purple-600" />
+              The 30-Minute PCOS Home Routine
+            </h2>
+            <p className="text-center text-gray-600 mb-8">
+              Perform this circuit 3 times a week. No equipment required. Do 3 rounds total, resting 60 seconds between rounds.
+            </p>
 
-            {/* Home Workout Routine 1: Full Body Strength */}
-            <Card className="border-purple-200 mb-8">
-              <CardHeader className="bg-purple-50">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-purple-800">Full Body Strength Workout (Monday/Thursday)</CardTitle>
-                  <Badge className="bg-purple-600 text-white">30-40 min</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <div className="space-y-6">
-                  <div>
-                    <h5 className="font-semibold text-gray-800 mb-2 flex items-center">
-                      <Clock className="w-4 h-4 mr-2 text-purple-600" />
-                      Warm-Up (5 minutes)
-                    </h5>
-                    <ul className="text-sm text-gray-700 space-y-1 ml-6">
-                      <li>• Jumping jacks or marching in place: 2 minutes</li>
-                      <li>• Arm circles and leg swings: 2 minutes</li>
-                      <li>• Light stretching: 1 minute</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h5 className="font-semibold text-gray-800 mb-3 flex items-center">
-                      <Target className="w-4 h-4 mr-2 text-purple-600" />
-                      Main Workout (3 Rounds)
-                    </h5>
-
-                    <div className="space-y-4">
-                      <div className="bg-white p-4 rounded-lg border border-gray-200">
-                        <h6 className="font-semibold mb-2">1. Bodyweight Squats</h6>
-                        <p className="text-sm text-gray-700 mb-2">
-                          <strong>Reps:</strong> 15-20 | <strong>Rest:</strong> 30 seconds
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          Stand with feet shoulder-width apart, lower down as if sitting in a chair, keep chest up,
-                          push through heels to stand. Targets: quads, glutes, core.
-                        </p>
-                      </div>
-
-                      <div className="bg-white p-4 rounded-lg border border-gray-200">
-                        <h6 className="font-semibold mb-2">2. Push-Ups (Modified if needed)</h6>
-                        <p className="text-sm text-gray-700 mb-2">
-                          <strong>Reps:</strong> 10-15 | <strong>Rest:</strong> 30 seconds
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          Start in plank position, lower chest to ground, push back up. Modify on knees if needed.
-                          Targets: chest, shoulders, triceps, core.
-                        </p>
-                      </div>
-
-                      <div className="bg-white p-4 rounded-lg border border-gray-200">
-                        <h6 className="font-semibold mb-2">3. Walking Lunges</h6>
-                        <p className="text-sm text-gray-700 mb-2">
-                          <strong>Reps:</strong> 10-12 each leg | <strong>Rest:</strong> 30 seconds
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          Step forward, lower back knee toward ground, push up and step forward with other leg.
-                          Targets: quads, glutes, hamstrings, balance.
-                        </p>
-                      </div>
-
-                      <div className="bg-white p-4 rounded-lg border border-gray-200">
-                        <h6 className="font-semibold mb-2">4. Plank Hold</h6>
-                        <p className="text-sm text-gray-700 mb-2">
-                          <strong>Duration:</strong> 30-60 seconds | <strong>Rest:</strong> 30 seconds
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          Hold plank position on forearms or hands, keep body in straight line, engage core.
-                          Targets: entire core, shoulders, stability.
-                        </p>
-                      </div>
-
-                      <div className="bg-white p-4 rounded-lg border border-gray-200">
-                        <h6 className="font-semibold mb-2">5. Glute Bridges</h6>
-                        <p className="text-sm text-gray-700 mb-2">
-                          <strong>Reps:</strong> 15-20 | <strong>Rest:</strong> 30 seconds
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          Lie on back, feet flat on ground, lift hips up, squeeze glutes at top, lower down.
-                          Targets: glutes, hamstrings, lower back.
-                        </p>
-                      </div>
-
-                      <div className="bg-white p-4 rounded-lg border border-gray-200">
-                        <h6 className="font-semibold mb-2">6. Mountain Climbers</h6>
-                        <p className="text-sm text-gray-700 mb-2">
-                          <strong>Duration:</strong> 30-45 seconds | <strong>Rest:</strong> 60 seconds between rounds
-                        </p>
-                        <p className="text-sm text-gray-600">
-                          Start in plank, alternate bringing knees toward chest quickly. Targets: core, shoulders,
-                          cardio conditioning.
-                        </p>
-                      </div>
+            <Card className="border-purple-200 shadow-sm">
+              <CardContent className="p-0">
+                <div className="divide-y divide-purple-100">
+                  <div className="p-6 flex flex-col md:flex-row md:items-center">
+                    <div className="md:w-1/3 mb-2 md:mb-0">
+                      <Badge className="bg-purple-100 text-purple-800 mb-2 hover:bg-purple-200">Lower Body</Badge>
+                      <h4 className="font-bold text-lg">Bodyweight Squats</h4>
+                    </div>
+                    <div className="md:w-2/3">
+                      <p className="text-gray-700 font-semibold mb-1">15-20 Reps</p>
+                      <p className="text-sm text-gray-500">Keep chest up, push through heels. Targets the largest muscles (quads/glutes) to burn maximum glucose.</p>
                     </div>
                   </div>
 
-                  <div>
-                    <h5 className="font-semibold text-gray-800 mb-2">Cool Down (5 minutes)</h5>
-                    <ul className="text-sm text-gray-700 space-y-1 ml-6">
-                      <li>• Light walking or marching: 2 minutes</li>
-                      <li>• Full body stretching focusing on worked muscles: 3 minutes</li>
-                    </ul>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Home Workout Routine 2: Cardio & Core */}
-            <Card className="border-blue-200 mb-8">
-              <CardHeader className="bg-blue-50">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-blue-800">Cardio & Core Workout (Tuesday/Friday)</CardTitle>
-                  <Badge className="bg-blue-600 text-white">30-35 min</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <div className="space-y-6">
-                  <div>
-                    <h5 className="font-semibold text-gray-800 mb-2">Warm-Up (5 minutes)</h5>
-                    <p className="text-sm text-gray-700">Light cardio (marching, dancing, jumping jacks)</p>
-                  </div>
-
-                  <div>
-                    <h5 className="font-semibold text-gray-800 mb-3">Cardio Intervals (20 minutes)</h5>
-                    <div className="bg-white p-4 rounded-lg border border-gray-200">
-                      <p className="text-sm text-gray-700 mb-3">
-                        <strong>Format:</strong> 2 minutes moderate intensity, 1 minute high intensity (repeat 6-7 times)
-                      </p>
-                      <p className="text-sm text-gray-600 mb-2"><strong>Exercise Options:</strong></p>
-                      <ul className="text-sm text-gray-600 space-y-1 ml-4">
-                        <li>• Brisk walking or jogging in place</li>
-                        <li>• High knees</li>
-                        <li>• Butt kicks</li>
-                        <li>• Step-ups on stairs</li>
-                        <li>• Dancing to music</li>
-                      </ul>
+                  <div className="p-6 flex flex-col md:flex-row md:items-center bg-gray-50">
+                    <div className="md:w-1/3 mb-2 md:mb-0">
+                      <Badge className="bg-blue-100 text-blue-800 mb-2 hover:bg-blue-200">Upper Body</Badge>
+                      <h4 className="font-bold text-lg">Push-Ups</h4>
+                    </div>
+                    <div className="md:w-2/3">
+                      <p className="text-gray-700 font-semibold mb-1">10-15 Reps (Knees if needed)</p>
+                      <p className="text-sm text-gray-500">Keep elbows tucked. Essential for building upper body strength and core stability.</p>
                     </div>
                   </div>
 
-                  <div>
-                    <h5 className="font-semibold text-gray-800 mb-3">Core Circuit (2 Rounds)</h5>
-                    <div className="space-y-3">
-                      <div className="bg-white p-3 rounded-lg border border-gray-200">
-                        <p className="text-sm font-semibold">Bicycle Crunches - 20 reps</p>
-                      </div>
-                      <div className="bg-white p-3 rounded-lg border border-gray-200">
-                        <p className="text-sm font-semibold">Leg Raises - 12-15 reps</p>
-                      </div>
-                      <div className="bg-white p-3 rounded-lg border border-gray-200">
-                        <p className="text-sm font-semibold">Russian Twists - 20 reps (10 each side)</p>
-                      </div>
-                      <div className="bg-white p-3 rounded-lg border border-gray-200">
-                        <p className="text-sm font-semibold">Plank to Downward Dog - 10 reps</p>
-                      </div>
+                  <div className="p-6 flex flex-col md:flex-row md:items-center">
+                    <div className="md:w-1/3 mb-2 md:mb-0">
+                      <Badge className="bg-purple-100 text-purple-800 mb-2 hover:bg-purple-200">Lower Body</Badge>
+                      <h4 className="font-bold text-lg">Reverse Lunges</h4>
+                    </div>
+                    <div className="md:w-2/3">
+                      <p className="text-gray-700 font-semibold mb-1">10-12 Reps per leg</p>
+                      <p className="text-sm text-gray-500">Step backward instead of forward to protect the knees while targeting the glutes.</p>
                     </div>
                   </div>
 
-                  <div>
-                    <h5 className="font-semibold text-gray-800 mb-2">Cool Down (5 minutes)</h5>
-                    <p className="text-sm text-gray-700">Stretching and deep breathing</p>
+                  <div className="p-6 flex flex-col md:flex-row md:items-center bg-gray-50">
+                    <div className="md:w-1/3 mb-2 md:mb-0">
+                      <Badge className="bg-green-100 text-green-800 mb-2 hover:bg-green-200">Core/PCOS Belly</Badge>
+                      <h4 className="font-bold text-lg">Plank Hold</h4>
+                    </div>
+                    <div className="md:w-2/3">
+                      <p className="text-gray-700 font-semibold mb-1">30-60 Seconds</p>
+                      <p className="text-sm text-gray-500">Do not let hips sag. Builds deep transverse abdominis strength better than crunches.</p>
+                    </div>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
 
-            {/* Home Workout Routine 3: Active Recovery */}
-            <Card className="border-green-200">
-              <CardHeader className="bg-green-50">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-green-800">Yoga & Stretching (Wednesday/Saturday)</CardTitle>
-                  <Badge className="bg-green-600 text-white">30-40 min</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <p className="text-gray-700 mb-4">
-                  Gentle yoga and stretching help reduce cortisol, improve flexibility, and support recovery.
-                  Focus on poses that support reproductive health and stress reduction.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">Recommended Poses:</h6>
-                    <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• Child's Pose (Balasana)</li>
-                      <li>• Cat-Cow Stretch</li>
-                      <li>• Butterfly Pose (Baddha Konasana)</li>
-                      <li>• Bridge Pose (Setu Bandhasana)</li>
-                      <li>• Reclining Twist</li>
-                      <li>• Cobra Pose (Bhujangasana)</li>
-                      <li>• Legs Up the Wall</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">Benefits for PCOS:</h6>
-                    <ul className="text-sm text-gray-700 space-y-1">
-                      <li>• Reduces stress and cortisol</li>
-                      <li>• Improves pelvic circulation</li>
-                      <li>• Enhances mind-body connection</li>
-                      <li>• Supports hormone balance</li>
-                      <li>• Aids in recovery and flexibility</li>
-                    </ul>
+                  <div className="p-6 flex flex-col md:flex-row md:items-center">
+                    <div className="md:w-1/3 mb-2 md:mb-0">
+                      <Badge className="bg-purple-100 text-purple-800 mb-2 hover:bg-purple-200">Lower Body</Badge>
+                      <h4 className="font-bold text-lg">Glute Bridges</h4>
+                    </div>
+                    <div className="md:w-2/3">
+                      <p className="text-gray-700 font-semibold mb-1">15-20 Reps (Squeeze at top)</p>
+                      <p className="text-sm text-gray-500">Lifts and tightens the glutes while stretching out tight hip flexors from sitting.</p>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -409,241 +258,101 @@ export default function PCOSWorkoutPage() {
       </section>
 
       {/* Gym Workouts Section */}
-      <section id="gym-workouts" className="py-16 bg-white scroll-mt-20">
+      <section id="gym-workouts" className="py-16 bg-gray-50 scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <Dumbbell className="w-16 h-16 text-indigo-600 mx-auto mb-4" />
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">PCOS Gym Workout Plan</h2>
-              <p className="text-lg text-gray-600">
-                Progressive resistance training with gym equipment to maximize muscle building, insulin sensitivity,
-                and metabolic rate for optimal PCOS management.
-              </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center flex justify-center items-center">
+              <Dumbbell className="w-8 h-8 mr-3 text-indigo-600" />
+              The PCOS Gym Protocol (Adding Weight)
+            </h2>
+            <p className="text-center text-gray-600 mb-8">
+              Once bodyweight is too easy, add resistance. Split your days into Lower Body and Upper Body to allow for recovery.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="border-indigo-200 shadow-sm">
+                <CardHeader className="bg-indigo-50 border-b border-indigo-100">
+                  <CardTitle className="text-indigo-800 flex items-center">
+                    Day A: Lower Body Focus
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <ul className="space-y-4">
+                    <li className="border-b border-gray-100 pb-2">
+                      <div className="font-bold text-gray-900">Goblet Squat (Dumbbell)</div>
+                      <div className="text-sm text-gray-600">3 Sets x 10-12 Reps • 90s Rest</div>
+                    </li>
+                    <li className="border-b border-gray-100 pb-2">
+                      <div className="font-bold text-gray-900">Romanian Deadlift (RDL)</div>
+                      <div className="text-sm text-gray-600">3 Sets x 10-12 Reps • 90s Rest</div>
+                    </li>
+                    <li className="border-b border-gray-100 pb-2">
+                      <div className="font-bold text-gray-900">Leg Press Machine</div>
+                      <div className="text-sm text-gray-600">3 Sets x 12-15 Reps • 60s Rest</div>
+                    </li>
+                    <li>
+                      <div className="font-bold text-gray-900">Hamstring Curl Machine</div>
+                      <div className="text-sm text-gray-600">3 Sets x 15 Reps • 45s Rest</div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="border-pink-200 shadow-sm">
+                <CardHeader className="bg-pink-50 border-b border-pink-100">
+                  <CardTitle className="text-pink-800 flex items-center">
+                    Day B: Upper Body Focus
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <ul className="space-y-4">
+                    <li className="border-b border-gray-100 pb-2">
+                      <div className="font-bold text-gray-900">Dumbbell Bench Press</div>
+                      <div className="text-sm text-gray-600">3 Sets x 10-12 Reps • 90s Rest</div>
+                    </li>
+                    <li className="border-b border-gray-100 pb-2">
+                      <div className="font-bold text-gray-900">Lat Pulldown Machine</div>
+                      <div className="text-sm text-gray-600">3 Sets x 12 Reps • 60s Rest</div>
+                    </li>
+                    <li className="border-b border-gray-100 pb-2">
+                      <div className="font-bold text-gray-900">Seated Cable Row</div>
+                      <div className="text-sm text-gray-600">3 Sets x 12-15 Reps • 60s Rest</div>
+                    </li>
+                    <li>
+                      <div className="font-bold text-gray-900">Dumbbell Shoulder Press</div>
+                      <div className="text-sm text-gray-600">3 Sets x 10-12 Reps • 60s Rest</div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
             </div>
-
-            {/* Gym Workout Routine 1: Lower Body */}
-            <Card className="border-indigo-200 mb-8">
-              <CardHeader className="bg-indigo-50">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-indigo-800">Lower Body Strength (Monday/Thursday)</CardTitle>
-                  <Badge className="bg-indigo-600 text-white">45-50 min</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">1. Barbell Back Squats</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3-4 | <strong>Reps:</strong> 8-12 | <strong>Rest:</strong> 90 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Primary compound movement for legs and glutes</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">2. Romanian Deadlifts</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 10-12 | <strong>Rest:</strong> 90 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Targets hamstrings, glutes, and lower back</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">3. Leg Press</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 12-15 | <strong>Rest:</strong> 60 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Additional quad and glute development</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">4. Walking Dumbbell Lunges</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 10 each leg | <strong>Rest:</strong> 60 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Unilateral leg strength and balance</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">5. Leg Curls (Machine)</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 12-15 | <strong>Rest:</strong> 45 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Isolation for hamstrings</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">6. Calf Raises</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 15-20 | <strong>Rest:</strong> 45 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Complete lower body development</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Gym Workout Routine 2: Upper Body */}
-            <Card className="border-pink-200 mb-8">
-              <CardHeader className="bg-pink-50">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-pink-800">Upper Body Strength (Tuesday/Friday)</CardTitle>
-                  <Badge className="bg-pink-600 text-white">40-45 min</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">1. Bench Press (Barbell or Dumbbell)</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3-4 | <strong>Reps:</strong> 8-12 | <strong>Rest:</strong> 90 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Primary chest and upper body compound movement</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">2. Lat Pulldowns or Assisted Pull-Ups</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 10-12 | <strong>Rest:</strong> 90 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Back width and strength development</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">3. Seated Shoulder Press (Dumbbell)</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 10-12 | <strong>Rest:</strong> 60 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Shoulder strength and stability</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">4. Cable Rows</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 12-15 | <strong>Rest:</strong> 60 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Back thickness and posture</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">5. Tricep Dips or Pushdowns</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 12-15 | <strong>Rest:</strong> 45 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Tricep isolation and arm definition</p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">6. Bicep Curls (Barbell or Dumbbell)</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Sets:</strong> 3 | <strong>Reps:</strong> 12-15 | <strong>Rest:</strong> 45 seconds
-                    </p>
-                    <p className="text-sm text-gray-600 mt-1">Bicep development and arm strength</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Gym Workout Routine 3: HIIT Cardio */}
-            <Card className="border-orange-200">
-              <CardHeader className="bg-orange-50">
-                <div className="flex items-center justify-between">
-                  <CardTitle className="text-orange-800">HIIT Cardio (Wednesday) - Optional</CardTitle>
-                  <Badge className="bg-orange-600 text-white">20-25 min</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-4">
-                  <p className="text-sm text-gray-700">
-                    <strong>⚠️ Important:</strong> HIIT should be done sparingly if you have PCOS, as too much high-intensity
-                    exercise can increase cortisol. Only include if you're managing stress well.
-                  </p>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">Treadmill Intervals</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Format:</strong> 30 seconds sprint, 90 seconds walk/jog (repeat 8-10 times)
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">Rowing Machine Intervals</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Format:</strong> 45 seconds hard rowing, 90 seconds easy pace (repeat 8 times)
-                    </p>
-                  </div>
-
-                  <div className="bg-white p-4 rounded-lg border border-gray-200">
-                    <h6 className="font-semibold mb-2">Bike Sprints</h6>
-                    <p className="text-sm text-gray-700">
-                      <strong>Format:</strong> 30 seconds max effort, 2 minutes easy pedaling (repeat 6-8 times)
-                    </p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
 
-      {/* Exercise Guidelines & Safety */}
-      <section id="guidelines" className="py-16 bg-gray-50 scroll-mt-20">
+      {/* Yoga & Stretching */}
+      <section id="yoga" className="py-16 bg-white scroll-mt-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">PCOS Exercise Guidelines & Safety</h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-bold text-lg mb-4 text-green-700">✅ Exercise Best Practices:</h4>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Start gradually:</strong> Begin with 2-3 sessions per week and build up</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Prioritize strength training:</strong> Builds muscle and improves insulin sensitivity</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Include rest days:</strong> Recovery is essential for hormone balance</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Stay consistent:</strong> Regular exercise is more important than intensity</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Track progress:</strong> Monitor energy, mood, cycles, and weight</span>
-                  </li>
-                </ul>
+            <div className="bg-green-50 rounded-2xl p-8 border border-green-100 shadow-sm relative overflow-hidden">
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 text-green-200 opacity-50">
+                <Heart className="w-48 h-48" />
               </div>
-
-              <div>
-                <h4 className="font-bold text-lg mb-4 text-red-700">❌ Common Exercise Mistakes:</h4>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Too much cardio:</strong> Excessive cardio can increase cortisol</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Overtraining:</strong> Not allowing adequate recovery time</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Ignoring nutrition:</strong> Exercise alone won't manage PCOS</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Skipping warm-up/cool-down:</strong> Increases injury risk</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertCircle className="w-5 h-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span><strong>Comparing to others:</strong> Your PCOS journey is unique</span>
-                  </li>
-                </ul>
+              <div className="relative z-10">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Don't Forget Yoga for PCOS</h2>
+                <p className="text-lg text-gray-700 mb-6">
+                  While strength training fixes insulin resistance, Yoga fixes the mind-body connection and lowers Cortisol. Incorporate 2 days of gentle yoga on your rest days.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <ul className="space-y-3">
+                    <li className="flex items-center text-gray-800"><CheckCircle className="w-5 h-5 text-green-600 mr-2" /> Baddha Konasana (Butterfly Pose)</li>
+                    <li className="flex items-center text-gray-800"><CheckCircle className="w-5 h-5 text-green-600 mr-2" /> Supta Baddha Konasana</li>
+                    <li className="flex items-center text-gray-800"><CheckCircle className="w-5 h-5 text-green-600 mr-2" /> Bhujangasana (Cobra Pose)</li>
+                  </ul>
+                  <p className="text-gray-600 text-sm border-l-2 border-green-300 pl-4">
+                    These specific poses increase blood flow to the pelvic region, help stimulate the ovaries, and dramatically assist in stress reduction that triggers adrenal PCOS.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -707,7 +416,7 @@ export default function PCOSWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="pcos" />
           </div>
         </div>
       </section>

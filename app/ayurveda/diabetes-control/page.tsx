@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Natural Ayurveda Treatments for Diabetes (Madhumeha) | FitPlan India",
@@ -26,6 +27,13 @@ export default function DiabetesPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Natural Ayurveda Treatments for Diabetes (Madhumeha) | FitPlan India"
+                description="Control high blood pressure naturally. Ayurvedic guide to managing Madhumeha using Methi, Jamun, Karela, and lifestyle changes to reverse insulin resistance."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function DiabetesPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Madhumeha: Managing Diabetes the Ayurvedic Way
+                        What Is the Most Effective Ayurvedic Diet to Control Type-2 Diabetes?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        Diabetes is described as <strong>Madhumeha</strong> (Sweet Urine) in Ayurveda, classified under 20 types of Prameha (Urinary disorders). It is primarily a disease of excess Kapha and fat (Meda).
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Diabetes (Madhumeha) is primarily a disease of excess Kapha and fat (Meda) causing insulin resistance. To control blood sugar naturally, you must increase 'Tikta Rasa' (bitter taste) which acts as an antidote to sweetness. Drinking Methi (fenugreek) water daily, consuming Jamun seed powder, and walking 1,000 steps after every meal (Shatapavali) are powerful Ayurvedic protocols for glycemic control.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function DiabetesPage() {
 
                     {/* Introduction */}
                     <section id="intro" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Droplet className="w-6 h-6 text-emerald-600 mr-2" />
-                            Why does it happen?
+                            Why Does Excess Kapha and a Sedentary Lifestyle Lead to Insulin Resistance?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

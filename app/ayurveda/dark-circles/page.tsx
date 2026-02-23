@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurveda for Dark Circles: Kumkumadi & Eye Care | FitPlan India",
@@ -26,6 +27,13 @@ export default function DarkCirclesPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurveda for Dark Circles: Kumkumadi & Eye Care | FitPlan India"
+                description="Dark circles are a sign of Vata imbalance and stress. Learn how to erase them using Kumkumadi Tailam, Aloe Vera, and Ayurvedic eye exercises (Trataka)."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function DarkCirclesPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Windows to the Soul
+                        How Can You Erase Dark Circles Using Ayurvedic Kumkumadi Tailam?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        Dark circles are not just cosmetic. In Ayurveda, they indicate <strong>Rasa Dhatu Kshaya</strong> (dehydration of nutritional plasma) and high Vata (stress/dryness).
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Dark circles indicate Rasa Dhatu Kshaya (dehydration of plasma) and high Vata (stress/dryness). To erase them, you need to deeply nourish the thinnest skin on your body. Massaging 1 drop of pure Kumkumadi Tailam (saffron oil) nightly, combined with Trataka (candle gazing) exercises, drastically improves circulation and fades pigmentation naturally.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function DarkCirclesPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Do They Appear?</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Do Stress and Vata Imbalance Cause Severe Under-Eye Shadows?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 The skin under the eyes is the thinnest in the body. When you are stressed or sleep-deprived, the body enters "survival mode", diverting blood to vital organs. The blood vessels under the eyes constrict and become visible as dark shadows.

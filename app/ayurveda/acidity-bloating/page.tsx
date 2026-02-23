@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Natural Home Remedies for Acidity & Gas (Amla Pitta) | Ayurveda",
@@ -26,6 +27,13 @@ export default function AcidityPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Natural Home Remedies for Acidity & Gas (Amla Pitta) | Ayurveda"
+                description="Cure acid reflux and bloating permanently. Ayurvedic diet for Amla Pitta, cooling herbs like Fennel and Amla, and foods to avoid."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function AcidityPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Cooling the Fire: Ayurvedic Cure for Acidity (GERD)
+                        What is the Best Ayurvedic Treatment to Permanently Cure Acidity and GERD?
                     </h1>
-                    <p className="text-lg md:text-xl text-orange-100 max-w-3xl mx-auto leading-relaxed">
-                        Acidity is not just about stomach acid; it is <strong>"Amla Pitta"</strong> (Sour Fire). When the body's fire turns sour due to fermentation of food, it burns upwards.
+                    <p className="text-lg text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> Acidity (Amla Pitta) is not just excess acid—it's fermented, sour 'heat' traveling upwards. To permanently cure GERD and bloating, you must cool the blood and digestive fire by avoiding fermented foods (like idli batter) and spicy triggers. Instant relief comes from drinking CCF (Cumin, Coriander, Fennel) tea or soaking 10-15 black raisins overnight to naturally sweep heat out of your colon.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function AcidityPage() {
 
                     {/* Root Cause */}
                     <section id="root" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Flame className="w-6 h-6 text-orange-600 mr-2" />
-                            The Volcano Inside
+                            Why Do Spicy and Sour Foods Turn Your Stomach Into a Volcano?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

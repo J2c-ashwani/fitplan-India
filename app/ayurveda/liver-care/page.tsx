@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Liver Detox: Complete Yakrit Care Guide | FitPlan India",
@@ -26,6 +27,13 @@ export default function LiverPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Liver Detox: Complete Yakrit Care Guide | FitPlan India"
+                description="Natural remedies for Fatty Liver and Jaundice. Learn about Kutki, Bhumi Amla, and the 7-Day Ayurvedic Liver Cleanse diet."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function LiverPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Yakrit: The Seat of Fire
+                        What Is the Fastest Ayurvedic Way to Detox a Fatty Liver (Yakrit)?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        In Ayurveda, the Liver (Yakrit) is the home of the five <strong>Bhutagnis</strong> (Elemental Fires). It is the hot engine that converts food into blood (Rakta). When it overheats, disease begins.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> The liver (Yakrit) is the fiery engine of your body. When overloaded with alcohol or fried foods, it overheats (High Pitta), causing extreme fatigue, dark urine, and chronic anger. To reverse early-stage fatty liver and flush out stagnant bile, take 'Kutki' or 'Bhumi Amla' daily, follow a 7-day bitter food diet of Karela (bitter gourd), and strictly eliminate all alcohol and refined sugars.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function LiverPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Are You "Toxic"?</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Does a Sluggish, Overheated Liver Make You Feel So Absoutely Exhausted All the Time?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 The liver handles 500+ functions. When overloaded with alcohol, fried foods, or pharmaceutical drugs, it becomes sluggish. In Ayurveda, this is often a <strong>High Pitta</strong> condition.

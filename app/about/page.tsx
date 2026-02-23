@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "About FitPlan India | Our Medical Review Board & Expert Nutritionists",
@@ -12,15 +13,22 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="flex-1">
+      <ArticleSchema
+        headline="About FitPlan India | Our Medical Review Board & Expert Nutritionists"
+        description="Meet the team of certified nutritionists and health experts behind FitPlan India. We provide science-backed, personalized diet plans for managing PCOS, Diabetes, and Thyroid conditions."
+        keywords={[]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-emerald-50 via-white to-teal-50">
         <div className="container mx-auto max-w-4xl text-center">
           <Badge className="mb-4 bg-emerald-100 text-emerald-700 hover:bg-emerald-100">Trusted Since 2020</Badge>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            Empowering India's Health <span className="text-emerald-600">Naturally</span>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 text-balance">
+            Who Are the Medical Experts Behind FitPlan India and Why Should You Trust Them With Your Health?
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            FitPlan India combines traditional Indian wisdom with modern nutritional science to help you reverse lifestyle diseases and achieve sustainable weight loss.
+          <p className="text-lg text-emerald-900 mb-8 border-l-4 border-emerald-500 pl-4 text-left bg-emerald-50 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+            <strong>The Short Answer:</strong> FitPlan India is not run by fitness influencers; it is a clinical nutrition platform governed by a Medical Review Board of BAMS, MD doctors and certified dietitians. We exist to provide authentic, evidence-based Medical Nutrition Therapy to Indians suffering from metabolic diseases like PCOS and Diabetes, using the principles of ancient Ayurveda combined with modern clinical research.
           </p>
         </div>
       </section>
@@ -54,7 +62,7 @@ export default function AboutPage() {
         <div className="container mx-auto max-w-4xl">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">Our Mission</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">Why Did We Build FitPlan India to Disrupt the Scam-Filled Online Fitness Industry?</h2>
               <div className="prose text-gray-600 leading-relaxed space-y-4">
                 <p>
                   FitPlan India was founded with a simple mission: to make professional clinical nutrition accessible to every Indian family. We realized that generic "Western" diet advice doesn't work for Indian bodies or Indian kitchens.

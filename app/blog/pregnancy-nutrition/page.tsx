@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Baby, TrendingUp, Shield, Sparkles, Activity } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Pregnancy Nutrition Plan | Complete Diet Guide for Healthy Baby",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function PregnancyNutritionPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Pregnancy Nutrition Plan | Complete Diet Guide for Healthy Baby"
+        description="Complete pregnancy nutrition guide with trimester-specific meal plans, prenatal vitamins, foods to avoid, weight gain, morning sickness remedies, and healthy pregnancy diet."
+        keywords={["pregnancy nutrition", "pregnancy diet", "prenatal nutrition", "pregnancy meal plan", "foods to avoid pregnancy", "pregnancy weight gain", "morning sickness diet", "healthy pregnancy"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-600 to-rose-700 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-pink-600 font-semibold">
-              👶 Nutrition for Two
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              👶 Pregnancy Nutrition Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Pregnancy Nutrition: Complete Guide for Healthy Baby
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              Which Specific Nutrients Are Non-Negotiable for Fetal Brain and Body Development?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover complete pregnancy nutrition with trimester-specific guidance, essential nutrients for baby
-              development, safe foods vs foods to avoid, weight gain recommendations, and meal plans for a healthy pregnancy.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The most critical period of fetal development requires a substantial surge in specific micronutrients, notably 600mcg of Folic Acid daily to prevent neural tube defects, and 27mg of Iron to support a 50% increase in maternal blood volume. Despite the "eating for two" myth, you only need an extra 300-450 calories a day during your second and third trimesters, which should strictly come from nutrient-dense foods rich in Calcium, Protein, and DHA Omega-3s.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -90,7 +97,7 @@ export default function PregnancyNutritionPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Pregnancy Nutrition Needs</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Is Folic Acid Supplementation Mandatory Even Before Conception?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Pregnancy nutrition is critical for baby's healthy development and mother's well-being. During pregnancy,
                 nutrient needs dramatically increase - your body is building an entire human being! Key nutrients include

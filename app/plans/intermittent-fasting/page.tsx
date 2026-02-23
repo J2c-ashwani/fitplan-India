@@ -9,7 +9,7 @@ import { CheckCircle, Heart, AlertCircle, Clock, Target, Zap, Droplets, Activity
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -93,16 +93,14 @@ export default function IntermittentFastingPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-indigo-600 font-semibold">
-              ⏰ Time-Restricted Eating
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              ⏰ Fasting Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Intermittent Fasting Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the 16:8 Intermittent Fasting Diet for Weight Loss?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete intermittent fasting (IF) guide with 16:8, 18:6, and 20:4 fasting schedules, meal timing strategies, and proven
-              methods for weight loss, fat burning, autophagy, and metabolic health. Designed for beginners and experienced fasters in
-              USA, UK, Canada, Australia, and India.
+            <p className="text-xl text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Fasting is not about <em>what</em> you eat, but <em>when</em>. By consuming zero calories for 16 hours (water/black coffee only) and eating all your meals during an 8-hour window (e.g., 12 PM to 8 PM), your body is forced to deplete its sugar stores and switch to burning stored belly fat for energy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-indigo-600 hover:bg-gray-100 font-semibold" asChild>
@@ -147,7 +145,7 @@ export default function IntermittentFastingPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Intermittent Fasting: Complete Guide 2025</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">What is Intermittent Fasting and How Does It Burn Belly Fat?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Intermittent fasting (IF) is an eating pattern that cycles between periods of fasting (not eating) and eating windows,
                 focusing on WHEN you eat rather than WHAT you eat. Unlike traditional diets that restrict certain foods or calories,
@@ -602,7 +600,7 @@ export default function IntermittentFastingPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="intermittent-fasting" />
         </div>
       </div>
       <div className="container mx-auto px-4 max-w-4xl">

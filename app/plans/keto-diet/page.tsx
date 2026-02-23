@@ -9,7 +9,7 @@ import { CheckCircle, AlertCircle, Flame, Clock, Apple, XCircle, Droplets, Zap, 
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -94,16 +94,14 @@ export default function KetoIndianDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-purple-600 font-semibold">
-              🔥 High Fat, Low Carb
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🔥 Keto Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Keto Diet Plan for Indians 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Keto Diet Plan for Indian Vegetarians and Non-Vegetarians?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete ketogenic diet plan specially designed for Indians with authentic desi foods, both vegetarian and non-vegetarian
-              options. Proven weight loss strategy using low-carb, high-fat Indian meals including paneer, ghee, coconut, and Indian
-              vegetables. Achieve ketosis naturally with traditional Indian ingredients.
+            <p className="text-xl text-white mb-8 border-l-4 border-purple-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The Indian Keto diet requires slashing carbohydrates to under 50g daily by removing rice, roti, and dal entirely. Instead, you force your body to burn fat for fuel by eating 70% of your calories from healthy fats and moderate protein—relying safely on Paneer, eggs, fatty meats, generous ghee, and low-carb vegetables like Palak and cauliflower.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold" asChild>
@@ -148,7 +146,7 @@ export default function KetoIndianDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Keto Diet: Complete Guide for Indians</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">What is the Keto Diet and How Does it Burn Fat Fast?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 The ketogenic (keto) diet is a very low-carbohydrate (5-10% of calories), high-fat (70-75% of calories), moderate-protein
                 (20-25% of calories) eating pattern that forces the body to burn fat for fuel instead of carbohydrates. Normally, your body
@@ -565,7 +563,7 @@ export default function KetoIndianDietPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="keto-diet" />
         </div>
       </div>
       <div className="container mx-auto px-4 max-w-4xl">

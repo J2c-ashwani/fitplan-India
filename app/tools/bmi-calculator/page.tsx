@@ -115,8 +115,10 @@ export default function BMICalculatorPage() {
                     </div>
                     <div className="max-w-4xl mx-auto text-center">
                         <Badge className="mb-4 bg-white text-emerald-600 font-semibold">Free Health Tool</Badge>
-                        <h1 className="text-4xl font-bold mb-4">BMI Calculator India</h1>
-                        <p className="text-xl opacity-90">Calculate your Body Mass Index (BMI) accurately and check if you are in a healthy weight range.</p>
+                        <h1 className="text-3xl md:text-5xl font-bold mb-4">How Can You Accurately Calculate Your BMI According to Indian Health Standards?</h1>
+                        <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed text-balance">
+                            <strong>The Short Answer:</strong> The standard global BMI cutoff of 25.0 is dangerously inaccurate for Indians, who develop diabetes and heart disease at much lower weights. To accurately assess your health risk, you must calculate your BMI using the stricter Asian Indian standard, where the healthy range ends at 22.9, and immediately adjust your diet if you cross this threshold.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -201,7 +203,7 @@ export default function BMICalculatorPage() {
 
                             {/* Rich Content for SEO/AdSense */}
                             <div className="mt-12 prose max-w-none text-gray-700">
-                                <h2 className="text-2xl font-bold text-gray-900 mb-4">What is BMI?</h2>
+                                <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Is the Standard Global BMI Dangerously Inaccurate for Indian Body Types?</h2>
                                 <p>
                                     Body Mass Index (BMI) is a simple calculation using a person's height and weight. The formula is BMI = kg/m² where kg is a person's weight in kilograms and m² is their height in meters squared. A BMI of 25.0 or more is overweight, while the healthy range is 18.5 to 24.9. BMI applies to most adults 18-65 years.
                                 </p>

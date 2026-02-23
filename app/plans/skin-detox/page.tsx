@@ -6,10 +6,11 @@ import { CheckCircle, Heart, AlertCircle, Droplet, ArrowRight, Info, Sparkles, S
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
     title: "Skin Detox Diet Plan | Best Foods for Glowing Acne-Free Skin | FitPlan India",
     description: "Natural diet plan for clear, glowing skin. Detoxify your blood (Rakta Shodhana) with Neem, Turmeric, and Pitta-pacifying foods. Expert guide for acne and pigmentation.",
@@ -78,24 +79,31 @@ export default function SkinDetoxDietPage() {
 
     return (
         <div className="min-h-screen bg-stone-50 pb-20">
+            <ArticleSchema
+                headline="Skin Detox Diet Plan | Best Foods for Glowing Acne-Free Skin | FitPlan India"
+                description="Natural diet plan for clear, glowing skin. Detoxify your blood (Rakta Shodhana) with Neem, Turmeric, and Pitta-pacifying foods. Expert guide for acne and pigmentation."
+                keywords={["skin detox diet plan", "diet for glowing skin", "ayurvedic blood purifier foods", "diet for acne free skin", "pitta dosha skin diet", "indian diet for skin whitening", "foods for clear skin"]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-rose-700 to-pink-900 text-white pt-24 pb-16">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <Breadcrumbs items={breadcrumbItems} />
                     <div className="max-w-4xl mx-auto text-center">
-                        <Badge className="mb-4 bg-white text-rose-800 font-semibold">
-                            ✨ Radiance & Clarity Guide
+                        <Badge className="mb-4 bg-white/20 text-white border-white/30">
+                            ✨ Glowing Skin Answer Engine
                         </Badge>
                         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
-                            Skin Detox Diet Plan
+                            What is the Best Diet for Glowing, Acne-Free Skin?
                         </h1>
-                        <p className="text-xl text-rose-100 mb-8 leading-relaxed max-w-2xl mx-auto">
-                            Clear acne, reduce pigmentation, and achieve natural radiance by purifying your blood (Rakta Shodhana) with targeted nutrition.
+                        <p className="text-xl text-white mb-8 border-l-4 border-rose-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                            <strong>The Short Answer:</strong> Clear skin starts from within by purifying your blood (Rakta Shodhana). To eliminate acne and achieve a natural glow, you must eliminate inflammatory triggers like refined sugar and dairy, while vastly increasing your intake of water, antioxidants (berries, greens), and Ayurvedic blood purifiers like Neem and Turmeric to flush out toxins.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-white text-rose-900 hover:bg-stone-100 font-semibold" asChild>
-                                <Link href="#foods-to-eat">Detox Foods</Link>
+                                <Link href="#foods-to-eat">View Detox Foods</Link>
                             </Button>
                             <Button size="lg" className="bg-rose-600 hover:bg-rose-700 text-white border-2 border-rose-400 font-semibold" asChild>
                                 <Link href="#ayurveda">Ayurvedic Secrets</Link>
@@ -326,7 +334,7 @@ export default function SkinDetoxDietPage() {
                     </div>
 
                     <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-                        <RelatedContent />
+                        <DynamicRelatedContent topic="skin-detox" />
                     </div>
                 </div>
             </section>

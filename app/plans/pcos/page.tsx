@@ -6,7 +6,7 @@ import { CheckCircle, Heart, AlertCircle, Apple, Salad, Coffee, TrendingDown, Ta
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -93,16 +93,14 @@ export default function PCOSDietPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-pink-600 font-semibold">
-              💕 Evidence-Based PCOS Management
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💕 PCOS Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              PCOS Weight Loss Diet Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best Diet Plan for PCOS Weight Loss?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based diet plan for Polycystic Ovary Syndrome (PCOS) with insulin-resistant friendly foods,
-              hormone-balancing nutrition, supplements guide, and proven weight loss strategies. Designed for women in USA,
-              UK, Canada, Australia, and worldwide.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> PCOS makes weight loss 50-75% harder primarily due to insulin resistance, which turns excess carbohydrate energy directly into belly fat. The solution is adopting a strict low-glycemic index (GI) diet that pairs complex carbohydrates with 25-30g of protein and healthy fats at every meal. This prevents the insulin spikes that drive hormonal chaos, allowing your body to finally burn stored fat.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -140,7 +138,7 @@ export default function PCOSDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding PCOS and Weight Loss: Complete Guide 2025</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Can't I Lose Weight with PCOS?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Polycystic Ovary Syndrome (PCOS) affects 1 in 10 women worldwide (over 200 million women globally) and is one
                 of the most common hormonal disorders affecting women of reproductive age in the USA, UK, Canada, Australia,
@@ -819,7 +817,7 @@ export default function PCOSDietPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="pcos" />
           </div>
         </div>
       </section>

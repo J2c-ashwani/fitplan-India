@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Zap, Trophy, Activity } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Athlete Nutrition Plan | Complete Sports Performance Diet Guide",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function AthleteNutritionPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Athlete Nutrition Plan | Complete Sports Performance Diet Guide"
+        description="Complete athlete nutrition guide with sports performance meal plans, pre/post-workout fueling, endurance nutrition, strength athlete diet, hydration strategies, and recovery nutrition."
+        keywords={["athlete nutrition", "sports nutrition", "performance diet", "endurance athlete diet", "strength athlete nutrition", "sports performance nutrition", "pre workout meal"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-indigo-700 to-purple-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-indigo-700 font-semibold">
-              🏆 Elite Performance Nutrition
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🏆 Sports Nutrition Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Athlete Nutrition: Fuel Peak Performance & Recovery
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What Should an Athlete Eat for Peak Performance and Fast Recovery?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover advanced sports nutrition strategies for athletes including performance fueling, recovery optimization,
-              endurance vs strength nutrition, hydration protocols, and complete meal plans for competitive advantage.
+            <p className="text-xl text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Optimal athlete nutrition requires significantly more energy, prioritizing 3-6g of carbohydrates per kg of body weight for glycogen replenishment and 2.0-2.4g of protein per kg for muscle repair. Crucially, eating 2-3 hours before training and hitting the 30-minute post-workout 'anabolic window' with a 3:1 carb-to-protein ratio prevents fatigue, rebuilds tissue, and maximizes athletic gains.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-indigo-700 hover:bg-gray-100 font-semibold" asChild>
@@ -90,7 +97,7 @@ export default function AthleteNutritionPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Sports Nutrition for Athletes</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Does Sports Nutrition Actually Improve Athletic Performance?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Athletic performance nutrition goes beyond basic healthy eating - it's about strategic fueling for training,
                 competition, and recovery. Athletes have significantly higher energy and nutrient demands than the general

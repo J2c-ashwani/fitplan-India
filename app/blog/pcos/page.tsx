@@ -8,6 +8,7 @@ import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "PCOS Diet Plan for Weight Loss 2025 | Proven Meal Plans & Foods to Eat",
@@ -40,19 +41,25 @@ export const metadata: Metadata = {
 export default function PCOSDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="PCOS Diet Plan for Weight Loss 2025 | Proven Meal Plans & Foods to Eat"
+        description="Complete PCOS diet guide with proven meal plans, foods to eat and avoid, insulin resistance management, and natural hormone-balancing strategies for sustainable weight loss."
+        keywords={["PCOS diet plan", "PCOS weight loss", "polycystic ovary syndrome diet", "PCOS meal plan", "insulin resistance diet", "PCOS foods to avoid", "hormone balancing diet", "PCOS treatment"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-pink-600 to-rose-700 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              🌸 Complete PCOS Diet Guide 2025
+              🌸 PCOS Diet Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              PCOS Diet Plan for Weight Loss: Complete Evidence-Based Guide
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What Is the Exact Diet Protocol to Reverse Insulin Resistance and Lose PCOS Weight?
             </h1>
-            <p className="text-xl text-pink-100 mb-8">
-              Discover the proven PCOS diet strategies used by thousands of women worldwide to manage symptoms,
-              balance hormones, and achieve sustainable weight loss through nutrition.
+            <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> Since 70% of women with PCOS have underlying insulin resistance alongside high androgens, a standard calorie deficit alone frequently fails. To successfully lose weight and trigger ovulation, you must stabilize blood sugar by strictly consuming low Glycemic Index (GI) carbohydrates (&lt;55 GI), eliminating refined sugars, and incorporating potent anti-inflammatory foods (like Omega-3s) to break the cycle of hormonal fat storage and systemic inflammation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-700 hover:bg-gray-100" asChild>
@@ -95,7 +102,7 @@ export default function PCOSDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">What is PCOS and Why Diet Matters</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Does Insulin Resistance Make PCOS Weight Loss So Difficult?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Polycystic Ovary Syndrome (PCOS) affects 1 in 10 women of reproductive age worldwide, making it one
                 of the most common hormonal disorders. Women with PCOS often experience insulin resistance, hormonal

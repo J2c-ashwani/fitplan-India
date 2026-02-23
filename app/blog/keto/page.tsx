@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Target, AlertCircle, Apple, Salad, Coffee, Utensils, Dumbbell, TrendingUp, Zap, Flame } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
   title: "Keto Diet Plan | Low-Carb Indian Diet Guide for Weight Loss",
@@ -36,19 +37,25 @@ export const metadata: Metadata = {
 export default function KetoDietPage() {
   return (
     <div className="min-h-screen bg-gray-50">
+      <ArticleSchema
+        headline="Keto Diet Plan | Low-Carb Indian Diet Guide for Weight Loss"
+        description="Complete keto diet guide adapted for Indian cuisine with low-carb meal plans, ketogenic recipes, and strategies for fat loss."
+        keywords={["keto diet", "ketogenic diet", "low carb diet India", "keto meal plan", "keto weight loss", "Indian keto diet"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-700 to-red-900 text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-orange-700 font-semibold">
-              🔥 Complete Keto Diet Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🔥 Keto Diet Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Keto Diet Plan: Complete Guide to Ketogenic Weight Loss
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              How Does the Keto Diet Actually Burn Stored Body Fat?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover the complete ketogenic diet strategy for rapid fat loss, sustained energy, mental clarity,
-              and metabolic transformation through low-carb, high-fat nutrition.
+            <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> By severely restricting carbohydrates (to under 20-50g daily) and replacing them with high fats, your body enters a metabolic state called ketosis. Without sufficient glucose for energy, your liver begins breaking down stored body fat into molecules called "ketones," which become your brain and body's primary fuel source, essentially turning you into a 24/7 fat-burning machine.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-700 hover:bg-gray-100 font-semibold" asChild>
@@ -91,7 +98,7 @@ export default function KetoDietPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding the Ketogenic Diet</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Long Does It Take to Enter Ketosis and Start Burning Fat?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 The ketogenic (keto) diet is a very low-carb, high-fat eating plan that shifts your body into a metabolic
                 state called ketosis. In ketosis, your body becomes incredibly efficient at burning fat for energy instead

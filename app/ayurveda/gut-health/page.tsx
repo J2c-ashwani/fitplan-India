@@ -7,6 +7,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Improve Gut Health & Digestion (Agni) | Ayurveda Guide",
@@ -26,6 +27,13 @@ export default function GutHealthPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Improve Gut Health & Digestion (Agni) | Ayurveda Guide"
+                description="Fix bloating, gas, and IBS naturally. Comprehensive Ayurveda guide to balancing Jatharagni (Digestive Fire) using Ginger, Fasting, and CCF Tea."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function GutHealthPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-3xl md:text-5xl font-serif font-bold mb-6 mt-6">
-                        Agni: The Gatekeeper of Your Health
+                        What Is the Fastest Ayurvedic Way to Fix Bloating and Heal Your Gut?
                     </h1>
-                    <p className="text-lg md:text-xl text-emerald-100 max-w-3xl mx-auto leading-relaxed">
-                        In Ayurveda, you are not what you eat; <strong>you are what you digest</strong>. 90% of diseases, from arthritis to anxiety, begin with a weak digestive fire (Mandagni).
+                    <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> In Ayurveda, gut issues like IBS and severe bloating are caused by a weak digestive fire (Mandagni) that creates toxic sludge (Ama) in your intestines. The fastest way to reset your gut is therapeutic fasting (Langhanam), drinking CCF (Cumin, Coriander, Fennel) tea throughout the day, and chewing fresh ginger before meals to instantly restart your digestive enzymes.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -47,9 +55,9 @@ export default function GutHealthPage() {
 
                     {/* Concept of Agni */}
                     <section id="agni" className="mb-12">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-4 flex items-center font-serif">
                             <Flame className="w-6 h-6 text-orange-600 mr-2" />
-                            What is Agni?
+                            Why Is Agni (Digestive Fire) the Ultimate Gatekeeper of Your Immune System and Health?
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>

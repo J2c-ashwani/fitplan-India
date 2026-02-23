@@ -231,10 +231,24 @@ export default function AICoachPage() {
   ]
 
 
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    { sender: "ai", text: "👋 Hi! I'm your AI Fitness Coach. I can build a 100% personalized diet & workout plan for you." },
-    { sender: "ai", text: "Ask me anything to get started! Try asking: 'Plan for PCOS weight loss' or 'Vegetarian muscle gain diet'👇" }
-  ])
+  const [messages, setMessages] = useState<ChatMessage[]>([])
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const context = params.get("context")
+    if (context) {
+      const friendlyContext = context.replace(/-/g, " ")
+      setMessages([
+        { sender: "ai", text: `👋 Hi! I noticed you were exploring our ${friendlyContext} resources. Do you want me to build a personalized ${friendlyContext} plan for you? 🤖` },
+        { sender: "ai", text: "I can build a 100% personalized diet & workout plan for you right now. Just ask me to get started! 👇" }
+      ])
+    } else {
+      setMessages([
+        { sender: "ai", text: "👋 Hi! I'm your AI Fitness Coach. I can build a 100% personalized diet & workout plan for you." },
+        { sender: "ai", text: "Ask me anything to get started! Try asking: 'Plan for PCOS weight loss' or 'Vegetarian muscle gain diet'👇" }
+      ])
+    }
+  }, [])
   const [input, setInput] = useState("")
   const [currentStep, setCurrentStep] = useState(0)
   const [profile, setProfile] = useState<{ [key: string]: any }>({})

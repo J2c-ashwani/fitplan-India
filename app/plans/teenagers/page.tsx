@@ -6,7 +6,7 @@ import { CheckCircle, Heart, AlertCircle, Users, Target, TrendingUp, Activity, B
 import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
@@ -91,16 +91,14 @@ export default function TeenagersWeightManagementPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-cyan-600 font-semibold">
-              🌟 Healthy Growth & Development
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              🌟 Healthy Growth Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Teenage Weight Management Plan 2025
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Safest Way for a Teenager to Lose Weight?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Complete evidence-based nutrition and fitness plan for teenagers (ages 13-19) focusing on healthy growth, development,
-              athletic performance, and sustainable weight management. Designed for teens in USA, UK, Canada, Australia with emphasis
-              on balanced nutrition, NOT extreme dieting.
+            <p className="text-xl text-white mb-8 border-l-4 border-cyan-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> The safest approach is NOT dieting or restricting calories, which can permanently stunt growth and trigger eating disorders. Instead, teens should focus on "growing into" their weight by maintaining their current weight while they grow taller. This is achieved by swapping sugary drinks and ultra-processed snacks for nutrient-dense whole foods (protein, fruits, veggies), and participating in 60 minutes of daily physical activity or sports.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-cyan-600 hover:bg-gray-100 font-semibold" asChild>
@@ -138,7 +136,7 @@ export default function TeenagersWeightManagementPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding Teenage Nutrition and Weight Management</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why is Teen Nutrition Different from Adult Diets?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 The teenage years (ages 13-19, also called adolescence) are a critical period of rapid growth, development, and body
                 changes second only to infancy. During puberty and adolescence, teenagers experience growth spurts adding 8-12 inches
@@ -537,7 +535,7 @@ export default function TeenagersWeightManagementPage() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-          <RelatedContent />
+          <DynamicRelatedContent topic="teenagers" />
         </div>
       </div>
     </div >

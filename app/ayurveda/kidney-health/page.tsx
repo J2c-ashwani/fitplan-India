@@ -8,6 +8,7 @@ import StickyTOC from "@/components/StickyTOC"
 import ExpertNote from "@/components/ExpertNote"
 import SuccessStory from "@/components/SuccessStory"
 import ScientificRefs from "@/components/ScientificRefs"
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
     title: "Ayurvedic Kidney Care: The Complete Renal Health Guide | FitPlan India",
@@ -26,6 +27,13 @@ export default function KidneyPage() {
 
     return (
         <div className="min-h-screen bg-stone-50">
+            <ArticleSchema
+                headline="Ayurvedic Kidney Care: The Complete Renal Health Guide | FitPlan India"
+                description="Revive kidney function naturally. In-depth guide to Punarnava, Gokshura, and the Ayurvedic Renal Diet. Scientifically backed remedies for creatinine control and stone prevention."
+                keywords={[]}
+                datePublished="2024-01-01"
+                dateModified={new Date().toISOString()}
+            />
             <StickyTOC items={tocItems} />
 
             {/* Hero Section */}
@@ -33,10 +41,10 @@ export default function KidneyPage() {
                 <div className="container mx-auto px-4 text-center relative z-10">
                     <MedicalBadge />
                     <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 mt-6">
-                        Vrikka Roga: Ayurvedic Kidney Care
+                        How Can You Lower High Creatinine and Rejuvenate Kidneys Using Ayurveda?
                     </h1>
-                    <p className="text-xl md:text-2xl text-emerald-100 max-w-3xl mx-auto leading-relaxed font-light">
-                        In Ayurveda, kidneys are the root of <strong>Meda Vaha Srotas</strong> (Fat channels). Protecting them is not just about filtration; it's about balancing the body's entire fluid & fat metabolism.
+                    <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+                        <strong>The Short Answer:</strong> High creatinine and edema occur when your body's fat and fluid channels (Meda Vaha Srotas) are blocked, suffocating the kidney nephrons. To rapidly detox the kidneys and normalize filtration without flushing out essential electrolytes, you must consume 'Punarnava' (the renovator herb) daily and drink Barley water, while strictly eliminating heavy animal proteins and high-sodium foods.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -47,7 +55,7 @@ export default function KidneyPage() {
                 {/* Introduction */}
                 <section id="intro" className="mb-20">
                     <div className="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-stone-100">
-                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">The Silent Guardians</h2>
+                        <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Do Vitiated Vata and Toxic Kapha Cause Your Kidneys to Silently Fail?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
                                 Your kidneys filter 200 liters of blood daily. In Ayurveda, kidney issues arise from the vitiation of <strong>Vata</strong> (dryness/degeneration) and <strong>Kapha</strong> (blockages/stones).

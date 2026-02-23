@@ -10,10 +10,11 @@ import Link from "next/link"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import StickyTOC from "@/components/StickyTOC"
 import CalculatorWidget from "@/components/CalculatorWidget"
-import RelatedContent from "@/components/RelatedContent"
+import DynamicRelatedContent from "@/components/DynamicRelatedContent"
 import FAQSection from "@/components/FAQSection"
 import type { Metadata } from "next"
 
+import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
   title: "General Workout Plan | Complete Exercise & Fitness Training Guide",
   description: "Complete general workout plan with beginner to advanced routines, strength training, cardio, flexibility, home and gym workouts for all fitness levels and goals.",
@@ -81,6 +82,13 @@ export default function GeneralWorkoutPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
+      <ArticleSchema
+        headline="General Workout Plan | Complete Exercise & Fitness Training Guide"
+        description="Complete general workout plan with beginner to advanced routines, strength training, cardio, flexibility, home and gym workouts for all fitness levels and goals."
+        keywords={["workout plan", "fitness routine", "general exercise program", "strength training", "cardio workout", "beginner workout", "gym routine", "home workout", "full body workout"]}
+        datePublished="2024-01-01"
+        dateModified={new Date().toISOString()}
+      />
       <StickyTOC items={tocItems} />
 
       <div className="container mx-auto px-4 max-w-4xl">
@@ -94,20 +102,28 @@ export default function GeneralWorkoutPage() {
         />
       </div>
 
-      {/* CTA Section */}
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-16 bg-white scroll-mt-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <FAQSection faqs={faqs} />
+          </div>
+        </div>
+      </section>
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-orange-600 to-red-700 text-white pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="mb-4 bg-white text-orange-600 font-semibold">
-              💪 Complete Workout Guide
+            <Badge className="mb-4 bg-white/20 text-white border-white/30">
+              💪 Fitness Foundation Answer Engine
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              General Workout Plan: Build Strength, Fitness & Health
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
+              What is the Best General Workout Plan for Overall Fitness?
             </h1>
-            <p className="text-xl text-white mb-8 leading-relaxed">
-              Discover comprehensive workout routines for all fitness levels including strength training, cardio,
-              flexibility, and complete programs you can do at home or the gym to achieve your fitness goals.
+            <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
+              <strong>The Short Answer:</strong> A balanced fitness routine requires 150 minutes of moderate cardiovascular activity combined with 2-3 days of full-body resistance training per week. Whether at home using bodyweight or in a gym using barbells, applying "progressive overload"—gradually making exercises harder over time—is the only proven way to simultaneously build lean muscle mass, burn fat, and improve cardiovascular health.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold" asChild>
@@ -149,7 +165,7 @@ export default function GeneralWorkoutPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Building Your Fitness Foundation</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Do I Build a Complete Foundation for Health and Fitness?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 A well-rounded fitness program includes strength training (builds muscle, increases metabolism),
                 cardiovascular exercise (improves heart health, burns calories), flexibility work (prevents injury,
@@ -558,7 +574,7 @@ export default function GeneralWorkoutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto mt-12 bg-white rounded-xl p-4">
-            <RelatedContent />
+            <DynamicRelatedContent topic="general" />
           </div>
         </div>
       </section>
