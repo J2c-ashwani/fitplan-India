@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calculator, Scale, Heart, Apple, Activity, Flame, Ruler, TrendingUp, GlassWater, Baby, Leaf, Target, Zap, ArrowRight, Droplets } from "lucide-react"
+import { Calculator, Scale, Heart, Apple, Activity, Flame, Ruler, TrendingUp, GlassWater, Baby, Leaf, Target, Zap, ArrowRight, Droplets, AlertCircle } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -55,6 +55,29 @@ export default function ToolsPage() {
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+
+            {/* PCOS Calculator Link */}
+            <Link href="/tools/pcos-calculator" className="block group">
+              <Card className="h-full border-2 border-rose-100 hover:border-rose-400 hover:shadow-xl transition-all duration-300">
+                <CardHeader className="bg-gradient-to-r from-rose-50 to-pink-50 group-hover:from-rose-100 group-hover:to-pink-100 transition-colors">
+                  <div className="flex justify-between items-start">
+                    <div className="p-3 bg-white rounded-lg shadow-sm">
+                      <AlertCircle className="h-8 w-8 text-rose-600" />
+                    </div>
+                    <Badge variant="default" className="bg-rose-600 hover:bg-rose-700">New Tool</Badge>
+                  </div>
+                  <CardTitle className="text-2xl mt-4 text-rose-950">PCOS Risk Calculator</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-6">
+                  <p className="text-gray-600 mb-6">
+                    Find out if Insulin Resistance is the hidden reason you can't lose weight with PCOS. Takes 60 seconds.
+                  </p>
+                  <div className="flex items-center text-rose-600 font-semibold group-hover:gap-2 transition-all">
+                    Start Test <ArrowRight className="w-4 h-4 ml-1" />
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
 
             {/* BMI Calculator Link */}
             <Link href="/tools/bmi-calculator" className="block group">

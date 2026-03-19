@@ -10,6 +10,7 @@ export default function MedicalBadge() {
                     alt="Dr. Arti"
                     fill
                     className="object-cover"
+                    priority
                 />
             </div>
             <div className="flex flex-col">
