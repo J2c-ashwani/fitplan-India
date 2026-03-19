@@ -5,6 +5,9 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/tools/prakriti-quiz",
+  },
     title: "Tridosha Test: Know Your Ayurvedic Body Type (Prakriti) | FitPlan India",
     description: "Take this free 2-minute Ayurvedic body type test to discover your dominant Dosha (Vata, Pitta, or Kapha). Medically reviewed by Dr. Arti, BAMS.",
     keywords: "ayurveda test, dosha quiz, vata pitta kapha test, body type quiz, prakriti analysis, ayurvedic doctor india",

@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/thyroid-remedies",
+  },
     title: "Natural Remedies for Hypothyroidism & TSH Control | FitPlan India",
     description: "Manage Hypothyroidism (Galaganda) with Ayurveda. Learn about Kanchanar Guggulu, Coriander water, Selenium rich diet, and Ujjayi Pranayama for thyroid health.",
     keywords: ["Ayurvedic cure for hypothyroidism", "Kanchanar Guggulu benefits", "Coriander seeds for thyroid", "Indian diet for thyroid patients", "Ujjayi pranayama for thyroid"],

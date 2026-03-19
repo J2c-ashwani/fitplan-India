@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/diabetes-control",
+  },
     title: "Natural Ayurveda Treatments for Diabetes (Madhumeha) | FitPlan India",
     description: "Control high blood pressure naturally. Ayurvedic guide to managing Madhumeha using Methi, Jamun, Karela, and lifestyle changes to reverse insulin resistance.",
     keywords: ["Ayurveda for diabetes type 2", "Natural blood sugar control", "Methi water benefits", "Jamun seeds powder for diabetes", "Ayurvedic diet for sugar patients"],

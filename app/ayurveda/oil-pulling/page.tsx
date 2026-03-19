@@ -12,6 +12,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/oil-pulling",
+  },
     title: "Oil Pulling (Gandusha): The Ultimate Guide | Ayurvedic Detox",
     description: "Everything you need to know about Oil Pulling. Scientific benefits for teeth whitening, bad breath, and gut health. Step-by-step 20-minute protocol.",
     keywords: ["Oil pulling science", "Coconut oil pulling benefits", "Ayurvedic oral detox", "How to do oil pulling correctly", "Oil pulling side effects"],

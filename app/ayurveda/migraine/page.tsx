@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/migraine",
+  },
     title: "Ayurvedic Migraine Relief: Ardhavabhedaka Cure | FitPlan India",
     description: "Stop the throbbing pain naturally. Comprehensive guide to Ayurvedic Nasya therapy, trigger foods, and herbal remedies for permanent migraine relief.",
     keywords: ["Ayurveda for migraine", "Ardhavabhedaka treatment", "Nasya therapy benefits", "Migraine home remedies India", "Headache trigger foods"],

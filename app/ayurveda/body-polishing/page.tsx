@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/body-polishing",
+  },
     title: "Ayurvedic Body Polishing: Udvartana at Home | FitPlan India",
     description: "Udvartana is the Ayurvedic art of dry massage with herbal powders. Learn how to make Ubtan for glowing skin, cellulite reduction, and lymphatic drainage.",
     keywords: ["Ayurvedic body polishing", "Udvartana for weight loss", "DIY Ubtan recipe", "Lymphatic drainage massage at home", "Skin glow powder"],

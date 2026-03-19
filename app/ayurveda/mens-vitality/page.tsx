@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/mens-vitality",
+  },
     title: "Vajikarana Therapy: Ayurvedic Herbs for Men's Vitality | FitPlan India",
     description: "Boost stamina and testosterone naturally with Vajikarana herbs. Learn about Shilajit, Ashwagandha, Safed Musli, and Gokshura for peak male health.",
     keywords: ["Ayurveda for men's health", "Vajikarana therapy benefits", "Shilajit for testosterone", "Ashwagandha for stamina", "Safed musli uses", "natural cure for ed india"],

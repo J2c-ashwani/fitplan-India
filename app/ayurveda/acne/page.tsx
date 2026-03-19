@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/acne",
+  },
     title: "Ayurvedic Acne Cure: Yuvana Pidika Map & Remedies | FitPlan India",
     description: "Map your acne to your internal organs. Complete Ayurvedic guide to curing Yuvana Pidika (Acne) using Neem, Manjistha, and the Pitta-pacifying diet.",
     keywords: ["Ayurvedic acne map", "Neem for acne benefits", "Pitta dosha acne diet", "Yuvana Pidika treatment", "Manjistha for skin glow"],

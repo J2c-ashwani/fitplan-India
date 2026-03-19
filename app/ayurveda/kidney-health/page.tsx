@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/kidney-health",
+  },
     title: "Ayurvedic Kidney Care: The Complete Renal Health Guide | FitPlan India",
     description: "Revive kidney function naturally. In-depth guide to Punarnava, Gokshura, and the Ayurvedic Renal Diet. Scientifically backed remedies for creatinine control and stone prevention.",
     keywords: ["Ayurveda for kidney failure", "Lower creatinine naturally", "Punarnava benefits for kidney", "Ayurvedic renal diet chart", "Kidney stone home removal"],

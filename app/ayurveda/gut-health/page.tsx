@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/gut-health",
+  },
     title: "Improve Gut Health & Digestion (Agni) | Ayurveda Guide",
     description: "Fix bloating, gas, and IBS naturally. Comprehensive Ayurveda guide to balancing Jatharagni (Digestive Fire) using Ginger, Fasting, and CCF Tea.",
     keywords: ["Ayurveda for gut health", "Agni digestive fire", "bloating home remedies", "curing IBS naturally", "Triphala for constipation", "Ayurvedic fasting"],

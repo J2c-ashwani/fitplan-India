@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/seasonal-guide",
+  },
     title: "Ritucharya: The Ayurvedic Seasonal Guide | FitPlan India",
     description: "Align your diet with nature cycles. Comprehensive Ritucharya guide for Summer (Grishma), Monsoon (Varsha), and Winter (Hemanta) to prevent seasonal illness.",
     keywords: ["Ayurveda Ritucharya", "Seasonal diet ayurveda", "Monsoon ayurvedic tips", "Winter diet for immunity", "Summer cooling foods"],

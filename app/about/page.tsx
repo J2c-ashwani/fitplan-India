@@ -6,6 +6,9 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/about",
+  },
   title: "About FitPlan India | Our Medical Review Board & Expert Nutritionists",
   description: "Meet the team of certified nutritionists and health experts behind FitPlan India. We provide science-backed, personalized diet plans for managing PCOS, Diabetes, and Thyroid conditions.",
 }

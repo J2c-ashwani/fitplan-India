@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/constipation",
+  },
     title: "Ayurvedic Constipation Relief: Vibandha Cure | FitPlan India",
     description: "Chronic constipation (Vibandha) is the root of all disease. Learn how to cure it with Triphala, Castor Oil, and proper toilet posture.",
     keywords: ["Ayurveda for constipation", "Triphala dosage for constipation", "Castor oil for stomach cleaning", "Vata dosha constipation diet", "Natural laxatives India"],

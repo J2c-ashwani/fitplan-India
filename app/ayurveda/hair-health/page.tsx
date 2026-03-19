@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/hair-health",
+  },
     title: "Best Ayurvedic Hair Oil & Herbs for Growth | Keshya",
     description: "Stop hair fall and premature graying naturally. Ayurvedic guide to Bhringraj, Amla, and Nasya therapy for thick, lustrous hair.",
     keywords: ["Ayurvedic hair oil for growth", "Bhringraj benefits", "Amla for white hair", "Nasya for hair fall", "Pitta dosha hair loss", "hair care routine Indian"],

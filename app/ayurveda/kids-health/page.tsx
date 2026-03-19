@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/kids-health",
+  },
     title: "Ayurveda for Kids: Natural Immunity & Brain Power | Bala Roga",
     description: "Raise strong, smart kids with Ayurveda. Guide to Swarnaprashana (Gold drops), memory boosting herbs like Brahmi, and natural remedies for cough & cold.",
     keywords: ["Ayurveda for children", "Swarnaprashana benefits", "Natural immunity for kids", "Brahmi for memory", "Home remedies for child cold"],

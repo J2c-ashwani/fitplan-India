@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/home-detox",
+  },
     title: "Weekend Ayurvedic Detox Plan (Home Cleanse) | FitPlan India",
     description: "Reset your digestion in 48 hours. A simple Kitchari Cleanse and Castor Oil detox (Virechana) to flush toxins and boost energy.",
     keywords: ["Ayurvedic home detox", "Kitchari cleanse recipe", "weekend detox plan", "castor oil cleanse method", "how to remove ama", "gut reset diet"],

@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/acidity-bloating",
+  },
     title: "Natural Home Remedies for Acidity & Gas (Amla Pitta) | Ayurveda",
     description: "Cure acid reflux and bloating permanently. Ayurvedic diet for Amla Pitta, cooling herbs like Fennel and Amla, and foods to avoid.",
     keywords: ["Ayurvedic cure for acidity", "home remedies for gas and bloating", "Amla Pitta treatment", "stomach heat remedies", "pitta pacifying diet"],

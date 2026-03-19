@@ -8,6 +8,9 @@ import { Leaf, Moon, Sun, Wind, Droplet, Flame, Brain, Heart, Activity, Coffee, 
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda",
+  },
     title: "Ayurveda Hub - Ancient Wisdom for Modern Health | FitPlan India",
     description: "Explore our comprehensive Ayurveda guide. Learn about Prakriti, herbal remedies for PCOS, Thyroid, Diabetes, and daily routines for holistic wellness.",
     keywords: ["Ayurveda India", "Ayurvedic Diet", "Prakriti Quiz", "Ayurvedic Herbs", "PCOS Ayurveda", "Thyroid Ayurveda", "Holistic Health India"],

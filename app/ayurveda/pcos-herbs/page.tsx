@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/pcos-herbs",
+  },
     title: "5 Best Ayurvedic Herbs to Cure PCOS/PCOD Permanently | FitPlan India",
     description: "Reverse PCOS naturally with Ayurveda. A comprehensive guide on Ashwagandha, Shatavari, and Cinnamon for hormonal balance, weight loss, and irregular periods.",
     keywords: ["Ayurvedic treatment for PCOS", "Ashwagandha for PCOS", "Shatavari benefits for women", "PCOS diet chart indian", "Yoga for PCOD", "cure pcod permanently"],

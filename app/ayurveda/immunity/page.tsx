@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/immunity",
+  },
     title: "Ayurvedic Immunity Booster: Build Ojas Naturally | FitPlan India",
     description: "Ayurveda's secret to immunity is Ojas. comprehensive guide to Chyawanprash, Golden Milk (Turmeric), and lifestyle habits that build natural resistance to disease.",
     keywords: ["Ayurveda for immunity", "What is Ojas", "Chyawanprash benefits", "Golden milk recipe", "Natural immunity booster India"],

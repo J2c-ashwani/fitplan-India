@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/dark-circles",
+  },
     title: "Ayurveda for Dark Circles: Kumkumadi & Eye Care | FitPlan India",
     description: "Dark circles are a sign of Vata imbalance and stress. Learn how to erase them using Kumkumadi Tailam, Aloe Vera, and Ayurvedic eye exercises (Trataka).",
     keywords: ["Ayurveda for dark circles", "Kumkumadi tailam benefits", "Under eye home remedies", "Vata dosha eyes", "Trataka eye exercise"],

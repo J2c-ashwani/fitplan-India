@@ -13,6 +13,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/doshas",
+  },
     title: "Understanding Tridosha: The Ultimate Guide to Vata, Pitta, Kapha | FitPlan India",
     description: "Discover your Ayurvedic body type. Comprehensive guide to Vata, Pitta, and Kapha doshas, including detailed diet charts, symptoms of imbalance, and scientific perspectives on bio-energies.",
     keywords: ["Ayurveda tridosha explained", "Vata Pitta Kapha characteristics", "Ayurvedic body type diet", "Symptoms of high Pitta", "How to balance Kapha", "Science of Ayurveda"],

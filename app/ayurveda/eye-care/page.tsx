@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/eye-care",
+  },
     title: "Ayurvedic Eye Care (Netra Chikitsa) | Natural Vision Improvement",
     description: "Cure digital eye strain and dark circles with Ayurveda. Learn about Triphala eye wash, Netra Basti, and Trataka exercises for better vision.",
     keywords: ["Ayurvedic eye care", "Triphala for eyes", "Netra Basti therapy", "cure dry eyes ayurveda", "remove dark circles naturally", "trataka benefits"],

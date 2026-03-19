@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/skin-glow",
+  },
     title: "Ayurvedic Secrets for Glowing Skin (Varnya) | FitPlan India",
     description: "Get radiant skin naturally. Ease acne, pigmentation, and dullness with Neem, Turmeric, Kumkumadi Tailam, and Pitta-pacifying diet.",
     keywords: ["Ayurvedic skin care", "Kukumadi tailam benefits", "Neem for acne", "how to get glowing skin naturally", "pitta dosha skin problems", "turmeric face pack recipe"],

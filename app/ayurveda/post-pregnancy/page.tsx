@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/post-pregnancy",
+  },
     title: "Sutika Paricharya: Ayurvedic Postnatal Care Guide | FitPlan India",
     description: "Recover quickly after delivery with Ayurvedic Sutika Paricharya. Diet chart, Gond Laddu recipe, and massage tips for nursing mothers to regain strength.",
     keywords: ["Ayurvedic postnatal care", "Sutika Paricharya guide", "Gond ka laddu for pregnancy", "diet after delivery indian", "postpartum recovery herbs", "breastfeeding diet ayurveda"],

@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/diet-rules",
+  },
     title: "10 Golden Ayurvedic Diet Rules | Art of Mindful Eating",
     description: "Ayurveda is not just about what you eat, but HOW you eat. Master the 10 rules of Ahara, the concept of Viruddha Ahar (Incompatible Foods), and the ideal daily eating schedule.",
     keywords: ["Ayurvedic eating rules", "Viruddha Ahar examples", "Ayurveda food combinations", "Mindful eating guide", "Digestive fire Agni"],

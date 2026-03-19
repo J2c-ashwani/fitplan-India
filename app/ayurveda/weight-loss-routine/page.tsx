@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/weight-loss-routine",
+  },
     title: "The Dinacharya: Daily Ayurvedic Routine for Weight Loss | FitPlan India",
     description: "Lose weight naturally by following the Ayurvedic Dinacharya (Daily Routine). Learn when to wake up, what to drink, and how to eat for maximum metabolism.",
     keywords: ["Ayurvedic weight loss diet", "Dinacharya for weight loss", "Kapha body type diet", "drinking warm water benefits", "ayurveda waking time", "circadian rhythm weight loss"],

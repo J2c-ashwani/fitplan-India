@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/menopause",
+  },
     title: "Ayurveda for Menopause: Natural Relief from Hot Flashes | FitPlan India",
     description: "Manage Rajonivritti (Menopause) naturally. Guide to Shatavari, cooling pranayama, and hormone-balancing diets to stop hot flashes and mood swings.",
     keywords: ["Ayurveda for menopause", "Shatavari benefits menopause", "Natural hot flash remedies", "Rajonivritti treatment", "Menopause diet chart India"],

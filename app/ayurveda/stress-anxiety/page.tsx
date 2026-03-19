@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/stress-anxiety",
+  },
     title: "Natural Herbs & Techniques for Stress & Anxiety | Ayurveda",
     description: "Calm your mind with Ayurveda. Discover adaptogenic herbs like Ashwagandha and Brahmi, Pranayama techniques, and Satvavajaya therapy for mental peace.",
     keywords: ["Ayurveda for anxiety", "Brahmi benefits for brain", "Ashwagandha for stress relief", "Shirodhara therapy", "Pranayama for mental health", "Jatamansi benefits"],

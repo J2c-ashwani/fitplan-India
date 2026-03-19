@@ -9,6 +9,9 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/tools",
+  },
   title: "Health & Fitness Calculators | Free BMI, BMR & Protein Tools | FitPlan India",
   description: "Free scientifically accurate health calculators for Indian body types. Calculate BMI, BMR, Daily Calorie Needs, Water Intake, and Protein Requirements instantly.",
   keywords: "health calculators India, BMI calculator, BMR calculator, calorie calculator India, protein calculator, free health tools",

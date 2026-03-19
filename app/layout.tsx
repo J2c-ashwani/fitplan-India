@@ -93,9 +93,6 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   metadataBase: new URL("https://www.fitplanindia.com"),
-  alternates: {
-    canonical: "./",
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

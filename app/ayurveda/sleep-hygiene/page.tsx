@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/sleep-hygiene",
+  },
     title: "Ancient Sleep Remedies & Digital Detox | Ayurveda for Insomnia",
     description: "Can't sleep? Discover Ayurvedic remedies for insomnia (Anidra). Learn about Golden Milk, Padabhyanga (Foot Massage), and bedtime rituals for deep rest.",
     keywords: ["Ayurveda for insomnia", "Golden milk recipe for sleep", "Padabhyanga benefits", "ayurvedic sleep remedies", "how to sleep better naturally", "sleep deprivation side effects"],

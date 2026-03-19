@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/heart-health",
+  },
     title: "Ayurvedic Heart Health: Arjuna & Cholesterol Management | FitPlan India",
     description: "Strengthen your heart (Hridaya) with Ayurveda. Comprehensive guide to Arjuna Bark, Garlic therapy, and managing blood pressure naturally.",
     keywords: ["Arjuna for heart", "Ayurveda for cholesterol", "High blood pressure home remedies", "Hridaya roga treatment", "Garlic for heart health"],

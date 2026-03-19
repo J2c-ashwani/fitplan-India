@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/joint-pain",
+  },
     title: "Ayurvedic Treatment for Joint Pain & Arthritis (Sandhivata) | FitPlan India",
     description: "Relieve knee pain, back pain, and arthritis naturally. Discover Mahanarayan Oil, Golden Milk, and dietary changes to lubricate dry joints.",
     keywords: ["Ayurveda for arthritis", "Joint pain home remedies", "Mahanarayan oil benefits", "foods for strong joints", "natural cure for knee pain"],

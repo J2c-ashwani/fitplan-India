@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/gray-hair",
+  },
     title: "Ayurveda for Gray Hair: Reverse Palitya Naturally | FitPlan India",
     description: "Premature graying (Palitya) is a sign of high Pitta. Learn how to reverse it with Bhringraj Oil, Nasya, and cooling Ayurvedic diets.",
     keywords: ["Ayurveda for gray hair", "Bhringraj oil benefits", "Palitya treatment", "Nasya for hair growth", "Curry leaves for hair"],

@@ -10,6 +10,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/anti-aging",
+  },
     title: "Rasayana Therapy: Ayurvedic Anti-Aging Secrets | FitPlan India",
     description: "Reverse aging naturally with Rasayana Therapy. Learn about Ojas, Amla (Chavanprash), and Shilajit to restore youth and immunity.",
     keywords: ["Ayurvedic anti-aging herbs", "Rasayana therapy benefits", "Chavanprash for immunity", "increasing ojas naturally", "shilajit for energy", "rejuvenation therapy india"],

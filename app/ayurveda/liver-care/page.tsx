@@ -11,6 +11,9 @@ import ScientificRefs from "@/components/ScientificRefs"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.fitplanindia.com/ayurveda/liver-care",
+  },
     title: "Ayurvedic Liver Detox: Complete Yakrit Care Guide | FitPlan India",
     description: "Natural remedies for Fatty Liver and Jaundice. Learn about Kutki, Bhumi Amla, and the 7-Day Ayurvedic Liver Cleanse diet.",
     keywords: ["Ayurveda for fatty liver", "Liver detox home remedies", "Kutki benefits", "Bhumi amla for liver", "Yakrit roga treatment"],
