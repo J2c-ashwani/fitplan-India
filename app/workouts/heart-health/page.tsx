@@ -13,7 +13,7 @@ import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 
 export const metadata: Metadata = {
-  title: "Heart Health Exercise Program | Cardio Workouts for Cardiovascular Health",
+  title: "Heart Health Exercise Program | Cardio Workouts for Cardiovascular Health 2025",
   description: "Complete heart health exercise guide with safe cardio workouts, blood pressure lowering exercises, aerobic training, and cardiovascular fitness for heart disease prevention.",
   keywords: "heart health exercise, cardio workouts, heart disease prevention, blood pressure exercise, cardiovascular fitness, aerobic exercise, heart healthy workout, dash diet exercise",
   alternates: {

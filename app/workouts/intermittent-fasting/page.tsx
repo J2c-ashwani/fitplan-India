@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Intermittent Fasting Workout Plan | Exercise Timing for IF",
+  title: "Intermittent Fasting Workout Plan | Exercise Timing for IF 2025",
   description: "Complete IF workout guide with optimal exercise timing, fasted training strategies, fed state workouts, and performance optimization during intermittent fasting.",
   keywords: "intermittent fasting workout, fasted cardio, IF exercise timing, workout during fasting, fed state training, 16:8 workout schedule, fasted weight training",
   alternates: {

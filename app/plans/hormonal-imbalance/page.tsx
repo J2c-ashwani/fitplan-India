@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
-  title: "Hormonal Imbalance Diet Plan | PCOS, Thyroid & Menopause | FitPlan India",
+  title: "Hormonal Imbalance Diet Plan | PCOS, Thyroid & Menopause 2025",
   description: "Complete hormonal imbalance diet plan for PCOS, thyroid, menopause, and hormone-related weight gain. Expert-designed for women in USA, UK, Canada, Australia.",
   keywords: "hormonal imbalance diet, PCOS diet plan, thyroid diet, menopause weight loss, hormone balance diet, PCOS weight loss, hypothyroidism diet, estrogen dominance, food for hormonal balance",
   alternates: {

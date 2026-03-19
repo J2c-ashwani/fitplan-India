@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Muscle Gain Workout Plan | Best Exercises to Build Mass & Strength",
+  title: "Muscle Gain Workout Plan | Best Exercises to Build Mass & Strength 2025",
   description: "Complete muscle building workout guide with hypertrophy training, strength programs, progressive overload, split routines, and exercises to maximize muscle growth.",
   keywords: "muscle gain workout, hypertrophy training, bodybuilding workout, mass building exercises, strength training program, muscle growth routine, gym workout plan, fitness routine",
   alternates: {

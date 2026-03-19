@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Teen Workout Plan | Best Exercises for Teenagers & Adolescents",
+  title: "Teen Workout Plan | Best Exercises for Teenagers & Adolescents 2025",
   description: "Complete teen workout guide with safe, effective exercises for strength building, sports performance, fitness, and healthy development for teenagers aged 13-19.",
   keywords: "teen workout, teenager exercise, adolescent fitness, workout for teens, teenage strength training, teen gym routine, sports training for teens",
   alternates: {

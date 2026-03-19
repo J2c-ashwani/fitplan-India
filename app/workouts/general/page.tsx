@@ -16,7 +16,7 @@ import type { Metadata } from "next"
 
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
-  title: "General Workout Plan | Complete Exercise & Fitness Training Guide",
+  title: "General Workout Plan | Complete Exercise & Fitness Training Guide 2025",
   description: "Complete general workout plan with beginner to advanced routines, strength training, cardio, flexibility, home and gym workouts for all fitness levels and goals.",
   keywords: "workout plan, fitness routine, general exercise program, strength training, cardio workout, beginner workout, gym routine, home workout, full body workout",
   alternates: {

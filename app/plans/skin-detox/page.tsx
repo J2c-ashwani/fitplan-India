@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
-    title: "Skin Detox Diet Plan | Best Foods for Glowing Acne-Free Skin | FitPlan India",
+    title: "Skin Detox Diet Plan | Best Foods for Glowing Acne-Free Skin 2025",
     description: "Natural diet plan for clear, glowing skin. Detoxify your blood (Rakta Shodhana) with Neem, Turmeric, and Pitta-pacifying foods. Expert guide for acne and pigmentation.",
     keywords: "skin detox diet plan, diet for glowing skin, ayurvedic blood purifier foods, diet for acne free skin, pitta dosha skin diet, indian diet for skin whitening, foods for clear skin",
     alternates: {

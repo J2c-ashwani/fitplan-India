@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Keto Workout Plan | Best Exercises for Ketogenic Diet & Fat Loss",
+  title: "Keto Workout Plan | Best Exercises for Ketogenic Diet & Fat Loss 2025",
   description: "Complete keto workout guide with fat-burning exercises, strength training for ketosis, energy management, and performance optimization on low-carb high-fat diet.",
   keywords: "keto workout, ketogenic exercise, low carb workout, keto fat burning exercises, keto gym routine, keto bodybuilding",
   alternates: {

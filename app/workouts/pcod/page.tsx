@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "PCOD Workout Plan | Exercise for Polycystic Ovary Syndrome",
+  title: "PCOD Workout Plan | Exercise for Polycystic Ovary Syndrome 2025",
   description: "Complete PCOD workout guide with exercises to improve insulin sensitivity, balance hormones, manage weight, and reduce PCOS symptoms naturally through fitness.",
   keywords: "PCOD workout, PCOS exercise, insulin resistance workout, hormonal balance exercises, PCOD weight loss workout, polycystic ovary exercise",
   alternates: {

@@ -11,7 +11,7 @@ import type { Metadata } from "next"
 
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
-  title: "Workout Programs | Expert Fitness & Exercise Guides - FitPlan India",
+  title: "Workout Programs | Expert Fitness & Exercise Guides 2025",
   description: "Complete workout programs and exercise guides for weight loss, muscle building, PCOS, diabetes, seniors, athletes, and specialized fitness goals.",
   keywords: "workout programs, exercise guides, fitness plans, weight loss workouts, muscle building, home workouts, gym routines India",
   alternates: {

@@ -28,7 +28,7 @@ import type { Metadata } from "next"
 
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
-  title: "Specialized Diet Plans for Every Health Condition | FitPlan India",
+  title: "Specialized Diet Plans for Every Health Condition 2025",
   description:
     "Expert-designed diet plans for PCOS, thyroid, diabetes, post-pregnancy, weight loss, and more. Tailored Indian meal plans with proven results.",
   keywords:

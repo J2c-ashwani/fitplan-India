@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Weight Loss Workout Plan | Best Exercises to Burn Fat Fast",
+  title: "Weight Loss Workout Plan | Best Exercises to Burn Fat Fast 2025",
   description: "Complete weight loss workout guide with fat-burning exercises, cardio routines, strength training, HIIT workouts, and complete programs to maximize calorie burn and fat loss.",
   keywords: "weight loss workout, fat burning exercises, cardio for weight loss, HIIT fat loss, best exercises to lose weight, gym workout for weight loss",
   alternates: {

@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
-    title: "Anti-Aging Diet Plan | Best Foods for Younger Skin & Eyes | FitPlan India",
+    title: "Anti-Aging Diet Plan | Best Foods for Younger Skin & Eyes 2025",
     description: "Ayurvedic anti-aging diet (Rasayana) to reverse wrinkles, improve vision, and boost longevity. Collagen-rich foods and eye care nutrition guide. Evidence-based plan for younger skin.",
     keywords: "anti aging diet plan, rasayana therapy ayurveda, diet for younger skin, foods for eye health, ayurvedic anti aging secrets, collagen rich indian food, anti aging foods india, best diet for glowing skin",
     alternates: {

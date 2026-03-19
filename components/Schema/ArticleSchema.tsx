@@ -21,16 +21,23 @@ export default function ArticleSchema({
 }: ArticleSchemaProps) {
     const schema = {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": ["Article", "MedicalWebPage"],
         "headline": headline,
         "description": description,
         "image": `https://www.fitplanindia.com${image}`,
         "author": {
             "@type": "Person",
-            "name": author
+            "name": author,
+            "honorificPrefix": "Dr.",
+            "jobTitle": "Ayurvedic Medical Doctor (BAMS) & Clinical Nutritionist",
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Nalanda Medical College and Hospital (NMCH)"
+            },
+            "url": "https://www.fitplanindia.com/about"
         },
         "publisher": {
-            "@type": "Organization",
+            "@type": ["Organization", "MedicalOrganization"],
             "name": "FitPlan India",
             "logo": {
                 "@type": "ImageObject",

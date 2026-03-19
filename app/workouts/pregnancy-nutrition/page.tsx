@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Prenatal Exercise Program | Safe Pregnancy Workouts for Expecting Mothers",
+  title: "Prenatal Exercise Program | Safe Pregnancy Workouts for Expecting Mothers 2025",
   description: "Complete prenatal exercise guide with safe pregnancy workouts, trimester-specific exercises, pelvic floor strengthening, and fitness routines for healthy pregnancy and easier delivery.",
   keywords: "prenatal exercise, pregnancy workouts, pregnancy fitness, prenatal yoga, safe exercises pregnancy, pregnancy exercise by trimester, pelvic floor exercises",
   alternates: {

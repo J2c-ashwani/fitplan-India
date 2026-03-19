@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Thyroid Workout Plan | Best Exercises for Hypothyroidism & Weight Loss",
+  title: "Thyroid Workout Plan | Best Exercises for Hypothyroidism & Weight Loss 2025",
   description: "Complete thyroid workout guide with metabolism-boosting exercises for hypothyroidism, safe routines for thyroid patients, energy management, and weight loss strategies.",
   keywords: "thyroid workout, hypothyroidism exercise, thyroid weight loss workout, exercises for underactive thyroid, metabolism boosting exercises, low energy workouts",
   alternates: {

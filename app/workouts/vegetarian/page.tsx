@@ -11,7 +11,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Vegetarian Workout Plan | Build Muscle on Plant-Based Diet",
+  title: "Vegetarian Workout Plan | Build Muscle on Plant-Based Diet 2025",
   description: "Complete vegetarian workout guide with muscle-building exercises, strength training for plant-based athletes, recovery strategies, and performance optimization without meat.",
   keywords: "vegetarian workout, plant-based fitness, vegetarian muscle building, vegetarian bodybuilding, vegan workout, plant-based athlete training",
   alternates: {

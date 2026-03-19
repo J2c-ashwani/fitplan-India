@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Athlete Training Program | Sports Performance Workouts for Competitive Athletes",
+  title: "Athlete Training Program | Sports Performance Workouts for Competitive Athletes 2025",
   description: "Complete athlete training program with sport-specific workouts, strength training, speed/agility drills, endurance conditioning, and performance optimization for competitive athletes.",
   keywords: "athlete training, sports workouts, performance training, athletic conditioning, sports training program, athlete workout plan, competitive sports training, plyometrics",
   alternates: {

@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Paleo Workout Program | Primal Fitness & Functional Training",
+  title: "Paleo Workout Program | Primal Fitness & Functional Training 2025",
   description: "Complete paleo workout guide with primal movement patterns, functional fitness, CrossFit-style training, and natural bodyweight exercises for primal strength and athleticism.",
   keywords: "paleo workout, primal fitness, functional training, paleo exercise, CrossFit paleo, bodyweight training, primal movement, caveman workout",
   alternates: {

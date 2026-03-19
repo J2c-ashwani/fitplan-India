@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 export const metadata: Metadata = {
-    title: "Hair Growth Diet Plan | Best Foods to Stop Hair Fall | FitPlan India",
+    title: "Hair Growth Diet Plan | Best Foods to Stop Hair Fall 2025",
     description: "Ayurvedic and scientific diet plan for hair growth. Foods to stop hair fall, prevent premature graying, and boost volume. Expert nutrition guide for strong hair.",
     keywords: "hair growth diet, best food for hair growth, diet for hair fall, ayurvedic hair diet, foods for strong hair, indian diet for hair regrowth, biotin rich foods india, prevent gray hair diet",
     alternates: {

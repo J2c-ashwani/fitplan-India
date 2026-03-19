@@ -12,7 +12,7 @@ import type { Metadata } from "next"
 import ArticleSchema from "@/components/Schema/ArticleSchema"
 
 export const metadata: Metadata = {
-  title: "Mediterranean Lifestyle Workout | Active Living for Longevity & Health",
+  title: "Mediterranean Lifestyle Workout | Active Living for Longevity & Health 2025",
   description: "Complete Mediterranean lifestyle exercise guide with walking routines, active living principles, longevity workouts, and balanced fitness for heart health and vitality.",
   keywords: "mediterranean lifestyle, active living, longevity workouts, walking routine, mediterranean fitness, healthy aging exercise, lifestyle fitness",
   alternates: {

@@ -12,7 +12,7 @@ import ArticleSchema from "@/components/Schema/ArticleSchema"
 import Breadcrumbs from "@/components/Breadcrumbs"
 
 export const metadata: Metadata = {
-    title: "Gym Workout Plan for Beginners | 4-Day Split Routine",
+    title: "Gym Workout Plan for Beginners | 4-Day Split Routine 2025",
     description: "Complete 4-day gym workout split for beginners. Focus on compound movements, muscle building, and proper form. Includes upper/lower body split.",
     keywords: "gym workout plan, beginner gym routine, 4 day gym split, upper lower split, muscle building workout, gym exercises for beginners",
     alternates: {
