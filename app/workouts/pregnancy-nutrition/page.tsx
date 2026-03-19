@@ -100,7 +100,7 @@ export default function PrenatalWorkoutPage() {
               Can Exercising During Pregnancy Actually Make Labor Easier?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> Yes. Research shows that women who engage in safe, moderate exercise during pregnancy often experience shorter active labor phases and a lower rate of medical interventions (like C-sections). Exercise builds the stamina required for delivery, strengthens the pelvic floor (preventing incontinence), and reduces the risk of gestational diabetes.
+              <strong>The Short Answer:</strong> Yes. Research shows that women who engage in safe, moderate exercise during pregnancy often experience shorter active labor phases and a lower rate of medical interventions (like C-sections). Exercise builds the stamina required for delivery, strengthens the pelvic floor (preventing incontinence), and reduces the risk of gestational <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>

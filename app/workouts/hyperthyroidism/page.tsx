@@ -93,13 +93,13 @@ export default function HyperthyroidismWorkoutPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              💪 Hyperthyroidism Answer Engine
+              💪 <Link href="/plans/hyperthyroidism" className="text-emerald-700 font-semibold hover:underline">Hyperthyroidism</Link> Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
               How Should I Exercise with an Overactive Thyroid?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> With hyperthyroidism, your metabolism is already in "overdrive." High-intensity workouts or excessive cardio can dangerously spike your heart rate and worsen unwanted weight loss. The only safe approach is low-intensity, restorative strength training 2-3 times a week to rebuild lost muscle mass, paired with plenty of high-calorie nutrition and 3-4 full rest days to prioritize nervous system recovery.
+              <strong>The Short Answer:</strong> With hyperthyroidism, your metabolism is already in "overdrive." High-intensity workouts or excessive cardio can dangerously spike your heart rate and worsen unwanted <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>. The only safe approach is low-intensity, restorative strength training 2-3 times a week to rebuild lost muscle mass, paired with plenty of high-calorie nutrition and 3-4 full rest days to prioritize nervous system recovery.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold" asChild>
@@ -121,8 +121,8 @@ export default function HyperthyroidismWorkoutPage() {
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is beneficial for hyperthyroidism BUT requires a completely different approach than for hypothyroidism or
-                healthy individuals. With an overactive thyroid, your body is already in "overdrive mode" burning excessive calories
+                Exercise is beneficial for hyperthyroidism BUT requires a completely different approach than for <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> or
+                healthy individuals. With an overactive <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link>, your body is already in "overdrive mode" burning excessive calories
                 and breaking down muscle tissue. The goal is gentle, restorative exercise that builds muscle and strength WITHOUT
                 adding more metabolic stress or depleting limited energy reserves further.
               </p>

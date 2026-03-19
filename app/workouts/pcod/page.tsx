@@ -94,13 +94,13 @@ export default function PCODWorkoutPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              💡 PCOS/PCOD Fitness Answer Engine
+              💡 <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link>/<Link href="/plans/pcod" className="text-emerald-700 font-semibold hover:underline">PCOD</Link> Fitness Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
               Why Does Cardio Sometimes Make PCOS Symptoms Worse?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> Excessive cardio can raise cortisol (your stress hormone), which signals your body to store belly fat and worsen insulin resistance—the exact opposite of what women with PCOS need. Instead, prioritizing strength training builds muscle mass that acts as a "sponge" for blood sugar, naturally improving insulin sensitivity by up to 50% while lowering male hormone (androgen) levels.
+              <strong>The Short Answer:</strong> Excessive cardio can raise cortisol (your stress hormone), which signals your body to store belly fat and worsen <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>—the exact opposite of what women with PCOS need. Instead, prioritizing strength training builds muscle mass that acts as a "sponge" for blood sugar, naturally improving insulin sensitivity by up to 50% while lowering male hormone (androgen) levels.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -145,7 +145,7 @@ export default function PCODWorkoutPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Does Building Muscle Improve Insulin Resistance?</h2>
               <p className="text-lg text-gray-700 mb-6">
                 Exercise is one of the most effective natural treatments for PCOD/PCOS. Regular physical activity improves
-                insulin sensitivity by up to 50%, helps balance hormones (reduces androgens), supports healthy weight loss,
+                insulin sensitivity by up to 50%, helps balance hormones (reduces androgens), supports healthy <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>,
                 reduces inflammation, regulates menstrual cycles, and significantly improves symptoms - often without medication.
                 The key is choosing the RIGHT type of exercise. Strength training is superior to cardio alone for PCOD because
                 it builds muscle (which improves insulin sensitivity long-term), doesn't spike cortisol like excessive cardio,

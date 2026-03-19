@@ -181,7 +181,7 @@ export default function GymDietComboPage() {
                 pre-workout and post-workout nutrition for maximum gains. For <strong>fat loss while maintaining muscle</strong>: eat in moderate
                 calorie deficit (300-500 calories below maintenance), consume HIGH protein at 2-2.5g per kg body weight (prevents muscle loss
                 during deficit), moderate carbs at 2-3g per kg body weight (enough for training performance), include healthy fats at 20-25%
-                calories, prioritize protein timing around workouts (pre and post), and consider intermittent fasting or carb cycling for
+                calories, prioritize protein timing around workouts (pre and post), and consider <Link href="/plans/intermittent-fasting" className="text-emerald-700 font-semibold hover:underline">intermittent fasting</Link> or carb cycling for
                 advanced fat loss. This comprehensive gym diet plan provides strategic meal timing, optimal macro ratios, pre/post-workout
                 nutrition protocols, and complete meal plans for both muscle gain and fat loss goals combined with gym training.
               </p>

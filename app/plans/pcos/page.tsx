@@ -100,7 +100,7 @@ export default function PCOSDietPage() {
               What is the Best Diet Plan for PCOS Weight Loss?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> PCOS makes weight loss 50-75% harder primarily due to insulin resistance, which turns excess carbohydrate energy directly into belly fat. The solution is adopting a strict low-glycemic index (GI) diet that pairs complex carbohydrates with 25-30g of protein and healthy fats at every meal. This prevents the insulin spikes that drive hormonal chaos, allowing your body to finally burn stored fat.
+              <strong>The Short Answer:</strong> PCOS makes <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> 50-75% harder primarily due to <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>, which turns excess carbohydrate energy directly into belly fat. The solution is adopting a strict low-glycemic index (GI) diet that pairs complex carbohydrates with 25-30g of protein and healthy fats at every meal. This prevents the insulin spikes that drive hormonal chaos, allowing your body to finally burn stored fat.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -273,8 +273,8 @@ export default function PCOSDietPage() {
                   <p className="text-gray-700 mb-3">
                     Women with PCOS typically have a resting metabolic rate (RMR) that is 200-500 calories lower than women of
                     the same age, weight, and activity level without PCOS. This is due to a combination of hormonal imbalances,
-                    insulin resistance effects, and often co-existing thyroid dysfunction (approximately 40% of PCOS women also
-                    have hypothyroidism or subclinical thyroid problems).
+                    insulin resistance effects, and often co-existing <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> dysfunction (approximately 40% of PCOS women also
+                    have <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> or subclinical thyroid problems).
                   </p>
                   <p className="text-sm text-gray-600">
                     This metabolic slowdown means you must either eat significantly fewer calories or exercise substantially more

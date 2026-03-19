@@ -98,7 +98,7 @@ export default function ObesityWeightLossPage() {
               What is the Best Diet Plan for Extreme Weight Loss (Obesity)?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> The most effective approach for significant weight loss (50-100+ lbs) is focusing on high-volume, low-calorie foods that provide maximum satiety. By filling up on unlimited non-starchy vegetables and lean proteins, you can maintain a moderate 500-750 calorie deficit without feeling starved, naturally reversing insulin resistance while gradually incorporating consistent daily movement.
+              <strong>The Short Answer:</strong> The most effective approach for significant <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> (50-100+ lbs) is focusing on high-volume, low-calorie foods that provide maximum satiety. By filling up on unlimited non-starchy vegetables and lean proteins, you can maintain a moderate 500-750 calorie deficit without feeling starved, naturally reversing <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link> while gradually incorporating consistent daily movement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-indigo-600 hover:bg-gray-100 font-semibold" asChild>
@@ -224,7 +224,7 @@ export default function ObesityWeightLossPage() {
                   <p className="text-sm text-gray-600">
                     Your body also increases hunger hormones (ghrelin by 20-30%), decreases satiety hormones (leptin, peptide YY),
                     increases efficiency of food absorption, decreases non-exercise activity (unconsciously moving less), and lowers
-                    thyroid hormones slightly. These adaptations persist for YEARS after weight loss, which is why maintenance requires
+                    <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> hormones slightly. These adaptations persist for YEARS after weight loss, which is why maintenance requires
                     continued vigilance and why regain is so common. Building and preserving muscle through strength training and adequate
                     protein helps combat these metabolic declines.
                   </p>
@@ -277,11 +277,11 @@ export default function ObesityWeightLossPage() {
                   <p className="text-gray-700 mb-3">
                     Obesity causes significant hormonal disruptions that make weight loss harder. Insulin resistance (prediabetes/diabetes)
                     is present in 50-70% of obese individuals, causing high insulin levels that promote fat storage and block fat burning.
-                    Low testosterone in men (due to excess estrogen from fat tissue) reduces muscle mass and metabolism. PCOS in women
+                    Low testosterone in men (due to excess estrogen from fat tissue) reduces muscle mass and metabolism. <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> in women
                     (worsened by obesity) causes hormonal chaos and weight gain resistance.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Additionally, obesity often coexists with thyroid problems (hypothyroidism), sleep apnea (disrupting hormones and
+                    Additionally, obesity often coexists with thyroid problems (<Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link>), sleep apnea (disrupting hormones and
                     increasing cortisol), chronic inflammation (elevating cytokines that interfere with metabolism), and vitamin D
                     deficiency (stored in fat tissue, less bioavailable). These medical issues must be diagnosed and treated alongside
                     weight loss efforts. Working with healthcare provider (endocrinologist, physician) to optimize these conditions

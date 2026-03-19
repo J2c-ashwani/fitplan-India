@@ -100,7 +100,7 @@ export default function ObesityWorkoutPage() {
               How Can I Exercise If Standard Workouts Hurt My Joints?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> You must shift from high-impact activities to zero-impact "supported" exercises. Water aerobics, swimming, recumbent bikes, and seated chair routines strengthen your heart and muscles while completely removing gravity's stress on your knees and lower back. Even 15 minutes of zero-impact movement daily bridges the gap between inactivity and sustainable weight loss.
+              <strong>The Short Answer:</strong> You must shift from high-impact activities to zero-impact "supported" exercises. Water aerobics, swimming, recumbent bikes, and seated chair routines strengthen your heart and muscles while completely removing gravity's stress on your knees and lower back. Even 15 minutes of zero-impact movement daily bridges the gap between inactivity and sustainable <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-700 hover:bg-gray-100 font-semibold" asChild>

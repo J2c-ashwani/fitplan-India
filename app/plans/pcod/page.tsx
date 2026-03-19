@@ -100,7 +100,7 @@ export default function PCODDietPage() {
               What is the Best Indian Diet for PCOD Weight Loss?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-purple-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg">
-              <strong>The Short Answer:</strong> The best Indian diet for PCOD weight loss focuses on low Glycemic Index (GI) complex carbohydrates (like millets and dal), high protein at every meal (paneer, lentils, eggs), and healthy fats (ghee, walnuts, flaxseeds) while strictly eliminating refined sugars, maida, and processed seed oils to reverse insulin resistance.
+              <strong>The Short Answer:</strong> The best Indian diet for PCOD <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> focuses on low Glycemic Index (GI) complex carbohydrates (like millets and dal), high protein at every meal (paneer, lentils, eggs), and healthy fats (ghee, walnuts, flaxseeds) while strictly eliminating refined sugars, maida, and processed seed oils to reverse <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 font-semibold" asChild>
@@ -186,7 +186,7 @@ export default function PCODDietPage() {
               What is the Fastest Way to Lose Belly Fat with PCOD?
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              PCOD specifically causes fat to accumulate around the abdomen (the "PCOS Belly") due to insulin resistance. Extreme low-calorie diets will fail because they don't fix the hormonal trigger.
+              PCOD specifically causes fat to accumulate around the abdomen (the "<Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> Belly") due to insulin resistance. Extreme low-calorie diets will fail because they don't fix the hormonal trigger.
             </p>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-green-50 p-6 rounded-lg">

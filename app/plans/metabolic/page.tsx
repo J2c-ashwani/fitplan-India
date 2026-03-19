@@ -143,7 +143,7 @@ export default function MetabolicWeightLossPage() {
                 daily calorie burn, with physical activity adding another 20-30%, and the thermic effect of food (calories burned digesting)
                 adding 10%. Average BMR is approximately 1,200-1,800 calories daily for women and 1,600-2,400 for men depending on age, weight,
                 height, and muscle mass. Many people experience "slow metabolism" where they burn significantly fewer calories than expected
-                for their body size, making weight loss extremely difficult despite eating very little. Common symptoms of slow metabolism
+                for their body size, making <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> extremely difficult despite eating very little. Common symptoms of slow metabolism
                 include inability to lose weight despite strict dieting (eating 1,200-1,400 calories but no weight loss), constant fatigue and
                 low energy, always feeling cold (especially hands and feet), constipation and digestive issues, dry skin and hair loss, difficulty
                 building muscle, and rapid weight regain after any diet.
@@ -153,7 +153,7 @@ export default function MetabolicWeightLossPage() {
                 The hard truth is that <strong>years of yo-yo dieting, extreme calorie restriction, and crash diets DAMAGE your metabolism</strong>
                 through a process called "metabolic adaptation" or "adaptive thermogenesis." When you drastically cut calories (eating 1,000-1,200
                 calories for extended periods), your body perceives starvation and responds by lowering metabolic rate by 15-30% to conserve energy.
-                This happens through: decreased thyroid hormone production (T3 converts to inactive reverse T3 instead), reduced NEAT (non-exercise
+                This happens through: decreased <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> hormone production (T3 converts to inactive reverse T3 instead), reduced NEAT (non-exercise
                 activity thermogenesis - you unconsciously move less, fidget less, burn 200-400 fewer calories daily), muscle loss (muscle burns
                 50-100 calories per pound daily at rest - losing muscle crashes metabolism), decreased leptin (satiety hormone) making you constantly
                 hungry, increased cortisol (stress hormone) promoting fat storage especially belly fat, and mitochondrial dysfunction (cellular energy
@@ -263,7 +263,7 @@ export default function MetabolicWeightLossPage() {
                 <CardHeader className="bg-yellow-50">
                   <CardTitle className="text-yellow-800 flex items-center">
                     <Zap className="w-6 h-6 mr-3" />
-                    3. Thyroid Dysfunction (Hypothyroidism)
+                    3. Thyroid Dysfunction (<Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">Hypothyroidism</Link>)
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="pt-6">

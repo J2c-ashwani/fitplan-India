@@ -127,7 +127,7 @@ export default function VegetarianDietPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold text-emerald-600 mb-2">1,500-1,800</div>
-                <div className="text-gray-600">Calories (Weight Loss)</div>
+                <div className="text-gray-600">Calories (<Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">Weight Loss</Link>)</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-green-600 mb-2">Balanced</div>
@@ -169,7 +169,7 @@ export default function VegetarianDietPage() {
                   <ul className="text-gray-700 space-y-2">
                     <li>• <strong>Heart health:</strong> 20-30% lower heart disease risk, lower cholesterol, blood pressure</li>
                     <li>• <strong>Weight management:</strong> Vegetarians typically 5-10 lbs lighter, easier weight control</li>
-                    <li>• <strong>Diabetes prevention:</strong> 50% lower type 2 diabetes risk with plant-based diet</li>
+                    <li>• <strong><Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">Diabetes</Link> prevention:</strong> 50% lower type 2 diabetes risk with plant-based diet</li>
                     <li>• <strong>Cancer protection:</strong> 15-20% lower overall cancer risk, especially colorectal</li>
                     <li>• <strong>Digestive health:</strong> Higher fiber (2-3x more) improves gut health, regularity</li>
                     <li>• <strong>Longevity:</strong> Vegetarians live 3-6 years longer on average</li>

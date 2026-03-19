@@ -144,7 +144,7 @@ export default function IntermittentFastingWorkoutPage() {
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">How Does Fasting Change the Way You Burn Calories?</h2>
               <p className="text-lg text-gray-700 mb-6">
-                When you work out during intermittent fasting significantly impacts results. Fasted training (during
+                When you work out during <Link href="/plans/intermittent-fasting" className="text-emerald-700 font-semibold hover:underline">intermittent fasting</Link> significantly impacts results. Fasted training (during
                 fasting window) maximizes fat burning and promotes autophagy, while fed state training (during eating
                 window) optimizes performance and muscle building. Both approaches have benefits - the key is understanding
                 when to use each. Fasted cardio can burn up to 20% more fat, while fed state strength training allows

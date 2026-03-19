@@ -94,7 +94,7 @@ export default function HypothyroidismDietPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              🦋 Thyroid Management Answer Engine
+              🦋 <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">Thyroid</Link> Management Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
               What is the Best Diet to Lose Weight with Hypothyroidism?
@@ -125,7 +125,7 @@ export default function HypothyroidismDietPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold text-cyan-600 mb-2">1-2 lbs/week</div>
-                <div className="text-gray-600">Weight Loss Rate</div>
+                <div className="text-gray-600"><Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">Weight Loss</Link> Rate</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal-600 mb-2">10-20 lbs</div>
@@ -431,7 +431,7 @@ export default function HypothyroidismDietPage() {
                         <li>• Breakfast cereals (most are high sugar)</li>
                         <li>• Fruit juices (even 100% pure)</li>
                         <li>• Processed snack foods</li>
-                        <li>• These spike blood sugar, worsen insulin resistance</li>
+                        <li>• These spike blood sugar, worsen <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link></li>
                       </ul>
                     </div>
                   </div>

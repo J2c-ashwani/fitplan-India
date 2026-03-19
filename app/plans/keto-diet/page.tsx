@@ -155,7 +155,7 @@ export default function KetoIndianDietPage() {
                 In ketosis, the liver converts fat into ketone bodies (acetoacetate, beta-hydroxybutyrate, acetone) which become the brain and
                 body's primary fuel source instead of glucose. This metabolic shift promotes rapid fat burning (0.5-1 kg weekly), dramatic
                 appetite suppression (ketones are natural appetite suppressants), stable energy without blood sugar crashes, improved mental
-                clarity and focus, and significant weight loss especially from stubborn belly fat.
+                clarity and focus, and significant <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> especially from stubborn belly fat.
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
@@ -178,8 +178,8 @@ export default function KetoIndianDietPage() {
                     <li>• <strong>Appetite suppression:</strong> Feel full for 4-6 hours, no constant hunger</li>
                     <li>• <strong>Stable energy:</strong> No blood sugar crashes, consistent energy all day</li>
                     <li>• <strong>Mental clarity:</strong> Improved focus, concentration, no brain fog</li>
-                    <li>• <strong>Diabetes control:</strong> Dramatically lower blood sugar and insulin</li>
-                    <li>• <strong>PCOS improvement:</strong> Reduces insulin resistance, balances hormones</li>
+                    <li>• <strong><Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">Diabetes</Link> control:</strong> Dramatically lower blood sugar and insulin</li>
+                    <li>• <strong><Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> improvement:</strong> Reduces insulin resistance, balances hormones</li>
                     <li>• <strong>Reduced inflammation:</strong> Less joint pain, clearer skin</li>
                     <li>• <strong>Heart health:</strong> Increases HDL (good cholesterol), lowers triglycerides</li>
                   </ul>

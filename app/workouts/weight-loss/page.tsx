@@ -94,7 +94,7 @@ export default function WeightLossWorkoutPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              🔥 Weight Loss Answer Engine
+              🔥 <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">Weight Loss</Link> Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               What is the actually the Best Workout Routine for Weight Loss?

@@ -149,7 +149,7 @@ export default function TeenagersWeightManagementPage() {
 
               <p className="text-lg text-gray-700 mb-6">
                 The critical truth about teenage weight management is that this is NOT the time for restrictive diets, calorie counting,
-                or extreme weight loss approaches. Adolescents have HIGHER calorie and nutrient needs than adults due to rapid growth and
+                or extreme <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> approaches. Adolescents have HIGHER calorie and nutrient needs than adults due to rapid growth and
                 development, and inadequate nutrition during this critical window can permanently impair growth (stunted height), delay
                 puberty, reduce bone density (increasing osteoporosis risk later), cause hormonal imbalances (irregular periods in girls,
                 delayed development in boys), impair brain development and academic performance, trigger or worsen eating disorders
@@ -174,7 +174,7 @@ export default function TeenagersWeightManagementPage() {
                     <li>• <strong>Better mood:</strong> Stable energy prevents mood swings, irritability</li>
                     <li>• <strong>Strong bones:</strong> Peak bone mass built during teen years (prevents osteoporosis)</li>
                     <li>• <strong>Healthy weight:</strong> Natural weight regulation without dieting</li>
-                    <li>• <strong>Disease prevention:</strong> Reduced risk of type 2 diabetes, heart disease</li>
+                    <li>• <strong>Disease prevention:</strong> Reduced risk of type 2 <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link>, heart disease</li>
                   </ul>
                 </div>
 

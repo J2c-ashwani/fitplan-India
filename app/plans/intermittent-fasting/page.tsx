@@ -155,7 +155,7 @@ export default function IntermittentFastingPage() {
                 The most popular IF method is 16:8 (fast 16 hours, eat within 8-hour window), followed by 18:6 (fast 18 hours, eat within
                 6 hours), 20:4 or OMAD "One Meal A Day" (fast 20 hours, eat within 4 hours), 5:2 diet (eat normally 5 days, restrict to
                 500-600 calories 2 non-consecutive days), and alternate day fasting (fast every other day). Approximately 15-20% of adults
-                in USA, UK, and worldwide practice some form of intermittent fasting for weight loss, health benefits, or religious reasons.
+                in USA, UK, and worldwide practice some form of intermittent fasting for <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>, health benefits, or religious reasons.
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
@@ -164,7 +164,7 @@ export default function IntermittentFastingPage() {
                 process called "metabolic switching" or entering "fat-burning mode." This metabolic shift triggers numerous beneficial processes:
                 <strong> enhanced fat oxidation</strong> (burning 0.5-1 kg fat weekly without calorie counting), increased human growth hormone
                 (HGH) secretion by 300-1,200% which preserves muscle while burning fat, improved insulin sensitivity and lower insulin levels
-                (reducing diabetes risk), activation of autophagy (cellular "cleanup" process removing damaged proteins and organelles - anti-aging
+                (reducing <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link> risk), activation of autophagy (cellular "cleanup" process removing damaged proteins and organelles - <Link href="/plans/anti-aging" className="text-emerald-700 font-semibold hover:underline">anti-aging</Link>
                 effect), increased production of brain-derived neurotrophic factor (BDNF) improving cognitive function and mood, reduction in
                 inflammation markers and oxidative stress, and improved cardiovascular health markers (blood pressure, cholesterol, triglycerides).
                 This comprehensive intermittent fasting plan provides step-by-step guidance for choosing the right fasting schedule, optimizing

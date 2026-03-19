@@ -94,13 +94,13 @@ export default function PCOSWorkoutPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              💪 PCOS Answer Engine
+              💪 <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               What is the Best Workout for PCOS Weight Loss?
             </h1>
             <p className="text-xl text-purple-100 mb-8 border-l-4 border-purple-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg">
-              <strong>The Short Answer:</strong> The best workout for PCOS combines <strong>progressive strength training</strong> (to build muscle and reverse insulin resistance) with <strong>LISS (Low-Intensity Steady State cardio like walking)</strong> and <strong>Yoga</strong> (to lower cortisol and stress). Avoid excessive high-intensity cardio (HIIT) which can worsen hormonal imbalances.
+              <strong>The Short Answer:</strong> The best workout for PCOS combines <strong>progressive strength training</strong> (to build muscle and reverse <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>) with <strong>LISS (Low-Intensity Steady State cardio like walking)</strong> and <strong>Yoga</strong> (to lower cortisol and stress). Avoid excessive high-intensity cardio (HIIT) which can worsen hormonal imbalances.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-purple-700 hover:bg-gray-100 font-semibold" asChild>

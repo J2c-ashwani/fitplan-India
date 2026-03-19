@@ -142,7 +142,7 @@ export default function SeniorCitizensDietPage() {
                 and disease risk. After age 60, adults experience gradual decrease in metabolic rate (3-5% per decade), progressive loss
                 of muscle mass (sarcopenia - 3-8% per decade after age 30, accelerating after 60), decreased bone density (especially in
                 postmenopausal women), reduced appetite and sense of taste/smell, decreased stomach acid affecting nutrient absorption,
-                increased risk of chronic diseases (heart disease, type 2 diabetes, osteoporosis, arthritis, dementia), and changes in
+                increased risk of chronic diseases (heart disease, type 2 <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link>, osteoporosis, arthritis, dementia), and changes in
                 medication affecting nutrient needs and interactions. Approximately 35% of adults over 65 in USA, UK, Canada, and Australia
                 are considered obese, while simultaneously 10-20% suffer from malnutrition due to inadequate protein, vitamin, and mineral
                 intake despite excess calories.
@@ -241,7 +241,7 @@ export default function SeniorCitizensDietPage() {
                     (50% decline by age 70), medications causing appetite loss or nausea (blood pressure meds, antibiotics, antidepressants),
                     dental problems making chewing difficult/painful, living alone reducing motivation to cook/eat, depression reducing interest
                     in food, and gastrointestinal issues (acid reflux, constipation). This leads to inadequate calorie and protein intake,
-                    unintentional weight loss, and clinical malnutrition in 10-20% of community-dwelling seniors.
+                    unintentional <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>, and clinical malnutrition in 10-20% of community-dwelling seniors.
                   </p>
                   <p className="text-sm text-gray-600">
                     <strong>Solutions:</strong> Eat smaller, more frequent meals (5-6 times daily) instead of 3 large meals. Choose
@@ -425,7 +425,7 @@ export default function SeniorCitizensDietPage() {
                         <li>• <strong>Blood pressure meds:</strong> Avoid excess potassium, grapefruit juice</li>
                         <li>• <strong>Statins:</strong> Avoid grapefruit juice (increases side effects)</li>
                         <li>• <strong>Antibiotics:</strong> Some interact with dairy, calcium supplements</li>
-                        <li>• <strong>Thyroid medication:</strong> Take on empty stomach, avoid calcium/iron 4 hours</li>
+                        <li>• <strong><Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">Thyroid</Link> medication:</strong> Take on empty stomach, avoid calcium/iron 4 hours</li>
                         <li>• Always discuss food interactions with doctor/pharmacist</li>
                       </ul>
                     </div>

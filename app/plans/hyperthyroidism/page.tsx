@@ -94,7 +94,7 @@ export default function HyperthyroidismDietPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              🔥 Thyroid Management Answer Engine
+              🔥 <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">Thyroid</Link> Management Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
               What is the Best Diet to Stop Weight Loss from Hyperthyroidism?
@@ -143,7 +143,7 @@ export default function HyperthyroidismDietPage() {
                 Hyperthyroidism (overactive thyroid) affects approximately 1-3% of the population in USA, UK, Canada, Australia,
                 and Europe, with women being 5-10 times more likely to develop it than men. It occurs when the thyroid gland produces
                 excessive thyroid hormones (T3 and T4), causing metabolism to speed up dramatically. This leads to rapid unintentional
-                weight loss (5-20 pounds in weeks/months despite eating normally or more), extreme hunger but inability to gain weight,
+                <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> (5-20 pounds in weeks/months despite eating normally or more), extreme hunger but inability to gain weight,
                 rapid heartbeat and heart palpitations, excessive sweating and heat intolerance, anxiety, nervousness, and irritability,
                 hand tremors and muscle weakness, difficulty sleeping (insomnia), frequent bowel movements or diarrhea, and fatigue
                 despite feeling "wired". Graves' disease is the most common cause (autoimmune condition stimulating thyroid overproduction),
@@ -440,7 +440,7 @@ export default function HyperthyroidismDietPage() {
                       Goitrogenic Foods May Actually HELP Hyperthyroidism
                     </h4>
                     <p className="text-sm text-gray-700">
-                      Unlike hypothyroidism where goitrogenic foods should be limited, with hyperthyroidism certain goitrogenic foods
+                      Unlike <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> where goitrogenic foods should be limited, with hyperthyroidism certain goitrogenic foods
                       (cruciferous vegetables like broccoli, cauliflower, cabbage, kale when consumed raw) may actually help by slightly
                       reducing thyroid hormone production. However, cook them if consuming large amounts, and always follow your doctor's
                       specific dietary recommendations as individual responses vary.

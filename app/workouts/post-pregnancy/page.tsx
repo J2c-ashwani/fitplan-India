@@ -148,7 +148,7 @@ export default function PostPregnancyWorkoutPage() {
                 your body has undergone significant changes and needs time to heal before resuming activity. Starting with
                 gentle movements, progressing to core rehabilitation, and eventually returning to regular exercise helps
                 restore strength, heal diastasis recti, strengthen pelvic floor muscles, improve mood, boost energy, and
-                support healthy weight loss. Always get medical clearance before starting any postpartum exercise program.
+                support healthy <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>. Always get medical clearance before starting any postpartum exercise program.
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">

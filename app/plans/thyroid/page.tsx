@@ -99,7 +99,7 @@ export default function ThyroidDietPage() {
               What is the Best Indian Diet for Thyroid Constraints?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-teal-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg">
-              <strong>The Short Answer:</strong> First, you must know your type. If you have <strong>Hypothyroidism (weight gain, low energy)</strong>, the best diet focuses on Selenium (Brazil nuts), Iodine (iodized salt), protein, and strict medication timing. If you have <strong>Hyperthyroidism (weight loss, anxiety)</strong>, you need a high-calorie diet and must avoid excess iodine (no seaweed/kelp). In both cases, Indian goitrogens (cabbage, cauliflower) are safe <em>only</em> if fully cooked.
+              <strong>The Short Answer:</strong> First, you must know your type. If you have <strong><Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">Hypothyroidism</Link> (weight gain, low energy)</strong>, the best diet focuses on Selenium (Brazil nuts), Iodine (iodized salt), protein, and strict medication timing. If you have <strong><Link href="/plans/hyperthyroidism" className="text-emerald-700 font-semibold hover:underline">Hyperthyroidism</Link> (<Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>, anxiety)</strong>, you need a high-calorie diet and must avoid excess iodine (no seaweed/kelp). In both cases, Indian goitrogens (cabbage, cauliflower) are safe <em>only</em> if fully cooked.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-teal-700 hover:bg-gray-100 font-semibold" asChild>

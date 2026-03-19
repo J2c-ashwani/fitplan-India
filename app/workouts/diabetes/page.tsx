@@ -94,7 +94,7 @@ export default function DiabetesWorkoutPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              🩺 Diabetes Control Answer Engine
+              🩺 <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">Diabetes</Link> Control Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
               What Are the Best Exercises to Lower Blood Sugar Fast?
@@ -158,7 +158,7 @@ export default function DiabetesWorkoutPage() {
                     <li>• Improves insulin sensitivity by 30-50%</li>
                     <li>• Reduces HbA1c by 0.5-1% over 3 months</li>
                     <li>• Decreases cardiovascular disease risk</li>
-                    <li>• Supports healthy weight loss and maintenance</li>
+                    <li>• Supports healthy <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> and maintenance</li>
                     <li>• Improves mood and reduces stress</li>
                   </ul>
                 </div>

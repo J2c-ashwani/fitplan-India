@@ -147,7 +147,7 @@ export default function SeniorCitizenWorkoutPage() {
               <p className="text-lg text-gray-700 mb-6">
                 Regular exercise is one of the most important things seniors can do for health and independence. Physical
                 activity prevents muscle loss (sarcopenia), maintains bone density, improves balance and coordination to
-                prevent falls, enhances cardiovascular health, manages chronic conditions like diabetes and arthritis,
+                prevent falls, enhances cardiovascular health, manages chronic conditions like <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link> and arthritis,
                 boosts mood and cognitive function, and significantly improves quality of life. It's never too late to start -
                 even 10-15 minutes daily makes a meaningful difference.
               </p>

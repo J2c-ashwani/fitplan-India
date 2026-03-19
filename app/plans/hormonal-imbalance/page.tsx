@@ -98,7 +98,7 @@ export default function HormonalImbalancePage() {
               What is the Best Diet for Hormonal Imbalance and Weight Gain?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-violet-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> True hormonal balance requires stabilizing blood sugar to drop insulin spikes (which cause PCOS/testosterone issues) and boosting liver detox to clear excess estrogen. A successful hormone diet removes refined carbs, loads up on cruciferous vegetables (broccoli/cauliflower) to clear estrogen, and includes a minimum of 35g of fiber daily.
+              <strong>The Short Answer:</strong> True hormonal balance requires stabilizing blood sugar to drop insulin spikes (which cause <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link>/testosterone issues) and boosting liver detox to clear excess estrogen. A successful hormone diet removes refined carbs, loads up on cruciferous vegetables (broccoli/cauliflower) to clear estrogen, and includes a minimum of 35g of fiber daily.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-violet-600 hover:bg-gray-100 font-semibold" asChild>
@@ -139,21 +139,21 @@ export default function HormonalImbalancePage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why is it So Hard to Lose Weight with a Hormonal Imbalance?</h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Hormonal imbalance occurs when your body produces too much or too little of key hormones (insulin, estrogen, progesterone,
-                testosterone, thyroid hormones, cortisol, leptin) that regulate metabolism, appetite, fat storage, and body composition.
+                testosterone, <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> hormones, cortisol, leptin) that regulate metabolism, appetite, fat storage, and body composition.
                 Approximately 30-40% of women experience hormonal imbalances at some point in their lives, with symptoms including unexplained
                 weight gain (especially belly fat), inability to lose weight despite diet and exercise, irregular or missing periods, severe
                 PMS, acne and skin issues, thinning hair or hair loss, constant fatigue and low energy, mood swings and depression, insomnia
                 and sleep disturbances, sugar cravings and increased appetite, and brain fog and difficulty concentrating. The most common
-                hormonal conditions affecting women are PCOS (Polycystic Ovary Syndrome - 8-13% of reproductive-age women), hypothyroidism
+                hormonal conditions affecting women are PCOS (Polycystic Ovary Syndrome - 8-13% of reproductive-age women), <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link>
                 (underactive thyroid - 5-10% of women), estrogen dominance (excess estrogen relative to progesterone), menopause and
-                perimenopause (hormonal fluctuations ages 45-55), insulin resistance (prediabetes affecting 30-40% of overweight women),
+                perimenopause (hormonal fluctuations ages 45-55), <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link> (prediabetes affecting 30-40% of overweight women),
                 and chronic stress elevating cortisol continuously.
               </p>
 
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 The critical truth about hormonal weight gain is that <strong>traditional calorie restriction and excessive exercise often
                   WORSEN hormonal imbalances</strong> rather than fixing them. Extreme dieting and overtraining increase cortisol (stress hormone),
-                suppress thyroid function, disrupt menstrual cycles, and create further metabolic dysfunction. Instead, hormonal weight loss
+                suppress thyroid function, disrupt menstrual cycles, and create further metabolic dysfunction. Instead, hormonal <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>
                 requires a holistic approach addressing the ROOT CAUSE through strategic nutrition that balances blood sugar and insulin (low
                 glycemic, high fiber diet prevents insulin spikes), supports liver detoxification to eliminate excess hormones (cruciferous
                 vegetables, fiber, adequate water), reduces inflammation (omega-3 fats, antioxidants, eliminate processed foods), provides

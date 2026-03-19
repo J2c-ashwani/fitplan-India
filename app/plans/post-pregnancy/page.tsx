@@ -98,7 +98,7 @@ export default function PostPregnancyWeightLossPage() {
               How Can I Lose Baby Weight Safely While Breastfeeding?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> Postpartum weight loss requires patience and shouldn't begin until 6-8 weeks after birth. If breastfeeding, you need an extra 300-500 calories daily; restricting calories too severely will tank your milk supply. Focus instead on nutrient-dense recovery foods—like oats, salmon, and iron-rich proteins—which naturally support milk production while gradually burning off the remaining baby weight.
+              <strong>The Short Answer:</strong> Postpartum <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> requires patience and shouldn't begin until 6-8 weeks after birth. If breastfeeding, you need an extra 300-500 calories daily; restricting calories too severely will tank your milk supply. Focus instead on nutrient-dense recovery foods—like oats, salmon, and iron-rich proteins—which naturally support milk production while gradually burning off the remaining baby weight.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -172,7 +172,7 @@ export default function PostPregnancyWeightLossPage() {
                     <li>• <strong>Better milk production:</strong> Adequate calories/nutrients = sufficient milk supply</li>
                     <li>• <strong>Hormone balance:</strong> Gradual weight loss doesn't disrupt hormones</li>
                     <li>• <strong>Self-confidence:</strong> Feeling stronger and healthier boosts mood</li>
-                    <li>• <strong>Disease prevention:</strong> Losing excess pregnancy weight reduces diabetes, heart disease risk</li>
+                    <li>• <strong>Disease prevention:</strong> Losing excess pregnancy weight reduces <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link>, heart disease risk</li>
                     <li>• <strong>Healthy future pregnancies:</strong> Returning to healthy weight before next pregnancy</li>
                   </ul>
                 </div>
@@ -239,12 +239,12 @@ export default function PostPregnancyWeightLossPage() {
                   <p className="text-gray-700 mb-3">
                     After delivery, your body experiences dramatic hormonal shifts more extreme than puberty or menopause. Estrogen and
                     progesterone plummet within hours, prolactin surges (for milk production), oxytocin increases (for bonding and milk
-                    letdown), cortisol remains elevated (from stress and sleep deprivation), thyroid hormones fluctuate (postpartum thyroiditis
+                    letdown), cortisol remains elevated (from stress and sleep deprivation), <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> hormones fluctuate (postpartum thyroiditis
                     affects 5-10% of women), and insulin sensitivity changes. These hormonal fluctuations take 6-12 months to stabilize.
                   </p>
                   <p className="text-sm text-gray-600">
                     High cortisol from chronic sleep deprivation, stress, and frequent night wakings promotes belly fat storage, increases
-                    sugar cravings, and interferes with weight loss. Thyroid dysfunction (hyperthyroidism followed by hypothyroidism in
+                    sugar cravings, and interferes with weight loss. Thyroid dysfunction (<Link href="/plans/hyperthyroidism" className="text-emerald-700 font-semibold hover:underline">hyperthyroidism</Link> followed by <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> in
                     postpartum thyroiditis) causes weight fluctuations, fatigue, and mood changes. Rushing weight loss with extreme dieting
                     further disrupts these delicate hormones, potentially worsening postpartum depression, anxiety, and recovery. The solution
                     is gentle, gradual weight loss that supports hormone rebalancing naturally.

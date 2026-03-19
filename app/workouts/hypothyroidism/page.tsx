@@ -89,13 +89,13 @@ export default function HypothyroidismWorkoutPage() {
           <Breadcrumbs items={breadcrumbItems} />
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-4 bg-white/20 text-white border-white/30">
-              💪 Thyroid Metabolism Answer Engine
+              💪 <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">Thyroid</Link> Metabolism Answer Engine
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white text-shadow-sm font-serif">
               What is the Best Workout to Boost a Slow Metabolism?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-blue-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> To combat the 20-40% metabolic slowdown caused by hypothyroidism, strength training is non-negotiable. Building muscle increases your resting metabolic rate 24/7. When combined with moderate, daily cardio to burn active calories without spiking stress hormones, exercise can dramatically accelerate fat loss, improve T3 conversion, and restore your energy levels within 2-4 weeks.
+              <strong>The Short Answer:</strong> To combat the 20-40% metabolic slowdown caused by <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link>, strength training is non-negotiable. Building muscle increases your resting metabolic rate 24/7. When combined with moderate, daily cardio to burn active calories without spiking stress hormones, exercise can dramatically accelerate fat loss, improve T3 conversion, and restore your energy levels within 2-4 weeks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold" asChild>
@@ -117,7 +117,7 @@ export default function HypothyroidismWorkoutPage() {
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is absolutely essential for hypothyroidism weight loss because it directly combats the metabolic slowdown
+                Exercise is absolutely essential for hypothyroidism <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> because it directly combats the metabolic slowdown
                 caused by low thyroid hormones. While diet alone can help, combining proper nutrition with the RIGHT type of exercise
                 accelerates fat loss by 40-60% and dramatically improves energy, mood, and quality of life for thyroid patients.
               </p>
