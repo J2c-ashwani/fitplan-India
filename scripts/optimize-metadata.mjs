@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const appDir = '/Users/ashwanikumar/Downloads/fitplan-india/app';
-const targetDirs = [path.join(appDir, 'plans'), path.join(appDir, 'workouts')];
+const targetDirs = [path.join(appDir, 'plans'), path.join(appDir, 'workouts'), path.join(appDir, 'ayurveda')];
 
 const powerWords = [
     "[Free 7-Day Plan]",

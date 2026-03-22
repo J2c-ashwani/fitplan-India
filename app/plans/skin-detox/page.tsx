@@ -99,7 +99,7 @@ export default function SkinDetoxDietPage() {
                             What is the Best Diet for Glowing, Acne-Free Skin?
                         </h1>
                         <p className="text-xl text-white mb-8 border-l-4 border-rose-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                            <strong>The Short Answer:</strong> Clear skin starts from within by purifying your blood (Rakta Shodhana). To eliminate acne and achieve a natural glow, you must eliminate inflammatory triggers like refined sugar and dairy, while vastly increasing your intake of water, antioxidants (berries, greens), and Ayurvedic blood purifiers like Neem and Turmeric to flush out toxins.
+                            <strong>The Short Answer:</strong> Clear skin starts from within by purifying your blood (Rakta Shodhana). To eliminate acne and achieve a natural glow, you must eliminate inflammatory triggers like refined sugar and dairy, while vastly increasing your intake of water, antioxidants (berries, greens), and <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> blood purifiers like Neem and Turmeric to flush out toxins.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-white text-rose-900 hover:bg-stone-100 font-semibold" asChild>
@@ -126,7 +126,7 @@ export default function SkinDetoxDietPage() {
                                 <div className="bg-white p-6 rounded-lg shadow-sm border border-stone-100">
                                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 text-red-600 font-bold text-xl"><Sun className="w-6 h-6" /></div>
                                     <h3 className="font-bold text-stone-800 mb-2">Internal Heat</h3>
-                                    <p className="text-sm text-stone-600">Excess Pitta (Heat) in the blood seeks an exit through the skin as acne/rashes.</p>
+                                    <p className="text-sm text-stone-600">Excess <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link> (Heat) in the blood seeks an exit through the skin as acne/rashes.</p>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg shadow-sm border border-stone-100">
                                     <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3 text-yellow-600 font-bold text-xl"><AlertCircle className="w-6 h-6" /></div>

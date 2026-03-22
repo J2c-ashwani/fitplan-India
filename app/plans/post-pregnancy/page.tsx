@@ -123,7 +123,7 @@ export default function PostPregnancyWeightLossPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold text-rose-600 mb-2">1 lb/week</div>
-                <div className="text-gray-600">Safe Weight Loss</div>
+                <div className="text-gray-600">Safe <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">Weight Loss</Link></div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-red-600 mb-2">25-35 lbs</div>
@@ -244,7 +244,7 @@ export default function PostPregnancyWeightLossPage() {
                   </p>
                   <p className="text-sm text-gray-600">
                     High cortisol from chronic sleep deprivation, stress, and frequent night wakings promotes belly fat storage, increases
-                    sugar cravings, and interferes with weight loss. Thyroid dysfunction (<Link href="/plans/hyperthyroidism" className="text-emerald-700 font-semibold hover:underline">hyperthyroidism</Link> followed by <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> in
+                    sugar cravings, and interferes with weight loss. <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">Thyroid</Link> dysfunction (<Link href="/plans/hyperthyroidism" className="text-emerald-700 font-semibold hover:underline">hyperthyroidism</Link> followed by <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> in
                     postpartum thyroiditis) causes weight fluctuations, fatigue, and mood changes. Rushing weight loss with extreme dieting
                     further disrupts these delicate hormones, potentially worsening postpartum depression, anxiety, and recovery. The solution
                     is gentle, gradual weight loss that supports hormone rebalancing naturally.

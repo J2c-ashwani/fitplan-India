@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/liver-care",
   },
-    title: "Ayurvedic Liver Detox: Complete Yakrit Care Guide | FitPlan India",
+    title: "Ayurvedic Liver Detox: Complete Yakrit Care Guide 2025",
     description: "Natural remedies for Fatty Liver and Jaundice. Learn about Kutki, Bhumi Amla, and the 7-Day Ayurvedic Liver Cleanse diet.",
     keywords: ["Ayurveda for fatty liver", "Liver detox home remedies", "Kutki benefits", "Bhumi amla for liver", "Yakrit roga treatment"],
 }
@@ -47,7 +47,7 @@ export default function LiverPage() {
                         What Is the Fastest Ayurvedic Way to Detox a Fatty Liver (Yakrit)?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> The liver (Yakrit) is the fiery engine of your body. When overloaded with alcohol or fried foods, it overheats (High Pitta), causing extreme fatigue, dark urine, and chronic anger. To reverse early-stage fatty liver and flush out stagnant bile, take 'Kutki' or 'Bhumi Amla' daily, follow a 7-day bitter food diet of Karela (bitter gourd), and strictly eliminate all alcohol and refined sugars.
+                        <strong>The Short Answer:</strong> The liver (Yakrit) is the fiery engine of your body. When overloaded with alcohol or fried foods, it overheats (High <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link>), causing extreme fatigue, dark urine, and chronic anger. To reverse early-stage fatty liver and flush out stagnant bile, take 'Kutki' or 'Bhumi Amla' daily, follow a 7-day bitter food diet of Karela (bitter gourd), and strictly eliminate all alcohol and refined sugars.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -61,7 +61,7 @@ export default function LiverPage() {
                         <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Does a Sluggish, Overheated Liver Make You Feel So Absoutely Exhausted All the Time?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                The liver handles 500+ functions. When overloaded with alcohol, fried foods, or pharmaceutical drugs, it becomes sluggish. In Ayurveda, this is often a <strong>High Pitta</strong> condition.
+                                The liver handles 500+ functions. When overloaded with alcohol, fried foods, or pharmaceutical drugs, it becomes sluggish. In <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>, this is often a <strong>High Pitta</strong> condition.
                             </p>
                             <div className="mt-6 bg-red-50 p-6 rounded-xl border border-red-100">
                                 <h4 className="font-bold text-red-900 mb-2">Signs of a Sluggish Liver:</h4>

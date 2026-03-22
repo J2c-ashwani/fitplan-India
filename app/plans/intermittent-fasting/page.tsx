@@ -175,11 +175,11 @@ export default function IntermittentFastingPage() {
                 <div className="bg-indigo-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-indigo-800">Benefits of Intermittent Fasting</h3>
                   <ul className="text-gray-700 space-y-2">
-                    <li>• <strong>Effortless weight loss:</strong> 0.5-1 kg weekly without counting calories</li>
+                    <li>• <strong>Effortless <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>:</strong> 0.5-1 kg weekly without counting calories</li>
                     <li>• <strong>Fat burning mode:</strong> Body burns stored fat after 12-16 hours fasting</li>
                     <li>• <strong>Preserved muscle mass:</strong> High HGH prevents muscle loss during fat loss</li>
-                    <li>• <strong>Better insulin sensitivity:</strong> Reduces diabetes risk by 20-30%</li>
-                    <li>• <strong>Autophagy activation:</strong> Cellular cleanup and anti-aging benefits</li>
+                    <li>• <strong>Better insulin sensitivity:</strong> Reduces <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link> risk by 20-30%</li>
+                    <li>• <strong>Autophagy activation:</strong> Cellular cleanup and <Link href="/plans/anti-aging" className="text-emerald-700 font-semibold hover:underline">anti-aging</Link> benefits</li>
                     <li>• <strong>Mental clarity:</strong> Stable energy, no blood sugar crashes, improved focus</li>
                     <li>• <strong>Simplified eating:</strong> Fewer meals to plan, prep, and think about</li>
                     <li>• <strong>Longevity benefits:</strong> May increase lifespan through cellular repair</li>

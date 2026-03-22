@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/stress-anxiety",
   },
-    title: "Natural Herbs & Techniques for Stress & Anxiety | Ayurveda",
+    title: "Natural Herbs & Techniques for Stress & Anxiety | Ayurveda 2025",
     description: "Calm your mind with Ayurveda. Discover adaptogenic herbs like Ashwagandha and Brahmi, Pranayama techniques, and Satvavajaya therapy for mental peace.",
     keywords: ["Ayurveda for anxiety", "Brahmi benefits for brain", "Ashwagandha for stress relief", "Shirodhara therapy", "Pranayama for mental health", "Jatamansi benefits"],
 }
@@ -47,7 +47,7 @@ export default function StressPage() {
                         How Can You Naturally Cure Stress and Anxiety Using Ayurvedic Brain Tonics?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Anxiety (Chittodvega) is caused by excess erratic movement (Vata) and agitation (Rajas) in the mind. To quickly ground this nervous energy, you must 'lubricate' your dry nervous system with warm Ghee, drink Ashwagandha milk at night to lower cortisol, and practice Bhramari (Humming Bee breath) to instantly switch off your 'Fight or Flight' response.
+                        <strong>The Short Answer:</strong> Anxiety (Chittodvega) is caused by excess erratic movement (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Vata</Link>) and agitation (Rajas) in the mind. To quickly ground this nervous energy, you must 'lubricate' your dry nervous system with warm Ghee, drink Ashwagandha milk at night to lower cortisol, and practice Bhramari (Humming Bee breath) to instantly switch off your 'Fight or Flight' response.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -81,7 +81,7 @@ export default function StressPage() {
                                 </div>
                             </div>
                             <p className="mt-4">
-                                Ayurvedic therapy aims to increase one's Sattva to overcome Rajas and Tamas.
+                                <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> therapy aims to increase one's Sattva to overcome Rajas and Tamas.
                             </p>
                         </div>
                     </section>

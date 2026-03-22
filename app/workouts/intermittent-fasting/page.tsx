@@ -590,7 +590,7 @@ export default function IntermittentFastingWorkoutPage() {
               Complete Your IF Transformation
             </h2>
             <p className="text-xl text-white mb-8 leading-relaxed">
-              Exercise timing is crucial, but proper intermittent fasting nutrition is the foundation. Get your
+              Exercise timing is crucial, but proper <Link href="/plans/intermittent-fasting" className="text-emerald-700 font-semibold hover:underline">intermittent fasting</Link> nutrition is the foundation. Get your
               complete IF diet plan to maximize results.
             </p>
 

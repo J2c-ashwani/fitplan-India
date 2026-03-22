@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/heart-health",
   },
-    title: "Ayurvedic Heart Health: Arjuna & Cholesterol Management | FitPlan India",
+    title: "Ayurvedic Heart Health: Arjuna & Cholesterol Management 2025",
     description: "Strengthen your heart (Hridaya) with Ayurveda. Comprehensive guide to Arjuna Bark, Garlic therapy, and managing blood pressure naturally.",
     keywords: ["Arjuna for heart", "Ayurveda for cholesterol", "High blood pressure home remedies", "Hridaya roga treatment", "Garlic for heart health"],
 }
@@ -47,7 +47,7 @@ export default function HeartPage() {
                         How Can You Naturally Lower Cholesterol and Protect Your Heart with Ayurveda?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Heart disease (Hridaya Roga) occurs when sticky plaque (Kapha) blocks your arteries (Dhamani) while stress (Vata) hardens them. The most powerful Ayurvedic intervention is drinking Arjuna Bark tea (Ksheerapaka) nightly as a natural beta-blocker, swallowing raw garlic in the morning to actively scrape away LDL cholesterol, and never eating heavy meals after 7 PM.
+                        <strong>The Short Answer:</strong> Heart disease (Hridaya Roga) occurs when sticky plaque (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link>) blocks your arteries (Dhamani) while stress (Vata) hardens them. The most powerful <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> intervention is drinking Arjuna Bark tea (Ksheerapaka) nightly as a natural beta-blocker, swallowing raw garlic in the morning to actively scrape away LDL cholesterol, and never eating heavy meals after 7 PM.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -133,7 +133,7 @@ export default function HeartPage() {
                             </div>
                             <div>
                                 <h3 className="font-bold text-lg text-gray-900">3. Guggul</h3>
-                                <p className="text-gray-600">A resin known for its lipid-lowering activity. Often prescribed as <em>Medohar Guggulu</em> for weight loss and cholesterol control.</p>
+                                <p className="text-gray-600">A resin known for its lipid-lowering activity. Often prescribed as <em>Medohar Guggulu</em> for <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> and cholesterol control.</p>
                             </div>
                         </div>
                     </div>

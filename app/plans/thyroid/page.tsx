@@ -214,9 +214,9 @@ export default function ThyroidDietPage() {
                 </CardHeader>
                 <CardContent className="pt-4">
                   <ul className="space-y-3">
-                    <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" /> <strong>Avoid Iodine:</strong> Strictly avoid iodized salt, seaweed, kelp, and seafood. Excess iodine fuels an overactive thyroid. Use non-iodized rock salt (sendha namak).</li>
+                    <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" /> <strong>Avoid Iodine:</strong> Strictly avoid iodized salt, seaweed, kelp, and seafood. Excess iodine fuels an <Link href="/plans/hyperthyroidism" className="text-emerald-700 font-semibold hover:underline">overactive thyroid</Link>. Use non-iodized rock salt (sendha namak).</li>
                     <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" /> <strong>High Calcium:</strong> Hyperthyroidism leaches calcium from bones. Eat lots of curd (dahi), paneer, ragi, and almonds.</li>
-                    <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" /> <strong>Goitrogens are Good:</strong> Unlike Hypothyroidism, eating raw cabbage or cauliflower can actually help slow down an overactive thyroid.</li>
+                    <li className="flex items-start"><CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-1 flex-shrink-0" /> <strong>Goitrogens are Good:</strong> Unlike <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">Hypothyroidism</Link>, eating raw cabbage or cauliflower can actually help slow down an overactive thyroid.</li>
                   </ul>
                 </CardContent>
               </Card>

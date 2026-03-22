@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/menopause",
   },
-    title: "Ayurveda for Menopause: Natural Relief from Hot Flashes | FitPlan India",
+    title: "Ayurveda for Menopause: Natural Relief from Hot Flashes 2025",
     description: "Manage Rajonivritti (Menopause) naturally. Guide to Shatavari, cooling pranayama, and hormone-balancing diets to stop hot flashes and mood swings.",
     keywords: ["Ayurveda for menopause", "Shatavari benefits menopause", "Natural hot flash remedies", "Rajonivritti treatment", "Menopause diet chart India"],
 }
@@ -47,7 +47,7 @@ export default function MenopausePage() {
                         How Can You Manage Menopause (Rajonivritti) and Stop Hot Flashes Naturally?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Menopause (Rajonivritti) is a natural transition from the Pitta (productive) phase to the Vata (wisdom) phase of life. When cycles stop, excess heat (Pitta) and dryness (Vata) cause severe hot flashes, anxiety, and weight gain. To cool the body instantly, drink Coriander water daily, practice left-nostril breathing (Chandra Bhedana), and take Shatavari to naturally balance hormones without HRT.
+                        <strong>The Short Answer:</strong> Menopause (Rajonivritti) is a natural transition from the <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link> (productive) phase to the Vata (wisdom) phase of life. When cycles stop, excess heat (Pitta) and dryness (Vata) cause severe hot flashes, anxiety, and weight gain. To cool the body instantly, drink Coriander water daily, practice left-nostril breathing (Chandra Bhedana), and take Shatavari to naturally balance hormones without HRT.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -174,7 +174,7 @@ export default function MenopausePage() {
                         <AccordionItem value="item-1">
                             <AccordionTrigger className="text-lg font-medium text-gray-900">Does Soy help?</AccordionTrigger>
                             <AccordionContent className="text-gray-600 leading-relaxed">
-                                Soy contains isoflavones (phytoestrogens) which can help, but Ayurveda recommends fermentation (like Tofu/Miso) over processed soy milk, which can be hard to digest and Vata-aggravating.
+                                Soy contains isoflavones (phytoestrogens) which can help, but <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> recommends fermentation (like Tofu/Miso) over processed soy milk, which can be hard to digest and Vata-aggravating.
                             </AccordionContent>
                         </AccordionItem>
                         <AccordionItem value="item-2">

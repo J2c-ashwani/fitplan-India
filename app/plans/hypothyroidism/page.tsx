@@ -100,7 +100,7 @@ export default function HypothyroidismDietPage() {
               What is the Best Diet to Lose Weight with Hypothyroidism?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-blue-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> An underactive thyroid drops your metabolism by 20-40%, meaning you burn 200-600 fewer calories at rest. To lose weight, you must strictly optimize medication to hit a TSH of 1-2 mIU/L, and eat a high-protein diet (25-30g per meal) rich in Selenium and Zinc to support T4-to-T3 conversion, combined with strength training to rebuild your metabolic engine.
+              <strong>The Short Answer:</strong> An underactive <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> drops your metabolism by 20-40%, meaning you burn 200-600 fewer calories at rest. To lose weight, you must strictly optimize medication to hit a TSH of 1-2 mIU/L, and eat a high-protein diet (25-30g per meal) rich in Selenium and Zinc to support T4-to-T3 conversion, combined with strength training to rebuild your metabolic engine.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold" asChild>
@@ -150,7 +150,7 @@ export default function HypothyroidismDietPage() {
               </p>
 
               <p className="text-lg text-gray-700 mb-6">
-                The key challenge with hypothyroidism weight loss is that a sluggish thyroid slows your basal metabolic rate (BMR)
+                The key challenge with hypothyroidism <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> is that a sluggish thyroid slows your basal metabolic rate (BMR)
                 by 20-40%, meaning you burn 200-600 fewer calories per day at rest compared to someone with normal thyroid function.
                 The foundation of successful hypothyroidism weight loss lies in <strong>optimizing thyroid medication dosage</strong>
                 (work closely with your endocrinologist to ensure TSH levels are in optimal range 1-2 mIU/L, not just "normal"),

@@ -154,7 +154,7 @@ export default function TeenagersWeightManagementPage() {
                 puberty, reduce bone density (increasing osteoporosis risk later), cause hormonal imbalances (irregular periods in girls,
                 delayed development in boys), impair brain development and academic performance, trigger or worsen eating disorders
                 (anorexia, bulimia, binge eating disorder affecting 3-5% of teens), and create lifelong unhealthy relationships with food.
-                The foundation of healthy teenage weight management lies in <strong>focusing on health behaviors, NOT weight loss</strong> -
+                The foundation of healthy teenage weight management lies in <strong>focusing on health behaviors, NOT <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link></strong> -
                 eating balanced, nutrient-dense meals with all food groups represented, staying active through sports, recreation, or
                 structured exercise for 60 minutes daily, getting adequate sleep (8-10 hours nightly for teenagers), limiting processed
                 junk food and sugary drinks (but not eliminating treats entirely), developing positive body image and self-esteem regardless

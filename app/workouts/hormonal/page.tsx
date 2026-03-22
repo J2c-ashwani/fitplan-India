@@ -99,7 +99,7 @@ export default function HormonalWorkoutsPage() {
               Can High-Intensity Exercise Worsen Hormonal Imbalances?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-violet-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> Yes. Excessive cardio and daily HIIT spike cortisol (the stress hormone), which can suppress <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> function, worsen <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>, and disrupt menstrual cycles. If you have <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link>, menopause, or thyroid issues, the most effective approach is moderate strength training (to improve insulin sensitivity by up to 50%) combined with daily gentle walking to actively lower cortisol.
+              <strong>The Short Answer:</strong> Yes. Excessive cardio and daily HIIT spike cortisol (the stress hormone), which can suppress <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> function, worsen <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>, and disrupt menstrual cycles. If you have <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link>, menopause, or <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> issues, the most effective approach is moderate strength training (to improve insulin sensitivity by up to 50%) combined with daily gentle walking to actively lower cortisol.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-violet-600 hover:bg-gray-100 font-semibold" asChild>
@@ -126,7 +126,7 @@ export default function HormonalWorkoutsPage() {
                   <h3 className="font-bold text-red-800 mb-2">⚠️ Why Excessive Exercise WORSENS Hormonal Imbalances</h3>
                   <p className="text-gray-700 mb-3">
                     Traditional intense exercise advice (daily HIIT, excessive cardio, overtraining) is TERRIBLE for hormonal imbalances.
-                    Excessive exercise increases cortisol (stress hormone), suppresses thyroid function, worsens insulin resistance, disrupts
+                    Excessive exercise increases cortisol (stress hormone), suppresses thyroid function, worsens <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>, disrupts
                     menstrual cycles, and increases inflammation - exactly what you DON'T want when hormones are already imbalanced.
                   </p>
                   <ul className="text-sm text-gray-700 space-y-1">
@@ -150,7 +150,7 @@ export default function HormonalWorkoutsPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• <strong>Improved insulin sensitivity:</strong> Strength training dramatically reduces insulin resistance (PCOS)</li>
+                    <li>• <strong>Improved insulin sensitivity:</strong> Strength training dramatically reduces insulin resistance (<Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link>)</li>
                     <li>• <strong>Reduced cortisol:</strong> Gentle exercise LOWERS stress hormones</li>
                     <li>• <strong>Thyroid support:</strong> Moderate exercise supports healthy thyroid function</li>
                     <li>• <strong>Regular cycles:</strong> Balanced exercise normalizes menstrual cycles</li>
@@ -193,7 +193,7 @@ export default function HormonalWorkoutsPage() {
                     <li>• Strength training improves insulin sensitivity 30-50%</li>
                     <li>• Reduces testosterone and androgens</li>
                     <li>• Helps regulate menstrual cycles</li>
-                    <li>• Promotes weight loss (especially belly fat)</li>
+                    <li>• Promotes <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> (especially belly fat)</li>
                   </ul>
                 </div>
                 <div className="bg-white p-4 rounded-lg">

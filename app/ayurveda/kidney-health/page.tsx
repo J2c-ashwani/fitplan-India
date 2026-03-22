@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/kidney-health",
   },
-    title: "Ayurvedic Kidney Care: The Complete Renal Health Guide | FitPlan India",
+    title: "Ayurvedic Kidney Care: The Complete Renal Health Guide 2025",
     description: "Revive kidney function naturally. In-depth guide to Punarnava, Gokshura, and the Ayurvedic Renal Diet. Scientifically backed remedies for creatinine control and stone prevention.",
     keywords: ["Ayurveda for kidney failure", "Lower creatinine naturally", "Punarnava benefits for kidney", "Ayurvedic renal diet chart", "Kidney stone home removal"],
 }
@@ -61,7 +61,7 @@ export default function KidneyPage() {
                         <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Do Vitiated Vata and Toxic Kapha Cause Your Kidneys to Silently Fail?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                Your kidneys filter 200 liters of blood daily. In Ayurveda, kidney issues arise from the vitiation of <strong>Vata</strong> (dryness/degeneration) and <strong>Kapha</strong> (blockages/stones).
+                                Your kidneys filter 200 liters of blood daily. In <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>, kidney issues arise from the vitiation of <strong><Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Vata</Link></strong> (dryness/degeneration) and <strong>Kapha</strong> (blockages/stones).
                             </p>
                             <p className="mt-4">
                                 Typical signs of kidney distress include water retention (edema), dark urine, and persistent fatigue. Ayurveda treats this by focusing on <strong>Mutrala</strong> (diuretic) herbs that flush toxins without straining the nephrons.

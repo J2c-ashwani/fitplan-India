@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/sleep-hygiene",
   },
-    title: "Ancient Sleep Remedies & Digital Detox | Ayurveda for Insomnia",
+    title: "Ancient Sleep Remedies & Digital Detox | Ayurveda for Insomnia 2025",
     description: "Can't sleep? Discover Ayurvedic remedies for insomnia (Anidra). Learn about Golden Milk, Padabhyanga (Foot Massage), and bedtime rituals for deep rest.",
     keywords: ["Ayurveda for insomnia", "Golden milk recipe for sleep", "Padabhyanga benefits", "ayurvedic sleep remedies", "how to sleep better naturally", "sleep deprivation side effects"],
 }
@@ -47,7 +47,7 @@ export default function SleepPage() {
                         How Can You Cure Insomnia and Get Deep Sleep Using Ancient Ayurvedic Remedies?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-indigo-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Insomnia (Anidra) happens when chronic stress and late-night blue light overstimulate your nervous system, keeping erratic Vata energy trapped in your head. To pull this energy down and induce deep, heavy sleep (Kapha), you must massage the soles of your feet with warm ghee (Padabhyanga), drink warm Nutmeg milk 30 minutes before bed, and strictly stop looking at screens by 9 PM.
+                        <strong>The Short Answer:</strong> Insomnia (Anidra) happens when chronic stress and late-night blue light overstimulate your nervous system, keeping erratic <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Vata</Link> energy trapped in your head. To pull this energy down and induce deep, heavy sleep (Kapha), you must massage the soles of your feet with warm ghee (Padabhyanga), drink warm Nutmeg milk 30 minutes before bed, and strictly stop looking at screens by 9 PM.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -156,7 +156,7 @@ export default function SleepPage() {
                         <div className="bg-red-50 p-6 rounded-xl border border-red-100">
                             <h3 className="text-lg font-bold text-red-900 mb-3 flex items-center"><Smartphone className="w-5 h-5 mr-2" /> The Blue Light Problem</h3>
                             <p className="text-gray-700 mb-4">
-                                Ayurveda follows the sun. Blue light from phones mimics the sun's frequency at noon. Looking at your phone at 10 PM tricks your pineal gland into treating it as 10 AM, stopping Melatonin production.
+                                <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> follows the sun. Blue light from phones mimics the sun's frequency at noon. Looking at your phone at 10 PM tricks your pineal gland into treating it as 10 AM, stopping Melatonin production.
                             </p>
                             <div className="font-semibold text-red-800">Rule: No screens 60 minutes before bed. Read a physical book.</div>
                         </div>

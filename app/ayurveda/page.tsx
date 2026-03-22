@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda",
   },
-    title: "Ayurveda Hub - Ancient Wisdom for Modern Health | FitPlan India",
+    title: "Ayurveda Hub - Ancient Wisdom for Modern Health 2025",
     description: "Explore our comprehensive Ayurveda guide. Learn about Prakriti, herbal remedies for PCOS, Thyroid, Diabetes, and daily routines for holistic wellness.",
     keywords: ["Ayurveda India", "Ayurvedic Diet", "Prakriti Quiz", "Ayurvedic Herbs", "PCOS Ayurveda", "Thyroid Ayurveda", "Holistic Health India"],
 }

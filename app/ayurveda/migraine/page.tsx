@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/migraine",
   },
-    title: "Ayurvedic Migraine Relief: Ardhavabhedaka Cure | FitPlan India",
+    title: "Ayurvedic Migraine Relief: Ardhavabhedaka Cure | Expert Guide 2025",
     description: "Stop the throbbing pain naturally. Comprehensive guide to Ayurvedic Nasya therapy, trigger foods, and herbal remedies for permanent migraine relief.",
     keywords: ["Ayurveda for migraine", "Ardhavabhedaka treatment", "Nasya therapy benefits", "Migraine home remedies India", "Headache trigger foods"],
 }
@@ -47,7 +47,7 @@ export default function MigrainePage() {
                         How Can You Permanently Cure Migraines (Ardhavabhedaka) Using Ayurveda?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Migraine (Ardhavabhedaka) is caused by a mix of severe gut acidity (Pitta) and blocked cranial nerves (Vitiated Vata). To stop the throbbing pain instantly, apply a dry ginger paste to your forehead, strictly avoid fermented foods like aged cheese and idli batter, and practice daily 'Nasya'—putting 2 drops of Anu Taila in each nostril to physically clear the brain's blocked pathways.
+                        <strong>The Short Answer:</strong> Migraine (Ardhavabhedaka) is caused by a mix of severe gut acidity (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link>) and blocked cranial nerves (Vitiated Vata). To stop the throbbing pain instantly, apply a dry ginger paste to your forehead, strictly avoid fermented foods like aged cheese and idli batter, and practice daily 'Nasya'—putting 2 drops of Anu Taila in each nostril to physically clear the brain's blocked pathways.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -61,7 +61,7 @@ export default function MigrainePage() {
                         <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is Chronic Acidity in Your Gut the Real Hidden Cause of Your Migraines?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                While modern medicine treats the symptom with painkillers, Ayurveda treats the root: <strong>Vitiated Vata</strong> (dryness/constriction) blocking the blood vessels in the brain, often aggravated by <strong>Pitta</strong> (heat/acidity).
+                                While modern medicine treats the symptom with painkillers, <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> treats the root: <strong>Vitiated Vata</strong> (dryness/constriction) blocking the blood vessels in the brain, often aggravated by <strong>Pitta</strong> (heat/acidity).
                             </p>
                             <p className="mt-4">
                                 This explains why migraines are often accompanied by nausea (Pitta) and sensitivity to light/sound (Vata). The cure involves cleansing the sinuses and cooling the blood.

@@ -144,7 +144,7 @@ export default function ObesityWorkoutPage() {
             <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Will Exercise Alone Cure Obesity?</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is essential for successful weight loss with obesity. Physical activity burns calories, builds
+                Exercise is essential for successful <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> with obesity. Physical activity burns calories, builds
                 lean muscle mass, improves metabolism, enhances mood, and reduces health risks associated with obesity.
                 The key is starting slowly with low-impact activities that don't stress joints, then gradually increasing
                 intensity as fitness improves. Even 10-15 minutes of daily movement makes a significant difference.

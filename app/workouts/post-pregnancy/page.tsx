@@ -159,7 +159,7 @@ export default function PostPregnancyWorkoutPage() {
                     <li>• Reduces risk of postpartum depression</li>
                     <li>• Strengthens core and pelvic floor muscles</li>
                     <li>• Improves energy levels and sleep quality</li>
-                    <li>• Supports healthy weight loss and body composition</li>
+                    <li>• Supports healthy <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> and body composition</li>
                     <li>• Enhances cardiovascular fitness and endurance</li>
                   </ul>
                 </div>

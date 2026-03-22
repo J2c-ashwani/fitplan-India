@@ -171,7 +171,7 @@ export default function SeniorCitizensDietPage() {
                     <li>• <strong>Stronger bones:</strong> Reduces fracture risk (hip fractures can be fatal in elderly)</li>
                     <li>• <strong>Better cognitive function:</strong> Reduces dementia and Alzheimer's risk by 30-50%</li>
                     <li>• <strong>Heart health:</strong> Lowers blood pressure, cholesterol, heart disease risk</li>
-                    <li>• <strong>Diabetes prevention/management:</strong> Better blood sugar control</li>
+                    <li>• <strong><Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">Diabetes</Link> prevention/management:</strong> Better blood sugar control</li>
                     <li>• <strong>Immune system support:</strong> Fewer infections, faster recovery</li>
                     <li>• <strong>Energy and vitality:</strong> Stay active and independent longer</li>
                     <li>• <strong>Quality of life:</strong> Enjoy golden years with health and mobility</li>

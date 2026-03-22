@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const appDir = '/Users/ashwanikumar/Downloads/fitplan-india/app';
-const targetDirs = [path.join(appDir, 'plans'), path.join(appDir, 'workouts')];
+const targetDirs = [path.join(appDir, 'plans'), path.join(appDir, 'workouts'), path.join(appDir, 'ayurveda')];
 
 const keywordMap = [
     { regex: /\b(PCOS)\b/g, url: "/plans/pcos" },
@@ -15,7 +15,9 @@ const keywordMap = [
     { regex: /\b(Thyroid)\b/gi, url: "/plans/thyroid" },
     { regex: /\b(Vegetarian Diet)\b/gi, url: "/plans/vegetarian" },
     { regex: /\b(Anti-Aging)\b/gi, url: "/plans/anti-aging" },
-    { regex: /\b(Weight Loss)\b/gi, url: "/plans/weight-loss" }
+    { regex: /\b(Weight Loss)\b/gi, url: "/plans/weight-loss" },
+    { regex: /\b(Ayurveda|Ayurvedic)\b/gi, url: "/ayurveda" },
+    { regex: /\b(Dosha|Vata|Pitta|Kapha)\b/gi, url: "/ayurveda/doshas" }
 ];
 
 function processDirectory(dir) {
@@ -28,7 +30,7 @@ function processDirectory(dir) {
             processDirectory(fullPath);
         } else if (file === 'page.tsx') {
             // Skip the hub pages entirely to protect them from unintended replacements
-            if (dir === path.join(appDir, 'plans') || dir === path.join(appDir, 'workouts')) {
+            if (dir === path.join(appDir, 'plans') || dir === path.join(appDir, 'workouts') || dir === path.join(appDir, 'ayurveda')) {
                 continue;
             }
             optimizeLinks(fullPath);

@@ -129,7 +129,7 @@ export default function PCOSDietPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">10-20 lbs</div>
-                <div className="text-gray-600">Weight Loss Goal</div>
+                <div className="text-gray-600"><Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">Weight Loss</Link> Goal</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-red-600 mb-2">Moderate</div>
@@ -142,7 +142,7 @@ export default function PCOSDietPage() {
               <p className="text-lg text-gray-700 mb-6">
                 Polycystic Ovary Syndrome (PCOS) affects 1 in 10 women worldwide (over 200 million women globally) and is one
                 of the most common hormonal disorders affecting women of reproductive age in the USA, UK, Canada, Australia,
-                and Europe. PCOS causes insulin resistance (body doesn't respond properly to insulin hormone), hormonal imbalance
+                and Europe. PCOS causes <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link> (body doesn't respond properly to insulin hormone), hormonal imbalance
                 (excess androgens/male hormones like testosterone), irregular or absent menstrual periods, weight gain especially
                 around the abdomen (belly fat), acne and oily skin, excess body and facial hair (hirsutism), thinning hair on
                 the scalp, and difficulty losing weight despite diet and exercise efforts.
@@ -274,7 +274,7 @@ export default function PCOSDietPage() {
                     Women with PCOS typically have a resting metabolic rate (RMR) that is 200-500 calories lower than women of
                     the same age, weight, and activity level without PCOS. This is due to a combination of hormonal imbalances,
                     insulin resistance effects, and often co-existing <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> dysfunction (approximately 40% of PCOS women also
-                    have <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> or subclinical thyroid problems).
+                    have <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> or subclinical <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> problems).
                   </p>
                   <p className="text-sm text-gray-600">
                     This metabolic slowdown means you must either eat significantly fewer calories or exercise substantially more

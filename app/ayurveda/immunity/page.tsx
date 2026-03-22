@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/immunity",
   },
-    title: "Ayurvedic Immunity Booster: Build Ojas Naturally | FitPlan India",
+    title: "Ayurvedic Immunity Booster: Build Ojas Naturally | Proven Methods",
     description: "Ayurveda's secret to immunity is Ojas. comprehensive guide to Chyawanprash, Golden Milk (Turmeric), and lifestyle habits that build natural resistance to disease.",
     keywords: ["Ayurveda for immunity", "What is Ojas", "Chyawanprash benefits", "Golden milk recipe", "Natural immunity booster India"],
 }
@@ -135,7 +135,7 @@ export default function ImmunityPage() {
                                 <span className="text-red-500 font-bold">1.</span>
                                 <div>
                                     <strong className="block text-gray-900">Excessive Sex</strong>
-                                    <span className="text-sm text-gray-600">Ayurveda warns that loss of reproductive tissue (Shukra) directly depletes Ojas.</span>
+                                    <span className="text-sm text-gray-600"><Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> warns that loss of reproductive tissue (Shukra) directly depletes Ojas.</span>
                                 </div>
                             </li>
                             <li className="flex gap-2 items-start bg-white p-4 rounded-lg shadow-sm">

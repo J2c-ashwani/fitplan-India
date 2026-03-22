@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/doshas",
   },
-    title: "Understanding Tridosha: The Ultimate Guide to Vata, Pitta, Kapha | FitPlan India",
+    title: "Understanding Tridosha: The Ultimate Guide to Vata, Pitta, Kapha 2025",
     description: "Discover your Ayurvedic body type. Comprehensive guide to Vata, Pitta, and Kapha doshas, including detailed diet charts, symptoms of imbalance, and scientific perspectives on bio-energies.",
     keywords: ["Ayurveda tridosha explained", "Vata Pitta Kapha characteristics", "Ayurvedic body type diet", "Symptoms of high Pitta", "How to balance Kapha", "Science of Ayurveda"],
 }
@@ -64,7 +64,7 @@ export default function DoshasPage() {
                         <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is the Tridosha Theory the Blueprint of Your Physical and Mental Health?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                Ayurveda is not just about herbs; it's about physics. The <strong>Tridosha Theory</strong> states that health is a dynamic balance of three forces. You are born with a unique combination (<strong>Prakriti</strong>) that stays with you for life.
+                                <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> is not just about herbs; it's about physics. The <strong>Tridosha Theory</strong> states that health is a dynamic balance of three forces. You are born with a unique combination (<strong>Prakriti</strong>) that stays with you for life.
                             </p>
                             <p className="mt-4">
                                 Most diseases arise when your current state (<strong>Vikriti</strong>) deviates from your birth state due to diet, stress, or seasons.

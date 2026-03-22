@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/gray-hair",
   },
-    title: "Ayurveda for Gray Hair: Reverse Palitya Naturally | FitPlan India",
+    title: "Ayurveda for Gray Hair: Reverse Palitya Naturally 2025",
     description: "Premature graying (Palitya) is a sign of high Pitta. Learn how to reverse it with Bhringraj Oil, Nasya, and cooling Ayurvedic diets.",
     keywords: ["Ayurveda for gray hair", "Bhringraj oil benefits", "Palitya treatment", "Nasya for hair growth", "Curry leaves for hair"],
 }
@@ -47,7 +47,7 @@ export default function GrayHairPage() {
                         How Can You Reverse Premature Gray Hair (Palitya) Naturally?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Premature graying (Palitya) isn't about age; it's about excess heat (Pitta) 'burning out' the melanin in your hair follicles. To darken roots naturally, you must cool the scalp and liver by drinking Amla juice daily, chewing fresh Curry leaves, and massaging your scalp nightly with Bhringraj Oil—the king of Ayurvedic hair rejuvenation.
+                        <strong>The Short Answer:</strong> Premature graying (Palitya) isn't about age; it's about excess heat (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link>) 'burning out' the melanin in your hair follicles. To darken roots naturally, you must cool the scalp and liver by drinking Amla juice daily, chewing fresh Curry leaves, and massaging your scalp nightly with Bhringraj Oil—the king of <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> hair rejuvenation.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>

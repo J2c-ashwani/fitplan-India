@@ -122,7 +122,7 @@ export default function HormonalImbalancePage() {
                 <div className="text-gray-600">Women Affected</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">PCOS #1</div>
+                <div className="text-3xl font-bold text-purple-600 mb-2"><Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> #1</div>
                 <div className="text-gray-600">Most Common Issue</div>
               </div>
               <div>
@@ -145,7 +145,7 @@ export default function HormonalImbalancePage() {
                 PMS, acne and skin issues, thinning hair or hair loss, constant fatigue and low energy, mood swings and depression, insomnia
                 and sleep disturbances, sugar cravings and increased appetite, and brain fog and difficulty concentrating. The most common
                 hormonal conditions affecting women are PCOS (Polycystic Ovary Syndrome - 8-13% of reproductive-age women), <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link>
-                (underactive thyroid - 5-10% of women), estrogen dominance (excess estrogen relative to progesterone), menopause and
+                (<Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">underactive <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link></Link> - 5-10% of women), estrogen dominance (excess estrogen relative to progesterone), menopause and
                 perimenopause (hormonal fluctuations ages 45-55), <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link> (prediabetes affecting 30-40% of overweight women),
                 and chronic stress elevating cortisol continuously.
               </p>
@@ -158,9 +158,9 @@ export default function HormonalImbalancePage() {
                 glycemic, high fiber diet prevents insulin spikes), supports liver detoxification to eliminate excess hormones (cruciferous
                 vegetables, fiber, adequate water), reduces inflammation (omega-3 fats, antioxidants, eliminate processed foods), provides
                 hormone-building nutrients (healthy fats, cholesterol, vitamins/minerals), manages stress and cortisol (adequate sleep, stress
-                reduction, gentle exercise), and times carbohydrate intake strategically (carb cycling for PCOS/insulin resistance). This
+                reduction, gentle exercise), and times carbohydrate intake strategically (carb cycling for PCOS/<Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>). This
                 comprehensive hormonal diet plan provides specific nutrition strategies for PCOS, thyroid disorders, menopause, and general
-                hormone balance, focusing on foods that naturally regulate hormones, reduce symptoms, and support sustainable weight loss
+                hormone balance, focusing on foods that naturally regulate hormones, reduce symptoms, and support sustainable <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>
                 without extreme restriction.
               </p>
 

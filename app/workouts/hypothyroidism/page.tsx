@@ -117,8 +117,8 @@ export default function HypothyroidismWorkoutPage() {
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is absolutely essential for hypothyroidism <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> because it directly combats the metabolic slowdown
-                caused by low thyroid hormones. While diet alone can help, combining proper nutrition with the RIGHT type of exercise
+                Exercise is absolutely essential for <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link> <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> because it directly combats the metabolic slowdown
+                caused by low <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> hormones. While diet alone can help, combining proper nutrition with the RIGHT type of exercise
                 accelerates fat loss by 40-60% and dramatically improves energy, mood, and quality of life for thyroid patients.
               </p>
 

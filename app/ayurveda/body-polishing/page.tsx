@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/body-polishing",
   },
-    title: "Ayurvedic Body Polishing: Udvartana at Home | FitPlan India",
+    title: "Ayurvedic Body Polishing: Udvartana at Home | Proven Methods",
     description: "Udvartana is the Ayurvedic art of dry massage with herbal powders. Learn how to make Ubtan for glowing skin, cellulite reduction, and lymphatic drainage.",
     keywords: ["Ayurvedic body polishing", "Udvartana for weight loss", "DIY Ubtan recipe", "Lymphatic drainage massage at home", "Skin glow powder"],
 }
@@ -47,7 +47,7 @@ export default function BodyPolishingPage() {
                         How Do You Perform Ayurvedic Udvartana at Home for Cellulite?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Udvartana is an ancient Ayurvedic dry massage using herbal powders (Ubtan) rubbed vigorously in an upward direction against hair growth. This friction generates deep tissue heat, melting subcutaneous fat (Kapha) and stimulating lymphatic drainage. Doing this daily with a blend of Chickpea flour and Triphala is one of the most effective holistic treatments for cellulite reduction and instant skin polishing.
+                        <strong>The Short Answer:</strong> Udvartana is an ancient <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> dry massage using herbal powders (Ubtan) rubbed vigorously in an upward direction against hair growth. This friction generates deep tissue heat, melting subcutaneous fat (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link>) and stimulating lymphatic drainage. Doing this daily with a blend of Chickpea flour and Triphala is one of the most effective holistic treatments for cellulite reduction and instant skin polishing.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -64,7 +64,7 @@ export default function BodyPolishingPage() {
                                 Unlike spa scrubs that just exfoliate, Udvartana is a therapeutic procedure where herbal powders are rubbed <strong>upwards</strong> (against the direction of hair growth) with pressure.
                             </p>
                             <p className="mt-4">
-                                This friction generates heat, melts subcutaneous fat (Kapha), and stimulates the lymphatic system to drain toxins. It is the #1 recommended therapy for weight loss and cellulite.
+                                This friction generates heat, melts subcutaneous fat (Kapha), and stimulates the lymphatic system to drain toxins. It is the #1 recommended therapy for <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> and cellulite.
                             </p>
                         </div>
                     </div>

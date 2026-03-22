@@ -100,7 +100,7 @@ export default function HyperthyroidismDietPage() {
               What is the Best Diet to Stop Weight Loss from Hyperthyroidism?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> An overactive thyroid increases your metabolism by 30-60%, making weight gain nearly impossible without a strategy. You must first optimize medication with an endocrinologist to normalize hormone levels, and then consume a consistent 500-750 calorie surplus using high-calorie, nutrient-dense foods (like nuts, avocados, and full-fat dairy) spreading 5-7 meals throughout the day to outpace your rapid burn rate.
+              <strong>The Short Answer:</strong> An overactive <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> increases your metabolism by 30-60%, making weight gain nearly impossible without a strategy. You must first optimize medication with an endocrinologist to normalize hormone levels, and then consume a consistent 500-750 calorie surplus using high-calorie, nutrient-dense foods (like nuts, avocados, and full-fat dairy) spreading 5-7 meals throughout the day to outpace your rapid burn rate.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 font-semibold" asChild>
@@ -207,7 +207,7 @@ export default function HyperthyroidismDietPage() {
 
             <div className="bg-white rounded-lg shadow-sm p-8 mb-6">
               <p className="text-gray-700 mb-6">
-                People with hyperthyroidism face unique metabolic challenges that cause rapid, uncontrollable weight loss even while
+                People with hyperthyroidism face unique metabolic challenges that cause rapid, uncontrollable <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> even while
                 eating large amounts of food. Understanding why your body is burning through calories and muscle tissue so rapidly is
                 essential for developing an effective weight gain strategy.
               </p>

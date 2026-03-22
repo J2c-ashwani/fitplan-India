@@ -47,7 +47,7 @@ export default function MensVitalityPage() {
                         What Are the Best Ayurvedic Herbs to Naturally Boost Men's Testosterone and Vitality?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-yellow-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Low testosterone and chronic fatigue are caused by severe stress and poor diet destroying your deepest tissue layer (Shukra Dhatu). Ayurveda's Vajikarana therapy repairs this by using Shilajit to boost cellular energy, Ashwagandha to drastically lower cortisol, and a diet rich in Ghee and Urad Dal to rebuild male vitality fast.
+                        <strong>The Short Answer:</strong> Low testosterone and chronic fatigue are caused by severe stress and poor diet destroying your deepest tissue layer (Shukra Dhatu). <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>'s Vajikarana therapy repairs this by using Shilajit to boost cellular energy, Ashwagandha to drastically lower cortisol, and a diet rich in Ghee and Urad Dal to rebuild male vitality fast.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>

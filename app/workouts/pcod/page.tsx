@@ -100,7 +100,7 @@ export default function PCODWorkoutPage() {
               Why Does Cardio Sometimes Make PCOS Symptoms Worse?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-pink-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> Excessive cardio can raise cortisol (your stress hormone), which signals your body to store belly fat and worsen <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>—the exact opposite of what women with PCOS need. Instead, prioritizing strength training builds muscle mass that acts as a "sponge" for blood sugar, naturally improving insulin sensitivity by up to 50% while lowering male hormone (androgen) levels.
+              <strong>The Short Answer:</strong> Excessive cardio can raise cortisol (your stress hormone), which signals your body to store belly fat and worsen <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>—the exact opposite of what women with <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> need. Instead, prioritizing strength training builds muscle mass that acts as a "sponge" for blood sugar, naturally improving insulin sensitivity by up to 50% while lowering male hormone (androgen) levels.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-pink-600 hover:bg-gray-100 font-semibold" asChild>
@@ -137,7 +137,7 @@ export default function PCODWorkoutPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold text-teal-600 mb-2">Strength</div>
-                <div className="text-gray-600">Best for PCOD</div>
+                <div className="text-gray-600">Best for <Link href="/plans/pcod" className="text-emerald-700 font-semibold hover:underline">PCOD</Link></div>
               </div>
             </div>
 
@@ -157,9 +157,9 @@ export default function PCODWorkoutPage() {
                   <h4 className="font-bold text-lg mb-3 text-pink-800">How Exercise Helps PCOD</h4>
                   <ul className="text-gray-700 space-y-2">
                     <li>• Improves insulin sensitivity dramatically (30-50%)</li>
-                    <li>• Reduces insulin resistance at cellular level</li>
+                    <li>• Reduces <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link> at cellular level</li>
                     <li>• Lowers testosterone and androgen levels</li>
-                    <li>• Promotes healthy weight loss (especially belly fat)</li>
+                    <li>• Promotes healthy <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> (especially belly fat)</li>
                     <li>• Reduces chronic inflammation</li>
                     <li>• Regulates menstrual cycles naturally</li>
                   </ul>

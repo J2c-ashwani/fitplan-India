@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/skin-glow",
   },
-    title: "Ayurvedic Secrets for Glowing Skin (Varnya) | FitPlan India",
+    title: "Ayurvedic Secrets for Glowing Skin (Varnya) [Free 7-Day Plan]",
     description: "Get radiant skin naturally. Ease acne, pigmentation, and dullness with Neem, Turmeric, Kumkumadi Tailam, and Pitta-pacifying diet.",
     keywords: ["Ayurvedic skin care", "Kukumadi tailam benefits", "Neem for acne", "how to get glowing skin naturally", "pitta dosha skin problems", "turmeric face pack recipe"],
 }
@@ -47,7 +47,7 @@ export default function SkinGlowPage() {
                         What Are the Best Ayurvedic Secrets to Clear Acne and Get Naturally Glowing Skin?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Ayurveda views skin inflammation, severe acne, and dark spots as excess heat (Pitta) and toxins erupting from your blood (Rakta Dhatu). To achieve a clear, 'bridal' glow without makeup, you must cool the blood by drinking Aloe Vera juice, chewing raw Neem leaves to kill bacteria, and massaging legendary Kumkumadi Tailam (Saffron oil) on your face at night to erase pigmentation.
+                        <strong>The Short Answer:</strong> <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> views skin inflammation, severe acne, and dark spots as excess heat (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link>) and toxins erupting from your blood (Rakta Dhatu). To achieve a clear, 'bridal' glow without makeup, you must cool the blood by drinking Aloe Vera juice, chewing raw Neem leaves to kill bacteria, and massaging legendary Kumkumadi Tailam (Saffron oil) on your face at night to erase pigmentation.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>

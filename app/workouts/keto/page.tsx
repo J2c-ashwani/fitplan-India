@@ -144,7 +144,7 @@ export default function KetoWorkoutPage() {
             <div id="why-keto" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Do I Feel Weak During the First Few Weeks of Keto?</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Working out on a ketogenic diet requires understanding how your body uses fuel. During the first 2-4 weeks
+                Working out on a <Link href="/plans/keto-diet" className="text-emerald-700 font-semibold hover:underline">ketogenic diet</Link> requires understanding how your body uses fuel. During the first 2-4 weeks
                 (fat adaptation period), you may experience reduced performance, especially in high-intensity activities.
                 This is normal - your body is learning to efficiently burn fat instead of glucose. Once fat-adapted, many
                 keto athletes report excellent endurance, stable energy, and effective fat burning. The key is starting

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/joint-pain",
   },
-    title: "Ayurvedic Treatment for Joint Pain & Arthritis (Sandhivata) | FitPlan India",
+    title: "Ayurvedic Treatment for Joint Pain & Arthritis (Sandhivata) 2025",
     description: "Relieve knee pain, back pain, and arthritis naturally. Discover Mahanarayan Oil, Golden Milk, and dietary changes to lubricate dry joints.",
     keywords: ["Ayurveda for arthritis", "Joint pain home remedies", "Mahanarayan oil benefits", "foods for strong joints", "natural cure for knee pain"],
 }
@@ -47,7 +47,7 @@ export default function JointPainPage() {
                         What Is the Best Ayurvedic Treatment for Severe Joint Pain and Arthritis?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Joint pain is caused either by severe dryness (Vata) wearing away your cartilage or toxic sticky sludge (Ama) causing deep inflammation. If your joints physically crack and feel worse in cold weather, warm them by massaging Mahanarayan Oil daily and drinking Golden milk. If they are red, swollen, and stiff in the morning, stop oil massage immediately and use dry heat (potli) to burn away the toxic Ama.
+                        <strong>The Short Answer:</strong> Joint pain is caused either by severe dryness (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Vata</Link>) wearing away your cartilage or toxic sticky sludge (Ama) causing deep inflammation. If your joints physically crack and feel worse in cold weather, warm them by massaging Mahanarayan Oil daily and drinking Golden milk. If they are red, swollen, and stiff in the morning, stop oil massage immediately and use dry heat (potli) to burn away the toxic Ama.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -187,7 +187,7 @@ export default function JointPainPage() {
                             </div>
                             <div className="border-b pb-4">
                                 <h4 className="font-bold text-gray-900 mb-2">Q: Does cracking knuckles cause arthritis?</h4>
-                                <p className="text-gray-700 text-sm">No, that sound is just gas bubbles popping. However, in Ayurveda, frequent cracking indicates high Vata (dryness) in the body, which is a pre-cursor to joint issues.</p>
+                                <p className="text-gray-700 text-sm">No, that sound is just gas bubbles popping. However, in <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>, frequent cracking indicates high Vata (dryness) in the body, which is a pre-cursor to joint issues.</p>
                             </div>
                             <div className="border-b pb-4">
                                 <h4 className="font-bold text-gray-900 mb-2">Q: Why does my pain increase in winter?</h4>

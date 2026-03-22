@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/eye-care",
   },
-    title: "Ayurvedic Eye Care (Netra Chikitsa) | Natural Vision Improvement",
+    title: "Ayurvedic Eye Care (Netra Chikitsa) | Natural Vision Improvement 2025",
     description: "Cure digital eye strain and dark circles with Ayurveda. Learn about Triphala eye wash, Netra Basti, and Trataka exercises for better vision.",
     keywords: ["Ayurvedic eye care", "Triphala for eyes", "Netra Basti therapy", "cure dry eyes ayurveda", "remove dark circles naturally", "trataka benefits"],
 }
@@ -47,7 +47,7 @@ export default function EyeCarePage() {
                         What Are the Best Ayurvedic Remedies to Naturally Improve Eyesight and Cure Dry Eyes?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-teal-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Digital eye strain is caused by staring at screens, which dries up the lubricating Kapha in your eyes and inflames Alochaka Pitta (heat). To naturally restore vision and cure dry eyes, follow the 20-20-20 rule, wash your eyes daily with cooled Triphala water, and apply a drop of Castor Oil to your lashes before sleep to deeply hydrate and cool the eyes.
+                        <strong>The Short Answer:</strong> Digital eye strain is caused by staring at screens, which dries up the lubricating <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link> in your eyes and inflames Alochaka Pitta (heat). To naturally restore vision and cure dry eyes, follow the 20-20-20 rule, wash your eyes daily with cooled Triphala water, and apply a drop of Castor Oil to your lashes before sleep to deeply hydrate and cool the eyes.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -66,7 +66,7 @@ export default function EyeCarePage() {
                             <p>
                                 In the digital age, we don't blink enough. This causes the lubricating Kapha in the eyes to dry up, and the burning Pitta to take over.
                                 <br />
-                                <strong>Ayurveda says:</strong> "Sarvendriyanam Nayanam Pradhanam" (Of all senses, the eyes are most important).
+                                <strong><Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> says:</strong> "Sarvendriyanam Nayanam Pradhanam" (Of all senses, the eyes are most important).
                             </p>
                         </div>
                     </section>

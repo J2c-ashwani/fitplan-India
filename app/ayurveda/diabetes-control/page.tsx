@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/diabetes-control",
   },
-    title: "Natural Ayurveda Treatments for Diabetes (Madhumeha) | FitPlan India",
+    title: "Natural Ayurveda Treatments for Diabetes (Madhumeha) 2025",
     description: "Control high blood pressure naturally. Ayurvedic guide to managing Madhumeha using Methi, Jamun, Karela, and lifestyle changes to reverse insulin resistance.",
     keywords: ["Ayurveda for diabetes type 2", "Natural blood sugar control", "Methi water benefits", "Jamun seeds powder for diabetes", "Ayurvedic diet for sugar patients"],
 }
@@ -47,7 +47,7 @@ export default function DiabetesPage() {
                         What Is the Most Effective Ayurvedic Diet to Control Type-2 Diabetes?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Diabetes (Madhumeha) is primarily a disease of excess Kapha and fat (Meda) causing insulin resistance. To control blood sugar naturally, you must increase 'Tikta Rasa' (bitter taste) which acts as an antidote to sweetness. Drinking Methi (fenugreek) water daily, consuming Jamun seed powder, and walking 1,000 steps after every meal (Shatapavali) are powerful Ayurvedic protocols for glycemic control.
+                        <strong>The Short Answer:</strong> <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">Diabetes</Link> (Madhumeha) is primarily a disease of excess <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link> and fat (Meda) causing insulin resistance. To control blood sugar naturally, you must increase 'Tikta Rasa' (bitter taste) which acts as an antidote to sweetness. Drinking Methi (fenugreek) water daily, consuming Jamun seed powder, and walking 1,000 steps after every meal (Shatapavali) are powerful <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> protocols for glycemic control.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -217,7 +217,7 @@ export default function DiabetesPage() {
                             </div>
                             <div className="border-b pb-4">
                                 <h4 className="font-bold text-gray-900 mb-2">Q: Can diabetes be reversed?</h4>
-                                <p className="text-gray-700 text-sm">Pre-diabetes and early Type-2 diabetes are reversible with strict dietary changes and weight loss. Chronic Type-2 can be well-managed. Type-1 cannot be reversed but management can be improved.</p>
+                                <p className="text-gray-700 text-sm">Pre-diabetes and early Type-2 diabetes are reversible with strict dietary changes and <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>. Chronic Type-2 can be well-managed. Type-1 cannot be reversed but management can be improved.</p>
                             </div>
                         </div>
                     </section>

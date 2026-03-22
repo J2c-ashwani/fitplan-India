@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/dark-circles",
   },
-    title: "Ayurveda for Dark Circles: Kumkumadi & Eye Care | FitPlan India",
+    title: "Ayurveda for Dark Circles: Kumkumadi & Eye Care [Free 7-Day Plan]",
     description: "Dark circles are a sign of Vata imbalance and stress. Learn how to erase them using Kumkumadi Tailam, Aloe Vera, and Ayurvedic eye exercises (Trataka).",
     keywords: ["Ayurveda for dark circles", "Kumkumadi tailam benefits", "Under eye home remedies", "Vata dosha eyes", "Trataka eye exercise"],
 }
@@ -47,7 +47,7 @@ export default function DarkCirclesPage() {
                         How Can You Erase Dark Circles Using Ayurvedic Kumkumadi Tailam?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Dark circles indicate Rasa Dhatu Kshaya (dehydration of plasma) and high Vata (stress/dryness). To erase them, you need to deeply nourish the thinnest skin on your body. Massaging 1 drop of pure Kumkumadi Tailam (saffron oil) nightly, combined with Trataka (candle gazing) exercises, drastically improves circulation and fades pigmentation naturally.
+                        <strong>The Short Answer:</strong> Dark circles indicate Rasa Dhatu Kshaya (dehydration of plasma) and high <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Vata</Link> (stress/dryness). To erase them, you need to deeply nourish the thinnest skin on your body. Massaging 1 drop of pure Kumkumadi Tailam (saffron oil) nightly, combined with Trataka (candle gazing) exercises, drastically improves circulation and fades pigmentation naturally.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -80,7 +80,7 @@ export default function DarkCirclesPage() {
                             <h2 className="text-3xl font-serif font-bold text-gray-900">Kumkumadi Tailam: The Golden Elixir</h2>
                         </div>
                         <p className="text-gray-700 mb-8 text-lg">
-                            This is the gold standard in Ayurveda for eye care. It is a blend of <strong>Saffron (Kesar)</strong>, Sandalwood, and 16 other herbs cooked in goat milk and sesame oil.
+                            This is the gold standard in <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> for eye care. It is a blend of <strong>Saffron (Kesar)</strong>, Sandalwood, and 16 other herbs cooked in goat milk and sesame oil.
                         </p>
 
                         <div className="bg-white p-6 rounded-xl shadow-sm">

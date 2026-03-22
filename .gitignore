@@ -30,3 +30,7 @@ next-env.d.tscredentials/
 credentials/
 credentials/google-service-account.json
 report-home*.json
+
+# Google Cloud Credentials
+scripts/credentials.json
+

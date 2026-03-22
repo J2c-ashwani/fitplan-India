@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/kids-health",
   },
-    title: "Ayurveda for Kids: Natural Immunity & Brain Power | Bala Roga",
+    title: "Ayurveda for Kids: Natural Immunity & Brain Power | Bala Roga 2025",
     description: "Raise strong, smart kids with Ayurveda. Guide to Swarnaprashana (Gold drops), memory boosting herbs like Brahmi, and natural remedies for cough & cold.",
     keywords: ["Ayurveda for children", "Swarnaprashana benefits", "Natural immunity for kids", "Brahmi for memory", "Home remedies for child cold"],
 }
@@ -47,7 +47,7 @@ export default function KidsPage() {
                         How Can You Boost Your Child's Brain Power and Immunity According to Ayurveda?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Children are naturally in the 'Kapha' phase of life, which is why they produce so much mucus and catch frequent colds. To build unbreakable immunity without suppressing their natural growth, replace cold dairy with warm spiced milk, give them Brahmi syrup to drastically improve memory and focus, and consider 'Swarnaprashana' (gold drop therapy) for lifelong viral resistance.
+                        <strong>The Short Answer:</strong> Children are naturally in the '<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link>' phase of life, which is why they produce so much mucus and catch frequent colds. To build unbreakable immunity without suppressing their natural growth, replace cold dairy with warm spiced milk, give them Brahmi syrup to drastically improve memory and focus, and consider 'Swarnaprashana' (gold drop therapy) for lifelong viral resistance.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -103,7 +103,7 @@ export default function KidsPage() {
                             </ul>
                         </div>
                         <div className="mt-4 flex items-center gap-2 text-sm text-yellow-800">
-                            <AlertCircle className="w-4 h-4" /> <strong>Note:</strong> Always administer under the guidance of an Ayurvedic doctor. Do not use raw gold.
+                            <AlertCircle className="w-4 h-4" /> <strong>Note:</strong> Always administer under the guidance of an <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> doctor. Do not use raw gold.
                         </div>
                     </div>
                 </section>

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/oil-pulling",
   },
-    title: "Oil Pulling (Gandusha): The Ultimate Guide | Ayurvedic Detox",
+    title: "Oil Pulling (Gandusha): The Ultimate Guide | Ayurvedic Detox 2025",
     description: "Everything you need to know about Oil Pulling. Scientific benefits for teeth whitening, bad breath, and gut health. Step-by-step 20-minute protocol.",
     keywords: ["Oil pulling science", "Coconut oil pulling benefits", "Ayurvedic oral detox", "How to do oil pulling correctly", "Oil pulling side effects"],
 }
@@ -62,7 +62,7 @@ export default function OilPullingPage() {
                         <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is Swishing Oil for 20 Minutes the Most Powerful Way to Detoxify Your Entire Body?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                While Oil Pulling has become a modern wellness trend, it is described in the ancient Ayurvedic text <em>Charaka Samhita</em> as a daily ritual for strengthening teeth, improving voice, and enhancing taste.
+                                While Oil Pulling has become a modern wellness trend, it is described in the ancient <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> text <em>Charaka Samhita</em> as a daily ritual for strengthening teeth, improving voice, and enhancing taste.
                             </p>
                             <p className="mt-4">
                                 The concept is simple: <strong>"Like attracts like."</strong> Most microorganisms in the mouth consist of a single cell covered in a lipid (fatty) membrane. When you swish oil, the fats attract each other, pulling the bacteria out of hiding spots that a toothbrush can't reach.
@@ -173,7 +173,7 @@ export default function OilPullingPage() {
                                 <h3 className="text-xl font-bold text-orange-900 mb-3">Sesame Oil (Traditional)</h3>
                                 <p className="text-gray-700 mb-4">The "King of Oils" in Ayurveda.</p>
                                 <ul className="space-y-2 text-sm text-gray-600">
-                                    <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> Warming nature (Good for Vata)</li>
+                                    <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> Warming nature (Good for <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Vata</Link>)</li>
                                     <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> High Calcium (Strengthens teeth)</li>
                                     <li className="flex gap-2"><Check className="w-4 h-4 text-green-600" /> Best for receding gums</li>
                                 </ul>

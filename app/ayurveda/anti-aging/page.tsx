@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/anti-aging",
   },
-    title: "Rasayana Therapy: Ayurvedic Anti-Aging Secrets | FitPlan India",
+    title: "Rasayana Therapy: Ayurvedic Anti-Aging Secrets | Proven Methods",
     description: "Reverse aging naturally with Rasayana Therapy. Learn about Ojas, Amla (Chavanprash), and Shilajit to restore youth and immunity.",
     keywords: ["Ayurvedic anti-aging herbs", "Rasayana therapy benefits", "Chavanprash for immunity", "increasing ojas naturally", "shilajit for energy", "rejuvenation therapy india"],
 }
@@ -47,7 +47,7 @@ export default function AntiAgingPage() {
                         Can Ayurvedic Rasayana Therapy Actually Slow Down Cellular Aging?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Yes. While aging (Jara) is inevitable, premature degeneration is not. Ayurveda's 'Rasayana' therapy focuses on rebuilding Ojas (your vital life force) through potent herbs. Taking 1 tsp of Chavanprash (rich in Amla) every morning or taking pure Shilajit resin can directly nourish your cells, rebuild immunity, and restore the radiant glow of youth.
+                        <strong>The Short Answer:</strong> Yes. While aging (Jara) is inevitable, premature degeneration is not. <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>'s 'Rasayana' therapy focuses on rebuilding Ojas (your vital life force) through potent herbs. Taking 1 tsp of Chavanprash (rich in Amla) every morning or taking pure Shilajit resin can directly nourish your cells, rebuild immunity, and restore the radiant glow of youth.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -146,7 +146,7 @@ export default function AntiAgingPage() {
                                 <h4 className="font-bold text-blue-900 mb-2">The Youth Code:</h4>
                                 <ul className="text-sm text-gray-700 space-y-2">
                                     <li className="flex items-center"><CheckCircle className="w-4 h-4 mr-2" /> <strong>Satyavadi:</strong> Speaking the truth (reduces mental conflict).</li>
-                                    <li className="flex items-center"><CheckCircle className="w-4 h-4 mr-2" /> <strong>Akrodha:</strong> Freedom from anger (Pitta burns cells).</li>
+                                    <li className="flex items-center"><CheckCircle className="w-4 h-4 mr-2" /> <strong>Akrodha:</strong> Freedom from anger (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link> burns cells).</li>
                                     <li className="flex items-center"><CheckCircle className="w-4 h-4 mr-2" /> <strong>Nivritta:</strong> Avoiding alcohol and excessive sex.</li>
                                 </ul>
                             </div>

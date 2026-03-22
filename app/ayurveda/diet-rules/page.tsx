@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/diet-rules",
   },
-    title: "10 Golden Ayurvedic Diet Rules | Art of Mindful Eating",
+    title: "10 Golden Ayurvedic Diet Rules | Art of Mindful Eating 2025",
     description: "Ayurveda is not just about what you eat, but HOW you eat. Master the 10 rules of Ahara, the concept of Viruddha Ahar (Incompatible Foods), and the ideal daily eating schedule.",
     keywords: ["Ayurvedic eating rules", "Viruddha Ahar examples", "Ayurveda food combinations", "Mindful eating guide", "Digestive fire Agni"],
 }
@@ -47,7 +47,7 @@ export default function DietRulesPage() {
                         What Are the 10 Golden Ayurvedic Rules for Perfect Digestion?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> In Ayurveda, health is determined by 'Agni' (digestive fire)—what you can digest, not just what you eat. To prevent bloating and toxins (Ama), you must follow Ahara Vidhi: eat warm, cooked meals, consume food only when genuinely hungry, avoid incompatible combinations (like milk with banana), and align your heaviest meal with the peak sun at noon.
+                        <strong>The Short Answer:</strong> In <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>, health is determined by 'Agni' (digestive fire)—what you can digest, not just what you eat. To prevent bloating and toxins (Ama), you must follow Ahara Vidhi: eat warm, cooked meals, consume food only when genuinely hungry, avoid incompatible combinations (like milk with banana), and align your heaviest meal with the peak sun at noon.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -188,7 +188,7 @@ export default function DietRulesPage() {
                         <AccordionItem value="item-2">
                             <AccordionTrigger className="text-lg font-medium text-gray-900">Why shouldn't I eat cold yogurt at night?</AccordionTrigger>
                             <AccordionContent className="text-gray-600 leading-relaxed">
-                                Yogurt is heavy and mucus-forming (Kapha increasing). At night, Kapha is naturally high. Eating yogurt then clogs the channels (Strotas) leading to colds, coughs, and weight gain.
+                                Yogurt is heavy and mucus-forming (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link> increasing). At night, Kapha is naturally high. Eating yogurt then clogs the channels (Strotas) leading to colds, coughs, and weight gain.
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>

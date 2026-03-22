@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/constipation",
   },
-    title: "Ayurvedic Constipation Relief: Vibandha Cure | FitPlan India",
+    title: "Ayurvedic Constipation Relief: Vibandha Cure [100% Free Guide]",
     description: "Chronic constipation (Vibandha) is the root of all disease. Learn how to cure it with Triphala, Castor Oil, and proper toilet posture.",
     keywords: ["Ayurveda for constipation", "Triphala dosage for constipation", "Castor oil for stomach cleaning", "Vata dosha constipation diet", "Natural laxatives India"],
 }
@@ -47,7 +47,7 @@ export default function ConstipationPage() {
                         What Is the Fastest Ayurvedic Remedy to Clear Chronic Constipation?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Chronic constipation (Vibandha) is caused by excess Vata (dryness) absorbing all moisture in your colon. The fastest, non-habit-forming remedy is taking 1 teaspoon of Triphala Churna with warm water before bed to tone bowel muscles. For immediate relief of severe blockages, 1 tablespoon of Castor Oil in warm milk will stimulate a strong, hydrating cleanse.
+                        <strong>The Short Answer:</strong> Chronic constipation (Vibandha) is caused by excess <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Vata</Link> (dryness) absorbing all moisture in your colon. The fastest, non-habit-forming remedy is taking 1 teaspoon of Triphala Churna with warm water before bed to tone bowel muscles. For immediate relief of severe blockages, 1 tablespoon of Castor Oil in warm milk will stimulate a strong, hydrating cleanse.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>

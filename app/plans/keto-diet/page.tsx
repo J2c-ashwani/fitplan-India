@@ -174,12 +174,12 @@ export default function KetoIndianDietPage() {
                 <div className="bg-purple-50 p-6 rounded-lg">
                   <h3 className="font-bold text-lg mb-3 text-purple-800">Benefits of Keto Diet</h3>
                   <ul className="text-gray-700 space-y-2">
-                    <li>• <strong>Rapid weight loss:</strong> 0.5-1 kg weekly, especially belly fat</li>
+                    <li>• <strong>Rapid <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>:</strong> 0.5-1 kg weekly, especially belly fat</li>
                     <li>• <strong>Appetite suppression:</strong> Feel full for 4-6 hours, no constant hunger</li>
                     <li>• <strong>Stable energy:</strong> No blood sugar crashes, consistent energy all day</li>
                     <li>• <strong>Mental clarity:</strong> Improved focus, concentration, no brain fog</li>
                     <li>• <strong><Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">Diabetes</Link> control:</strong> Dramatically lower blood sugar and insulin</li>
-                    <li>• <strong><Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> improvement:</strong> Reduces insulin resistance, balances hormones</li>
+                    <li>• <strong><Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> improvement:</strong> Reduces <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>, balances hormones</li>
                     <li>• <strong>Reduced inflammation:</strong> Less joint pain, clearer skin</li>
                     <li>• <strong>Heart health:</strong> Increases HDL (good cholesterol), lowers triglycerides</li>
                   </ul>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/acne",
   },
-    title: "Ayurvedic Acne Cure: Yuvana Pidika Map & Remedies | FitPlan India",
+    title: "Ayurvedic Acne Cure: Yuvana Pidika Map & Remedies | Fast Results",
     description: "Map your acne to your internal organs. Complete Ayurvedic guide to curing Yuvana Pidika (Acne) using Neem, Manjistha, and the Pitta-pacifying diet.",
     keywords: ["Ayurvedic acne map", "Neem for acne benefits", "Pitta dosha acne diet", "Yuvana Pidika treatment", "Manjistha for skin glow"],
 }
@@ -47,7 +47,7 @@ export default function AcnePage() {
                         How Can You Cure Deep Cystic Acne Using Ayurvedic Blood Purifiers?
                     </h1>
                     <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Acne (Yuvana Pidika) is rarely just a surface skin issue—it's excess Pitta (heat) trapped in the Rakta Dhatu (blood). Creams only treat 10% of the problem. To banish cystic breakouts, you must cool the blood internally by chewing 4-5 fresh Neem leaves daily or taking Manjistha powder, while strictly eliminating fermented dairy (like yogurt) that creates internal heat.
+                        <strong>The Short Answer:</strong> Acne (Yuvana Pidika) is rarely just a surface skin issue—it's excess <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link> (heat) trapped in the Rakta Dhatu (blood). Creams only treat 10% of the problem. To banish cystic breakouts, you must cool the blood internally by chewing 4-5 fresh Neem leaves daily or taking Manjistha powder, while strictly eliminating fermented dairy (like yogurt) that creates internal heat.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-10 mix-blend-overlay"></div>
@@ -89,7 +89,7 @@ export default function AcnePage() {
                             <div className="bg-white p-6 rounded-xl shadow-sm">
                                 <h3 className="font-bold text-rose-900 text-lg mb-2">Chin/Jaw</h3>
                                 <p className="text-sm text-gray-600"><strong>Hormones (Reproductive)</strong></p>
-                                <p className="text-xs text-gray-500 mt-2">Cause: Menstrual cycle, PCOD, stress.</p>
+                                <p className="text-xs text-gray-500 mt-2">Cause: Menstrual cycle, <Link href="/plans/pcod" className="text-emerald-700 font-semibold hover:underline">PCOD</Link>, stress.</p>
                             </div>
                         </div>
                     </div>
@@ -169,7 +169,7 @@ export default function AcnePage() {
                         <AccordionItem value="item-2">
                             <AccordionTrigger className="text-lg font-medium text-gray-900">Can I pop pimples?</AccordionTrigger>
                             <AccordionContent className="text-gray-600 leading-relaxed">
-                                Never. Popping forces the bacteria deeper into the dermis and damages the collagen, leading to permanent pits (scars) that Ayurveda calls <em>Kshudra Roga</em>.
+                                Never. Popping forces the bacteria deeper into the dermis and damages the collagen, leading to permanent pits (scars) that <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> calls <em>Kshudra Roga</em>.
                             </AccordionContent>
                         </AccordionItem>
                     </Accordion>

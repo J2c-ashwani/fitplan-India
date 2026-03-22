@@ -144,7 +144,7 @@ export default function DiabetesWorkoutPage() {
             <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Why Does Exercise Improve Insulin Sensitivity?</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Exercise is one of the most powerful tools for managing diabetes. Physical activity helps your muscles
+                Exercise is one of the most powerful tools for managing <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link>. Physical activity helps your muscles
                 use glucose without insulin, improves insulin sensitivity, lowers blood sugar levels, reduces cardiovascular
                 risk, and supports healthy weight management. Research shows that combining aerobic exercise with
                 resistance training produces the best results for blood sugar control and overall diabetes management.

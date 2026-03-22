@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/weight-loss-routine",
   },
-    title: "The Dinacharya: Daily Ayurvedic Routine for Weight Loss | FitPlan India",
+    title: "The Dinacharya: Daily Ayurvedic Routine for Weight Loss 2025",
     description: "Lose weight naturally by following the Ayurvedic Dinacharya (Daily Routine). Learn when to wake up, what to drink, and how to eat for maximum metabolism.",
     keywords: ["Ayurvedic weight loss diet", "Dinacharya for weight loss", "Kapha body type diet", "drinking warm water benefits", "ayurveda waking time", "circadian rhythm weight loss"],
 }
@@ -48,7 +48,7 @@ export default function WeightLossRoutinePage() {
                         What Is the Perfect Ayurvedic Daily Routine (Dinacharya) for Fast Weight Loss?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Weight loss is impossible if you eat heavy meals when your metabolism is asleep. To lose belly fat effortlessly, you must align your eating with the sun—eat your heaviest meal at Noon when your digestive fire (Agni) is strongest, finish a light dinner before 7 PM to prevent night-time fat storage (Kapha), and drink warm water with lemon every morning to flush out toxins.
+                        <strong>The Short Answer:</strong> <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">Weight loss</Link> is impossible if you eat heavy meals when your metabolism is asleep. To lose belly fat effortlessly, you must align your eating with the sun—eat your heaviest meal at Noon when your digestive fire (Agni) is strongest, finish a light dinner before 7 PM to prevent night-time fat storage (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link>), and drink warm water with lemon every morning to flush out toxins.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -141,7 +141,7 @@ export default function WeightLossRoutinePage() {
                     <section id="massage" className="mb-12 scroll-mt-24">
                         <h2 className="text-3xl font-serif font-bold text-[#064e3b] mb-6 border-b pb-2">Udvartana (Fat-Burning Massage)</h2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            Standard massage uses oil. But for weight loss, Ayurveda prescribes <strong>Udvartana</strong>—a dry powder massage.
+                            Standard massage uses oil. But for weight loss, <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> prescribes <strong>Udvartana</strong>—a dry powder massage.
                         </p>
                         <ul className="space-y-4 text-gray-700">
                             <li className="flex items-start">

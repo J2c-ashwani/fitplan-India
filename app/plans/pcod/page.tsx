@@ -141,7 +141,7 @@ export default function PCODDietPage() {
               Which Indian Foods Should I Strictly Avoid with PCOD?
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              In PCOD, your body struggles with insulin resistance. Eating high-sugar or refined carbohydrate foods acts like pouring gasoline on a fire, triggering testosterone spikes, acne, and rapid belly fat storage.
+              In PCOD, your body struggles with <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>. Eating high-sugar or refined carbohydrate foods acts like pouring gasoline on a fire, triggering testosterone spikes, acne, and rapid belly fat storage.
             </p>
 
             <Card className="border-red-200">
@@ -200,7 +200,7 @@ export default function PCODDietPage() {
               <div className="border border-purple-200 p-6 rounded-lg flex flex-col justify-center text-center">
                 <Clock className="w-12 h-12 text-purple-600 mx-auto mb-4" />
                 <h4 className="font-bold text-xl text-gray-900">Realistic Timeline</h4>
-                <p className="text-gray-600 mt-2">Expect to lose <strong>1 to 2 pounds per week maximum.</strong> Slower weight loss indicates true fat loss rather than just water weight, preventing the "yo-yo" diet effect.</p>
+                <p className="text-gray-600 mt-2">Expect to lose <strong>1 to 2 pounds per week maximum.</strong> Slower <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> indicates true fat loss rather than just water weight, preventing the "yo-yo" diet effect.</p>
               </div>
             </div>
           </div>

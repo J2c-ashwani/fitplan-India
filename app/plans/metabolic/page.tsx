@@ -144,7 +144,7 @@ export default function MetabolicWeightLossPage() {
                 adding 10%. Average BMR is approximately 1,200-1,800 calories daily for women and 1,600-2,400 for men depending on age, weight,
                 height, and muscle mass. Many people experience "slow metabolism" where they burn significantly fewer calories than expected
                 for their body size, making <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> extremely difficult despite eating very little. Common symptoms of slow metabolism
-                include inability to lose weight despite strict dieting (eating 1,200-1,400 calories but no weight loss), constant fatigue and
+                include inability to lose weight despite strict dieting (eating 1,200-1,400 calories but no <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link>), constant fatigue and
                 low energy, always feeling cold (especially hands and feet), constipation and digestive issues, dry skin and hair loss, difficulty
                 building muscle, and rapid weight regain after any diet.
               </p>
@@ -172,7 +172,7 @@ export default function MetabolicWeightLossPage() {
                     <li>• <strong>Sustainable fat loss:</strong> Lose weight eating MORE food, not less</li>
                     <li>• <strong>No weight regain:</strong> Higher metabolism prevents rebound weight gain</li>
                     <li>• <strong>More energy:</strong> Feel vibrant, not exhausted from dieting</li>
-                    <li>• <strong>Better hormones:</strong> Thyroid, leptin, cortisol normalize</li>
+                    <li>• <strong>Better hormones:</strong> <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">Thyroid</Link>, leptin, cortisol normalize</li>
                     <li>• <strong>Muscle preservation:</strong> Lose fat, keep/build muscle</li>
                     <li>• <strong>Improved mood:</strong> Stable energy, no "hangry" feelings</li>
                     <li>• <strong>Long-term success:</strong> Fix metabolism permanently, not temporary loss</li>
@@ -268,7 +268,7 @@ export default function MetabolicWeightLossPage() {
                 </CardHeader>
                 <CardContent className="pt-6">
                   <p className="text-gray-700 mb-3">
-                    <strong>The Problem:</strong> Thyroid hormones (T3, T4) directly regulate metabolic rate. Hypothyroidism (underactive thyroid)
+                    <strong>The Problem:</strong> Thyroid hormones (T3, T4) directly regulate metabolic rate. <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">Hypothyroidism</Link> (underactive thyroid)
                     affects 5-10% of adults, causing metabolism to slow 20-40%. Symptoms: unexplained weight gain, constant fatigue, always cold,
                     dry skin, constipation, brain fog. Chronic dieting can also suppress thyroid function (adaptive response).
                   </p>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/hair-health",
   },
-    title: "Best Ayurvedic Hair Oil & Herbs for Growth | Keshya",
+    title: "Best Ayurvedic Hair Oil & Herbs for Growth | Keshya 2025",
     description: "Stop hair fall and premature graying naturally. Ayurvedic guide to Bhringraj, Amla, and Nasya therapy for thick, lustrous hair.",
     keywords: ["Ayurvedic hair oil for growth", "Bhringraj benefits", "Amla for white hair", "Nasya for hair fall", "Pitta dosha hair loss", "hair care routine Indian"],
 }
@@ -47,7 +47,7 @@ export default function HairHealthPage() {
                         How Can You Fast-Track Hair Growth and Stop Hair Fall Using Ayurveda?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Hair (Kesha) is a byproduct of bone tissue (Asthi Dhatu). Hair fall happens when excess Pitta (Heat) fries the follicles or poor nutrition weakens the bones down to the roots. To trigger new growth instantly, perform weekly warm oil Champi (head massages) using herbal oils like Bhringraj, and practice 'Nasya'—putting 2 drops of Anu Taila in each nostril to nourish the cranial nerves directly.
+                        <strong>The Short Answer:</strong> Hair (Kesha) is a byproduct of bone tissue (Asthi Dhatu). Hair fall happens when excess <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link> (Heat) fries the follicles or poor nutrition weakens the bones down to the roots. To trigger new growth instantly, perform weekly warm oil Champi (head massages) using herbal oils like Bhringraj, and practice 'Nasya'—putting 2 drops of Anu Taila in each nostril to nourish the cranial nerves directly.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -64,7 +64,7 @@ export default function HairHealthPage() {
                         </h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                In Ayurveda, hair fall (Khalitya) and graying (Palitya) are primarily <strong>Pitta disorders</strong>.
+                                In <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>, hair fall (Khalitya) and graying (Palitya) are primarily <strong>Pitta disorders</strong>.
                             </p>
                             <ul className="list-disc pl-5 space-y-2 mt-4">
                                 <li><strong>Excess Body Heat:</strong> Caused by spicy food, anger, or stress. The heat rises to the scalp and weakens the roots.</li>

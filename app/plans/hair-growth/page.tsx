@@ -99,7 +99,7 @@ export default function HairGrowthDietPage() {
                             What is the Best Diet to Stop Hair Fall & Regrow Hair?
                         </h1>
                         <p className="text-xl text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                            <strong>The Short Answer:</strong> Hair fall is primarily caused by deficiencies in <strong>Protein and Iron (Ferritin)</strong>, along with excess body heat (Pitta). The fastest way to stop shedding and stimulate regrowth is eating a high-protein diet (paneer, eggs, lentils), increasing iron intake, and consuming Amla daily to blocks hair-loss hormones (DHT).
+                            <strong>The Short Answer:</strong> Hair fall is primarily caused by deficiencies in <strong>Protein and Iron (Ferritin)</strong>, along with excess body heat (<Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link>). The fastest way to stop shedding and stimulate regrowth is eating a high-protein diet (paneer, eggs, lentils), increasing iron intake, and consuming Amla daily to blocks hair-loss hormones (DHT).
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Button size="lg" className="bg-white text-emerald-900 hover:bg-stone-100 font-semibold" asChild>
@@ -200,7 +200,7 @@ export default function HairGrowthDietPage() {
                                 <div>
                                     <h3 className="text-xl font-bold text-emerald-900 mb-3">1. Excess Pitta = Hair Fall</h3>
                                     <p className="text-stone-700 mb-4">
-                                        According to Ayurveda, excess heat (Pitta) in the body moves to the head and "burns" the hair roots, causing falling and graying.
+                                        According to <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>, excess heat (Pitta) in the body moves to the head and "burns" the hair roots, causing falling and graying.
                                     </p>
                                     <p className="text-sm font-semibold text-emerald-800">→ Solution: Cooling foods (Coconut, Ghee, Fennel, Mint).</p>
                                 </div>

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/thyroid-remedies",
   },
-    title: "Natural Remedies for Hypothyroidism & TSH Control | FitPlan India",
+    title: "Natural Remedies for Hypothyroidism & TSH Control 2025",
     description: "Manage Hypothyroidism (Galaganda) with Ayurveda. Learn about Kanchanar Guggulu, Coriander water, Selenium rich diet, and Ujjayi Pranayama for thyroid health.",
     keywords: ["Ayurvedic cure for hypothyroidism", "Kanchanar Guggulu benefits", "Coriander seeds for thyroid", "Indian diet for thyroid patients", "Ujjayi pranayama for thyroid"],
 }
@@ -48,7 +48,7 @@ export default function ThyroidPage() {
                         How Can You Naturally Cure Hypothyroidism and Lower TSH Using Ayurveda?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Hypothyroidism happens when your digestive fire (Jatharagni) is too weak to stimulate your thyroid gland, leading to excess Kapha (weight gain). To ignite your metabolism and naturally lower TSH, you must drink boiled Coriander seed water every morning, eat 2 Selenium-rich Brazil nuts daily, and take Kanchanar Guggulu to scrape away thyroid blockages.
+                        <strong>The Short Answer:</strong> <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">Hypothyroidism</Link> happens when your digestive fire (Jatharagni) is too weak to stimulate your <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> gland, leading to excess <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link> (weight gain). To ignite your metabolism and naturally lower TSH, you must drink boiled Coriander seed water every morning, eat 2 Selenium-rich Brazil nuts daily, and take Kanchanar Guggulu to scrape away thyroid blockages.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -69,7 +69,7 @@ export default function ThyroidPage() {
                                 <li className="bg-stone-50 p-3 rounded border"><strong>Vata blockage:</strong> Dry skin, hoarse voice, and constipation.</li>
                             </ul>
                             <p className="mt-4">
-                                The Ayurvedic protocol is not just to supply thyroxine externally, but to stimulate the gland to produce its own hormones by "igniting the fire" using warming spices and iodine-rich herbs.
+                                The <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurvedic</Link> protocol is not just to supply thyroxine externally, but to stimulate the gland to produce its own hormones by "igniting the fire" using warming spices and iodine-rich herbs.
                             </p>
                         </div>
                     </section>

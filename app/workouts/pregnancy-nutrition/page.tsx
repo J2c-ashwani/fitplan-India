@@ -146,7 +146,7 @@ export default function PrenatalWorkoutPage() {
               <p className="text-lg text-gray-700 mb-6">
                 Regular, moderate exercise during pregnancy offers numerous benefits for both mother and baby. Exercise
                 reduces back pain and discomfort, improves mood and energy, helps manage weight gain, strengthens muscles
-                for labor, improves sleep quality, reduces risk of gestational diabetes and pre-eclampsia, aids postpartum
+                for labor, improves sleep quality, reduces risk of gestational <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link> and pre-eclampsia, aids postpartum
                 recovery, and promotes healthy baby development. The key is choosing safe, low-impact activities and
                 listening to your body.
               </p>

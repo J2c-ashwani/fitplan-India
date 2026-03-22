@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/pcos-herbs",
   },
-    title: "5 Best Ayurvedic Herbs to Cure PCOS/PCOD Permanently | FitPlan India",
+    title: "5 Best Ayurvedic Herbs to Cure PCOS/PCOD Permanently 2025",
     description: "Reverse PCOS naturally with Ayurveda. A comprehensive guide on Ashwagandha, Shatavari, and Cinnamon for hormonal balance, weight loss, and irregular periods.",
     keywords: ["Ayurvedic treatment for PCOS", "Ashwagandha for PCOS", "Shatavari benefits for women", "PCOS diet chart indian", "Yoga for PCOD", "cure pcod permanently"],
 }
@@ -47,7 +47,7 @@ export default function PCOSPage() {
                         What Are the Most Powerful Ayurvedic Herbs to Cure PCOS and Regulate Your Periods?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> PCOS is a metabolic disorder where excess sticky Kapha and blocked Vata stop nutrients from reaching the ovaries, preventing ovulation. To clear the blockages and reverse insulin resistance naturally, take Ashwagandha to lower stress hormones, use Shatavari to promote follicular growth, and drink Methi (Fenugreek) water every morning to scrape away stubborn belly fat.
+                        <strong>The Short Answer:</strong> <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> is a metabolic disorder where excess sticky <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Kapha</Link> and blocked Vata stop nutrients from reaching the ovaries, preventing ovulation. To clear the blockages and reverse <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link> naturally, take Ashwagandha to lower stress hormones, use Shatavari to promote follicular growth, and drink Methi (Fenugreek) water every morning to scrape away stubborn belly fat.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -61,7 +61,7 @@ export default function PCOSPage() {
                         <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Does Excess Weight (Kapha) and Blocked Energy (Vata) Completely Stop Your Ovulation?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                In modern medicine, PCOS is treated with birth control pills that force a bleed but do not fix the underlying issue. Ayurveda views PCOS as a complex interplay of three factors:
+                                In modern medicine, PCOS is treated with birth control pills that force a bleed but do not fix the underlying issue. <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> views PCOS as a complex interplay of three factors:
                             </p>
                             <ul className="list-none space-y-4 pl-0">
                                 <li className="flex items-start">

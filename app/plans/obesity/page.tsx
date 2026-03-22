@@ -123,7 +123,7 @@ export default function ObesityWeightLossPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold text-purple-600 mb-2">1-2 lbs/week</div>
-                <div className="text-gray-600">Safe Weight Loss</div>
+                <div className="text-gray-600">Safe <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">Weight Loss</Link></div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-violet-600 mb-2">50-100+ lbs</div>
@@ -141,7 +141,7 @@ export default function ObesityWeightLossPage() {
                 Obesity is defined as having a Body Mass Index (BMI) of 30 or higher and affects over 42% of American adults,
                 28% of UK adults, and similar rates in Canada and Australia. The condition occurs when energy intake consistently
                 exceeds energy expenditure over extended periods, resulting in excessive fat accumulation that significantly increases
-                health risks including type 2 diabetes (10x higher risk), heart disease, stroke, certain cancers, sleep apnea,
+                health risks including type 2 <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">diabetes</Link> (10x higher risk), heart disease, stroke, certain cancers, sleep apnea,
                 osteoarthritis, fatty liver disease, and reduced life expectancy by 5-20 years depending on severity. Obesity is
                 classified into three categories: Class I (BMI 30-34.9), Class II (BMI 35-39.9 "severe obesity"), and Class III
                 (BMI 40+ "morbid obesity" or "extreme obesity").
@@ -281,7 +281,7 @@ export default function ObesityWeightLossPage() {
                     (worsened by obesity) causes hormonal chaos and weight gain resistance.
                   </p>
                   <p className="text-sm text-gray-600">
-                    Additionally, obesity often coexists with thyroid problems (<Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link>), sleep apnea (disrupting hormones and
+                    Additionally, obesity often coexists with <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> problems (<Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">hypothyroidism</Link>), sleep apnea (disrupting hormones and
                     increasing cortisol), chronic inflammation (elevating cytokines that interfere with metabolism), and vitamin D
                     deficiency (stored in fat tissue, less bioavailable). These medical issues must be diagnosed and treated alongside
                     weight loss efforts. Working with healthcare provider (endocrinologist, physician) to optimize these conditions

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/acidity-bloating",
   },
-    title: "Natural Home Remedies for Acidity & Gas (Amla Pitta) | Ayurveda",
+    title: "Natural Home Remedies for Acidity & Gas (Amla Pitta) | Ayurveda 2025",
     description: "Cure acid reflux and bloating permanently. Ayurvedic diet for Amla Pitta, cooling herbs like Fennel and Amla, and foods to avoid.",
     keywords: ["Ayurvedic cure for acidity", "home remedies for gas and bloating", "Amla Pitta treatment", "stomach heat remedies", "pitta pacifying diet"],
 }
@@ -47,7 +47,7 @@ export default function AcidityPage() {
                         What is the Best Ayurvedic Treatment to Permanently Cure Acidity and GERD?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-orange-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Acidity (Amla Pitta) is not just excess acid—it's fermented, sour 'heat' traveling upwards. To permanently cure GERD and bloating, you must cool the blood and digestive fire by avoiding fermented foods (like idli batter) and spicy triggers. Instant relief comes from drinking CCF (Cumin, Coriander, Fennel) tea or soaking 10-15 black raisins overnight to naturally sweep heat out of your colon.
+                        <strong>The Short Answer:</strong> Acidity (Amla <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link>) is not just excess acid—it's fermented, sour 'heat' traveling upwards. To permanently cure GERD and bloating, you must cool the blood and digestive fire by avoiding fermented foods (like idli batter) and spicy triggers. Instant relief comes from drinking CCF (Cumin, Coriander, Fennel) tea or soaking 10-15 black raisins overnight to naturally sweep heat out of your colon.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>

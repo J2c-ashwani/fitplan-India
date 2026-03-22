@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/post-pregnancy",
   },
-    title: "Sutika Paricharya: Ayurvedic Postnatal Care Guide | FitPlan India",
+    title: "Sutika Paricharya: Ayurvedic Postnatal Care Guide | Fast Results",
     description: "Recover quickly after delivery with Ayurvedic Sutika Paricharya. Diet chart, Gond Laddu recipe, and massage tips for nursing mothers to regain strength.",
     keywords: ["Ayurvedic postnatal care", "Sutika Paricharya guide", "Gond ka laddu for pregnancy", "diet after delivery indian", "postpartum recovery herbs", "breastfeeding diet ayurveda"],
 }
@@ -47,7 +47,7 @@ export default function PostPregnancyPage() {
                         How Can You Recover Quickly and Regain Strength After Delivery Using Ayurveda?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-rose-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> Delivery leaves a massive empty space in the abdomen, which Ayurveda says is instantly filled by cold, erratic Vata (Air) causing back pain, anxiety, and stiffness. To physically ground this Vata and rebuild strength, you must eat warm nourishing foods like Gond (Edible Gum) Laddus, bind your belly tightly with cloth, and perform a daily full-body oil massage (Abhyanga) before bathing.
+                        <strong>The Short Answer:</strong> Delivery leaves a massive empty space in the abdomen, which <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> says is instantly filled by cold, erratic <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Vata</Link> (Air) causing back pain, anxiety, and stiffness. To physically ground this Vata and rebuild strength, you must eat warm nourishing foods like Gond (Edible Gum) Laddus, bind your belly tightly with cloth, and perform a daily full-body oil massage (Abhyanga) before bathing.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>

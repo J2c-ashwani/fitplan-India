@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/gut-health",
   },
-    title: "Improve Gut Health & Digestion (Agni) | Ayurveda Guide",
+    title: "Improve Gut Health & Digestion (Agni) | Ayurveda Guide 2025",
     description: "Fix bloating, gas, and IBS naturally. Comprehensive Ayurveda guide to balancing Jatharagni (Digestive Fire) using Ginger, Fasting, and CCF Tea.",
     keywords: ["Ayurveda for gut health", "Agni digestive fire", "bloating home remedies", "curing IBS naturally", "Triphala for constipation", "Ayurvedic fasting"],
 }
@@ -47,7 +47,7 @@ export default function GutHealthPage() {
                         What Is the Fastest Ayurvedic Way to Fix Bloating and Heal Your Gut?
                     </h1>
                     <p className="text-lg text-white mb-8 border-l-4 border-emerald-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-                        <strong>The Short Answer:</strong> In Ayurveda, gut issues like IBS and severe bloating are caused by a weak digestive fire (Mandagni) that creates toxic sludge (Ama) in your intestines. The fastest way to reset your gut is therapeutic fasting (Langhanam), drinking CCF (Cumin, Coriander, Fennel) tea throughout the day, and chewing fresh ginger before meals to instantly restart your digestive enzymes.
+                        <strong>The Short Answer:</strong> In <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link>, gut issues like IBS and severe bloating are caused by a weak digestive fire (Mandagni) that creates toxic sludge (Ama) in your intestines. The fastest way to reset your gut is therapeutic fasting (Langhanam), drinking CCF (Cumin, Coriander, Fennel) tea throughout the day, and chewing fresh ginger before meals to instantly restart your digestive enzymes.
                     </p>
                 </div>
                 <div className="absolute inset-0 bg-[url('/pattern-bg.png')] opacity-5"></div>
@@ -99,7 +99,7 @@ export default function GutHealthPage() {
                             <Card className="bg-amber-50 border-none">
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-bold text-amber-900 mb-2">1. The Ginger Appetizer</h3>
-                                    <p className="mb-4 text-gray-700">A universal remedy for all body types. Ginger kindles the Agni without aggravating Pitta too much.</p>
+                                    <p className="mb-4 text-gray-700">A universal remedy for all body types. Ginger kindles the Agni without aggravating <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link> too much.</p>
                                     <div className="bg-white p-4 rounded-lg border border-amber-200">
                                         <strong>Recipe:</strong> 1 slice fresh ginger + Pinch of Rock Salt + Squeeze of Lime.
                                         <br /><strong>When:</strong> Chew this 10 minutes <strong>before</strong> lunch and dinner. It activates saliva and prepares the stomach.

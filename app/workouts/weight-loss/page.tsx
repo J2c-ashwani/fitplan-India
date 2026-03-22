@@ -100,7 +100,7 @@ export default function WeightLossWorkoutPage() {
               What is the actually the Best Workout Routine for Weight Loss?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-red-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg">
-              <strong>The Short Answer:</strong> The "perfect" weight loss routine is a combination of <strong>3 days of Progressive Strength Training</strong> (to build muscle and permanently raise your resting metabolism) and <strong>Daily Walking (8,000-10k steps)</strong> to burn calories without spiking your appetite. Relying *only* on grueling cardio sessions is a recipe for burnout, muscle loss, and a "skinny-fat" physique.
+              <strong>The Short Answer:</strong> The "perfect" <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> routine is a combination of <strong>3 days of Progressive Strength Training</strong> (to build muscle and permanently raise your resting metabolism) and <strong>Daily Walking (8,000-10k steps)</strong> to burn calories without spiking your appetite. Relying *only* on grueling cardio sessions is a recipe for burnout, muscle loss, and a "skinny-fat" physique.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-red-700 hover:bg-gray-100 font-semibold" asChild>

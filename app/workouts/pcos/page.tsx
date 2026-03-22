@@ -100,7 +100,7 @@ export default function PCOSWorkoutPage() {
               What is the Best Workout for PCOS Weight Loss?
             </h1>
             <p className="text-xl text-purple-100 mb-8 border-l-4 border-purple-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg">
-              <strong>The Short Answer:</strong> The best workout for PCOS combines <strong>progressive strength training</strong> (to build muscle and reverse <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>) with <strong>LISS (Low-Intensity Steady State cardio like walking)</strong> and <strong>Yoga</strong> (to lower cortisol and stress). Avoid excessive high-intensity cardio (HIIT) which can worsen hormonal imbalances.
+              <strong>The Short Answer:</strong> The best workout for <Link href="/plans/pcos" className="text-emerald-700 font-semibold hover:underline">PCOS</Link> combines <strong>progressive strength training</strong> (to build muscle and reverse <Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">insulin resistance</Link>) with <strong>LISS (Low-Intensity Steady State cardio like walking)</strong> and <strong>Yoga</strong> (to lower cortisol and stress). Avoid excessive high-intensity cardio (HIIT) which can worsen hormonal imbalances.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-purple-700 hover:bg-gray-100 font-semibold" asChild>
@@ -119,7 +119,7 @@ export default function PCOSWorkoutPage() {
               Why is Strength Training the "Holy Grail" for PCOS?
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              Most women with PCOS are told to "just do more cardio to burn calories." This is outdated advice that often fails. PCOS is primarily an issue of <strong>Insulin Resistance</strong>.
+              Most women with PCOS are told to "just do more cardio to burn calories." This is outdated advice that often fails. PCOS is primarily an issue of <strong><Link href="/plans/diabetes" className="text-emerald-700 font-semibold hover:underline">Insulin Resistance</Link></strong>.
             </p>
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-purple-50 p-6 rounded-lg border border-purple-100">

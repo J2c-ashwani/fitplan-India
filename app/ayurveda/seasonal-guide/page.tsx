@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.fitplanindia.com/ayurveda/seasonal-guide",
   },
-    title: "Ritucharya: The Ayurvedic Seasonal Guide | FitPlan India",
+    title: "Ritucharya: The Ayurvedic Seasonal Guide [100% Free Guide]",
     description: "Align your diet with nature cycles. Comprehensive Ritucharya guide for Summer (Grishma), Monsoon (Varsha), and Winter (Hemanta) to prevent seasonal illness.",
     keywords: ["Ayurveda Ritucharya", "Seasonal diet ayurveda", "Monsoon ayurvedic tips", "Winter diet for immunity", "Summer cooling foods"],
 }
@@ -62,7 +62,7 @@ export default function SeasonalPage() {
                         <h2 className="text-3xl font-serif font-bold text-gray-900 mb-6">Why Is Eating the Exact Same Diet Year-Round Slowly Destroying Your Immune System?</h2>
                         <div className="prose prose-lg text-gray-700">
                             <p>
-                                <strong>Ritu</strong> means season, and <strong>Charya</strong> means regimen. Ayurveda divides the year into two periods: <strong>Adana Kala</strong> (taking away strength: Summer) and <strong>Visarga Kala</strong> (giving strength: Winter). Adapting your habits helps you ride the wave of nature rather than fighting against it.
+                                <strong>Ritu</strong> means season, and <strong>Charya</strong> means regimen. <Link href="/ayurveda" className="text-emerald-700 font-semibold hover:underline">Ayurveda</Link> divides the year into two periods: <strong>Adana Kala</strong> (taking away strength: Summer) and <strong>Visarga Kala</strong> (giving strength: Winter). Adapting your habits helps you ride the wave of nature rather than fighting against it.
                             </p>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ export default function SeasonalPage() {
                             </div>
                             <div>
                                 <h2 className="text-3xl font-serif font-bold text-gray-900">Summer (Grishma)</h2>
-                                <p className="text-orange-600 font-medium">Mid-May to mid-July • Pitta Season</p>
+                                <p className="text-orange-600 font-medium">Mid-May to mid-July • <Link href="/ayurveda/doshas" className="text-emerald-700 font-semibold hover:underline">Pitta</Link> Season</p>
                             </div>
                         </div>
                         <div className="space-y-6">

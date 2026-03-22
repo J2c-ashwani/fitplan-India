@@ -100,7 +100,7 @@ export default function ThyroidWorkoutPage() {
               Why Am I So Exhausted When I Try to Exercise with Hypothyroidism?
             </h1>
             <p className="text-xl text-white mb-8 border-l-4 border-teal-300 pl-4 text-left bg-white/10 p-4 rounded-r-lg shadow-md leading-relaxed">
-              <strong>The Short Answer:</strong> <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">Hypothyroidism</Link> slows down your entire metabolism, reducing the efficiency of your mitochondria (your cells' power plants). This makes intense exercise feel overwhelmingly exhausting. Instead of pushing through fatigue with high-intensity workouts (which can spike cortisol and worsen thyroid function), the key is frequent, low-intensity exercise like brisk walking or light strength training to gently coax your metabolism back to life.
+              <strong>The Short Answer:</strong> <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">Hypothyroidism</Link> slows down your entire metabolism, reducing the efficiency of your mitochondria (your cells' power plants). This makes intense exercise feel overwhelmingly exhausting. Instead of pushing through fatigue with high-intensity workouts (which can spike cortisol and worsen <Link href="/plans/thyroid" className="text-emerald-700 font-semibold hover:underline">thyroid</Link> function), the key is frequent, low-intensity exercise like brisk walking or light strength training to gently coax your metabolism back to life.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-teal-700 hover:bg-gray-100 font-semibold" asChild>
@@ -144,7 +144,7 @@ export default function ThyroidWorkoutPage() {
             <div id="why-exercise" className="bg-white rounded-lg shadow-sm p-8 mb-8 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-serif">Will Exercise Actually Help My Sluggish Metabolism?</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Hypothyroidism slows metabolism, causing fatigue, weight gain, and muscle weakness. Exercise is one of
+                <Link href="/plans/hypothyroidism" className="text-emerald-700 font-semibold hover:underline">Hypothyroidism</Link> slows metabolism, causing fatigue, weight gain, and muscle weakness. Exercise is one of
                 the most powerful tools to counteract these effects. Regular physical activity boosts metabolism even
                 with low thyroid function, improves energy levels and reduces fatigue, supports <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> despite slower
                 metabolism, builds muscle mass which burns more calories, enhances mood and reduces depression, improves
@@ -158,7 +158,7 @@ export default function ThyroidWorkoutPage() {
                   <ul className="text-gray-700 space-y-2">
                     <li>• Boosts sluggish metabolism naturally</li>
                     <li>• Combats fatigue and increases energy</li>
-                    <li>• Supports weight loss (burns 200-400 cal/session)</li>
+                    <li>• Supports <Link href="/plans/weight-loss" className="text-emerald-700 font-semibold hover:underline">weight loss</Link> (burns 200-400 cal/session)</li>
                     <li>• Builds muscle mass for higher metabolic rate</li>
                     <li>• Improves mood, reduces depression and anxiety</li>
                     <li>• Strengthens heart health affected by thyroid</li>
